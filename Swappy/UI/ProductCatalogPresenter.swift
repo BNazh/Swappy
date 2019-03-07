@@ -16,6 +16,8 @@ final class ProductCatalogPresenterImp {
     unowned let view: ProductCatalogView
     let productWorker: ProductCatalogWorker
     
+    private var isLoading = false
+    
     init(view: ProductCatalogView, productWorker: ProductCatalogWorker) {
         self.view = view
         self.productWorker = productWorker
@@ -25,7 +27,12 @@ final class ProductCatalogPresenterImp {
 extension ProductCatalogPresenterImp: ProductCatalogPresenter {
     
     func loadProducts() {
+        isLoading = true
+        
         productWorker.getProducts { [weak self] result in
+            
+            self?.isLoading = false
+            
             switch result {
             case .success(let products):
                 let viewModels = products.map { ProductCellViewModel($0) }

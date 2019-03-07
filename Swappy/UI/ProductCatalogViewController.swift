@@ -44,7 +44,7 @@ final class ProductCatalogViewController: UIViewController {
 extension ProductCatalogViewController: ProductCatalogView {
     
     func reloadCells(_ cellModels: [ProductCellViewModel]) {
-        self.cellModels = cellModels
+        self.cellModels.append(contentsOf: cellModels)
         
         collectionView.reloadData()
     }
@@ -68,9 +68,20 @@ extension ProductCatalogViewController: UICollectionViewDataSource, UICollection
     
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        let viewModel = cellModels[indexPath.row]
+        print(viewModel.title)
+        print(indexPath.row)
+        let isLastElement = indexPath.row == cellModels.count - 1
+        if isLastElement {
+            presenter.loadProducts()
+        }
+    }
 }
 
 extension ProductCatalogViewController: PinterestLayoutDelegate {
+    
     func collectionView(_ collectionView: UICollectionView, heightForCellAtIndexPath indexPath: IndexPath, withWidth width: CGFloat) -> CGFloat {
         let viewModel = cellModels[indexPath.row]
         return viewModel.cellHeight(withWidth: width)

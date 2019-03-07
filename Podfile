@@ -12,7 +12,7 @@ target 'Swappy' do
   
   pod 'Moya', '~> 12.0'
   
-  pod 'AlamofireImage'
+  pod 'SDWebImage', '~> 4.0'
 
   target 'SwappyTests' do
     inherit! :search_paths

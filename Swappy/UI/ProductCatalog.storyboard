@@ -21,7 +21,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fmP-lM-xgc">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewLayout key="collectionViewLayout" id="E4V-1D-hjf" customClass="PinterestLayout" customModule="Swappy" customModuleProvider="target"/>
+                                <collectionViewLayout key="collectionViewLayout" id="43K-jJ-SN5" customClass="PinterestLayout" customModule="Swappy" customModuleProvider="target"/>
                                 <cells/>
                             </collectionView>
                         </subviews>

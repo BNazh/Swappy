@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import AlamofireImage
+import SDWebImage
 
 final class ProductCollectionViewCell: UICollectionViewCell {
     
@@ -15,6 +15,13 @@ final class ProductCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        imageView.image = nil
+        imageView.sd_cancelCurrentImageLoad()
+    }
     
     func configure(with viewModel: ProductCellViewModel) {
         configureImageView(with: viewModel)
@@ -37,6 +44,9 @@ private extension ProductCollectionViewCell {
             return
         }
         
-        imageView.af_setImage(withURL: url, placeholderImage: placeholder)
+       // imageView.sd_setImage(with: url, placeholderImage: placeholder)
+        imageView.sd_setImage(with: url)
+        imageView.sd_setShowActivityIndicatorView(true)
+        imageView.sd_setIndicatorStyle(.gray)
     }
 }
