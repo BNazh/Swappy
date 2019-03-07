@@ -15,7 +15,7 @@ struct Product: Decodable {
     let price: Price
     let city: String
     let isSoldOut: Bool
-    let isActiver: Bool
+    let isActive: Bool
     let seller: Seller
     let contactPhone: String
 }

@@ -12,6 +12,15 @@ final class ProductCatalogAssembly: Assembly {
     
     func assemble(container: Container) {
         
-        container.storyboardInitCompleted(ProductCata, initCompleted: <#T##(Resolver, C) -> ()#>)
+        container.register(ProductCatalogPresenter.self) { (resolver, view: ProductCatalogViewController) in
+            return ProductCatalogPresenterImp(
+                view: view,
+                productWorker: resolver.resolve(ProductCatalogWorker.self)!
+            )
+        }
+        
+        container.storyboardInitCompleted(ProductCatalogViewController.self) { (resolver, controller) in
+            controller.presenter = resolver.resolve(ProductCatalogPresenter.self, argument: controller)!
+        }
     }
 }

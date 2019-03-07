@@ -14,7 +14,9 @@ extension SwinjectStoryboard {
     class func setup() {
         let assembler = Assembler(container: defaultContainer)
         assembler.apply(assemblies: [
+            WorkersAssembly(),
             
+            ProductCatalogAssembly()
         ])
     }
 }

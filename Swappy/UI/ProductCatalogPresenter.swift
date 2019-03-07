@@ -8,7 +8,6 @@
 
 protocol ProductCatalogPresenter {
     
-    func viewDidLoad()
     func loadProducts()
 }
 
@@ -25,13 +24,16 @@ final class ProductCatalogPresenterImp {
 
 extension ProductCatalogPresenterImp: ProductCatalogPresenter {
     
-    func viewDidLoad() {
-        productWorker.getProducts { (<#Result<[Product]>#>) in
-            <#code#>
-        }
-    }
-    
     func loadProducts() {
-        <#code#>
+        productWorker.getProducts { [weak self] result in
+            switch result {
+            case .success(let products):
+                let viewModels = products.map { ProductCellViewModel($0) }
+                self?.view.reloadCells(viewModels)
+                
+            case .failure:
+                self?.view.showError(message: "error")
+            }
+        }
     }
 }

@@ -38,6 +38,9 @@
 		E1BC5AE122312D5A001FD1D6 /* UIFont+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC5AE022312D5A001FD1D6 /* UIFont+App.swift */; };
 		E1BC5AE322312E6C001FD1D6 /* NSAttributedString+SimpleInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC5AE222312E6C001FD1D6 /* NSAttributedString+SimpleInit.swift */; };
 		E1BC5AE522312F36001FD1D6 /* Moya+CustomDecodableRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC5AE422312F36001FD1D6 /* Moya+CustomDecodableRequest.swift */; };
+		E1BC5AED223142E3001FD1D6 /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC5AEC223142E3001FD1D6 /* PinterestLayout.swift */; };
+		E1BC5AEF22318340001FD1D6 /* UICollectionView+RegisterCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC5AEE22318340001FD1D6 /* UICollectionView+RegisterCells.swift */; };
+		E1BC5AF222318370001FD1D6 /* UIView+ReusableIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC5AF122318370001FD1D6 /* UIView+ReusableIdentifiers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +104,9 @@
 		E1BC5AE022312D5A001FD1D6 /* UIFont+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+App.swift"; sourceTree = "<group>"; };
 		E1BC5AE222312E6C001FD1D6 /* NSAttributedString+SimpleInit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+SimpleInit.swift"; sourceTree = "<group>"; };
 		E1BC5AE422312F36001FD1D6 /* Moya+CustomDecodableRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Moya+CustomDecodableRequest.swift"; sourceTree = "<group>"; };
+		E1BC5AEC223142E3001FD1D6 /* PinterestLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
+		E1BC5AEE22318340001FD1D6 /* UICollectionView+RegisterCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+RegisterCells.swift"; sourceTree = "<group>"; };
+		E1BC5AF122318370001FD1D6 /* UIView+ReusableIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ReusableIdentifiers.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,17 +185,16 @@
 		E19F7DD32231063900BAFC7A /* Swappy */ = {
 			isa = PBXGroup;
 			children = (
+				E19F7E092231068300BAFC7A /* UI */,
+				E19F7E052231064D00BAFC7A /* BusinessLogic */,
+				E1BC5AC422310CAA001FD1D6 /* Entities */,
 				E1BC5ADF22312D50001FD1D6 /* Extensions */,
 				E19F7E1422310B3200BAFC7A /* DI */,
-				E19F7E092231068300BAFC7A /* UI */,
-				E1BC5AC422310CAA001FD1D6 /* Entities */,
-				E19F7E052231064D00BAFC7A /* BusinessLogic */,
+				E1BC5AE822313350001FD1D6 /* Resources */,
 				E19F7DD42231063900BAFC7A /* AppDelegate.swift */,
 				E19F7DD82231063900BAFC7A /* Main.storyboard */,
 				E19F7DDE2231063A00BAFC7A /* Assets.xcassets */,
-				E19F7DE02231063A00BAFC7A /* LaunchScreen.storyboard */,
 				E19F7DE32231063A00BAFC7A /* Info.plist */,
-				E19F7DDB2231063900BAFC7A /* Swappy.xcdatamodeld */,
 			);
 			path = Swappy;
 			sourceTree = "<group>";
@@ -234,10 +239,11 @@
 		E19F7E092231068300BAFC7A /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				E1BC5ADA22312476001FD1D6 /* Cells */,
+				E1BC5AE9223133F0001FD1D6 /* ProductCell */,
 				E1BC5AD122311FBE001FD1D6 /* ProductCatalog.storyboard */,
 				E1BC5AD322312160001FD1D6 /* ProductCatalogViewController.swift */,
 				E1BC5AD522312199001FD1D6 /* ProductCatalogPresenter.swift */,
+				E1BC5AEC223142E3001FD1D6 /* PinterestLayout.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -281,23 +287,42 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		E1BC5ADA22312476001FD1D6 /* Cells */ = {
+		E1BC5ADF22312D50001FD1D6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E1BC5AF02231835E001FD1D6 /* UI */,
+				E1BC5AE222312E6C001FD1D6 /* NSAttributedString+SimpleInit.swift */,
+				E1BC5AE422312F36001FD1D6 /* Moya+CustomDecodableRequest.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E1BC5AE822313350001FD1D6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E19F7DE02231063A00BAFC7A /* LaunchScreen.storyboard */,
+				E19F7DDB2231063900BAFC7A /* Swappy.xcdatamodeld */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E1BC5AE9223133F0001FD1D6 /* ProductCell */ = {
 			isa = PBXGroup;
 			children = (
 				E1BC5ADB22312488001FD1D6 /* ProductCollectionViewCell.swift */,
 				E1BC5ADD223124B3001FD1D6 /* ProductCollectionViewCell.xib */,
 			);
-			path = Cells;
+			path = ProductCell;
 			sourceTree = "<group>";
 		};
-		E1BC5ADF22312D50001FD1D6 /* Extensions */ = {
+		E1BC5AF02231835E001FD1D6 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				E1BC5AEE22318340001FD1D6 /* UICollectionView+RegisterCells.swift */,
 				E1BC5AE022312D5A001FD1D6 /* UIFont+App.swift */,
-				E1BC5AE222312E6C001FD1D6 /* NSAttributedString+SimpleInit.swift */,
-				E1BC5AE422312F36001FD1D6 /* Moya+CustomDecodableRequest.swift */,
+				E1BC5AF122318370001FD1D6 /* UIView+ReusableIdentifiers.swift */,
 			);
-			path = Extensions;
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -546,8 +571,10 @@
 				E19F7E1022310A5200BAFC7A /* ProductsCatalogWorker.swift in Sources */,
 				E1BC5ACC22310F9D001FD1D6 /* Sex.swift in Sources */,
 				E1BC5ACE22311168001FD1D6 /* Result.swift in Sources */,
+				E1BC5AF222318370001FD1D6 /* UIView+ReusableIdentifiers.swift in Sources */,
 				E1BC5AC122310C0E001FD1D6 /* ProductCatalogAssembly.swift in Sources */,
 				E1BC5AC322310C2E001FD1D6 /* WorkersAssembly.swift in Sources */,
+				E1BC5AEF22318340001FD1D6 /* UICollectionView+RegisterCells.swift in Sources */,
 				E1BC5ACA22310F1F001FD1D6 /* Seller.swift in Sources */,
 				E1BC5AE122312D5A001FD1D6 /* UIFont+App.swift in Sources */,
 				E19F7DDD2231063900BAFC7A /* Swappy.xcdatamodeld in Sources */,
@@ -556,6 +583,7 @@
 				E1BC5AD622312199001FD1D6 /* ProductCatalogPresenter.swift in Sources */,
 				E19F7E1222310B0200BAFC7A /* ProductsCatalogWorkerImp.swift in Sources */,
 				E1BC5AD422312160001FD1D6 /* ProductCatalogViewController.swift in Sources */,
+				E1BC5AED223142E3001FD1D6 /* PinterestLayout.swift in Sources */,
 				E1BC5ADC22312488001FD1D6 /* ProductCollectionViewCell.swift in Sources */,
 				E19F7DD52231063900BAFC7A /* AppDelegate.swift in Sources */,
 				E1BC5AE322312E6C001FD1D6 /* NSAttributedString+SimpleInit.swift in Sources */,

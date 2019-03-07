@@ -7,13 +7,13 @@
 //
 
 struct Price: Decodable {
-    let doubleValue: Double
+    let value: Double
     let currency: String
 }
 
 extension Price {
     
-    var value: String {
-        return "\(doubleValue) \(currency)"
+    var stringValue: String {
+        return String(format: "%0.f ₽" , value)
     }
 }

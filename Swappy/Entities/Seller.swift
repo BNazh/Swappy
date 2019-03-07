@@ -16,6 +16,6 @@ struct Seller: Decodable {
     let sex: Sex
     let birthDate: String
     let phone: String
-    let email: String
+    let email: String?
     
 }

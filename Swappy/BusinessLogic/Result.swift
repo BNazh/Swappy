@@ -6,6 +6,11 @@
 //  Copyright © 2019 SwappyTeam. All rights reserved.
 //
 
+struct DataResponse<T: Decodable>: Decodable {
+    let data: T
+    let status: Int
+}
+
 typealias ResultCallback<T> = (Result<T>) -> Void
 
 enum Result<T> {

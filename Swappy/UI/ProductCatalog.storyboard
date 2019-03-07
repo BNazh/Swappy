@@ -13,36 +13,30 @@
         <!--Product Catalog View Controller-->
         <scene sceneID="do6-UZ-vGY">
             <objects>
-                <viewController id="IUz-77-IIh" customClass="ProductCatalogViewController" sceneMemberID="viewController">
+                <viewController id="IUz-77-IIh" customClass="ProductCatalogViewController" customModule="Swappy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E7Q-oD-chI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fmP-lM-xgc">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fmP-lM-xgc">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Sqg-wv-vuW">
-                                    <size key="itemSize" width="50" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="qoO-Fv-slC">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </view>
-                                    </collectionViewCell>
-                                </cells>
+                                <collectionViewLayout key="collectionViewLayout" id="E4V-1D-hjf" customClass="PinterestLayout" customModule="Swappy" customModuleProvider="target"/>
+                                <cells/>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fmP-lM-xgc" firstAttribute="top" secondItem="E7Q-oD-chI" secondAttribute="top" id="3ML-Mx-H9k"/>
+                            <constraint firstItem="fmP-lM-xgc" firstAttribute="trailing" secondItem="7Zg-Fj-xaj" secondAttribute="trailing" id="4x5-LN-bQu"/>
+                            <constraint firstItem="fmP-lM-xgc" firstAttribute="leading" secondItem="7Zg-Fj-xaj" secondAttribute="leading" id="igt-z6-dcG"/>
+                            <constraint firstItem="fmP-lM-xgc" firstAttribute="bottom" secondItem="7Zg-Fj-xaj" secondAttribute="bottom" id="nX5-pm-vlZ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="7Zg-Fj-xaj"/>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="fmP-lM-xgc" id="aah-bn-JWG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1mn-63-Kuz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

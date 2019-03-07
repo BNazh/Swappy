@@ -21,9 +21,9 @@ extension MoyaProvider {
             case .success(let moyaResponse):
                 do {
                     let filteredResponse = try moyaResponse.filterSuccessfulStatusCodes()
-                    let decodedResponse = try filteredResponse.map(T.self)
+                    let decodedResponse = try filteredResponse.map(DataResponse<T>.self)
                     
-                    callback(.success(decodedResponse))
+                    callback(.success(decodedResponse.data))
                 }
                 catch {
                     callback(.failure(.decoding))

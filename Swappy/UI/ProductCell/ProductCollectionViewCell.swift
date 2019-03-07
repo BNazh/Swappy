@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 final class ProductCollectionViewCell: UICollectionViewCell {
     
@@ -16,6 +17,26 @@ final class ProductCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var cityLabel: UILabel!
     
     func configure(with viewModel: ProductCellViewModel) {
-        imageView
+        configureImageView(with: viewModel)
+        
+        titleLabel.attributedText = viewModel.title
+        priceLabel.text = viewModel.price
+        cityLabel.text = viewModel.city
+    }
+}
+
+// MARK: - Private
+
+private extension ProductCollectionViewCell {
+    
+    func configureImageView(with viewModel: ProductCellViewModel) {
+        let placeholder = viewModel.placeholderImage
+        
+        guard let url = viewModel.imageURL else {
+            imageView.image = placeholder
+            return
+        }
+        
+        imageView.af_setImage(withURL: url, placeholderImage: placeholder)
     }
 }

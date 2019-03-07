@@ -10,8 +10,11 @@ import UIKit
 
 struct ProductCellViewModel {
     
+    let id: String
+    
     let imageURL: URL?
     let placeholderImage: UIImage
+    
     let title: NSAttributedString
     let city: String
     let price: String
@@ -19,9 +22,42 @@ struct ProductCellViewModel {
     init(_ product: Product) {
         if let firstImageString = product.images.first {
             imageURL = URL(string: firstImageString)
+        } else {
+            imageURL = nil
         }
+        placeholderImage = UIImage()
         
-        placeholderImage =
-        city = product
+        id = product.id
+        title = product.name.appendBolded(" \(product.size)")
+        city = product.city
+        price = product.price.stringValue
+    }
+}
+
+// FIXME: dirty cell height calculation
+
+extension ProductCellViewModel {
+    
+    func cellHeight(withWidth width: CGFloat) -> CGFloat {
+        let priceHeight: CGFloat = 22
+        let spaces: CGFloat = 8
+        let imageHeight = width
+        
+//        print(title.string)
+//        print(titleHeight(width: width))
+//        print(width)
+//        print("\n")
+        
+        return imageHeight + priceHeight + titleHeight(width: width) + spaces
+    }
+    
+    func titleHeight(width: CGFloat) -> CGFloat {
+        let maxHeight: CGFloat = 100
+        let maxRect = CGSize(width: width, height: maxHeight)
+        let boundingRect = title.boundingRect(with: maxRect,
+                                              options: .usesLineFragmentOrigin,
+                                              context: nil)
+        
+        return boundingRect.size.height
     }
 }

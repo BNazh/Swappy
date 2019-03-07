@@ -9,6 +9,8 @@
 import UIKit
 import CoreData
 
+import SwinjectStoryboard
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -16,6 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        SwinjectStoryboard.setup()
+        
         // Override point for customization after application launch.
         return true
     }
