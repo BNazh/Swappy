@@ -16,37 +16,24 @@ final class ProductCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        cityLabel.layer.cornerRadius = 4
+    }
+    
     override func prepareForReuse() {
         super.prepareForReuse()
         
-        imageView.image = nil
         imageView.sd_cancelCurrentImageLoad()
+        imageView.image = nil
     }
     
     func configure(with viewModel: ProductCellViewModel) {
-        configureImageView(with: viewModel)
-        
         titleLabel.attributedText = viewModel.title
         priceLabel.text = viewModel.price
         cityLabel.text = viewModel.city
-    }
-}
-
-// MARK: - Private
-
-private extension ProductCollectionViewCell {
-    
-    func configureImageView(with viewModel: ProductCellViewModel) {
-        let placeholder = viewModel.placeholderImage
         
-        guard let url = viewModel.imageURL else {
-            imageView.image = placeholder
-            return
-        }
-        
-       // imageView.sd_setImage(with: url, placeholderImage: placeholder)
-        imageView.sd_setImage(with: url)
-        imageView.sd_setShowActivityIndicatorView(true)
-        imageView.sd_setIndicatorStyle(.gray)
+        imageView.sd_setImage(with: viewModel.imageURL)
     }
-}
+} 

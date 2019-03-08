@@ -13,7 +13,6 @@ struct ProductCellViewModel {
     let id: String
     
     let imageURL: URL?
-    let placeholderImage: UIImage
     
     let title: NSAttributedString
     let city: String
@@ -25,7 +24,6 @@ struct ProductCellViewModel {
         } else {
             imageURL = nil
         }
-        placeholderImage = UIImage()
         
         id = product.id
         title = product.name.appendBolded(" \(product.size)")
@@ -42,11 +40,6 @@ extension ProductCellViewModel {
         let priceHeight: CGFloat = 22
         let spaces: CGFloat = 8
         let imageHeight = width
-        
-//        print(title.string)
-//        print(titleHeight(width: width))
-//        print(width)
-//        print("\n")
         
         return imageHeight + priceHeight + titleHeight(width: width) + spaces
     }

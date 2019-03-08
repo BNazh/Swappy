@@ -27,6 +27,10 @@ final class ProductCatalogPresenterImp {
 extension ProductCatalogPresenterImp: ProductCatalogPresenter {
     
     func loadProducts() {
+        guard !isLoading else {
+            return
+        }
+        
         isLoading = true
         
         productWorker.getProducts { [weak self] result in
