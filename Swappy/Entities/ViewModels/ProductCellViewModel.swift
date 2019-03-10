@@ -26,7 +26,9 @@ struct ProductCellViewModel {
         }
         
         id = product.id
-        title = product.name.appendBolded(" \(product.size)")
+        let name = product.name.trimmingCharacters(in: .newlines)
+        let size = product.size.trimmingCharacters(in: .newlines)
+        title = name.appendBolded(" \(size)")
         city = product.city
         price = product.price.stringValue
     }
@@ -40,6 +42,11 @@ extension ProductCellViewModel {
         let priceHeight: CGFloat = 22
         let spaces: CGFloat = 8
         let imageHeight = width
+        
+        print("---")
+        print(title.string)
+        print(titleHeight(width: width))
+        print("---")
         
         return imageHeight + priceHeight + titleHeight(width: width) + spaces
     }

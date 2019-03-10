@@ -14,6 +14,8 @@ final class ProductCatalogWorkerImp {
     
     var pageNumber = 0
     let pageSize = 10
+    
+    var canLoadMore = true
 }
 
 extension ProductCatalogWorkerImp: ProductCatalogWorker {
@@ -23,11 +25,16 @@ extension ProductCatalogWorkerImp: ProductCatalogWorker {
         let target = SwappyService.products(pageNumber: pageNumber, pageSize: pageSize)
 
         provider.requestDecodable(target) { [weak self] (response: Result<[Product]>) in
-            if response.isSuccess {
+            if let products = response.value {
                 self?.pageNumber += 1
+                self?.canLoadMore = products.count == self?.pageSize
             }
             
             callback(response)
         }
+    }
+    
+    func reset() {
+        pageNumber = 0
     }
 }

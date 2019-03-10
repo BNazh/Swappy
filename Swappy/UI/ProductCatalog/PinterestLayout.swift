@@ -94,9 +94,3 @@ class PinterestLayout: UICollectionViewLayout {
         return cache[safe: indexPath.item]
     }
 }
-
-extension Collection {
-    subscript (safe index: Index) -> Element? {
-        return indices.contains(index) ? self[index] : nil
-    }
-}

@@ -31,6 +31,8 @@ final class ProductCatalogViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         
+        //collectionView.contentInset = UIEdgeInsets(top: 0, left: 9, bottom: 0, right: 9)
+        
         collectionView.register(cellType: ProductCollectionViewCell.self)
         
         if let layout = collectionView?.collectionViewLayout as? PinterestLayout {
@@ -54,7 +56,7 @@ extension ProductCatalogViewController: ProductCatalogView {
     }
 }
 
-extension ProductCatalogViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension ProductCatalogViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return cellModels.count
@@ -65,6 +67,10 @@ extension ProductCatalogViewController: UICollectionViewDataSource, UICollection
         
         let model = cellModels[indexPath.row]
         cell.configure(with: model)
+        
+//        print("---")
+//        print(model.title.string)
+//        print("---")
     
         return cell
     }

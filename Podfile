@@ -7,13 +7,24 @@ target 'Swappy' do
 
   # Pods for Swappy
 
+  # DI
   pod 'Swinject'
   pod 'SwinjectStoryboard'
   
+  # Network
   pod 'Moya', '~> 12.0'
   
+  # Images
   pod 'SDWebImage', '~> 4.0'
-
+  
+  # Slideshow view
+  pod 'ImageSlideshow'
+  pod 'ImageSlideshow/SDWebImage'
+  
+  # Top-navigation "ViewPager"
+  pod 'XLPagerTabStrip', '~> 8.1'
+  
+  
   target 'SwappyTests' do
     inherit! :search_paths
     # Pods for testing
