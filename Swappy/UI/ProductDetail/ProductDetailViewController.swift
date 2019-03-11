@@ -8,12 +8,23 @@
 
 import UIKit
 
+protocol ProductDetailView {
+    func showProduct(viewModel: ProductViewModel)
+}
+
 class ProductDetailViewController: UIViewController {
 
+    @IBOutlet weak var imageSlider: ImageSlider!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
     }
     
     
@@ -27,4 +38,8 @@ class ProductDetailViewController: UIViewController {
     }
     */
 
+}
+
+extension ProductDetailViewController {
+    
 }

@@ -28,7 +28,7 @@ struct ProductCellViewModel {
         id = product.id
         let name = product.name.trimmingCharacters(in: .newlines)
         let size = product.size.trimmingCharacters(in: .newlines)
-        title = name.appendBolded(" \(size)")
+        title = name.appendBolded(" \(size)", fontSize: 15)
         city = product.city
         price = product.price.stringValue
     }

@@ -20,9 +20,7 @@ extension NSAttributedString {
 
 extension String {
     
-        func appendBolded(_ boldedString: String) -> NSAttributedString {
-        let fontSize: CGFloat = 15
-
+    func appendBolded(_ boldedString: String, fontSize: CGFloat) -> NSAttributedString {
         let textFont = UIFont.appFont(ofSize: fontSize, style: .regular)
         let result = NSMutableAttributedString(string: self, font: textFont)
         
