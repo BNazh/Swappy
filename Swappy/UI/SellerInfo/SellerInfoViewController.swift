@@ -14,9 +14,10 @@ protocol SellerInfoView: class {
 
 final class SellerInfoViewController: UIViewController {
     
-    @IBOutlet weak var contactButton: MainButton!
+    @IBOutlet weak var contactButton: SecondaryButton!
     @IBOutlet weak var copyButton: MainButton!
     
+    @IBOutlet weak var sellerContainer: UIView!
     
     var presenter: SellerInfoPresenter!
     
@@ -26,11 +27,20 @@ final class SellerInfoViewController: UIViewController {
         presenter.showSeller()
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        sellerContainer.roundCorners(corners: [.topLeft, .topRight], radius: 9)
+    }
+    
     // MARK: - Actions
     
     
     @IBAction func copyTapped(_ sender: UIButton) {
-        
+        let url = URL(string: "whatsapp://send?text=Hello%2Cfrom%20Swappy!")!
+        let items = [url]
+        let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
+        present(ac, animated: true)
     }
     
     @IBAction func contactButtonTapped(_ sender: UIButton) {

@@ -1,15 +1,14 @@
 //
-//  MainButton.swift
+//  SecondaryButton.swift
 //  Swappy
 //
-//  Created by Бабаев Михаил Михайлович on 10/03/2019.
+//  Created by Mihail on 13/03/2019.
 //  Copyright © 2019 SwappyTeam. All rights reserved.
 //
 
 import UIKit
 
-@IBDesignable
-class MainButton: UIButton {
+class SecondaryButton: UIButton {
     
     // MARK: - Constants
     
@@ -18,8 +17,8 @@ class MainButton: UIButton {
         static let titleLabelFont = UIFont.systemFont(ofSize: 15, weight: .semibold)
         
         enum Color {
-            static let background = UIColor.black
-            static let textColor = UIColor.white
+            static let background = UIColor.whiteSmoke
+            static let textColor = UIColor.black
         }
     }
     

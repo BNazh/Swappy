@@ -18,7 +18,7 @@ protocol ProductCatalogRouter {
 
 final class ProductCatalogRouterImp {
     
-    let viewController: UIViewController
+    unowned let viewController: UIViewController
     
     init(viewController: UIViewController) {
         self.viewController = viewController

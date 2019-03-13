@@ -60,6 +60,7 @@
 		E1FC30AB22396F7400DF1325 /* SellerInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FC30AA22396F7400DF1325 /* SellerInfoViewModel.swift */; };
 		E1FC30AD2239722300DF1325 /* SellerInfoAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FC30AC2239722300DF1325 /* SellerInfoAssembly.swift */; };
 		E1FC30AF2239738200DF1325 /* ProductDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FC30AE2239738200DF1325 /* ProductDetailRouter.swift */; };
+		E1FC30B2223977B900DF1325 /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FC30B1223977B900DF1325 /* SecondaryButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -145,6 +146,8 @@
 		E1FC30AA22396F7400DF1325 /* SellerInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellerInfoViewModel.swift; sourceTree = "<group>"; };
 		E1FC30AC2239722300DF1325 /* SellerInfoAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellerInfoAssembly.swift; sourceTree = "<group>"; };
 		E1FC30AE2239738200DF1325 /* ProductDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailRouter.swift; sourceTree = "<group>"; };
+		E1FC30B1223977B900DF1325 /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
+		E1FC30B322398B2E00DF1325 /* Swappy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Swappy.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,7 +228,7 @@
 		E164C39922358E0400D1AB13 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				E164C39B223591AF00D1AB13 /* MainButton.swift */,
+				E1FC30B0223977A200DF1325 /* Buttons */,
 				E164C39D2235A70E00D1AB13 /* SeparatorView.swift */,
 				E164C3A12235A92300D1AB13 /* ImageSlider.swift */,
 			);
@@ -257,6 +260,7 @@
 		E19F7DD32231063900BAFC7A /* Swappy */ = {
 			isa = PBXGroup;
 			children = (
+				E1FC30B322398B2E00DF1325 /* Swappy.entitlements */,
 				E19F7E092231068300BAFC7A /* UI */,
 				E19F7E052231064D00BAFC7A /* BusinessLogic */,
 				E1BC5AC422310CAA001FD1D6 /* Entities */,
@@ -414,6 +418,15 @@
 			path = SellerInfo;
 			sourceTree = "<group>";
 		};
+		E1FC30B0223977A200DF1325 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				E164C39B223591AF00D1AB13 /* MainButton.swift */,
+				E1FC30B1223977B900DF1325 /* SecondaryButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -486,6 +499,14 @@
 				TargetAttributes = {
 					E19F7DD02231063900BAFC7A = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					E19F7DE72231063A00BAFC7A = {
 						CreatedOnToolsVersion = 10.1;
@@ -682,6 +703,7 @@
 				E164C39C223591AF00D1AB13 /* MainButton.swift in Sources */,
 				E1BC5AEF22318340001FD1D6 /* UICollectionView+RegisterCells.swift in Sources */,
 				E1BC5ACA22310F1F001FD1D6 /* Seller.swift in Sources */,
+				E1FC30B2223977B900DF1325 /* SecondaryButton.swift in Sources */,
 				E1BC5AE122312D5A001FD1D6 /* UIFont+App.swift in Sources */,
 				E19F7DDD2231063900BAFC7A /* Swappy.xcdatamodeld in Sources */,
 				E1FC30AB22396F7400DF1325 /* SellerInfoViewModel.swift in Sources */,
@@ -804,7 +826,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -859,7 +881,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -874,6 +896,8 @@
 			baseConfigurationReference = D325178C30F5960E093569F4 /* Pods-Swappy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Swappy/Swappy.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TLWW27T23K;
 				INFOPLIST_FILE = Swappy/Info.plist;
@@ -881,8 +905,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.st.Swappy;
+				PRODUCT_BUNDLE_IDENTIFIER = com.st.SwappyTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -893,6 +918,8 @@
 			baseConfigurationReference = 3183FE93E763820428B6FB22 /* Pods-Swappy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Swappy/Swappy.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TLWW27T23K;
 				INFOPLIST_FILE = Swappy/Info.plist;
@@ -900,8 +927,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.st.Swappy;
+				PRODUCT_BUNDLE_IDENTIFIER = com.st.SwappyTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

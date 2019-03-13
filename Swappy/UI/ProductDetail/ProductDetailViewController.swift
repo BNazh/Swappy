@@ -32,6 +32,10 @@ class ProductDetailViewController: UIViewController {
         setup()
     }
     
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
     @IBAction func openSellerTouchedDown(_ sender: UIButton) {
         print("open seller tapped")
         presenter.showSeller()

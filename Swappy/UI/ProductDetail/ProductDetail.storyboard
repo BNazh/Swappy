@@ -154,6 +154,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.40446192781690143" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="R1d-Ne-rQr" firstAttribute="trailing" secondItem="tNG-rW-MCw" secondAttribute="trailing" id="56A-x9-GOP"/>
                             <constraint firstItem="tNG-rW-MCw" firstAttribute="leading" secondItem="R1d-Ne-rQr" secondAttribute="leading" id="IJm-75-TFr"/>

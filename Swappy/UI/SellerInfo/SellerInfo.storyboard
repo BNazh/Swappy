@@ -13,7 +13,7 @@
         <!--Seller Info View Controller-->
         <scene sceneID="4Mf-Ll-Azb">
             <objects>
-                <viewController storyboardIdentifier="SellerInfoViewController" id="6Xf-Dr-8tJ" customClass="SellerInfoViewController" customModule="Swappy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SellerInfoViewController" modalPresentationStyle="overCurrentContext" id="6Xf-Dr-8tJ" customClass="SellerInfoViewController" customModule="Swappy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uKG-4h-5DN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -48,7 +48,7 @@
                                             <action selector="closeTapped:" destination="6Xf-Dr-8tJ" eventType="touchUpInside" id="vN5-lC-ldn"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ByB-Os-tM6" customClass="MainButton" customModule="Swappy" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ByB-Os-tM6" customClass="SecondaryButton" customModule="Swappy" customModuleProvider="target">
                                         <rect key="frame" x="16" y="139" width="288" height="52"/>
                                         <state key="normal" title="8 916 366 25 95"/>
                                         <connections>
@@ -75,7 +75,6 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="LsS-eD-evY" firstAttribute="height" secondItem="uKG-4h-5DN" secondAttribute="height" multiplier="0.4" priority="900" id="3dA-nz-8NZ"/>
                             <constraint firstItem="x0S-uy-W1w" firstAttribute="bottom" secondItem="LsS-eD-evY" secondAttribute="bottom" id="Ku1-2c-bdL"/>
@@ -87,6 +86,7 @@
                     <connections>
                         <outlet property="contactButton" destination="ByB-Os-tM6" id="3q3-M4-ksm"/>
                         <outlet property="copyButton" destination="Iny-EY-P7b" id="qQp-qe-7xl"/>
+                        <outlet property="sellerContainer" destination="LsS-eD-evY" id="Gd4-f8-Wqf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O2J-mh-idh" userLabel="First Responder" sceneMemberID="firstResponder"/>
