@@ -54,6 +54,12 @@
 		E1FC309E22378CC100DF1325 /* UIViewController+Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FC309D22378CC100DF1325 /* UIViewController+Storyboard.swift */; };
 		E1FC30A02238504100DF1325 /* ProdcutDetailAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FC309F2238504100DF1325 /* ProdcutDetailAssembly.swift */; };
 		E1FC30A22238AB2B00DF1325 /* UIView+RoundCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FC30A12238AB2B00DF1325 /* UIView+RoundCorners.swift */; };
+		E1FC30A52238DC5C00DF1325 /* SellerInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FC30A42238DC5C00DF1325 /* SellerInfoViewController.swift */; };
+		E1FC30A72238DC9900DF1325 /* SellerInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1FC30A62238DC9900DF1325 /* SellerInfo.storyboard */; };
+		E1FC30A922396F4B00DF1325 /* SellerInfoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FC30A822396F4B00DF1325 /* SellerInfoPresenter.swift */; };
+		E1FC30AB22396F7400DF1325 /* SellerInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FC30AA22396F7400DF1325 /* SellerInfoViewModel.swift */; };
+		E1FC30AD2239722300DF1325 /* SellerInfoAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FC30AC2239722300DF1325 /* SellerInfoAssembly.swift */; };
+		E1FC30AF2239738200DF1325 /* ProductDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FC30AE2239738200DF1325 /* ProductDetailRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +139,12 @@
 		E1FC309D22378CC100DF1325 /* UIViewController+Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Storyboard.swift"; sourceTree = "<group>"; };
 		E1FC309F2238504100DF1325 /* ProdcutDetailAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProdcutDetailAssembly.swift; sourceTree = "<group>"; };
 		E1FC30A12238AB2B00DF1325 /* UIView+RoundCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+RoundCorners.swift"; sourceTree = "<group>"; };
+		E1FC30A42238DC5C00DF1325 /* SellerInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellerInfoViewController.swift; sourceTree = "<group>"; };
+		E1FC30A62238DC9900DF1325 /* SellerInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SellerInfo.storyboard; sourceTree = "<group>"; };
+		E1FC30A822396F4B00DF1325 /* SellerInfoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellerInfoPresenter.swift; sourceTree = "<group>"; };
+		E1FC30AA22396F7400DF1325 /* SellerInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellerInfoViewModel.swift; sourceTree = "<group>"; };
+		E1FC30AC2239722300DF1325 /* SellerInfoAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellerInfoAssembly.swift; sourceTree = "<group>"; };
+		E1FC30AE2239738200DF1325 /* ProductDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +217,7 @@
 				E164C3942231B5FE00D1AB13 /* ProductDetail.storyboard */,
 				E164C3922231B5DF00D1AB13 /* ProductDetailViewController.swift */,
 				E1B4B1DA2235BDE400520082 /* ProductDetailPresenter.swift */,
+				E1FC30AE2239738200DF1325 /* ProductDetailRouter.swift */,
 			);
 			path = ProductDetail;
 			sourceTree = "<group>";
@@ -299,6 +312,7 @@
 			isa = PBXGroup;
 			children = (
 				E164C39922358E0400D1AB13 /* Common */,
+				E1FC30A32238DC4400DF1325 /* SellerInfo */,
 				E164C3912231B5C200D1AB13 /* ProductDetail */,
 				E164C3902231B5B200D1AB13 /* ProductCatalog */,
 			);
@@ -320,6 +334,7 @@
 				E19F7E1522310B3D00BAFC7A /* Swinject.swift */,
 				E1BC5AC022310C0E001FD1D6 /* ProductCatalogAssembly.swift */,
 				E1FC309F2238504100DF1325 /* ProdcutDetailAssembly.swift */,
+				E1FC30AC2239722300DF1325 /* SellerInfoAssembly.swift */,
 				E1BC5AC222310C2E001FD1D6 /* WorkersAssembly.swift */,
 			);
 			path = DI;
@@ -342,6 +357,7 @@
 			children = (
 				E1BC5AD822312456001FD1D6 /* ProductCellViewModel.swift */,
 				E1B4B1DC2235BE2200520082 /* ProductViewModel.swift */,
+				E1FC30AA22396F7400DF1325 /* SellerInfoViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -386,6 +402,16 @@
 				E1FC30A12238AB2B00DF1325 /* UIView+RoundCorners.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		E1FC30A32238DC4400DF1325 /* SellerInfo */ = {
+			isa = PBXGroup;
+			children = (
+				E1FC30A62238DC9900DF1325 /* SellerInfo.storyboard */,
+				E1FC30A42238DC5C00DF1325 /* SellerInfoViewController.swift */,
+				E1FC30A822396F4B00DF1325 /* SellerInfoPresenter.swift */,
+			);
+			path = SellerInfo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -498,6 +524,7 @@
 			files = (
 				E1BC5AD222311FBE001FD1D6 /* ProductCatalog.storyboard in Resources */,
 				E19F7DE22231063A00BAFC7A /* LaunchScreen.storyboard in Resources */,
+				E1FC30A72238DC9900DF1325 /* SellerInfo.storyboard in Resources */,
 				E1BC5ADE223124B3001FD1D6 /* ProductCollectionViewCell.xib in Resources */,
 				E19F7DDF2231063A00BAFC7A /* Assets.xcassets in Resources */,
 				E19F7DDA2231063900BAFC7A /* Main.storyboard in Resources */,
@@ -632,13 +659,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1FC30A22238AB2B00DF1325 /* UIView+RoundCorners.swift in Sources */,
+				E1FC30A922396F4B00DF1325 /* SellerInfoPresenter.swift in Sources */,
 				E19F7E1622310B3D00BAFC7A /* Swinject.swift in Sources */,
 				E1FC309E22378CC100DF1325 /* UIViewController+Storyboard.swift in Sources */,
 				E1BC5AD922312456001FD1D6 /* ProductCellViewModel.swift in Sources */,
 				E1BC5AE522312F36001FD1D6 /* Moya+CustomDecodableRequest.swift in Sources */,
+				E1FC30AD2239722300DF1325 /* SellerInfoAssembly.swift in Sources */,
 				E19F7E0D2231078F00BAFC7A /* SwappyService.swift in Sources */,
 				E1BC5AD022311173001FD1D6 /* AppError.swift in Sources */,
 				E19F7E1022310A5200BAFC7A /* ProductsCatalogWorker.swift in Sources */,
+				E1FC30AF2239738200DF1325 /* ProductDetailRouter.swift in Sources */,
+				E1FC30A52238DC5C00DF1325 /* SellerInfoViewController.swift in Sources */,
 				E1B4B1DB2235BDE400520082 /* ProductDetailPresenter.swift in Sources */,
 				E1FC30A02238504100DF1325 /* ProdcutDetailAssembly.swift in Sources */,
 				E164C3A22235A92300D1AB13 /* ImageSlider.swift in Sources */,
@@ -653,6 +684,7 @@
 				E1BC5ACA22310F1F001FD1D6 /* Seller.swift in Sources */,
 				E1BC5AE122312D5A001FD1D6 /* UIFont+App.swift in Sources */,
 				E19F7DDD2231063900BAFC7A /* Swappy.xcdatamodeld in Sources */,
+				E1FC30AB22396F7400DF1325 /* SellerInfoViewModel.swift in Sources */,
 				E1BC5AC622310CB7001FD1D6 /* Product.swift in Sources */,
 				E1BC5AC822310E88001FD1D6 /* Price.swift in Sources */,
 				E1BC5AD622312199001FD1D6 /* ProductCatalogPresenter.swift in Sources */,

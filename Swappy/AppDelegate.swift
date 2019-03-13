@@ -21,6 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         SwinjectStoryboard.setup()
         
+        window?.rootViewController?.modalPresentationStyle = .currentContext
+        
         // Override point for customization after application launch.
         return true
     }

@@ -17,7 +17,8 @@ extension SwinjectStoryboard {
             WorkersAssembly(),
             
             ProductCatalogAssembly(),
-            ProductDetailAssembly()
+            ProductDetailAssembly(),
+            SellerInfoAssembly()
         ])
     }
 }

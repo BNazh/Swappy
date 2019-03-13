@@ -31,8 +31,7 @@ extension ProductCatalogRouterImp: ProductCatalogRouter {
         
         productDetail.presenter.setProduct(product)
         
-        productDetail.modalPresentationStyle = .currentContext
-        productDetail.view.backgroundColor = .clear
-        viewController.navigationController?.present(productDetail, animated: true, completion: nil)
+        let presentingVC = viewController.navigationController
+        presentingVC?.present(productDetail, animated: true, completion: nil)
     }
 }

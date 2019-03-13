@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol ProductDetailView {
+protocol ProductDetailView: class {
     func showProduct(viewModel: ProductViewModel)
 }
 
@@ -24,12 +24,17 @@ class ProductDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setup()
         presenter.showProduct()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        setup()
     }
     
     @IBAction func openSellerTouchedDown(_ sender: UIButton) {
         print("open seller tapped")
+        presenter.showSeller()
     }
     
     @IBAction func closeTapped(_ sender: UIButton) {
@@ -52,6 +57,6 @@ extension ProductDetailViewController: ProductDetailView {
 private extension ProductDetailViewController {
     
     func setup() {
-        imageSlider.roundCorners(corners: [.topLeft, .topRight], radius: 16)
+        imageSlider.roundCorners(corners: [.topRight, .topLeft], radius: 16)
     }
 }

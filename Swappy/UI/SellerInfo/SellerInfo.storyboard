@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Seller Info View Controller-->
+        <scene sceneID="4Mf-Ll-Azb">
+            <objects>
+                <viewController storyboardIdentifier="SellerInfoViewController" id="6Xf-Dr-8tJ" customClass="SellerInfoViewController" customModule="Swappy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uKG-4h-5DN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LsS-eD-evY">
+                                <rect key="frame" x="0.0" y="301" width="320" height="267"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iny-EY-P7b" customClass="MainButton" customModule="Swappy" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="199" width="288" height="52"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="52" id="XR8-Dk-hhC"/>
+                                        </constraints>
+                                        <state key="normal" title="Скопировать"/>
+                                        <connections>
+                                            <action selector="copyTapped:" destination="6Xf-Dr-8tJ" eventType="touchUpInside" id="GuX-aC-7O2"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Не забудь сказать, что вещь найдена в своппи 🙂" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWx-3n-g3V">
+                                        <rect key="frame" x="20" y="52" width="280" height="75"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qg0-eC-KfW">
+                                        <rect key="frame" x="272" y="4" width="48" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="4Jz-lO-ClF"/>
+                                            <constraint firstAttribute="width" secondItem="qg0-eC-KfW" secondAttribute="height" multiplier="1:1" id="naC-eS-8xV"/>
+                                        </constraints>
+                                        <state key="normal" title="X"/>
+                                        <connections>
+                                            <action selector="closeTapped:" destination="6Xf-Dr-8tJ" eventType="touchUpInside" id="vN5-lC-ldn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ByB-Os-tM6" customClass="MainButton" customModule="Swappy" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="139" width="288" height="52"/>
+                                        <state key="normal" title="8 916 366 25 95"/>
+                                        <connections>
+                                            <action selector="contactButtonTapped:" destination="6Xf-Dr-8tJ" eventType="touchUpInside" id="lhW-tL-9iJ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="DWx-3n-g3V" firstAttribute="leading" secondItem="LsS-eD-evY" secondAttribute="leading" constant="20" id="7iS-L3-PxW"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="267" id="KKV-4W-x72"/>
+                                    <constraint firstAttribute="trailing" secondItem="qg0-eC-KfW" secondAttribute="trailing" id="MJO-cj-CgW"/>
+                                    <constraint firstAttribute="trailing" secondItem="Iny-EY-P7b" secondAttribute="trailing" constant="16" id="NKs-hM-wgJ"/>
+                                    <constraint firstItem="Iny-EY-P7b" firstAttribute="width" secondItem="ByB-Os-tM6" secondAttribute="width" id="O69-E1-cY9"/>
+                                    <constraint firstAttribute="trailing" secondItem="DWx-3n-g3V" secondAttribute="trailing" constant="20" id="WVq-oq-6cY"/>
+                                    <constraint firstItem="Iny-EY-P7b" firstAttribute="height" secondItem="ByB-Os-tM6" secondAttribute="height" id="ZXx-tV-17y"/>
+                                    <constraint firstItem="DWx-3n-g3V" firstAttribute="top" secondItem="qg0-eC-KfW" secondAttribute="bottom" id="gfs-Y5-qTu"/>
+                                    <constraint firstItem="Iny-EY-P7b" firstAttribute="centerX" secondItem="ByB-Os-tM6" secondAttribute="centerX" id="jjU-Lf-wMb"/>
+                                    <constraint firstItem="qg0-eC-KfW" firstAttribute="top" secondItem="LsS-eD-evY" secondAttribute="top" constant="4" id="k7T-eb-4sF"/>
+                                    <constraint firstItem="ByB-Os-tM6" firstAttribute="top" secondItem="DWx-3n-g3V" secondAttribute="bottom" constant="12" id="l9Z-p1-4yv"/>
+                                    <constraint firstItem="Iny-EY-P7b" firstAttribute="top" secondItem="ByB-Os-tM6" secondAttribute="bottom" constant="8" id="m3V-1Q-hra"/>
+                                    <constraint firstAttribute="bottom" secondItem="Iny-EY-P7b" secondAttribute="bottom" constant="16" id="ps2-gA-s6t"/>
+                                    <constraint firstItem="Iny-EY-P7b" firstAttribute="leading" secondItem="LsS-eD-evY" secondAttribute="leading" constant="16" id="wVe-Ft-1bw"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LsS-eD-evY" firstAttribute="height" secondItem="uKG-4h-5DN" secondAttribute="height" multiplier="0.4" priority="900" id="3dA-nz-8NZ"/>
+                            <constraint firstItem="x0S-uy-W1w" firstAttribute="bottom" secondItem="LsS-eD-evY" secondAttribute="bottom" id="Ku1-2c-bdL"/>
+                            <constraint firstItem="x0S-uy-W1w" firstAttribute="trailing" secondItem="LsS-eD-evY" secondAttribute="trailing" id="REX-41-wQy"/>
+                            <constraint firstItem="LsS-eD-evY" firstAttribute="leading" secondItem="x0S-uy-W1w" secondAttribute="leading" id="x2H-jS-6FW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="x0S-uy-W1w"/>
+                    </view>
+                    <connections>
+                        <outlet property="contactButton" destination="ByB-Os-tM6" id="3q3-M4-ksm"/>
+                        <outlet property="copyButton" destination="Iny-EY-P7b" id="qQp-qe-7xl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O2J-mh-idh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="86" y="122"/>
+        </scene>
+    </scenes>
+</document>

@@ -28,6 +28,8 @@ final class ProductCatalogViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        definesPresentationContext = true
+        
         collectionView.dataSource = self
         collectionView.delegate = self
         

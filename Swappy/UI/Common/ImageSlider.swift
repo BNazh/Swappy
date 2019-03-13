@@ -30,7 +30,7 @@ class ImageSlider: ImageSlideshow {
     
     func commonInit() {
         backgroundColor = .sliderBackground
-        contentScaleMode = .scaleAspectFit
+        contentScaleMode = .scaleAspectFill
         
         addPageIndicator()
         addTapGestureRecognizer()

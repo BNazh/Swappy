@@ -10,15 +10,19 @@ protocol ProductDetailPresenter {
     func setProduct(_ product: Product)
     
     func showProduct()
+    func showSeller()
 }
 
 final class ProductDetailPresenterImp {
     
-    let view: ProductDetailView
+    unowned let view: ProductDetailView
+    let router: ProductDetailRouter
+    
     var product: Product?
     
-    init(view: ProductDetailView) {
+    init(view: ProductDetailView, router: ProductDetailRouter) {
         self.view = view
+        self.router = router
     }
 }
 
@@ -33,5 +37,11 @@ extension ProductDetailPresenterImp: ProductDetailPresenter {
         
         let viewModel = ProductViewModel(product: product)
         view.showProduct(viewModel: viewModel)
+    }
+    
+    func showSeller() {
+        guard let product = product else { return }
+        
+        router.openSeller(seller: product.seller)
     }
 }
