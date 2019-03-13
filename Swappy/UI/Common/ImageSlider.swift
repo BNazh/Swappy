@@ -29,6 +29,7 @@ class ImageSlider: ImageSlideshow {
     // MARK: Functions
     
     func commonInit() {
+        backgroundColor = .sliderBackground
         contentScaleMode = .scaleAspectFit
         
         addPageIndicator()

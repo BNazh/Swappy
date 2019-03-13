@@ -19,27 +19,39 @@ class ProductDetailViewController: UIViewController {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
-    
-    
+    var presenter: ProductDetailPresenter!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        setup()
+        presenter.showProduct()
     }
     
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func openSellerTouchedDown(_ sender: UIButton) {
+        print("open seller tapped")
     }
-    */
-
+    
+    @IBAction func closeTapped(_ sender: UIButton) {
+        print("close tapepd tapped")
+        dismiss(animated: true, completion: nil)
+    }
 }
 
-extension ProductDetailViewController {
+extension ProductDetailViewController: ProductDetailView {
     
+    func showProduct(viewModel: ProductViewModel) {
+        imageSlider.setImageUrls(viewModel.imageUrls)
+        
+        titleLabel.attributedText = viewModel.title
+        priceLabel.text = viewModel.price
+        descriptionLabel.text = viewModel.description
+    }
+}
+
+private extension ProductDetailViewController {
+    
+    func setup() {
+        imageSlider.roundCorners(corners: [.topLeft, .topRight], radius: 16)
+    }
 }

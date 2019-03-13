@@ -12,10 +12,17 @@ final class ProductCatalogAssembly: Assembly {
     
     func assemble(container: Container) {
         
-        container.register(ProductCatalogPresenter.self) { (resolver, view: ProductCatalogViewController) in
+        container.register(ProductCatalogRouter.self) { (resolver, viewController: ProductCatalogViewController) in
+            return ProductCatalogRouterImp(
+                viewController: viewController
+            )
+        }
+        
+        container.register(ProductCatalogPresenter.self) { (resolver, viewController: ProductCatalogViewController) in
             return ProductCatalogPresenterImp(
-                view: view,
-                productWorker: resolver.resolve(ProductCatalogWorker.self)!
+                view: viewController,
+                productWorker: resolver.resolve(ProductCatalogWorker.self)!,
+                router: resolver.resolve(ProductCatalogRouter.self, argument: viewController)!
             )
         }
         

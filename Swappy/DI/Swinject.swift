@@ -16,7 +16,8 @@ extension SwinjectStoryboard {
         assembler.apply(assemblies: [
             WorkersAssembly(),
             
-            ProductCatalogAssembly()
+            ProductCatalogAssembly(),
+            ProductDetailAssembly()
         ])
     }
 }

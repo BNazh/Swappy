@@ -43,10 +43,10 @@ extension ProductCellViewModel {
         let spaces: CGFloat = 8
         let imageHeight = width
         
-        print("---")
-        print(title.string)
-        print(titleHeight(width: width))
-        print("---")
+//        print("---")
+//        print(title.string)
+//        print(titleHeight(width: width))
+//        print("---")
         
         return imageHeight + priceHeight + titleHeight(width: width) + spaces
     }

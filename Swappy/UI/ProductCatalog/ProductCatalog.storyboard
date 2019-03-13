@@ -13,7 +13,7 @@
         <!--Product Catalog View Controller-->
         <scene sceneID="do6-UZ-vGY">
             <objects>
-                <viewController id="IUz-77-IIh" customClass="ProductCatalogViewController" customModule="Swappy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProductCatalogViewController" id="IUz-77-IIh" customClass="ProductCatalogViewController" customModule="Swappy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E7Q-oD-chI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -40,7 +40,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1mn-63-Kuz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="149.59999999999999" y="-305.39730134932535"/>
+            <point key="canvasLocation" x="-6" y="-314"/>
         </scene>
     </scenes>
 </document>

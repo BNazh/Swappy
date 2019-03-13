@@ -50,6 +50,10 @@
 		E1BC5AED223142E3001FD1D6 /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC5AEC223142E3001FD1D6 /* PinterestLayout.swift */; };
 		E1BC5AEF22318340001FD1D6 /* UICollectionView+RegisterCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC5AEE22318340001FD1D6 /* UICollectionView+RegisterCells.swift */; };
 		E1BC5AF222318370001FD1D6 /* UIView+ReusableIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC5AF122318370001FD1D6 /* UIView+ReusableIdentifiers.swift */; };
+		E1FC309C22378BCB00DF1325 /* ProductCatalogRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FC309B22378BCB00DF1325 /* ProductCatalogRouter.swift */; };
+		E1FC309E22378CC100DF1325 /* UIViewController+Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FC309D22378CC100DF1325 /* UIViewController+Storyboard.swift */; };
+		E1FC30A02238504100DF1325 /* ProdcutDetailAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FC309F2238504100DF1325 /* ProdcutDetailAssembly.swift */; };
+		E1FC30A22238AB2B00DF1325 /* UIView+RoundCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FC30A12238AB2B00DF1325 /* UIView+RoundCorners.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +129,10 @@
 		E1BC5AEC223142E3001FD1D6 /* PinterestLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
 		E1BC5AEE22318340001FD1D6 /* UICollectionView+RegisterCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+RegisterCells.swift"; sourceTree = "<group>"; };
 		E1BC5AF122318370001FD1D6 /* UIView+ReusableIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ReusableIdentifiers.swift"; sourceTree = "<group>"; };
+		E1FC309B22378BCB00DF1325 /* ProductCatalogRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCatalogRouter.swift; sourceTree = "<group>"; };
+		E1FC309D22378CC100DF1325 /* UIViewController+Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Storyboard.swift"; sourceTree = "<group>"; };
+		E1FC309F2238504100DF1325 /* ProdcutDetailAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProdcutDetailAssembly.swift; sourceTree = "<group>"; };
+		E1FC30A12238AB2B00DF1325 /* UIView+RoundCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+RoundCorners.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +193,7 @@
 				E1BC5AD122311FBE001FD1D6 /* ProductCatalog.storyboard */,
 				E1BC5AD322312160001FD1D6 /* ProductCatalogViewController.swift */,
 				E1BC5AD522312199001FD1D6 /* ProductCatalogPresenter.swift */,
+				E1FC309B22378BCB00DF1325 /* ProductCatalogRouter.swift */,
 				E1BC5AEC223142E3001FD1D6 /* PinterestLayout.swift */,
 			);
 			path = ProductCatalog;
@@ -310,6 +319,7 @@
 			children = (
 				E19F7E1522310B3D00BAFC7A /* Swinject.swift */,
 				E1BC5AC022310C0E001FD1D6 /* ProductCatalogAssembly.swift */,
+				E1FC309F2238504100DF1325 /* ProdcutDetailAssembly.swift */,
 				E1BC5AC222310C2E001FD1D6 /* WorkersAssembly.swift */,
 			);
 			path = DI;
@@ -343,6 +353,7 @@
 				E1BC5AE222312E6C001FD1D6 /* NSAttributedString+SimpleInit.swift */,
 				E1BC5AE422312F36001FD1D6 /* Moya+CustomDecodableRequest.swift */,
 				E164C39622326BAD00D1AB13 /* Collection+SafeSubscription.swift */,
+				E1FC309D22378CC100DF1325 /* UIViewController+Storyboard.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -372,6 +383,7 @@
 				E1BC5AE022312D5A001FD1D6 /* UIFont+App.swift */,
 				E1BC5AF122318370001FD1D6 /* UIView+ReusableIdentifiers.swift */,
 				E164C39F2235A8AA00D1AB13 /* UIColor+App.swift */,
+				E1FC30A12238AB2B00DF1325 /* UIView+RoundCorners.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -619,13 +631,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1FC30A22238AB2B00DF1325 /* UIView+RoundCorners.swift in Sources */,
 				E19F7E1622310B3D00BAFC7A /* Swinject.swift in Sources */,
+				E1FC309E22378CC100DF1325 /* UIViewController+Storyboard.swift in Sources */,
 				E1BC5AD922312456001FD1D6 /* ProductCellViewModel.swift in Sources */,
 				E1BC5AE522312F36001FD1D6 /* Moya+CustomDecodableRequest.swift in Sources */,
 				E19F7E0D2231078F00BAFC7A /* SwappyService.swift in Sources */,
 				E1BC5AD022311173001FD1D6 /* AppError.swift in Sources */,
 				E19F7E1022310A5200BAFC7A /* ProductsCatalogWorker.swift in Sources */,
 				E1B4B1DB2235BDE400520082 /* ProductDetailPresenter.swift in Sources */,
+				E1FC30A02238504100DF1325 /* ProdcutDetailAssembly.swift in Sources */,
 				E164C3A22235A92300D1AB13 /* ImageSlider.swift in Sources */,
 				E1BC5ACC22310F9D001FD1D6 /* Sex.swift in Sources */,
 				E1BC5ACE22311168001FD1D6 /* Result.swift in Sources */,
@@ -643,6 +658,7 @@
 				E1BC5AD622312199001FD1D6 /* ProductCatalogPresenter.swift in Sources */,
 				E19F7E1222310B0200BAFC7A /* ProductsCatalogWorkerImp.swift in Sources */,
 				E164C39722326BAD00D1AB13 /* Collection+SafeSubscription.swift in Sources */,
+				E1FC309C22378BCB00DF1325 /* ProductCatalogRouter.swift in Sources */,
 				E1BC5AD422312160001FD1D6 /* ProductCatalogViewController.swift in Sources */,
 				E1BC5AED223142E3001FD1D6 /* PinterestLayout.swift in Sources */,
 				E1BC5ADC22312488001FD1D6 /* ProductCollectionViewCell.swift in Sources */,

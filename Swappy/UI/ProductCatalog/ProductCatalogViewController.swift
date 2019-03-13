@@ -56,7 +56,7 @@ extension ProductCatalogViewController: ProductCatalogView {
     }
 }
 
-extension ProductCatalogViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+extension ProductCatalogViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return cellModels.count
@@ -81,6 +81,14 @@ extension ProductCatalogViewController: UICollectionViewDataSource, UICollection
         if isLastElement {
             presenter.loadProducts()
         }
+    }
+}
+
+extension ProductCatalogViewController: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let id = cellModels[indexPath.row].id
+        presenter.selectProduct(with: id)
     }
 }
 

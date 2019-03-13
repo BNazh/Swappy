@@ -10,5 +10,6 @@ import UIKit
 
 extension UIColor {
     
-    static let backgroundColor = UIColor(red: 248 / 255, green: 248 / 255, blue: 248 / 255, alpha: 1)
+    static let backgroundColor = #colorLiteral(red: 0.9725490196, green: 0.9725490196, blue: 0.9725490196, alpha: 1)
+    static let sliderBackground = #colorLiteral(red: 0.9333333333, green: 0.7568627451, blue: 0.7568627451, alpha: 1)
 }

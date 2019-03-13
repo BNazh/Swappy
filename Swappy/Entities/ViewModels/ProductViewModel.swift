@@ -19,20 +19,13 @@ struct ProductViewModel {
     
     init(product: Product) {
         id = product.id
-        title = self.title(for: product)
+        
+        let name = "\(product.name) "
+        let size = product.size
+        title = name.appendBolded(size, fontSize: 17)
+        
         price = product.price.stringValue
         description = product.description
         imageUrls = product.images
-    }
-}
-
-// MARK: - Private
-
-private extension ProductViewModel {
-    
-    func title(for product: Product) -> NSAttributedString {
-        let name = "\(product.name) "
-        let size = product.size
-        return name.appendBolded(size, fontSize: 17)
     }
 }

@@ -7,6 +7,7 @@
 //
 
 struct Product: Decodable {
+    
     let id: String
     let images: [String]
     let size: String

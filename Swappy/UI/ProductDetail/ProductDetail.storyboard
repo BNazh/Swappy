@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3w9-B7-sSi">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,57 +13,85 @@
         <!--Parent View Controller-->
         <scene sceneID="SyX-Gi-ClJ">
             <objects>
-                <viewController id="3w9-B7-sSi" customClass="ProductDetailViewController" customModule="Swappy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProductDetailViewController" id="3w9-B7-sSi" customClass="ProductDetailViewController" customModule="Swappy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HiI-Wk-7f7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4cz-16-cNc">
+                                <rect key="frame" x="319" y="36" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="9fn-iJ-atz"/>
+                                    <constraint firstAttribute="width" secondItem="4cz-16-cNc" secondAttribute="height" multiplier="1:1" id="EMU-Gn-abY"/>
+                                </constraints>
+                                <state key="normal" image="close"/>
+                                <connections>
+                                    <action selector="closeTapped:" destination="3w9-B7-sSi" eventType="touchUpInside" id="Lgb-91-Vyn"/>
+                                </connections>
+                            </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tNG-rW-MCw">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="KI3-je-heE">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="706"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qgW-H7-QhE" customClass="ImageSlider" customModule="Swappy" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l6l-bA-GTW">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+                                                <subviews>
+                                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qgW-H7-QhE" customClass="ImageSlider" customModule="Swappy" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+                                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="qgW-H7-QhE" secondAttribute="height" multiplier="1:1" id="3GS-py-KAy"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="16"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <outlet property="parentViewController" destination="3w9-B7-sSi" id="cA9-He-yex"/>
+                                                        </connections>
+                                                    </view>
+                                                </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="qgW-H7-QhE" secondAttribute="height" multiplier="1:1" id="3GS-py-KAy"/>
+                                                    <constraint firstAttribute="bottom" secondItem="qgW-H7-QhE" secondAttribute="bottom" id="Su6-4Y-3bO"/>
+                                                    <constraint firstItem="qgW-H7-QhE" firstAttribute="leading" secondItem="l6l-bA-GTW" secondAttribute="leading" id="UOv-5V-Cr0"/>
+                                                    <constraint firstItem="qgW-H7-QhE" firstAttribute="top" secondItem="l6l-bA-GTW" secondAttribute="top" id="sJE-QE-ed9"/>
+                                                    <constraint firstAttribute="trailing" secondItem="qgW-H7-QhE" secondAttribute="trailing" id="xzb-Kd-zZU"/>
                                                 </constraints>
-                                                <connections>
-                                                    <outlet property="parentViewController" destination="3w9-B7-sSi" id="cA9-He-yex"/>
-                                                </connections>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RUz-bq-96F">
                                                 <rect key="frame" x="0.0" y="375" width="375" height="243"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="254" text="Puma x Bape" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i9B-9I-e8R">
-                                                        <rect key="frame" x="16" y="20" width="343" height="20.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="254" text="Comme Des Garçons Converse  Размер 10 " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i9B-9I-e8R">
+                                                        <rect key="frame" x="16" y="20" width="343" height="41"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="1 000 ₽" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDC-ey-PPN">
-                                                        <rect key="frame" x="16" y="44.5" width="343" height="20.5"/>
+                                                        <rect key="frame" x="16" y="65" width="343" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Ug-UC-PPU" customClass="SeparatorView" customModule="Swappy" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="81" width="375" height="2"/>
+                                                        <rect key="frame" x="0.0" y="101.5" width="375" height="2"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="2" id="AuC-KX-PVN"/>
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Описание" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SyW-0k-wNc">
-                                                        <rect key="frame" x="16" y="99" width="343" height="20.5"/>
+                                                        <rect key="frame" x="16" y="119.5" width="343" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comme Des Garçons Converse  Размер 10 " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qlO-4F-iu9">
-                                                        <rect key="frame" x="16" y="123.5" width="343" height="101.5"/>
+                                                        <rect key="frame" x="16" y="144" width="343" height="81"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -105,6 +133,9 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CIb-U8-8tH" customClass="MainButton" customModule="Swappy" customModuleProvider="target">
                                                         <rect key="frame" x="16" y="16" width="343" height="52"/>
                                                         <state key="normal" title="Написать продавцу"/>
+                                                        <connections>
+                                                            <action selector="openSellerTouchedDown:" destination="3w9-B7-sSi" eventType="touchUpInside" id="GFV-qv-6zr"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -129,11 +160,12 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="R1d-Ne-rQr" firstAttribute="trailing" secondItem="tNG-rW-MCw" secondAttribute="trailing" id="56A-x9-GOP"/>
                             <constraint firstItem="tNG-rW-MCw" firstAttribute="leading" secondItem="R1d-Ne-rQr" secondAttribute="leading" id="IJm-75-TFr"/>
+                            <constraint firstItem="R1d-Ne-rQr" firstAttribute="trailing" secondItem="4cz-16-cNc" secondAttribute="trailing" constant="16" id="RsF-I6-hHo"/>
                             <constraint firstItem="R1d-Ne-rQr" firstAttribute="bottom" secondItem="tNG-rW-MCw" secondAttribute="bottom" id="Uhf-IV-q5P"/>
+                            <constraint firstItem="4cz-16-cNc" firstAttribute="top" secondItem="R1d-Ne-rQr" secondAttribute="top" constant="16" id="m5b-2Y-UGa"/>
                             <constraint firstItem="tNG-rW-MCw" firstAttribute="top" secondItem="R1d-Ne-rQr" secondAttribute="top" id="uao-9Y-IYL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="R1d-Ne-rQr"/>
@@ -151,4 +183,7 @@
             <point key="canvasLocation" x="-233" y="-155"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="close" width="28" height="28"/>
+    </resources>
 </document>

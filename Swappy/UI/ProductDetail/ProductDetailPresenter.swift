@@ -7,9 +7,31 @@
 //
 
 protocol ProductDetailPresenter {
+    func setProduct(_ product: Product)
+    
     func showProduct()
 }
 
 final class ProductDetailPresenterImp {
     
+    let view: ProductDetailView
+    var product: Product?
+    
+    init(view: ProductDetailView) {
+        self.view = view
+    }
+}
+
+extension ProductDetailPresenterImp: ProductDetailPresenter {
+    
+    func setProduct(_ product: Product) {
+        self.product = product
+    }
+    
+    func showProduct() {
+        guard let product = product else { return }
+        
+        let viewModel = ProductViewModel(product: product)
+        view.showProduct(viewModel: viewModel)
+    }
 }
