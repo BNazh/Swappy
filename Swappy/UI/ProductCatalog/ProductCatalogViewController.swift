@@ -51,9 +51,14 @@ final class ProductCatalogViewController: UIViewController {
 extension ProductCatalogViewController: ProductCatalogView {
     
     func reloadCells(_ cellModels: [ProductCellViewModel]) {
+        let oldItemsCount = self.cellModels.count
         self.cellModels.append(contentsOf: cellModels)
+        let currentItemsCount = self.cellModels.count
         
-        collectionView.reloadData()
+        let indexPaths = (oldItemsCount..<currentItemsCount).map { item in
+            IndexPath(item: item, section: 0)
+        }
+        collectionView.insertItems(at: indexPaths)
     }
     
     func showError(message: String) {
@@ -86,6 +91,11 @@ extension ProductCatalogViewController: UICollectionViewDataSource {
         if isLastElement {
             presenter.loadProducts()
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        guard let cell = cell as? ProductCollectionViewCell else { return }
+        cell.imageView.sd_cancelCurrentImageLoad()
     }
 }
 

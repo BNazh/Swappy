@@ -25,7 +25,9 @@ final class ProductCollectionViewCell: UICollectionViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         
-        imageView.sd_cancelCurrentImageLoad()
+        print("Cancel \(imageView.sd_imageURL()?.absoluteString)")
+        print(titleLabel.text)
+        
         imageView.image = nil
     }
     
