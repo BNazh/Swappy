@@ -28,6 +28,9 @@ final class ProductCatalogViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.navigationBar.prefersLargeTitles = true
+        title = "Swappy"
+        
         definesPresentationContext = true
         
         collectionView.dataSource = self
