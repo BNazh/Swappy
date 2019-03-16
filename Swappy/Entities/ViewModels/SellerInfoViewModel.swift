@@ -8,12 +8,10 @@
 
 struct SellerInfoViewModel {
     let id: String
-    let phone: String
-    let vkId: String
+    let contactInfo: String
     
-    init(seller: Seller) {
+    init(seller: Seller, contactPhone: String) {
         self.id = seller.id
-        self.phone = seller.phone
-        self.vkId = seller.vkId
+        self.contactInfo = contactPhone
     }
 }

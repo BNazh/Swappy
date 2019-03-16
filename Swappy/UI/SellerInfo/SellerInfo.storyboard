@@ -31,19 +31,22 @@
                                             <action selector="copyTapped:" destination="6Xf-Dr-8tJ" eventType="touchUpInside" id="GuX-aC-7O2"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Не забудь сказать, что вещь найдена в своппи 🙂" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWx-3n-g3V">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Не забудь сказать, что вещь найдена в своппи 🙂" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWx-3n-g3V">
                                         <rect key="frame" x="20" y="52" width="280" height="75"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="75" id="cmg-gn-k0q"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qg0-eC-KfW">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qg0-eC-KfW">
                                         <rect key="frame" x="272" y="4" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="4Jz-lO-ClF"/>
                                             <constraint firstAttribute="width" secondItem="qg0-eC-KfW" secondAttribute="height" multiplier="1:1" id="naC-eS-8xV"/>
                                         </constraints>
-                                        <state key="normal" title="X"/>
+                                        <state key="normal" image="closeSeller"/>
                                         <connections>
                                             <action selector="closeTapped:" destination="6Xf-Dr-8tJ" eventType="touchUpInside" id="vN5-lC-ldn"/>
                                         </connections>
@@ -94,4 +97,7 @@
             <point key="canvasLocation" x="86" y="122"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="closeSeller" width="16" height="16"/>
+    </resources>
 </document>

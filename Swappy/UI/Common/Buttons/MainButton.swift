@@ -8,41 +8,22 @@
 
 import UIKit
 
-class MainButton: UIButton {
+class MainButton: BaseButton {
     
     // MARK: - Constants
     
     private enum Constants {
-        static let cornerRadius: CGFloat = 8
-        static let titleLabelFont = UIFont.systemFont(ofSize: 15, weight: .semibold)
         
-        enum Color {
-            static let background = UIColor.black
-            static let textColor = UIColor.white
-        }
-    }
-    
-    // MARK: - Inits
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-        commonInit()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        
-        commonInit()
+        static let background = UIColor.black
+        static let textColor = UIColor.white
     }
     
     // MARK: - Functions
     
-    func commonInit() {
-        layer.cornerRadius = Constants.cornerRadius
-        titleLabel?.font = Constants.titleLabelFont
+    override func commonInit() {
+        super.commonInit()
         
-        setTitleColor(Constants.Color.textColor, for: .normal)
-        backgroundColor = Constants.Color.background
+        setTitleColor(Constants.textColor, for: .normal)
+        backgroundColor = Constants.background
     }
 }

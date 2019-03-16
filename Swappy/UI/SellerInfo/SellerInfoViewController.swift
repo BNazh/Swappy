@@ -35,12 +35,9 @@ final class SellerInfoViewController: UIViewController {
     
     // MARK: - Actions
     
-    
     @IBAction func copyTapped(_ sender: UIButton) {
-        let url = URL(string: "whatsapp://send?text=Hello%2Cfrom%20Swappy!")!
-        let items = [url]
-        let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
-        present(ac, animated: true)
+        let pasteboard = UIPasteboard.general
+        pasteboard.string = contactButton.titleLabel?.text
     }
     
     @IBAction func contactButtonTapped(_ sender: UIButton) {
@@ -50,12 +47,11 @@ final class SellerInfoViewController: UIViewController {
     @IBAction func closeTapped(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
-    
 }
 
 extension SellerInfoViewController: SellerInfoView {
     
     func displaySeller(viewModel: SellerInfoViewModel) {
-        contactButton.setTitle(viewModel.phone, for: .normal)
+        contactButton.setTitle(viewModel.contactInfo, for: .normal)
     }
 }

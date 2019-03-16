@@ -30,6 +30,15 @@ extension Result {
         }
     }
     
+    var error: AppError? {
+        switch self {
+        case .success:
+            return nil
+        case .failure(let error):
+            return error
+        }
+    }
+    
     var isSuccess: Bool {
         switch self {
         case .success:

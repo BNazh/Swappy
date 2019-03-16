@@ -9,7 +9,7 @@
 import UIKit
 
 protocol ProductDetailRouter {
-    func openSeller(seller: Seller)
+    func openSeller(product: Product)
 }
 
 final class ProductDetailRouterImp {
@@ -23,10 +23,10 @@ final class ProductDetailRouterImp {
 
 extension ProductDetailRouterImp: ProductDetailRouter {
     
-    func openSeller(seller: Seller) {
+    func openSeller(product: Product) {
         let sellerVC: SellerInfoViewController = UIStoryboard.createViewController()
         
-        sellerVC.presenter.setSeller(seller)
+        sellerVC.presenter.setProduct(product)
         
         viewController.present(sellerVC, animated: true, completion: nil)
     }

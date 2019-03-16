@@ -17,5 +17,4 @@ struct Seller: Decodable {
     let birthDate: String
     let phone: String
     let email: String?
-    
 }

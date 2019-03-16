@@ -9,13 +9,13 @@
 import Foundation
 
 protocol SellerInfoPresenter: class {
-    func setSeller(_ seller: Seller)
+    func setProduct(_ product: Product)
     func showSeller()
 }
 
 final class SellerInfoPresenterImp {
     unowned let view: SellerInfoView
-    var seller: Seller!
+    var product: Product!
     
     init(view: SellerInfoView) {
         self.view = view
@@ -24,12 +24,16 @@ final class SellerInfoPresenterImp {
 
 extension SellerInfoPresenterImp: SellerInfoPresenter {
     
-    func setSeller(_ seller: Seller) {
-        self.seller = seller
+    func setProduct(_ product: Product) {
+        self.product = product
     }
     
     func showSeller() {
-        let viewModel = SellerInfoViewModel(seller: seller)
+        let viewModel = SellerInfoViewModel(
+            seller: product.seller,
+            contactPhone: product.contactPhone
+        )
+        
         view.displaySeller(viewModel: viewModel)
     }
 }

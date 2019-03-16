@@ -61,6 +61,12 @@
 		E1FC30AD2239722300DF1325 /* SellerInfoAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FC30AC2239722300DF1325 /* SellerInfoAssembly.swift */; };
 		E1FC30AF2239738200DF1325 /* ProductDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FC30AE2239738200DF1325 /* ProductDetailRouter.swift */; };
 		E1FC30B2223977B900DF1325 /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FC30B1223977B900DF1325 /* SecondaryButton.swift */; };
+		E1FF3E6C223A302900443DED /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF3E6B223A302900443DED /* CardViewController.swift */; };
+		E1FF3E91223A338800443DED /* LoginCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF3E90223A338800443DED /* LoginCardViewController.swift */; };
+		E1FF3E93223A339200443DED /* LoginCardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF3E92223A339200443DED /* LoginCardPresenter.swift */; };
+		E1FF3E95223A33CD00443DED /* LoginCardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF3E94223A33CD00443DED /* LoginCardRouter.swift */; };
+		E1FF3E97223A350900443DED /* LoginCard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1FF3E96223A350900443DED /* LoginCard.storyboard */; };
+		E1FF3E99223A373000443DED /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF3E98223A373000443DED /* BaseButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -148,6 +154,12 @@
 		E1FC30AE2239738200DF1325 /* ProductDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailRouter.swift; sourceTree = "<group>"; };
 		E1FC30B1223977B900DF1325 /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
 		E1FC30B322398B2E00DF1325 /* Swappy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Swappy.entitlements; sourceTree = "<group>"; };
+		E1FF3E6B223A302900443DED /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
+		E1FF3E90223A338800443DED /* LoginCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCardViewController.swift; sourceTree = "<group>"; };
+		E1FF3E92223A339200443DED /* LoginCardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCardPresenter.swift; sourceTree = "<group>"; };
+		E1FF3E94223A33CD00443DED /* LoginCardRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCardRouter.swift; sourceTree = "<group>"; };
+		E1FF3E96223A350900443DED /* LoginCard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginCard.storyboard; sourceTree = "<group>"; };
+		E1FF3E98223A373000443DED /* BaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +240,7 @@
 		E164C39922358E0400D1AB13 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				E1FF3E6A223A301700443DED /* Controllers */,
 				E1FC30B0223977A200DF1325 /* Buttons */,
 				E164C39D2235A70E00D1AB13 /* SeparatorView.swift */,
 				E164C3A12235A92300D1AB13 /* ImageSlider.swift */,
@@ -315,6 +328,7 @@
 		E19F7E092231068300BAFC7A /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				E1FF3E8F223A337600443DED /* LoginCard */,
 				E164C39922358E0400D1AB13 /* Common */,
 				E1FC30A32238DC4400DF1325 /* SellerInfo */,
 				E164C3912231B5C200D1AB13 /* ProductDetail */,
@@ -421,10 +435,30 @@
 		E1FC30B0223977A200DF1325 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
+				E1FF3E98223A373000443DED /* BaseButton.swift */,
 				E164C39B223591AF00D1AB13 /* MainButton.swift */,
 				E1FC30B1223977B900DF1325 /* SecondaryButton.swift */,
 			);
 			path = Buttons;
+			sourceTree = "<group>";
+		};
+		E1FF3E6A223A301700443DED /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E1FF3E6B223A302900443DED /* CardViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E1FF3E8F223A337600443DED /* LoginCard */ = {
+			isa = PBXGroup;
+			children = (
+				E1FF3E96223A350900443DED /* LoginCard.storyboard */,
+				E1FF3E90223A338800443DED /* LoginCardViewController.swift */,
+				E1FF3E92223A339200443DED /* LoginCardPresenter.swift */,
+				E1FF3E94223A33CD00443DED /* LoginCardRouter.swift */,
+			);
+			path = LoginCard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -549,6 +583,7 @@
 				E1BC5ADE223124B3001FD1D6 /* ProductCollectionViewCell.xib in Resources */,
 				E19F7DDF2231063A00BAFC7A /* Assets.xcassets in Resources */,
 				E19F7DDA2231063900BAFC7A /* Main.storyboard in Resources */,
+				E1FF3E97223A350900443DED /* LoginCard.storyboard in Resources */,
 				E164C3952231B5FE00D1AB13 /* ProductDetail.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -689,9 +724,11 @@
 				E19F7E0D2231078F00BAFC7A /* SwappyService.swift in Sources */,
 				E1BC5AD022311173001FD1D6 /* AppError.swift in Sources */,
 				E19F7E1022310A5200BAFC7A /* ProductsCatalogWorker.swift in Sources */,
+				E1FF3E91223A338800443DED /* LoginCardViewController.swift in Sources */,
 				E1FC30AF2239738200DF1325 /* ProductDetailRouter.swift in Sources */,
 				E1FC30A52238DC5C00DF1325 /* SellerInfoViewController.swift in Sources */,
 				E1B4B1DB2235BDE400520082 /* ProductDetailPresenter.swift in Sources */,
+				E1FF3E6C223A302900443DED /* CardViewController.swift in Sources */,
 				E1FC30A02238504100DF1325 /* ProdcutDetailAssembly.swift in Sources */,
 				E164C3A22235A92300D1AB13 /* ImageSlider.swift in Sources */,
 				E1BC5ACC22310F9D001FD1D6 /* Sex.swift in Sources */,
@@ -699,6 +736,7 @@
 				E1BC5AF222318370001FD1D6 /* UIView+ReusableIdentifiers.swift in Sources */,
 				E1BC5AC122310C0E001FD1D6 /* ProductCatalogAssembly.swift in Sources */,
 				E164C39E2235A70E00D1AB13 /* SeparatorView.swift in Sources */,
+				E1FF3E95223A33CD00443DED /* LoginCardRouter.swift in Sources */,
 				E1BC5AC322310C2E001FD1D6 /* WorkersAssembly.swift in Sources */,
 				E164C39C223591AF00D1AB13 /* MainButton.swift in Sources */,
 				E1BC5AEF22318340001FD1D6 /* UICollectionView+RegisterCells.swift in Sources */,
@@ -711,6 +749,7 @@
 				E1BC5AC822310E88001FD1D6 /* Price.swift in Sources */,
 				E1BC5AD622312199001FD1D6 /* ProductCatalogPresenter.swift in Sources */,
 				E19F7E1222310B0200BAFC7A /* ProductsCatalogWorkerImp.swift in Sources */,
+				E1FF3E93223A339200443DED /* LoginCardPresenter.swift in Sources */,
 				E164C39722326BAD00D1AB13 /* Collection+SafeSubscription.swift in Sources */,
 				E1FC309C22378BCB00DF1325 /* ProductCatalogRouter.swift in Sources */,
 				E1BC5AD422312160001FD1D6 /* ProductCatalogViewController.swift in Sources */,
@@ -719,6 +758,7 @@
 				E164C3932231B5DF00D1AB13 /* ProductDetailViewController.swift in Sources */,
 				E164C3A02235A8AA00D1AB13 /* UIColor+App.swift in Sources */,
 				E19F7DD52231063900BAFC7A /* AppDelegate.swift in Sources */,
+				E1FF3E99223A373000443DED /* BaseButton.swift in Sources */,
 				E1B4B1DD2235BE2200520082 /* ProductViewModel.swift in Sources */,
 				E1BC5AE322312E6C001FD1D6 /* NSAttributedString+SimpleInit.swift in Sources */,
 			);
@@ -898,8 +938,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Swappy/Swappy.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TLWW27T23K;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Swappy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -920,8 +960,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Swappy/Swappy.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TLWW27T23K;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Swappy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

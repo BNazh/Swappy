@@ -42,6 +42,6 @@ extension ProductDetailPresenterImp: ProductDetailPresenter {
     func showSeller() {
         guard let product = product else { return }
         
-        router.openSeller(seller: product.seller)
+        router.openSeller(product: product)
     }
 }
