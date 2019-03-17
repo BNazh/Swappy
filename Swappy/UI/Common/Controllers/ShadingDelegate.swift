@@ -15,9 +15,9 @@ protocol ShadingDelegate: class {
 
 extension ShadingDelegate {
     
-    func setShading(_ enableShading: Bool) {
-        UIView.animate(withDuration: 0.5) {
+    func setShading(_ enableShading: Bool, completion: ((Bool) -> Void)? = nil) {
+        UIView.animate(withDuration: 0.5, animations: {
             self.shadingView?.alpha = enableShading ? 0.4 : 0
-        }
+        }, completion: completion)
     }
 }

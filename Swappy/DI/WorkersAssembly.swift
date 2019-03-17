@@ -14,6 +14,10 @@ final class WorkersAssembly: Assembly {
         container.register(ProductCatalogWorker.self) { _ in
             return ProductCatalogWorkerImp()
         }
+        
+        container.register(ProductsDDM.self) { _ in
+            return ProductsDDMImp()
+        }
     }
 }
 

@@ -68,6 +68,9 @@
 		E1FF3E97223A350900443DED /* LoginCard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1FF3E96223A350900443DED /* LoginCard.storyboard */; };
 		E1FF3E99223A373000443DED /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF3E98223A373000443DED /* BaseButton.swift */; };
 		E1FF3E9B223E47CA00443DED /* ShadingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF3E9A223E47CA00443DED /* ShadingDelegate.swift */; };
+		E1FF3E9E223E634A00443DED /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF3E9D223E634A00443DED /* MainViewController.swift */; };
+		E1FF3EA2223E77B800443DED /* ProductsDDM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF3EA1223E77B800443DED /* ProductsDDM.swift */; };
+		E1FF3EA4223E77C100443DED /* ProductsDDMImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF3EA3223E77C100443DED /* ProductsDDMImp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -162,6 +165,9 @@
 		E1FF3E96223A350900443DED /* LoginCard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginCard.storyboard; sourceTree = "<group>"; };
 		E1FF3E98223A373000443DED /* BaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
 		E1FF3E9A223E47CA00443DED /* ShadingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadingDelegate.swift; sourceTree = "<group>"; };
+		E1FF3E9D223E634A00443DED /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		E1FF3EA1223E77B800443DED /* ProductsDDM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsDDM.swift; sourceTree = "<group>"; };
+		E1FF3EA3223E77C100443DED /* ProductsDDMImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsDDMImp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +224,7 @@
 		E164C3902231B5B200D1AB13 /* ProductCatalog */ = {
 			isa = PBXGroup;
 			children = (
+				E1FF3EA0223E779700443DED /* ProductsDDM */,
 				E1BC5AE9223133F0001FD1D6 /* ProductCell */,
 				E1BC5AD122311FBE001FD1D6 /* ProductCatalog.storyboard */,
 				E1BC5AD322312160001FD1D6 /* ProductCatalogViewController.swift */,
@@ -283,7 +290,6 @@
 				E19F7E1422310B3200BAFC7A /* DI */,
 				E1BC5AE822313350001FD1D6 /* Resources */,
 				E19F7DD42231063900BAFC7A /* AppDelegate.swift */,
-				E19F7DD82231063900BAFC7A /* Main.storyboard */,
 				E19F7DDE2231063A00BAFC7A /* Assets.xcassets */,
 				E19F7DE32231063A00BAFC7A /* Info.plist */,
 			);
@@ -330,6 +336,7 @@
 		E19F7E092231068300BAFC7A /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				E1FF3E9C223E632800443DED /* Main */,
 				E1FF3E8F223A337600443DED /* LoginCard */,
 				E164C39922358E0400D1AB13 /* Common */,
 				E1FC30A32238DC4400DF1325 /* SellerInfo */,
@@ -462,6 +469,24 @@
 				E1FF3E94223A33CD00443DED /* LoginCardRouter.swift */,
 			);
 			path = LoginCard;
+			sourceTree = "<group>";
+		};
+		E1FF3E9C223E632800443DED /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				E19F7DD82231063900BAFC7A /* Main.storyboard */,
+				E1FF3E9D223E634A00443DED /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		E1FF3EA0223E779700443DED /* ProductsDDM */ = {
+			isa = PBXGroup;
+			children = (
+				E1FF3EA1223E77B800443DED /* ProductsDDM.swift */,
+				E1FF3EA3223E77C100443DED /* ProductsDDMImp.swift */,
+			);
+			path = ProductsDDM;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -739,11 +764,13 @@
 				E1BC5AF222318370001FD1D6 /* UIView+ReusableIdentifiers.swift in Sources */,
 				E1BC5AC122310C0E001FD1D6 /* ProductCatalogAssembly.swift in Sources */,
 				E164C39E2235A70E00D1AB13 /* SeparatorView.swift in Sources */,
+				E1FF3EA4223E77C100443DED /* ProductsDDMImp.swift in Sources */,
 				E1FF3E95223A33CD00443DED /* LoginCardRouter.swift in Sources */,
 				E1BC5AC322310C2E001FD1D6 /* WorkersAssembly.swift in Sources */,
 				E164C39C223591AF00D1AB13 /* MainButton.swift in Sources */,
 				E1FF3E9B223E47CA00443DED /* ShadingDelegate.swift in Sources */,
 				E1BC5AEF22318340001FD1D6 /* UICollectionView+RegisterCells.swift in Sources */,
+				E1FF3EA2223E77B800443DED /* ProductsDDM.swift in Sources */,
 				E1BC5ACA22310F1F001FD1D6 /* Seller.swift in Sources */,
 				E1FC30B2223977B900DF1325 /* SecondaryButton.swift in Sources */,
 				E1BC5AE122312D5A001FD1D6 /* UIFont+App.swift in Sources */,
@@ -759,6 +786,7 @@
 				E1BC5AD422312160001FD1D6 /* ProductCatalogViewController.swift in Sources */,
 				E1BC5AED223142E3001FD1D6 /* PinterestLayout.swift in Sources */,
 				E1BC5ADC22312488001FD1D6 /* ProductCollectionViewCell.swift in Sources */,
+				E1FF3E9E223E634A00443DED /* MainViewController.swift in Sources */,
 				E164C3932231B5DF00D1AB13 /* ProductDetailViewController.swift in Sources */,
 				E164C3A02235A8AA00D1AB13 /* UIColor+App.swift in Sources */,
 				E19F7DD52231063900BAFC7A /* AppDelegate.swift in Sources */,
@@ -941,7 +969,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Swappy/Swappy.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: mmbabaev@gmail.com (U8UCSHZYJK)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Swappy/Info.plist;
@@ -963,7 +991,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Swappy/Swappy.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: mmbabaev@gmail.com (U8UCSHZYJK)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Swappy/Info.plist;

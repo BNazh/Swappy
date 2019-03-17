@@ -20,4 +20,5 @@ extension UIColor {
     static let sliderBackground = UIColor.black
     
     static let whiteSmoke = UIColor(r: 248, g: 248, b: 248)
+    static let trolleyGrey = UIColor(r: 121, g: 121, b: 121)
 }

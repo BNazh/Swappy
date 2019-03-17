@@ -28,6 +28,7 @@ final class ProductCatalogAssembly: Assembly {
         
         container.storyboardInitCompleted(ProductCatalogViewController.self) { (resolver, controller) in
             controller.presenter = resolver.resolve(ProductCatalogPresenter.self, argument: controller)!
+            controller.dataDisplayManager = resolver.resolve(ProductsDDM.self)
         }
     }
 }

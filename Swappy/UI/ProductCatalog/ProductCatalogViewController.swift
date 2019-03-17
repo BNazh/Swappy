@@ -7,11 +7,11 @@
 //
 
 import UIKit
+import XLPagerTabStrip
 
 protocol ProductCatalogView: class {
     
     func reloadCells(_ cellModels: [ProductCellViewModel])
-    
     func showError(message: String)
 }
 
@@ -20,8 +20,7 @@ final class ProductCatalogViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     var presenter: ProductCatalogPresenter!
-    
-    var cellModels = [ProductCellViewModel]()
+    var dataDisplayManager: ProductsDDM!
     
     // MARK: - Functions
     
@@ -30,16 +29,7 @@ final class ProductCatalogViewController: UIViewController {
         
         definesPresentationContext = true
         
-        collectionView.dataSource = self
-        collectionView.delegate = self
-        
-        //collectionView.contentInset = UIEdgeInsets(top: 0, left: 9, bottom: 0, right: 9)
-        
-        collectionView.register(cellType: ProductCollectionViewCell.self)
-        
-        if let layout = collectionView?.collectionViewLayout as? PinterestLayout {
-            layout.delegate = self
-        }
+        dataDisplayManager.setup(delegate: self, collectionView: collectionView)
         
         presenter.loadProducts()
     }
@@ -48,9 +38,7 @@ final class ProductCatalogViewController: UIViewController {
 extension ProductCatalogViewController: ProductCatalogView {
     
     func reloadCells(_ cellModels: [ProductCellViewModel]) {
-        self.cellModels.append(contentsOf: cellModels)
-        
-        collectionView.reloadData()
+        dataDisplayManager.appendProducts(cellModels)
     }
     
     func showError(message: String) {
@@ -58,46 +46,19 @@ extension ProductCatalogViewController: ProductCatalogView {
     }
 }
 
-extension ProductCatalogViewController: UICollectionViewDataSource {
+extension ProductCatalogViewController: ProductsDDMDelegate {
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return cellModels.count
+    func willDisplayLastCell() {
+        presenter.loadProducts()
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: ProductCollectionViewCell = collectionView.dequeueReusableCell(indexPath: indexPath)
-        
-        let model = cellModels[indexPath.row]
-        cell.configure(with: model)
-        
-//        print("---")
-//        print(model.title.string)
-//        print("---")
-    
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        let isLastElement = indexPath.row == cellModels.count - 1
-        
-        if isLastElement {
-            presenter.loadProducts()
-        }
-    }
-}
-
-extension ProductCatalogViewController: UICollectionViewDelegate {
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let id = cellModels[indexPath.row].id
+    func didSelectProduct(withId id: String) {
         presenter.selectProduct(with: id)
     }
 }
 
-extension ProductCatalogViewController: PinterestLayoutDelegate {
-    
-    func collectionView(_ collectionView: UICollectionView, heightForCellAtIndexPath indexPath: IndexPath, withWidth width: CGFloat) -> CGFloat {
-        let viewModel = cellModels[indexPath.row]
-        return viewModel.cellHeight(withWidth: width)
+extension ProductCatalogViewController: IndicatorInfoProvider {
+    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
+        return "Все товары"
     }
 }
