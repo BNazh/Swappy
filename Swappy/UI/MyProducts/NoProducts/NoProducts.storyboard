@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lft-00-0hQ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--No Products View Controller-->
+        <scene sceneID="ZS2-ie-a2T">
+            <objects>
+                <viewController storyboardIdentifier="NoProductsViewController" id="lft-00-0hQ" customClass="NoProductsViewController" customModule="Swappy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Iy7-Ma-A2N">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FgE-OV-ynr">
+                                <rect key="frame" x="42" y="270" width="291" height="127"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Нет товаров" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Dm-u8-yu8">
+                                        <rect key="frame" x="0.0" y="0.0" width="291" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="22" id="tq0-zm-gGS"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Разместите ваш первый товар -  это очень просто" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6f7-z3-IY0">
+                                        <rect key="frame" x="0.0" y="26" width="291" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.47450980392156861" green="0.47450980392156861" blue="0.47450980392156861" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jEh-o9-b7a">
+                                        <rect key="frame" x="25" y="75" width="241" height="52"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="52" id="J0q-fg-iXj"/>
+                                        </constraints>
+                                        <state key="normal" title="Разместить"/>
+                                        <connections>
+                                            <action selector="addProductTapped:" destination="lft-00-0hQ" eventType="touchUpInside" id="CCX-fv-XpT"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="jEh-o9-b7a" firstAttribute="top" secondItem="6f7-z3-IY0" secondAttribute="bottom" constant="8" id="2kj-is-Vzr"/>
+                                    <constraint firstAttribute="trailing" secondItem="3Dm-u8-yu8" secondAttribute="trailing" id="8Oi-u6-oYc"/>
+                                    <constraint firstItem="jEh-o9-b7a" firstAttribute="leading" secondItem="FgE-OV-ynr" secondAttribute="leading" constant="25" id="GgQ-MM-4kR"/>
+                                    <constraint firstItem="3Dm-u8-yu8" firstAttribute="leading" secondItem="FgE-OV-ynr" secondAttribute="leading" id="Hg4-gd-EZX"/>
+                                    <constraint firstItem="jEh-o9-b7a" firstAttribute="centerX" secondItem="FgE-OV-ynr" secondAttribute="centerX" id="Llc-9d-rtB"/>
+                                    <constraint firstAttribute="trailing" secondItem="6f7-z3-IY0" secondAttribute="trailing" id="UT4-ki-h9q"/>
+                                    <constraint firstItem="3Dm-u8-yu8" firstAttribute="top" secondItem="FgE-OV-ynr" secondAttribute="top" id="hng-9y-sWS"/>
+                                    <constraint firstItem="6f7-z3-IY0" firstAttribute="top" secondItem="3Dm-u8-yu8" secondAttribute="bottom" constant="4" id="kvt-TM-Zte"/>
+                                    <constraint firstItem="6f7-z3-IY0" firstAttribute="leading" secondItem="FgE-OV-ynr" secondAttribute="leading" id="sdg-TZ-WR3"/>
+                                    <constraint firstAttribute="bottom" secondItem="jEh-o9-b7a" secondAttribute="bottom" id="uMc-DR-YUD"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FgE-OV-ynr" firstAttribute="leading" secondItem="AAb-if-t3A" secondAttribute="leading" constant="42" id="IZw-hR-0Oh"/>
+                            <constraint firstItem="FgE-OV-ynr" firstAttribute="centerY" secondItem="Iy7-Ma-A2N" secondAttribute="centerY" id="IeR-2o-lCH"/>
+                            <constraint firstItem="FgE-OV-ynr" firstAttribute="centerX" secondItem="Iy7-Ma-A2N" secondAttribute="centerX" id="J9g-Fz-V2C"/>
+                            <constraint firstItem="AAb-if-t3A" firstAttribute="trailing" secondItem="FgE-OV-ynr" secondAttribute="trailing" constant="42" id="VDv-Z2-ZwW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="AAb-if-t3A"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A2B-pg-hcH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="98" y="64"/>
+        </scene>
+    </scenes>
+</document>

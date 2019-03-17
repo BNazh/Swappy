@@ -21,10 +21,11 @@ class MainViewController: ButtonBarPagerTabStripViewController {
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
         
         let catalogVC: ProductCatalogViewController = UIStoryboard.createViewController()
-        let catalogVC2: ProductCatalogViewController = UIStoryboard.createViewController()
+        let myProductsVC: MyProductsViewController = UIStoryboard.createViewController()
+        
         return [
             catalogVC,
-            catalogVC2
+            myProductsVC
         ]
     }
 }
@@ -44,5 +45,18 @@ private extension MainViewController {
             oldCell?.label.textColor = .trolleyGrey
             newCell?.label.textColor = .black
         }
+    }
+}
+
+
+extension ProductCatalogViewController: IndicatorInfoProvider {
+    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
+        return "Все товары"
+    }
+}
+
+extension MyProductsViewController: IndicatorInfoProvider {
+    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
+        return "Мои товары"
     }
 }

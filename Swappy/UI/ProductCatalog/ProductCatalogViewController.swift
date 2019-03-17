@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import XLPagerTabStrip
 
 protocol ProductCatalogView: class {
     
@@ -54,11 +53,5 @@ extension ProductCatalogViewController: ProductsDDMDelegate {
     
     func didSelectProduct(withId id: String) {
         presenter.selectProduct(with: id)
-    }
-}
-
-extension ProductCatalogViewController: IndicatorInfoProvider {
-    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        return "Все товары"
     }
 }

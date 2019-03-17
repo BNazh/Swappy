@@ -18,7 +18,8 @@ extension SwinjectStoryboard {
             
             ProductCatalogAssembly(),
             ProductDetailAssembly(),
-            SellerInfoAssembly()
+            SellerInfoAssembly(),
+            MyProductsAssembly()
         ])
     }
 }

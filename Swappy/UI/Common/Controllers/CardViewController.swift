@@ -20,12 +20,11 @@ class CardViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        
         removeShade()
     }
     
     override func dismiss(animated flag: Bool, completion: (() -> Void)? = nil) {
-        
-        
         super.dismiss(animated: flag, completion: completion)
     }
 }
