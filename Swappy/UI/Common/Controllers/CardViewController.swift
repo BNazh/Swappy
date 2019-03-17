@@ -10,17 +10,50 @@ import UIKit
 
 class CardViewController: UIViewController {
     
-    weak var shadingDelegate: ShadingDelegate?
+    weak var shadeView: UIView?
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        shadingDelegate?.setShading(true)
+        showShade()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        removeShade()
     }
     
     override func dismiss(animated flag: Bool, completion: (() -> Void)? = nil) {
-        shadingDelegate?.setShading(false)
+        
         
         super.dismiss(animated: flag, completion: completion)
+    }
+}
+
+private extension CardViewController {
+    
+    func showShade() {
+        self.shadeView?.removeFromSuperview()
+        
+        let parentView = presentingViewController?.view ?? UIView()
+        let shadeView = UIView(frame: parentView.frame)
+        shadeView.backgroundColor = .black
+        shadeView.alpha = 0
+        
+        parentView.addSubview(shadeView)
+        
+        self.shadeView = shadeView
+        
+        UIView.animate(withDuration: 0.5, animations: {
+            shadeView.alpha = 0.4
+        })
+    }
+    
+    func removeShade() {
+        UIView.animate(withDuration: 0.5, animations: {
+            self.shadeView?.alpha = 0
+        }) { _ in
+            self.shadeView?.removeFromSuperview()
+        }
     }
 }

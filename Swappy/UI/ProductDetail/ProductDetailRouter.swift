@@ -27,7 +27,6 @@ extension ProductDetailRouterImp: ProductDetailRouter {
         let sellerVC: SellerInfoViewController = UIStoryboard.createViewController()
         
         sellerVC.presenter.setProduct(product)
-        sellerVC.shadingDelegate = viewController
         
         viewController.present(sellerVC, animated: true, completion: nil)
     }
