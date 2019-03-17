@@ -50,6 +50,8 @@ extension MyProductsPresenterImp: MyProductsPresenter {
     }
     
     func addProduct() {
-        router.openAddProduct()
+        //router.openAddProduct()
+        
+        router.openLoginCard()
     }
 }

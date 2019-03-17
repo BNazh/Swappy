@@ -15,11 +15,6 @@ class BaseButton: UIButton {
     private enum Constants {
         static let cornerRadius: CGFloat = 8
         static let titleLabelFont = UIFont.systemFont(ofSize: 15, weight: .semibold)
-        
-        enum Color {
-            static let background = UIColor.whiteSmoke
-            static let textColor = UIColor.black
-        }
     }
     
     // MARK: - Inits

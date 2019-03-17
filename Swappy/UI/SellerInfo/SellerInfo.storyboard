@@ -11,87 +11,97 @@
     </dependencies>
     <scenes>
         <!--Seller Info View Controller-->
-        <scene sceneID="4Mf-Ll-Azb">
+        <scene sceneID="crD-Tg-1tZ">
             <objects>
-                <viewController storyboardIdentifier="SellerInfoViewController" modalPresentationStyle="overCurrentContext" id="6Xf-Dr-8tJ" customClass="SellerInfoViewController" customModule="Swappy" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="uKG-4h-5DN">
+                <viewController storyboardIdentifier="SellerInfoViewController" modalPresentationStyle="overCurrentContext" id="ntk-Wa-Pff" customClass="SellerInfoViewController" customModule="Swappy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DZy-Bd-vwJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LsS-eD-evY">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mRe-0G-5Z5">
                                 <rect key="frame" x="0.0" y="316" width="320" height="252"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iny-EY-P7b" customClass="MainButton" customModule="Swappy" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="buU-sI-L6k" customClass="MainButton" customModule="Swappy" customModuleProvider="target">
                                         <rect key="frame" x="16" y="184" width="288" height="52"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="52" id="XR8-Dk-hhC"/>
+                                            <constraint firstAttribute="height" constant="52" id="bcm-KO-749"/>
                                         </constraints>
                                         <state key="normal" title="Скопировать"/>
                                         <connections>
-                                            <action selector="copyTapped:" destination="6Xf-Dr-8tJ" eventType="touchUpInside" id="GuX-aC-7O2"/>
+                                            <action selector="copyTapped:" destination="ntk-Wa-Pff" eventType="touchUpInside" id="BQk-2b-p5l"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Не забудь сказать, что вещь найдена в своппи 🙂" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWx-3n-g3V">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Не забудь сказать, что вещь найдена в своппи 🙂" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L4h-Si-PjR">
                                         <rect key="frame" x="20" y="52" width="280" height="60"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="cmg-gn-k0q"/>
+                                            <constraint firstAttribute="height" constant="60" id="koV-H2-w17"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qg0-eC-KfW">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gyV-K8-fAP">
                                         <rect key="frame" x="272" y="4" width="48" height="48"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="48" id="4Jz-lO-ClF"/>
-                                            <constraint firstAttribute="width" secondItem="qg0-eC-KfW" secondAttribute="height" multiplier="1:1" id="naC-eS-8xV"/>
+                                            <constraint firstAttribute="width" secondItem="gyV-K8-fAP" secondAttribute="height" multiplier="1:1" id="Ezq-1l-1WF"/>
+                                            <constraint firstAttribute="height" constant="48" id="zc7-9R-Yeq"/>
                                         </constraints>
                                         <state key="normal" image="closeSeller"/>
                                         <connections>
-                                            <action selector="closeTapped:" destination="6Xf-Dr-8tJ" eventType="touchUpInside" id="vN5-lC-ldn"/>
+                                            <action selector="closeTapped:" destination="ntk-Wa-Pff" eventType="touchUpInside" id="7Oj-9M-CPA"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ByB-Os-tM6" customClass="SecondaryButton" customModule="Swappy" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4me-5G-M7u" customClass="SecondaryButton" customModule="Swappy" customModuleProvider="target">
                                         <rect key="frame" x="16" y="124" width="288" height="52"/>
                                         <state key="normal" title="8 916 366 25 95"/>
                                         <connections>
-                                            <action selector="contactButtonTapped:" destination="6Xf-Dr-8tJ" eventType="touchUpInside" id="lhW-tL-9iJ"/>
+                                            <action selector="contactButtonTapped:" destination="ntk-Wa-Pff" eventType="touchUpInside" id="rqi-Z9-cRc"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="DWx-3n-g3V" firstAttribute="leading" secondItem="LsS-eD-evY" secondAttribute="leading" constant="20" id="7iS-L3-PxW"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="250" id="KKV-4W-x72"/>
-                                    <constraint firstAttribute="trailing" secondItem="qg0-eC-KfW" secondAttribute="trailing" id="MJO-cj-CgW"/>
-                                    <constraint firstAttribute="trailing" secondItem="Iny-EY-P7b" secondAttribute="trailing" constant="16" id="NKs-hM-wgJ"/>
-                                    <constraint firstItem="Iny-EY-P7b" firstAttribute="width" secondItem="ByB-Os-tM6" secondAttribute="width" id="O69-E1-cY9"/>
-                                    <constraint firstAttribute="trailing" secondItem="DWx-3n-g3V" secondAttribute="trailing" constant="20" id="WVq-oq-6cY"/>
-                                    <constraint firstItem="Iny-EY-P7b" firstAttribute="height" secondItem="ByB-Os-tM6" secondAttribute="height" id="ZXx-tV-17y"/>
-                                    <constraint firstItem="DWx-3n-g3V" firstAttribute="top" secondItem="qg0-eC-KfW" secondAttribute="bottom" id="gfs-Y5-qTu"/>
-                                    <constraint firstItem="Iny-EY-P7b" firstAttribute="centerX" secondItem="ByB-Os-tM6" secondAttribute="centerX" id="jjU-Lf-wMb"/>
-                                    <constraint firstItem="qg0-eC-KfW" firstAttribute="top" secondItem="LsS-eD-evY" secondAttribute="top" constant="4" id="k7T-eb-4sF"/>
-                                    <constraint firstItem="ByB-Os-tM6" firstAttribute="top" secondItem="DWx-3n-g3V" secondAttribute="bottom" constant="12" id="l9Z-p1-4yv"/>
-                                    <constraint firstItem="Iny-EY-P7b" firstAttribute="top" secondItem="ByB-Os-tM6" secondAttribute="bottom" constant="8" id="m3V-1Q-hra"/>
-                                    <constraint firstAttribute="bottom" secondItem="Iny-EY-P7b" secondAttribute="bottom" constant="16" id="ps2-gA-s6t"/>
-                                    <constraint firstItem="Iny-EY-P7b" firstAttribute="leading" secondItem="LsS-eD-evY" secondAttribute="leading" constant="16" id="wVe-Ft-1bw"/>
+                                    <constraint firstAttribute="bottom" secondItem="buU-sI-L6k" secondAttribute="bottom" constant="16" id="1YV-5r-Mxj"/>
+                                    <constraint firstItem="L4h-Si-PjR" firstAttribute="leading" secondItem="mRe-0G-5Z5" secondAttribute="leading" constant="20" id="AhS-39-teR"/>
+                                    <constraint firstAttribute="trailing" secondItem="gyV-K8-fAP" secondAttribute="trailing" id="Ayp-HR-X5O"/>
+                                    <constraint firstItem="buU-sI-L6k" firstAttribute="centerX" secondItem="4me-5G-M7u" secondAttribute="centerX" id="BP3-RN-CYq"/>
+                                    <constraint firstItem="buU-sI-L6k" firstAttribute="leading" secondItem="mRe-0G-5Z5" secondAttribute="leading" constant="16" id="E3C-2Y-Luz"/>
+                                    <constraint firstItem="L4h-Si-PjR" firstAttribute="top" secondItem="gyV-K8-fAP" secondAttribute="bottom" id="Htb-Sq-v2M"/>
+                                    <constraint firstAttribute="trailing" secondItem="buU-sI-L6k" secondAttribute="trailing" constant="16" id="Tgb-fx-ZyG"/>
+                                    <constraint firstAttribute="trailing" secondItem="L4h-Si-PjR" secondAttribute="trailing" constant="20" id="WFO-HE-hAk"/>
+                                    <constraint firstItem="buU-sI-L6k" firstAttribute="top" secondItem="4me-5G-M7u" secondAttribute="bottom" constant="8" id="YEy-cH-nu3"/>
+                                    <constraint firstItem="buU-sI-L6k" firstAttribute="width" secondItem="4me-5G-M7u" secondAttribute="width" id="cr1-Hq-VT2"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="250" id="hds-6S-8LC"/>
+                                    <constraint firstItem="buU-sI-L6k" firstAttribute="height" secondItem="4me-5G-M7u" secondAttribute="height" id="iER-ol-bgO"/>
+                                    <constraint firstItem="4me-5G-M7u" firstAttribute="top" secondItem="L4h-Si-PjR" secondAttribute="bottom" constant="12" id="pDE-X4-YHF"/>
+                                    <constraint firstItem="gyV-K8-fAP" firstAttribute="top" secondItem="mRe-0G-5Z5" secondAttribute="top" constant="4" id="vP6-L5-pFM"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DOX-qT-ORr">
+                                <rect key="frame" x="0.0" y="20" width="320" height="296"/>
+                                <connections>
+                                    <action selector="closeTapped:" destination="ntk-Wa-Pff" eventType="touchUpInside" id="95S-Pf-XxL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="x0S-uy-W1w" firstAttribute="bottom" secondItem="LsS-eD-evY" secondAttribute="bottom" id="Ku1-2c-bdL"/>
-                            <constraint firstItem="x0S-uy-W1w" firstAttribute="trailing" secondItem="LsS-eD-evY" secondAttribute="trailing" id="REX-41-wQy"/>
-                            <constraint firstItem="LsS-eD-evY" firstAttribute="leading" secondItem="x0S-uy-W1w" secondAttribute="leading" id="x2H-jS-6FW"/>
+                            <constraint firstItem="k0f-pd-ExH" firstAttribute="bottom" secondItem="mRe-0G-5Z5" secondAttribute="bottom" id="2az-uB-lVf"/>
+                            <constraint firstItem="k0f-pd-ExH" firstAttribute="trailing" secondItem="DOX-qT-ORr" secondAttribute="trailing" id="KRt-UE-wbL"/>
+                            <constraint firstItem="mRe-0G-5Z5" firstAttribute="top" secondItem="DOX-qT-ORr" secondAttribute="bottom" id="Ymt-Iw-Pzt"/>
+                            <constraint firstItem="DOX-qT-ORr" firstAttribute="top" secondItem="k0f-pd-ExH" secondAttribute="top" id="cDO-sY-PYN"/>
+                            <constraint firstItem="DOX-qT-ORr" firstAttribute="leading" secondItem="k0f-pd-ExH" secondAttribute="leading" id="eus-8r-k4e"/>
+                            <constraint firstItem="k0f-pd-ExH" firstAttribute="trailing" secondItem="mRe-0G-5Z5" secondAttribute="trailing" id="fa5-g2-TiA"/>
+                            <constraint firstItem="mRe-0G-5Z5" firstAttribute="leading" secondItem="k0f-pd-ExH" secondAttribute="leading" id="wGb-gG-4W4"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="x0S-uy-W1w"/>
+                        <viewLayoutGuide key="safeArea" id="k0f-pd-ExH"/>
                     </view>
                     <connections>
-                        <outlet property="contactButton" destination="ByB-Os-tM6" id="3q3-M4-ksm"/>
-                        <outlet property="copyButton" destination="Iny-EY-P7b" id="qQp-qe-7xl"/>
-                        <outlet property="sellerContainer" destination="LsS-eD-evY" id="Gd4-f8-Wqf"/>
+                        <outlet property="contactButton" destination="4me-5G-M7u" id="hja-xu-lky"/>
+                        <outlet property="copyButton" destination="buU-sI-L6k" id="VZH-eb-V6F"/>
+                        <outlet property="sellerContainer" destination="mRe-0G-5Z5" id="T9B-vN-JV9"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="O2J-mh-idh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lIk-6a-7Qa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="86" y="122"/>
         </scene>

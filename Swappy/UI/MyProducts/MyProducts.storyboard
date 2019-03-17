@@ -59,12 +59,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IPy-2N-0hA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="183" y="50"/>
+            <point key="canvasLocation" x="164" y="61"/>
         </scene>
-        <!--View Controller-->
+        <!--No Products View Controller-->
         <scene sceneID="bNE-fJ-7ch">
             <objects>
-                <viewController id="kJ9-Rk-RUR" sceneMemberID="viewController">
+                <viewController id="kJ9-Rk-RUR" customClass="NoProductsViewController" customModule="Swappy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SYV-78-fF4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -94,6 +94,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                         <state key="normal" title="Разместить"/>
+                                        <connections>
+                                            <action selector="addProductTapped:" destination="kJ9-Rk-RUR" eventType="touchUpInside" id="Dj4-G3-1uF"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -120,7 +123,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y18-RE-GzG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="182" y="770"/>
+            <point key="canvasLocation" x="950" y="194"/>
         </scene>
     </scenes>
 </document>

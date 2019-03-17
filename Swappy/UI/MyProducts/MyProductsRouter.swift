@@ -12,6 +12,7 @@ protocol MyProductsRouter: class {
     
     func openAddProduct()
     func openProduct(_ product: Product)
+    func openLoginCard()
 }
 
 final class MyProductsRouterImp {
@@ -30,5 +31,11 @@ extension MyProductsRouterImp: MyProductsRouter {
     
     func openProduct(_ product: Product) {
         
+    }
+    
+    func openLoginCard() {
+        let loginCardVC: LoginCardViewController = UIStoryboard.createViewController()
+        
+        viewController.present(loginCardVC, animated: true, completion: nil)
     }
 }

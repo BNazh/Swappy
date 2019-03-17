@@ -8,9 +8,10 @@
 
 import UIKit
 
-final class LoginViewController: UIViewController {
+final class LoginCardViewController: CardViewController {
     
     
-    
-    
+    @IBAction func close(_ sender: UIButton) {
+        dismiss(animated: true)
+    }
 }
