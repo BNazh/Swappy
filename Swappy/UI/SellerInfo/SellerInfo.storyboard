@@ -19,10 +19,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LsS-eD-evY">
-                                <rect key="frame" x="0.0" y="301" width="320" height="267"/>
+                                <rect key="frame" x="0.0" y="316" width="320" height="252"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iny-EY-P7b" customClass="MainButton" customModule="Swappy" customModuleProvider="target">
-                                        <rect key="frame" x="16" y="199" width="288" height="52"/>
+                                        <rect key="frame" x="16" y="184" width="288" height="52"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="52" id="XR8-Dk-hhC"/>
                                         </constraints>
@@ -32,9 +32,9 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Не забудь сказать, что вещь найдена в своппи 🙂" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWx-3n-g3V">
-                                        <rect key="frame" x="20" y="52" width="280" height="75"/>
+                                        <rect key="frame" x="20" y="52" width="280" height="60"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="75" id="cmg-gn-k0q"/>
+                                            <constraint firstAttribute="height" constant="60" id="cmg-gn-k0q"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -52,7 +52,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ByB-Os-tM6" customClass="SecondaryButton" customModule="Swappy" customModuleProvider="target">
-                                        <rect key="frame" x="16" y="139" width="288" height="52"/>
+                                        <rect key="frame" x="16" y="124" width="288" height="52"/>
                                         <state key="normal" title="8 916 366 25 95"/>
                                         <connections>
                                             <action selector="contactButtonTapped:" destination="6Xf-Dr-8tJ" eventType="touchUpInside" id="lhW-tL-9iJ"/>
@@ -62,7 +62,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="DWx-3n-g3V" firstAttribute="leading" secondItem="LsS-eD-evY" secondAttribute="leading" constant="20" id="7iS-L3-PxW"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="267" id="KKV-4W-x72"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="250" id="KKV-4W-x72"/>
                                     <constraint firstAttribute="trailing" secondItem="qg0-eC-KfW" secondAttribute="trailing" id="MJO-cj-CgW"/>
                                     <constraint firstAttribute="trailing" secondItem="Iny-EY-P7b" secondAttribute="trailing" constant="16" id="NKs-hM-wgJ"/>
                                     <constraint firstItem="Iny-EY-P7b" firstAttribute="width" secondItem="ByB-Os-tM6" secondAttribute="width" id="O69-E1-cY9"/>
@@ -79,7 +79,6 @@
                             </view>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="LsS-eD-evY" firstAttribute="height" secondItem="uKG-4h-5DN" secondAttribute="height" multiplier="0.4" priority="900" id="3dA-nz-8NZ"/>
                             <constraint firstItem="x0S-uy-W1w" firstAttribute="bottom" secondItem="LsS-eD-evY" secondAttribute="bottom" id="Ku1-2c-bdL"/>
                             <constraint firstItem="x0S-uy-W1w" firstAttribute="trailing" secondItem="LsS-eD-evY" secondAttribute="trailing" id="REX-41-wQy"/>
                             <constraint firstItem="LsS-eD-evY" firstAttribute="leading" secondItem="x0S-uy-W1w" secondAttribute="leading" id="x2H-jS-6FW"/>

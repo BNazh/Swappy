@@ -14,9 +14,9 @@ protocol ProductDetailRouter {
 
 final class ProductDetailRouterImp {
     
-    unowned let viewController: UIViewController
+    unowned let viewController: ProductDetailViewController
     
-    init(viewController: UIViewController) {
+    init(viewController: ProductDetailViewController) {
         self.viewController = viewController
     }
 }
@@ -27,6 +27,7 @@ extension ProductDetailRouterImp: ProductDetailRouter {
         let sellerVC: SellerInfoViewController = UIStoryboard.createViewController()
         
         sellerVC.presenter.setProduct(product)
+        sellerVC.shadingDelegate = viewController
         
         viewController.present(sellerVC, animated: true, completion: nil)
     }

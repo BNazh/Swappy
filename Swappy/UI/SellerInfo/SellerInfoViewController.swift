@@ -12,7 +12,7 @@ protocol SellerInfoView: class {
     func displaySeller(viewModel: SellerInfoViewModel)
 }
 
-final class SellerInfoViewController: UIViewController {
+final class SellerInfoViewController: CardViewController {
     
     @IBOutlet weak var contactButton: SecondaryButton!
     @IBOutlet weak var copyButton: MainButton!

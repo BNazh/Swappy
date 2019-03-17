@@ -12,12 +12,15 @@ protocol ProductDetailView: class {
     func showProduct(viewModel: ProductViewModel)
 }
 
-class ProductDetailViewController: UIViewController {
+class ProductDetailViewController: UIViewController, ShadingDelegate {
 
     @IBOutlet weak var imageSlider: ImageSlider!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    
+    // ShadingDelegate
+    @IBOutlet weak var shadingView: UIView?
     
     var presenter: ProductDetailPresenter!
 
@@ -37,12 +40,10 @@ class ProductDetailViewController: UIViewController {
     }
     
     @IBAction func openSellerTouchedDown(_ sender: UIButton) {
-        print("open seller tapped")
         presenter.showSeller()
     }
     
     @IBAction func closeTapped(_ sender: UIButton) {
-        print("close tapepd tapped")
         dismiss(animated: true, completion: nil)
     }
 }

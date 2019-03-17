@@ -47,7 +47,7 @@ extension ProductCellViewModel {
         print(title.string)
         print(titleHeight(width: width))
         print(imageHeight + priceHeight + titleHeight(width: width) + spaces)
-        print(imageHeight + priceHeight + spaces
+        print(imageHeight + priceHeight + spaces)
         print("---")
         
         return imageHeight + priceHeight + titleHeight(width: width) + spaces

@@ -67,6 +67,7 @@
 		E1FF3E95223A33CD00443DED /* LoginCardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF3E94223A33CD00443DED /* LoginCardRouter.swift */; };
 		E1FF3E97223A350900443DED /* LoginCard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1FF3E96223A350900443DED /* LoginCard.storyboard */; };
 		E1FF3E99223A373000443DED /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF3E98223A373000443DED /* BaseButton.swift */; };
+		E1FF3E9B223E47CA00443DED /* ShadingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF3E9A223E47CA00443DED /* ShadingDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -160,6 +161,7 @@
 		E1FF3E94223A33CD00443DED /* LoginCardRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCardRouter.swift; sourceTree = "<group>"; };
 		E1FF3E96223A350900443DED /* LoginCard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginCard.storyboard; sourceTree = "<group>"; };
 		E1FF3E98223A373000443DED /* BaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
+		E1FF3E9A223E47CA00443DED /* ShadingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadingDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -446,6 +448,7 @@
 			isa = PBXGroup;
 			children = (
 				E1FF3E6B223A302900443DED /* CardViewController.swift */,
+				E1FF3E9A223E47CA00443DED /* ShadingDelegate.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -739,6 +742,7 @@
 				E1FF3E95223A33CD00443DED /* LoginCardRouter.swift in Sources */,
 				E1BC5AC322310C2E001FD1D6 /* WorkersAssembly.swift in Sources */,
 				E164C39C223591AF00D1AB13 /* MainButton.swift in Sources */,
+				E1FF3E9B223E47CA00443DED /* ShadingDelegate.swift in Sources */,
 				E1BC5AEF22318340001FD1D6 /* UICollectionView+RegisterCells.swift in Sources */,
 				E1BC5ACA22310F1F001FD1D6 /* Seller.swift in Sources */,
 				E1FC30B2223977B900DF1325 /* SecondaryButton.swift in Sources */,
