@@ -72,12 +72,12 @@
 		E1FF3EA2223E77B800443DED /* ProductsDDM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF3EA1223E77B800443DED /* ProductsDDM.swift */; };
 		E1FF3EA4223E77C100443DED /* ProductsDDMImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF3EA3223E77C100443DED /* ProductsDDMImp.swift */; };
 		E1FF3EA7223E9A1300443DED /* NoProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF3EA6223E9A1200443DED /* NoProductsViewController.swift */; };
-		E1FF3EA9223E9A3500443DED /* NoProducts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1FF3EA8223E9A3500443DED /* NoProducts.storyboard */; };
 		E1FF3EAD223E9CC300443DED /* MyProducts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1FF3EAC223E9CC300443DED /* MyProducts.storyboard */; };
 		E1FF3EAF223E9CCF00443DED /* MyProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF3EAE223E9CCF00443DED /* MyProductsViewController.swift */; };
 		E1FF3EB1223E9CDA00443DED /* MyProductsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF3EB0223E9CDA00443DED /* MyProductsPresenter.swift */; };
 		E1FF3EB3223ED68400443DED /* MyProductsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF3EB2223ED68400443DED /* MyProductsRouter.swift */; };
 		E1FF3EB5223EDC3900443DED /* MyProductsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF3EB4223EDC3900443DED /* MyProductsAssembly.swift */; };
+		E1FF3EB9223EE18100443DED /* VKButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF3EB8223EE18100443DED /* VKButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -176,12 +176,12 @@
 		E1FF3EA1223E77B800443DED /* ProductsDDM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsDDM.swift; sourceTree = "<group>"; };
 		E1FF3EA3223E77C100443DED /* ProductsDDMImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsDDMImp.swift; sourceTree = "<group>"; };
 		E1FF3EA6223E9A1200443DED /* NoProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoProductsViewController.swift; sourceTree = "<group>"; };
-		E1FF3EA8223E9A3500443DED /* NoProducts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NoProducts.storyboard; sourceTree = "<group>"; };
 		E1FF3EAC223E9CC300443DED /* MyProducts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyProducts.storyboard; sourceTree = "<group>"; };
 		E1FF3EAE223E9CCF00443DED /* MyProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProductsViewController.swift; sourceTree = "<group>"; };
 		E1FF3EB0223E9CDA00443DED /* MyProductsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProductsPresenter.swift; sourceTree = "<group>"; };
 		E1FF3EB2223ED68400443DED /* MyProductsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProductsRouter.swift; sourceTree = "<group>"; };
 		E1FF3EB4223EDC3900443DED /* MyProductsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProductsAssembly.swift; sourceTree = "<group>"; };
+		E1FF3EB8223EE18100443DED /* VKButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -479,6 +479,7 @@
 		E1FF3E8F223A337600443DED /* LoginCard */ = {
 			isa = PBXGroup;
 			children = (
+				E1FF3EB7223EE17600443DED /* Views */,
 				E1FF3E96223A350900443DED /* LoginCard.storyboard */,
 				E1FF3E90223A338800443DED /* LoginCardViewController.swift */,
 				E1FF3E92223A339200443DED /* LoginCardPresenter.swift */,
@@ -508,7 +509,6 @@
 		E1FF3EA5223E99F400443DED /* NoProducts */ = {
 			isa = PBXGroup;
 			children = (
-				E1FF3EA8223E9A3500443DED /* NoProducts.storyboard */,
 				E1FF3EA6223E9A1200443DED /* NoProductsViewController.swift */,
 			);
 			path = NoProducts;
@@ -524,6 +524,14 @@
 				E1FF3EB2223ED68400443DED /* MyProductsRouter.swift */,
 			);
 			path = MyProducts;
+			sourceTree = "<group>";
+		};
+		E1FF3EB7223EE17600443DED /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E1FF3EB8223EE18100443DED /* VKButton.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -643,7 +651,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1BC5AD222311FBE001FD1D6 /* ProductCatalog.storyboard in Resources */,
-				E1FF3EA9223E9A3500443DED /* NoProducts.storyboard in Resources */,
 				E19F7DE22231063A00BAFC7A /* LaunchScreen.storyboard in Resources */,
 				E1FC30A72238DC9900DF1325 /* SellerInfo.storyboard in Resources */,
 				E1FF3EAD223E9CC300443DED /* MyProducts.storyboard in Resources */,
@@ -829,6 +836,7 @@
 				E1BC5AD422312160001FD1D6 /* ProductCatalogViewController.swift in Sources */,
 				E1BC5AED223142E3001FD1D6 /* PinterestLayout.swift in Sources */,
 				E1BC5ADC22312488001FD1D6 /* ProductCollectionViewCell.swift in Sources */,
+				E1FF3EB9223EE18100443DED /* VKButton.swift in Sources */,
 				E1FF3E9E223E634A00443DED /* MainViewController.swift in Sources */,
 				E164C3932231B5DF00D1AB13 /* ProductDetailViewController.swift in Sources */,
 				E1FF3EAF223E9CCF00443DED /* MyProductsViewController.swift in Sources */,

@@ -21,4 +21,6 @@ extension UIColor {
     
     static let whiteSmoke = UIColor(r: 248, g: 248, b: 248)
     static let trolleyGrey = UIColor(r: 121, g: 121, b: 121)
+    
+    static let vkBackground = UIColor(r: 81, g: 118, b: 164)
 }
