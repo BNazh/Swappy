@@ -10,6 +10,8 @@
 		16F9B4DE1CB9F8192B427752 /* Pods_SwappyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFD0839158D45E6BFAB8A03C /* Pods_SwappyUITests.framework */; };
 		96B0C942978569040AC6A9B8 /* Pods_SwappyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEFECB724EC876C65A2B29EB /* Pods_SwappyTests.framework */; };
 		C2E71353A7D7CE8F7C2ED007 /* Pods_Swappy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4C981EDD82058064D968414 /* Pods_Swappy.framework */; };
+		E10850C2223EF78F00941EA5 /* PhoneLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10850C1223EF78F00941EA5 /* PhoneLoginViewController.swift */; };
+		E10850C4223F276D00941EA5 /* EditProduct.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E10850C3223F276D00941EA5 /* EditProduct.storyboard */; };
 		E164C3932231B5DF00D1AB13 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E164C3922231B5DF00D1AB13 /* ProductDetailViewController.swift */; };
 		E164C3952231B5FE00D1AB13 /* ProductDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E164C3942231B5FE00D1AB13 /* ProductDetail.storyboard */; };
 		E164C39722326BAD00D1AB13 /* Collection+SafeSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = E164C39622326BAD00D1AB13 /* Collection+SafeSubscription.swift */; };
@@ -67,7 +69,6 @@
 		E1FF3E95223A33CD00443DED /* LoginCardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF3E94223A33CD00443DED /* LoginCardRouter.swift */; };
 		E1FF3E97223A350900443DED /* LoginCard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1FF3E96223A350900443DED /* LoginCard.storyboard */; };
 		E1FF3E99223A373000443DED /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF3E98223A373000443DED /* BaseButton.swift */; };
-		E1FF3E9B223E47CA00443DED /* ShadingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF3E9A223E47CA00443DED /* ShadingDelegate.swift */; };
 		E1FF3E9E223E634A00443DED /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF3E9D223E634A00443DED /* MainViewController.swift */; };
 		E1FF3EA2223E77B800443DED /* ProductsDDM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF3EA1223E77B800443DED /* ProductsDDM.swift */; };
 		E1FF3EA4223E77C100443DED /* ProductsDDMImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF3EA3223E77C100443DED /* ProductsDDMImp.swift */; };
@@ -78,6 +79,10 @@
 		E1FF3EB3223ED68400443DED /* MyProductsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF3EB2223ED68400443DED /* MyProductsRouter.swift */; };
 		E1FF3EB5223EDC3900443DED /* MyProductsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF3EB4223EDC3900443DED /* MyProductsAssembly.swift */; };
 		E1FF3EB9223EE18100443DED /* VKButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF3EB8223EE18100443DED /* VKButton.swift */; };
+		E1FF3EC4223EEA8E00443DED /* EditProductPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF3EC2223EEA8E00443DED /* EditProductPresenter.swift */; };
+		E1FF3EC5223EEA8E00443DED /* EditProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF3EC3223EEA8E00443DED /* EditProductViewController.swift */; };
+		E1FF3EC8223EEC2700443DED /* PhoneLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1FF3EC7223EEC2700443DED /* PhoneLogin.storyboard */; };
+		E1FF3ECB223EEE0A00443DED /* AppTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF3ECA223EEE0A00443DED /* AppTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +112,8 @@
 		BFD0839158D45E6BFAB8A03C /* Pods_SwappyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwappyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEFECB724EC876C65A2B29EB /* Pods_SwappyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwappyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D325178C30F5960E093569F4 /* Pods-Swappy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swappy.debug.xcconfig"; path = "Target Support Files/Pods-Swappy/Pods-Swappy.debug.xcconfig"; sourceTree = "<group>"; };
+		E10850C1223EF78F00941EA5 /* PhoneLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneLoginViewController.swift; sourceTree = "<group>"; };
+		E10850C3223F276D00941EA5 /* EditProduct.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditProduct.storyboard; sourceTree = "<group>"; };
 		E164C3922231B5DF00D1AB13 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		E164C3942231B5FE00D1AB13 /* ProductDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProductDetail.storyboard; sourceTree = "<group>"; };
 		E164C39622326BAD00D1AB13 /* Collection+SafeSubscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+SafeSubscription.swift"; sourceTree = "<group>"; };
@@ -171,7 +178,6 @@
 		E1FF3E94223A33CD00443DED /* LoginCardRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCardRouter.swift; sourceTree = "<group>"; };
 		E1FF3E96223A350900443DED /* LoginCard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginCard.storyboard; sourceTree = "<group>"; };
 		E1FF3E98223A373000443DED /* BaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
-		E1FF3E9A223E47CA00443DED /* ShadingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadingDelegate.swift; sourceTree = "<group>"; };
 		E1FF3E9D223E634A00443DED /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E1FF3EA1223E77B800443DED /* ProductsDDM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsDDM.swift; sourceTree = "<group>"; };
 		E1FF3EA3223E77C100443DED /* ProductsDDMImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsDDMImp.swift; sourceTree = "<group>"; };
@@ -182,6 +188,10 @@
 		E1FF3EB2223ED68400443DED /* MyProductsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProductsRouter.swift; sourceTree = "<group>"; };
 		E1FF3EB4223EDC3900443DED /* MyProductsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProductsAssembly.swift; sourceTree = "<group>"; };
 		E1FF3EB8223EE18100443DED /* VKButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKButton.swift; sourceTree = "<group>"; };
+		E1FF3EC2223EEA8E00443DED /* EditProductPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProductPresenter.swift; sourceTree = "<group>"; };
+		E1FF3EC3223EEA8E00443DED /* EditProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProductViewController.swift; sourceTree = "<group>"; };
+		E1FF3EC7223EEC2700443DED /* PhoneLogin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PhoneLogin.storyboard; sourceTree = "<group>"; };
+		E1FF3ECA223EEE0A00443DED /* AppTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,13 +270,13 @@
 		E164C39922358E0400D1AB13 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				E1BC5AEC223142E3001FD1D6 /* PinterestLayout.swift */,
-				E1BC5AE9223133F0001FD1D6 /* ProductCell */,
 				E1FF3EA0223E779700443DED /* ProductsDDM */,
+				E1BC5AE9223133F0001FD1D6 /* ProductCell */,
 				E1FF3E6A223A301700443DED /* Controllers */,
 				E1FC30B0223977A200DF1325 /* Buttons */,
 				E164C39D2235A70E00D1AB13 /* SeparatorView.swift */,
 				E164C3A12235A92300D1AB13 /* ImageSlider.swift */,
+				E1FF3ECA223EEE0A00443DED /* AppTextField.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -351,12 +361,14 @@
 			isa = PBXGroup;
 			children = (
 				E164C39922358E0400D1AB13 /* Common */,
+				E1FF3EC6223EEC1E00443DED /* PhoneLogin */,
 				E1FF3E8F223A337600443DED /* LoginCard */,
 				E1FF3E9C223E632800443DED /* Main */,
 				E164C3902231B5B200D1AB13 /* ProductCatalog */,
 				E1FF3EAB223E9CA300443DED /* MyProducts */,
 				E164C3912231B5C200D1AB13 /* ProductDetail */,
 				E1FC30A32238DC4400DF1325 /* SellerInfo */,
+				E1FF3EC1223EEA8E00443DED /* EditProduct */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -462,6 +474,7 @@
 			children = (
 				E1FF3E98223A373000443DED /* BaseButton.swift */,
 				E164C39B223591AF00D1AB13 /* MainButton.swift */,
+				E1FF3EB8223EE18100443DED /* VKButton.swift */,
 				E1FC30B1223977B900DF1325 /* SecondaryButton.swift */,
 			);
 			path = Buttons;
@@ -471,7 +484,6 @@
 			isa = PBXGroup;
 			children = (
 				E1FF3E6B223A302900443DED /* CardViewController.swift */,
-				E1FF3E9A223E47CA00443DED /* ShadingDelegate.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -500,6 +512,7 @@
 		E1FF3EA0223E779700443DED /* ProductsDDM */ = {
 			isa = PBXGroup;
 			children = (
+				E1BC5AEC223142E3001FD1D6 /* PinterestLayout.swift */,
 				E1FF3EA1223E77B800443DED /* ProductsDDM.swift */,
 				E1FF3EA3223E77C100443DED /* ProductsDDMImp.swift */,
 			);
@@ -529,9 +542,27 @@
 		E1FF3EB7223EE17600443DED /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E1FF3EB8223EE18100443DED /* VKButton.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		E1FF3EC1223EEA8E00443DED /* EditProduct */ = {
+			isa = PBXGroup;
+			children = (
+				E10850C3223F276D00941EA5 /* EditProduct.storyboard */,
+				E1FF3EC3223EEA8E00443DED /* EditProductViewController.swift */,
+				E1FF3EC2223EEA8E00443DED /* EditProductPresenter.swift */,
+			);
+			path = EditProduct;
+			sourceTree = "<group>";
+		};
+		E1FF3EC6223EEC1E00443DED /* PhoneLogin */ = {
+			isa = PBXGroup;
+			children = (
+				E1FF3EC7223EEC2700443DED /* PhoneLogin.storyboard */,
+				E10850C1223EF78F00941EA5 /* PhoneLoginViewController.swift */,
+			);
+			path = PhoneLogin;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -657,8 +688,10 @@
 				E1BC5ADE223124B3001FD1D6 /* ProductCollectionViewCell.xib in Resources */,
 				E19F7DDF2231063A00BAFC7A /* Assets.xcassets in Resources */,
 				E19F7DDA2231063900BAFC7A /* Main.storyboard in Resources */,
+				E10850C4223F276D00941EA5 /* EditProduct.storyboard in Resources */,
 				E1FF3E97223A350900443DED /* LoginCard.storyboard in Resources */,
 				E164C3952231B5FE00D1AB13 /* ProductDetail.storyboard in Resources */,
+				E1FF3EC8223EEC2700443DED /* PhoneLogin.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -737,6 +770,8 @@
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftPhoneNumberFormatter/SwiftPhoneNumberFormatter.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
 				"${BUILT_PRODUCTS_DIR}/SwinjectStoryboard/SwinjectStoryboard.framework",
 				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
@@ -750,6 +785,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftPhoneNumberFormatter.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwinjectStoryboard.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
@@ -798,10 +835,12 @@
 				E1FC30AD2239722300DF1325 /* SellerInfoAssembly.swift in Sources */,
 				E19F7E0D2231078F00BAFC7A /* SwappyService.swift in Sources */,
 				E1BC5AD022311173001FD1D6 /* AppError.swift in Sources */,
+				E1FF3EC5223EEA8E00443DED /* EditProductViewController.swift in Sources */,
 				E1FF3EB5223EDC3900443DED /* MyProductsAssembly.swift in Sources */,
 				E19F7E1022310A5200BAFC7A /* ProductsCatalogWorker.swift in Sources */,
 				E1FF3E91223A338800443DED /* LoginCardViewController.swift in Sources */,
 				E1FC30AF2239738200DF1325 /* ProductDetailRouter.swift in Sources */,
+				E10850C2223EF78F00941EA5 /* PhoneLoginViewController.swift in Sources */,
 				E1FC30A52238DC5C00DF1325 /* SellerInfoViewController.swift in Sources */,
 				E1B4B1DB2235BDE400520082 /* ProductDetailPresenter.swift in Sources */,
 				E1FF3EB1223E9CDA00443DED /* MyProductsPresenter.swift in Sources */,
@@ -817,11 +856,11 @@
 				E1FF3E95223A33CD00443DED /* LoginCardRouter.swift in Sources */,
 				E1BC5AC322310C2E001FD1D6 /* WorkersAssembly.swift in Sources */,
 				E164C39C223591AF00D1AB13 /* MainButton.swift in Sources */,
-				E1FF3E9B223E47CA00443DED /* ShadingDelegate.swift in Sources */,
 				E1BC5AEF22318340001FD1D6 /* UICollectionView+RegisterCells.swift in Sources */,
 				E1FF3EA2223E77B800443DED /* ProductsDDM.swift in Sources */,
 				E1BC5ACA22310F1F001FD1D6 /* Seller.swift in Sources */,
 				E1FC30B2223977B900DF1325 /* SecondaryButton.swift in Sources */,
+				E1FF3ECB223EEE0A00443DED /* AppTextField.swift in Sources */,
 				E1BC5AE122312D5A001FD1D6 /* UIFont+App.swift in Sources */,
 				E19F7DDD2231063900BAFC7A /* Swappy.xcdatamodeld in Sources */,
 				E1FC30AB22396F7400DF1325 /* SellerInfoViewModel.swift in Sources */,
@@ -840,6 +879,7 @@
 				E1FF3E9E223E634A00443DED /* MainViewController.swift in Sources */,
 				E164C3932231B5DF00D1AB13 /* ProductDetailViewController.swift in Sources */,
 				E1FF3EAF223E9CCF00443DED /* MyProductsViewController.swift in Sources */,
+				E1FF3EC4223EEA8E00443DED /* EditProductPresenter.swift in Sources */,
 				E164C3A02235A8AA00D1AB13 /* UIColor+App.swift in Sources */,
 				E19F7DD52231063900BAFC7A /* AppDelegate.swift in Sources */,
 				E1FF3E99223A373000443DED /* BaseButton.swift in Sources */,

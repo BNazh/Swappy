@@ -11,6 +11,17 @@ import UIKit
 final class LoginCardViewController: CardViewController {
     
     
+    
+    @IBAction func phoneButtonTapped(_ sender: UIButton) {
+        let phoneLoginVC: PhoneLoginViewController = UIStoryboard.createViewController()
+        
+        let navigationController = self.presentingViewController as? UINavigationController
+        
+        dismiss(animated: true) {
+            navigationController?.pushViewController(phoneLoginVC, animated: true)
+        }
+    }
+    
     @IBAction func close(_ sender: UIButton) {
         dismiss(animated: true)
     }

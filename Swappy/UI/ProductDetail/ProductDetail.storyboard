@@ -159,21 +159,13 @@
                                     <action selector="closeTapped:" destination="3w9-B7-sSi" eventType="touchUpInside" id="Lgb-91-Vyn"/>
                                 </connections>
                             </button>
-                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QUA-mY-jcU">
-                                <rect key="frame" x="0.0" y="20" width="375" height="780"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.40446192781690143" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="QUA-mY-jcU" firstAttribute="top" secondItem="R1d-Ne-rQr" secondAttribute="top" id="04s-OD-Oi0"/>
                             <constraint firstItem="R1d-Ne-rQr" firstAttribute="trailing" secondItem="tNG-rW-MCw" secondAttribute="trailing" id="56A-x9-GOP"/>
                             <constraint firstItem="tNG-rW-MCw" firstAttribute="leading" secondItem="R1d-Ne-rQr" secondAttribute="leading" id="IJm-75-TFr"/>
-                            <constraint firstItem="R1d-Ne-rQr" firstAttribute="bottom" secondItem="QUA-mY-jcU" secondAttribute="bottom" id="OIg-t7-Ltz"/>
                             <constraint firstItem="R1d-Ne-rQr" firstAttribute="trailing" secondItem="4cz-16-cNc" secondAttribute="trailing" constant="16" id="RsF-I6-hHo"/>
-                            <constraint firstItem="QUA-mY-jcU" firstAttribute="leading" secondItem="R1d-Ne-rQr" secondAttribute="leading" id="TON-6p-lD3"/>
                             <constraint firstAttribute="bottom" secondItem="tNG-rW-MCw" secondAttribute="bottom" id="Uhf-IV-q5P"/>
-                            <constraint firstItem="R1d-Ne-rQr" firstAttribute="trailing" secondItem="QUA-mY-jcU" secondAttribute="trailing" id="XXD-l3-w5K"/>
                             <constraint firstItem="4cz-16-cNc" firstAttribute="top" secondItem="R1d-Ne-rQr" secondAttribute="top" constant="16" id="m5b-2Y-UGa"/>
                             <constraint firstItem="tNG-rW-MCw" firstAttribute="top" secondItem="R1d-Ne-rQr" secondAttribute="top" id="uao-9Y-IYL"/>
                         </constraints>
@@ -185,7 +177,6 @@
                         <outlet property="descriptionLabel" destination="qlO-4F-iu9" id="kZf-Fz-Lxl"/>
                         <outlet property="imageSlider" destination="qgW-H7-QhE" id="4aj-wh-aCi"/>
                         <outlet property="priceLabel" destination="dDC-ey-PPN" id="taa-w2-xaD"/>
-                        <outlet property="shadingView" destination="QUA-mY-jcU" id="Pf1-4g-sUd"/>
                         <outlet property="titleLabel" destination="i9B-9I-e8R" id="bOj-wz-dmK"/>
                     </connections>
                 </viewController>

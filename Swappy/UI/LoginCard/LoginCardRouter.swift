@@ -6,4 +6,25 @@
 //  Copyright © 2019 SwappyTeam. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+protocol LoginCardRouter: class {
+    func openPhoneLogin()
+}
+
+final class LoginCardRouterImp {
+    
+    unowned let viewController: UIViewController
+    
+    init(viewController: UIViewController) {
+        self.viewController = viewController
+    }
+}
+
+
+extension LoginCardRouterImp: LoginCardRouter {
+    
+    func openPhoneLogin() {
+        
+    }
+}

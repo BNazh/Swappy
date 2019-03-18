@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Edit Product View Controller-->
+        <scene sceneID="ELT-0n-qey">
+            <objects>
+                <viewController id="bty-MB-qlf" customClass="EditProductViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4rQ-nt-Rxy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vLS-8Q-co5">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UN2-A9-CJr">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="608"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pA9-zs-a5h">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="608"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1NY-yG-Ylh">
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="36"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Фото" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ioy-mT-3KC">
+                                                                <rect key="frame" x="16" y="16" width="343" height="16"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="16" id="2EK-Z1-NOQ"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="36" id="1D1-v6-czy"/>
+                                                            <constraint firstAttribute="bottom" secondItem="ioy-mT-3KC" secondAttribute="bottom" constant="4" id="9AR-BC-5AK"/>
+                                                            <constraint firstItem="ioy-mT-3KC" firstAttribute="leading" secondItem="1NY-yG-Ylh" secondAttribute="leading" constant="16" id="SOi-rz-pIA"/>
+                                                            <constraint firstItem="ioy-mT-3KC" firstAttribute="top" secondItem="1NY-yG-Ylh" secondAttribute="top" constant="16" id="gTa-5w-x3D"/>
+                                                            <constraint firstAttribute="trailing" secondItem="ioy-mT-3KC" secondAttribute="trailing" constant="16" id="xra-Ye-oLt"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zvu-sx-uvg">
+                                                        <rect key="frame" x="0.0" y="36" width="375" height="128"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rRw-nX-MVb">
+                                                        <rect key="frame" x="0.0" y="164" width="375" height="36"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Описание" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vCh-Vw-Jq6">
+                                                                <rect key="frame" x="16" y="16" width="343" height="16"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="16" id="Wje-ta-DEX"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstItem="vCh-Vw-Jq6" firstAttribute="top" secondItem="rRw-nX-MVb" secondAttribute="top" constant="16" id="Gca-bU-OOI"/>
+                                                            <constraint firstItem="vCh-Vw-Jq6" firstAttribute="leading" secondItem="rRw-nX-MVb" secondAttribute="leading" constant="16" id="LJn-cQ-hwH"/>
+                                                            <constraint firstAttribute="bottom" secondItem="vCh-Vw-Jq6" secondAttribute="bottom" constant="4" id="YEx-8y-gwx"/>
+                                                            <constraint firstAttribute="height" constant="36" id="rAC-E1-JpR"/>
+                                                            <constraint firstAttribute="trailing" secondItem="vCh-Vw-Jq6" secondAttribute="trailing" constant="16" id="srK-gY-Bd0"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zHi-Pa-pzx">
+                                                        <rect key="frame" x="0.0" y="200" width="375" height="68"/>
+                                                        <subviews>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ile-UC-4K9" customClass="AppTextField" customModule="Swappy" customModuleProvider="target">
+                                                                <rect key="frame" x="16" y="0.0" width="343" height="60"/>
+                                                                <nil key="textColor"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Название"/>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="selectedTitle" value="Название"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </textField>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstItem="ile-UC-4K9" firstAttribute="top" secondItem="zHi-Pa-pzx" secondAttribute="top" id="ANG-KU-YrB"/>
+                                                            <constraint firstAttribute="bottom" secondItem="ile-UC-4K9" secondAttribute="bottom" constant="8" id="DhO-10-Rz3"/>
+                                                            <constraint firstAttribute="height" constant="68" id="M00-L7-jQc"/>
+                                                            <constraint firstAttribute="trailing" secondItem="ile-UC-4K9" secondAttribute="trailing" constant="16" id="SJZ-FX-gpy"/>
+                                                            <constraint firstItem="ile-UC-4K9" firstAttribute="leading" secondItem="zHi-Pa-pzx" secondAttribute="leading" constant="16" id="c1Z-yb-Huz"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wKZ-bi-S9u">
+                                                        <rect key="frame" x="0.0" y="268" width="375" height="68"/>
+                                                        <subviews>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dTZ-Cr-gUc" customClass="AppTextField" customModule="Swappy" customModuleProvider="target">
+                                                                <rect key="frame" x="16" y="0.0" width="343" height="60"/>
+                                                                <nil key="textColor"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Описание"/>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="selectedTitle" value="Описание"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </textField>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstItem="dTZ-Cr-gUc" firstAttribute="top" secondItem="wKZ-bi-S9u" secondAttribute="top" id="200-lg-3WD"/>
+                                                            <constraint firstAttribute="bottom" secondItem="dTZ-Cr-gUc" secondAttribute="bottom" constant="8" id="AXK-g6-w1r"/>
+                                                            <constraint firstAttribute="trailing" secondItem="dTZ-Cr-gUc" secondAttribute="trailing" constant="16" id="T1x-xa-tm7"/>
+                                                            <constraint firstAttribute="height" constant="68" id="Wzq-sR-dwu"/>
+                                                            <constraint firstItem="dTZ-Cr-gUc" firstAttribute="leading" secondItem="wKZ-bi-S9u" secondAttribute="leading" constant="16" id="jit-bT-3B0"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dd2-eb-Vhw">
+                                                        <rect key="frame" x="0.0" y="336" width="375" height="68"/>
+                                                        <subviews>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QFE-Gu-eI8" customClass="AppTextField" customModule="Swappy" customModuleProvider="target">
+                                                                <rect key="frame" x="16" y="0.0" width="343" height="60"/>
+                                                                <nil key="textColor"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Размер"/>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="selectedTitle" value="Размер"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </textField>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="68" id="MnI-tH-5Yg"/>
+                                                            <constraint firstAttribute="bottom" secondItem="QFE-Gu-eI8" secondAttribute="bottom" constant="8" id="cBd-Ur-IYc"/>
+                                                            <constraint firstItem="QFE-Gu-eI8" firstAttribute="leading" secondItem="Dd2-eb-Vhw" secondAttribute="leading" constant="16" id="cuZ-Do-GUo"/>
+                                                            <constraint firstItem="QFE-Gu-eI8" firstAttribute="top" secondItem="Dd2-eb-Vhw" secondAttribute="top" id="pjY-3Z-LoG"/>
+                                                            <constraint firstAttribute="trailing" secondItem="QFE-Gu-eI8" secondAttribute="trailing" constant="16" id="pyc-3y-dpf"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gcA-iz-CVg">
+                                                        <rect key="frame" x="0.0" y="404" width="375" height="68"/>
+                                                        <subviews>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1AG-IK-3ib" customClass="AppTextField" customModule="Swappy" customModuleProvider="target">
+                                                                <rect key="frame" x="16" y="0.0" width="343" height="60"/>
+                                                                <nil key="textColor"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Цена"/>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="selectedTitle" value="Цена"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </textField>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="1AG-IK-3ib" secondAttribute="bottom" constant="8" id="24s-SW-VkD"/>
+                                                            <constraint firstAttribute="trailing" secondItem="1AG-IK-3ib" secondAttribute="trailing" constant="16" id="411-Jt-afq"/>
+                                                            <constraint firstItem="1AG-IK-3ib" firstAttribute="top" secondItem="gcA-iz-CVg" secondAttribute="top" id="6uh-6o-adD"/>
+                                                            <constraint firstAttribute="height" constant="68" id="kzV-mF-zcV"/>
+                                                            <constraint firstItem="1AG-IK-3ib" firstAttribute="leading" secondItem="gcA-iz-CVg" secondAttribute="leading" constant="16" id="o48-Lv-wUe"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7by-8B-B5y">
+                                                        <rect key="frame" x="0.0" y="472" width="375" height="68"/>
+                                                        <subviews>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Rd-ko-Gd2" customClass="AppTextField" customModule="Swappy" customModuleProvider="target">
+                                                                <rect key="frame" x="16" y="0.0" width="343" height="60"/>
+                                                                <nil key="textColor"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Контакт для покупателей"/>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="selectedTitle" value="Контакт для покупателей"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </textField>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="0Rd-ko-Gd2" secondAttribute="bottom" constant="8" id="G4v-Q8-ysI"/>
+                                                            <constraint firstItem="0Rd-ko-Gd2" firstAttribute="top" secondItem="7by-8B-B5y" secondAttribute="top" id="bYa-DK-Um1"/>
+                                                            <constraint firstItem="0Rd-ko-Gd2" firstAttribute="leading" secondItem="7by-8B-B5y" secondAttribute="leading" constant="16" id="cKe-Z8-oC9"/>
+                                                            <constraint firstAttribute="height" constant="68" id="j2Q-Rq-7pq"/>
+                                                            <constraint firstAttribute="trailing" secondItem="0Rd-ko-Gd2" secondAttribute="trailing" constant="16" id="saJ-ya-edB"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IZc-fE-U4E">
+                                                        <rect key="frame" x="0.0" y="540" width="375" height="68"/>
+                                                        <subviews>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ELk-ux-IJT" customClass="AppTextField" customModule="Swappy" customModuleProvider="target">
+                                                                <rect key="frame" x="16" y="0.0" width="343" height="60"/>
+                                                                <nil key="textColor"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Категория"/>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="selectedTitle" value="Категория"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </textField>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstItem="ELk-ux-IJT" firstAttribute="leading" secondItem="IZc-fE-U4E" secondAttribute="leading" constant="16" id="AAt-lE-ANS"/>
+                                                            <constraint firstAttribute="height" constant="68" id="IJa-ul-4pP"/>
+                                                            <constraint firstAttribute="bottom" secondItem="ELk-ux-IJT" secondAttribute="bottom" constant="8" id="KSy-9x-jcs"/>
+                                                            <constraint firstItem="ELk-ux-IJT" firstAttribute="top" secondItem="IZc-fE-U4E" secondAttribute="top" id="nCo-sD-6d2"/>
+                                                            <constraint firstAttribute="trailing" secondItem="ELk-ux-IJT" secondAttribute="trailing" constant="16" id="rGK-ZB-0H1"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="pA9-zs-a5h" firstAttribute="leading" secondItem="UN2-A9-CJr" secondAttribute="leading" id="8nU-OM-PKG"/>
+                                            <constraint firstItem="pA9-zs-a5h" firstAttribute="top" secondItem="UN2-A9-CJr" secondAttribute="top" id="L62-ua-elW"/>
+                                            <constraint firstAttribute="bottom" secondItem="pA9-zs-a5h" secondAttribute="bottom" id="PKk-HF-Ef1"/>
+                                            <constraint firstAttribute="trailing" secondItem="pA9-zs-a5h" secondAttribute="trailing" id="wdM-CQ-IQa"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="UN2-A9-CJr" firstAttribute="top" secondItem="vLS-8Q-co5" secondAttribute="top" id="6xG-cq-ORI"/>
+                                    <constraint firstItem="UN2-A9-CJr" firstAttribute="leading" secondItem="vLS-8Q-co5" secondAttribute="leading" id="D47-l3-3FS"/>
+                                    <constraint firstItem="UN2-A9-CJr" firstAttribute="width" secondItem="vLS-8Q-co5" secondAttribute="width" id="DHi-CB-0b4"/>
+                                    <constraint firstAttribute="bottom" secondItem="UN2-A9-CJr" secondAttribute="bottom" id="IEc-0t-Fpf"/>
+                                    <constraint firstAttribute="trailing" secondItem="UN2-A9-CJr" secondAttribute="trailing" id="eTO-sT-HCy"/>
+                                    <constraint firstItem="UN2-A9-CJr" firstAttribute="height" secondItem="vLS-8Q-co5" secondAttribute="height" priority="250" id="yNh-Hi-Gm8"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vLS-8Q-co5" firstAttribute="leading" secondItem="Xgb-kM-rpU" secondAttribute="leading" id="AQQ-3L-HYF"/>
+                            <constraint firstItem="vLS-8Q-co5" firstAttribute="top" secondItem="Xgb-kM-rpU" secondAttribute="top" id="ASS-LY-Cje"/>
+                            <constraint firstItem="Xgb-kM-rpU" firstAttribute="trailing" secondItem="vLS-8Q-co5" secondAttribute="trailing" id="cg2-qd-PT3"/>
+                            <constraint firstItem="Xgb-kM-rpU" firstAttribute="bottom" secondItem="vLS-8Q-co5" secondAttribute="bottom" id="fWv-H5-4so"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Xgb-kM-rpU"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K6O-yh-IUq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="50" y="94"/>
+        </scene>
+    </scenes>
+</document>

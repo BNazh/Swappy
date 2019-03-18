@@ -24,6 +24,8 @@ target 'Swappy' do
   # Top-navigation "ViewPager"
   pod 'XLPagerTabStrip', '~> 8.1'
   
+  # Floating UITextField
+  pod 'SkyFloatingLabelTextField', '~> 3.0'
   
   target 'SwappyTests' do
     inherit! :search_paths

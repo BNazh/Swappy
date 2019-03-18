@@ -32,7 +32,7 @@ extension UIFont {
         }
     }
     
-    static func appFont(ofSize size: CGFloat, style: UIFont.Weight) -> UIFont {
+    static func appFont(ofSize size: CGFloat, style: UIFont.Weight = .regular) -> UIFont {
         return UIFont.systemFont(ofSize: size, weight: style)
     }
 }

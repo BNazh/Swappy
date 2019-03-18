@@ -60,6 +60,9 @@
                                             <constraint firstAttribute="height" constant="52" id="DWU-W0-tvJ"/>
                                         </constraints>
                                         <state key="normal" title="Телефон"/>
+                                        <connections>
+                                            <action selector="phoneButtonTapped:" destination="XQ5-a5-nDw" eventType="touchUpInside" id="rUU-Y3-4L4"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eSb-8K-ccO" customClass="VKButton" customModule="Swappy" customModuleProvider="target">
                                         <rect key="frame" x="16" y="164" width="343" height="52"/>

@@ -12,15 +12,12 @@ protocol ProductDetailView: class {
     func showProduct(viewModel: ProductViewModel)
 }
 
-class ProductDetailViewController: UIViewController, ShadingDelegate {
+class ProductDetailViewController: UIViewController {
 
     @IBOutlet weak var imageSlider: ImageSlider!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-    
-    // ShadingDelegate
-    @IBOutlet weak var shadingView: UIView?
     
     var presenter: ProductDetailPresenter!
 

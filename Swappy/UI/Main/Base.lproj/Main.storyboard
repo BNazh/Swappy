@@ -70,18 +70,22 @@
         <!--Navigation Controller-->
         <scene sceneID="OXV-WK-6tF">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Eef-3c-9Tu" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="hFH-5y-9hh" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="e0a-QL-fJw">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="ahH-yP-wIE" kind="relationship" relationship="rootViewController" id="oER-ee-cYk"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eef-3c-9Tu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1233" y="3"/>
         </scene>
     </scenes>
+    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>
