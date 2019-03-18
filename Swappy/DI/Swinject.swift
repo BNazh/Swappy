@@ -21,5 +21,7 @@ extension SwinjectStoryboard {
             SellerInfoAssembly(),
             MyProductsAssembly()
         ])
+        
+        Container.loggingFunction = nil
     }
 }

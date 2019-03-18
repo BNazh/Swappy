@@ -6,4 +6,19 @@
 //  Copyright © 2019 SwappyTeam. All rights reserved.
 //
 
-import Foundation
+enum InitState {
+    case
+    add,
+    edit(product: Product)
+}
+
+protocol EditProductPresenter: class {
+    
+    func initialize()
+}
+
+final class EditProductPresenterImp {
+    
+}
+
+

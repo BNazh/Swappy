@@ -17,5 +17,9 @@ final class EditProductViewController: UIViewController {
     
     // MARK: - Properties
     
-    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.title = "Разместить товар"
+    }
 }

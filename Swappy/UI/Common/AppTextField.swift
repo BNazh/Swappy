@@ -12,6 +12,8 @@ final class AppTextField: SkyFloatingLabelTextField {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        clearButtonMode = .always
     
         // No formatting
         titleFormatter = { return $0 }
@@ -26,5 +28,29 @@ final class AppTextField: SkyFloatingLabelTextField {
         selectedTitleColor = UIColor(r: 121, g: 121, b: 121)
         textColor = UIColor(r: 51, g: 51, b: 51)
         tintColor = .black
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        clearButton?.imageView?.image = UIImage(named: "close")
+    
+//        let clearImage = clearButton?.image(for: .highlighted)
+//        let templateImage = clearImage?.withRenderingMode(.alwaysTemplate)
+//        clearButton?.setImage(templateImage, for: .normal)
+//        clearButton?.setImage(templateImage, for: .highlighted)
+//
+//        clearButton?.tintColor = .black
+    }
+    
+    private var clearButton: UIButton? {
+        
+        for subView in subviews {
+            if let clearButton = subView as? UIButton {
+                return clearButton
+            }
+        }
+        
+        return nil
     }
 }
