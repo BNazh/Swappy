@@ -34,12 +34,12 @@ extension MyProductsRouterImp: MyProductsRouter {
     }
     
     func openLoginCard() {
-//        let loginCardVC: LoginCardViewController = UIStoryboard.createViewController()
+        let loginCardVC: LoginCardViewController = UIStoryboard.createViewController()
+
+        viewController.present(loginCardVC, animated: true, completion: nil)
+        
+//        let editProductVC: EditProductViewController = UIStoryboard.createViewController()
 //
-//        viewController.present(loginCardVC, animated: true, completion: nil)
-        
-        let editProductVC: EditProductViewController = UIStoryboard.createViewController()
-        
-        viewController.navigationController?.pushViewController(editProductVC, animated: true)
+//        viewController.navigationController?.pushViewController(editProductVC, animated: true)
     }
 }

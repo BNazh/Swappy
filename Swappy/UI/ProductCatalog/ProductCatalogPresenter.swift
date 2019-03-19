@@ -14,12 +14,16 @@ protocol ProductCatalogPresenter {
 
 final class ProductCatalogPresenterImp {
     
-    unowned let view: ProductCatalogView
-    let productWorker: ProductCatalogWorker
-    let router: ProductCatalogRouter
+    // MARK: - Properties
+    
+    private unowned let view: ProductCatalogView
+    private let productWorker: ProductCatalogWorker
+    private let router: ProductCatalogRouter
     
     private var products: [Product] = []
     private var isLoading = false
+    
+    // MARK: - Init
     
     init(view: ProductCatalogView, productWorker: ProductCatalogWorker, router: ProductCatalogRouter) {
         self.view = view
@@ -27,6 +31,8 @@ final class ProductCatalogPresenterImp {
         self.router = router
     }
 }
+
+// MARK: - Presenter
 
 extension ProductCatalogPresenterImp: ProductCatalogPresenter {
     
@@ -59,6 +65,8 @@ extension ProductCatalogPresenterImp: ProductCatalogPresenter {
         router.openProductDetail(product: selectedProduct)
     }
 }
+
+// MARK: - Private
 
 private extension ProductCatalogPresenterImp {
     

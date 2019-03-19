@@ -33,14 +33,8 @@ final class AppTextField: SkyFloatingLabelTextField {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        clearButton?.imageView?.image = UIImage(named: "close")
-    
-//        let clearImage = clearButton?.image(for: .highlighted)
-//        let templateImage = clearImage?.withRenderingMode(.alwaysTemplate)
-//        clearButton?.setImage(templateImage, for: .normal)
-//        clearButton?.setImage(templateImage, for: .highlighted)
-//
-//        clearButton?.tintColor = .black
+        let closeImage = UIImage(named: "close")
+        clearButton?.setImage(closeImage, for: .normal)
     }
     
     private var clearButton: UIButton? {

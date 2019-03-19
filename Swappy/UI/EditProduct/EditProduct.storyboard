@@ -316,6 +316,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Xgb-kM-rpU"/>
                     </view>
+                    <connections>
+                        <outlet property="categoryTextField" destination="ELk-ux-IJT" id="LgG-Z5-oM9"/>
+                        <outlet property="contactInfoTextField" destination="0Rd-ko-Gd2" id="pIR-wh-bpP"/>
+                        <outlet property="descriptionTextField" destination="dTZ-Cr-gUc" id="5CY-of-O77"/>
+                        <outlet property="nameTextField" destination="ile-UC-4K9" id="egG-HN-XaG"/>
+                        <outlet property="priceTextField" destination="1AG-IK-3ib" id="tzT-hV-9Ns"/>
+                        <outlet property="sizeTextField" destination="QFE-Gu-eI8" id="Zlw-tU-RKS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K6O-yh-IUq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

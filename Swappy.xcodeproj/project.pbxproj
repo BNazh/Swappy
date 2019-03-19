@@ -12,6 +12,8 @@
 		C2E71353A7D7CE8F7C2ED007 /* Pods_Swappy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4C981EDD82058064D968414 /* Pods_Swappy.framework */; };
 		E10850C2223EF78F00941EA5 /* PhoneLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10850C1223EF78F00941EA5 /* PhoneLoginViewController.swift */; };
 		E10850C4223F276D00941EA5 /* EditProduct.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E10850C3223F276D00941EA5 /* EditProduct.storyboard */; };
+		E11174742240AD8F00BD19B4 /* EditProductAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11174732240AD8F00BD19B4 /* EditProductAssembly.swift */; };
+		E11174782240B2F100BD19B4 /* EditProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11174772240B2F100BD19B4 /* EditProductViewModel.swift */; };
 		E164C3932231B5DF00D1AB13 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E164C3922231B5DF00D1AB13 /* ProductDetailViewController.swift */; };
 		E164C3952231B5FE00D1AB13 /* ProductDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E164C3942231B5FE00D1AB13 /* ProductDetail.storyboard */; };
 		E164C39722326BAD00D1AB13 /* Collection+SafeSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = E164C39622326BAD00D1AB13 /* Collection+SafeSubscription.swift */; };
@@ -114,6 +116,8 @@
 		D325178C30F5960E093569F4 /* Pods-Swappy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swappy.debug.xcconfig"; path = "Target Support Files/Pods-Swappy/Pods-Swappy.debug.xcconfig"; sourceTree = "<group>"; };
 		E10850C1223EF78F00941EA5 /* PhoneLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneLoginViewController.swift; sourceTree = "<group>"; };
 		E10850C3223F276D00941EA5 /* EditProduct.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditProduct.storyboard; sourceTree = "<group>"; };
+		E11174732240AD8F00BD19B4 /* EditProductAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProductAssembly.swift; sourceTree = "<group>"; };
+		E11174772240B2F100BD19B4 /* EditProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProductViewModel.swift; sourceTree = "<group>"; };
 		E164C3922231B5DF00D1AB13 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		E164C3942231B5FE00D1AB13 /* ProductDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProductDetail.storyboard; sourceTree = "<group>"; };
 		E164C39622326BAD00D1AB13 /* Collection+SafeSubscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+SafeSubscription.swift"; sourceTree = "<group>"; };
@@ -245,6 +249,26 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		E11174712240AD4E00BD19B4 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				E1BC5AC022310C0E001FD1D6 /* ProductCatalogAssembly.swift */,
+				E1FC309F2238504100DF1325 /* ProductDetailAssembly.swift */,
+				E1FC30AC2239722300DF1325 /* SellerInfoAssembly.swift */,
+				E1FF3EB4223EDC3900443DED /* MyProductsAssembly.swift */,
+				E11174732240AD8F00BD19B4 /* EditProductAssembly.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		E11174722240AD5B00BD19B4 /* Reusable */ = {
+			isa = PBXGroup;
+			children = (
+				E1BC5AC222310C2E001FD1D6 /* WorkersAssembly.swift */,
+			);
+			path = Reusable;
+			sourceTree = "<group>";
+		};
 		E164C3902231B5B200D1AB13 /* ProductCatalog */ = {
 			isa = PBXGroup;
 			children = (
@@ -310,6 +334,7 @@
 				E19F7E092231068300BAFC7A /* UI */,
 				E19F7E052231064D00BAFC7A /* BusinessLogic */,
 				E1BC5AC422310CAA001FD1D6 /* Entities */,
+				E1BC5AD72231243F001FD1D6 /* ViewModels */,
 				E1BC5ADF22312D50001FD1D6 /* Extensions */,
 				E19F7E1422310B3200BAFC7A /* DI */,
 				E1BC5AE822313350001FD1D6 /* Resources */,
@@ -385,12 +410,9 @@
 		E19F7E1422310B3200BAFC7A /* DI */ = {
 			isa = PBXGroup;
 			children = (
+				E11174722240AD5B00BD19B4 /* Reusable */,
+				E11174712240AD4E00BD19B4 /* Scenes */,
 				E19F7E1522310B3D00BAFC7A /* Swinject.swift */,
-				E1BC5AC022310C0E001FD1D6 /* ProductCatalogAssembly.swift */,
-				E1FC309F2238504100DF1325 /* ProductDetailAssembly.swift */,
-				E1FC30AC2239722300DF1325 /* SellerInfoAssembly.swift */,
-				E1FF3EB4223EDC3900443DED /* MyProductsAssembly.swift */,
-				E1BC5AC222310C2E001FD1D6 /* WorkersAssembly.swift */,
 			);
 			path = DI;
 			sourceTree = "<group>";
@@ -398,7 +420,6 @@
 		E1BC5AC422310CAA001FD1D6 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				E1BC5AD72231243F001FD1D6 /* ViewModels */,
 				E1BC5AC522310CB7001FD1D6 /* Product.swift */,
 				E1BC5AC722310E88001FD1D6 /* Price.swift */,
 				E1BC5AC922310F1F001FD1D6 /* Seller.swift */,
@@ -413,6 +434,7 @@
 				E1BC5AD822312456001FD1D6 /* ProductCellViewModel.swift */,
 				E1B4B1DC2235BE2200520082 /* ProductViewModel.swift */,
 				E1FC30AA22396F7400DF1325 /* SellerInfoViewModel.swift */,
+				E11174772240B2F100BD19B4 /* EditProductViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -838,6 +860,7 @@
 				E1FF3EC5223EEA8E00443DED /* EditProductViewController.swift in Sources */,
 				E1FF3EB5223EDC3900443DED /* MyProductsAssembly.swift in Sources */,
 				E19F7E1022310A5200BAFC7A /* ProductsCatalogWorker.swift in Sources */,
+				E11174742240AD8F00BD19B4 /* EditProductAssembly.swift in Sources */,
 				E1FF3E91223A338800443DED /* LoginCardViewController.swift in Sources */,
 				E1FC30AF2239738200DF1325 /* ProductDetailRouter.swift in Sources */,
 				E10850C2223EF78F00941EA5 /* PhoneLoginViewController.swift in Sources */,
@@ -848,6 +871,7 @@
 				E1FC30A02238504100DF1325 /* ProductDetailAssembly.swift in Sources */,
 				E164C3A22235A92300D1AB13 /* ImageSlider.swift in Sources */,
 				E1BC5ACC22310F9D001FD1D6 /* Sex.swift in Sources */,
+				E11174782240B2F100BD19B4 /* EditProductViewModel.swift in Sources */,
 				E1BC5ACE22311168001FD1D6 /* Result.swift in Sources */,
 				E1BC5AF222318370001FD1D6 /* UIView+ReusableIdentifiers.swift in Sources */,
 				E1BC5AC122310C0E001FD1D6 /* ProductCatalogAssembly.swift in Sources */,
