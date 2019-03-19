@@ -6,4 +6,7 @@
 //  Copyright © 2019 SwappyTeam. All rights reserved.
 //
 
-import Foundation
+protocol AuthService: class {
+    
+    func requestSmsVerificationCode(for phone: String, closure: )
+}

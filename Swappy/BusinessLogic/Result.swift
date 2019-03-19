@@ -9,6 +9,7 @@
 struct DataResponse<T: Decodable>: Decodable {
     let data: T
     let status: Int
+    let message: String
 }
 
 typealias ResultCallback<T> = (Result<T>) -> Void

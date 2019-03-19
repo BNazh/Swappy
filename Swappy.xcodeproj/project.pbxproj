@@ -14,6 +14,9 @@
 		E10850C4223F276D00941EA5 /* EditProduct.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E10850C3223F276D00941EA5 /* EditProduct.storyboard */; };
 		E11174742240AD8F00BD19B4 /* EditProductAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11174732240AD8F00BD19B4 /* EditProductAssembly.swift */; };
 		E11174782240B2F100BD19B4 /* EditProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11174772240B2F100BD19B4 /* EditProductViewModel.swift */; };
+		E111747A224183A400BD19B4 /* AuthTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1117479224183A400BD19B4 /* AuthTarget.swift */; };
+		E111747E2241860400BD19B4 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E111747D2241860400BD19B4 /* AuthService.swift */; };
+		E11174802241860C00BD19B4 /* AuthServiceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E111747F2241860C00BD19B4 /* AuthServiceImp.swift */; };
 		E164C3932231B5DF00D1AB13 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E164C3922231B5DF00D1AB13 /* ProductDetailViewController.swift */; };
 		E164C3952231B5FE00D1AB13 /* ProductDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E164C3942231B5FE00D1AB13 /* ProductDetail.storyboard */; };
 		E164C39722326BAD00D1AB13 /* Collection+SafeSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = E164C39622326BAD00D1AB13 /* Collection+SafeSubscription.swift */; };
@@ -118,6 +121,9 @@
 		E10850C3223F276D00941EA5 /* EditProduct.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditProduct.storyboard; sourceTree = "<group>"; };
 		E11174732240AD8F00BD19B4 /* EditProductAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProductAssembly.swift; sourceTree = "<group>"; };
 		E11174772240B2F100BD19B4 /* EditProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProductViewModel.swift; sourceTree = "<group>"; };
+		E1117479224183A400BD19B4 /* AuthTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTarget.swift; sourceTree = "<group>"; };
+		E111747D2241860400BD19B4 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		E111747F2241860C00BD19B4 /* AuthServiceImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServiceImp.swift; sourceTree = "<group>"; };
 		E164C3922231B5DF00D1AB13 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		E164C3942231B5FE00D1AB13 /* ProductDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProductDetail.storyboard; sourceTree = "<group>"; };
 		E164C39622326BAD00D1AB13 /* Collection+SafeSubscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+SafeSubscription.swift"; sourceTree = "<group>"; };
@@ -269,6 +275,24 @@
 			path = Reusable;
 			sourceTree = "<group>";
 		};
+		E111747B224185F100BD19B4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E19F7E0F22310A5200BAFC7A /* ProductsCatalogWorker.swift */,
+				E19F7E1122310B0200BAFC7A /* ProductsCatalogWorkerImp.swift */,
+			);
+			path = Products;
+			sourceTree = "<group>";
+		};
+		E111747C224185FA00BD19B4 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				E111747D2241860400BD19B4 /* AuthService.swift */,
+				E111747F2241860C00BD19B4 /* AuthServiceImp.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
 		E164C3902231B5B200D1AB13 /* ProductCatalog */ = {
 			isa = PBXGroup;
 			children = (
@@ -378,6 +402,7 @@
 			isa = PBXGroup;
 			children = (
 				E19F7E0C2231078F00BAFC7A /* SwappyService.swift */,
+				E1117479224183A400BD19B4 /* AuthTarget.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -401,8 +426,8 @@
 		E19F7E0E22310A3F00BAFC7A /* Workers */ = {
 			isa = PBXGroup;
 			children = (
-				E19F7E0F22310A5200BAFC7A /* ProductsCatalogWorker.swift */,
-				E19F7E1122310B0200BAFC7A /* ProductsCatalogWorkerImp.swift */,
+				E111747C224185FA00BD19B4 /* Auth */,
+				E111747B224185F100BD19B4 /* Products */,
 			);
 			path = Workers;
 			sourceTree = "<group>";
@@ -853,6 +878,7 @@
 				E19F7E1622310B3D00BAFC7A /* Swinject.swift in Sources */,
 				E1FC309E22378CC100DF1325 /* UIViewController+Storyboard.swift in Sources */,
 				E1BC5AD922312456001FD1D6 /* ProductCellViewModel.swift in Sources */,
+				E111747A224183A400BD19B4 /* AuthTarget.swift in Sources */,
 				E1BC5AE522312F36001FD1D6 /* Moya+CustomDecodableRequest.swift in Sources */,
 				E1FC30AD2239722300DF1325 /* SellerInfoAssembly.swift in Sources */,
 				E19F7E0D2231078F00BAFC7A /* SwappyService.swift in Sources */,
@@ -861,6 +887,7 @@
 				E1FF3EB5223EDC3900443DED /* MyProductsAssembly.swift in Sources */,
 				E19F7E1022310A5200BAFC7A /* ProductsCatalogWorker.swift in Sources */,
 				E11174742240AD8F00BD19B4 /* EditProductAssembly.swift in Sources */,
+				E111747E2241860400BD19B4 /* AuthService.swift in Sources */,
 				E1FF3E91223A338800443DED /* LoginCardViewController.swift in Sources */,
 				E1FC30AF2239738200DF1325 /* ProductDetailRouter.swift in Sources */,
 				E10850C2223EF78F00941EA5 /* PhoneLoginViewController.swift in Sources */,
@@ -880,6 +907,7 @@
 				E1FF3E95223A33CD00443DED /* LoginCardRouter.swift in Sources */,
 				E1BC5AC322310C2E001FD1D6 /* WorkersAssembly.swift in Sources */,
 				E164C39C223591AF00D1AB13 /* MainButton.swift in Sources */,
+				E11174802241860C00BD19B4 /* AuthServiceImp.swift in Sources */,
 				E1BC5AEF22318340001FD1D6 /* UICollectionView+RegisterCells.swift in Sources */,
 				E1FF3EA2223E77B800443DED /* ProductsDDM.swift in Sources */,
 				E1BC5ACA22310F1F001FD1D6 /* Seller.swift in Sources */,
