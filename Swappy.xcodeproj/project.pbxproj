@@ -17,6 +17,16 @@
 		E111747A224183A400BD19B4 /* AuthTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1117479224183A400BD19B4 /* AuthTarget.swift */; };
 		E111747E2241860400BD19B4 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E111747D2241860400BD19B4 /* AuthService.swift */; };
 		E11174802241860C00BD19B4 /* AuthServiceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E111747F2241860C00BD19B4 /* AuthServiceImp.swift */; };
+		E11174832242B38300BD19B4 /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11174822242B38300BD19B4 /* KeychainStore.swift */; };
+		E11174852242B49200BD19B4 /* PhoneLoginAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11174842242B49200BD19B4 /* PhoneLoginAssembly.swift */; };
+		E11174872242B4D300BD19B4 /* PhoneLoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11174862242B4D300BD19B4 /* PhoneLoginPresenter.swift */; };
+		E11174892242B5B800BD19B4 /* PhoneLoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11174882242B5B800BD19B4 /* PhoneLoginRouter.swift */; };
+		E111748B2242DBD700BD19B4 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E111748A2242DBD700BD19B4 /* LoadingView.swift */; };
+		E111748D2242DBEA00BD19B4 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E111748C2242DBEA00BD19B4 /* ErrorView.swift */; };
+		E111749022436FBF00BD19B4 /* CodeConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E111748F22436FBF00BD19B4 /* CodeConfirmationViewController.swift */; };
+		E11174922243700500BD19B4 /* CodeConfirmationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11174912243700500BD19B4 /* CodeConfirmationPresenter.swift */; };
+		E1117494224370B800BD19B4 /* CodeConfirmationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1117493224370B800BD19B4 /* CodeConfirmationAssembly.swift */; };
+		E11174962243719400BD19B4 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11174952243719400BD19B4 /* Core.swift */; };
 		E164C3932231B5DF00D1AB13 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E164C3922231B5DF00D1AB13 /* ProductDetailViewController.swift */; };
 		E164C3952231B5FE00D1AB13 /* ProductDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E164C3942231B5FE00D1AB13 /* ProductDetail.storyboard */; };
 		E164C39722326BAD00D1AB13 /* Collection+SafeSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = E164C39622326BAD00D1AB13 /* Collection+SafeSubscription.swift */; };
@@ -31,9 +41,9 @@
 		E19F7DE22231063A00BAFC7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E19F7DE02231063A00BAFC7A /* LaunchScreen.storyboard */; };
 		E19F7DED2231063B00BAFC7A /* SwappyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19F7DEC2231063B00BAFC7A /* SwappyTests.swift */; };
 		E19F7DF82231063B00BAFC7A /* SwappyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19F7DF72231063B00BAFC7A /* SwappyUITests.swift */; };
-		E19F7E0D2231078F00BAFC7A /* SwappyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19F7E0C2231078F00BAFC7A /* SwappyService.swift */; };
-		E19F7E1022310A5200BAFC7A /* ProductsCatalogWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19F7E0F22310A5200BAFC7A /* ProductsCatalogWorker.swift */; };
-		E19F7E1222310B0200BAFC7A /* ProductsCatalogWorkerImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19F7E1122310B0200BAFC7A /* ProductsCatalogWorkerImp.swift */; };
+		E19F7E0D2231078F00BAFC7A /* ProductsTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19F7E0C2231078F00BAFC7A /* ProductsTarget.swift */; };
+		E19F7E1022310A5200BAFC7A /* ProductsCatalogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19F7E0F22310A5200BAFC7A /* ProductsCatalogService.swift */; };
+		E19F7E1222310B0200BAFC7A /* ProductsCatalogServiceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19F7E1122310B0200BAFC7A /* ProductsCatalogServiceImp.swift */; };
 		E19F7E1622310B3D00BAFC7A /* Swinject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19F7E1522310B3D00BAFC7A /* Swinject.swift */; };
 		E1B4B1DB2235BDE400520082 /* ProductDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B4B1DA2235BDE400520082 /* ProductDetailPresenter.swift */; };
 		E1B4B1DD2235BE2200520082 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B4B1DC2235BE2200520082 /* ProductViewModel.swift */; };
@@ -124,6 +134,16 @@
 		E1117479224183A400BD19B4 /* AuthTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTarget.swift; sourceTree = "<group>"; };
 		E111747D2241860400BD19B4 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		E111747F2241860C00BD19B4 /* AuthServiceImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServiceImp.swift; sourceTree = "<group>"; };
+		E11174822242B38300BD19B4 /* KeychainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStore.swift; sourceTree = "<group>"; };
+		E11174842242B49200BD19B4 /* PhoneLoginAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneLoginAssembly.swift; sourceTree = "<group>"; };
+		E11174862242B4D300BD19B4 /* PhoneLoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneLoginPresenter.swift; sourceTree = "<group>"; };
+		E11174882242B5B800BD19B4 /* PhoneLoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneLoginRouter.swift; sourceTree = "<group>"; };
+		E111748A2242DBD700BD19B4 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		E111748C2242DBEA00BD19B4 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		E111748F22436FBF00BD19B4 /* CodeConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeConfirmationViewController.swift; sourceTree = "<group>"; };
+		E11174912243700500BD19B4 /* CodeConfirmationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeConfirmationPresenter.swift; sourceTree = "<group>"; };
+		E1117493224370B800BD19B4 /* CodeConfirmationAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeConfirmationAssembly.swift; sourceTree = "<group>"; };
+		E11174952243719400BD19B4 /* Core.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core.swift; sourceTree = "<group>"; };
 		E164C3922231B5DF00D1AB13 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		E164C3942231B5FE00D1AB13 /* ProductDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProductDetail.storyboard; sourceTree = "<group>"; };
 		E164C39622326BAD00D1AB13 /* Collection+SafeSubscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+SafeSubscription.swift"; sourceTree = "<group>"; };
@@ -144,9 +164,9 @@
 		E19F7DF32231063B00BAFC7A /* SwappyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwappyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E19F7DF72231063B00BAFC7A /* SwappyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwappyUITests.swift; sourceTree = "<group>"; };
 		E19F7DF92231063B00BAFC7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E19F7E0C2231078F00BAFC7A /* SwappyService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwappyService.swift; sourceTree = "<group>"; };
-		E19F7E0F22310A5200BAFC7A /* ProductsCatalogWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsCatalogWorker.swift; sourceTree = "<group>"; };
-		E19F7E1122310B0200BAFC7A /* ProductsCatalogWorkerImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsCatalogWorkerImp.swift; sourceTree = "<group>"; };
+		E19F7E0C2231078F00BAFC7A /* ProductsTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsTarget.swift; sourceTree = "<group>"; };
+		E19F7E0F22310A5200BAFC7A /* ProductsCatalogService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsCatalogService.swift; sourceTree = "<group>"; };
+		E19F7E1122310B0200BAFC7A /* ProductsCatalogServiceImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsCatalogServiceImp.swift; sourceTree = "<group>"; };
 		E19F7E1522310B3D00BAFC7A /* Swinject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swinject.swift; sourceTree = "<group>"; };
 		E1B4B1DA2235BDE400520082 /* ProductDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailPresenter.swift; sourceTree = "<group>"; };
 		E1B4B1DC2235BE2200520082 /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
@@ -263,6 +283,8 @@
 				E1FC30AC2239722300DF1325 /* SellerInfoAssembly.swift */,
 				E1FF3EB4223EDC3900443DED /* MyProductsAssembly.swift */,
 				E11174732240AD8F00BD19B4 /* EditProductAssembly.swift */,
+				E11174842242B49200BD19B4 /* PhoneLoginAssembly.swift */,
+				E1117493224370B800BD19B4 /* CodeConfirmationAssembly.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -278,8 +300,8 @@
 		E111747B224185F100BD19B4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E19F7E0F22310A5200BAFC7A /* ProductsCatalogWorker.swift */,
-				E19F7E1122310B0200BAFC7A /* ProductsCatalogWorkerImp.swift */,
+				E19F7E0F22310A5200BAFC7A /* ProductsCatalogService.swift */,
+				E19F7E1122310B0200BAFC7A /* ProductsCatalogServiceImp.swift */,
 			);
 			path = Products;
 			sourceTree = "<group>";
@@ -291,6 +313,24 @@
 				E111747F2241860C00BD19B4 /* AuthServiceImp.swift */,
 			);
 			path = Auth;
+			sourceTree = "<group>";
+		};
+		E11174812242B37100BD19B4 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				E11174822242B38300BD19B4 /* KeychainStore.swift */,
+				E11174952243719400BD19B4 /* Core.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		E111748E22436FA900BD19B4 /* CodeConfirmation */ = {
+			isa = PBXGroup;
+			children = (
+				E111748F22436FBF00BD19B4 /* CodeConfirmationViewController.swift */,
+				E11174912243700500BD19B4 /* CodeConfirmationPresenter.swift */,
+			);
+			path = CodeConfirmation;
 			sourceTree = "<group>";
 		};
 		E164C3902231B5B200D1AB13 /* ProductCatalog */ = {
@@ -390,21 +430,22 @@
 		E19F7E052231064D00BAFC7A /* BusinessLogic */ = {
 			isa = PBXGroup;
 			children = (
-				E19F7E0E22310A3F00BAFC7A /* Workers */,
-				E19F7E062231065600BAFC7A /* Services */,
+				E11174812242B37100BD19B4 /* Core */,
+				E19F7E0E22310A3F00BAFC7A /* Services */,
+				E19F7E062231065600BAFC7A /* Targets */,
 				E1BC5ACD22311168001FD1D6 /* Result.swift */,
 				E1BC5ACF22311173001FD1D6 /* AppError.swift */,
 			);
 			path = BusinessLogic;
 			sourceTree = "<group>";
 		};
-		E19F7E062231065600BAFC7A /* Services */ = {
+		E19F7E062231065600BAFC7A /* Targets */ = {
 			isa = PBXGroup;
 			children = (
-				E19F7E0C2231078F00BAFC7A /* SwappyService.swift */,
+				E19F7E0C2231078F00BAFC7A /* ProductsTarget.swift */,
 				E1117479224183A400BD19B4 /* AuthTarget.swift */,
 			);
-			path = Services;
+			path = Targets;
 			sourceTree = "<group>";
 		};
 		E19F7E092231068300BAFC7A /* UI */ = {
@@ -423,12 +464,13 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
-		E19F7E0E22310A3F00BAFC7A /* Workers */ = {
+		E19F7E0E22310A3F00BAFC7A /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				E111747C224185FA00BD19B4 /* Auth */,
 				E111747B224185F100BD19B4 /* Products */,
 			);
+			name = Services;
 			path = Workers;
 			sourceTree = "<group>";
 		};
@@ -531,6 +573,8 @@
 			isa = PBXGroup;
 			children = (
 				E1FF3E6B223A302900443DED /* CardViewController.swift */,
+				E111748A2242DBD700BD19B4 /* LoadingView.swift */,
+				E111748C2242DBEA00BD19B4 /* ErrorView.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -606,8 +650,11 @@
 		E1FF3EC6223EEC1E00443DED /* PhoneLogin */ = {
 			isa = PBXGroup;
 			children = (
+				E111748E22436FA900BD19B4 /* CodeConfirmation */,
 				E1FF3EC7223EEC2700443DED /* PhoneLogin.storyboard */,
 				E10850C1223EF78F00941EA5 /* PhoneLoginViewController.swift */,
+				E11174862242B4D300BD19B4 /* PhoneLoginPresenter.swift */,
+				E11174882242B5B800BD19B4 /* PhoneLoginRouter.swift */,
 			);
 			path = PhoneLogin;
 			sourceTree = "<group>";
@@ -814,11 +861,12 @@
 				"${PODS_ROOT}/Target Support Files/Pods-Swappy/Pods-Swappy-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/ImageSlideshow/ImageSlideshow.framework",
+				"${BUILT_PRODUCTS_DIR}/InputMask/InputMask.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftPhoneNumberFormatter/SwiftPhoneNumberFormatter.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
 				"${BUILT_PRODUCTS_DIR}/SwinjectStoryboard/SwinjectStoryboard.framework",
 				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
@@ -829,11 +877,12 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImageSlideshow.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/InputMask.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftPhoneNumberFormatter.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwinjectStoryboard.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
@@ -881,11 +930,13 @@
 				E111747A224183A400BD19B4 /* AuthTarget.swift in Sources */,
 				E1BC5AE522312F36001FD1D6 /* Moya+CustomDecodableRequest.swift in Sources */,
 				E1FC30AD2239722300DF1325 /* SellerInfoAssembly.swift in Sources */,
-				E19F7E0D2231078F00BAFC7A /* SwappyService.swift in Sources */,
+				E11174832242B38300BD19B4 /* KeychainStore.swift in Sources */,
+				E19F7E0D2231078F00BAFC7A /* ProductsTarget.swift in Sources */,
 				E1BC5AD022311173001FD1D6 /* AppError.swift in Sources */,
 				E1FF3EC5223EEA8E00443DED /* EditProductViewController.swift in Sources */,
 				E1FF3EB5223EDC3900443DED /* MyProductsAssembly.swift in Sources */,
-				E19F7E1022310A5200BAFC7A /* ProductsCatalogWorker.swift in Sources */,
+				E19F7E1022310A5200BAFC7A /* ProductsCatalogService.swift in Sources */,
+				E11174872242B4D300BD19B4 /* PhoneLoginPresenter.swift in Sources */,
 				E11174742240AD8F00BD19B4 /* EditProductAssembly.swift in Sources */,
 				E111747E2241860400BD19B4 /* AuthService.swift in Sources */,
 				E1FF3E91223A338800443DED /* LoginCardViewController.swift in Sources */,
@@ -896,19 +947,24 @@
 				E1FF3EB1223E9CDA00443DED /* MyProductsPresenter.swift in Sources */,
 				E1FF3E6C223A302900443DED /* CardViewController.swift in Sources */,
 				E1FC30A02238504100DF1325 /* ProductDetailAssembly.swift in Sources */,
+				E11174892242B5B800BD19B4 /* PhoneLoginRouter.swift in Sources */,
 				E164C3A22235A92300D1AB13 /* ImageSlider.swift in Sources */,
 				E1BC5ACC22310F9D001FD1D6 /* Sex.swift in Sources */,
 				E11174782240B2F100BD19B4 /* EditProductViewModel.swift in Sources */,
 				E1BC5ACE22311168001FD1D6 /* Result.swift in Sources */,
 				E1BC5AF222318370001FD1D6 /* UIView+ReusableIdentifiers.swift in Sources */,
 				E1BC5AC122310C0E001FD1D6 /* ProductCatalogAssembly.swift in Sources */,
+				E1117494224370B800BD19B4 /* CodeConfirmationAssembly.swift in Sources */,
+				E111748B2242DBD700BD19B4 /* LoadingView.swift in Sources */,
 				E164C39E2235A70E00D1AB13 /* SeparatorView.swift in Sources */,
 				E1FF3EA4223E77C100443DED /* ProductsDDMImp.swift in Sources */,
 				E1FF3E95223A33CD00443DED /* LoginCardRouter.swift in Sources */,
 				E1BC5AC322310C2E001FD1D6 /* WorkersAssembly.swift in Sources */,
 				E164C39C223591AF00D1AB13 /* MainButton.swift in Sources */,
 				E11174802241860C00BD19B4 /* AuthServiceImp.swift in Sources */,
+				E111748D2242DBEA00BD19B4 /* ErrorView.swift in Sources */,
 				E1BC5AEF22318340001FD1D6 /* UICollectionView+RegisterCells.swift in Sources */,
+				E111749022436FBF00BD19B4 /* CodeConfirmationViewController.swift in Sources */,
 				E1FF3EA2223E77B800443DED /* ProductsDDM.swift in Sources */,
 				E1BC5ACA22310F1F001FD1D6 /* Seller.swift in Sources */,
 				E1FC30B2223977B900DF1325 /* SecondaryButton.swift in Sources */,
@@ -919,7 +975,7 @@
 				E1BC5AC622310CB7001FD1D6 /* Product.swift in Sources */,
 				E1BC5AC822310E88001FD1D6 /* Price.swift in Sources */,
 				E1BC5AD622312199001FD1D6 /* ProductCatalogPresenter.swift in Sources */,
-				E19F7E1222310B0200BAFC7A /* ProductsCatalogWorkerImp.swift in Sources */,
+				E19F7E1222310B0200BAFC7A /* ProductsCatalogServiceImp.swift in Sources */,
 				E1FF3E93223A339200443DED /* LoginCardPresenter.swift in Sources */,
 				E164C39722326BAD00D1AB13 /* Collection+SafeSubscription.swift in Sources */,
 				E1FC309C22378BCB00DF1325 /* ProductCatalogRouter.swift in Sources */,
@@ -928,12 +984,15 @@
 				E1BC5AED223142E3001FD1D6 /* PinterestLayout.swift in Sources */,
 				E1BC5ADC22312488001FD1D6 /* ProductCollectionViewCell.swift in Sources */,
 				E1FF3EB9223EE18100443DED /* VKButton.swift in Sources */,
+				E11174962243719400BD19B4 /* Core.swift in Sources */,
 				E1FF3E9E223E634A00443DED /* MainViewController.swift in Sources */,
 				E164C3932231B5DF00D1AB13 /* ProductDetailViewController.swift in Sources */,
 				E1FF3EAF223E9CCF00443DED /* MyProductsViewController.swift in Sources */,
 				E1FF3EC4223EEA8E00443DED /* EditProductPresenter.swift in Sources */,
 				E164C3A02235A8AA00D1AB13 /* UIColor+App.swift in Sources */,
 				E19F7DD52231063900BAFC7A /* AppDelegate.swift in Sources */,
+				E11174852242B49200BD19B4 /* PhoneLoginAssembly.swift in Sources */,
+				E11174922243700500BD19B4 /* CodeConfirmationPresenter.swift in Sources */,
 				E1FF3E99223A373000443DED /* BaseButton.swift in Sources */,
 				E1B4B1DD2235BE2200520082 /* ProductViewModel.swift in Sources */,
 				E1BC5AE322312E6C001FD1D6 /* NSAttributedString+SimpleInit.swift in Sources */,

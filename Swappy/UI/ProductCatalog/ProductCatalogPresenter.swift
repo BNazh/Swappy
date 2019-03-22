@@ -17,7 +17,7 @@ final class ProductCatalogPresenterImp {
     // MARK: - Properties
     
     private unowned let view: ProductCatalogView
-    private let productWorker: ProductCatalogWorker
+    private let productWorker: ProductCatalogService
     private let router: ProductCatalogRouter
     
     private var products: [Product] = []
@@ -25,7 +25,7 @@ final class ProductCatalogPresenterImp {
     
     // MARK: - Init
     
-    init(view: ProductCatalogView, productWorker: ProductCatalogWorker, router: ProductCatalogRouter) {
+    init(view: ProductCatalogView, productWorker: ProductCatalogService, router: ProductCatalogRouter) {
         self.view = view
         self.productWorker = productWorker
         self.router = router
@@ -48,11 +48,12 @@ extension ProductCatalogPresenterImp: ProductCatalogPresenter {
             self?.isLoading = false
             
             switch result {
+                
             case .success(let products):
                 self?.handleSuccessGetProducts(products)
                 
             case .failure:
-                self?.view.showError(message: "error")
+                break
             }
         }
     }

@@ -11,8 +11,12 @@ import Swinject
 final class WorkersAssembly: Assembly {
     
     func assemble(container: Container) {
-        container.register(ProductCatalogWorker.self) { _ in
-            return ProductCatalogWorkerImp()
+        container.register(ProductCatalogService.self) { _ in
+            return ProductCatalogServiceImp()
+        }
+        
+        container.register(AuthService.self) { _ in
+            return AuthServiceImp()
         }
         
         container.register(ProductsDDM.self) { _ in

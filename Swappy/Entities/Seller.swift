@@ -6,7 +6,7 @@
 //  Copyright © 2019 SwappyTeam. All rights reserved.
 //
 
-struct Seller: Decodable {
+struct User: Decodable {
     
     let id: String
     let vkId: String

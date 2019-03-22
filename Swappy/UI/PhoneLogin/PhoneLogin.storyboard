@@ -25,7 +25,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="done" textContentType="tel"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="selectedTitle" value="Номер телефона"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
@@ -37,12 +37,15 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Номер телефона"/>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b37-R4-teh" customClass="MainButton" customModule="Swappy" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b37-R4-teh" customClass="MainButton" customModule="Swappy" customModuleProvider="target">
                                 <rect key="frame" x="16" y="132" width="343" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="I0Y-qG-4ob"/>
                                 </constraints>
                                 <state key="normal" title="Получить код в SMS"/>
+                                <connections>
+                                    <action selector="sendVerificationCodeTapped:" destination="HQu-Tf-CHz" eventType="touchUpInside" id="EEb-GH-baQ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -58,10 +61,72 @@
                     </view>
                     <connections>
                         <outlet property="phoneTextField" destination="aid-iD-W5B" id="OB3-lN-tX1"/>
+                        <outlet property="textFieldDelegate" destination="P1o-Jd-cCJ" id="szf-XG-MUN"/>
+                        <outlet property="verificationButton" destination="b37-R4-teh" id="G9j-st-gJH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="To6-De-K1g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="P1o-Jd-cCJ" customClass="MaskedTextFieldDelegate" customModule="InputMask">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="primaryMaskFormat" value="+7 ([000]) [000]-[00]-[00]"/>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
             </objects>
+            <point key="canvasLocation" x="-63" y="87"/>
+        </scene>
+        <!--Вход или регистрация-->
+        <scene sceneID="l0A-Z4-eBR">
+            <objects>
+                <viewController storyboardIdentifier="CodeConfirmationViewController" title="Вход или регистрация" id="PCI-lJ-WN6" customClass="CodeConfirmationViewController" customModule="Swappy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="twe-n1-ubB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2nd-IR-Xng" customClass="AppTextField" customModule="Swappy" customModuleProvider="target">
+                                <rect key="frame" x="16" y="52" width="343" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="FGA-yM-7Pd"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" textContentType="one-time-code"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="selectedTitle" value="Код подтверждения"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="selectedLineHeight">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Код подтверждения"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YW4-5I-6au" customClass="MainButton" customModule="Swappy" customModuleProvider="target">
+                                <rect key="frame" x="16" y="132" width="343" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="vlN-w7-VJW"/>
+                                </constraints>
+                                <state key="normal" title="Подтвердить код"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="YW4-5I-6au" firstAttribute="top" secondItem="2nd-IR-Xng" secondAttribute="bottom" constant="20" id="2TV-zt-UIO"/>
+                            <constraint firstItem="YW4-5I-6au" firstAttribute="leading" secondItem="2nd-IR-Xng" secondAttribute="leading" id="4Tj-Wi-2gG"/>
+                            <constraint firstItem="2nd-IR-Xng" firstAttribute="leading" secondItem="xga-tS-GCF" secondAttribute="leading" constant="16" id="7Ex-cf-hvD"/>
+                            <constraint firstItem="YW4-5I-6au" firstAttribute="width" secondItem="2nd-IR-Xng" secondAttribute="width" id="Sp8-be-ixl"/>
+                            <constraint firstItem="xga-tS-GCF" firstAttribute="trailing" secondItem="2nd-IR-Xng" secondAttribute="trailing" constant="16" id="bJl-jC-03n"/>
+                            <constraint firstItem="2nd-IR-Xng" firstAttribute="top" secondItem="xga-tS-GCF" secondAttribute="top" constant="32" id="xsU-z7-s3Y"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xga-tS-GCF"/>
+                    </view>
+                    <connections>
+                        <outlet property="textFieldDelegate" destination="P1o-Jd-cCJ" id="Air-4P-ut1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tmV-A7-PgH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="799" y="87"/>
         </scene>
     </scenes>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

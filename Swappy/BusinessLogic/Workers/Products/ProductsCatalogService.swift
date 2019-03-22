@@ -8,7 +8,7 @@
 
 import Alamofire
 
-protocol ProductCatalogWorker {
+protocol ProductCatalogService {
     
     func getProducts(callback:  @escaping ResultCallback<[Product]>)
 }

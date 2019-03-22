@@ -14,9 +14,9 @@ extension MoyaProvider {
     func requestDecodable<T: Decodable>(_ target: Target,
                                         callback: @escaping ResultCallback<T>) -> Cancellable {
         
-        return request(target) { response in
+        return request(target) { result in
             
-            switch response {
+            switch result {
                 
             case .success(let moyaResponse):
                 do {
@@ -26,11 +26,33 @@ extension MoyaProvider {
                     callback(.success(decodedResponse.data))
                 }
                 catch {
-                    callback(.failure(.decoding))
+                    let appError = self.appError(from: error.moya)
+                    callback(.failure(appError))
                 }
-            case .failure(let error):
-                callback(.failure(.server(message: error.errorDescription ?? "")))
+                
+            case .failure(let moyaError):
+                let appError = self.appError(from: moyaError)
+                callback(.failure(appError))
             }
+        }
+    }
+}
+
+private extension MoyaProvider {
+    
+    func appError(from moyaError: MoyaError) -> AppError {
+        
+        switch moyaError {
+            
+        case .statusCode(let response):
+            let message = try? response.mapString(atKeyPath: "message")
+            return .server(message: message ?? "")
+            
+        case .encodableMapping:
+            return .decoding
+            
+        default:
+            return .unknown
         }
     }
 }

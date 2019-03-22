@@ -1,5 +1,5 @@
 //
-//  SwappyService.swift
+//  ProductsTarget.swift
 //  Swappy
 //
 //  Created by Бабаев Михаил Михайлович on 07/03/2019.
@@ -8,16 +8,14 @@
 
 import Moya
 
-
-
-enum SwappyService {
+enum ProductsTarget {
     case products(pageNumber: Int, pageSize: Int)
 }
 
-extension SwappyService: TargetType {
+extension ProductsTarget: TargetType {
     
     var baseURL: URL {
-        return URL(string: "http://swappy.ru/swappy-product-catalog-service/")!
+        return URL(string: Core.baseUrl + "swappy-product-catalog-service/")!
     }
     
     var path: String {

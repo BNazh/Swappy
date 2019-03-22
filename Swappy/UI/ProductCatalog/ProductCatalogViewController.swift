@@ -8,10 +8,9 @@
 
 import UIKit
 
-protocol ProductCatalogView: class {
+protocol ProductCatalogView: class, ErrorView {
     
     func reloadCells(_ cellModels: [ProductCellViewModel])
-    func showError(message: String)
 }
 
 final class ProductCatalogViewController: UIViewController {
@@ -38,10 +37,6 @@ extension ProductCatalogViewController: ProductCatalogView {
     
     func reloadCells(_ cellModels: [ProductCellViewModel]) {
         dataDisplayManager.appendProducts(cellModels)
-    }
-    
-    func showError(message: String) {
-        print(message)
     }
 }
 

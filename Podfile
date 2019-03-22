@@ -26,6 +26,10 @@ target 'Swappy' do
   
   # Floating UITextField
   pod 'SkyFloatingLabelTextField', '~> 3.0'
+  pod 'InputMask'
+  
+  # LoadingView
+  pod 'MBProgressHUD', '~> 1.1.0'
   
   target 'SwappyTests' do
     inherit! :search_paths

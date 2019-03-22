@@ -8,9 +8,9 @@
 
 import Moya
 
-final class ProductCatalogWorkerImp {
+final class ProductCatalogServiceImp {
     
-    let provider = MoyaProvider<SwappyService>()
+    let provider = MoyaProvider<ProductsTarget>()
     
     var pageNumber = 0
     let pageSize = 10
@@ -18,11 +18,11 @@ final class ProductCatalogWorkerImp {
     var canLoadMore = true
 }
 
-extension ProductCatalogWorkerImp: ProductCatalogWorker {
+extension ProductCatalogServiceImp: ProductCatalogService {
     
     func getProducts(callback: @escaping ResultCallback<[Product]>) {
         
-        let target = SwappyService.products(pageNumber: pageNumber, pageSize: pageSize)
+        let target = ProductsTarget.products(pageNumber: pageNumber, pageSize: pageSize)
 
         provider.requestDecodable(target) { [weak self] (response: Result<[Product]>) in
             if let products = response.value {

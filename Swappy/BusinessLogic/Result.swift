@@ -9,7 +9,8 @@
 struct DataResponse<T: Decodable>: Decodable {
     let data: T
     let status: Int
-    let message: String
+    let message: String?
+    let error: String?
 }
 
 typealias ResultCallback<T> = (Result<T>) -> Void
@@ -52,4 +53,8 @@ extension Result {
     var isFailure: Bool {
         return !isSuccess
     }
+}
+
+extension Result where T == Void {
+    static let success = Result.success(())
 }

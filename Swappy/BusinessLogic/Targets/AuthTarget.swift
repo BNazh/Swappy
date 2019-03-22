@@ -16,15 +16,15 @@ enum AuthTarget {
 
 extension AuthTarget: TargetType {
     var baseURL: URL {
-        return URL(string: "http://swappy.ru/swappy-auth/")!
+        return URL(string: Core.baseUrl + "swappy-auth/phone/")!
     }
     
     var path: String {
         switch self {
         case .requestSmsVerification:
-            return "phone/requestSMSVerificationCode"
+            return "requestSMSVerificationCode"
         case .authenticate:
-            return "phone/authenticate"
+            return "authenticate"
         }
     }
     
@@ -37,8 +37,11 @@ extension AuthTarget: TargetType {
     }
     
     var task: Task {
-        return .requestParameters(parameters: parameters,
-                                  encoding: URLEncoding.queryString)
+        return .requestCompositeParameters(
+            bodyParameters: parameters,
+            bodyEncoding: JSONEncoding.default,
+            urlParameters: [:]
+        )
     }
     
     var headers: [String : String]? {
@@ -53,7 +56,7 @@ private extension AuthTarget {
             
         case .requestSmsVerification(let phone):
             return [
-                "phone" : phone
+                "phoneNumber" : phone
             ]
             
         case .authenticate(let phone, let code):
