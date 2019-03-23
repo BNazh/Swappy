@@ -11,17 +11,20 @@ import Moya
 enum ProductsTarget {
     case products(pageNumber: Int, pageSize: Int)
     case productsBySeller(sellerId: String, pageNumber: Int, pageSize: Int)
+    case createProduct(product: ProductRO)
 }
 
 extension ProductsTarget: TargetType {
     
     var baseURL: URL {
-        return Core.baseUrl.appendingPathComponent("swappy-product-catalog-service/")
+        return Core.testUrl
+        //return Core.baseUrl.appendingPathComponent("swappy-product-catalog-service/")
     }
     
     var path: String {
         switch self {
-        case .products:
+        case .products,
+             .createProduct:
             return "products"
         case .productsBySeller(let sellerId):
             return "products/users/\(sellerId)"
@@ -33,6 +36,8 @@ extension ProductsTarget: TargetType {
         case .products,
              .productsBySeller:
             return .get
+        case .createProduct:
+            return .post
         }
     }
     
@@ -54,10 +59,30 @@ extension ProductsTarget: TargetType {
                 parameters: parameters,
                 encoding: URLEncoding.queryString
             )
+            
+        case .createProduct(let product):
+            let body = DataRequest(data: product)
+            return .requestJSONEncodable(body)
         }
     }
     
     var headers: [String : String]? {
         return nil
     }
+}
+
+extension ProductsTarget: AccessTokenAuthorizable {
+    
+    var authorizationType: AuthorizationType {
+        switch self {
+        case .createProduct:
+            return .bearer
+        default:
+            return .none
+        }
+    }
+}
+
+private struct DataRequest<T: Encodable>: Encodable {
+    let data: T
 }

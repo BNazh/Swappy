@@ -34,6 +34,9 @@ target 'Swappy' do
   # Keyboard manager
   pod 'IQKeyboardManagerSwift', '6.0.4'
   
+  # Photos picker
+  pod 'BSImagePicker', '~> 2.8'
+  
   target 'SwappyTests' do
     inherit! :search_paths
     # Pods for testing

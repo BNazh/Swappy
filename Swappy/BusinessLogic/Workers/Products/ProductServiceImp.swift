@@ -53,6 +53,12 @@ extension ProductServiceImp: ProductService {
         }
     }
     
+    func createProduct(_ product: ProductRO, callback: @escaping ResultCallback<Product>) {
+        let target = ProductsTarget.createProduct(product: product)
+        
+        provider.requestDecodable(target, callback: callback)
+    }
+    
     func reset() {
         pageNumber = 0
     }

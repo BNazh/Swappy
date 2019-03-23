@@ -12,7 +12,10 @@ final class EditProductAssembly: Assembly {
     
     func assemble(container: Container) {
         container.register(EditProductPresenter.self) { (resolver, view: EditProductViewController) in
-            return EditProductPresenterImp(view: view)
+            return EditProductPresenterImp(
+                view: view,
+                productService: resolver.resolve(ProductService.self)!
+            )
         }
         
         container.storyboardInitCompleted(EditProductViewController.self) { (resolver, viewController) in

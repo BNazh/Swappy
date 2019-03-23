@@ -20,3 +20,16 @@ struct Product: Decodable {
     let seller: User
     let contactPhone: String
 }
+
+struct ProductRO: Encodable {
+    
+    let images: [String]
+    let size: String
+    let name: String
+    let description: String
+    let price: Price
+    let city: String
+    let isSoldOut: Bool = false
+    let isActive: Bool = false
+    let contactPhone: String
+}

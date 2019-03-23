@@ -6,9 +6,14 @@
 //  Copyright © 2019 SwappyTeam. All rights reserved.
 //
 
-struct Price: Decodable {
+struct Price: Codable {
     let value: Double
     let currency: String
+    
+    init(rubles: String) {
+        value = Double(rubles) ?? 0
+        currency = "₽"
+    }
 }
 
 extension Price {

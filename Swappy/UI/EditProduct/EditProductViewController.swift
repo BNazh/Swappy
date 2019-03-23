@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol EditProductView: class {
+protocol EditProductView: class, LoadingView, ErrorView {
     
     func showProduct(viewModel: EditProductViewModel)
 }
@@ -33,6 +33,13 @@ final class EditProductViewController: UIViewController {
         
         self.title = presenter.screenTitle
     }
+    
+    // MARK: - Actions
+    
+    @IBAction func createProductTapped(_ sender: UIButton) {
+        let productRO = productRequestObject
+        presenter.createProduct(productRO)
+    }
 }
 
 extension EditProductViewController: EditProductView {
@@ -44,5 +51,20 @@ extension EditProductViewController: EditProductView {
         priceTextField.text = viewModel.price
         contactInfoTextField.text = viewModel.contactInfo
         categoryTextField.text = viewModel.category
+    }
+}
+
+private extension EditProductViewController {
+    
+    var productRequestObject: ProductRO {
+        return ProductRO(
+            images: [],
+            size: sizeTextField.text ?? "",
+            name: nameTextField.text ?? "",
+            description: descriptionTextField.text ?? "",
+            price: .init(rubles: priceTextField.text ?? ""),
+            city: categoryTextField.text ?? "",
+            contactPhone: contactInfoTextField.text ?? ""
+        )
     }
 }
