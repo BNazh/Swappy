@@ -102,29 +102,65 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YW4-5I-6au" customClass="MainButton" customModule="Swappy" customModuleProvider="target">
-                                <rect key="frame" x="16" y="132" width="343" height="52"/>
+                                <rect key="frame" x="16" y="154" width="343" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="vlN-w7-VJW"/>
                                 </constraints>
-                                <state key="normal" title="Подтвердить код"/>
+                                <state key="normal" title="Подтвердить"/>
+                                <connections>
+                                    <action selector="confirmCodeTapped:" destination="PCI-lJ-WN6" eventType="touchUpInside" id="G9l-Yq-15Z"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dRB-dW-i0C">
+                                <rect key="frame" x="16" y="120" width="343" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="3n0-tU-V5N"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V8C-9Q-KCd">
+                                <rect key="frame" x="16" y="317.5" width="343" height="52"/>
+                                <state key="normal" title="Получить новый код"/>
+                                <connections>
+                                    <action selector="getNewConfirmationCodeTapped:" destination="PCI-lJ-WN6" eventType="touchUpInside" id="xyz-rR-ak6"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="YW4-5I-6au" firstAttribute="top" secondItem="2nd-IR-Xng" secondAttribute="bottom" constant="20" id="2TV-zt-UIO"/>
                             <constraint firstItem="YW4-5I-6au" firstAttribute="leading" secondItem="2nd-IR-Xng" secondAttribute="leading" id="4Tj-Wi-2gG"/>
+                            <constraint firstItem="dRB-dW-i0C" firstAttribute="centerX" secondItem="xga-tS-GCF" secondAttribute="centerX" id="6OU-Mz-aAA"/>
                             <constraint firstItem="2nd-IR-Xng" firstAttribute="leading" secondItem="xga-tS-GCF" secondAttribute="leading" constant="16" id="7Ex-cf-hvD"/>
+                            <constraint firstItem="dRB-dW-i0C" firstAttribute="leading" secondItem="xga-tS-GCF" secondAttribute="leading" constant="16" id="G6u-Uc-J5N"/>
+                            <constraint firstItem="YW4-5I-6au" firstAttribute="top" secondItem="dRB-dW-i0C" secondAttribute="bottom" constant="12" id="QWR-dn-LGy"/>
                             <constraint firstItem="YW4-5I-6au" firstAttribute="width" secondItem="2nd-IR-Xng" secondAttribute="width" id="Sp8-be-ixl"/>
                             <constraint firstItem="xga-tS-GCF" firstAttribute="trailing" secondItem="2nd-IR-Xng" secondAttribute="trailing" constant="16" id="bJl-jC-03n"/>
+                            <constraint firstItem="V8C-9Q-KCd" firstAttribute="height" secondItem="YW4-5I-6au" secondAttribute="height" id="byu-iR-lUm"/>
+                            <constraint firstItem="dRB-dW-i0C" firstAttribute="top" secondItem="2nd-IR-Xng" secondAttribute="bottom" constant="8" id="fBc-yO-Ezs"/>
+                            <constraint firstItem="V8C-9Q-KCd" firstAttribute="centerX" secondItem="YW4-5I-6au" secondAttribute="centerX" id="ghG-CO-z7q"/>
+                            <constraint firstItem="V8C-9Q-KCd" firstAttribute="width" secondItem="YW4-5I-6au" secondAttribute="width" id="hF0-ed-f2X"/>
+                            <constraint firstItem="V8C-9Q-KCd" firstAttribute="centerY" secondItem="xga-tS-GCF" secondAttribute="centerY" id="wkE-52-jWd"/>
                             <constraint firstItem="2nd-IR-Xng" firstAttribute="top" secondItem="xga-tS-GCF" secondAttribute="top" constant="32" id="xsU-z7-s3Y"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xga-tS-GCF"/>
                     </view>
                     <connections>
-                        <outlet property="textFieldDelegate" destination="P1o-Jd-cCJ" id="Air-4P-ut1"/>
+                        <outlet property="codeTextField" destination="2nd-IR-Xng" id="DWn-Ng-Lre"/>
+                        <outlet property="confirmCodeButton" destination="YW4-5I-6au" id="ptu-bt-7dL"/>
+                        <outlet property="infoLabel" destination="dRB-dW-i0C" id="AEH-T9-9s7"/>
+                        <outlet property="textFieldDelegate" destination="R3l-T4-NbU" id="1Wx-xh-L1V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tmV-A7-PgH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="R3l-T4-NbU" customClass="MaskedTextFieldDelegate" customModule="InputMask">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="primaryMaskFormat" value="[000000]"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="autocomplete" value="NO"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="autocompleteOnFocus" value="NO"/>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="799" y="87"/>
         </scene>

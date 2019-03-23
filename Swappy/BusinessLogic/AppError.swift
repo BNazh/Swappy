@@ -11,6 +11,7 @@ import Moya
 enum AppError {
     case
     server(message: String),
+    auth,
     unknown,
     base(Error),
     decoding

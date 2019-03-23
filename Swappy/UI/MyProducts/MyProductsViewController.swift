@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol MyProductsView: class {
+protocol MyProductsView: class, ErrorView, LoadingView {
     
     func reloadProducts(_ products: [ProductCellViewModel])
 }
@@ -22,13 +22,18 @@ final class MyProductsViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         dataDisplayManager.setup(delegate: self, collectionView: collectionView)
+        
+        // presenter.loadMyProducts()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
         presenter.loadMyProducts()
     }
@@ -51,7 +56,7 @@ final class MyProductsViewController: UIViewController {
 extension MyProductsViewController: MyProductsView {
 
     func reloadProducts(_ products: [ProductCellViewModel]) {
-        dataDisplayManager.appendProducts(products)
+        dataDisplayManager.reloadProducts(products)
     }
 }
 
@@ -62,6 +67,6 @@ extension MyProductsViewController: ProductsDDMDelegate {
     }
     
     func willDisplayLastCell() {
-        // do nothing
+        presenter.loadMyProducts()
     }
 }

@@ -18,11 +18,12 @@ final class MyProductsAssembly: Assembly {
             )
         }
         
-        container.register(MyProductsPresenter.self) { (resolver, viewController: MyProductsViewController) in
+        container.register(MyProductsPresenter.self) { (r, viewController: MyProductsViewController) in
             return MyProductsPresenterImp(
                 view: viewController,
-              //  productWorker: resolver.resolve(ProductCatalogWorker.self)!,
-                router: resolver.resolve(MyProductsRouter.self, argument: viewController)!
+                router: r.resolve(MyProductsRouter.self, argument: viewController)!,
+                productService: r.resolve(ProductService.self)!,
+                authService: r.resolve(AuthService.self)!
             )
         }
         

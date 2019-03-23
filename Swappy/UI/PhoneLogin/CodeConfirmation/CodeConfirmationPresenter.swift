@@ -6,10 +6,15 @@
 //  Copyright © 2019 SwappyTeam. All rights reserved.
 //
 
+import Foundation
+
 protocol CodeConfirmationPresenter: class {
     
     func setPhone(_ phone: String)
+    
     func authenticate(with code: String)
+    func showInfo()
+    func getNewConfirmationCode()
 }
 
 final class CodeConfirmationPresenterImp {
@@ -33,12 +38,48 @@ extension CodeConfirmationPresenterImp: CodeConfirmationPresenter {
     }
     
     func authenticate(with code: String) {
-        authService.authenticate(phone: phone, code: code) { result in
+        view.showLoading()
+        
+        authService.authenticate(phone: phone, code: code) { [weak self] result in
+            self?.view.hideLoading()
+            
             switch result {
             case .success:
-                view.
+                self?.view.openMainScreeen()
+                
             case .failure(let error):
-                view.show
+                self?.view.showError(message: error.localizedString)
+            }
+        }
+    }
+    
+    func showInfo() {
+        let info = NSMutableAttributedString(
+            string: "Код выслан на ",
+            font: .appFont(ofSize: 13)
+        )
+        
+        let phoneString = NSAttributedString(
+            string: phone,
+            font: .appFont(ofSize: 13, style: .semibold)
+        )
+        
+        info.append(phoneString)
+        
+        view.displayInfo(infoString: info)
+    }
+    
+    func getNewConfirmationCode() {
+        view.showLoading()
+        
+        authService.requestSmsVerificationCode(for: phone) { [weak self] result in
+            self?.view.hideLoading()
+            
+            switch result {
+            case .success:
+                break
+            case .failure(let error):
+                self?.view.showError(message: error.localizedString)
             }
         }
     }

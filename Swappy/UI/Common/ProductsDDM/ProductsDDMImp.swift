@@ -18,8 +18,8 @@ final class ProductsDDMImp: NSObject {
 
 extension ProductsDDMImp: ProductsDDM {
     
-    func appendProducts(_ productsCellModels: [ProductCellViewModel]) {
-        self.cellModels.append(contentsOf: productsCellModels)
+    func reloadProducts(_ productsCellModels: [ProductCellViewModel]) {
+        cellModels = productsCellModels
         
         collectionView?.isHidden = cellModels.isEmpty
         collectionView?.reloadData()

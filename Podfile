@@ -31,6 +31,9 @@ target 'Swappy' do
   # LoadingView
   pod 'MBProgressHUD', '~> 1.1.0'
   
+  # Keyboard manager
+  pod 'IQKeyboardManagerSwift', '6.0.4'
+  
   target 'SwappyTests' do
     inherit! :search_paths
     # Pods for testing

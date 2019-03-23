@@ -17,7 +17,7 @@ final class ProductCatalogPresenterImp {
     // MARK: - Properties
     
     private unowned let view: ProductCatalogView
-    private let productWorker: ProductCatalogService
+    private let productService: ProductService
     private let router: ProductCatalogRouter
     
     private var products: [Product] = []
@@ -25,9 +25,9 @@ final class ProductCatalogPresenterImp {
     
     // MARK: - Init
     
-    init(view: ProductCatalogView, productWorker: ProductCatalogService, router: ProductCatalogRouter) {
+    init(view: ProductCatalogView, productService: ProductService, router: ProductCatalogRouter) {
         self.view = view
-        self.productWorker = productWorker
+        self.productService = productService
         self.router = router
     }
 }
@@ -43,17 +43,15 @@ extension ProductCatalogPresenterImp: ProductCatalogPresenter {
         
         isLoading = true
         
-        productWorker.getProducts { [weak self] result in
+        productService.getProducts { [weak self] result in
             
             self?.isLoading = false
             
             switch result {
-                
             case .success(let products):
                 self?.handleSuccessGetProducts(products)
-                
-            case .failure:
-                break
+            case .failure(let appError):
+                self?.view.showError(message: appError.localizedString)
             }
         }
     }
@@ -74,7 +72,7 @@ private extension ProductCatalogPresenterImp {
     func handleSuccessGetProducts(_ newProducts: [Product]) {
         products.append(contentsOf: newProducts)
         
-        let viewModels = newProducts.map { ProductCellViewModel($0) }
+        let viewModels = products.map { ProductCellViewModel($0) }
         view.reloadCells(viewModels)
     }
 }

@@ -14,10 +14,11 @@ extension SwinjectStoryboard {
     class func setup() {
         let assembler = Assembler(container: defaultContainer)
         assembler.apply(assemblies: [
-            WorkersAssembly(),
+            ServicesAssembly(),
             
             ProductCatalogAssembly(),
             ProductDetailAssembly(),
+            EditProductAssembly(),
             SellerInfoAssembly(),
             MyProductsAssembly(),
             PhoneLoginAssembly(),

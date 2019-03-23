@@ -36,7 +36,7 @@ final class ProductCatalogViewController: UIViewController {
 extension ProductCatalogViewController: ProductCatalogView {
     
     func reloadCells(_ cellModels: [ProductCellViewModel]) {
-        dataDisplayManager.appendProducts(cellModels)
+        dataDisplayManager.reloadProducts(cellModels)
     }
 }
 

@@ -10,8 +10,6 @@ import UIKit
 
 final class LoginCardViewController: CardViewController {
     
-    
-    
     @IBAction func phoneButtonTapped(_ sender: UIButton) {
         let phoneLoginVC: PhoneLoginViewController = UIStoryboard.createViewController()
         

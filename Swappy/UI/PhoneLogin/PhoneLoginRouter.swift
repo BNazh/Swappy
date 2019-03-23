@@ -25,7 +25,9 @@ final class PhoneLoginRouterImp {
 extension PhoneLoginRouterImp: PhoneLoginRouter {
     
     func openCodeConfirmation(phone: String) {
-        let codeController: CodeConfirmationViewController = UIStoryboard.createViewController(storyboardName: PhoneLoginViewController.storyboardName)
+        let storyboardName = PhoneLoginViewController.storyboardName
+        let codeController: CodeConfirmationViewController
+        codeController = UIStoryboard.createViewController(storyboardName: storyboardName)
         
         codeController.presenter.setPhone(phone)
         

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 protocol LoadingView {
     
@@ -16,10 +17,11 @@ protocol LoadingView {
 
 extension LoadingView where Self: UIViewController {
     func showLoading() {
-        print("START LOADING")
+        let hud = MBProgressHUD.showAdded(to: view, animated: true)
+        hud.mode = .indeterminate
     }
     
     func hideLoading() {
-        print("HIDE LOADING")
+        MBProgressHUD.hide(for: view, animated: true)
     }
 }

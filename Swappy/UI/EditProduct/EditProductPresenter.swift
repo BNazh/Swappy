@@ -6,7 +6,7 @@
 //  Copyright © 2019 SwappyTeam. All rights reserved.
 //
 
-enum InitState {
+enum EditProductInitState {
     case
     add,
     edit(product: Product)
@@ -17,6 +17,8 @@ protocol EditProductPresenter: class {
     var screenTitle: String { get }
     
     func initialize()
+    
+    func setState(_ state: EditProductInitState)
 }
 
 final class EditProductPresenterImp {
@@ -25,7 +27,7 @@ final class EditProductPresenterImp {
     
     private unowned let view: EditProductView
     
-    private var state = InitState.add
+    private var state = EditProductInitState.add
     
     // MARK: - Init
     
@@ -59,5 +61,9 @@ extension EditProductPresenterImp: EditProductPresenter {
             view.showProduct(viewModel: viewModel)
             
         }
+    }
+    
+    func setState(_ state: EditProductInitState) {
+        self.state = state
     }
 }

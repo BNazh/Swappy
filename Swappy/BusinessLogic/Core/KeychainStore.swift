@@ -6,11 +6,31 @@
 //  Copyright © 2019 SwappyTeam. All rights reserved.
 //
 
-class KeychainStore  {
+import Foundation
+
+protocol KeychainStore: class {
     
-    static let shared = KeychainStore()
+    var accessToken: String? { get set }
+    var userSellerId: String? { get set }
+}
+
+final class KeychainStoreImp: KeychainStore  {
     
-    var accessToken: String?
+    var accessToken: String? {
+        get {
+            return UserDefaults.standard.string(forKey: "accessToken")
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: "accessToken")
+        }
+    }
     
-    private init() {}
+    var userSellerId: String? {
+        get {
+            return UserDefaults.standard.string(forKey: "userSellerId")
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: "userSellerId")
+        }
+    }
 }

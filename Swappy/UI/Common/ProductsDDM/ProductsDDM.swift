@@ -20,6 +20,6 @@ protocol ProductsDDM: class {
     
     // MARK: - Functions
     
-    func appendProducts(_ productsCellModels: [ProductCellViewModel])
+    func reloadProducts(_ productsCellModels: [ProductCellViewModel])
     func setup(delegate: ProductsDDMDelegate, collectionView: UICollectionView)
 }

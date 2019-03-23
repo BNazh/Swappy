@@ -21,37 +21,78 @@ final class MyProductsPresenterImp {
     
     unowned let view: MyProductsView
     let router: MyProductsRouter
+    let productService: ProductService
+    let authService: AuthService
     
-    private var products: [Product] = []
+    fileprivate var products: [Product] = []
+    private var isLoading = false
     
     // MARK: - Init
     
-    init(view: MyProductsView, router: MyProductsRouter) {
+    init(view: MyProductsView,
+         router: MyProductsRouter,
+         productService: ProductService,
+         authService: AuthService) {
         self.view = view
         self.router = router
+        self.productService = productService
+        self.authService = authService
     }
 }
 
 extension MyProductsPresenterImp: MyProductsPresenter {
     
     func loadMyProducts() {
-        products = []
-        // TODO: worker logic
+        guard !isLoading else {
+            return
+        }
+        isLoading = true
+        
+        productService.getCurrentUserProducts { [weak self] result in
+            
+            self?.isLoading = false
+            
+            switch result {
+            case .success(let products):
+                self?.handleProducts(products)
+            case .failure(let error):
+                self?.handleGetProductsError(error)
+            }
+        }
+    }
+    
+    func openProduct(withId id: String) {
+        let productWithId = products.first { $0.id == id }
+        guard let selectedProduct = productWithId else { return }
+        
+        router.openProduct(selectedProduct)
+    }
+    
+    func addProduct() {
+        guard authService.isAuthorized else {
+            router.openLoginCard()
+            return
+        }
+        
+        router.openAddProduct()
+    }
+}
+
+private extension MyProductsPresenterImp {
+    
+    func handleProducts(_ newProducts: [Product]) {
+        products.append(contentsOf: newProducts)
         
         let viewModels = products.map { ProductCellViewModel($0) }
         view.reloadProducts(viewModels)
     }
     
-    func openProduct(withId id: String) {
-        let productWithId = products.first { $0.id == id }
-        guard let product = productWithId else { return }
-        
-        router.openProduct(product)
-    }
-    
-    func addProduct() {
-        //router.openAddProduct()
-        
-        router.openLoginCard()
+    func handleGetProductsError(_ appError: AppError) {
+        switch appError {
+        case .auth:
+            router.openLoginCard()
+        default:
+            view.showError(message: appError.localizedString)
+        }
     }
 }

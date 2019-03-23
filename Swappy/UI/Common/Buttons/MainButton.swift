@@ -16,6 +16,8 @@ class MainButton: BaseButton {
         
         static let background = UIColor.black
         static let textColor = UIColor.white
+        static let highlightedTextColor = UIColor.lightGray
+        static let disabledTextColor = UIColor.gray
     }
     
     // MARK: - Functions
@@ -24,6 +26,8 @@ class MainButton: BaseButton {
         super.commonInit()
         
         setTitleColor(Constants.textColor, for: .normal)
+        setTitleColor(Constants.highlightedTextColor, for: .highlighted)
+        setTitleColor(Constants.disabledTextColor, for: .disabled)
         backgroundColor = Constants.background
     }
 }

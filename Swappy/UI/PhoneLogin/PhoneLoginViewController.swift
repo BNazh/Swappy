@@ -52,6 +52,6 @@ extension PhoneLoginViewController: PhoneLoginView {
 extension PhoneLoginViewController: MaskedTextFieldDelegateListener {
     
     func textField(_ textField: UITextField, didFillMandatoryCharacters complete: Bool, didExtractValue value: String) {
-        verificationButton.isEnabled = value.count == 10
+        verificationButton.isEnabled = complete
     }
 }

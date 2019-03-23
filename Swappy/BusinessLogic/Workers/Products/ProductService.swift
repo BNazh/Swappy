@@ -1,5 +1,5 @@
 //
-//  ProductsCatalogWorker.swift
+//  ProductsService.swift
 //  Swappy
 //
 //  Created by Бабаев Михаил Михайлович on 07/03/2019.
@@ -8,7 +8,8 @@
 
 import Alamofire
 
-protocol ProductCatalogService {
+protocol ProductService {
     
     func getProducts(callback:  @escaping ResultCallback<[Product]>)
+    func getCurrentUserProducts(callback: @escaping ResultCallback<[Product]>)
 }

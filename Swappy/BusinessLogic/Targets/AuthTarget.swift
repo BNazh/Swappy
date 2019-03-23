@@ -16,7 +16,7 @@ enum AuthTarget {
 
 extension AuthTarget: TargetType {
     var baseURL: URL {
-        return URL(string: Core.baseUrl + "swappy-auth/phone/")!
+        return Core.baseUrl.appendingPathComponent("swappy-auth/phone/")
     }
     
     var path: String {
@@ -61,8 +61,8 @@ private extension AuthTarget {
             
         case .authenticate(let phone, let code):
             return [
-                "phone": phone,
-                "code": code
+                "phoneNumber": phone,
+                "verificationCode": code
             ]
         }
     }

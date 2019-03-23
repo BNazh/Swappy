@@ -8,6 +8,8 @@
 
 protocol AuthService: class {
     
+    var isAuthorized: Bool { get }
+    
     func requestSmsVerificationCode(for phone: String, closure: @escaping ResultCallback<Void>)
     
     func authenticate(phone: String, code: String, closure: @escaping ResultCallback<Void>)
