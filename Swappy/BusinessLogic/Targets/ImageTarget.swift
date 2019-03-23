@@ -16,11 +16,11 @@ enum ImageTarget {
 extension ImageTarget: TargetType {
     
     var baseURL: URL {
-        return Core.baseUrl
+        return Core.testUrl
     }
     
     var path: String {
-        return "images"
+        return "images/"
     }
     
     var method: Method {
@@ -34,7 +34,7 @@ extension ImageTarget: TargetType {
     var task: Task {
         switch self {
         case .uploadImage(let data):
-            let formData = MultipartFormData(provider: .data(data), name: "file", fileName: "file.png")
+            let formData = MultipartFormData(provider: .data(data), name: "file", fileName: "file.png", mimeType: "image/png")
             let multipartData = [formData]
             
             return .uploadMultipart(multipartData)

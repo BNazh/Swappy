@@ -47,9 +47,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 private func setupUIBarButtonApperance() {
-    let appearance = UIBarButtonItem.appearance()
-    let attributes = [NSAttributedString.Key.foregroundColor: UIColor.clear]
-    
-    appearance.setTitleTextAttributes(attributes, for: .normal)
-    appearance.setTitleTextAttributes(attributes, for: .highlighted)
+//    let appearance = UIBarButtonItem.appearance()
+//    let attributes = [NSAttributedString.Key.foregroundColor: UIColor.clear]
+//    
+//    appearance.setTitleTextAttributes(attributes, for: .normal)
+//    appearance.setTitleTextAttributes(attributes, for: .highlighted)
 }

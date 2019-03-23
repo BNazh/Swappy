@@ -73,6 +73,7 @@
 		E1F0175C224644FB001A10D7 /* ImageServiceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F0175B224644FB001A10D7 /* ImageServiceImp.swift */; };
 		E1F0175F2246B286001A10D7 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F0175E2246B286001A10D7 /* PhotosViewController.swift */; };
 		E1F017632246B42A001A10D7 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F017622246B42A001A10D7 /* PhotoCollectionViewCell.swift */; };
+		E1F017652246CD5F001A10D7 /* PhotosPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F017642246CD5F001A10D7 /* PhotosPresenter.swift */; };
 		E1FC309C22378BCB00DF1325 /* ProductCatalogRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FC309B22378BCB00DF1325 /* ProductCatalogRouter.swift */; };
 		E1FC309E22378CC100DF1325 /* UIViewController+Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FC309D22378CC100DF1325 /* UIViewController+Storyboard.swift */; };
 		E1FC30A02238504100DF1325 /* ProductDetailAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FC309F2238504100DF1325 /* ProductDetailAssembly.swift */; };
@@ -202,6 +203,7 @@
 		E1F0175B224644FB001A10D7 /* ImageServiceImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageServiceImp.swift; sourceTree = "<group>"; };
 		E1F0175E2246B286001A10D7 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		E1F017622246B42A001A10D7 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		E1F017642246CD5F001A10D7 /* PhotosPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosPresenter.swift; sourceTree = "<group>"; };
 		E1FC309B22378BCB00DF1325 /* ProductCatalogRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCatalogRouter.swift; sourceTree = "<group>"; };
 		E1FC309D22378CC100DF1325 /* UIViewController+Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Storyboard.swift"; sourceTree = "<group>"; };
 		E1FC309F2238504100DF1325 /* ProductDetailAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailAssembly.swift; sourceTree = "<group>"; };
@@ -576,6 +578,7 @@
 			isa = PBXGroup;
 			children = (
 				E1F0175E2246B286001A10D7 /* PhotosViewController.swift */,
+				E1F017642246CD5F001A10D7 /* PhotosPresenter.swift */,
 				E1F017622246B42A001A10D7 /* PhotoCollectionViewCell.swift */,
 			);
 			path = PhotosView;
@@ -984,6 +987,7 @@
 				E1FF3EB1223E9CDA00443DED /* MyProductsPresenter.swift in Sources */,
 				E1FF3E6C223A302900443DED /* CardViewController.swift in Sources */,
 				E1FC30A02238504100DF1325 /* ProductDetailAssembly.swift in Sources */,
+				E1F017652246CD5F001A10D7 /* PhotosPresenter.swift in Sources */,
 				E11174892242B5B800BD19B4 /* PhoneLoginRouter.swift in Sources */,
 				E164C3A22235A92300D1AB13 /* ImageSlider.swift in Sources */,
 				E1BC5ACC22310F9D001FD1D6 /* Sex.swift in Sources */,

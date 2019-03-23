@@ -36,6 +36,7 @@ target 'Swappy' do
   
   # Photos picker
   pod 'BSImagePicker', '~> 2.8'
+  # pod 'AssetsPickerViewController', '~> 2.0'
   
   target 'SwappyTests' do
     inherit! :search_paths
