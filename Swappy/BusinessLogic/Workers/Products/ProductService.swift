@@ -10,6 +10,8 @@ import Alamofire
 
 protocol ProductService {
     
+    var canLoadMore: Bool { get }
+    
     func getProducts(callback:  @escaping ResultCallback<[Product]>)
     func getCurrentUserProducts(callback: @escaping ResultCallback<[Product]>)
     

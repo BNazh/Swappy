@@ -43,7 +43,7 @@ final class MyProductsPresenterImp {
 extension MyProductsPresenterImp: MyProductsPresenter {
     
     func loadMyProducts() {
-        guard !isLoading else {
+        guard !isLoading, productService.canLoadMore else {
             return
         }
         isLoading = true

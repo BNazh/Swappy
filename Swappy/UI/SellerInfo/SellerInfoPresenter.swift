@@ -30,7 +30,7 @@ extension SellerInfoPresenterImp: SellerInfoPresenter {
     
     func showSeller() {
         let viewModel = SellerInfoViewModel(
-            seller: product.seller,
+            seller: product.seller!,
             contactPhone: product.contactPhone
         )
         

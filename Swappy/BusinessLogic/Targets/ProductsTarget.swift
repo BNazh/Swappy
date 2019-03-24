@@ -9,9 +9,12 @@
 import Moya
 
 enum ProductsTarget {
-    case products(pageNumber: Int, pageSize: Int)
-    case productsBySeller(sellerId: String, pageNumber: Int, pageSize: Int)
-    case createProduct(product: ProductRO)
+    case
+    products(pageNumber: Int, pageSize: Int),
+    productsBySeller(sellerId: String, pageNumber: Int, pageSize: Int),
+    createProduct(product: ProductRO),
+    updateProduct(product: ProductRO),
+    deleteProduct(id: String)
 }
 
 extension ProductsTarget: TargetType {
@@ -24,10 +27,13 @@ extension ProductsTarget: TargetType {
     var path: String {
         switch self {
         case .products,
-             .createProduct:
+             .createProduct,
+             .updateProduct:
             return "products"
         case .productsBySeller(let sellerId):
             return "products/users/\(sellerId)"
+        case .deleteProduct(let id):
+            return "products/\(id)"
         }
     }
     
@@ -38,6 +44,10 @@ extension ProductsTarget: TargetType {
             return .get
         case .createProduct:
             return .post
+        case .updateProduct:
+            return .put
+        case .deleteProduct:
+            return .delete
         }
     }
     
@@ -60,9 +70,12 @@ extension ProductsTarget: TargetType {
                 encoding: URLEncoding.queryString
             )
             
-        case .createProduct(let product):
-            let body = DataRequest(data: product)
-            return .requestJSONEncodable(body)
+        case .createProduct(let product),
+             .updateProduct(let product):
+            return .requestJSONEncodable(product)
+        
+        case .deleteProduct:
+            return .requestPlain
         }
     }
     
@@ -75,7 +88,9 @@ extension ProductsTarget: AccessTokenAuthorizable {
     
     var authorizationType: AuthorizationType {
         switch self {
-        case .createProduct:
+        case .createProduct,
+             .deleteProduct,
+             .updateProduct:
             return .bearer
         default:
             return .none

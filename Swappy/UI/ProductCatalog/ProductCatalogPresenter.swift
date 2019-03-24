@@ -37,7 +37,7 @@ final class ProductCatalogPresenterImp {
 extension ProductCatalogPresenterImp: ProductCatalogPresenter {
     
     func loadProducts() {
-        guard !isLoading else {
+        guard !isLoading, productService.canLoadMore else {
             return
         }
         

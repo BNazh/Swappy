@@ -25,13 +25,7 @@ class ImageModel {
     var state: State = .empty
 }
 
-protocol PhotosView {
-    
-}
-
 final class PhotosViewController: UIViewController {
-    
-    let provider = BaseProvider<ImageTarget>(keychainStore: KeychainStoreImp())
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -90,7 +84,7 @@ extension PhotosViewController: UICollectionViewDelegate {
         
         bs_presentImagePickerController(vc, animated: true, select: nil, deselect: nil, cancel: nil, finish: { [weak self] assets in
             DispatchQueue.main.async {
-                let images = assets.compactMap { getUIImage(asset: $0) }
+                let images = assets.compactMap { $0.image }
                 self?.didSelectPhotos(images)
             }
         }, completion: nil)
@@ -107,9 +101,11 @@ extension PhotosViewController: PhotoCellDelegate {
         cells.remove(at: indexPath.row)
         cells.append(ImageModel())
         
+        let insertIndexPath = IndexPath(item: cells.count - 1, section: 0)
+        
         self.collectionView.performBatchUpdates({
-            self.collectionView.deleteItems(at:[indexPath])
-            self.collectionView.insertItems(at: [IndexPath(item: cells.count - 1, section: 0)])
+            self.collectionView.deleteItems(at: [indexPath])
+            self.collectionView.insertItems(at: [insertIndexPath])
         }, completion:nil)
     }
 }
@@ -131,19 +127,4 @@ private extension PhotosViewController {
             cellIndex = cellIndex + 1
         }
     }
-}
-
-
-func getUIImage(asset: PHAsset) -> UIImage? {
-    
-    var img: UIImage?
-    let manager = PHImageManager.default()
-    let options = PHImageRequestOptions()
-    options.version = .original
-    options.isSynchronous = true
-    let size = CGSize(width: 200, height: 200)
-    manager.requestImage(for: asset, targetSize: size, contentMode: .aspectFit, options: options) { (image, _) in
-        img = image
-    }
-    return img
 }
