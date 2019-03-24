@@ -10,5 +10,9 @@ import UIKit
 
 protocol ImageService: class {
     
-    func uploadImage(_ image: UIImage, callback: @escaping ResultCallback<String>)
+    func cancelCurrentOperation()
+    
+    func uploadImage(_ image: UIImage,
+                     progressBlock: @escaping (Double) -> Void,
+                     callback: @escaping ResultCallback<String>)
 }

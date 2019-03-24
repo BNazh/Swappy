@@ -49,6 +49,12 @@ final class ServicesAssembly: Assembly {
             )
         }
         
+        container.register(ImageService.self) { r in
+            return ImageServiceImp(
+                provider: r.resolve(MoyaProvider<ImageTarget>.self)!
+            )
+        }
+        
         // DDM
         
         container.register(ProductsDDM.self) { _ in

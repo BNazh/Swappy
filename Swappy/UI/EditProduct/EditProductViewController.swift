@@ -26,12 +26,20 @@ final class EditProductViewController: UIViewController {
     @IBOutlet weak var contactInfoTextField: AppTextField!
     @IBOutlet weak var categoryTextField: AppTextField!
     
+    weak var photosViewController: PhotosViewController?
+    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = presenter.screenTitle
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        photosViewController = segue.destination as? PhotosViewController
     }
     
     // MARK: - Actions
@@ -57,8 +65,10 @@ extension EditProductViewController: EditProductView {
 private extension EditProductViewController {
     
     var productRequestObject: ProductRO {
+        let urls = photosViewController?.cells.compactMap { $0.url }
+        
         return ProductRO(
-            images: [],
+            images: urls ?? [],
             size: sizeTextField.text ?? "",
             name: nameTextField.text ?? "",
             description: descriptionTextField.text ?? "",

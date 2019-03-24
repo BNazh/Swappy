@@ -27,9 +27,9 @@ final class PhotosPresenterImp {
 extension PhotosPresenterImp: PhotosPresenter {
     
     func uploadPhoto(_ image: UIImage, at index: Int) {
-        service.uploadImage(image) { result in
-            print(result.value)
-            print(result.error)
-        }
+//        service.uploadImage(image, progressBlock: <#(Double) -> Void#>) { result in
+//            print(result.value)
+//            print(result.error)
+//        }
     }
 }

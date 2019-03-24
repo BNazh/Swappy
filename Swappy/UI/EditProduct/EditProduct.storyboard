@@ -22,10 +22,10 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UN2-A9-CJr">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="722"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="732"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pA9-zs-a5h">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="722"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="732"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1NY-yG-Ylh">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
@@ -49,12 +49,12 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zvu-sx-uvg">
-                                                        <rect key="frame" x="0.0" y="40" width="414" height="150"/>
+                                                        <rect key="frame" x="0.0" y="40" width="414" height="160"/>
                                                         <subviews>
                                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="La3-wV-4A0">
-                                                                <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="414" height="160"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="150" id="kVa-Wq-Kl2"/>
+                                                                    <constraint firstAttribute="height" constant="160" id="kVa-Wq-Kl2"/>
                                                                 </constraints>
                                                                 <connections>
                                                                     <segue destination="nj0-WZ-Xl6" kind="embed" id="Gsb-5C-fJ7"/>
@@ -70,7 +70,7 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rRw-nX-MVb">
-                                                        <rect key="frame" x="0.0" y="190" width="414" height="40"/>
+                                                        <rect key="frame" x="0.0" y="200" width="414" height="40"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Описание" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vCh-Vw-Jq6">
                                                                 <rect key="frame" x="16" y="16" width="382" height="16"/>
@@ -91,7 +91,7 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zHi-Pa-pzx">
-                                                        <rect key="frame" x="0.0" y="230" width="414" height="68"/>
+                                                        <rect key="frame" x="0.0" y="240" width="414" height="68"/>
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="ile-UC-4K9" customClass="AppTextField" customModule="Swappy" customModuleProvider="target">
                                                                 <rect key="frame" x="16" y="0.0" width="382" height="60"/>
@@ -114,7 +114,7 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wKZ-bi-S9u">
-                                                        <rect key="frame" x="0.0" y="298" width="414" height="68"/>
+                                                        <rect key="frame" x="0.0" y="308" width="414" height="68"/>
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dTZ-Cr-gUc" customClass="AppTextField" customModule="Swappy" customModuleProvider="target">
                                                                 <rect key="frame" x="16" y="0.0" width="382" height="60"/>
@@ -137,7 +137,7 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dd2-eb-Vhw">
-                                                        <rect key="frame" x="0.0" y="366" width="414" height="68"/>
+                                                        <rect key="frame" x="0.0" y="376" width="414" height="68"/>
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QFE-Gu-eI8" customClass="AppTextField" customModule="Swappy" customModuleProvider="target">
                                                                 <rect key="frame" x="16" y="0.0" width="382" height="60"/>
@@ -160,7 +160,7 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gcA-iz-CVg">
-                                                        <rect key="frame" x="0.0" y="434" width="414" height="68"/>
+                                                        <rect key="frame" x="0.0" y="444" width="414" height="68"/>
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1AG-IK-3ib" customClass="AppTextField" customModule="Swappy" customModuleProvider="target">
                                                                 <rect key="frame" x="16" y="0.0" width="382" height="60"/>
@@ -183,7 +183,7 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7by-8B-B5y">
-                                                        <rect key="frame" x="0.0" y="502" width="414" height="68"/>
+                                                        <rect key="frame" x="0.0" y="512" width="414" height="68"/>
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Rd-ko-Gd2" customClass="AppTextField" customModule="Swappy" customModuleProvider="target">
                                                                 <rect key="frame" x="16" y="0.0" width="382" height="60"/>
@@ -206,7 +206,7 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IZc-fE-U4E">
-                                                        <rect key="frame" x="0.0" y="570" width="414" height="68"/>
+                                                        <rect key="frame" x="0.0" y="580" width="414" height="68"/>
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ELk-ux-IJT" customClass="AppTextField" customModule="Swappy" customModuleProvider="target">
                                                                 <rect key="frame" x="16" y="0.0" width="382" height="60"/>
@@ -229,7 +229,7 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nba-3A-dpL">
-                                                        <rect key="frame" x="0.0" y="638" width="414" height="84"/>
+                                                        <rect key="frame" x="0.0" y="648" width="414" height="84"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ehE-zJ-d4C" customClass="MainButton" customModule="Swappy" customModuleProvider="target">
                                                                 <rect key="frame" x="16" y="16" width="382" height="52"/>
@@ -237,6 +237,9 @@
                                                                     <constraint firstAttribute="height" constant="52" id="sL6-j4-aCH"/>
                                                                 </constraints>
                                                                 <state key="normal" title="Готово"/>
+                                                                <connections>
+                                                                    <action selector="createProductTapped:" destination="bty-MB-qlf" eventType="touchUpInside" id="duA-Xf-wpj"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -296,40 +299,74 @@
             <objects>
                 <viewController id="nj0-WZ-Xl6" customClass="PhotosViewController" customModule="Swappy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lZD-JE-Xtl">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="160"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Zkn-lA-2b1">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="160"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="AxU-fp-4Hr">
-                                    <size key="itemSize" width="80" height="80"/>
+                                    <size key="itemSize" width="90" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCollectionViewCell" id="DUb-os-z6Q" customClass="PhotoCollectionViewCell" customModule="Swappy" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="140" height="80"/>
+                                        <rect key="frame" x="16" y="0.0" width="110" height="60"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="140" height="80"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="110" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera" translatesAutoresizingMaskIntoConstraints="NO" id="BoU-3G-aT8">
-                                                    <rect key="frame" x="0.0" y="0.0" width="140" height="80"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera" translatesAutoresizingMaskIntoConstraints="NO" id="BoU-3G-aT8">
+                                                    <rect key="frame" x="0.0" y="0.0" width="110" height="60"/>
                                                 </imageView>
+                                                <view clipsSubviews="YES" alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KR4-tA-X5V">
+                                                    <rect key="frame" x="0.0" y="0.0" width="110" height="60"/>
+                                                    <subviews>
+                                                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="L1s-nG-UfC">
+                                                            <rect key="frame" x="8" y="50" width="94" height="2"/>
+                                                        </progressView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="L1s-nG-UfC" secondAttribute="bottom" constant="8" id="WL1-Yq-wCc"/>
+                                                        <constraint firstAttribute="trailing" secondItem="L1s-nG-UfC" secondAttribute="trailing" constant="8" id="lE4-hM-PgN"/>
+                                                        <constraint firstItem="L1s-nG-UfC" firstAttribute="leading" secondItem="KR4-tA-X5V" secondAttribute="leading" constant="8" id="mKu-JV-UfA"/>
+                                                    </constraints>
+                                                </view>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ynO-cd-7Bb">
+                                                    <rect key="frame" x="86" y="0.0" width="24" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="ynO-cd-7Bb" secondAttribute="height" multiplier="1:1" id="Eud-9H-wHV"/>
+                                                    </constraints>
+                                                    <state key="normal" image="close"/>
+                                                    <connections>
+                                                        <action selector="closeTapped:" destination="DUb-os-z6Q" eventType="touchUpInside" id="bjT-u7-Fwh"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                         </view>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="KR4-tA-X5V" secondAttribute="trailing" id="18g-DX-bJT"/>
+                                            <constraint firstItem="KR4-tA-X5V" firstAttribute="top" secondItem="DUb-os-z6Q" secondAttribute="top" id="21v-uz-sCc"/>
+                                            <constraint firstAttribute="trailing" secondItem="ynO-cd-7Bb" secondAttribute="trailing" id="CUd-Sl-Agw"/>
                                             <constraint firstItem="BoU-3G-aT8" firstAttribute="top" secondItem="DUb-os-z6Q" secondAttribute="top" id="Ow0-YJ-kbL"/>
+                                            <constraint firstItem="ynO-cd-7Bb" firstAttribute="top" secondItem="DUb-os-z6Q" secondAttribute="top" id="T79-zC-Lth"/>
+                                            <constraint firstItem="ynO-cd-7Bb" firstAttribute="height" secondItem="BoU-3G-aT8" secondAttribute="height" multiplier="6:15" id="XL8-XD-NMI"/>
                                             <constraint firstItem="BoU-3G-aT8" firstAttribute="leading" secondItem="DUb-os-z6Q" secondAttribute="leading" id="cBY-R6-hW3"/>
+                                            <constraint firstAttribute="bottom" secondItem="KR4-tA-X5V" secondAttribute="bottom" id="iTq-nW-7Ak"/>
+                                            <constraint firstItem="KR4-tA-X5V" firstAttribute="leading" secondItem="DUb-os-z6Q" secondAttribute="leading" id="udP-kI-lY7"/>
                                             <constraint firstAttribute="trailing" secondItem="BoU-3G-aT8" secondAttribute="trailing" id="xoZ-LJ-NZ7"/>
                                             <constraint firstAttribute="bottom" secondItem="BoU-3G-aT8" secondAttribute="bottom" id="zby-gs-8EP"/>
                                         </constraints>
-                                        <size key="customSize" width="140" height="80"/>
+                                        <size key="customSize" width="110" height="60"/>
                                         <connections>
+                                            <outlet property="closeButton" destination="ynO-cd-7Bb" id="a4u-d9-op3"/>
                                             <outlet property="imageView" destination="BoU-3G-aT8" id="Uhf-4y-xVC"/>
+                                            <outlet property="progressContainer" destination="KR4-tA-X5V" id="oSb-G2-84z"/>
+                                            <outlet property="progressView" destination="L1s-nG-UfC" id="F4i-eY-wGr"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -354,5 +391,6 @@
     </scenes>
     <resources>
         <image name="camera" width="110" height="60"/>
+        <image name="close" width="28" height="28"/>
     </resources>
 </document>
