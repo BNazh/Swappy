@@ -54,7 +54,7 @@
                                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="La3-wV-4A0">
                                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="160"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="160" id="kVa-Wq-Kl2"/>
+                                                                    <constraint firstAttribute="height" priority="999" constant="160" id="ANA-Sf-AaO"/>
                                                                 </constraints>
                                                                 <connections>
                                                                     <segue destination="nj0-WZ-Xl6" kind="embed" id="Gsb-5C-fJ7"/>
@@ -286,13 +286,14 @@
                         <outlet property="contactInfoTextField" destination="0Rd-ko-Gd2" id="pIR-wh-bpP"/>
                         <outlet property="descriptionTextField" destination="dTZ-Cr-gUc" id="5CY-of-O77"/>
                         <outlet property="nameTextField" destination="ile-UC-4K9" id="egG-HN-XaG"/>
+                        <outlet property="photosHeightConstraint" destination="ANA-Sf-AaO" id="sNY-sR-m8K"/>
                         <outlet property="priceTextField" destination="1AG-IK-3ib" id="tzT-hV-9Ns"/>
                         <outlet property="sizeTextField" destination="QFE-Gu-eI8" id="Zlw-tU-RKS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K6O-yh-IUq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="50" y="94"/>
+            <point key="canvasLocation" x="49.275362318840585" y="93.75"/>
         </scene>
         <!--Photos View Controller-->
         <scene sceneID="hhx-VA-joW">
@@ -386,7 +387,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HUT-kU-sSI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="841" y="-74"/>
+            <point key="canvasLocation" x="814" y="-94"/>
         </scene>
     </scenes>
     <resources>

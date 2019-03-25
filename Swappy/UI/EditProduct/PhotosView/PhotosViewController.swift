@@ -41,10 +41,7 @@ final class PhotosViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        
-        collectionView.reloadData()
+        setupCollectionView()
     }
 }
 
@@ -126,5 +123,33 @@ private extension PhotosViewController {
             
             cellIndex = cellIndex + 1
         }
+    }
+    
+    // Collection View
+    
+    func setupCollectionView() {
+        collectionView.delegate = self
+        collectionView.dataSource = self
+    
+        setupFlowLayoutDelegate()
+        
+        collectionView.reloadData()
+    }
+    
+    func setupFlowLayoutDelegate() {
+        guard let flowLayout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout else {
+            return
+        }
+        
+        let numberOfCellsPerRow: CGFloat = 3
+        
+        let cellHorizontalSpacing = flowLayout.minimumInteritemSpacing * numberOfCellsPerRow
+        let sectionSpacing = flowLayout.sectionInset.left + flowLayout.sectionInset.right
+        let totalHorizontalSpacing = cellHorizontalSpacing + sectionSpacing
+        
+        let cellWidth = (view.frame.width - totalHorizontalSpacing) / numberOfCellsPerRow
+        let cellHeight = (cellWidth * 60) / 110
+        
+        flowLayout.itemSize = CGSize(width: cellWidth, height: cellHeight)
     }
 }

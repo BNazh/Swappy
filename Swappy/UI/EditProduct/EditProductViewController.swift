@@ -25,6 +25,7 @@ final class EditProductViewController: UIViewController {
     @IBOutlet weak var priceTextField: AppTextField!
     @IBOutlet weak var contactInfoTextField: AppTextField!
     @IBOutlet weak var categoryTextField: AppTextField!
+    @IBOutlet weak var photosHeightConstraint: NSLayoutConstraint!
     
     weak var photosViewController: PhotosViewController?
     
@@ -34,6 +35,7 @@ final class EditProductViewController: UIViewController {
         super.viewDidLoad()
         
         self.title = presenter.screenTitle
+        setupPhotosHeight()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -76,5 +78,15 @@ private extension EditProductViewController {
             city: categoryTextField.text ?? "",
             contactPhone: contactInfoTextField.text ?? ""
         )
+    }
+    
+    func setupPhotosHeight() {
+        let layout = photosViewController?.collectionView?.collectionViewLayout
+        guard let contentHeight = layout?.collectionViewContentSize.height else {
+            return
+        }
+        
+        photosHeightConstraint.constant = contentHeight
+        photosViewController?.collectionView.layoutIfNeeded()
     }
 }
