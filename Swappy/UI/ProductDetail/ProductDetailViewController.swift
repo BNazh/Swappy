@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol ProductDetailView: class, ErrorView, LoadingView {
+protocol ProductDetailView: class, ErrorView, LoadingView, OkAlertView {
     func showProduct(viewModel: ProductViewModel)
 }
 
@@ -49,11 +49,22 @@ class ProductDetailViewController: UIViewController {
     }
     
     @IBAction func updateProductTapped(_ sender: UIButton) {
-        
+        presenter.showUpdateProduct()
     }
     
     @IBAction func deleteProductTapped(_ sender: UIButton) {
+        let alert = UIAlertController(title: "Подтверждение", message: "Вы действительно хотите удалить ваше объявление?", preferredStyle: .alert)
         
+        let deleteAction = UIAlertAction(title: "Удалить", style: .destructive) { [weak self] _ in
+            self?.presenter.deleteProduct()
+        }
+        
+        let cancelAction = UIAlertAction(title: "Отменить", style: .cancel, handler: nil)
+        
+        alert.addAction(deleteAction)
+        alert.addAction(cancelAction)
+        
+        present(alert, animated: true, completion: nil)
     }
 }
 

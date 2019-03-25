@@ -11,6 +11,7 @@ import UIKit
 protocol EditProductView: class, LoadingView, ErrorView {
     
     func showProduct(viewModel: EditProductViewModel)
+    func close()
 }
 
 final class EditProductViewController: UIViewController {
@@ -27,6 +28,7 @@ final class EditProductViewController: UIViewController {
     @IBOutlet weak var contactInfoTextField: AppTextField!
     @IBOutlet weak var categoryTextField: AppTextField!
     @IBOutlet weak var photosHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var doneButton: MainButton!
     
     
     weak var photosViewController: PhotosViewController?
@@ -36,7 +38,8 @@ final class EditProductViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = presenter.screenTitle
+        title = presenter.screenTitle
+        doneButton.setTitle(presenter.buttonTitle, for: .normal)
         
         setupPhotosHeight()
         setupCategoryTextField()
@@ -52,7 +55,7 @@ final class EditProductViewController: UIViewController {
     
     @IBAction func createProductTapped(_ sender: UIButton) {
         let productRO = productRequestObject
-        presenter.createProduct(productRO)
+        presenter.performProductAction(productRO: productRO)
     }
 }
 
@@ -65,6 +68,10 @@ extension EditProductViewController: EditProductView {
         priceTextField.text = viewModel.price
         contactInfoTextField.text = viewModel.contactInfo
         categoryTextField.text = viewModel.category
+    }
+    
+    func close() {
+        navigationController?.popViewController(animated: true)
     }
 }
 

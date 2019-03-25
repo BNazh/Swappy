@@ -77,6 +77,7 @@
 		E1F0176A224935BA001A10D7 /* TextFieldPickerDDM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F01769224935BA001A10D7 /* TextFieldPickerDDM.swift */; };
 		E1F0176D22493CF7001A10D7 /* TipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F0176C22493CF7001A10D7 /* TipView.swift */; };
 		E1F0176F22493E7A001A10D7 /* DeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F0176E22493E7A001A10D7 /* DeleteButton.swift */; };
+		E1F017722249624B001A10D7 /* OkAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F017712249624B001A10D7 /* OkAlertView.swift */; };
 		E1FC309C22378BCB00DF1325 /* ProductCatalogRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FC309B22378BCB00DF1325 /* ProductCatalogRouter.swift */; };
 		E1FC309E22378CC100DF1325 /* UIViewController+Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FC309D22378CC100DF1325 /* UIViewController+Storyboard.swift */; };
 		E1FC30A02238504100DF1325 /* ProductDetailAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FC309F2238504100DF1325 /* ProductDetailAssembly.swift */; };
@@ -210,6 +211,7 @@
 		E1F01769224935BA001A10D7 /* TextFieldPickerDDM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldPickerDDM.swift; sourceTree = "<group>"; };
 		E1F0176C22493CF7001A10D7 /* TipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipView.swift; sourceTree = "<group>"; };
 		E1F0176E22493E7A001A10D7 /* DeleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButton.swift; sourceTree = "<group>"; };
+		E1F017712249624B001A10D7 /* OkAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OkAlertView.swift; sourceTree = "<group>"; };
 		E1FC309B22378BCB00DF1325 /* ProductCatalogRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCatalogRouter.swift; sourceTree = "<group>"; };
 		E1FC309D22378CC100DF1325 /* UIViewController+Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Storyboard.swift"; sourceTree = "<group>"; };
 		E1FC309F2238504100DF1325 /* ProductDetailAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailAssembly.swift; sourceTree = "<group>"; };
@@ -604,6 +606,7 @@
 				E111748A2242DBD700BD19B4 /* LoadingView.swift */,
 				E111748C2242DBEA00BD19B4 /* ErrorView.swift */,
 				E1F0176C22493CF7001A10D7 /* TipView.swift */,
+				E1F017712249624B001A10D7 /* OkAlertView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1022,6 +1025,7 @@
 				E1BC5AF222318370001FD1D6 /* UIView+ReusableIdentifiers.swift in Sources */,
 				E1BC5AC122310C0E001FD1D6 /* ProductCatalogAssembly.swift in Sources */,
 				E1117494224370B800BD19B4 /* CodeConfirmationAssembly.swift in Sources */,
+				E1F017722249624B001A10D7 /* OkAlertView.swift in Sources */,
 				E111748B2242DBD700BD19B4 /* LoadingView.swift in Sources */,
 				E164C39E2235A70E00D1AB13 /* SeparatorView.swift in Sources */,
 				E1FF3EA4223E77C100443DED /* ProductsDDMImp.swift in Sources */,

@@ -55,6 +55,21 @@ extension ProductDetailPresenterImp: ProductDetailPresenter {
     func deleteProduct() {
         view.showLoading()
         
-        productService
+        productService.deleteProduct(id: product.id) { [weak self] result in
+            self?.view.hideLoading()
+            self?.handleDeleteProduct(result: result)
+        }
+    }
+}
+
+private extension ProductDetailPresenterImp {
+    
+    func handleDeleteProduct(result: Result<Bool>) {
+        switch result {
+        case .success:
+            router.close()
+        case .failure:
+            view.showError(message: "Не удалось удалить объявление")
+        }
     }
 }

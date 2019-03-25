@@ -287,6 +287,7 @@
                         <outlet property="categoryTextField" destination="ELk-ux-IJT" id="LgG-Z5-oM9"/>
                         <outlet property="contactInfoTextField" destination="0Rd-ko-Gd2" id="pIR-wh-bpP"/>
                         <outlet property="descriptionTextField" destination="dTZ-Cr-gUc" id="5CY-of-O77"/>
+                        <outlet property="doneButton" destination="ehE-zJ-d4C" id="PGN-Qo-2GW"/>
                         <outlet property="nameTextField" destination="ile-UC-4K9" id="egG-HN-XaG"/>
                         <outlet property="photosHeightConstraint" destination="ANA-Sf-AaO" id="sNY-sR-m8K"/>
                         <outlet property="priceTextField" destination="1AG-IK-3ib" id="tzT-hV-9Ns"/>

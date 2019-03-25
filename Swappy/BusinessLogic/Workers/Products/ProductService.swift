@@ -15,11 +15,10 @@ protocol ProductService {
     func getProducts(callback:  @escaping ResultCallback<[Product]>)
     func getCurrentUserProducts(callback: @escaping ResultCallback<[Product]>)
     
-    func createProduct(_ product: ProductRO,
-                       callback: @escaping ResultCallback<Product>)
-    
     func deleteProduct(id: String,
                        callback: @escaping ResultCallback<Bool>)
     
-    func updateProduct()
+    func addProduct(_ product: ProductRO,
+                    isNew: Bool,
+                    callback: @escaping ResultCallback<Product>)
 }

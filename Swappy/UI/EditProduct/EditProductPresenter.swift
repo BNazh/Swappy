@@ -15,10 +15,11 @@ enum EditProductInitState {
 protocol EditProductPresenter: class {
     
     var screenTitle: String { get }
+    var buttonTitle: String { get }
     var categoryItems: [String] { get }
     
     func initialize()
-    func createProduct(_ productRO: ProductRO)
+    func performProductAction(productRO: ProductRO)
     
     func setState(_ state: EditProductInitState)
 }
@@ -45,12 +46,11 @@ final class EditProductPresenterImp {
 extension EditProductPresenterImp: EditProductPresenter {
     
     var screenTitle: String {
-        switch state {
-        case .add:
-            return "Разместить товар"
-        case .edit:
-            return "Изменить описание"
-        }
+        return isProductNew ? "Разместить товар" : "Изменить описание"
+    }
+    
+    var buttonTitle: String {
+        return isProductNew ? "Готово" : "Изменить"
     }
     
     var categoryItems: [String] {
@@ -67,17 +67,39 @@ extension EditProductPresenterImp: EditProductPresenter {
         }
     }
     
-    func createProduct(_ productRO: ProductRO) {
+    func performProductAction(productRO: ProductRO) {
         view.showLoading()
         
-        productService.createProduct(productRO) { [weak self] result in
+        productService.addProduct(productRO, isNew: isProductNew) { [weak self] result in
             self?.view.hideLoading()
             
-            print(result.isSuccess)
+            self?.handleAddProductActionResult(result)
         }
     }
     
     func setState(_ state: EditProductInitState) {
         self.state = state
+    }
+}
+
+private extension EditProductPresenterImp {
+    
+    var isProductNew: Bool {
+        switch state {
+        case .add:
+            return true
+        case .edit:
+            return false
+        }
+    }
+    
+    func handleAddProductActionResult(_ result: Result<Product>) {
+        switch result {
+        case .success:
+            view.close()
+        case .failure:
+            let message = isProductNew ? "Не удалось создать объявление" : "Не удалось изменить объявление"
+            view.showError(message: message)
+        }
     }
 }

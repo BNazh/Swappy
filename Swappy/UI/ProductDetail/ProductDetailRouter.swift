@@ -11,6 +11,7 @@ import UIKit
 protocol ProductDetailRouter {
     func openSeller(product: Product)
     func openProductEdit(product: Product)
+    func close()
 }
 
 final class ProductDetailRouterImp {
@@ -39,5 +40,9 @@ extension ProductDetailRouterImp: ProductDetailRouter {
         editVC.presenter.setState(.edit(product: product))
         
         viewController.navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    func close() {
+        viewController.dismiss(animated: true, completion: nil)
     }
 }

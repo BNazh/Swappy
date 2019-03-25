@@ -31,13 +31,13 @@ extension ProductServiceImp: ProductService {
             return
         }
         
-        let target = ProductsTarget.productsBySeller(
+        let request = ProductsTarget.productsBySeller(
             sellerId: sellerId,
             pageNumber: pageNumber,
             pageSize: pageSize
         )
         
-        provider.requestDecodable(target) { [weak self] (result: Result<[Product]>) in
+        provider.requestDecodable(request) { [weak self] (result: Result<[Product]>) in
             self?.handleProductsResult(result)
             callback(result)
         }
@@ -45,18 +45,30 @@ extension ProductServiceImp: ProductService {
     
     func getProducts(callback: @escaping ResultCallback<[Product]>) {
         
-        let target = ProductsTarget.products(pageNumber: pageNumber, pageSize: pageSize)
+        let request = ProductsTarget.products(pageNumber: pageNumber, pageSize: pageSize)
 
-        provider.requestDecodable(target) { [weak self] (result: Result<[Product]>) in
+        provider.requestDecodable(request) { [weak self] (result: Result<[Product]>) in
             self?.handleProductsResult(result)
             callback(result)
         }
     }
     
-    func createProduct(_ product: ProductRO, callback: @escaping ResultCallback<Product>) {
-        let target = ProductsTarget.createProduct(product: product)
+    func addProduct(_ product: ProductRO, isNew: Bool, callback: @escaping ResultCallback<Product>) {
         
-        provider.requestDecodable(target, callback: callback)
+        let request: ProductsTarget
+        if isNew {
+            request = .createProduct(product: product)
+        } else {
+            request = .updateProduct(product: product)
+        }
+        
+        provider.requestDecodable(request, callback: callback)
+    }
+    
+    func deleteProduct(id: String, callback: @escaping ResultCallback<Bool>) {
+        let request = ProductsTarget.deleteProduct(id: id)
+        
+        provider.requestDecodable(request, callback: callback)
     }
     
     func reset() {
