@@ -20,7 +20,9 @@ extension UIColor {
     static let sliderBackground = UIColor.black
     
     static let whiteSmoke = UIColor(r: 248, g: 248, b: 248)
+    static let munsell = UIColor(r: 242, g: 242, b: 242)
     static let trolleyGrey = UIColor(r: 121, g: 121, b: 121)
+    static let coralRed = UIColor(r: 255, g: 59, b: 48)
     
     static let vkBackground = UIColor(r: 81, g: 118, b: 164)
 }

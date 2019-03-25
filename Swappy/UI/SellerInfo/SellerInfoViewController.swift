@@ -12,7 +12,7 @@ protocol SellerInfoView: class {
     func displaySeller(viewModel: SellerInfoViewModel)
 }
 
-final class SellerInfoViewController: CardViewController {
+final class SellerInfoViewController: CardViewController, TipView {
     
     @IBOutlet weak var contactButton: SecondaryButton!
     @IBOutlet weak var copyButton: MainButton!
@@ -38,6 +38,8 @@ final class SellerInfoViewController: CardViewController {
     @IBAction func copyTapped(_ sender: UIButton) {
         let pasteboard = UIPasteboard.general
         pasteboard.string = contactButton.titleLabel?.text
+        
+        showTip(text: "Скопировано")
     }
     
     @IBAction func contactButtonTapped(_ sender: UIButton) {

@@ -15,6 +15,7 @@ enum EditProductInitState {
 protocol EditProductPresenter: class {
     
     var screenTitle: String { get }
+    var categoryItems: [String] { get }
     
     func initialize()
     func createProduct(_ productRO: ProductRO)
@@ -50,6 +51,10 @@ extension EditProductPresenterImp: EditProductPresenter {
         case .edit:
             return "Изменить описание"
         }
+    }
+    
+    var categoryItems: [String] {
+        return ["Москва", "Санкт-Петербург"]
     }
     
     func initialize() {

@@ -8,18 +8,20 @@
 
 import UIKit
 
-protocol ProductDetailView: class {
+protocol ProductDetailView: class, ErrorView, LoadingView {
     func showProduct(viewModel: ProductViewModel)
 }
 
 class ProductDetailViewController: UIViewController {
+    
+    var presenter: ProductDetailPresenter!
 
     @IBOutlet weak var imageSlider: ImageSlider!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
-    var presenter: ProductDetailPresenter!
+    // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,12 +38,22 @@ class ProductDetailViewController: UIViewController {
         return true
     }
     
+    // MARK: - Actions
+    
     @IBAction func openSellerTouchedDown(_ sender: UIButton) {
         presenter.showSeller()
     }
     
     @IBAction func closeTapped(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func updateProductTapped(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func deleteProductTapped(_ sender: UIButton) {
+        
     }
 }
 

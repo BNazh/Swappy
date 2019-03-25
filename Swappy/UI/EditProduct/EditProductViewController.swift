@@ -18,6 +18,7 @@ final class EditProductViewController: UIViewController {
     // MARK: - Properties
     
     var presenter: EditProductPresenter!
+    var categoryDDM: TextFieldPickerDDM!
     
     @IBOutlet weak var nameTextField: AppTextField!
     @IBOutlet weak var descriptionTextField: AppTextField!
@@ -27,6 +28,7 @@ final class EditProductViewController: UIViewController {
     @IBOutlet weak var categoryTextField: AppTextField!
     @IBOutlet weak var photosHeightConstraint: NSLayoutConstraint!
     
+    
     weak var photosViewController: PhotosViewController?
     
     // MARK: - Lifecycle
@@ -35,7 +37,9 @@ final class EditProductViewController: UIViewController {
         super.viewDidLoad()
         
         self.title = presenter.screenTitle
+        
         setupPhotosHeight()
+        setupCategoryTextField()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -88,5 +92,10 @@ private extension EditProductViewController {
         
         photosHeightConstraint.constant = contentHeight
         photosViewController?.collectionView.layoutIfNeeded()
+    }
+    
+    func setupCategoryTextField() {
+        let items = presenter.categoryItems
+        categoryDDM.setup(textField: categoryTextField, with: items)
     }
 }

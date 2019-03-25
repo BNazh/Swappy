@@ -22,6 +22,7 @@ final class EditProductAssembly: Assembly {
             let presenter = container.resolve(EditProductPresenter.self, argument: viewController)!
             
             viewController.presenter = presenter
+            viewController.categoryDDM = resolver.resolve(TextFieldPickerDDM.self)!
         }
     }
 }

@@ -74,6 +74,9 @@
 		E1F0175F2246B286001A10D7 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F0175E2246B286001A10D7 /* PhotosViewController.swift */; };
 		E1F017632246B42A001A10D7 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F017622246B42A001A10D7 /* PhotoCollectionViewCell.swift */; };
 		E1F01767224799CA001A10D7 /* UIImage+PHAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F01766224799CA001A10D7 /* UIImage+PHAsset.swift */; };
+		E1F0176A224935BA001A10D7 /* TextFieldPickerDDM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F01769224935BA001A10D7 /* TextFieldPickerDDM.swift */; };
+		E1F0176D22493CF7001A10D7 /* TipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F0176C22493CF7001A10D7 /* TipView.swift */; };
+		E1F0176F22493E7A001A10D7 /* DeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F0176E22493E7A001A10D7 /* DeleteButton.swift */; };
 		E1FC309C22378BCB00DF1325 /* ProductCatalogRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FC309B22378BCB00DF1325 /* ProductCatalogRouter.swift */; };
 		E1FC309E22378CC100DF1325 /* UIViewController+Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FC309D22378CC100DF1325 /* UIViewController+Storyboard.swift */; };
 		E1FC30A02238504100DF1325 /* ProductDetailAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FC309F2238504100DF1325 /* ProductDetailAssembly.swift */; };
@@ -204,6 +207,9 @@
 		E1F0175E2246B286001A10D7 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		E1F017622246B42A001A10D7 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		E1F01766224799CA001A10D7 /* UIImage+PHAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+PHAsset.swift"; sourceTree = "<group>"; };
+		E1F01769224935BA001A10D7 /* TextFieldPickerDDM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldPickerDDM.swift; sourceTree = "<group>"; };
+		E1F0176C22493CF7001A10D7 /* TipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipView.swift; sourceTree = "<group>"; };
+		E1F0176E22493E7A001A10D7 /* DeleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButton.swift; sourceTree = "<group>"; };
 		E1FC309B22378BCB00DF1325 /* ProductCatalogRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCatalogRouter.swift; sourceTree = "<group>"; };
 		E1FC309D22378CC100DF1325 /* UIViewController+Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Storyboard.swift"; sourceTree = "<group>"; };
 		E1FC309F2238504100DF1325 /* ProductDetailAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailAssembly.swift; sourceTree = "<group>"; };
@@ -584,6 +590,24 @@
 			path = PhotosView;
 			sourceTree = "<group>";
 		};
+		E1F0176822493598001A10D7 /* TextFieldPickerDDM */ = {
+			isa = PBXGroup;
+			children = (
+				E1F01769224935BA001A10D7 /* TextFieldPickerDDM.swift */,
+			);
+			path = TextFieldPickerDDM;
+			sourceTree = "<group>";
+		};
+		E1F0176B22493CE4001A10D7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E111748A2242DBD700BD19B4 /* LoadingView.swift */,
+				E111748C2242DBEA00BD19B4 /* ErrorView.swift */,
+				E1F0176C22493CF7001A10D7 /* TipView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		E1FC30A32238DC4400DF1325 /* SellerInfo */ = {
 			isa = PBXGroup;
 			children = (
@@ -601,6 +625,7 @@
 				E164C39B223591AF00D1AB13 /* MainButton.swift */,
 				E1FF3EB8223EE18100443DED /* VKButton.swift */,
 				E1FC30B1223977B900DF1325 /* SecondaryButton.swift */,
+				E1F0176E22493E7A001A10D7 /* DeleteButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -608,9 +633,8 @@
 		E1FF3E6A223A301700443DED /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E1F0176B22493CE4001A10D7 /* Extensions */,
 				E1FF3E6B223A302900443DED /* CardViewController.swift */,
-				E111748A2242DBD700BD19B4 /* LoadingView.swift */,
-				E111748C2242DBEA00BD19B4 /* ErrorView.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -668,6 +692,7 @@
 		E1FF3EC1223EEA8E00443DED /* EditProduct */ = {
 			isa = PBXGroup;
 			children = (
+				E1F0176822493598001A10D7 /* TextFieldPickerDDM */,
 				E1F0175D2246B26F001A10D7 /* PhotosView */,
 				E10850C3223F276D00941EA5 /* EditProduct.storyboard */,
 				E1FF3EC3223EEA8E00443DED /* EditProductViewController.swift */,
@@ -982,6 +1007,7 @@
 				E111747E2241860400BD19B4 /* AuthService.swift in Sources */,
 				E1FF3E91223A338800443DED /* LoginCardViewController.swift in Sources */,
 				E1FC30AF2239738200DF1325 /* ProductDetailRouter.swift in Sources */,
+				E1F0176F22493E7A001A10D7 /* DeleteButton.swift in Sources */,
 				E10850C2223EF78F00941EA5 /* PhoneLoginViewController.swift in Sources */,
 				E1FC30A52238DC5C00DF1325 /* SellerInfoViewController.swift in Sources */,
 				E1B4B1DB2235BDE400520082 /* ProductDetailPresenter.swift in Sources */,
@@ -1014,11 +1040,13 @@
 				E1BC5AE122312D5A001FD1D6 /* UIFont+App.swift in Sources */,
 				E19F7DDD2231063900BAFC7A /* Swappy.xcdatamodeld in Sources */,
 				E11174982246231600BD19B4 /* ImageTarget.swift in Sources */,
+				E1F0176D22493CF7001A10D7 /* TipView.swift in Sources */,
 				E1FC30AB22396F7400DF1325 /* SellerInfoViewModel.swift in Sources */,
 				E1BC5AC622310CB7001FD1D6 /* Product.swift in Sources */,
 				E1BC5AC822310E88001FD1D6 /* Price.swift in Sources */,
 				E1BC5AD622312199001FD1D6 /* ProductCatalogPresenter.swift in Sources */,
 				E19F7E1222310B0200BAFC7A /* ProductServiceImp.swift in Sources */,
+				E1F0176A224935BA001A10D7 /* TextFieldPickerDDM.swift in Sources */,
 				E1FF3E93223A339200443DED /* LoginCardPresenter.swift in Sources */,
 				E164C39722326BAD00D1AB13 /* Collection+SafeSubscription.swift in Sources */,
 				E1FC309C22378BCB00DF1325 /* ProductCatalogRouter.swift in Sources */,
