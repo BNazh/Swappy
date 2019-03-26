@@ -7,7 +7,7 @@
 //
 
 protocol ProductDetailPresenter {
-    func setProduct(_ product: Product)
+    func setInitState(product: Product, isOwner: Bool)
     
     func showProduct()
     func showSeller()
@@ -23,6 +23,7 @@ final class ProductDetailPresenterImp {
     let productService: ProductService
     
     var product: Product!
+    var isOwner: Bool = false
     
     init(view: ProductDetailView,
          router: ProductDetailRouter,
@@ -35,8 +36,9 @@ final class ProductDetailPresenterImp {
 
 extension ProductDetailPresenterImp: ProductDetailPresenter {
     
-    func setProduct(_ product: Product) {
+    func setInitState(product: Product, isOwner: Bool) {
         self.product = product
+        self.isOwner = isOwner
     }
     
     func showProduct() {

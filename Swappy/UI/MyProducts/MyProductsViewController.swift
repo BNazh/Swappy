@@ -43,7 +43,6 @@ final class MyProductsViewController: UIViewController {
         
         switch segue.destination {
         case let containerVC as NoProductsViewController:
-            
             containerVC.addProductTappedBlock = { [weak self] in
                 self?.presenter.addProduct()
             }

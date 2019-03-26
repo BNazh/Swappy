@@ -29,7 +29,7 @@ extension ProductCatalogRouterImp: ProductCatalogRouter {
     func openProductDetail(product: Product) {
         let productDetail: ProductDetailViewController = UIStoryboard.createViewController()
         
-        productDetail.presenter.setProduct(product)
+        productDetail.presenter.setInitState(product: product, isOwner: false)
         
         let presentingVC = viewController.navigationController
         presentingVC?.present(productDetail, animated: true, completion: nil)
