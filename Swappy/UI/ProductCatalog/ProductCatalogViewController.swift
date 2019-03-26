@@ -49,4 +49,8 @@ extension ProductCatalogViewController: ProductsDDMDelegate {
     func didSelectProduct(withId id: String) {
         presenter.selectProduct(with: id)
     }
+    
+    func refresh() {
+        presenter.refreshProducts()
+    }
 }

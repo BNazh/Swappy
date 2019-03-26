@@ -69,4 +69,8 @@ extension MyProductsViewController: ProductsDDMDelegate {
     func willDisplayLastCell() {
         presenter.loadMyProducts()
     }
+    
+    func refresh() {
+        presenter.refreshMyProducts()
+    }
 }

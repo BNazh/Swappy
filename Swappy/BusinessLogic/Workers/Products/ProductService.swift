@@ -6,7 +6,7 @@
 //  Copyright © 2019 SwappyTeam. All rights reserved.
 //
 
-import Alamofire
+// TODO: скорее всего логику пагинации лучше вынести отсюда
 
 protocol ProductService {
     
@@ -21,4 +21,6 @@ protocol ProductService {
     func addProduct(_ product: ProductRO,
                     isNew: Bool,
                     callback: @escaping ResultCallback<Product>)
+    
+    func reset()
 }

@@ -14,16 +14,11 @@ final class ProductsDDMImp: NSObject {
     
     private weak var delegate: ProductsDDMDelegate?
     private weak var collectionView: UICollectionView?
+    
+    private let refreshControl = UIRefreshControl()
 }
 
 extension ProductsDDMImp: ProductsDDM {
-    
-    func reloadProducts(_ productsCellModels: [ProductCellViewModel]) {
-        cellModels = productsCellModels
-        
-        collectionView?.isHidden = cellModels.isEmpty
-        collectionView?.reloadData()
-    }
     
     func setup(delegate: ProductsDDMDelegate, collectionView: UICollectionView) {
         self.delegate = delegate
@@ -32,11 +27,22 @@ extension ProductsDDMImp: ProductsDDM {
         collectionView.dataSource = self
         collectionView.delegate = self
         
+        setupRefreshControl()
+        
         collectionView.register(cellType: ProductCollectionViewCell.self)
         
         if let layout = collectionView.collectionViewLayout as? PinterestLayout {
             layout.delegate = self
         }
+    }
+    
+    func reloadProducts(_ productsCellModels: [ProductCellViewModel]) {
+        cellModels = productsCellModels
+        
+        collectionView?.isHidden = cellModels.isEmpty
+        collectionView?.reloadData()
+        
+        refreshControl.endRefreshing()
     }
 }
 
@@ -77,5 +83,19 @@ extension ProductsDDMImp: PinterestLayoutDelegate {
     func collectionView(_ collectionView: UICollectionView, heightForCellAtIndexPath indexPath: IndexPath, withWidth width: CGFloat) -> CGFloat {
         let viewModel = cellModels[indexPath.row]
         return viewModel.cellHeight(withWidth: width)
+    }
+}
+
+private extension ProductsDDMImp {
+    
+    func setupRefreshControl() {
+        refreshControl.addTarget(self, action: #selector(refreshAction), for: .valueChanged)
+
+        collectionView?.refreshControl = refreshControl
+    }
+    
+    @objc
+    func refreshAction() {
+        delegate?.refresh()
     }
 }

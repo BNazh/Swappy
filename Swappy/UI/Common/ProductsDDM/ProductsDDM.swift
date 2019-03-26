@@ -14,6 +14,7 @@ protocol ProductsDDMDelegate: class {
     
     func willDisplayLastCell()
     func didSelectProduct(withId id: String)
+    func refresh()
 }
 
 protocol ProductsDDM: class {

@@ -37,9 +37,12 @@ target 'Swappy' do
   # Photos picker
   pod 'BSImagePicker', '~> 2.8'
   
+  # Push Notifications
+  pod 'Firebase/Core'
+  pod 'Firebase/Messaging'
   
-  
-  
+  # VK api
+  pod 'SwiftyVK'
   
   target 'SwappyTests' do
     inherit! :search_paths

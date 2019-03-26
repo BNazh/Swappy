@@ -11,6 +11,7 @@ import Foundation
 protocol MyProductsPresenter: class {
     
     func loadMyProducts()
+    func refreshMyProducts()
     func addProduct()
     func openProduct(withId id: String)
 }
@@ -59,6 +60,11 @@ extension MyProductsPresenterImp: MyProductsPresenter {
                 self?.handleGetProductsError(error)
             }
         }
+    }
+    
+    func refreshMyProducts() {
+        productService.reset()
+        loadMyProducts()
     }
     
     func openProduct(withId id: String) {

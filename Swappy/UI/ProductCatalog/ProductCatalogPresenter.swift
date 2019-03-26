@@ -9,6 +9,7 @@
 protocol ProductCatalogPresenter {
     
     func loadProducts()
+    func refreshProducts()
     func selectProduct(with id: String)
 }
 
@@ -54,6 +55,12 @@ extension ProductCatalogPresenterImp: ProductCatalogPresenter {
                 self?.view.showError(message: appError.localizedString)
             }
         }
+    }
+    
+    func refreshProducts() {
+        productService.reset()
+        
+        loadProducts()
     }
     
     func selectProduct(with id: String) {
