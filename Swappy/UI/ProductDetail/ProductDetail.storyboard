@@ -207,8 +207,10 @@
                     <size key="freeformSize" width="375" height="1000"/>
                     <connections>
                         <outlet property="descriptionLabel" destination="qlO-4F-iu9" id="kZf-Fz-Lxl"/>
+                        <outlet property="editContainerView" destination="yeP-cA-mVS" id="WnG-4p-s9Z"/>
                         <outlet property="imageSlider" destination="qgW-H7-QhE" id="4aj-wh-aCi"/>
                         <outlet property="priceLabel" destination="dDC-ey-PPN" id="taa-w2-xaD"/>
+                        <outlet property="sellerContainerView" destination="dr0-30-c2q" id="t3N-Pm-O6N"/>
                         <outlet property="titleLabel" destination="i9B-9I-e8R" id="bOj-wz-dmK"/>
                     </connections>
                 </viewController>

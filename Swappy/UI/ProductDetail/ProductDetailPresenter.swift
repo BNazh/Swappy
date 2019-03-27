@@ -9,6 +9,7 @@
 protocol ProductDetailPresenter {
     func setInitState(product: Product, isOwner: Bool)
     
+    func setActions()
     func showProduct()
     func showSeller()
     func showUpdateProduct()
@@ -61,6 +62,10 @@ extension ProductDetailPresenterImp: ProductDetailPresenter {
             self?.view.hideLoading()
             self?.handleDeleteProduct(result: result)
         }
+    }
+    
+    func setActions() {
+        view.displayActionSettings(isSellerButtonHidden: isOwner, isEditViewHidden: !isOwner)
     }
 }
 

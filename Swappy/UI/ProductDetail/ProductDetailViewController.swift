@@ -10,6 +10,7 @@ import UIKit
 
 protocol ProductDetailView: class, ErrorView, LoadingView, OkAlertView {
     func showProduct(viewModel: ProductViewModel)
+    func displayActionSettings(isSellerButtonHidden: Bool, isEditViewHidden: Bool)
 }
 
 class ProductDetailViewController: UIViewController {
@@ -21,6 +22,10 @@ class ProductDetailViewController: UIViewController {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
+    @IBOutlet weak var sellerContainerView: UIView!
+    @IBOutlet weak var editContainerView: UIView!
+    
+    
     // MARK: - Lifecycle
 
     override func viewDidLoad() {
@@ -31,7 +36,7 @@ class ProductDetailViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        setup()
+        imageSlider.roundCorners(corners: [.topRight, .topLeft], radius: 16)
     }
     
     override var prefersStatusBarHidden: Bool {
@@ -77,11 +82,9 @@ extension ProductDetailViewController: ProductDetailView {
         priceLabel.text = viewModel.price
         descriptionLabel.text = viewModel.description
     }
-}
-
-private extension ProductDetailViewController {
     
-    func setup() {
-        imageSlider.roundCorners(corners: [.topRight, .topLeft], radius: 16)
+    func displayActionSettings(isSellerButtonHidden: Bool, isEditViewHidden: Bool) {
+        editContainerView.isHidden = isEditViewHidden
+        sellerContainerView.isHidden = isSellerButtonHidden
     }
 }
