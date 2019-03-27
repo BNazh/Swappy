@@ -35,6 +35,9 @@
 		E164C39E2235A70E00D1AB13 /* SeparatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E164C39D2235A70E00D1AB13 /* SeparatorView.swift */; };
 		E164C3A02235A8AA00D1AB13 /* UIColor+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E164C39F2235A8AA00D1AB13 /* UIColor+App.swift */; };
 		E164C3A22235A92300D1AB13 /* ImageSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E164C3A12235A92300D1AB13 /* ImageSlider.swift */; };
+		E17CA187224C24FE00D5C955 /* AnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CA186224C24FE00D5C955 /* AnalyticsManager.swift */; };
+		E17CA189224C257100D5C955 /* AnalyticEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CA188224C257100D5C955 /* AnalyticEvent.swift */; };
+		E17CA18B224C27CB00D5C955 /* AppMetricaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CA18A224C27CB00D5C955 /* AppMetricaManager.swift */; };
 		E19F7DD52231063900BAFC7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19F7DD42231063900BAFC7A /* AppDelegate.swift */; };
 		E19F7DDA2231063900BAFC7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E19F7DD82231063900BAFC7A /* Main.storyboard */; };
 		E19F7DDD2231063900BAFC7A /* Swappy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E19F7DDB2231063900BAFC7A /* Swappy.xcdatamodeld */; };
@@ -163,6 +166,9 @@
 		E164C39D2235A70E00D1AB13 /* SeparatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparatorView.swift; sourceTree = "<group>"; };
 		E164C39F2235A8AA00D1AB13 /* UIColor+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+App.swift"; sourceTree = "<group>"; };
 		E164C3A12235A92300D1AB13 /* ImageSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSlider.swift; sourceTree = "<group>"; };
+		E17CA186224C24FE00D5C955 /* AnalyticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsManager.swift; sourceTree = "<group>"; };
+		E17CA188224C257100D5C955 /* AnalyticEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticEvent.swift; sourceTree = "<group>"; };
+		E17CA18A224C27CB00D5C955 /* AppMetricaManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMetricaManager.swift; sourceTree = "<group>"; };
 		E19F7DD12231063900BAFC7A /* Swappy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swappy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E19F7DD42231063900BAFC7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E19F7DD92231063900BAFC7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -392,6 +398,16 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		E17CA185224C24EE00D5C955 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				E17CA186224C24FE00D5C955 /* AnalyticsManager.swift */,
+				E17CA18A224C27CB00D5C955 /* AppMetricaManager.swift */,
+				E17CA188224C257100D5C955 /* AnalyticEvent.swift */,
+			);
+			path = Analytics;
+			sourceTree = "<group>";
+		};
 		E19F7DC82231063900BAFC7A = {
 			isa = PBXGroup;
 			children = (
@@ -453,6 +469,7 @@
 		E19F7E052231064D00BAFC7A /* BusinessLogic */ = {
 			isa = PBXGroup;
 			children = (
+				E17CA185224C24EE00D5C955 /* Analytics */,
 				E11174812242B37100BD19B4 /* Core */,
 				E19F7E0E22310A3F00BAFC7A /* Services */,
 				E19F7E062231065600BAFC7A /* Targets */,
@@ -1012,6 +1029,7 @@
 				E1F017632246B42A001A10D7 /* PhotoCollectionViewCell.swift in Sources */,
 				E1FF3EB5223EDC3900443DED /* MyProductsAssembly.swift in Sources */,
 				E19F7E1022310A5200BAFC7A /* ProductService.swift in Sources */,
+				E17CA187224C24FE00D5C955 /* AnalyticsManager.swift in Sources */,
 				E11174872242B4D300BD19B4 /* PhoneLoginPresenter.swift in Sources */,
 				E11174742240AD8F00BD19B4 /* EditProductAssembly.swift in Sources */,
 				E1F0175C224644FB001A10D7 /* ImageServiceImp.swift in Sources */,
@@ -1051,6 +1069,7 @@
 				E1FF3ECB223EEE0A00443DED /* AppTextField.swift in Sources */,
 				E1BC5AE122312D5A001FD1D6 /* UIFont+App.swift in Sources */,
 				E19F7DDD2231063900BAFC7A /* Swappy.xcdatamodeld in Sources */,
+				E17CA18B224C27CB00D5C955 /* AppMetricaManager.swift in Sources */,
 				E11174982246231600BD19B4 /* ImageTarget.swift in Sources */,
 				E1F0176D22493CF7001A10D7 /* TipView.swift in Sources */,
 				E1FC30AB22396F7400DF1325 /* SellerInfoViewModel.swift in Sources */,
@@ -1070,6 +1089,7 @@
 				E1F0175F2246B286001A10D7 /* PhotosViewController.swift in Sources */,
 				E11174962243719400BD19B4 /* Core.swift in Sources */,
 				E1FF3E9E223E634A00443DED /* MainViewController.swift in Sources */,
+				E17CA189224C257100D5C955 /* AnalyticEvent.swift in Sources */,
 				E164C3932231B5DF00D1AB13 /* ProductDetailViewController.swift in Sources */,
 				E1FF3EAF223E9CCF00443DED /* MyProductsViewController.swift in Sources */,
 				E1FF3EC4223EEA8E00443DED /* EditProductPresenter.swift in Sources */,

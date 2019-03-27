@@ -38,8 +38,8 @@ target 'Swappy' do
   pod 'BSImagePicker', '~> 2.8'
   
   # Push Notifications
-  pod 'Firebase/Core', '5.3.1'
-  pod 'Firebase/Messaging', '3.3.2'
+  pod 'Firebase/Core'
+  pod 'Firebase/Messaging'
   
   # VK api
   pod 'SwiftyVK', '3.3.1'
