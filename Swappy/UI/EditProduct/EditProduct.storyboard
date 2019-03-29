@@ -116,7 +116,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wKZ-bi-S9u">
                                                         <rect key="frame" x="0.0" y="268" width="414" height="68"/>
                                                         <subviews>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dTZ-Cr-gUc" customClass="AppTextField" customModule="Swappy" customModuleProvider="target">
+                                                            <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dTZ-Cr-gUc" customClass="AppTextField" customModule="Swappy" customModuleProvider="target">
                                                                 <rect key="frame" x="16" y="0.0" width="382" height="60"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -139,7 +139,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dd2-eb-Vhw">
                                                         <rect key="frame" x="0.0" y="336" width="414" height="68"/>
                                                         <subviews>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QFE-Gu-eI8" customClass="AppTextField" customModule="Swappy" customModuleProvider="target">
+                                                            <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QFE-Gu-eI8" customClass="AppTextField" customModule="Swappy" customModuleProvider="target">
                                                                 <rect key="frame" x="16" y="0.0" width="382" height="60"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -162,7 +162,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gcA-iz-CVg">
                                                         <rect key="frame" x="0.0" y="404" width="414" height="68"/>
                                                         <subviews>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1AG-IK-3ib" customClass="AppTextField" customModule="Swappy" customModuleProvider="target">
+                                                            <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1AG-IK-3ib" customClass="AppTextField" customModule="Swappy" customModuleProvider="target">
                                                                 <rect key="frame" x="16" y="0.0" width="382" height="60"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -185,7 +185,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7by-8B-B5y">
                                                         <rect key="frame" x="0.0" y="472" width="414" height="68"/>
                                                         <subviews>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Rd-ko-Gd2" customClass="AppTextField" customModule="Swappy" customModuleProvider="target">
+                                                            <textField opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Rd-ko-Gd2" customClass="AppTextField" customModule="Swappy" customModuleProvider="target">
                                                                 <rect key="frame" x="16" y="0.0" width="382" height="60"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -208,7 +208,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IZc-fE-U4E">
                                                         <rect key="frame" x="0.0" y="540" width="414" height="68"/>
                                                         <subviews>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ELk-ux-IJT" customClass="AppTextField" customModule="Swappy" customModuleProvider="target">
+                                                            <textField opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ELk-ux-IJT" customClass="AppTextField" customModule="Swappy" customModuleProvider="target">
                                                                 <rect key="frame" x="16" y="0.0" width="382" height="60"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -231,7 +231,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nba-3A-dpL">
                                                         <rect key="frame" x="0.0" y="608" width="414" height="84"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ehE-zJ-d4C" customClass="MainButton" customModule="Swappy" customModuleProvider="target">
+                                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ehE-zJ-d4C" customClass="MainButton" customModule="Swappy" customModuleProvider="target">
                                                                 <rect key="frame" x="16" y="16" width="382" height="52"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="52" id="sL6-j4-aCH"/>
@@ -383,6 +383,7 @@
                             <constraint firstItem="Zkn-lA-2b1" firstAttribute="top" secondItem="lZD-JE-Xtl" secondAttribute="top" id="IuL-x4-cKg"/>
                             <constraint firstAttribute="bottom" secondItem="Zkn-lA-2b1" secondAttribute="bottom" id="xMX-iq-bmq"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="eA4-Md-O0I"/>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="Zkn-lA-2b1" id="gNE-Zy-hAn"/>

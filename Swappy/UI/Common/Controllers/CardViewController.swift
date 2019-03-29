@@ -8,9 +8,11 @@
 
 import UIKit
 
+// UITransitionDelegate?
+
 class CardViewController: UIViewController {
     
-    weak var shadeView: UIView?
+    private weak var shadeView: UIView?
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -22,10 +24,6 @@ class CardViewController: UIViewController {
         super.viewWillDisappear(animated)
         
         removeShade()
-    }
-    
-    override func dismiss(animated flag: Bool, completion: (() -> Void)? = nil) {
-        super.dismiss(animated: flag, completion: completion)
     }
 }
 

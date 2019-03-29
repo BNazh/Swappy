@@ -20,8 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         SwinjectStoryboard.setup()
-        IQKeyboardManager.shared.enable = true
         
+        setupKeyboardManager()
         setupUIBarButtonApperance()
         
         window?.rootViewController?.modalPresentationStyle = .currentContext
@@ -44,6 +44,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            }
 //        }
 //    }
+    
+    func setupKeyboardManager() {
+        IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.enableAutoToolbar = false
+        IQKeyboardManager.shared.keyboardDistanceFromTextField = 80
+    }
 }
 
 private func setupUIBarButtonApperance() {

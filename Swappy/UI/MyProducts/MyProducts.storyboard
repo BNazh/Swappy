@@ -30,16 +30,30 @@
                                 <collectionViewLayout key="collectionViewLayout" id="c1L-kv-lHA" customClass="PinterestLayout" customModule="Swappy" customModuleProvider="target"/>
                                 <cells/>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pJ6-Zh-uFz" customClass="MainButton" customModule="Swappy" customModuleProvider="target">
+                                <rect key="frame" x="16" y="599" width="343" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="JYK-Er-X8W"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <state key="normal" title="Разместить товар"/>
+                                <connections>
+                                    <action selector="addProduct:" destination="oxv-c3-sKl" eventType="touchUpInside" id="Is0-gd-mnM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="zOR-gk-AUC" firstAttribute="top" secondItem="nfh-d3-d50" secondAttribute="top" id="FHj-BO-RCB"/>
                             <constraint firstItem="99g-dc-USA" firstAttribute="leading" secondItem="nfh-d3-d50" secondAttribute="leading" id="KPn-b6-jCW"/>
+                            <constraint firstItem="pJ6-Zh-uFz" firstAttribute="leading" secondItem="nfh-d3-d50" secondAttribute="leading" constant="16" id="LFe-UV-qNN"/>
+                            <constraint firstItem="nfh-d3-d50" firstAttribute="trailing" secondItem="pJ6-Zh-uFz" secondAttribute="trailing" constant="16" id="QK5-N5-DTq"/>
                             <constraint firstItem="99g-dc-USA" firstAttribute="trailing" secondItem="nfh-d3-d50" secondAttribute="trailing" id="R5H-OP-6KX"/>
                             <constraint firstItem="nfh-d3-d50" firstAttribute="trailing" secondItem="zOR-gk-AUC" secondAttribute="trailing" id="SEy-61-ggb"/>
                             <constraint firstItem="nfh-d3-d50" firstAttribute="bottom" secondItem="zOR-gk-AUC" secondAttribute="bottom" id="Tu4-Ab-IQR"/>
                             <constraint firstItem="nfh-d3-d50" firstAttribute="bottom" secondItem="99g-dc-USA" secondAttribute="bottom" id="aQY-6t-9Ot"/>
                             <constraint firstItem="99g-dc-USA" firstAttribute="top" secondItem="nfh-d3-d50" secondAttribute="top" id="n1A-6m-gD0"/>
+                            <constraint firstItem="nfh-d3-d50" firstAttribute="bottom" secondItem="pJ6-Zh-uFz" secondAttribute="bottom" constant="16" id="qHN-6D-Wvb"/>
                             <constraint firstItem="zOR-gk-AUC" firstAttribute="leading" secondItem="nfh-d3-d50" secondAttribute="leading" id="uVh-MB-xVg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nfh-d3-d50"/>

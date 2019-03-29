@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="980"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="KI3-je-heE">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="854"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="982"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l6l-bA-GTW">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
@@ -110,8 +110,12 @@
                                                     <constraint firstItem="dDC-ey-PPN" firstAttribute="leading" secondItem="i9B-9I-e8R" secondAttribute="leading" id="ylU-Fc-etv"/>
                                                 </constraints>
                                             </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jQP-NU-0zS">
+                                                <rect key="frame" x="0.0" y="618" width="375" height="128"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dr0-30-c2q">
-                                                <rect key="frame" x="0.0" y="618" width="375" height="88"/>
+                                                <rect key="frame" x="0.0" y="746" width="375" height="88"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CIb-U8-8tH" customClass="MainButton" customModule="Swappy" customModuleProvider="target">
                                                         <rect key="frame" x="16" y="16" width="343" height="52"/>
@@ -133,7 +137,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yeP-cA-mVS">
-                                                <rect key="frame" x="0.0" y="706" width="375" height="148"/>
+                                                <rect key="frame" x="0.0" y="834" width="375" height="148"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iuw-U2-dTK" customClass="MainButton" customModule="Swappy" customModuleProvider="target">
                                                         <rect key="frame" x="16" y="16" width="343" height="52"/>

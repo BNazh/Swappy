@@ -26,16 +26,23 @@ final class ProductServiceImp {
 extension ProductServiceImp: ProductService {
     
     func getCurrentUserProducts(callback: @escaping ResultCallback<[Product]>) {
-        guard let sellerId = keychainStore.userSellerId else {
-            callback(.failure(.auth))
-            return
-        }
+//        guard let sellerId = keychainStore.userSellerId else {
+//            callback(.failure(.auth))
+//            return
+//        }
+//
+//        let request = ProductsTarget.productsBySeller(
+//            sellerId: sellerId,
+//            pageNumber: pageNumber,
+//            pageSize: pageSize
+//        )
+//
+//        provider.requestDecodable(request) { [weak self] (result: Result<[Product]>) in
+//            self?.handleProductsResult(result)
+//            callback(result)
+//        }
         
-        let request = ProductsTarget.productsBySeller(
-            sellerId: sellerId,
-            pageNumber: pageNumber,
-            pageSize: pageSize
-        )
+        let request = ProductsTarget.products(pageNumber: pageNumber, pageSize: pageSize)
         
         provider.requestDecodable(request) { [weak self] (result: Result<[Product]>) in
             self?.handleProductsResult(result)

@@ -27,6 +27,7 @@ final class MyProductsPresenterImp {
     
     fileprivate var products: [Product] = []
     private var isLoading = false
+    private var shouldDiscardProducts = false
     
     // MARK: - Init
     
@@ -64,6 +65,7 @@ extension MyProductsPresenterImp: MyProductsPresenter {
     
     func refreshMyProducts() {
         productService.reset()
+        shouldDiscardProducts = true
         loadMyProducts()
     }
     
@@ -87,6 +89,10 @@ extension MyProductsPresenterImp: MyProductsPresenter {
 private extension MyProductsPresenterImp {
     
     func handleProducts(_ newProducts: [Product]) {
+        if shouldDiscardProducts {
+            products = []
+        }
+        
         products.append(contentsOf: newProducts)
         
         let viewModels = products.map { ProductCellViewModel($0) }

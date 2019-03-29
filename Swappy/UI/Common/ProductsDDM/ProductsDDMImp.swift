@@ -37,12 +37,12 @@ extension ProductsDDMImp: ProductsDDM {
     }
     
     func reloadProducts(_ productsCellModels: [ProductCellViewModel]) {
+        refreshControl.endRefreshing()
+        
         cellModels = productsCellModels
         
         collectionView?.isHidden = cellModels.isEmpty
         collectionView?.reloadData()
-        
-        refreshControl.endRefreshing()
     }
 }
 

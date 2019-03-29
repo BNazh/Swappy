@@ -43,6 +43,8 @@ final class EditProductViewController: UIViewController {
         
         setupPhotosHeight()
         setupCategoryTextField()
+        
+        presenter.initialize()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

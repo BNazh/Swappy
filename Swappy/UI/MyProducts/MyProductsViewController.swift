@@ -28,6 +28,7 @@ final class MyProductsViewController: UIViewController {
         super.viewDidLoad()
         
         dataDisplayManager.setup(delegate: self, collectionView: collectionView)
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 84, right: 0)
         
         // presenter.loadMyProducts()
     }
@@ -49,6 +50,12 @@ final class MyProductsViewController: UIViewController {
         default:
             break
         }
+    }
+    
+    // MARK: - Actions
+    
+    @IBAction func addProduct(_ sender: UIButton) {
+        presenter.addProduct()
     }
 }
 

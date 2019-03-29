@@ -32,6 +32,7 @@ class ProductDetailViewController: UIViewController {
         super.viewDidLoad()
 
         presenter.showProduct()
+        presenter.setActions()
     }
     
     override func viewDidLayoutSubviews() {
