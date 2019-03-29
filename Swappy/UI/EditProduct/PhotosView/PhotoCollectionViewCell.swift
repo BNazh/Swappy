@@ -29,6 +29,7 @@ final class PhotoCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        imageView.contentMode = .scaleAspectFill
         imageView.layer.cornerRadius = 4
         setState(.empty)
     }

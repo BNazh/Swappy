@@ -38,6 +38,8 @@ final class EditProductViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.backBarButtonItem?.title = ""
+        
         title = presenter.screenTitle
         doneButton.setTitle(presenter.buttonTitle, for: .normal)
         

@@ -66,7 +66,17 @@ extension MyProductsPresenterImp: MyProductsPresenter {
     func refreshMyProducts() {
         productService.reset()
         shouldDiscardProducts = true
-        loadMyProducts()
+        
+        productService.getCurrentUserProducts { [weak self] result in
+            self?.products = []
+            
+            switch result {
+            case .success(let products):
+                self?.handleProducts(products)
+            case .failure(let error):
+                self?.handleGetProductsError(error)
+            }
+        }
     }
     
     func openProduct(withId id: String) {

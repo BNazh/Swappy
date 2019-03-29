@@ -38,6 +38,7 @@
 		E17CA187224C24FE00D5C955 /* AnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CA186224C24FE00D5C955 /* AnalyticsManager.swift */; };
 		E17CA189224C257100D5C955 /* AnalyticEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CA188224C257100D5C955 /* AnalyticEvent.swift */; };
 		E17CA18B224C27CB00D5C955 /* AppMetricaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CA18A224C27CB00D5C955 /* AppMetricaManager.swift */; };
+		E17CA190224E74B400D5C955 /* DebugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CA18F224E74B400D5C955 /* DebugViewController.swift */; };
 		E19F7DD52231063900BAFC7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19F7DD42231063900BAFC7A /* AppDelegate.swift */; };
 		E19F7DDA2231063900BAFC7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E19F7DD82231063900BAFC7A /* Main.storyboard */; };
 		E19F7DDD2231063900BAFC7A /* Swappy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E19F7DDB2231063900BAFC7A /* Swappy.xcdatamodeld */; };
@@ -55,7 +56,7 @@
 		E1BC5AC322310C2E001FD1D6 /* ServicesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC5AC222310C2E001FD1D6 /* ServicesAssembly.swift */; };
 		E1BC5AC622310CB7001FD1D6 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC5AC522310CB7001FD1D6 /* Product.swift */; };
 		E1BC5AC822310E88001FD1D6 /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC5AC722310E88001FD1D6 /* Price.swift */; };
-		E1BC5ACA22310F1F001FD1D6 /* Seller.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC5AC922310F1F001FD1D6 /* Seller.swift */; };
+		E1BC5ACA22310F1F001FD1D6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC5AC922310F1F001FD1D6 /* User.swift */; };
 		E1BC5ACC22310F9D001FD1D6 /* Sex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC5ACB22310F9D001FD1D6 /* Sex.swift */; };
 		E1BC5ACE22311168001FD1D6 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC5ACD22311168001FD1D6 /* Result.swift */; };
 		E1BC5AD022311173001FD1D6 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC5ACF22311173001FD1D6 /* AppError.swift */; };
@@ -169,6 +170,7 @@
 		E17CA186224C24FE00D5C955 /* AnalyticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsManager.swift; sourceTree = "<group>"; };
 		E17CA188224C257100D5C955 /* AnalyticEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticEvent.swift; sourceTree = "<group>"; };
 		E17CA18A224C27CB00D5C955 /* AppMetricaManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMetricaManager.swift; sourceTree = "<group>"; };
+		E17CA18F224E74B400D5C955 /* DebugViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugViewController.swift; sourceTree = "<group>"; };
 		E19F7DD12231063900BAFC7A /* Swappy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swappy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E19F7DD42231063900BAFC7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E19F7DD92231063900BAFC7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -192,7 +194,7 @@
 		E1BC5AC222310C2E001FD1D6 /* ServicesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesAssembly.swift; sourceTree = "<group>"; };
 		E1BC5AC522310CB7001FD1D6 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		E1BC5AC722310E88001FD1D6 /* Price.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
-		E1BC5AC922310F1F001FD1D6 /* Seller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seller.swift; sourceTree = "<group>"; };
+		E1BC5AC922310F1F001FD1D6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E1BC5ACB22310F9D001FD1D6 /* Sex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sex.swift; sourceTree = "<group>"; };
 		E1BC5ACD22311168001FD1D6 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		E1BC5ACF22311173001FD1D6 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
@@ -408,6 +410,14 @@
 			path = Analytics;
 			sourceTree = "<group>";
 		};
+		E17CA18E224E74A800D5C955 /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+				E17CA18F224E74B400D5C955 /* DebugViewController.swift */,
+			);
+			path = Debug;
+			sourceTree = "<group>";
+		};
 		E19F7DC82231063900BAFC7A = {
 			isa = PBXGroup;
 			children = (
@@ -531,7 +541,7 @@
 			children = (
 				E1BC5AC522310CB7001FD1D6 /* Product.swift */,
 				E1BC5AC722310E88001FD1D6 /* Price.swift */,
-				E1BC5AC922310F1F001FD1D6 /* Seller.swift */,
+				E1BC5AC922310F1F001FD1D6 /* User.swift */,
 				E1BC5ACB22310F9D001FD1D6 /* Sex.swift */,
 			);
 			path = Entities;
@@ -673,6 +683,7 @@
 		E1FF3E9C223E632800443DED /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				E17CA18E224E74A800D5C955 /* Debug */,
 				E19F7DD82231063900BAFC7A /* Main.storyboard */,
 				E1FF3E9D223E634A00443DED /* MainViewController.swift */,
 			);
@@ -1066,8 +1077,9 @@
 				E1BC5AEF22318340001FD1D6 /* UICollectionView+RegisterCells.swift in Sources */,
 				E111749022436FBF00BD19B4 /* CodeConfirmationViewController.swift in Sources */,
 				E1FF3EA2223E77B800443DED /* ProductsDDM.swift in Sources */,
-				E1BC5ACA22310F1F001FD1D6 /* Seller.swift in Sources */,
+				E1BC5ACA22310F1F001FD1D6 /* User.swift in Sources */,
 				E1F0175A224644F5001A10D7 /* ImageService.swift in Sources */,
+				E17CA190224E74B400D5C955 /* DebugViewController.swift in Sources */,
 				E1FC30B2223977B900DF1325 /* SecondaryButton.swift in Sources */,
 				E1FF3ECB223EEE0A00443DED /* AppTextField.swift in Sources */,
 				E1BC5AE122312D5A001FD1D6 /* UIFont+App.swift in Sources */,

@@ -26,24 +26,17 @@ final class ProductServiceImp {
 extension ProductServiceImp: ProductService {
     
     func getCurrentUserProducts(callback: @escaping ResultCallback<[Product]>) {
-//        guard let sellerId = keychainStore.userSellerId else {
-//            callback(.failure(.auth))
-//            return
-//        }
-//
-//        let request = ProductsTarget.productsBySeller(
-//            sellerId: sellerId,
-//            pageNumber: pageNumber,
-//            pageSize: pageSize
-//        )
-//
-//        provider.requestDecodable(request) { [weak self] (result: Result<[Product]>) in
-//            self?.handleProductsResult(result)
-//            callback(result)
-//        }
-        
-        let request = ProductsTarget.products(pageNumber: pageNumber, pageSize: pageSize)
-        
+        guard let sellerId = keychainStore.userSellerId else {
+            callback(.failure(.auth))
+            return
+        }
+
+        let request = ProductsTarget.productsBySeller(
+            sellerId: sellerId,
+            pageNumber: pageNumber,
+            pageSize: pageSize
+        )
+
         provider.requestDecodable(request) { [weak self] (result: Result<[Product]>) in
             self?.handleProductsResult(result)
             callback(result)
@@ -72,10 +65,20 @@ extension ProductServiceImp: ProductService {
         provider.requestDecodable(request, callback: callback)
     }
     
-    func deleteProduct(id: String, callback: @escaping ResultCallback<Bool>) {
+    func deleteProduct(id: String, callback: @escaping ResultCallback<Void>) {
         let request = ProductsTarget.deleteProduct(id: id)
         
-        provider.requestDecodable(request, callback: callback)
+        // FIXME:
+        provider.request(request) { result in
+            switch result {
+            case .success(let response):
+                print(String(data: response.data, encoding: .utf8))
+                callback(.success)
+            case .failure(let error):
+                print(error.localizedDescription)
+                callback(.failure(.unknown))
+            }
+        }
     }
     
     func reset() {

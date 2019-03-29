@@ -48,7 +48,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hex-0e-Ldi"/>
                     </view>
-                    <navigationItem key="navigationItem" id="9RM-NE-DJZ"/>
+                    <navigationItem key="navigationItem" id="9RM-NE-DJZ">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="0QX-Ur-sQH">
+                            <connections>
+                                <segue destination="Yx7-rx-VLH" kind="show" id="Xah-b1-OjH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="buttonBarView" destination="4xE-3W-BZD" id="FZb-I9-m8y"/>
                         <outlet property="containerView" destination="4dC-Ry-xLC" id="iq9-VE-Hq1"/>
@@ -76,6 +82,52 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eef-3c-9Tu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1233" y="3"/>
+        </scene>
+        <!--Debug View Controller-->
+        <scene sceneID="LQg-PD-ERP">
+            <objects>
+                <viewController id="Yx7-rx-VLH" customClass="DebugViewController" customModule="Swappy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="olW-z9-Nj5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dV9-nX-XDc">
+                                <rect key="frame" x="114" y="293" width="147" height="30"/>
+                                <state key="normal" title="Скопировать sellerId"/>
+                                <connections>
+                                    <action selector="copySellerId:" destination="Yx7-rx-VLH" eventType="touchUpInside" id="rML-mq-E0A"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJb-wv-qwT">
+                                <rect key="frame" x="95" y="392" width="185" height="30"/>
+                                <state key="normal" title="Скопировать accessToken"/>
+                                <connections>
+                                    <action selector="copyAccessToken:" destination="Yx7-rx-VLH" eventType="touchUpInside" id="Lrw-0Q-8RY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Pr-vV-Z2v">
+                                <rect key="frame" x="163.5" y="216" width="48" height="30"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="logout:" destination="Yx7-rx-VLH" eventType="touchUpInside" id="hlT-8A-Qfn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="SJb-wv-qwT" firstAttribute="centerX" secondItem="SVM-0y-rlw" secondAttribute="centerX" id="87j-0J-aek"/>
+                            <constraint firstItem="7Pr-vV-Z2v" firstAttribute="centerX" secondItem="SVM-0y-rlw" secondAttribute="centerX" id="Ffq-iL-E6e"/>
+                            <constraint firstItem="dV9-nX-XDc" firstAttribute="top" secondItem="7Pr-vV-Z2v" secondAttribute="bottom" constant="47" id="Sh6-v8-BAg"/>
+                            <constraint firstItem="dV9-nX-XDc" firstAttribute="centerX" secondItem="SVM-0y-rlw" secondAttribute="centerX" id="TBJ-Be-khW"/>
+                            <constraint firstItem="SJb-wv-qwT" firstAttribute="top" secondItem="dV9-nX-XDc" secondAttribute="bottom" constant="69" id="VLk-Ee-6ZE"/>
+                            <constraint firstItem="7Pr-vV-Z2v" firstAttribute="top" secondItem="SVM-0y-rlw" secondAttribute="top" constant="152" id="fAe-sS-Xv9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SVM-0y-rlw"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="had-Lk-xwD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-468" y="-694.00299850074964"/>
         </scene>
     </scenes>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

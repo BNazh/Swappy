@@ -21,6 +21,7 @@ final class MyProductsViewController: UIViewController {
     var dataDisplayManager: ProductsDDM!
     
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var addProductButton: MainButton!
     
     // MARK: - Lifecycle
     
@@ -63,6 +64,7 @@ extension MyProductsViewController: MyProductsView {
 
     func reloadProducts(_ products: [ProductCellViewModel]) {
         dataDisplayManager.reloadProducts(products)
+        addProductButton.isHidden = products.isEmpty
     }
 }
 

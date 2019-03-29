@@ -59,6 +59,7 @@
                         <viewLayoutGuide key="safeArea" id="nfh-d3-d50"/>
                     </view>
                     <connections>
+                        <outlet property="addProductButton" destination="pJ6-Zh-uFz" id="drB-9D-zEl"/>
                         <outlet property="collectionView" destination="zOR-gk-AUC" id="z3e-Tq-B2e"/>
                     </connections>
                 </viewController>

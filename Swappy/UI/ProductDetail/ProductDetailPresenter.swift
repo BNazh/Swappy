@@ -71,7 +71,7 @@ extension ProductDetailPresenterImp: ProductDetailPresenter {
 
 private extension ProductDetailPresenterImp {
     
-    func handleDeleteProduct(result: Result<Bool>) {
+    func handleDeleteProduct(result: Result<Void>) {
         switch result {
         case .success:
             router.close()

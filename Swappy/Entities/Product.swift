@@ -23,12 +23,15 @@ struct Product: Decodable {
 
 struct ProductRO: Encodable {
     let id: String = ""
+    
     let images: [String]
     let size: String
     let name: String
     let description: String
     let price: Price
     let city: String
+    
+    let category = "outerwear"
     let isSoldOut: Bool = true
     let isActive: Bool = true
     let contactPhone: String

@@ -16,7 +16,8 @@ enum AuthTarget {
 
 extension AuthTarget: TargetType {
     var baseURL: URL {
-        return Core.baseUrl.appendingPathComponent("swappy-auth/phone/")
+        return Core.testAuthUrl.appendingPathComponent("swappy-auth/phone/")
+        //return Core.baseUrl.appendingPathComponent("swappy-auth/phone/")
     }
     
     var path: String {

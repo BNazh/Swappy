@@ -16,7 +16,7 @@ protocol ProductService {
     func getCurrentUserProducts(callback: @escaping ResultCallback<[Product]>)
     
     func deleteProduct(id: String,
-                       callback: @escaping ResultCallback<Bool>)
+                       callback: @escaping ResultCallback<Void>)
     
     func addProduct(_ product: ProductRO,
                     isNew: Bool,

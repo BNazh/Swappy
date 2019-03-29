@@ -30,7 +30,7 @@ extension ProductsTarget: TargetType {
              .createProduct,
              .updateProduct:
             return "products"
-        case .productsBySeller(let sellerId):
+        case .productsBySeller(let sellerId, _, _):
             return "products/users/\(sellerId)"
         case .deleteProduct(let id):
             return "products/\(id)"
