@@ -30,7 +30,12 @@ extension MyProductsRouterImp: MyProductsRouter {
     }
     
     func openProduct(_ product: Product) {
-        openEditProduct(state: .edit(product: product))
+        let productVC: ProductDetailViewController
+        productVC = UIStoryboard.createViewController()
+        
+        productVC.presenter.setInitState(product: product, isOwner: true)
+        
+        viewController.present(productVC, animated: true, completion: nil)
     }
     
     func openLoginCard() {

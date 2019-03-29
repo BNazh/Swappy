@@ -58,9 +58,20 @@ extension ProductCatalogPresenterImp: ProductCatalogPresenter {
     }
     
     func refreshProducts() {
+        isLoading = true
+        
         productService.reset()
         
-        loadProducts()
+        productService.getProducts { [weak self] result in
+            self?.products = []
+            
+            switch result {
+            case .success(let products):
+                self?.handleSuccessGetProducts(products)
+            case .failure(let appError):
+                self?.view.showError(message: appError.localizedString)
+            }
+        }
     }
     
     func selectProduct(with id: String) {
