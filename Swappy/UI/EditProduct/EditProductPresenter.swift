@@ -68,6 +68,10 @@ extension EditProductPresenterImp: EditProductPresenter {
     }
     
     func performProductAction(productRO: ProductRO) {
+        guard check(productRO: productRO) else {
+            return
+        }
+        
         view.showLoading()
         
         productService.addProduct(productRO, isNew: isProductNew) { [weak self] result in
@@ -101,5 +105,19 @@ private extension EditProductPresenterImp {
             let message = isProductNew ? "Не удалось создать объявление" : "Не удалось изменить объявление"
             view.showError(message: message)
         }
+    }
+    
+    func check(productRO: ProductRO) -> Bool {
+        guard !productRO.name.isEmpty else {
+            view.showError(message: "Заполните название продукта")
+            return false
+        }
+        
+        guard !productRO.images.isEmpty else {
+            view.showError(message: "Добавьте хотя бы одно изображение")
+            return false
+        }
+        
+        return true
     }
 }
