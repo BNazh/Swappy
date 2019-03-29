@@ -15,7 +15,11 @@ protocol PhotoCellDelegate: class {
 
 final class PhotoCollectionViewCell: UICollectionViewCell {
     
-    var model: ImageModel?
+    var model: ImageModel? {
+        didSet {
+            didChangeModel()
+        }
+    }
     
     var delegate: PhotoCellDelegate?
     
@@ -57,6 +61,8 @@ final class PhotoCollectionViewCell: UICollectionViewCell {
         }
     }
     
+    
+    
     @IBAction func closeTapped(_ sender: UIButton) {
         imageService.cancelCurrentOperation()
         
@@ -65,6 +71,14 @@ final class PhotoCollectionViewCell: UICollectionViewCell {
 }
 
 private extension PhotoCollectionViewCell {
+    
+    func didChangeModel() {
+        
+        if let urlString = model?.url, model?.state == .loaded {
+            imageView.sd_setImage(with: URL(string: urlString))
+            setState(.loaded)
+        }
+    }
     
     func setState(_ state: ImageModel.State) {
         model?.state = state

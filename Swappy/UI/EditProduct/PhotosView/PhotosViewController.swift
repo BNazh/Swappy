@@ -9,6 +9,7 @@
 import UIKit
 import BSImagePicker
 import Photos
+import SDWebImage
 
 class ImageModel {
     enum State {
@@ -43,6 +44,13 @@ final class PhotosViewController: UIViewController {
         
         setupCollectionView()
     }
+    
+    func setupImageUrls(_ imageUrls: [String]) {
+        for index in imageUrls.indices where index < cells.count {
+            cells[index].url = imageUrls[index]
+            cells[index].state = .loaded
+        }
+    }
 }
 
 extension PhotosViewController: UICollectionViewDataSource {
@@ -51,7 +59,8 @@ extension PhotosViewController: UICollectionViewDataSource {
         let cell: PhotoCollectionViewCell
         cell = collectionView.dequeueReusableCell(indexPath: indexPath)
         
-        cell.model = cells[indexPath.row]
+        let model = cells[indexPath.row]
+        cell.model = model
         cell.delegate = self
         
         return cell

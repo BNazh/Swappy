@@ -39,7 +39,11 @@ extension ProductDetailRouterImp: ProductDetailRouter {
         
         editVC.presenter.setState(.edit(product: product))
         
-        viewController.navigationController?.pushViewController(viewController, animated: true)
+        let navigationController = viewController.presentingViewController as? UINavigationController
+        
+        viewController.dismiss(animated: true) {
+            navigationController?.pushViewController(editVC, animated: true)
+        }
     }
     
     func close() {

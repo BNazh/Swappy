@@ -6,6 +6,8 @@
 //  Copyright © 2019 SwappyTeam. All rights reserved.
 //
 
+import Foundation
+
 struct EditProductViewModel {
     
     // MARK: - Properties
@@ -16,6 +18,7 @@ struct EditProductViewModel {
     let price: String
     let contactInfo: String
     let category: String
+    let images: [String]
     
     // MARK: - Init
     
@@ -26,5 +29,6 @@ struct EditProductViewModel {
         price = product.price.stringValue
         contactInfo = product.contactPhone
         category = "" // TODO
+        images = product.images
     }
 }

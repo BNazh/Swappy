@@ -30,7 +30,6 @@ final class EditProductViewController: UIViewController {
     @IBOutlet weak var photosHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var doneButton: MainButton!
     
-    
     weak var photosViewController: PhotosViewController?
     
     // MARK: - Lifecycle
@@ -66,6 +65,8 @@ final class EditProductViewController: UIViewController {
 extension EditProductViewController: EditProductView {
     
     func showProduct(viewModel: EditProductViewModel) {
+        photosViewController?.setupImageUrls(viewModel.images)
+        
         nameTextField.text = viewModel.title
         descriptionTextField.text = viewModel.description
         sizeTextField.text = viewModel.size
