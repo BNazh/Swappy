@@ -90,11 +90,13 @@ private extension EditProductViewController {
             size: sizeTextField.text ?? "",
             name: nameTextField.text ?? "",
             description: descriptionTextField.text ?? "",
-            price: .init(rubles: priceTextField.text ?? ""),
             city: categoryTextField.text ?? "",
-            contactPhone: contactInfoTextField.text ?? ""
+            contactPhone: contactInfoTextField.text ?? "",
+            price: priceTextField.text
         )
     }
+    
+    
     
     func setupPhotosHeight() {
         let layout = photosViewController?.collectionView?.collectionViewLayout

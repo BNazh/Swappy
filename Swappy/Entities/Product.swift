@@ -6,6 +6,8 @@
 //  Copyright © 2019 SwappyTeam. All rights reserved.
 //
 
+import Foundation
+
 struct Product: Decodable {
     
     let id: String
@@ -22,17 +24,30 @@ struct Product: Decodable {
 }
 
 struct ProductRO: Encodable {
-    let id: String = ""
+    var id: String? = nil
     
     let images: [String]
     let size: String
     let name: String
     let description: String
-    let price: Price
     let city: String
+    let contactPhone: String
+    let price: Price
     
     let category = "outerwear"
     let isSoldOut: Bool = true
     let isActive: Bool = true
-    let contactPhone: String
+    
+    init(images: [String], size: String, name: String, description: String, priceString: String, city: String) {
+        self.images = images
+        self.size = size
+        self.name = name
+        self.description = description
+        self.city = city
+        self.contactPhone = contactPhone
+        
+        let lettersSet = CharacterSet(charactersIn: "01234567890.").inverted
+        let priceString = priceString.trimmingCharacters(in: lettersSet)
+        self.price = Price(rubles: priceString)
+    }
 }

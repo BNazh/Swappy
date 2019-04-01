@@ -71,6 +71,9 @@ extension EditProductPresenterImp: EditProductPresenter {
         guard check(productRO: productRO) else {
             return
         }
+    
+        var productRO = productRO
+        productRO.id = productId
         
         view.showLoading()
         
@@ -94,6 +97,15 @@ private extension EditProductPresenterImp {
             return true
         case .edit:
             return false
+        }
+    }
+    
+    var productId: String? {
+        switch state {
+        case .add:
+            return nil
+        case .edit(let product):
+            return product.id
         }
     }
     
