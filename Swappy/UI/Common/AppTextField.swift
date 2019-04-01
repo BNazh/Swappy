@@ -8,6 +8,7 @@
 
 import SkyFloatingLabelTextField
 
+@IBDesignable
 final class AppTextField: SkyFloatingLabelTextField {
     
     override func awakeFromNib() {

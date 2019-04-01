@@ -39,6 +39,7 @@
 		E17CA189224C257100D5C955 /* AnalyticEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CA188224C257100D5C955 /* AnalyticEvent.swift */; };
 		E17CA18B224C27CB00D5C955 /* AppMetricaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CA18A224C27CB00D5C955 /* AppMetricaManager.swift */; };
 		E17CA190224E74B400D5C955 /* DebugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CA18F224E74B400D5C955 /* DebugViewController.swift */; };
+		E17CA19222529D9200D5C955 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CA19122529D9200D5C955 /* AppConstants.swift */; };
 		E19F7DD52231063900BAFC7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19F7DD42231063900BAFC7A /* AppDelegate.swift */; };
 		E19F7DDA2231063900BAFC7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E19F7DD82231063900BAFC7A /* Main.storyboard */; };
 		E19F7DDD2231063900BAFC7A /* Swappy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E19F7DDB2231063900BAFC7A /* Swappy.xcdatamodeld */; };
@@ -171,6 +172,7 @@
 		E17CA188224C257100D5C955 /* AnalyticEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticEvent.swift; sourceTree = "<group>"; };
 		E17CA18A224C27CB00D5C955 /* AppMetricaManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMetricaManager.swift; sourceTree = "<group>"; };
 		E17CA18F224E74B400D5C955 /* DebugViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugViewController.swift; sourceTree = "<group>"; };
+		E17CA19122529D9200D5C955 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		E19F7DD12231063900BAFC7A /* Swappy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swappy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E19F7DD42231063900BAFC7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E19F7DD92231063900BAFC7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -351,6 +353,7 @@
 				E11174822242B38300BD19B4 /* KeychainStore.swift */,
 				E11174952243719400BD19B4 /* Core.swift */,
 				E1F0175622463C13001A10D7 /* BaseProvider.swift */,
+				E17CA19122529D9200D5C955 /* AppConstants.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -1113,6 +1116,7 @@
 				E11174852242B49200BD19B4 /* PhoneLoginAssembly.swift in Sources */,
 				E11174922243700500BD19B4 /* CodeConfirmationPresenter.swift in Sources */,
 				E1FF3E99223A373000443DED /* BaseButton.swift in Sources */,
+				E17CA19222529D9200D5C955 /* AppConstants.swift in Sources */,
 				E1B4B1DD2235BE2200520082 /* ProductViewModel.swift in Sources */,
 				E1BC5AE322312E6C001FD1D6 /* NSAttributedString+SimpleInit.swift in Sources */,
 			);

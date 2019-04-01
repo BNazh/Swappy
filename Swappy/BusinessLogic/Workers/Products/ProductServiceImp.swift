@@ -71,11 +71,9 @@ extension ProductServiceImp: ProductService {
         // FIXME:
         provider.request(request) { result in
             switch result {
-            case .success(let response):
-                print(String(data: response.data, encoding: .utf8))
+            case .success:
                 callback(.success)
-            case .failure(let error):
-                print(error.localizedDescription)
+            case .failure:
                 callback(.failure(.unknown))
             }
         }

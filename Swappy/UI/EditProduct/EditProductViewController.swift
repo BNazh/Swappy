@@ -44,6 +44,7 @@ final class EditProductViewController: UIViewController {
         
         setupPhotosHeight()
         setupCategoryTextField()
+        setupPriceTextField()
         
         presenter.initialize()
     }
@@ -80,6 +81,8 @@ extension EditProductViewController: EditProductView {
     }
 }
 
+// MARK: - Private
+
 private extension EditProductViewController {
     
     var productRequestObject: ProductRO {
@@ -90,13 +93,11 @@ private extension EditProductViewController {
             size: sizeTextField.text ?? "",
             name: nameTextField.text ?? "",
             description: descriptionTextField.text ?? "",
-            city: categoryTextField.text ?? "",
             contactPhone: contactInfoTextField.text ?? "",
-            price: priceTextField.text
+            priceString: priceTextField.text ?? "",
+            city: categoryTextField.text ?? ""
         )
     }
-    
-    
     
     func setupPhotosHeight() {
         let layout = photosViewController?.collectionView?.collectionViewLayout
@@ -111,5 +112,9 @@ private extension EditProductViewController {
     func setupCategoryTextField() {
         let items = presenter.categoryItems
         categoryDDM.setup(textField: categoryTextField, with: items)
+    }
+    
+    func setupPriceTextField() {
+        priceTextField
     }
 }
