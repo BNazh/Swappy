@@ -16,6 +16,8 @@ protocol PinterestLayoutDelegate: class {
 
 class PinterestLayout: UICollectionViewLayout {
     
+    // MARK: - Properties
+    
     weak var delegate: PinterestLayoutDelegate!
     
     fileprivate var numberOfColumns = 2
@@ -32,6 +34,8 @@ class PinterestLayout: UICollectionViewLayout {
         let insets = collectionView.contentInset
         return collectionView.bounds.width - (insets.left + insets.right)
     }
+    
+    // MARK: - Overriden functions
     
     override var collectionViewContentSize: CGSize {
         return CGSize(width: contentWidth, height: contentHeight)
@@ -92,5 +96,11 @@ class PinterestLayout: UICollectionViewLayout {
     
     override func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
         return cache[safe: indexPath.item]
+    }
+    
+    // MARK: - Custom functions
+    
+    func clearCache() {
+        cache = []
     }
 }

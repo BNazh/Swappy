@@ -16,6 +16,10 @@ final class ProductsDDMImp: NSObject {
     private weak var collectionView: UICollectionView?
     
     private let refreshControl = UIRefreshControl()
+    
+    private var layout: PinterestLayout? {
+        return collectionView?.collectionViewLayout as? PinterestLayout
+    }
 }
 
 extension ProductsDDMImp: ProductsDDM {
@@ -31,9 +35,7 @@ extension ProductsDDMImp: ProductsDDM {
         
         collectionView.register(cellType: ProductCollectionViewCell.self)
         
-        if let layout = collectionView.collectionViewLayout as? PinterestLayout {
-            layout.delegate = self
-        }
+        layout?.delegate = self
     }
     
     func reloadProducts(_ productsCellModels: [ProductCellViewModel]) {
@@ -41,6 +43,7 @@ extension ProductsDDMImp: ProductsDDM {
         
         cellModels = productsCellModels
         
+        layout?.clearCache()
         collectionView?.isHidden = cellModels.isEmpty
         collectionView?.reloadData()
     }
