@@ -12,6 +12,7 @@ final class ProductServiceImp {
     
     let provider: MoyaProvider<ProductsTarget>
     let keychainStore: KeychainStore
+    let notificationCenter = ProductsNotificationCenter.shared
     
     var pageNumber = 0
     let pageSize = 10
@@ -57,22 +58,33 @@ extension ProductServiceImp: ProductService {
     func addProduct(_ product: ProductRO, isNew: Bool, callback: @escaping ResultCallback<Product>) {
         
         let request: ProductsTarget
+        
         if isNew {
             request = .createProduct(product: product)
         } else {
             request = .updateProduct(product: product)
         }
         
-        provider.requestDecodable(request, callback: callback)
+        provider.requestDecodable(request) { [weak self] (result: Result<Product>) in
+            switch result {
+            case .success(let product):
+                self?.postAddProductNotification(product: product, isNew: isNew)
+                callback(.success(product))
+                
+            case .failure(let error):
+                callback(.failure(error))
+            }
+        }
     }
     
     func deleteProduct(id: String, callback: @escaping ResultCallback<Void>) {
         let request = ProductsTarget.deleteProduct(id: id)
         
         // FIXME:
-        provider.request(request) { result in
+        provider.request(request) { [weak self] result in
             switch result {
             case .success:
+                self?.notificationCenter.postDeleteProductNotification(id: id)
                 callback(.success)
             case .failure:
                 callback(.failure(.unknown))
@@ -94,5 +106,13 @@ private extension ProductServiceImp {
         
         pageNumber += 1
         canLoadMore = products.count == pageSize
+    }
+    
+    func postAddProductNotification(product: Product, isNew: Bool) {
+        if isNew {
+            notificationCenter.postAddProductNotification(product: product)
+        } else {
+            notificationCenter.postUpdateProductNotification(product: product)
+        }
     }
 }

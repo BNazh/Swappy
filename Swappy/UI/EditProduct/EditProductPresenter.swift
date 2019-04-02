@@ -111,8 +111,9 @@ private extension EditProductPresenterImp {
     
     func handleAddProductActionResult(_ result: Result<Product>) {
         switch result {
-        case .success:
+        case .success(let product):
             view.close()
+            
         case .failure:
             let message = isProductNew ? "Не удалось создать объявление" : "Не удалось изменить объявление"
             view.showError(message: message)

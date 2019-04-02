@@ -23,8 +23,7 @@ final class ProductsNotificationCenter {
     
     // MARK: - Functions
     
-    func addObserver(forName: Notification.Name, handler: @escaping (Product) -> Void) {
-        
+    func observeAddingProduct(handler: @escaping (Product) -> Void) {
         let observer = notificationCenter.addObserver(forName: .didAddProduct, object: self, queue: .main) { notification in
             guard let product = notification.userInfo?["product"] as? Product else {
                 return
@@ -36,7 +35,39 @@ final class ProductsNotificationCenter {
         observers.append(observer)
     }
     
-    func postNotification(_ name: Notification.Name, product: Product) {
-        notificationCenter.post(name: name, object: self, userInfo: ["product": product])
+    func observeUpdatingProduct(handler: @escaping (Product) -> Void) {
+        let observer = notificationCenter.addObserver(forName: .didUpdateProduct, object: self, queue: .main) { notification in
+            guard let product = notification.userInfo?["product"] as? Product else {
+                return
+            }
+            
+            handler(product)
+        }
+        
+        observers.append(observer)
+    }
+
+    func observeDeletingProduct(handler: @escaping (String) -> Void) {
+        let observer = notificationCenter.addObserver(forName: .didDeleteProduct, object: self, queue: .main) { notification in
+            guard let productId = notification.userInfo?["productId"] as? String else {
+                return
+            }
+            
+            handler(productId)
+        }
+        
+        observers.append(observer)
+    }
+    
+    func postAddProductNotification(product: Product) {
+        notificationCenter.post(name: .didAddProduct, object: self, userInfo: ["product": product])
+    }
+    
+    func postUpdateProductNotification(product: Product) {
+        notificationCenter.post(name: .didUpdateProduct, object: self, userInfo: ["product": product])
+    }
+    
+    func postDeleteProductNotification(id: String) {
+        notificationCenter.post(name: .didDeleteProduct, object: self, userInfo: ["productId": id])
     }
 }
