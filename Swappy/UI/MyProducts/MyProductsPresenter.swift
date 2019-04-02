@@ -39,6 +39,8 @@ final class MyProductsPresenterImp {
         self.router = router
         self.productService = productService
         self.authService = authService
+        
+        setupObservers()
     }
 }
 
@@ -104,9 +106,9 @@ private extension MyProductsPresenterImp {
         }
         
         products.append(contentsOf: newProducts)
+        products.removeAll { !$0.isActive }
         
-        let viewModels = products.map { ProductCellViewModel($0) }
-        view.reloadProducts(viewModels)
+        reloadProductsOnView()
     }
     
     func handleGetProductsError(_ appError: AppError) {
@@ -115,6 +117,40 @@ private extension MyProductsPresenterImp {
             router.openLoginCard()
         default:
             view.showError(message: appError.localizedString)
+        }
+    }
+    
+    func setupObservers() {
+        let center = ProductsNotificationCenter.shared
+        
+        center.observeAddingProduct { [weak self] addedProduct in
+            self?.products.insert(addedProduct, at: 0)
+            self?.reloadProductsOnView()
+        }
+        
+        center.observeUpdatingProduct { [weak self] updatedProduct in
+            self?.updateProduct(updatedProduct)
+            self?.reloadProductsOnView()
+        }
+        
+        center.observeDeletingProduct { [weak self] productId in
+            self?.products.removeAll { $0.id == productId }
+            self?.reloadProductsOnView()
+        }
+    }
+    
+    func reloadProductsOnView() {
+        let viewModels = products.map { ProductCellViewModel($0) }
+        view.reloadProducts(viewModels)
+    }
+    
+    func updateProduct(_ updatedProduct: Product) {
+        products = products.map { product in
+            if product.id == updatedProduct.id {
+                return updatedProduct
+            } else {
+                return product
+            }
         }
     }
 }

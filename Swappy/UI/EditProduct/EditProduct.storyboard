@@ -171,9 +171,6 @@
                                                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Цена"/>
                                                                     <userDefinedRuntimeAttribute type="string" keyPath="selectedTitle" value="Цена"/>
                                                                 </userDefinedRuntimeAttributes>
-                                                                <connections>
-                                                                    <outlet property="delegate" destination="zOs-Vh-xS4" id="jOT-ja-Bqm"/>
-                                                                </connections>
                                                             </textField>
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -298,7 +295,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K6O-yh-IUq" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="zOs-Vh-xS4" customClass="MaskedTextFieldDelegate" customModule="InputMask"/>
             </objects>
             <point key="canvasLocation" x="49.275362318840585" y="93.75"/>
         </scene>
