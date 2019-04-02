@@ -14,7 +14,7 @@ final class LoginCardViewController: CardViewController {
         let phoneLoginVC: PhoneLoginViewController = UIStoryboard.createViewController()
         
         let navigationController = self.presentingViewController as? UINavigationController
-        
+
         dismiss(animated: true) {
             navigationController?.pushViewController(phoneLoginVC, animated: true)
         }

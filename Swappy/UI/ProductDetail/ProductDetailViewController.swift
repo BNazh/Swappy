@@ -13,7 +13,7 @@ protocol ProductDetailView: class, ErrorView, LoadingView, OkAlertView {
     func displayActionSettings(isSellerButtonHidden: Bool, isEditViewHidden: Bool)
 }
 
-class ProductDetailViewController: UIViewController {
+class ProductDetailViewController: CardViewController {
     
     var presenter: ProductDetailPresenter!
 

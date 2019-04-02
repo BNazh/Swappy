@@ -44,7 +44,6 @@ extension ProductsDDMImp: ProductsDDM {
         cellModels = productsCellModels
         
         layout?.clearCache()
-        collectionView?.isHidden = cellModels.isEmpty
         collectionView?.reloadData()
     }
 }

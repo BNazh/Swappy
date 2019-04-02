@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+# platform :ios, '10.0'
 
 target 'Swappy' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
@@ -11,8 +11,8 @@ target 'Swappy' do
   # Pods for Swappy
 
   # DI
-  pod 'Swinject'
-  pod 'SwinjectStoryboard'
+  pod 'Swinject', '~> 2.6.0'
+  pod 'SwinjectStoryboard', '~> 2.2.0'
   
   # Network
   pod 'Moya', '~> 12.0'
