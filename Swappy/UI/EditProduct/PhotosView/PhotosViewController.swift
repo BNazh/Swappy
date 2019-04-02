@@ -11,6 +11,8 @@ import BSImagePicker
 import Photos
 import SDWebImage
 
+// TODO: этот контроллер требует рефакторинга, возможно нужно создать статические ячейки UITableView и в них хранить все данные и состояния
+
 class ImageModel {
     enum State {
         case

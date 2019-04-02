@@ -1,0 +1,15 @@
+
+/* Class = "UIBarButtonItem"; title = "Logout"; ObjectID = "0QX-Ur-sQH"; */
+"0QX-Ur-sQH.title" = "Logout";
+
+/* Class = "UIButton"; normalTitle = "Logout"; ObjectID = "7Pr-vV-Z2v"; */
+"7Pr-vV-Z2v.normalTitle" = "Logout";
+
+/* Class = "UIButton"; normalTitle = "Скопировать accessToken"; ObjectID = "SJb-wv-qwT"; */
+"SJb-wv-qwT.normalTitle" = "Скопировать accessToken";
+
+/* Class = "UIViewController"; title = "Swappy"; ObjectID = "ahH-yP-wIE"; */
+"ahH-yP-wIE.title" = "Swappy";
+
+/* Class = "UIButton"; normalTitle = "Скопировать sellerId"; ObjectID = "dV9-nX-XDc"; */
+"dV9-nX-XDc.normalTitle" = "Скопировать sellerId";
