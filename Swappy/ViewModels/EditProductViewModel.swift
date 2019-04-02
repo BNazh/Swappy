@@ -18,6 +18,7 @@ struct EditProductViewModel {
     let price: String
     let contactInfo: String
     let category: String
+    let city: String
     let images: [String]
     
     // MARK: - Init
@@ -26,9 +27,10 @@ struct EditProductViewModel {
         title = product.name
         description = product.description
         size = product.size
-        price = product.price.stringValue
+        price = "\(product.price)"
         contactInfo = product.contactPhone
         category = "" // TODO
+        city = product.city
         images = product.images
     }
 }

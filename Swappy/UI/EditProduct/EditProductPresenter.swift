@@ -17,6 +17,7 @@ protocol EditProductPresenter: class {
     var screenTitle: String { get }
     var buttonTitle: String { get }
     var categoryItems: [String] { get }
+    var cityItems: [String] { get }
     
     func initialize()
     func performProductAction(productRO: ProductRO)
@@ -54,6 +55,10 @@ extension EditProductPresenterImp: EditProductPresenter {
     }
     
     var categoryItems: [String] {
+        return []
+    }
+    
+    var cityItems: [String] {
         return ["Москва", "Санкт-Петербург"]
     }
     

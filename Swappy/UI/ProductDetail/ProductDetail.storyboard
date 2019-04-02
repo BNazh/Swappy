@@ -15,20 +15,27 @@
             <objects>
                 <viewController storyboardIdentifier="ProductDetailViewController" modalPresentationStyle="overCurrentContext" id="3w9-B7-sSi" customClass="ProductDetailViewController" customModule="Swappy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" opaque="NO" contentMode="scaleToFill" id="HiI-Wk-7f7">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="2000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tNG-rW-MCw">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="2000"/>
+                            <scrollView multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tNG-rW-MCw">
+                                <rect key="frame" x="0.0" y="20" width="375" height="980"/>
                                 <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ys-Tn-G1W">
+                                        <rect key="frame" x="0.0" y="980" width="375" height="48"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="IBF-Xn-tMK"/>
+                                        </constraints>
+                                    </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="KI3-je-heE">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="2000"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="980"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l6l-bA-GTW">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="395"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
                                                 <subviews>
                                                     <view clipsSubviews="YES" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="qgW-H7-QhE" customClass="ImageSlider" customModule="Swappy" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="20" width="375" height="375"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="qgW-H7-QhE" secondAttribute="height" multiplier="1:1" id="3GS-py-KAy"/>
@@ -41,12 +48,12 @@
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="qgW-H7-QhE" secondAttribute="bottom" id="Su6-4Y-3bO"/>
                                                     <constraint firstItem="qgW-H7-QhE" firstAttribute="leading" secondItem="l6l-bA-GTW" secondAttribute="leading" id="UOv-5V-Cr0"/>
-                                                    <constraint firstItem="qgW-H7-QhE" firstAttribute="top" secondItem="l6l-bA-GTW" secondAttribute="top" constant="20" id="sJE-QE-ed9"/>
+                                                    <constraint firstItem="qgW-H7-QhE" firstAttribute="top" secondItem="l6l-bA-GTW" secondAttribute="top" id="sJE-QE-ed9"/>
                                                     <constraint firstAttribute="trailing" secondItem="qgW-H7-QhE" secondAttribute="trailing" id="xzb-Kd-zZU"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RUz-bq-96F">
-                                                <rect key="frame" x="0.0" y="395" width="375" height="243"/>
+                                                <rect key="frame" x="0.0" y="375" width="375" height="369"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="254" text="Comme Des Garçons Converse  Размер 10 " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i9B-9I-e8R">
                                                         <rect key="frame" x="16" y="20" width="343" height="41"/>
@@ -74,13 +81,13 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comme Des Garçons Converse  Размер 10 " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qlO-4F-iu9">
-                                                        <rect key="frame" x="16" y="151" width="343" height="74"/>
+                                                        <rect key="frame" x="16" y="151" width="343" height="41"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4fU-RK-jOi" customClass="SeparatorView" customModule="Swappy" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="241" width="375" height="2"/>
+                                                        <rect key="frame" x="0.0" y="367" width="375" height="2"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="2" id="iH7-fo-16A"/>
@@ -104,18 +111,14 @@
                                                     <constraint firstItem="qlO-4F-iu9" firstAttribute="top" secondItem="SyW-0k-wNc" secondAttribute="bottom" constant="4" id="bgH-sU-J0Z"/>
                                                     <constraint firstAttribute="trailing" secondItem="4Ug-UC-PPU" secondAttribute="trailing" id="nZq-r4-qt7"/>
                                                     <constraint firstItem="4fU-RK-jOi" firstAttribute="leading" secondItem="RUz-bq-96F" secondAttribute="leading" id="vwf-za-Nmq"/>
-                                                    <constraint firstItem="4fU-RK-jOi" firstAttribute="top" secondItem="qlO-4F-iu9" secondAttribute="bottom" constant="16" id="wNP-ga-wCP"/>
+                                                    <constraint firstItem="4fU-RK-jOi" firstAttribute="top" relation="greaterThanOrEqual" secondItem="qlO-4F-iu9" secondAttribute="bottom" constant="16" id="wNP-ga-wCP"/>
                                                     <constraint firstItem="i9B-9I-e8R" firstAttribute="top" secondItem="RUz-bq-96F" secondAttribute="top" constant="20" id="wcc-Iz-0aN"/>
                                                     <constraint firstItem="4Ug-UC-PPU" firstAttribute="leading" secondItem="RUz-bq-96F" secondAttribute="leading" id="ycX-OM-HJU"/>
                                                     <constraint firstItem="dDC-ey-PPN" firstAttribute="leading" secondItem="i9B-9I-e8R" secondAttribute="leading" id="ylU-Fc-etv"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jQP-NU-0zS">
-                                                <rect key="frame" x="0.0" y="638" width="375" height="1126"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dr0-30-c2q">
-                                                <rect key="frame" x="0.0" y="1764" width="375" height="88"/>
+                                                <rect key="frame" x="0.0" y="744" width="375" height="88"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CIb-U8-8tH" customClass="MainButton" customModule="Swappy" customModuleProvider="target">
                                                         <rect key="frame" x="16" y="16" width="343" height="52"/>
@@ -137,7 +140,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yeP-cA-mVS">
-                                                <rect key="frame" x="0.0" y="1852" width="375" height="148"/>
+                                                <rect key="frame" x="0.0" y="832" width="375" height="148"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iuw-U2-dTK" customClass="MainButton" customModule="Swappy" customModuleProvider="target">
                                                         <rect key="frame" x="16" y="16" width="343" height="52"/>
@@ -177,9 +180,12 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="KI3-je-heE" secondAttribute="bottom" id="5sz-ye-OHQ"/>
+                                    <constraint firstItem="8ys-Tn-G1W" firstAttribute="leading" secondItem="tNG-rW-MCw" secondAttribute="leading" id="JFD-fm-Z9b"/>
+                                    <constraint firstAttribute="trailing" secondItem="8ys-Tn-G1W" secondAttribute="trailing" id="On8-Tn-CSp"/>
                                     <constraint firstItem="KI3-je-heE" firstAttribute="leading" secondItem="tNG-rW-MCw" secondAttribute="leading" id="QdR-B8-5MI"/>
                                     <constraint firstItem="KI3-je-heE" firstAttribute="height" secondItem="tNG-rW-MCw" secondAttribute="height" priority="250" id="VGU-Cx-Wde"/>
                                     <constraint firstAttribute="trailing" secondItem="KI3-je-heE" secondAttribute="trailing" id="dl4-IL-eft"/>
+                                    <constraint firstItem="8ys-Tn-G1W" firstAttribute="top" secondItem="KI3-je-heE" secondAttribute="bottom" id="mis-yk-4bf"/>
                                     <constraint firstItem="KI3-je-heE" firstAttribute="width" secondItem="tNG-rW-MCw" secondAttribute="width" id="rMK-By-d4t"/>
                                     <constraint firstItem="KI3-je-heE" firstAttribute="top" secondItem="tNG-rW-MCw" secondAttribute="top" id="zwa-RA-QQC"/>
                                 </constraints>
@@ -199,15 +205,16 @@
                         <constraints>
                             <constraint firstItem="R1d-Ne-rQr" firstAttribute="trailing" secondItem="tNG-rW-MCw" secondAttribute="trailing" id="56A-x9-GOP"/>
                             <constraint firstItem="tNG-rW-MCw" firstAttribute="leading" secondItem="R1d-Ne-rQr" secondAttribute="leading" id="IJm-75-TFr"/>
+                            <constraint firstItem="R1d-Ne-rQr" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="KI3-je-heE" secondAttribute="bottom" id="Rea-YV-5mD"/>
                             <constraint firstItem="R1d-Ne-rQr" firstAttribute="trailing" secondItem="4cz-16-cNc" secondAttribute="trailing" constant="16" id="RsF-I6-hHo"/>
-                            <constraint firstAttribute="bottom" secondItem="tNG-rW-MCw" secondAttribute="bottom" id="Uhf-IV-q5P"/>
+                            <constraint firstItem="R1d-Ne-rQr" firstAttribute="bottom" secondItem="tNG-rW-MCw" secondAttribute="bottom" id="Uhf-IV-q5P"/>
                             <constraint firstItem="4cz-16-cNc" firstAttribute="top" secondItem="R1d-Ne-rQr" secondAttribute="top" constant="16" id="m5b-2Y-UGa"/>
-                            <constraint firstItem="tNG-rW-MCw" firstAttribute="top" secondItem="HiI-Wk-7f7" secondAttribute="top" id="uao-9Y-IYL"/>
+                            <constraint firstItem="tNG-rW-MCw" firstAttribute="top" secondItem="R1d-Ne-rQr" secondAttribute="top" id="uao-9Y-IYL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="R1d-Ne-rQr"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="375" height="2000"/>
+                    <size key="freeformSize" width="375" height="1000"/>
                     <connections>
                         <outlet property="descriptionLabel" destination="qlO-4F-iu9" id="kZf-Fz-Lxl"/>
                         <outlet property="editContainerView" destination="yeP-cA-mVS" id="WnG-4p-s9Z"/>
@@ -219,7 +226,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vkN-T6-R7j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-233" y="-155"/>
+            <point key="canvasLocation" x="-234.40000000000001" y="-155.62218890554723"/>
         </scene>
     </scenes>
     <resources>

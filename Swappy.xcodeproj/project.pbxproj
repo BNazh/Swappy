@@ -55,6 +55,7 @@
 		E19F7E1022310A5200BAFC7A /* ProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19F7E0F22310A5200BAFC7A /* ProductService.swift */; };
 		E19F7E1222310B0200BAFC7A /* ProductServiceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19F7E1122310B0200BAFC7A /* ProductServiceImp.swift */; };
 		E19F7E1622310B3D00BAFC7A /* Swinject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19F7E1522310B3D00BAFC7A /* Swinject.swift */; };
+		E1A2DEA72253C33C007E40F8 /* String+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A2DEA62253C33C007E40F8 /* String+Format.swift */; };
 		E1B4B1DB2235BDE400520082 /* ProductDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B4B1DA2235BDE400520082 /* ProductDetailPresenter.swift */; };
 		E1B4B1DD2235BE2200520082 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B4B1DC2235BE2200520082 /* ProductViewModel.swift */; };
 		E1BC5AC122310C0E001FD1D6 /* ProductCatalogAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC5AC022310C0E001FD1D6 /* ProductCatalogAssembly.swift */; };
@@ -198,6 +199,7 @@
 		E19F7E0F22310A5200BAFC7A /* ProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductService.swift; sourceTree = "<group>"; };
 		E19F7E1122310B0200BAFC7A /* ProductServiceImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductServiceImp.swift; sourceTree = "<group>"; };
 		E19F7E1522310B3D00BAFC7A /* Swinject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swinject.swift; sourceTree = "<group>"; };
+		E1A2DEA62253C33C007E40F8 /* String+Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Format.swift"; sourceTree = "<group>"; };
 		E1B4B1DA2235BDE400520082 /* ProductDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailPresenter.swift; sourceTree = "<group>"; };
 		E1B4B1DC2235BE2200520082 /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
 		E1BC5AC022310C0E001FD1D6 /* ProductCatalogAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCatalogAssembly.swift; sourceTree = "<group>"; };
@@ -589,6 +591,7 @@
 				E164C39622326BAD00D1AB13 /* Collection+SafeSubscription.swift */,
 				E1FC309D22378CC100DF1325 /* UIViewController+Storyboard.swift */,
 				E17CA198225338CE00D5C955 /* NotificationName+Product.swift */,
+				E1A2DEA62253C33C007E40F8 /* String+Format.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1105,6 +1108,7 @@
 				E1FF3EA2223E77B800443DED /* ProductsDDM.swift in Sources */,
 				E1BC5ACA22310F1F001FD1D6 /* User.swift in Sources */,
 				E1F0175A224644F5001A10D7 /* ImageService.swift in Sources */,
+				E1A2DEA72253C33C007E40F8 /* String+Format.swift in Sources */,
 				E17CA190224E74B400D5C955 /* DebugViewController.swift in Sources */,
 				E1FC30B2223977B900DF1325 /* SecondaryButton.swift in Sources */,
 				E17CA1972252AA5900D5C955 /* DatabaseStoreImpLocal.swift in Sources */,

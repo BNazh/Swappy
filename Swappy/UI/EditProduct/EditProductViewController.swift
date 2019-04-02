@@ -19,7 +19,7 @@ final class EditProductViewController: UIViewController {
     // MARK: - Properties
     
     var presenter: EditProductPresenter!
-    var categoryDDM: TextFieldPickerDDM!
+    var citiesDDM: TextFieldPickerDDM!
     
     @IBOutlet weak var nameTextField: AppTextField!
     @IBOutlet weak var descriptionTextField: AppTextField!
@@ -27,6 +27,7 @@ final class EditProductViewController: UIViewController {
     @IBOutlet weak var priceTextField: AppTextField!
     @IBOutlet weak var contactInfoTextField: AppTextField!
     @IBOutlet weak var categoryTextField: AppTextField!
+    @IBOutlet weak var cityTextfield: AppTextField!
     @IBOutlet weak var photosHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var doneButton: MainButton!
     
@@ -43,7 +44,7 @@ final class EditProductViewController: UIViewController {
         doneButton.setTitle(presenter.buttonTitle, for: .normal)
         
         setupPhotosHeight()
-        setupCategoryTextField()
+        setupCitiesTextField()
         
         presenter.initialize()
     }
@@ -72,7 +73,7 @@ extension EditProductViewController: EditProductView {
         sizeTextField.text = viewModel.size
         priceTextField.text = viewModel.price
         contactInfoTextField.text = viewModel.contactInfo
-        categoryTextField.text = viewModel.category
+        cityTextField.text = viewModel.city
     }
     
     func close() {
@@ -94,7 +95,7 @@ private extension EditProductViewController {
             description: descriptionTextField.text ?? "",
             contactPhone: contactInfoTextField.text ?? "",
             priceString: priceTextField.text ?? "",
-            city: categoryTextField.text ?? ""
+            city: cityTextField.text ?? ""
         )
     }
     
@@ -108,8 +109,8 @@ private extension EditProductViewController {
         photosViewController?.collectionView.layoutIfNeeded()
     }
     
-    func setupCategoryTextField() {
-        let items = presenter.categoryItems
-        categoryDDM.setup(textField: categoryTextField, with: items)
+    func setupCitiesTextField() {
+        let items = presenter.cityItems
+        citiesDDM.setup(textField: cityTextField, with: items)
     }
 }
