@@ -8,4 +8,11 @@
 
 import Foundation
 
-extension Notification
+// MARK: - notifications for products changing
+
+extension Notification.Name {
+    
+    static let didAddProduct = Notification.Name("didAddProduct")
+    static let didUpdateProduct = Notification.Name("didUpdateProduct")
+    static let didDeleteProduct = Notification.Name("didDeleteProduct")
+}

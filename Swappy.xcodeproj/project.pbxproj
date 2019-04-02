@@ -43,6 +43,7 @@
 		E17CA1942252A94200D5C955 /* DatabaseStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CA1932252A94200D5C955 /* DatabaseStore.swift */; };
 		E17CA1972252AA5900D5C955 /* DatabaseStoreImpLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CA1962252AA5900D5C955 /* DatabaseStoreImpLocal.swift */; };
 		E17CA199225338CE00D5C955 /* NotificationName+Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CA198225338CE00D5C955 /* NotificationName+Product.swift */; };
+		E17CA19B22533A2800D5C955 /* ProductsNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CA19A22533A2800D5C955 /* ProductsNotificationCenter.swift */; };
 		E19F7DD52231063900BAFC7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19F7DD42231063900BAFC7A /* AppDelegate.swift */; };
 		E19F7DDA2231063900BAFC7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E19F7DD82231063900BAFC7A /* Main.storyboard */; };
 		E19F7DDD2231063900BAFC7A /* Swappy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E19F7DDB2231063900BAFC7A /* Swappy.xcdatamodeld */; };
@@ -179,6 +180,7 @@
 		E17CA1932252A94200D5C955 /* DatabaseStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseStore.swift; sourceTree = "<group>"; };
 		E17CA1962252AA5900D5C955 /* DatabaseStoreImpLocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseStoreImpLocal.swift; sourceTree = "<group>"; };
 		E17CA198225338CE00D5C955 /* NotificationName+Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationName+Product.swift"; sourceTree = "<group>"; };
+		E17CA19A22533A2800D5C955 /* ProductsNotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsNotificationCenter.swift; sourceTree = "<group>"; };
 		E19F7DD12231063900BAFC7A /* Swappy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swappy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E19F7DD42231063900BAFC7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E19F7DD92231063900BAFC7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -361,6 +363,7 @@
 				E11174952243719400BD19B4 /* Core.swift */,
 				E1F0175622463C13001A10D7 /* BaseProvider.swift */,
 				E17CA19122529D9200D5C955 /* AppConstants.swift */,
+				E17CA19A22533A2800D5C955 /* ProductsNotificationCenter.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -1070,6 +1073,7 @@
 				E1F0175C224644FB001A10D7 /* ImageServiceImp.swift in Sources */,
 				E17CA199225338CE00D5C955 /* NotificationName+Product.swift in Sources */,
 				E111747E2241860400BD19B4 /* AuthService.swift in Sources */,
+				E17CA19B22533A2800D5C955 /* ProductsNotificationCenter.swift in Sources */,
 				E1FF3E91223A338800443DED /* LoginCardViewController.swift in Sources */,
 				E1FC30AF2239738200DF1325 /* ProductDetailRouter.swift in Sources */,
 				E1F0176F22493E7A001A10D7 /* DeleteButton.swift in Sources */,

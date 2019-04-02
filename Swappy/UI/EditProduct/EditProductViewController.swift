@@ -44,7 +44,6 @@ final class EditProductViewController: UIViewController {
         
         setupPhotosHeight()
         setupCategoryTextField()
-        setupPriceTextField()
         
         presenter.initialize()
     }
@@ -112,9 +111,5 @@ private extension EditProductViewController {
     func setupCategoryTextField() {
         let items = presenter.categoryItems
         categoryDDM.setup(textField: categoryTextField, with: items)
-    }
-    
-    func setupPriceTextField() {
-        priceTextField
     }
 }
