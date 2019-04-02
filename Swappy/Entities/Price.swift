@@ -17,7 +17,7 @@ struct Price: Codable {
     
     // MARK: - Init
     
-    init(priceString: String, currency = AppConstants.defaultCurrency) {
+    init(priceString: String, currency: String = AppConstants.defaultCurrency) {
         let lettersSet = CharacterSet(charactersIn: "01234567890.").inverted
         let priceNumbers = priceString.trimmingCharacters(in: lettersSet)
         

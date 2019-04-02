@@ -17,7 +17,8 @@ final class ProductServiceImp {
     let pageSize = 10
     var canLoadMore = true
     
-    init(provider: MoyaProvider<ProductsTarget>, keychainStore: KeychainStore) {
+    init(provider: MoyaProvider<ProductsTarget>,
+         keychainStore: KeychainStore) {
         self.provider = provider
         self.keychainStore = keychainStore
     }
