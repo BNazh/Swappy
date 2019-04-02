@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -49,7 +49,7 @@
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="foS-vB-cU1"/>
-                                    <constraint firstAttribute="width" constant="61" id="nMT-RN-HIN"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="61" id="nMT-RN-HIN"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -68,6 +68,7 @@
                             <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Qth-KS-cS5" secondAttribute="bottom" id="c9u-H5-0UH"/>
                             <constraint firstItem="r3O-9I-sLY" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="kF4-uJ-UzY"/>
                             <constraint firstItem="MmO-8g-a3p" firstAttribute="top" secondItem="r3O-9I-sLY" secondAttribute="bottom" constant="4" id="mUN-Jl-piY"/>
+                            <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="yIp-aL-bZe" secondAttribute="trailing" constant="8" id="tyj-w8-rlO"/>
                             <constraint firstItem="MmO-8g-a3p" firstAttribute="leading" secondItem="r3O-9I-sLY" secondAttribute="leading" id="wTW-3N-JjK"/>
                             <constraint firstItem="Qth-KS-cS5" firstAttribute="trailing" secondItem="MmO-8g-a3p" secondAttribute="trailing" id="xqF-xh-nTm"/>
                         </constraints>

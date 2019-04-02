@@ -106,7 +106,7 @@ private extension MyProductsPresenterImp {
         }
         
         products.append(contentsOf: newProducts)
-        products.removeAll { !$0.isActive }
+        products.removeAll { !$0.isActive || $0.id.isEmpty || $0.seller == nil } // DELETE ME
         
         reloadProductsOnView()
     }

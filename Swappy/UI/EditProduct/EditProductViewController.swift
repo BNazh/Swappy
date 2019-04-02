@@ -27,7 +27,7 @@ final class EditProductViewController: UIViewController {
     @IBOutlet weak var priceTextField: AppTextField!
     @IBOutlet weak var contactInfoTextField: AppTextField!
     @IBOutlet weak var categoryTextField: AppTextField!
-    @IBOutlet weak var cityTextfield: AppTextField!
+    @IBOutlet weak var cityTextField: AppTextField!
     @IBOutlet weak var photosHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var doneButton: MainButton!
     

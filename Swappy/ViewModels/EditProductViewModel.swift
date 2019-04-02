@@ -27,7 +27,7 @@ struct EditProductViewModel {
         title = product.name
         description = product.description
         size = product.size
-        price = "\(product.price)"
+        price = String(format: "%g", product.price.value)
         contactInfo = product.contactPhone
         category = "" // TODO
         city = product.city
