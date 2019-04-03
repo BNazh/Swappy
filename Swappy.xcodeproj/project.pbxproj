@@ -1331,6 +1331,7 @@
 				CODE_SIGN_ENTITLEMENTS = Swappy/Swappy.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 9FZYD98Z6Q;
 				INFOPLIST_FILE = Swappy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1342,6 +1343,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "Swappy-development";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
@@ -1353,6 +1355,7 @@
 				CODE_SIGN_ENTITLEMENTS = Swappy/Swappy.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 9FZYD98Z6Q;
 				INFOPLIST_FILE = Swappy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1364,6 +1367,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "Swappy-distribution";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
