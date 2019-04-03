@@ -50,6 +50,9 @@ target 'Swappy' do
   # Analytics
   pod 'YandexMobileMetrica', '3.6.0'
   
+  # Constraints
+  pod 'SnapKit', '4.0.0'
+  
   target 'SwappyTests' do
     inherit! :search_paths
     # Pods for testing

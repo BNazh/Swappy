@@ -7,12 +7,30 @@
 //
 
 import UIKit
+import SnapKit
 
 // UITransitionDelegate?
 
 class CardViewController: UIViewController {
     
     private weak var shadeView: UIView?
+    private lazy var bottomView = UIView()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        view.clipsToBounds = false
+        
+        view.addSubview(bottomView)
+        bottomView.backgroundColor = .white
+        bottomView.snp.makeConstraints { make in
+            make.centerX.equalTo(self.view)
+            make.height.equalTo(100)
+            make.leading.equalTo(view.snp.leading)
+            make.trailing.equalTo(view.snp.trailing)
+            make.top.equalTo(view.snp.bottomMargin)
+        }
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
