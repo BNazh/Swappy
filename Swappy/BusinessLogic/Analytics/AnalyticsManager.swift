@@ -19,7 +19,10 @@ protocol AnalyticsManager: class {
 
 final class AnalyticsManagerImp {
     
-    private let managers = [AppMetricaManager()]
+    private let managers: [AnalyticsManager] = [
+        AppMetricaManager(),
+        FirebaseAnalyticsManager()
+    ]
 }
 
 extension AnalyticsManagerImp: AnalyticsManager {

@@ -28,6 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         analyticManager.configure(launchOptions: launchOptions)
         analyticManager.track(event: .startSession)
+        UIViewController.swizzleViewWillAppear()
         
         window?.rootViewController?.modalPresentationStyle = .currentContext
         
