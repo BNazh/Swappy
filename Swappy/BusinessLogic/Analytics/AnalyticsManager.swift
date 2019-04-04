@@ -8,23 +8,27 @@
 
 import UIKit
 
-protocol AnalyticsManagerProtocol: class {
+protocol AnalyticsManager: class {
+    
+    func configure(launchOptions: [UIApplication.LaunchOptionsKey: Any]?)
     
     func track(screen: AnalyticScreen)
     
     func track(event: AnalyticEvent)
 }
 
-final class AnalyticsManager {
+final class AnalyticsManagerImp {
     
-    static let shared: AnalyticsManagerProtocol = AnalyticsManager()
-    
-    let managers = [AppMetricaManager()]
-    
-    private init() {}
+    private let managers = [AppMetricaManager()]
 }
 
-extension AnalyticsManager: AnalyticsManagerProtocol {
+extension AnalyticsManagerImp: AnalyticsManager {
+    
+    func configure(launchOptions: [UIApplication.LaunchOptionsKey : Any]?) {
+        for manager in managers {
+            manager.configure(launchOptions: launchOptions)
+        }
+    }
     
     func track(screen: AnalyticScreen) {
         for manager in managers {

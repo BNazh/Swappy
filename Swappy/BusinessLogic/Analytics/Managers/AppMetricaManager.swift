@@ -14,7 +14,11 @@ final class AppMetricaManager {
     private let apiKey = "API_key"
 }
 
-extension AppMetricaManager: AnalyticsManagerProtocol {
+extension AppMetricaManager: AnalyticsManager {
+    
+    func configure(launchOptions: [UIApplication.LaunchOptionsKey : Any]?) {
+        
+    }
     
     func track(screen: AnalyticScreen) {
         // TODO

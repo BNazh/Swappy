@@ -55,6 +55,12 @@ final class ServicesAssembly: Assembly {
             )
         }
         
+        // Managers
+        
+        container.register(AnalyticsManager.self) { r in
+            return AnalyticsManagerImp()
+        }.inObjectScope(.container)
+        
         // DDM
         
         container.register(ProductsDDM.self) { _ in
