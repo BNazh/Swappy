@@ -56,6 +56,9 @@
 		E19F7E1222310B0200BAFC7A /* ProductServiceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19F7E1122310B0200BAFC7A /* ProductServiceImp.swift */; };
 		E19F7E1622310B3D00BAFC7A /* Swinject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19F7E1522310B3D00BAFC7A /* Swinject.swift */; };
 		E1A2DEA72253C33C007E40F8 /* String+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A2DEA62253C33C007E40F8 /* String+Format.swift */; };
+		E1A6655F2254FD2A007EE75F /* UIViewController+BackNavBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A6655E2254FD2A007EE75F /* UIViewController+BackNavBarButton.swift */; };
+		E1A6656222550C96007EE75F /* PushNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A6656122550C96007EE75F /* PushNotificationService.swift */; };
+		E1A6656422550CAD007EE75F /* PushNotificationServiceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A6656322550CAD007EE75F /* PushNotificationServiceImp.swift */; };
 		E1B4B1DB2235BDE400520082 /* ProductDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B4B1DA2235BDE400520082 /* ProductDetailPresenter.swift */; };
 		E1B4B1DD2235BE2200520082 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B4B1DC2235BE2200520082 /* ProductViewModel.swift */; };
 		E1BC5AC122310C0E001FD1D6 /* ProductCatalogAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC5AC022310C0E001FD1D6 /* ProductCatalogAssembly.swift */; };
@@ -202,6 +205,9 @@
 		E1A2DEA62253C33C007E40F8 /* String+Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Format.swift"; sourceTree = "<group>"; };
 		E1A2DEA82253D426007E40F8 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		E1A2DEA92253D426007E40F8 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		E1A6655E2254FD2A007EE75F /* UIViewController+BackNavBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+BackNavBarButton.swift"; sourceTree = "<group>"; };
+		E1A6656122550C96007EE75F /* PushNotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationService.swift; sourceTree = "<group>"; };
+		E1A6656322550CAD007EE75F /* PushNotificationServiceImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationServiceImp.swift; sourceTree = "<group>"; };
 		E1B4B1DA2235BDE400520082 /* ProductDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailPresenter.swift; sourceTree = "<group>"; };
 		E1B4B1DC2235BE2200520082 /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
 		E1BC5AC022310C0E001FD1D6 /* ProductCatalogAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCatalogAssembly.swift; sourceTree = "<group>"; };
@@ -505,6 +511,7 @@
 		E19F7E052231064D00BAFC7A /* BusinessLogic */ = {
 			isa = PBXGroup;
 			children = (
+				E1A6656022550C87007EE75F /* PushNotificationService */,
 				E17CA185224C24EE00D5C955 /* Analytics */,
 				E11174812242B37100BD19B4 /* Core */,
 				E19F7E0E22310A3F00BAFC7A /* Services */,
@@ -562,6 +569,24 @@
 			path = DI;
 			sourceTree = "<group>";
 		};
+		E1A6655D2254FCE9007EE75F /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E1FC309D22378CC100DF1325 /* UIViewController+Storyboard.swift */,
+				E1A6655E2254FD2A007EE75F /* UIViewController+BackNavBarButton.swift */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		E1A6656022550C87007EE75F /* PushNotificationService */ = {
+			isa = PBXGroup;
+			children = (
+				E1A6656122550C96007EE75F /* PushNotificationService.swift */,
+				E1A6656322550CAD007EE75F /* PushNotificationServiceImp.swift */,
+			);
+			path = PushNotificationService;
+			sourceTree = "<group>";
+		};
 		E1BC5AC422310CAA001FD1D6 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
@@ -591,7 +616,6 @@
 				E1BC5AE222312E6C001FD1D6 /* NSAttributedString+SimpleInit.swift */,
 				E1BC5AE422312F36001FD1D6 /* Moya+CustomDecodableRequest.swift */,
 				E164C39622326BAD00D1AB13 /* Collection+SafeSubscription.swift */,
-				E1FC309D22378CC100DF1325 /* UIViewController+Storyboard.swift */,
 				E17CA198225338CE00D5C955 /* NotificationName+Product.swift */,
 				E1A2DEA62253C33C007E40F8 /* String+Format.swift */,
 			);
@@ -619,6 +643,7 @@
 		E1BC5AF02231835E001FD1D6 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				E1A6655D2254FCE9007EE75F /* UIViewController */,
 				E1BC5AEE22318340001FD1D6 /* UICollectionView+RegisterCells.swift */,
 				E1BC5AE022312D5A001FD1D6 /* UIFont+App.swift */,
 				E1BC5AF122318370001FD1D6 /* UIView+ReusableIdentifiers.swift */,
@@ -871,6 +896,7 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				en,
 				Base,
 				ru,
 			);
@@ -1086,6 +1112,7 @@
 				E1F0176F22493E7A001A10D7 /* DeleteButton.swift in Sources */,
 				E10850C2223EF78F00941EA5 /* PhoneLoginViewController.swift in Sources */,
 				E1FC30A52238DC5C00DF1325 /* SellerInfoViewController.swift in Sources */,
+				E1A6656422550CAD007EE75F /* PushNotificationServiceImp.swift in Sources */,
 				E1B4B1DB2235BDE400520082 /* ProductDetailPresenter.swift in Sources */,
 				E1FF3EB1223E9CDA00443DED /* MyProductsPresenter.swift in Sources */,
 				E1FF3E6C223A302900443DED /* CardViewController.swift in Sources */,
@@ -1104,6 +1131,7 @@
 				E1FF3EA4223E77C100443DED /* ProductsDDMImp.swift in Sources */,
 				E1FF3E95223A33CD00443DED /* LoginCardRouter.swift in Sources */,
 				E1BC5AC322310C2E001FD1D6 /* ServicesAssembly.swift in Sources */,
+				E1A6655F2254FD2A007EE75F /* UIViewController+BackNavBarButton.swift in Sources */,
 				E164C39C223591AF00D1AB13 /* MainButton.swift in Sources */,
 				E11174802241860C00BD19B4 /* AuthServiceImp.swift in Sources */,
 				E111748D2242DBEA00BD19B4 /* ErrorView.swift in Sources */,
@@ -1120,6 +1148,7 @@
 				E1BC5AE122312D5A001FD1D6 /* UIFont+App.swift in Sources */,
 				E19F7DDD2231063900BAFC7A /* Swappy.xcdatamodeld in Sources */,
 				E17CA18B224C27CB00D5C955 /* AppMetricaManager.swift in Sources */,
+				E1A6656222550C96007EE75F /* PushNotificationService.swift in Sources */,
 				E11174982246231600BD19B4 /* ImageTarget.swift in Sources */,
 				E1F0176D22493CF7001A10D7 /* TipView.swift in Sources */,
 				E1FC30AB22396F7400DF1325 /* SellerInfoViewModel.swift in Sources */,

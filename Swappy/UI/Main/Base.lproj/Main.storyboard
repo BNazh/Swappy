@@ -48,7 +48,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hex-0e-Ldi"/>
                     </view>
-                    <navigationItem key="navigationItem" id="9RM-NE-DJZ">
+                    <navigationItem key="navigationItem" title="Swappy" id="9RM-NE-DJZ">
                         <barButtonItem key="leftBarButtonItem" title="Debug" id="0QX-Ur-sQH">
                             <connections>
                                 <segue destination="Yx7-rx-VLH" kind="show" id="Xah-b1-OjH"/>

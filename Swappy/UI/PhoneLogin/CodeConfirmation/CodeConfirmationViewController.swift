@@ -26,7 +26,7 @@ final class CodeConfirmationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.backBarButtonItem?.title = ""
+        hideBackButton()
         
         codeTextField.delegate = textFieldDelegate
         textFieldDelegate.listener = self

@@ -31,6 +31,8 @@ final class PhoneLoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        hideBackButton()
+        
         textFieldDelegate.affinityCalculationStrategy = .prefix
         phoneTextField.delegate = textFieldDelegate
         textFieldDelegate.listener = self

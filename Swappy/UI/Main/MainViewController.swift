@@ -15,7 +15,7 @@ class MainViewController: ButtonBarPagerTabStripViewController {
         
         super.viewDidLoad()
         
-        title = ""
+        title = "Swappy"
     }
     
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
