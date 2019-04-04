@@ -46,6 +46,10 @@
 		E17CA19B22533A2800D5C955 /* ProductsNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CA19A22533A2800D5C955 /* ProductsNotificationCenter.swift */; };
 		E17CA19D22569A1000D5C955 /* AnalyticScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CA19C22569A1000D5C955 /* AnalyticScreen.swift */; };
 		E17CA1A122569A7700D5C955 /* FirebaseAnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CA1A022569A7700D5C955 /* FirebaseAnalyticsManager.swift */; };
+		E17CA1A32256A5CC00D5C955 /* Resolver+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CA1A22256A5CC00D5C955 /* Resolver+Extension.swift */; };
+		E17CA1A52256B02300D5C955 /* LoginCardAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CA1A42256B02300D5C955 /* LoginCardAssembly.swift */; };
+		E17CA1A72256B19800D5C955 /* UIViewController+Swizzling.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CA1A62256B19800D5C955 /* UIViewController+Swizzling.swift */; };
+		E17CA1AA2256B98D00D5C955 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E17CA1A92256B98D00D5C955 /* GoogleService-Info.plist */; };
 		E19F7DD52231063900BAFC7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19F7DD42231063900BAFC7A /* AppDelegate.swift */; };
 		E19F7DDA2231063900BAFC7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E19F7DD82231063900BAFC7A /* Main.storyboard */; };
 		E19F7DDD2231063900BAFC7A /* Swappy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E19F7DDB2231063900BAFC7A /* Swappy.xcdatamodeld */; };
@@ -106,8 +110,6 @@
 		E1FC30B2223977B900DF1325 /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FC30B1223977B900DF1325 /* SecondaryButton.swift */; };
 		E1FF3E6C223A302900443DED /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF3E6B223A302900443DED /* CardViewController.swift */; };
 		E1FF3E91223A338800443DED /* LoginCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF3E90223A338800443DED /* LoginCardViewController.swift */; };
-		E1FF3E93223A339200443DED /* LoginCardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF3E92223A339200443DED /* LoginCardPresenter.swift */; };
-		E1FF3E95223A33CD00443DED /* LoginCardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF3E94223A33CD00443DED /* LoginCardRouter.swift */; };
 		E1FF3E97223A350900443DED /* LoginCard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1FF3E96223A350900443DED /* LoginCard.storyboard */; };
 		E1FF3E99223A373000443DED /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF3E98223A373000443DED /* BaseButton.swift */; };
 		E1FF3E9E223E634A00443DED /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF3E9D223E634A00443DED /* MainViewController.swift */; };
@@ -189,6 +191,10 @@
 		E17CA19A22533A2800D5C955 /* ProductsNotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsNotificationCenter.swift; sourceTree = "<group>"; };
 		E17CA19C22569A1000D5C955 /* AnalyticScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticScreen.swift; sourceTree = "<group>"; };
 		E17CA1A022569A7700D5C955 /* FirebaseAnalyticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAnalyticsManager.swift; sourceTree = "<group>"; };
+		E17CA1A22256A5CC00D5C955 /* Resolver+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Resolver+Extension.swift"; sourceTree = "<group>"; };
+		E17CA1A42256B02300D5C955 /* LoginCardAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCardAssembly.swift; sourceTree = "<group>"; };
+		E17CA1A62256B19800D5C955 /* UIViewController+Swizzling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Swizzling.swift"; sourceTree = "<group>"; };
+		E17CA1A92256B98D00D5C955 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E19F7DD12231063900BAFC7A /* Swappy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swappy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E19F7DD42231063900BAFC7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E19F7DD92231063900BAFC7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -258,8 +264,6 @@
 		E1FC30B322398B2E00DF1325 /* Swappy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Swappy.entitlements; sourceTree = "<group>"; };
 		E1FF3E6B223A302900443DED /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		E1FF3E90223A338800443DED /* LoginCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCardViewController.swift; sourceTree = "<group>"; };
-		E1FF3E92223A339200443DED /* LoginCardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCardPresenter.swift; sourceTree = "<group>"; };
-		E1FF3E94223A33CD00443DED /* LoginCardRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCardRouter.swift; sourceTree = "<group>"; };
 		E1FF3E96223A350900443DED /* LoginCard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginCard.storyboard; sourceTree = "<group>"; };
 		E1FF3E98223A373000443DED /* BaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
 		E1FF3E9D223E634A00443DED /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -339,6 +343,7 @@
 				E11174732240AD8F00BD19B4 /* EditProductAssembly.swift */,
 				E11174842242B49200BD19B4 /* PhoneLoginAssembly.swift */,
 				E1117493224370B800BD19B4 /* CodeConfirmationAssembly.swift */,
+				E17CA1A42256B02300D5C955 /* LoginCardAssembly.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -433,6 +438,7 @@
 				E17CA186224C24FE00D5C955 /* AnalyticsManager.swift */,
 				E17CA19F22569A2A00D5C955 /* Managers */,
 				E17CA19E22569A1C00D5C955 /* Structs */,
+				E17CA1A82256B92D00D5C955 /* Helpers */,
 			);
 			path = Analytics;
 			sourceTree = "<group>";
@@ -472,6 +478,14 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
+		E17CA1A82256B92D00D5C955 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E17CA1A62256B19800D5C955 /* UIViewController+Swizzling.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		E19F7DC82231063900BAFC7A = {
 			isa = PBXGroup;
 			children = (
@@ -507,6 +521,7 @@
 				E1BC5AE822313350001FD1D6 /* Resources */,
 				E19F7DD42231063900BAFC7A /* AppDelegate.swift */,
 				E19F7DDE2231063A00BAFC7A /* Assets.xcassets */,
+				E17CA1A92256B98D00D5C955 /* GoogleService-Info.plist */,
 				E19F7DE32231063A00BAFC7A /* Info.plist */,
 			);
 			path = Swappy;
@@ -533,11 +548,11 @@
 		E19F7E052231064D00BAFC7A /* BusinessLogic */ = {
 			isa = PBXGroup;
 			children = (
-				E1A6656022550C87007EE75F /* PushNotificationService */,
-				E17CA185224C24EE00D5C955 /* Analytics */,
 				E11174812242B37100BD19B4 /* Core */,
 				E19F7E0E22310A3F00BAFC7A /* Services */,
 				E19F7E062231065600BAFC7A /* Targets */,
+				E1A6656022550C87007EE75F /* PushNotificationService */,
+				E17CA185224C24EE00D5C955 /* Analytics */,
 				E1BC5ACD22311168001FD1D6 /* Result.swift */,
 				E1BC5ACF22311173001FD1D6 /* AppError.swift */,
 			);
@@ -587,6 +602,7 @@
 				E11174722240AD5B00BD19B4 /* Reusable */,
 				E11174712240AD4E00BD19B4 /* Scenes */,
 				E19F7E1522310B3D00BAFC7A /* Swinject.swift */,
+				E17CA1A22256A5CC00D5C955 /* Resolver+Extension.swift */,
 			);
 			path = DI;
 			sourceTree = "<group>";
@@ -749,8 +765,6 @@
 			children = (
 				E1FF3E96223A350900443DED /* LoginCard.storyboard */,
 				E1FF3E90223A338800443DED /* LoginCardViewController.swift */,
-				E1FF3E92223A339200443DED /* LoginCardPresenter.swift */,
-				E1FF3E94223A33CD00443DED /* LoginCardRouter.swift */,
 			);
 			path = LoginCard;
 			sourceTree = "<group>";
@@ -941,6 +955,7 @@
 			files = (
 				E1BC5AD222311FBE001FD1D6 /* ProductCatalog.storyboard in Resources */,
 				E19F7DE22231063A00BAFC7A /* LaunchScreen.storyboard in Resources */,
+				E17CA1AA2256B98D00D5C955 /* GoogleService-Info.plist in Resources */,
 				E1FC30A72238DC9900DF1325 /* SellerInfo.storyboard in Resources */,
 				E1FF3EAD223E9CC300443DED /* MyProducts.storyboard in Resources */,
 				E1BC5ADE223124B3001FD1D6 /* ProductCollectionViewCell.xib in Resources */,
@@ -1137,6 +1152,7 @@
 				E1A6656422550CAD007EE75F /* PushNotificationServiceImp.swift in Sources */,
 				E1B4B1DB2235BDE400520082 /* ProductDetailPresenter.swift in Sources */,
 				E1FF3EB1223E9CDA00443DED /* MyProductsPresenter.swift in Sources */,
+				E17CA1A72256B19800D5C955 /* UIViewController+Swizzling.swift in Sources */,
 				E1FF3E6C223A302900443DED /* CardViewController.swift in Sources */,
 				E1FC30A02238504100DF1325 /* ProductDetailAssembly.swift in Sources */,
 				E11174892242B5B800BD19B4 /* PhoneLoginRouter.swift in Sources */,
@@ -1151,13 +1167,14 @@
 				E111748B2242DBD700BD19B4 /* LoadingView.swift in Sources */,
 				E164C39E2235A70E00D1AB13 /* SeparatorView.swift in Sources */,
 				E1FF3EA4223E77C100443DED /* ProductsDDMImp.swift in Sources */,
-				E1FF3E95223A33CD00443DED /* LoginCardRouter.swift in Sources */,
+				E17CA1A52256B02300D5C955 /* LoginCardAssembly.swift in Sources */,
 				E1BC5AC322310C2E001FD1D6 /* ServicesAssembly.swift in Sources */,
 				E1A6655F2254FD2A007EE75F /* UIViewController+BackNavBarButton.swift in Sources */,
 				E164C39C223591AF00D1AB13 /* MainButton.swift in Sources */,
 				E11174802241860C00BD19B4 /* AuthServiceImp.swift in Sources */,
 				E111748D2242DBEA00BD19B4 /* ErrorView.swift in Sources */,
 				E1BC5AEF22318340001FD1D6 /* UICollectionView+RegisterCells.swift in Sources */,
+				E17CA1A32256A5CC00D5C955 /* Resolver+Extension.swift in Sources */,
 				E111749022436FBF00BD19B4 /* CodeConfirmationViewController.swift in Sources */,
 				E1FF3EA2223E77B800443DED /* ProductsDDM.swift in Sources */,
 				E1BC5ACA22310F1F001FD1D6 /* User.swift in Sources */,
@@ -1180,7 +1197,6 @@
 				E1BC5AD622312199001FD1D6 /* ProductCatalogPresenter.swift in Sources */,
 				E19F7E1222310B0200BAFC7A /* ProductServiceImp.swift in Sources */,
 				E1F0176A224935BA001A10D7 /* TextFieldPickerDDM.swift in Sources */,
-				E1FF3E93223A339200443DED /* LoginCardPresenter.swift in Sources */,
 				E164C39722326BAD00D1AB13 /* Collection+SafeSubscription.swift in Sources */,
 				E1FC309C22378BCB00DF1325 /* ProductCatalogRouter.swift in Sources */,
 				E1FF3EA7223E9A1300443DED /* NoProductsViewController.swift in Sources */,

@@ -22,7 +22,8 @@ final class ProductCatalogAssembly: Assembly {
             return ProductCatalogPresenterImp(
                 view: viewController,
                 productService: resolver.resolve(ProductService.self)!,
-                router: resolver.resolve(ProductCatalogRouter.self, argument: viewController)!
+                router: resolver.resolve(ProductCatalogRouter.self, argument: viewController)!,
+                tracker: resolver.resolve()
             )
         }
         

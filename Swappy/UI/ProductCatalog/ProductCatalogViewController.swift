@@ -54,3 +54,10 @@ extension ProductCatalogViewController: ProductsDDMDelegate {
         presenter.refreshProducts()
     }
 }
+
+extension ProductCatalogViewController: AnalyticScreenProvider {
+    
+    var screen: AnalyticScreen {
+        return .productCatalog
+    }
+}

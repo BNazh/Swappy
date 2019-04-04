@@ -19,12 +19,13 @@ final class ProductDetailAssembly: Assembly {
         }
         
         container.register(ProductDetailPresenter.self) {
-            (resolver, view: ProductDetailViewController, router: ProductDetailRouter) in
+            (r, view: ProductDetailViewController, router: ProductDetailRouter) in
             
             ProductDetailPresenterImp(
                 view: view,
                 router: router,
-                productService: resolver.resolve(ProductService.self)!
+                productService: r.resolve(),
+                tracker: r.resolve()
             )
         }
         

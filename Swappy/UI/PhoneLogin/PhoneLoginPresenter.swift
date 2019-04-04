@@ -17,11 +17,16 @@ final class PhoneLoginPresenterImp {
     unowned let view: PhoneLoginView
     let router: PhoneLoginRouter
     let authService: AuthService
+    let tracker: AnalyticsManager
     
-    init(view: PhoneLoginView, router: PhoneLoginRouter, authService: AuthService) {
+    init(view: PhoneLoginView,
+         router: PhoneLoginRouter,
+         authService: AuthService,
+         tracker: AnalyticsManager) {
         self.view = view
         self.router = router
         self.authService = authService
+        self.tracker = tracker
     }
 }
 

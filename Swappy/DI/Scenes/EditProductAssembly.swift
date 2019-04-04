@@ -11,10 +11,11 @@ import Swinject
 final class EditProductAssembly: Assembly {
     
     func assemble(container: Container) {
-        container.register(EditProductPresenter.self) { (resolver, view: EditProductViewController) in
+        container.register(EditProductPresenter.self) { (r, view: EditProductViewController) in
             return EditProductPresenterImp(
                 view: view,
-                productService: resolver.resolve(ProductService.self)!
+                productService: r.resolve(),
+                tracker: r.resolve()
             )
         }
         

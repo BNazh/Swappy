@@ -61,3 +61,9 @@ extension CodeConfirmationViewController: MaskedTextFieldDelegateListener {
         confirmCodeButton.isEnabled = complete
     }
 }
+
+extension CodeConfirmationViewController: AnalyticScreenProvider {
+    var screen: AnalyticScreen {
+        return .codeVerification
+    }
+}

@@ -16,11 +16,12 @@ final class PhoneLoginAssembly: Assembly {
             return PhoneLoginRouterImp(viewController: viewController)
         }
         
-        container.register(PhoneLoginPresenter.self) { (resolver, view: PhoneLoginViewController) in
+        container.register(PhoneLoginPresenter.self) { (r, view: PhoneLoginViewController) in
             return PhoneLoginPresenterImp(
                 view: view,
-                router: resolver.resolve(PhoneLoginRouter.self, argument: view)!,
-                authService: resolver.resolve(AuthService.self)!
+                router: r.resolve(),
+                authService: r.resolve(),
+                tracker: r.resolve()
             )
         }
         

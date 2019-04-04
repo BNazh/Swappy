@@ -57,3 +57,9 @@ extension PhoneLoginViewController: MaskedTextFieldDelegateListener {
         verificationButton.isEnabled = complete
     }
 }
+
+extension PhoneLoginViewController: AnalyticScreenProvider {
+    var screen: AnalyticScreen {
+        return .phoneLogin
+    }
+}

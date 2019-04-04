@@ -21,12 +21,14 @@ final class CodeConfirmationPresenterImp {
     
     private unowned let view: CodeConfirmationView
     private let authService: AuthService
+    private let tracker: AnalyticsManager
     
     private var phone: String = ""
     
-    init(view: CodeConfirmationView, authService: AuthService) {
+    init(view: CodeConfirmationView, authService: AuthService, tracker: AnalyticsManager) {
         self.view = view
         self.authService = authService
+        self.tracker = tracker
     }
 }
 
@@ -45,9 +47,12 @@ extension CodeConfirmationPresenterImp: CodeConfirmationPresenter {
             
             switch result {
             case .success:
+                self?.tracker.track(event: .login)
+                self?.tracker.track(event: .loginByPhoneSuccess)
                 self?.view.openMainScreeen()
                 
             case .failure(let error):
+                self?.tracker.track(event: .loginByPhoneFailure)
                 self?.view.showError(message: error.localizedString)
             }
         }

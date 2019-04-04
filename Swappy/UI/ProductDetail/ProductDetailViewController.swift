@@ -89,3 +89,10 @@ extension ProductDetailViewController: ProductDetailView {
         sellerContainerView.isHidden = isSellerButtonHidden
     }
 }
+
+extension ProductDetailViewController: AnalyticScreenProvider {
+    
+    var screen: AnalyticScreen {
+        return .productDetails
+    }
+}

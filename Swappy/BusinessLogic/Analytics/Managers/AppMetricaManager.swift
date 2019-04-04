@@ -11,17 +11,22 @@ import UIKit
 
 final class AppMetricaManager {
     
-    private let apiKey = "API_key"
+    
 }
 
 extension AppMetricaManager: AnalyticsManager {
     
     func configure(launchOptions: [UIApplication.LaunchOptionsKey : Any]?) {
+        let apiKey = "e5fa98a5-b630-47e9-ab2f-69ce2c46ef1e"
+        guard let configuration = YMMReporterConfiguration(apiKey: apiKey) else {
+            return
+        }
         
+        YMMYandexMetrica.activateReporter(with: configuration)
     }
     
     func track(screen: AnalyticScreen) {
-        // TODO
+        YMMYandexMetrica.reportEvent(screen.rawValue, onFailure: nil)
     }
     
     func track(event: AnalyticEvent) {

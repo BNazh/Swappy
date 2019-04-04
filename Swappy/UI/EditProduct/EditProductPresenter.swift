@@ -31,14 +31,16 @@ final class EditProductPresenterImp {
     
     private unowned let view: EditProductView
     private let productService: ProductService
+    private let tracker: AnalyticsManager
     
     private var state = EditProductInitState.add
     
     // MARK: - Init
     
-    init(view: EditProductView, productService: ProductService) {
+    init(view: EditProductView, productService: ProductService, tracker: AnalyticsManager) {
         self.view = view
         self.productService = productService
+        self.tracker = tracker
     }
 }
 
@@ -65,7 +67,7 @@ extension EditProductPresenterImp: EditProductPresenter {
     func initialize() {
         switch state {
         case .add:
-            break
+            tracker.track(screen: .createProduct)
         case .edit(product: let product):
             let viewModel = EditProductViewModel(product: product)
             view.showProduct(viewModel: viewModel)
@@ -94,6 +96,8 @@ extension EditProductPresenterImp: EditProductPresenter {
     }
 }
 
+// MARK: - Private
+
 private extension EditProductPresenterImp {
     
     var isProductNew: Bool {
@@ -118,6 +122,7 @@ private extension EditProductPresenterImp {
         switch result {
         case .success(let product):
             view.close()
+            tracker.track(event: .addProductSuccess)
             
         case .failure:
             let message = isProductNew ? "Не удалось создать объявление" : "Не удалось изменить объявление"

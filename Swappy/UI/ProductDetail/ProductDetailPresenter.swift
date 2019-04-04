@@ -22,16 +22,19 @@ final class ProductDetailPresenterImp {
     unowned let view: ProductDetailView
     let router: ProductDetailRouter
     let productService: ProductService
+    let tracker: AnalyticsManager
     
     var product: Product!
     var isOwner: Bool = false
     
     init(view: ProductDetailView,
          router: ProductDetailRouter,
-         productService: ProductService) {
+         productService: ProductService,
+         tracker: AnalyticsManager) {
         self.view = view
         self.router = router
         self.productService = productService
+        self.tracker = tracker
     }
 }
 
@@ -48,6 +51,8 @@ extension ProductDetailPresenterImp: ProductDetailPresenter {
     }
     
     func showSeller() {
+        tracker.track(event: .contactInfoClick)
+        
         router.openSeller(product: product)
     }
     

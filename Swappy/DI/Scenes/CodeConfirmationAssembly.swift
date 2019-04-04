@@ -12,10 +12,11 @@ final class CodeConfirmationAssembly: Assembly {
     
     func assemble(container: Container) {
         
-        container.register(CodeConfirmationPresenter.self) { (resolver, view: CodeConfirmationViewController) in
+        container.register(CodeConfirmationPresenter.self) { (resolver: Resolver, view: CodeConfirmationViewController) in
             return CodeConfirmationPresenterImp(
                 view: view,
-                authService: resolver.resolve(AuthService.self)!
+                authService: resolver.resolve(AuthService.self)!,
+                tracker: resolver.resolve()
             )
         }
         

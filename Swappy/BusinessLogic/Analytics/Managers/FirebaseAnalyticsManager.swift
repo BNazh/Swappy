@@ -7,3 +7,18 @@
 //
 
 import Firebase
+
+final class FirebaseAnalyticsManager: AnalyticsManager {
+    
+    func configure(launchOptions: [UIApplication.LaunchOptionsKey : Any]?) {
+        FirebaseApp.configure()
+    }
+    
+    func track(event: AnalyticEvent) {
+        Analytics.logEvent(event.rawValue, parameters: nil)
+    }
+    
+    func track(screen: AnalyticScreen) {
+        Analytics.logEvent(screen.rawValue, parameters: nil)
+    }
+}

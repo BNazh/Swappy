@@ -27,6 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setupUIBarButtonApperance()
         
         analyticManager.configure(launchOptions: launchOptions)
+        analyticManager.track(event: .startSession)
         
         window?.rootViewController?.modalPresentationStyle = .currentContext
         

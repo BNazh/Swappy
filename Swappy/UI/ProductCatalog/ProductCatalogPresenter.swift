@@ -20,16 +20,21 @@ final class ProductCatalogPresenterImp {
     private unowned let view: ProductCatalogView
     private let productService: ProductService
     private let router: ProductCatalogRouter
+    private let tracker: AnalyticsManager
     
     private var products: [Product] = []
     private var isLoading = false
     
     // MARK: - Init
     
-    init(view: ProductCatalogView, productService: ProductService, router: ProductCatalogRouter) {
+    init(view: ProductCatalogView,
+         productService: ProductService,
+         router: ProductCatalogRouter,
+         tracker: AnalyticsManager) {
         self.view = view
         self.productService = productService
         self.router = router
+        self.tracker = tracker
     }
 }
 
