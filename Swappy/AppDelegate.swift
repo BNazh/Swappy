@@ -12,17 +12,21 @@ import CoreData
 import SwinjectStoryboard
 import IQKeyboardManagerSwift
 
+import Firebase
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    let analyticManager = SwinjectStoryboard.defaultContainer.resolve(AnalyticsManager.self)!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        SwinjectStoryboard.setup()
-        
         setupKeyboardManager()
         setupUIBarButtonApperance()
+        
+        analyticManager.configure(launchOptions: launchOptions)
         
         window?.rootViewController?.modalPresentationStyle = .currentContext
         
