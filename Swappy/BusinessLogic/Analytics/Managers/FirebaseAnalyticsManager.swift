@@ -11,7 +11,7 @@ import Firebase
 final class FirebaseAnalyticsManager: AnalyticsManager {
     
     func configure(launchOptions: [UIApplication.LaunchOptionsKey : Any]?) {
-        FirebaseApp.configure()
+        
     }
     
     func track(event: AnalyticEvent) {

@@ -61,6 +61,10 @@ final class ServicesAssembly: Assembly {
             return AnalyticsManagerImp()
         }.inObjectScope(.container)
         
+        container.register(PushNotificationService.self) { r in
+            return PushNotificationServiceImp()
+        }.inObjectScope(.container)
+        
         // DDM
         
         container.register(ProductsDDM.self) { _ in

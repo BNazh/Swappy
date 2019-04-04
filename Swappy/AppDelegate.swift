@@ -19,12 +19,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-    let analyticManager = SwinjectStoryboard.defaultContainer.resolve(AnalyticsManager.self)!
+    let analyticManager: AnalyticsManager = SwinjectStoryboard.defaultContainer.resolve()
+    let pushManager: PushNotificationService = SwinjectStoryboard.defaultContainer.resolve()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         setupKeyboardManager()
         setupUIBarButtonApperance()
+        
+        FirebaseApp.configure()
+        
+        pushManager.register(application: application)
         
         analyticManager.configure(launchOptions: launchOptions)
         analyticManager.track(event: .startSession)

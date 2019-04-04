@@ -6,9 +6,10 @@
 //  Copyright © 2019 SwappyTeam. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol PushNotificationService: class {
     
+    func register(application: UIApplication)
     
 }
