@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aid-iD-W5B" customClass="AppTextField" customModule="Swappy" customModuleProvider="target">
-                                <rect key="frame" x="16" y="52" width="343" height="60"/>
+                                <rect key="frame" x="16" y="96" width="343" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="4T0-UQ-S3U"/>
                                 </constraints>
@@ -38,7 +38,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b37-R4-teh" customClass="MainButton" customModule="Swappy" customModuleProvider="target">
-                                <rect key="frame" x="16" y="132" width="343" height="52"/>
+                                <rect key="frame" x="16" y="176" width="343" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="I0Y-qG-4ob"/>
                                 </constraints>
@@ -59,6 +59,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3j1-ks-W3O"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Вход или регистрация" id="4y0-tv-tJr">
+                        <barButtonItem key="backBarButtonItem" title=" " id="Edl-F8-TnU"/>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="phoneTextField" destination="aid-iD-W5B" id="OB3-lN-tX1"/>
                         <outlet property="textFieldDelegate" destination="P1o-Jd-cCJ" id="szf-XG-MUN"/>
@@ -162,7 +166,7 @@
                     </userDefinedRuntimeAttributes>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="799" y="87"/>
+            <point key="canvasLocation" x="767" y="87"/>
         </scene>
     </scenes>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -48,6 +48,7 @@ extension MyProductsPresenterImp: MyProductsPresenter {
     
     func loadMyProducts() {
         guard !isLoading, productService.canLoadMore else {
+            reloadProductsOnView()
             return
         }
         isLoading = true
@@ -112,6 +113,8 @@ private extension MyProductsPresenterImp {
     }
     
     func handleGetProductsError(_ appError: AppError) {
+        reloadProductsOnView()
+        
         switch appError {
         case .auth:
             router.openLoginCard()
