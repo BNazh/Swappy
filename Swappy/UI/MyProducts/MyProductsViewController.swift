@@ -66,6 +66,7 @@ extension MyProductsViewController: MyProductsView {
         dataDisplayManager.reloadProducts(products)
         addProductButton.isHidden = products.isEmpty
         collectionView.isHidden = products.isEmpty
+        
     }
 }
 
