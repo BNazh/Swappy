@@ -36,6 +36,7 @@
 		E164C3A02235A8AA00D1AB13 /* UIColor+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E164C39F2235A8AA00D1AB13 /* UIColor+App.swift */; };
 		E164C3A22235A92300D1AB13 /* ImageSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E164C3A12235A92300D1AB13 /* ImageSlider.swift */; };
 		E16D31CB2258BF5500033DCC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E16D31C92258BF5500033DCC /* Localizable.strings */; };
+		E16D31CE2258EA5A00033DCC /* UITextField+DoneToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16D31CD2258EA5A00033DCC /* UITextField+DoneToolbar.swift */; };
 		E17CA187224C24FE00D5C955 /* AnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CA186224C24FE00D5C955 /* AnalyticsManager.swift */; };
 		E17CA189224C257100D5C955 /* AnalyticEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CA188224C257100D5C955 /* AnalyticEvent.swift */; };
 		E17CA18B224C27CB00D5C955 /* AppMetricaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CA18A224C27CB00D5C955 /* AppMetricaManager.swift */; };
@@ -182,6 +183,7 @@
 		E164C39F2235A8AA00D1AB13 /* UIColor+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+App.swift"; sourceTree = "<group>"; };
 		E164C3A12235A92300D1AB13 /* ImageSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSlider.swift; sourceTree = "<group>"; };
 		E16D31CA2258BF5500033DCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Resources/Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E16D31CD2258EA5A00033DCC /* UITextField+DoneToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+DoneToolbar.swift"; sourceTree = "<group>"; };
 		E17CA186224C24FE00D5C955 /* AnalyticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsManager.swift; sourceTree = "<group>"; };
 		E17CA188224C257100D5C955 /* AnalyticEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticEvent.swift; sourceTree = "<group>"; };
 		E17CA18A224C27CB00D5C955 /* AppMetricaManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMetricaManager.swift; sourceTree = "<group>"; };
@@ -689,6 +691,7 @@
 				E164C39F2235A8AA00D1AB13 /* UIColor+App.swift */,
 				E1FC30A12238AB2B00DF1325 /* UIView+RoundCorners.swift */,
 				E1F01766224799CA001A10D7 /* UIImage+PHAsset.swift */,
+				E16D31CD2258EA5A00033DCC /* UITextField+DoneToolbar.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -1164,6 +1167,7 @@
 				E1BC5AC122310C0E001FD1D6 /* ProductCatalogAssembly.swift in Sources */,
 				E1117494224370B800BD19B4 /* CodeConfirmationAssembly.swift in Sources */,
 				E1F017722249624B001A10D7 /* OkAlertView.swift in Sources */,
+				E16D31CE2258EA5A00033DCC /* UITextField+DoneToolbar.swift in Sources */,
 				E111748B2242DBD700BD19B4 /* LoadingView.swift in Sources */,
 				E164C39E2235A70E00D1AB13 /* SeparatorView.swift in Sources */,
 				E1FF3EA4223E77C100443DED /* ProductsDDMImp.swift in Sources */,

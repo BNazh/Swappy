@@ -9,6 +9,8 @@
 import Foundation
 
 enum Core {
+    static let isProduction = true
+    
     static let baseUrl = URL(string: "http://swappy.ru/")!
     static let testUrl = URL(string: "http://185.185.68.48:8080/warehouse/")!
     static let testAuthUrl = URL(string: "http://185.185.68.48:8080/")!

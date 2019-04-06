@@ -43,19 +43,12 @@ extension ProductCellViewModel {
         let spaces: CGFloat = 8
         let imageHeight = width
         
-        print("---")
-        print(title.string)
-        print(titleHeight(width: width))
-        print(imageHeight + priceHeight + titleHeight(width: width) + spaces)
-        print(imageHeight + priceHeight + spaces)
-        print("---")
-        
         return imageHeight + priceHeight + titleHeight(width: width) + spaces
     }
     
     func titleHeight(width: CGFloat) -> CGFloat {
         
-        let maxHeight: CGFloat = 100
+        let maxHeight: CGFloat = 54
         let maxRect = CGSize(width: width, height: maxHeight)
         let boundingRect = title.boundingRect(with: maxRect,
                                               options: .usesLineFragmentOrigin,

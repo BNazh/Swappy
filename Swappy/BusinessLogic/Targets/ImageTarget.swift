@@ -16,7 +16,8 @@ enum ImageTarget {
 extension ImageTarget: TargetType {
     
     var baseURL: URL {
-        return Core.testUrl
+        return Core.baseUrl
+        //return Core.testUrl
     }
     
     var path: String {

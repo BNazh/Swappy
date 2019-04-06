@@ -56,7 +56,7 @@ final class PhotoCollectionViewCell: UICollectionViewCell {
                 self?.model?.url = url
                 self?.setState(.loaded)
             } else {
-                self?.setState(.fail)
+                self?.setState(.empty)
             }
         }
     }

@@ -24,7 +24,6 @@ final class TextFieldPickerDDM: NSObject {
         pickerView.delegate = self
         
         textField.inputView = pickerView
-        textField.inputAccessoryView = createToolBar()
         
         textField.delegate = self
         
@@ -68,30 +67,5 @@ extension TextFieldPickerDDM: UITextFieldDelegate {
         let itemIndex = items.firstIndex(of: textField.text ?? "") ?? 0
         pickerView?.selectRow(itemIndex, inComponent: 0, animated: true)
         textField.text = items[itemIndex]
-    }
-}
-
-
-// MARK: - Private
-
-private extension TextFieldPickerDDM {
-    
-    func createToolBar() -> UIView {
-        let selector = #selector(doneClicked)
-        let doneButton = UIBarButtonItem(title: "Готово", style: .done, target: self, action: selector)
-        
-        let flexibleSpaceItem = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
-        
-        let toolbar = UIToolbar(frame:CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 50))
-        toolbar.barStyle = .default
-        toolbar.setItems([flexibleSpaceItem, doneButton], animated: false)
-        toolbar.sizeToFit()
-        
-        return toolbar
-    }
-    
-    @objc
-    func doneClicked() {
-        textField?.endEditing(true)
     }
 }

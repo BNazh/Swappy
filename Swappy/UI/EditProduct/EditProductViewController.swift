@@ -114,4 +114,12 @@ private extension EditProductViewController {
         let items = presenter.cityItems
         citiesDDM.setup(textField: cityTextField, with: items)
     }
+    
+    func addToolbarForAllTextFields() {
+        for subview in view.subviews {
+            if let textField = subview as? UITextField {
+                textField.addDoneToolbar()
+            }
+        }
+    }
 }
