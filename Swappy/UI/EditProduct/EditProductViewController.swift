@@ -61,6 +61,8 @@ final class EditProductViewController: UIViewController {
     // MARK: - Actions
     
     @IBAction func createProductTapped(_ sender: UIButton) {
+        view.endEditing(true)
+        
         let productRO = productRequestObject
         presenter.performProductAction(productRO: productRO)
     }
@@ -90,7 +92,7 @@ extension EditProductViewController: UITextFieldDelegate {
         if let nextTextField = self.nextTextField(for: textField) {
             nextTextField.becomeFirstResponder()
         } else {
-            textField.endEditing(true)
+            createProductTapped(doneButton)
         }
         
         return true

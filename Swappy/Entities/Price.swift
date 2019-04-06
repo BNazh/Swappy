@@ -26,6 +26,6 @@ struct Price: Codable {
 extension Price {
     
     var stringValue: String {
-        return String(format: "%0.f %@" , value, currency)
+        return String(format: "%0.f %@" , value, AppConstants.defaultCurrency)
     }
 }
