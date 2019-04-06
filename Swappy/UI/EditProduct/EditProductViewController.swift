@@ -45,7 +45,9 @@ final class EditProductViewController: UIViewController {
         doneButton.setTitle(presenter.buttonTitle, for: .normal)
         
         setupPhotosHeight()
+        
         setupCitiesTextField()
+        setupTextFields()
         
         presenter.initialize()
     }
@@ -82,6 +84,19 @@ extension EditProductViewController: EditProductView {
     }
 }
 
+extension EditProductViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if let nextTextField = self.nextTextField(for: textField) {
+            nextTextField.becomeFirstResponder()
+        } else {
+            textField.endEditing(true)
+        }
+        
+        return true
+    }
+}
+
 // MARK: - Private
 
 private extension EditProductViewController {
@@ -115,11 +130,16 @@ private extension EditProductViewController {
         citiesDDM.setup(textField: cityTextField, with: items)
     }
     
-    func addToolbarForAllTextFields() {
-        for subview in view.subviews {
-            if let textField = subview as? UITextField {
-                textField.addDoneToolbar()
-            }
+    func setupTextFields() {
+        let textFields = [nameTextField, descriptionTextField, sizeTextField, priceTextField, contactInfoTextField]
+        for textField in textFields {
+            textField?.delegate = self
+            textField?.addDoneToolbar()
         }
+    }
+    
+    func nextTextField(for textField: UITextField) -> UITextField? {
+        let nextTag = textField.tag + 1
+        return view.viewWithTag(nextTag) as? UITextField
     }
 }

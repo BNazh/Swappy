@@ -24,6 +24,7 @@ final class TextFieldPickerDDM: NSObject {
         pickerView.delegate = self
         
         textField.inputView = pickerView
+        textField.addDoneToolbar()
         
         textField.delegate = self
         
