@@ -91,11 +91,10 @@ private extension PhotoCollectionViewCell {
             closeButton.isHidden = true
             
         case .fail:
-            model?.image = nil
-            imageView.image = nil
-            imageView.backgroundColor = .red
+            model?.image = UIImage(named: "camera")
+            imageView.image = UIImage(named: "camera")
             progressContainer.isHidden = true
-            closeButton.isHidden = false
+            closeButton.isHidden = true
             
         case .loaded:
             progressContainer.isHidden = true

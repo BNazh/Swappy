@@ -22,7 +22,8 @@ extension SwinjectStoryboard {
             SellerInfoAssembly(),
             MyProductsAssembly(),
             PhoneLoginAssembly(),
-            CodeConfirmationAssembly()
+            CodeConfirmationAssembly(),
+            LoginCardAssembly()
         ])
         
         Container.loggingFunction = nil

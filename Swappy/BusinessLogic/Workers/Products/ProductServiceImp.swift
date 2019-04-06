@@ -94,6 +94,7 @@ extension ProductServiceImp: ProductService {
     
     func reset() {
         pageNumber = 0
+        canLoadMore = true
     }
 }
 

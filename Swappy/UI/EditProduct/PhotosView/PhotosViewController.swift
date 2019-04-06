@@ -89,6 +89,7 @@ extension PhotosViewController: UICollectionViewDelegate {
         
         let vc = BSImagePickerViewController()
         vc.maxNumberOfSelections = emptyCells.count
+        vc.doneButton = UIBarButtonItem(title: "Готово", style: .done, target: nil, action: nil)
         
         bs_presentImagePickerController(vc, animated: true, select: nil, deselect: nil, cancel: nil, finish: { [weak self] assets in
             DispatchQueue.main.async {

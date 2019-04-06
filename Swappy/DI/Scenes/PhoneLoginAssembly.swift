@@ -19,7 +19,7 @@ final class PhoneLoginAssembly: Assembly {
         container.register(PhoneLoginPresenter.self) { (r, view: PhoneLoginViewController) in
             return PhoneLoginPresenterImp(
                 view: view,
-                router: r.resolve(),
+                router: r.resolve(argument: view),
                 authService: r.resolve(),
                 tracker: r.resolve()
             )

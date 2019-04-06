@@ -50,6 +50,11 @@ extension MyProductsPresenterImp: MyProductsPresenter {
         guard !isLoading, productService.canLoadMore else {
             return
         }
+        guard authService.isAuthorized else {
+            handleProducts([])
+            return
+        }
+        
         isLoading = true
         
         productService.getCurrentUserProducts { [weak self] result in

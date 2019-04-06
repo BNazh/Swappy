@@ -35,6 +35,7 @@
 		E164C39E2235A70E00D1AB13 /* SeparatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E164C39D2235A70E00D1AB13 /* SeparatorView.swift */; };
 		E164C3A02235A8AA00D1AB13 /* UIColor+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E164C39F2235A8AA00D1AB13 /* UIColor+App.swift */; };
 		E164C3A22235A92300D1AB13 /* ImageSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E164C3A12235A92300D1AB13 /* ImageSlider.swift */; };
+		E16D31CB2258BF5500033DCC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E16D31C92258BF5500033DCC /* Localizable.strings */; };
 		E17CA187224C24FE00D5C955 /* AnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CA186224C24FE00D5C955 /* AnalyticsManager.swift */; };
 		E17CA189224C257100D5C955 /* AnalyticEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CA188224C257100D5C955 /* AnalyticEvent.swift */; };
 		E17CA18B224C27CB00D5C955 /* AppMetricaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CA18A224C27CB00D5C955 /* AppMetricaManager.swift */; };
@@ -180,6 +181,7 @@
 		E164C39D2235A70E00D1AB13 /* SeparatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparatorView.swift; sourceTree = "<group>"; };
 		E164C39F2235A8AA00D1AB13 /* UIColor+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+App.swift"; sourceTree = "<group>"; };
 		E164C3A12235A92300D1AB13 /* ImageSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSlider.swift; sourceTree = "<group>"; };
+		E16D31CA2258BF5500033DCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Resources/Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E17CA186224C24FE00D5C955 /* AnalyticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsManager.swift; sourceTree = "<group>"; };
 		E17CA188224C257100D5C955 /* AnalyticEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticEvent.swift; sourceTree = "<group>"; };
 		E17CA18A224C27CB00D5C955 /* AppMetricaManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMetricaManager.swift; sourceTree = "<group>"; };
@@ -213,8 +215,6 @@
 		E19F7E1122310B0200BAFC7A /* ProductServiceImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductServiceImp.swift; sourceTree = "<group>"; };
 		E19F7E1522310B3D00BAFC7A /* Swinject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swinject.swift; sourceTree = "<group>"; };
 		E1A2DEA62253C33C007E40F8 /* String+Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Format.swift"; sourceTree = "<group>"; };
-		E1A2DEA82253D426007E40F8 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
-		E1A2DEA92253D426007E40F8 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		E1A6655E2254FD2A007EE75F /* UIViewController+BackNavBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+BackNavBarButton.swift"; sourceTree = "<group>"; };
 		E1A6656122550C96007EE75F /* PushNotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationService.swift; sourceTree = "<group>"; };
 		E1A6656322550CAD007EE75F /* PushNotificationServiceImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationServiceImp.swift; sourceTree = "<group>"; };
@@ -511,7 +511,6 @@
 		E19F7DD32231063900BAFC7A /* Swappy */ = {
 			isa = PBXGroup;
 			children = (
-				E1FC30B322398B2E00DF1325 /* Swappy.entitlements */,
 				E19F7E092231068300BAFC7A /* UI */,
 				E19F7E052231064D00BAFC7A /* BusinessLogic */,
 				E1BC5AC422310CAA001FD1D6 /* Entities */,
@@ -523,6 +522,7 @@
 				E19F7DDE2231063A00BAFC7A /* Assets.xcassets */,
 				E17CA1A92256B98D00D5C955 /* GoogleService-Info.plist */,
 				E19F7DE32231063A00BAFC7A /* Info.plist */,
+				E1FC30B322398B2E00DF1325 /* Swappy.entitlements */,
 			);
 			path = Swappy;
 			sourceTree = "<group>";
@@ -663,6 +663,7 @@
 		E1BC5AE822313350001FD1D6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E16D31C92258BF5500033DCC /* Localizable.strings */,
 				E19F7DE02231063A00BAFC7A /* LaunchScreen.storyboard */,
 				E19F7DDB2231063900BAFC7A /* Swappy.xcdatamodeld */,
 			);
@@ -932,9 +933,7 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
-				ru,
 			);
 			mainGroup = E19F7DC82231063900BAFC7A;
 			productRefGroup = E19F7DD22231063900BAFC7A /* Products */;
@@ -962,6 +961,7 @@
 				E19F7DDF2231063A00BAFC7A /* Assets.xcassets in Resources */,
 				E19F7DDA2231063900BAFC7A /* Main.storyboard in Resources */,
 				E10850C4223F276D00941EA5 /* EditProduct.storyboard in Resources */,
+				E16D31CB2258BF5500033DCC /* Localizable.strings in Resources */,
 				E1FF3E97223A350900443DED /* LoginCard.storyboard in Resources */,
 				E164C3952231B5FE00D1AB13 /* ProductDetail.storyboard in Resources */,
 				E1FF3EC8223EEC2700443DED /* PhoneLogin.storyboard in Resources */,
@@ -1255,11 +1255,18 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		E16D31C92258BF5500033DCC /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E16D31CA2258BF5500033DCC /* Base */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		E19F7DD82231063900BAFC7A /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				E19F7DD92231063900BAFC7A /* Base */,
-				E1A2DEA82253D426007E40F8 /* ru */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -1268,7 +1275,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				E19F7DE12231063A00BAFC7A /* Base */,
-				E1A2DEA92253D426007E40F8 /* ru */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";

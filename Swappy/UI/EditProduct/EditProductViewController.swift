@@ -40,7 +40,8 @@ final class EditProductViewController: UIViewController {
         
         navigationItem.backBarButtonItem?.title = ""
         
-        title = presenter.screenTitle
+        navigationItem.title = presenter.screenTitle
+        navigationItem.largeTitleDisplayMode = .never
         doneButton.setTitle(presenter.buttonTitle, for: .normal)
         
         setupPhotosHeight()
