@@ -48,7 +48,6 @@ extension MyProductsPresenterImp: MyProductsPresenter {
     
     func loadMyProducts() {
         guard !isLoading, productService.canLoadMore else {
-            reloadProductsOnView()
             return
         }
         isLoading = true
