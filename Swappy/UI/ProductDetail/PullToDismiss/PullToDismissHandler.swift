@@ -14,7 +14,9 @@ final class PullToDismissHandler: NSObject {
     var scrollView: UIScrollView!
     var dismissCallback: (() -> Void)?
     
-    let maxOffset: CGFloat = 250
+    var allowDismiss: Bool = false
+    
+    let maxOffset: CGFloat = 200
     
     func setup(scrollView: UIScrollView, dismissCallback: @escaping () -> Void) {
         self.dismissCallback = dismissCallback
@@ -26,12 +28,14 @@ final class PullToDismissHandler: NSObject {
     }
     
     @objc func panRecognized(recognizer: UIPanGestureRecognizer) {
-        if recognizer.state == .began && scrollView.contentOffset.y == 0 {
+        if recognizer.state == .began {
+            allowDismiss = scrollView.contentOffset.y == 0
         } else if recognizer.state != .ended && recognizer.state != .cancelled && recognizer.state != .failed && scrollView.contentOffset.y == 0 {
+            
             let panOffset = recognizer.translation(in: scrollView)
             let isEligiblePanOffset = panOffset.y > maxOffset
             
-            if isEligiblePanOffset {
+            if isEligiblePanOffset && allowDismiss {
                 recognizer.isEnabled = false
                 recognizer.isEnabled = true
                 dismissCallback?()
