@@ -27,15 +27,19 @@ class ProductDetailViewController: CardViewController {
     
     @IBOutlet weak var scrollView: UIScrollView!
     
+    let pullHandler = PullToDismissHandler()
+    
     // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        scrollView.panGestureRecognizer.require(toFail: <#T##UIGestureRecognizer#>)
 
         presenter.showProduct()
         presenter.setActions()
+        
+        pullHandler.setup(scrollView: scrollView) { [weak self] in
+            self?.dismiss(animated: true, completion: nil)
+        }
     }
     
     override func viewDidLayoutSubviews() {
