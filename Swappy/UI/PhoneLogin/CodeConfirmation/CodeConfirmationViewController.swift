@@ -32,6 +32,8 @@ final class CodeConfirmationViewController: UIViewController {
         textFieldDelegate.listener = self
         
         presenter.showInfo()
+        
+        codeTextField.becomeFirstResponder()
     }
     
     @IBAction func confirmCodeTapped(_ sender: UIButton) {

@@ -37,6 +37,8 @@ extension PushNotificationServiceImp: PushNotificationService {
         application.registerForRemoteNotifications()
         
         Messaging.messaging().delegate = self
+        
+        FirebaseApp.configure()
     }
 }
 

@@ -26,8 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         setupKeyboardManager()
         setupUIBarButtonApperance()
-        
-        FirebaseApp.configure()
+
         
         pushManager.register(application: application)
         
@@ -38,6 +37,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController?.modalPresentationStyle = .currentContext
         
         return true
+    }
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        Messaging.messaging().apnsToken = deviceToken
     }
     
     // MARK: - Core Data Saving support

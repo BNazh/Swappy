@@ -25,11 +25,14 @@ class ProductDetailViewController: CardViewController {
     @IBOutlet weak var sellerContainerView: UIView!
     @IBOutlet weak var editContainerView: UIView!
     
+    @IBOutlet weak var scrollView: UIScrollView!
     
     // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        scrollView.panGestureRecognizer.require(toFail: <#T##UIGestureRecognizer#>)
 
         presenter.showProduct()
         presenter.setActions()

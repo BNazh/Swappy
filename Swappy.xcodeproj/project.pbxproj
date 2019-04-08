@@ -51,7 +51,6 @@
 		E17CA1A32256A5CC00D5C955 /* Resolver+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CA1A22256A5CC00D5C955 /* Resolver+Extension.swift */; };
 		E17CA1A52256B02300D5C955 /* LoginCardAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CA1A42256B02300D5C955 /* LoginCardAssembly.swift */; };
 		E17CA1A72256B19800D5C955 /* UIViewController+Swizzling.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CA1A62256B19800D5C955 /* UIViewController+Swizzling.swift */; };
-		E17CA1AA2256B98D00D5C955 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E17CA1A92256B98D00D5C955 /* GoogleService-Info.plist */; };
 		E19F7DD52231063900BAFC7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19F7DD42231063900BAFC7A /* AppDelegate.swift */; };
 		E19F7DDA2231063900BAFC7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E19F7DD82231063900BAFC7A /* Main.storyboard */; };
 		E19F7DDD2231063900BAFC7A /* Swappy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E19F7DDB2231063900BAFC7A /* Swappy.xcdatamodeld */; };
@@ -89,6 +88,7 @@
 		E1BC5AED223142E3001FD1D6 /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC5AEC223142E3001FD1D6 /* PinterestLayout.swift */; };
 		E1BC5AEF22318340001FD1D6 /* UICollectionView+RegisterCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC5AEE22318340001FD1D6 /* UICollectionView+RegisterCells.swift */; };
 		E1BC5AF222318370001FD1D6 /* UIView+ReusableIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC5AF122318370001FD1D6 /* UIView+ReusableIdentifiers.swift */; };
+		E1D908D7225BCEE30027C6C6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E1D908D6225BCEE20027C6C6 /* GoogleService-Info.plist */; };
 		E1F0175722463C14001A10D7 /* BaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F0175622463C13001A10D7 /* BaseProvider.swift */; };
 		E1F0175A224644F5001A10D7 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F01759224644F5001A10D7 /* ImageService.swift */; };
 		E1F0175C224644FB001A10D7 /* ImageServiceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F0175B224644FB001A10D7 /* ImageServiceImp.swift */; };
@@ -198,7 +198,6 @@
 		E17CA1A22256A5CC00D5C955 /* Resolver+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Resolver+Extension.swift"; sourceTree = "<group>"; };
 		E17CA1A42256B02300D5C955 /* LoginCardAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCardAssembly.swift; sourceTree = "<group>"; };
 		E17CA1A62256B19800D5C955 /* UIViewController+Swizzling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Swizzling.swift"; sourceTree = "<group>"; };
-		E17CA1A92256B98D00D5C955 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E19F7DD12231063900BAFC7A /* Swappy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swappy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E19F7DD42231063900BAFC7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E19F7DD92231063900BAFC7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -242,6 +241,7 @@
 		E1BC5AEC223142E3001FD1D6 /* PinterestLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
 		E1BC5AEE22318340001FD1D6 /* UICollectionView+RegisterCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+RegisterCells.swift"; sourceTree = "<group>"; };
 		E1BC5AF122318370001FD1D6 /* UIView+ReusableIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ReusableIdentifiers.swift"; sourceTree = "<group>"; };
+		E1D908D6225BCEE20027C6C6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E1F0175622463C13001A10D7 /* BaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseProvider.swift; sourceTree = "<group>"; };
 		E1F01759224644F5001A10D7 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		E1F0175B224644FB001A10D7 /* ImageServiceImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageServiceImp.swift; sourceTree = "<group>"; };
@@ -521,8 +521,8 @@
 				E19F7E1422310B3200BAFC7A /* DI */,
 				E1BC5AE822313350001FD1D6 /* Resources */,
 				E19F7DD42231063900BAFC7A /* AppDelegate.swift */,
+				E1D908D6225BCEE20027C6C6 /* GoogleService-Info.plist */,
 				E19F7DDE2231063A00BAFC7A /* Assets.xcassets */,
-				E17CA1A92256B98D00D5C955 /* GoogleService-Info.plist */,
 				E19F7DE32231063A00BAFC7A /* Info.plist */,
 				E1FC30B322398B2E00DF1325 /* Swappy.entitlements */,
 			);
@@ -957,7 +957,6 @@
 			files = (
 				E1BC5AD222311FBE001FD1D6 /* ProductCatalog.storyboard in Resources */,
 				E19F7DE22231063A00BAFC7A /* LaunchScreen.storyboard in Resources */,
-				E17CA1AA2256B98D00D5C955 /* GoogleService-Info.plist in Resources */,
 				E1FC30A72238DC9900DF1325 /* SellerInfo.storyboard in Resources */,
 				E1FF3EAD223E9CC300443DED /* MyProducts.storyboard in Resources */,
 				E1BC5ADE223124B3001FD1D6 /* ProductCollectionViewCell.xib in Resources */,
@@ -965,6 +964,7 @@
 				E19F7DDA2231063900BAFC7A /* Main.storyboard in Resources */,
 				E10850C4223F276D00941EA5 /* EditProduct.storyboard in Resources */,
 				E16D31CB2258BF5500033DCC /* Localizable.strings in Resources */,
+				E1D908D7225BCEE30027C6C6 /* GoogleService-Info.plist in Resources */,
 				E1FF3E97223A350900443DED /* LoginCard.storyboard in Resources */,
 				E164C3952231B5FE00D1AB13 /* ProductDetail.storyboard in Resources */,
 				E1FF3EC8223EEC2700443DED /* PhoneLogin.storyboard in Resources */,

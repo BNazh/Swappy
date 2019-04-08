@@ -13,6 +13,8 @@ import SnapKit
 
 class CardViewController: UIViewController {
     
+    private(set) var swipeRecognizer: UISwipeGestureRecognizer!
+    
     private weak var shadeView: UIView?
     private lazy var bottomView = UIView()
     
@@ -21,15 +23,8 @@ class CardViewController: UIViewController {
         
         view.clipsToBounds = false
         
-        view.addSubview(bottomView)
-        bottomView.backgroundColor = .white
-        bottomView.snp.makeConstraints { make in
-            make.centerX.equalTo(self.view)
-            make.height.equalTo(100)
-            make.leading.equalTo(view.snp.leading)
-            make.trailing.equalTo(view.snp.trailing)
-            make.top.equalTo(view.snp.bottomMargin)
-        }
+        addBottomView()
+        addSwipeGestureRecognizer()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -70,5 +65,28 @@ private extension CardViewController {
         }) { _ in
             self.shadeView?.removeFromSuperview()
         }
+    }
+    
+    func addBottomView() {
+        view.addSubview(bottomView)
+        bottomView.backgroundColor = .white
+        bottomView.snp.makeConstraints { make in
+            make.centerX.equalTo(self.view)
+            make.height.equalTo(100)
+            make.leading.equalTo(view.snp.leading)
+            make.trailing.equalTo(view.snp.trailing)
+            make.top.equalTo(view.snp.bottomMargin)
+        }
+    }
+    
+    func addSwipeGestureRecognizer() {
+        swipeRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(downSwipeAction))
+        swipeRecognizer.direction = .down
+        view.addGestureRecognizer(swipeRecognizer)
+    }
+    
+    @objc
+    func downSwipeAction() {
+        dismiss(animated: true, completion: nil)
     }
 }
