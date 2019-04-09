@@ -31,6 +31,12 @@ final class ProductCatalogViewController: UIViewController {
         
         presenter.loadProducts()
     }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        dataDisplayManager.endRefreshing()
+    }
 }
 
 extension ProductCatalogViewController: ProductCatalogView {

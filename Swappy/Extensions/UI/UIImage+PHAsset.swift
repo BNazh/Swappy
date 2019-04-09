@@ -20,7 +20,7 @@ extension PHAsset {
         options.version = .original
         options.isSynchronous = true
         
-        let size = CGSize(width: 200, height: 200)
+        let size = CGSize(width: 1000, height: 1000)
         
         manager.requestImage(for: self, targetSize: size, contentMode: .aspectFit, options: options) { (image, _) in
             img = image

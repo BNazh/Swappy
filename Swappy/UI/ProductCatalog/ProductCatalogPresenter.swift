@@ -50,7 +50,6 @@ extension ProductCatalogPresenterImp: ProductCatalogPresenter {
         isLoading = true
         
         productService.getProducts { [weak self] result in
-            
             self?.isLoading = false
             
             switch result {
@@ -63,17 +62,19 @@ extension ProductCatalogPresenterImp: ProductCatalogPresenter {
     }
     
     func refreshProducts() {
-        isLoading = true
-        
         productService.reset()
         
+        isLoading = true
+        
         productService.getProducts { [weak self] result in
-            self?.products = []
+            self?.isLoading = false
             
             switch result {
             case .success(let products):
+                self?.products = []
                 self?.handleSuccessGetProducts(products)
             case .failure(let appError):
+                self?.reloadProductsOnView()
                 self?.view.showError(message: appError.localizedString)
             }
         }
@@ -96,6 +97,10 @@ private extension ProductCatalogPresenterImp {
         products.append(contentsOf: newProducts)
         products.removeAll { !$0.isActive || $0.id.isEmpty || $0.seller == nil } // DELETE ME
         
+        reloadProductsOnView()
+    }
+    
+    func reloadProductsOnView() {
         let viewModels = products.map { ProductCellViewModel($0) }
         view.reloadCells(viewModels)
     }

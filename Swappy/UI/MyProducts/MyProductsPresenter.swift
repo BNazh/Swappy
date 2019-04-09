@@ -10,6 +10,7 @@ import Foundation
 
 protocol MyProductsPresenter: class {
     
+    func loadMyProductsIfEmpty()
     func loadMyProducts()
     func refreshMyProducts()
     func addProduct()
@@ -72,18 +73,25 @@ extension MyProductsPresenterImp: MyProductsPresenter {
     
     func refreshMyProducts() {
         productService.reset()
-        shouldDiscardProducts = true
         
         productService.getCurrentUserProducts { [weak self] result in
-            self?.products = []
             
             switch result {
             case .success(let products):
+                self?.products = []
                 self?.handleProducts(products)
             case .failure(let error):
                 self?.handleGetProductsError(error)
             }
         }
+    }
+    
+    func loadMyProductsIfEmpty() {
+        guard products.isEmpty else {
+            return
+        }
+        
+        loadMyProducts()
     }
     
     func openProduct(withId id: String) {

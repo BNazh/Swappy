@@ -30,14 +30,12 @@ final class MyProductsViewController: UIViewController {
         
         dataDisplayManager.setup(delegate: self, collectionView: collectionView)
         collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 84, right: 0)
-        
-        // presenter.loadMyProducts()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        presenter.loadMyProducts()
+        presenter.loadMyProductsIfEmpty()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -66,7 +64,6 @@ extension MyProductsViewController: MyProductsView {
         dataDisplayManager.reloadProducts(products)
         addProductButton.isHidden = products.isEmpty
         collectionView.isHidden = products.isEmpty
-        
     }
 }
 

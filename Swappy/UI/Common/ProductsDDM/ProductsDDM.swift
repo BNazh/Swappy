@@ -23,4 +23,5 @@ protocol ProductsDDM: class {
     
     func reloadProducts(_ productsCellModels: [ProductCellViewModel])
     func setup(delegate: ProductsDDMDelegate, collectionView: UICollectionView)
+    func endRefreshing()
 }

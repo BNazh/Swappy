@@ -46,6 +46,10 @@ extension ProductsDDMImp: ProductsDDM {
         layout?.clearCache()
         collectionView?.reloadData()
     }
+    
+    func endRefreshing() {
+        refreshControl.endRefreshing()
+    }
 }
 
 extension ProductsDDMImp: UICollectionViewDelegate {
