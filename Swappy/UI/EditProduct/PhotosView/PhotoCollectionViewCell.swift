@@ -9,6 +9,8 @@
 import UIKit
 import SwinjectStoryboard
 
+// TODO: тоже рефакторинг вместе с PhotosViewController
+
 protocol PhotoCellDelegate: class {
     func removeCell(_ cell: UICollectionViewCell)
 }
@@ -52,11 +54,15 @@ final class PhotoCollectionViewCell: UICollectionViewCell {
         imageService.uploadImage(image, progressBlock: { [weak self] progress in
             self?.progressView.progress = Float(progress)
         }) { [weak self] result in
+            guard let strongSelf = self else {
+                return
+            }
+            
             if let url = result.value {
-                self?.model?.url = url
-                self?.setState(.loaded)
+                strongSelf.model?.url = url
+                strongSelf.setState(.loaded)
             } else {
-                self?.setState(.empty)
+                strongSelf.delegate?.removeCell(strongSelf)
             }
         }
     }

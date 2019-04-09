@@ -20,8 +20,8 @@ extension PHAsset {
         options.version = .original
         options.isSynchronous = true
         
-        let size = CGSize(width: 1000, height: 1000)
-        
+        //let size = PHImageManagerMaximumSize
+        let size = CGSize(width: 300, height: 300)
         manager.requestImage(for: self, targetSize: size, contentMode: .aspectFit, options: options) { (image, _) in
             img = image
         }
