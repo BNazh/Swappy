@@ -21,15 +21,12 @@ target 'Swappy' do
   pod 'SDWebImage', '~> 4.0'
   
   # Slideshow view
-  pod 'ImageSlideshow'
+  pod 'ImageSlideshow', '1.7.0'
   pod 'ImageSlideshow/SDWebImage'
-  
-  # Top-navigation "ViewPager"
-  pod 'XLPagerTabStrip', '~> 8.1'
   
   # Floating UITextField
   pod 'SkyFloatingLabelTextField', '~> 3.0'
-  pod 'InputMask'
+  pod 'InputMask', '4.1.0'
   
   # LoadingView
   pod 'MBProgressHUD', '~> 1.1.0'
@@ -41,8 +38,8 @@ target 'Swappy' do
   pod 'BSImagePicker', '~> 2.8'
   
   # Push Notifications
-  pod 'Firebase/Core'
-  pod 'Firebase/Messaging'
+  pod 'Firebase/Core', '5.3.1'
+  pod 'Firebase/Messaging', '3.3.2'
   
   # VK api
   pod 'SwiftyVK', '3.3.1'
