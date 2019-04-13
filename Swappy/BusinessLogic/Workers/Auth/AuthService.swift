@@ -13,4 +13,6 @@ protocol AuthService: class {
     func requestSmsVerificationCode(for phone: String, closure: @escaping ResultCallback<Void>)
     
     func authenticate(phone: String, code: String, closure: @escaping ResultCallback<Void>)
+    
+    func vkAuth(response: VKLoginResponse, closure: @escaping ResultCallback<Void>)
 }

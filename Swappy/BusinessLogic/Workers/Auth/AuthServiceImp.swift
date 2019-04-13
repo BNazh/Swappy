@@ -45,6 +45,19 @@ extension AuthServiceImp: AuthService {
     func authenticate(phone: String, code: String, closure: @escaping ResultCallback<Void>) {
         let request = AuthTarget.authenticate(phone: phone, code: code)
         
+        sendAuthRequest(request, closure: closure)
+    }
+    
+    func vkAuth(response: VKLoginResponse, closure: @escaping ResultCallback<Void>) {
+        let request = AuthTarget.vkAuth(accessToken: response.token, email: response.email)
+        
+        sendAuthRequest(request, closure: closure)
+    }
+}
+
+private extension AuthServiceImp {
+    
+    func sendAuthRequest(_ request: AuthTarget, closure: @escaping ResultCallback<Void>) {
         provider.requestDecodable(request) { [weak self] (result: Result<AuthResponse>) in
             switch result {
             case .success(let response):
@@ -56,9 +69,6 @@ extension AuthServiceImp: AuthService {
             }
         }
     }
-}
-
-private extension AuthServiceImp {
     
     func saveAuthResponse(_ response: AuthResponse) {
         keychainStore.accessToken = response.accessToken

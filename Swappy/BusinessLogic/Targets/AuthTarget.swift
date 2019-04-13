@@ -11,21 +11,24 @@ import Moya
 enum AuthTarget {
     case
     requestSmsVerification(phone: String),
-    authenticate(phone: String, code: String)
+    authenticate(phone: String, code: String),
+    vkAuth(accessToken: String, email: String)
 }
 
 extension AuthTarget: TargetType {
     var baseURL: URL {
-        return Core.testAuthUrl.appendingPathComponent("swappy-auth/phone/")
+        return Core.testAuthUrl.appendingPathComponent("swappy-auth/")
         //return Core.baseUrl.appendingPathComponent("swappy-auth/phone/")
     }
     
     var path: String {
         switch self {
         case .requestSmsVerification:
-            return "requestSMSVerificationCode"
+            return "phone/requestSMSVerificationCode"
         case .authenticate:
-            return "authenticate"
+            return "phone/authenticate"
+        case .vkAuth:
+            return "oauth2/vk"
         }
     }
     
@@ -64,6 +67,12 @@ private extension AuthTarget {
             return [
                 "phoneNumber": phone,
                 "verificationCode": code
+            ]
+            
+        case .vkAuth(let accessToken, let email):
+            return [
+                "accessToken": accessToken,
+                "email": email
             ]
         }
     }
