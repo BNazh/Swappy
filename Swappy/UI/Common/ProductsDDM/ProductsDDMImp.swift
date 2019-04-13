@@ -58,14 +58,6 @@ extension ProductsDDMImp: UICollectionViewDelegate {
         let id = cellModels[indexPath.row].id
         delegate?.didSelectProduct(withId: id)
     }
-    
-    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        let isLastElement = indexPath.row == cellModels.count - 1
-        
-        if isLastElement {
-            delegate?.willDisplayLastCell()
-        }
-    }
 }
 
 extension ProductsDDMImp: UICollectionViewDataSource {
@@ -79,6 +71,12 @@ extension ProductsDDMImp: UICollectionViewDataSource {
         
         let model = cellModels[indexPath.row]
         cell.configure(with: model)
+        
+        let isLastElement = indexPath.row == cellModels.count - 1
+        
+        if isLastElement {
+            delegate?.willDisplayLastCell()
+        }
         
         return cell
     }

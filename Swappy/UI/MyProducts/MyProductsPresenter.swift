@@ -152,6 +152,10 @@ private extension MyProductsPresenterImp {
             self?.products.removeAll { $0.id == productId }
             self?.reloadProductsOnView()
         }
+        
+        center.observeAuth { [weak self] in
+            self?.loadMyProductsIfEmpty()
+        }
     }
     
     func reloadProductsOnView() {

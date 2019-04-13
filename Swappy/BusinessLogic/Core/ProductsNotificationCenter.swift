@@ -59,6 +59,14 @@ final class ProductsNotificationCenter {
         observers.append(observer)
     }
     
+    func observeAuth(handler: @escaping () -> Void) {
+        let observer = notificationCenter.addObserver(forName: .didAuth, object: self, queue: .main) { _ in
+            handler()
+        }
+        
+        observers.append(observer)
+    }
+    
     func postAddProductNotification(product: Product) {
         notificationCenter.post(name: .didAddProduct, object: self, userInfo: ["product": product])
     }
@@ -69,5 +77,9 @@ final class ProductsNotificationCenter {
     
     func postDeleteProductNotification(id: String) {
         notificationCenter.post(name: .didDeleteProduct, object: self, userInfo: ["productId": id])
+    }
+    
+    func postAuthNotification() {
+        notificationCenter.post(name: .didAuth, object: self, userInfo: nil)
     }
 }

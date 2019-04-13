@@ -73,6 +73,8 @@ private extension AuthServiceImp {
     func saveAuthResponse(_ response: AuthResponse) {
         keychainStore.accessToken = response.accessToken
         keychainStore.userSellerId = response.swappyUser.id
+        
+        ProductsNotificationCenter.shared.postAuthNotification()
     }
 }
 

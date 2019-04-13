@@ -15,4 +15,5 @@ extension Notification.Name {
     static let didAddProduct = Notification.Name("didAddProduct")
     static let didUpdateProduct = Notification.Name("didUpdateProduct")
     static let didDeleteProduct = Notification.Name("didDeleteProduct")
+    static let didAuth = Notification.Name("didAuth")
 }

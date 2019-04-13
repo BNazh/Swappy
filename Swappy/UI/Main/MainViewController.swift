@@ -17,6 +17,8 @@ class MainViewController: UIViewController {
     
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
+    weak var myProductsViewController: MyProductsViewController?
+    
     // MARK: - Functions lifecycle
     
     override func viewDidLoad() {
@@ -35,6 +37,22 @@ class MainViewController: UIViewController {
         super.viewWillDisappear(animated)
         
         navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        for child in children {
+            child.viewDidAppear(animated)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        if let myProductsVC = segue.destination as? MyProductsViewController {
+            myProductsViewController = myProductsVC
+        }
     }
     
     // MARK: - Actions

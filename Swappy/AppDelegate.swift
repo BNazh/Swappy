@@ -35,7 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         analyticManager.track(event: .startSession)
         UIViewController.swizzleViewWillAppear()
         
-        KeychainStoreImp().accessToken = nil
+        //KeychainStoreImp().accessToken = nil
         
         window?.rootViewController?.modalPresentationStyle = .currentContext
         
