@@ -24,6 +24,8 @@ final class SellerInfoViewController: CardViewController, TipView {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        addSwipeGestureRecognizer()
+        
         presenter.showSeller()
     }
     

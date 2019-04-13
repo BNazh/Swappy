@@ -24,7 +24,6 @@ class CardViewController: UIViewController {
         view.clipsToBounds = false
         
         addBottomView()
-        // addSwipeGestureRecognizer()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,6 +36,13 @@ class CardViewController: UIViewController {
         super.viewWillDisappear(animated)
         
         removeShade()
+    }
+    
+    func addSwipeGestureRecognizer() {
+        swipeRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(downSwipeAction))
+        swipeRecognizer.direction = .down
+        swipeRecognizer.delaysTouchesBegan = true
+        view.addGestureRecognizer(swipeRecognizer)
     }
 }
 
@@ -77,13 +83,6 @@ private extension CardViewController {
             make.trailing.equalTo(view.snp.trailing)
             make.top.equalTo(view.snp.bottomMargin)
         }
-    }
-    
-    func addSwipeGestureRecognizer() {
-        swipeRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(downSwipeAction))
-        swipeRecognizer.direction = .down
-        swipeRecognizer.delaysTouchesBegan = true
-        view.addGestureRecognizer(swipeRecognizer)
     }
     
     @objc
