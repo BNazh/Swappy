@@ -29,7 +29,7 @@ final class MyProductsViewController: UIViewController {
         super.viewDidLoad()
         
         dataDisplayManager.setup(delegate: self, collectionView: collectionView)
-        collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 84, right: 0)
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: 4, bottom: 84, right: 4)
     }
     
     override func viewDidAppear(_ animated: Bool) {
