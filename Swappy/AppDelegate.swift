@@ -11,6 +11,7 @@ import CoreData
 
 import SwinjectStoryboard
 import IQKeyboardManagerSwift
+import SwiftyVK
 
 import Firebase
 
@@ -34,6 +35,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         analyticManager.track(event: .startSession)
         UIViewController.swizzleViewWillAppear()
         
+        KeychainStoreImp().accessToken = nil
+        
         window?.rootViewController?.modalPresentationStyle = .currentContext
         
         return true
@@ -41,6 +44,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         Messaging.messaging().apnsToken = deviceToken
+    }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        let app = options[.sourceApplication] as? String
+        VK.handle(url: url, sourceApplication: app)
+        return true
     }
     
     // MARK: - Core Data Saving support

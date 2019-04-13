@@ -20,10 +20,14 @@ final class LoginCardViewController: CardViewController, ErrorView, LoadingView 
     }
     
     @IBAction func vkButtonTapped(_ sender: UIButton) {
-        vkService.login { [weak self] result in
+        tracker.track(event: .loginByVkClick)
+        
+        vkService.login(presentingHandler: vkPresentingHandler) { [weak self] result in
             switch result {
             case .success(let response):
-                self?.handleVkServiceResponse(response)
+                DispatchQueue.main.async {
+                    self?.handleVkServiceResponse(response)
+                }
             case .failure(let error):
                 self?.showError(message: error.localizedString)
             }
@@ -40,6 +44,10 @@ final class LoginCardViewController: CardViewController, ErrorView, LoadingView 
         dismiss(animated: true) {
             navigationController?.pushViewController(phoneLoginVC, animated: true)
         }
+    }
+    
+    func vkPresentingHandler(viewController: UIViewController) -> Void {
+        present(viewController, animated: true)
     }
     
     @IBAction func close(_ sender: UIButton) {

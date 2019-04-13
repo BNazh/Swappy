@@ -17,12 +17,13 @@ extension PHAsset {
         let manager = PHImageManager.default()
         
         let options = PHImageRequestOptions()
-        options.version = .original
+        options.version = .current
+        options.resizeMode = .exact
         options.isSynchronous = true
         
         //let size = PHImageManagerMaximumSize
-        let size = CGSize(width: 300, height: 300)
-        manager.requestImage(for: self, targetSize: size, contentMode: .aspectFit, options: options) { (image, _) in
+        let size = CGSize(width: 1500, height: 1500)
+        manager.requestImage(for: self, targetSize: size, contentMode: PHImageContentMode.default, options: options) { (image, _) in
             img = image
         }
         

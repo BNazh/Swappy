@@ -67,6 +67,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eSb-8K-ccO" customClass="VKButton" customModule="Swappy" customModuleProvider="target">
                                         <rect key="frame" x="16" y="164" width="343" height="52"/>
                                         <state key="normal" title="VK"/>
+                                        <connections>
+                                            <action selector="vkButtonTapped:" destination="XQ5-a5-nDw" eventType="touchUpInside" id="xeN-8s-fkd"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

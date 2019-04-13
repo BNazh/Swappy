@@ -19,7 +19,6 @@ final class KeychainStoreImp: KeychainStore  {
     var accessToken: String? {
         get {
             let token = UserDefaults.standard.string(forKey: "accessToken")
-            print("ACCESS TOKEN: \(token ?? "")")
             return token
         }
         set {

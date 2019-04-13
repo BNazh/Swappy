@@ -14,6 +14,8 @@ final class LoginCardAssembly: Assembly {
         
         container.storyboardInitCompleted(LoginCardViewController.self) { (r, viewController) in
             viewController.tracker = r.resolve()
+            viewController.vkService = r.resolve()
+            viewController.authService = r.resolve()
         }
     }
 }

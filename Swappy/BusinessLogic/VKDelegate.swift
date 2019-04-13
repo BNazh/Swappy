@@ -7,27 +7,42 @@
 //
 
 import SwiftyVK
+import UIKit
 
 struct VKLoginResponse {
     let email: String
-    let token: String
+    let acccessToken: String
+    
+    init?(info: [String : String]) {
+        guard let email = info["email"], let accessToken = info["access_token"] else {
+            return nil
+        }
+        
+        self.email = email
+        self.acccessToken = accessToken
+    }
 }
 
 final class VKService: SwiftyVKDelegate {
+    
+    var presentingHandler: ((UIViewController) -> Void)?
     
     init() {
         let appId = "5081181"
         VK.setUp(appId: appId, delegate: self)
     }
     
-    func login(callback: @escaping (Result<VKLoginResponse>)  -> Void) {
+    func login(presentingHandler: @escaping (UIViewController) -> Void, callback: @escaping (Result<VKLoginResponse>)  -> Void) {
+        self.presentingHandler = presentingHandler
+        
+        VK.sessions.default.logOut()
+   
         VK.sessions.default.logIn(onSuccess: { info in
-            guard let email = info["email"], let token = info["token"] else {
+            guard let response = VKLoginResponse(info: info) else {
                 callback(.failure(.unknown))
                 return
             }
             
-            let response = VKLoginResponse(email: email, token: token)
             callback(.success(response))
             
         }) { error in
@@ -36,10 +51,10 @@ final class VKService: SwiftyVKDelegate {
     }
     
     func vkNeedsScopes(for sessionId: String) -> Scopes {
-        return [Scopes.email]
+        return [.email, .offline]
     }
     
     func vkNeedToPresent(viewController: VKViewController) {
-        
+        presentingHandler?(viewController)
     }
 }

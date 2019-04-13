@@ -55,6 +55,10 @@ final class ServicesAssembly: Assembly {
             )
         }
         
+        container.register(VKService.self) { r in
+            return VKService()
+        }.inObjectScope(.container)
+        
         // Managers
         
         container.register(AnalyticsManager.self) { r in

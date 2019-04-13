@@ -49,7 +49,7 @@ extension AuthServiceImp: AuthService {
     }
     
     func vkAuth(response: VKLoginResponse, closure: @escaping ResultCallback<Void>) {
-        let request = AuthTarget.vkAuth(accessToken: response.token, email: response.email)
+        let request = AuthTarget.vkAuth(accessToken: response.acccessToken, email: response.email)
         
         sendAuthRequest(request, closure: closure)
     }
