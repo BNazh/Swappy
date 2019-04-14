@@ -564,8 +564,6 @@
 				E17CA185224C24EE00D5C955 /* Analytics */,
 				E1BC5ACD22311168001FD1D6 /* Result.swift */,
 				E1BC5ACF22311173001FD1D6 /* AppError.swift */,
-				E121128B2262395A0060CD3D /* VKService.swift */,
-				E1F78AFD226313D500BA4BED /* VKServiceImp.swift */,
 			);
 			path = BusinessLogic;
 			sourceTree = "<group>";
@@ -599,6 +597,7 @@
 		E19F7E0E22310A3F00BAFC7A /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				E1F78AFF22634CB900BA4BED /* VK */,
 				E1F01758224644EF001A10D7 /* Image */,
 				E111747C224185FA00BD19B4 /* Auth */,
 				E111747B224185F100BD19B4 /* Products */,
@@ -748,6 +747,15 @@
 				E1F017712249624B001A10D7 /* OkAlertView.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E1F78AFF22634CB900BA4BED /* VK */ = {
+			isa = PBXGroup;
+			children = (
+				E121128B2262395A0060CD3D /* VKService.swift */,
+				E1F78AFD226313D500BA4BED /* VKServiceImp.swift */,
+			);
+			path = VK;
 			sourceTree = "<group>";
 		};
 		E1FC30A32238DC4400DF1325 /* SellerInfo */ = {

@@ -9,9 +9,20 @@
 import Foundation
 
 enum Core {
-    static let isProduction = true
+    static private let isProduction = true
     
-    static let baseUrl = URL(string: "http://swappy.ru/")!
-    static let testUrl = URL(string: "http://185.185.68.48:8080/warehouse/")!
-    static let testAuthUrl = URL(string: "http://185.185.68.48:8080/")!
+    static private let baseUrl: URL = {
+        if isProduction {
+            return URL(string: "http://swappy.ru/")!
+        } else {
+            return URL(string: "http://185.185.68.48:8080/")!
+        }
+    }()
+    
+    static private let serviceString = isProduction ? "swappy-product-catalog-service/" : "warehouse/"
+    
+    // MARK: - Public
+    
+    static let authBaseUrl = baseUrl.appendingPathComponent("swappy-auth/")
+    static let productsBaseUrl = baseUrl.appendingPathComponent(serviceString)
 }

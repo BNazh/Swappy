@@ -20,8 +20,7 @@ enum ProductsTarget {
 extension ProductsTarget: TargetType {
     
     var baseURL: URL {
-        return Core.testUrl
-        //return Core.baseUrl.appendingPathComponent("swappy-product-catalog-service/")
+        return Core.productsBaseUrl
     }
     
     var path: String {
