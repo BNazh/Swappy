@@ -10,9 +10,6 @@ import UIKit
 import Moya
 
 final class ImageServiceImp {
-    
-//    var progressBlock: ((Double) -> Void)?
-//    var completionBlock: ((String?) -> Void)?
 
     private let provider: MoyaProvider<ImageTarget>
     private var currentOperation: Cancellable?

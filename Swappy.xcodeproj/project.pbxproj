@@ -28,7 +28,7 @@
 		E1117494224370B800BD19B4 /* CodeConfirmationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1117493224370B800BD19B4 /* CodeConfirmationAssembly.swift */; };
 		E11174962243719400BD19B4 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11174952243719400BD19B4 /* Core.swift */; };
 		E11174982246231600BD19B4 /* ImageTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11174972246231600BD19B4 /* ImageTarget.swift */; };
-		E121128C2262395A0060CD3D /* VKDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E121128B2262395A0060CD3D /* VKDelegate.swift */; };
+		E121128C2262395A0060CD3D /* VKService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E121128B2262395A0060CD3D /* VKService.swift */; };
 		E164C3932231B5DF00D1AB13 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E164C3922231B5DF00D1AB13 /* ProductDetailViewController.swift */; };
 		E164C3952231B5FE00D1AB13 /* ProductDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E164C3942231B5FE00D1AB13 /* ProductDetail.storyboard */; };
 		E164C39722326BAD00D1AB13 /* Collection+SafeSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = E164C39622326BAD00D1AB13 /* Collection+SafeSubscription.swift */; };
@@ -101,6 +101,7 @@
 		E1F0176D22493CF7001A10D7 /* TipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F0176C22493CF7001A10D7 /* TipView.swift */; };
 		E1F0176F22493E7A001A10D7 /* DeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F0176E22493E7A001A10D7 /* DeleteButton.swift */; };
 		E1F017722249624B001A10D7 /* OkAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F017712249624B001A10D7 /* OkAlertView.swift */; };
+		E1F78AFE226313D500BA4BED /* VKServiceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F78AFD226313D500BA4BED /* VKServiceImp.swift */; };
 		E1FC309C22378BCB00DF1325 /* ProductCatalogRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FC309B22378BCB00DF1325 /* ProductCatalogRouter.swift */; };
 		E1FC309E22378CC100DF1325 /* UIViewController+Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FC309D22378CC100DF1325 /* UIViewController+Storyboard.swift */; };
 		E1FC30A02238504100DF1325 /* ProductDetailAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FC309F2238504100DF1325 /* ProductDetailAssembly.swift */; };
@@ -177,7 +178,7 @@
 		E1117493224370B800BD19B4 /* CodeConfirmationAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeConfirmationAssembly.swift; sourceTree = "<group>"; };
 		E11174952243719400BD19B4 /* Core.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core.swift; sourceTree = "<group>"; };
 		E11174972246231600BD19B4 /* ImageTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTarget.swift; sourceTree = "<group>"; };
-		E121128B2262395A0060CD3D /* VKDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKDelegate.swift; sourceTree = "<group>"; };
+		E121128B2262395A0060CD3D /* VKService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKService.swift; sourceTree = "<group>"; };
 		E164C3922231B5DF00D1AB13 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		E164C3942231B5FE00D1AB13 /* ProductDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProductDetail.storyboard; sourceTree = "<group>"; };
 		E164C39622326BAD00D1AB13 /* Collection+SafeSubscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+SafeSubscription.swift"; sourceTree = "<group>"; };
@@ -256,6 +257,7 @@
 		E1F0176C22493CF7001A10D7 /* TipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipView.swift; sourceTree = "<group>"; };
 		E1F0176E22493E7A001A10D7 /* DeleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButton.swift; sourceTree = "<group>"; };
 		E1F017712249624B001A10D7 /* OkAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OkAlertView.swift; sourceTree = "<group>"; };
+		E1F78AFD226313D500BA4BED /* VKServiceImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKServiceImp.swift; sourceTree = "<group>"; };
 		E1FC309B22378BCB00DF1325 /* ProductCatalogRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCatalogRouter.swift; sourceTree = "<group>"; };
 		E1FC309D22378CC100DF1325 /* UIViewController+Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Storyboard.swift"; sourceTree = "<group>"; };
 		E1FC309F2238504100DF1325 /* ProductDetailAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailAssembly.swift; sourceTree = "<group>"; };
@@ -562,7 +564,8 @@
 				E17CA185224C24EE00D5C955 /* Analytics */,
 				E1BC5ACD22311168001FD1D6 /* Result.swift */,
 				E1BC5ACF22311173001FD1D6 /* AppError.swift */,
-				E121128B2262395A0060CD3D /* VKDelegate.swift */,
+				E121128B2262395A0060CD3D /* VKService.swift */,
+				E1F78AFD226313D500BA4BED /* VKServiceImp.swift */,
 			);
 			path = BusinessLogic;
 			sourceTree = "<group>";
@@ -1073,6 +1076,7 @@
 				"${BUILT_PRODUCTS_DIR}/SwiftyVK/SwiftyVK.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
 				"${BUILT_PRODUCTS_DIR}/SwinjectStoryboard/SwinjectStoryboard.framework",
+				"${BUILT_PRODUCTS_DIR}/VK-ios-sdk/VK_ios_sdk.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -1097,6 +1101,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyVK.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwinjectStoryboard.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VK_ios_sdk.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1144,6 +1149,7 @@
 				E17CA1942252A94200D5C955 /* DatabaseStore.swift in Sources */,
 				E1FC30AD2239722300DF1325 /* SellerInfoAssembly.swift in Sources */,
 				E11174832242B38300BD19B4 /* KeychainStore.swift in Sources */,
+				E1F78AFE226313D500BA4BED /* VKServiceImp.swift in Sources */,
 				E19F7E0D2231078F00BAFC7A /* ProductsTarget.swift in Sources */,
 				E1F0175722463C14001A10D7 /* BaseProvider.swift in Sources */,
 				E1BC5AD022311173001FD1D6 /* AppError.swift in Sources */,
@@ -1195,7 +1201,7 @@
 				E111749022436FBF00BD19B4 /* CodeConfirmationViewController.swift in Sources */,
 				E1FF3EA2223E77B800443DED /* ProductsDDM.swift in Sources */,
 				E1BC5ACA22310F1F001FD1D6 /* User.swift in Sources */,
-				E121128C2262395A0060CD3D /* VKDelegate.swift in Sources */,
+				E121128C2262395A0060CD3D /* VKService.swift in Sources */,
 				E1F0175A224644F5001A10D7 /* ImageService.swift in Sources */,
 				E1A2DEA72253C33C007E40F8 /* String+Format.swift in Sources */,
 				E17CA190224E74B400D5C955 /* DebugViewController.swift in Sources */,

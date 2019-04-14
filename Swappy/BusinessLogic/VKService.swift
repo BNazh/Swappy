@@ -21,9 +21,20 @@ struct VKLoginResponse {
         self.email = email
         self.acccessToken = accessToken
     }
+    
+    init(accessToken: String, email: String) {
+        self.email = email
+        self.acccessToken = accessToken
+    }
 }
 
-final class VKService: SwiftyVKDelegate {
+protocol VKService: class {
+    
+    func login(presentingHandler: @escaping (UIViewController) -> Void,
+               callback: @escaping (Result<VKLoginResponse>)  -> Void)
+}
+
+final class VKServiceImp2: SwiftyVKDelegate {
     
     var presentingHandler: ((UIViewController) -> Void)?
     

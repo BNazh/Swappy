@@ -56,7 +56,7 @@ final class ServicesAssembly: Assembly {
         }
         
         container.register(VKService.self) { r in
-            return VKService()
+            return VKServiceImp()
         }.inObjectScope(.container)
         
         // Managers
