@@ -36,6 +36,8 @@ final class PhoneLoginViewController: UIViewController {
         textFieldDelegate.affinityCalculationStrategy = .prefix
         phoneTextField.delegate = textFieldDelegate
         textFieldDelegate.listener = self
+        
+        phoneTextField.becomeFirstResponder()
     }
     
     // MARK: - Actions
