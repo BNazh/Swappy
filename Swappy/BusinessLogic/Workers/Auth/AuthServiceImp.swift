@@ -7,6 +7,7 @@
 //
 
 import Moya
+import Crashlytics
 
 final class AuthServiceImp {
     
@@ -75,6 +76,13 @@ private extension AuthServiceImp {
         keychainStore.userSellerId = response.swappyUser.id
         
         ProductsNotificationCenter.shared.postAuthNotification()
+        setCrashlyticsUser(response.swappyUser)
+    }
+    
+    func setCrashlyticsUser(_ user: User) {
+        let sdk = Crashlytics.sharedInstance()
+        sdk.setUserIdentifier(user.id)
+        sdk.setUserName(user.firstName + user.lastName)
     }
 }
 

@@ -8,6 +8,8 @@
 
 import Foundation
 
+// TODO: зарефаторить это нахер
+
 final class ProductsNotificationCenter {
     
     // MARK: - Properties
