@@ -54,6 +54,10 @@ target 'Swappy' do
   # Constraints
   pod 'SnapKit', '4.2.0'
   
+  # Crashlytics
+  pod 'Fabric'
+  pod 'Crashlytics'
+  
   target 'SwappyTests' do
     inherit! :search_paths
     # Pods for testing
