@@ -120,7 +120,7 @@ private extension EditProductPresenterImp {
     
     func handleAddProductActionResult(_ result: Result<Product>) {
         switch result {
-        case .success(let product):
+        case .success:
             view.close()
             tracker.track(event: .addProductSuccess)
             
