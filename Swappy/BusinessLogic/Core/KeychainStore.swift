@@ -6,7 +6,7 @@
 //  Copyright © 2019 SwappyTeam. All rights reserved.
 //
 
-import Foundation
+import KeychainAccess
 
 protocol KeychainStore: class {
     
@@ -14,24 +14,28 @@ protocol KeychainStore: class {
     var userSellerId: String? { get set }
 }
 
-final class KeychainStoreImp: KeychainStore  {
+final class KeychainStoreImp {
+    
+    private let keychain = Keychain(service: "com.swappy")
+}
+
+extension KeychainStoreImp: KeychainStore {
     
     var accessToken: String? {
         get {
-            let token = UserDefaults.standard.string(forKey: "accessToken")
-            return token
+            return keychain["accessToken"]
         }
         set {
-            UserDefaults.standard.set(newValue, forKey: "accessToken")
+            keychain["accessToken"] = newValue
         }
     }
     
     var userSellerId: String? {
         get {
-            return UserDefaults.standard.string(forKey: "userSellerId")
+            return keychain["userSellerId"]
         }
         set {
-            UserDefaults.standard.set(newValue, forKey: "userSellerId")
+            keychain["userSellerId"] = newValue
         }
     }
 }

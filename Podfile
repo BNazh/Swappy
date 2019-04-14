@@ -20,6 +20,9 @@ target 'Swappy' do
   # Images
   pod 'SDWebImage', '~> 4.0'
   
+  # Keychain
+  pod 'KeychainAccess'
+  
   # Slideshow view
   pod 'ImageSlideshow', '1.7.0'
   pod 'ImageSlideshow/SDWebImage'
@@ -42,7 +45,7 @@ target 'Swappy' do
   pod 'Firebase/Messaging'
   
   # VK api
-  pod 'SwiftyVK', '3.3.1'
+  #pod 'SwiftyVK', '3.3.1'
   pod 'VK-ios-sdk'
   
   # Analytics
