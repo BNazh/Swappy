@@ -1,21 +1,24 @@
 
-/* Class = "UIBarButtonItem"; title = "Debug"; ObjectID = "0QX-Ur-sQH"; */
-"0QX-Ur-sQH.title" = "Debug";
-
 /* Class = "UIButton"; normalTitle = "Logout"; ObjectID = "7Pr-vV-Z2v"; */
 "7Pr-vV-Z2v.normalTitle" = "Logout";
 
-/* Class = "UINavigationItem"; title = "Swappy"; ObjectID = "9RM-NE-DJZ"; */
-"9RM-NE-DJZ.title" = "Swappy";
-
 /* Class = "UIButton"; normalTitle = "Скопировать accessToken"; ObjectID = "SJb-wv-qwT"; */
 "SJb-wv-qwT.normalTitle" = "Скопировать accessToken";
+
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "T2h-OZ-AsD"; */
+"T2h-OZ-AsD.title" = " ";
+
+/* Class = "UILabel"; text = "Swappy"; ObjectID = "VdA-6e-2YW"; */
+"VdA-6e-2YW.text" = "Swappy";
+
+/* Class = "UISegmentedControl"; Yvr-Vu-e5b.segmentTitles[0] = "Все товары"; ObjectID = "Yvr-Vu-e5b"; */
+"Yvr-Vu-e5b.segmentTitles[0]" = "Все товары";
+
+/* Class = "UISegmentedControl"; Yvr-Vu-e5b.segmentTitles[1] = "Мои товары"; ObjectID = "Yvr-Vu-e5b"; */
+"Yvr-Vu-e5b.segmentTitles[1]" = "Мои товары";
 
 /* Class = "UIViewController"; title = "Swappy"; ObjectID = "ahH-yP-wIE"; */
 "ahH-yP-wIE.title" = "Swappy";
 
 /* Class = "UIButton"; normalTitle = "Скопировать sellerId"; ObjectID = "dV9-nX-XDc"; */
 "dV9-nX-XDc.normalTitle" = "Скопировать sellerId";
-
-/* Class = "UIBarButtonItem"; title = " "; ObjectID = "mzf-t1-k5T"; */
-"mzf-t1-k5T.title" = " ";
