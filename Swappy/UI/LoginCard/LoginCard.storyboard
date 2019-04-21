@@ -114,6 +114,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="STz-dY-BQQ"/>
                     </view>
+                    <connections>
+                        <outlet property="cardContainerView" destination="Xjm-MM-TQq" id="Sxb-tu-Gqx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FaK-Nw-lom" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

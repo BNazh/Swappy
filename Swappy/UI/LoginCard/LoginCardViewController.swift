@@ -10,6 +10,8 @@ import UIKit
 
 final class LoginCardViewController: CardViewController, ErrorView, LoadingView {
     
+    @IBOutlet weak var cardContainerView: UIView!
+    
     var vkService: VKService!
     var authService: AuthService!
     var tracker: AnalyticsManager!
@@ -17,6 +19,12 @@ final class LoginCardViewController: CardViewController, ErrorView, LoadingView 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        cardContainerView.roundCorners(corners: [.topRight, .topLeft], radius: 9)
     }
     
     @IBAction func vkButtonTapped(_ sender: UIButton) {
