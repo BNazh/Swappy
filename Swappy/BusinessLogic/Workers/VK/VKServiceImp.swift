@@ -22,6 +22,9 @@ final class VKServiceImp: NSObject {
         
         sdkInstance.register(self)
         sdkInstance.uiDelegate = self
+        
+        // Handle authState
+        NotificationCenter.default.removeObserver(sdkInstance)
     }
 }
 
@@ -35,7 +38,6 @@ extension VKServiceImp: VKService {
         
         VKSdk.forceLogout()
         VKSdk.authorize(scopes)
-        
     }
 }
 
