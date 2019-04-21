@@ -17,6 +17,14 @@ protocol KeychainStore: class {
 final class KeychainStoreImp {
     
     private let keychain = Keychain(service: "com.swappy")
+    
+    init() {
+        if !isNotFirstLaunch {
+            accessToken = nil
+            userSellerId = nil
+            isNotFirstLaunch = true
+        }
+    }
 }
 
 extension KeychainStoreImp: KeychainStore {
@@ -36,6 +44,20 @@ extension KeychainStoreImp: KeychainStore {
         }
         set {
             keychain["userSellerId"] = newValue
+        }
+    }
+}
+
+// MARK: - Private
+
+extension KeychainStore {
+    
+    var isNotFirstLaunch: Bool {
+        get {
+            return UserDefaults.standard.bool(forKey: "isNotFirstLaunch")
+        }
+        set {
+            UserDefaults.standard.set(true, forKey: "isNotFirstLaunch")
         }
     }
 }

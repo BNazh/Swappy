@@ -32,7 +32,10 @@ extension VKServiceImp: VKService {
         self.callback = callback
         
         let scopes = ["email"]
+        
+        VKSdk.forceLogout()
         VKSdk.authorize(scopes)
+        
     }
 }
 
