@@ -12,9 +12,26 @@ extension NSAttributedString {
     convenience init(string: String, font: UIFont) {
         var attributes: [NSAttributedString.Key: Any] = [:]
         
-        attributes[NSAttributedString.Key.font] = font
+        attributes[.font] = font
         
         self.init(string: string, attributes: attributes)
+    }
+}
+
+extension NSMutableAttributedString {
+    
+    @discardableResult
+    func setAsLink(textToFind:String, linkURL: String) -> Bool {
+        
+        let foundRange = self.mutableString.range(of: textToFind)
+        
+        guard foundRange.location != NSNotFound else {
+            return false
+        }
+        
+        self.addAttribute(.link, value: linkURL, range: foundRange)
+        
+        return true
     }
 }
 

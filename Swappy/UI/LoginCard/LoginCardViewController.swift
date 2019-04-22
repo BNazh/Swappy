@@ -11,6 +11,7 @@ import UIKit
 final class LoginCardViewController: CardViewController, ErrorView, LoadingView {
     
     @IBOutlet weak var cardContainerView: UIView!
+    @IBOutlet weak var privacyTextView: UITextView!
     
     var vkService: VKService!
     var authService: AuthService!
@@ -19,6 +20,7 @@ final class LoginCardViewController: CardViewController, ErrorView, LoadingView 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupPrivacyTextView()
     }
     
     override func viewDidLayoutSubviews() {
@@ -78,6 +80,28 @@ private extension LoginCardViewController {
                 self?.showError(message: error.localizedString)
             }
         })
+    }
+    
+    func setupPrivacyTextView() {
+        privacyTextView.attributedText = privacyString()
+        
+        privacyTextView.textColor = .manatee
+        privacyTextView.linkTextAttributes = [
+            NSAttributedString.Key.foregroundColor: UIColor.taupe
+        ]
+        
+        privacyTextView.textAlignment = .center
+    }
+    
+    func privacyString() -> NSAttributedString {
+        let linkText = "http://swappy.ru/privacyPolicy.html"
+        let privacyText = "лицензионое соглашение\nи политику конфиденциальности"
+        let text = "Продолжая пользоваться приложением,\nвы принимаете " + privacyText
+        let attributedString = NSMutableAttributedString(string: text)
+        
+        attributedString.setAsLink(textToFind: privacyText, linkURL: linkText)
+        
+        return attributedString
     }
 }
 
