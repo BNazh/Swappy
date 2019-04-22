@@ -32,8 +32,8 @@ final class MyProductsViewController: UIViewController {
         collectionView.contentInset = UIEdgeInsets(top: 0, left: 4, bottom: 84, right: 4)
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         presenter.loadMyProductsIfEmpty()
     }
@@ -49,7 +49,7 @@ final class MyProductsViewController: UIViewController {
         default:
             break
         }
-    }
+    }  
     
     // MARK: - Actions
     
