@@ -91,6 +91,10 @@ private extension LoginCardViewController {
         ]
         
         privacyTextView.textAlignment = .center
+        
+        if #available(iOS 11.0, *) {
+            privacyTextView.textDragInteraction?.isEnabled = false
+        }
     }
     
     func privacyString() -> NSAttributedString {
