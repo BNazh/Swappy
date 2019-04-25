@@ -17,6 +17,7 @@ final class LoginCardViewController: CardViewController, ErrorView, LoadingView 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        addSwipeGestureRecognizer()
     }
     
     @IBAction func vkButtonTapped(_ sender: UIButton) {

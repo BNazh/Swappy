@@ -73,6 +73,7 @@ private extension CardViewController {
         }
     }
     
+    // Dirty hack для iphone X ++
     func addBottomView() {
         view.addSubview(bottomView)
         bottomView.backgroundColor = .white
