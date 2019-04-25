@@ -11,12 +11,16 @@ import VK_ios_sdk
 final class VKServiceImp: NSObject {
     
     private let sdkInstance: VKSdk
+    private let tracker: AnalyticsManager
+    
     private var callback: ((Result<VKLoginResponse>) -> Void)?
     private var presentingHandler: ((UIViewController) -> Void)?
     
-    override init() {
+    init(tracker: AnalyticsManager) {
+        
         let appId = "5081181"
         sdkInstance = VKSdk.initialize(withAppId: appId)
+        self.tracker = tracker
         
         super.init()
         
@@ -47,16 +51,20 @@ extension VKServiceImp: VKSdkDelegate {
         guard
             let accessToken = result.token?.accessToken,
             let email = result.token?.email else {
-                
-            callback?(.failure(.unknown))
+            
+            vkSdkUserAuthorizationFailed()
             return
         }
     
+        tracker.track(event: .loginByVkSuccess)
+        
         let response = VKLoginResponse(accessToken: accessToken, email: email)
         callback?(.success(response))
     }
     
     func vkSdkUserAuthorizationFailed() {
+        tracker.track(event: .loginByVkFailure)
+        
         callback?(.failure(.unknown))
     }
 }

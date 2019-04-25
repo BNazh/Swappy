@@ -561,8 +561,8 @@
 			isa = PBXGroup;
 			children = (
 				E11174812242B37100BD19B4 /* Core */,
-				E19F7E0E22310A3F00BAFC7A /* Services */,
 				E19F7E062231065600BAFC7A /* Targets */,
+				E19F7E0E22310A3F00BAFC7A /* Services */,
 				E1A6656022550C87007EE75F /* PushNotificationService */,
 				E17CA185224C24EE00D5C955 /* Analytics */,
 				E1BC5ACD22311168001FD1D6 /* Result.swift */,
@@ -965,6 +965,7 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				en,
 				Base,
 				ru,
 			);

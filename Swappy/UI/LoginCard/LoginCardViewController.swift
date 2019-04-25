@@ -20,6 +20,7 @@ final class LoginCardViewController: CardViewController, ErrorView, LoadingView 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        addSwipeGestureRecognizer()
         setupPrivacyTextView()
     }
     
