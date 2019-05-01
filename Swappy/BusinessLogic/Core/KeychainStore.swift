@@ -51,7 +51,7 @@ private extension KeychainStoreImp {
     // MARK: - Properties
     
     var shouldClearKeychain: Bool {
-        return !isNotFirstLaunch && appVersion == "1.0"
+        return !isNotFirstLaunch
     }
     
     var isNotFirstLaunch: Bool {
@@ -63,22 +63,12 @@ private extension KeychainStoreImp {
         }
     }
     
-    var appVersion: String {
-        get {
-            return keychain["appVersion"] ?? "1.0"
-        }
-        set {
-            keychain["appVersion"] = newValue
-        }
-    }
-    
     // MARK: - Functions
     
     func clearIfNeeded() {
         guard shouldClearKeychain else { return }
         
         clearKeychain()
-        appVersion = "1.1"
     }
     
     func clearKeychain() {
