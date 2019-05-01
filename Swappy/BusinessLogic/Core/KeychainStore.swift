@@ -19,11 +19,7 @@ final class KeychainStoreImp {
     private let keychain = Keychain(service: "com.swappy")
     
     init() {
-        if !isNotFirstLaunch {
-            accessToken = nil
-            userSellerId = nil
-            isNotFirstLaunch = true
-        }
+        clearIfNeeded()
     }
 }
 
@@ -50,14 +46,44 @@ extension KeychainStoreImp: KeychainStore {
 
 // MARK: - Private
 
-extension KeychainStore {
+private extension KeychainStoreImp {
+    
+    // MARK: - Properties
+    
+    var shouldClearKeychain: Bool {
+        return !isNotFirstLaunch && appVersion == "1.0"
+    }
     
     var isNotFirstLaunch: Bool {
         get {
             return UserDefaults.standard.bool(forKey: "isNotFirstLaunch")
         }
         set {
-            UserDefaults.standard.set(true, forKey: "isNotFirstLaunch")
+            UserDefaults.standard.set(newValue, forKey: "isNotFirstLaunch")
         }
+    }
+    
+    var appVersion: String {
+        get {
+            return keychain["appVersion"] ?? "1.0"
+        }
+        set {
+            keychain["appVersion"] = newValue
+        }
+    }
+    
+    // MARK: - Functions
+    
+    func clearIfNeeded() {
+        guard shouldClearKeychain else { return }
+        
+        clearKeychain()
+        appVersion = "1.1"
+    }
+    
+    func clearKeychain() {
+        accessToken = nil
+        userSellerId = nil
+        isNotFirstLaunch = true
     }
 }
