@@ -18,11 +18,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchIcon" translatesAutoresizingMaskIntoConstraints="NO" id="zEx-be-aK8">
-                                <rect key="frame" x="87.5" y="233.5" width="200" height="200"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splashIcon" translatesAutoresizingMaskIntoConstraints="NO" id="zEx-be-aK8">
+                                <rect key="frame" x="137.5" y="283.5" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="zEx-be-aK8" secondAttribute="height" multiplier="1:1" id="hAZ-xo-uDL"/>
-                                    <constraint firstAttribute="width" constant="200" id="lFr-cv-5fs"/>
+                                    <constraint firstAttribute="width" constant="100" id="lFr-cv-5fs"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -40,6 +40,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="launchIcon" width="768" height="768"/>
+        <image name="splashIcon" width="1024" height="1024"/>
     </resources>
 </document>
