@@ -10,6 +10,7 @@
 		16F9B4DE1CB9F8192B427752 /* Pods_SwappyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFD0839158D45E6BFAB8A03C /* Pods_SwappyUITests.framework */; };
 		96B0C942978569040AC6A9B8 /* Pods_SwappyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEFECB724EC876C65A2B29EB /* Pods_SwappyTests.framework */; };
 		C2E71353A7D7CE8F7C2ED007 /* Pods_Swappy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4C981EDD82058064D968414 /* Pods_Swappy.framework */; };
+		E100062F22798AC600CDC509 /* splashIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = E100062E22798AC600CDC509 /* splashIcon.png */; };
 		E10850C2223EF78F00941EA5 /* PhoneLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10850C1223EF78F00941EA5 /* PhoneLoginViewController.swift */; };
 		E10850C4223F276D00941EA5 /* EditProduct.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E10850C3223F276D00941EA5 /* EditProduct.storyboard */; };
 		E11174742240AD8F00BD19B4 /* EditProductAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11174732240AD8F00BD19B4 /* EditProductAssembly.swift */; };
@@ -160,6 +161,7 @@
 		BFD0839158D45E6BFAB8A03C /* Pods_SwappyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwappyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEFECB724EC876C65A2B29EB /* Pods_SwappyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwappyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D325178C30F5960E093569F4 /* Pods-Swappy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swappy.debug.xcconfig"; path = "Target Support Files/Pods-Swappy/Pods-Swappy.debug.xcconfig"; sourceTree = "<group>"; };
+		E100062E22798AC600CDC509 /* splashIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splashIcon.png; sourceTree = "<group>"; };
 		E10850C1223EF78F00941EA5 /* PhoneLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneLoginViewController.swift; sourceTree = "<group>"; };
 		E10850C3223F276D00941EA5 /* EditProduct.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditProduct.storyboard; sourceTree = "<group>"; };
 		E11174732240AD8F00BD19B4 /* EditProductAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProductAssembly.swift; sourceTree = "<group>"; };
@@ -532,7 +534,6 @@
 				E1BC5AE822313350001FD1D6 /* Resources */,
 				E19F7DD42231063900BAFC7A /* AppDelegate.swift */,
 				E1D908D6225BCEE20027C6C6 /* GoogleService-Info.plist */,
-				E19F7DDE2231063A00BAFC7A /* Assets.xcassets */,
 				E19F7DE32231063A00BAFC7A /* Info.plist */,
 				E1FC30B322398B2E00DF1325 /* Swappy.entitlements */,
 			);
@@ -676,6 +677,8 @@
 		E1BC5AE822313350001FD1D6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E100062E22798AC600CDC509 /* splashIcon.png */,
+				E19F7DDE2231063A00BAFC7A /* Assets.xcassets */,
 				E16D31C92258BF5500033DCC /* Localizable.strings */,
 				E19F7DE02231063A00BAFC7A /* LaunchScreen.storyboard */,
 				E19F7DDB2231063900BAFC7A /* Swappy.xcdatamodeld */,
@@ -994,6 +997,7 @@
 				E19F7DDF2231063A00BAFC7A /* Assets.xcassets in Resources */,
 				E19F7DDA2231063900BAFC7A /* Main.storyboard in Resources */,
 				E10850C4223F276D00941EA5 /* EditProduct.storyboard in Resources */,
+				E100062F22798AC600CDC509 /* splashIcon.png in Resources */,
 				E16D31CB2258BF5500033DCC /* Localizable.strings in Resources */,
 				E1D908D7225BCEE30027C6C6 /* GoogleService-Info.plist in Resources */,
 				E1FF3E97223A350900443DED /* LoginCard.storyboard in Resources */,
