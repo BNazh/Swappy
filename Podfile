@@ -50,6 +50,7 @@ target 'Swappy' do
   
   # Analytics
   pod 'YandexMobileMetrica', '3.6.0'
+  pod 'AppsFlyerFramework'
   
   # Constraints
   pod 'SnapKit', '4.2.0'

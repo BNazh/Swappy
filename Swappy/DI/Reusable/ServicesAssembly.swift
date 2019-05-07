@@ -69,6 +69,10 @@ final class ServicesAssembly: Assembly {
             return PushNotificationServiceImp()
         }.inObjectScope(.container)
         
+        container.register(AppsFlyerManager.self) { r in
+            return AppsFlyerManager()
+        }.inObjectScope(.container)
+        
         // DDM
         
         container.register(ProductsDDM.self) { _ in

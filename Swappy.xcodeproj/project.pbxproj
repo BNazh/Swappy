@@ -11,6 +11,7 @@
 		96B0C942978569040AC6A9B8 /* Pods_SwappyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEFECB724EC876C65A2B29EB /* Pods_SwappyTests.framework */; };
 		C2E71353A7D7CE8F7C2ED007 /* Pods_Swappy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4C981EDD82058064D968414 /* Pods_Swappy.framework */; };
 		E100062F22798AC600CDC509 /* splashIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = E100062E22798AC600CDC509 /* splashIcon.png */; };
+		E1000631228232E500CDC509 /* AppsflyerAnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1000630228232E500CDC509 /* AppsflyerAnalyticsManager.swift */; };
 		E10850C2223EF78F00941EA5 /* PhoneLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10850C1223EF78F00941EA5 /* PhoneLoginViewController.swift */; };
 		E10850C4223F276D00941EA5 /* EditProduct.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E10850C3223F276D00941EA5 /* EditProduct.storyboard */; };
 		E11174742240AD8F00BD19B4 /* EditProductAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11174732240AD8F00BD19B4 /* EditProductAssembly.swift */; };
@@ -162,6 +163,7 @@
 		CEFECB724EC876C65A2B29EB /* Pods_SwappyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwappyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D325178C30F5960E093569F4 /* Pods-Swappy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swappy.debug.xcconfig"; path = "Target Support Files/Pods-Swappy/Pods-Swappy.debug.xcconfig"; sourceTree = "<group>"; };
 		E100062E22798AC600CDC509 /* splashIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splashIcon.png; sourceTree = "<group>"; };
+		E1000630228232E500CDC509 /* AppsflyerAnalyticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsflyerAnalyticsManager.swift; sourceTree = "<group>"; };
 		E10850C1223EF78F00941EA5 /* PhoneLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneLoginViewController.swift; sourceTree = "<group>"; };
 		E10850C3223F276D00941EA5 /* EditProduct.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditProduct.storyboard; sourceTree = "<group>"; };
 		E11174732240AD8F00BD19B4 /* EditProductAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProductAssembly.swift; sourceTree = "<group>"; };
@@ -449,6 +451,7 @@
 		E17CA185224C24EE00D5C955 /* Analytics */ = {
 			isa = PBXGroup;
 			children = (
+				E1000630228232E500CDC509 /* AppsflyerAnalyticsManager.swift */,
 				E17CA186224C24FE00D5C955 /* AnalyticsManager.swift */,
 				E17CA19F22569A2A00D5C955 /* Managers */,
 				E17CA19E22569A1C00D5C955 /* Structs */,
@@ -1279,6 +1282,7 @@
 				E17CA19222529D9200D5C955 /* AppConstants.swift in Sources */,
 				E1B4B1DD2235BE2200520082 /* ProductViewModel.swift in Sources */,
 				E1BC5AE322312E6C001FD1D6 /* NSAttributedString+SimpleInit.swift in Sources */,
+				E1000631228232E500CDC509 /* AppsflyerAnalyticsManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
