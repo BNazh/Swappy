@@ -20,17 +20,24 @@ import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    // MARK: - Properties
 
     var window: UIWindow?
     
     let analyticManager: AnalyticsManager = SwinjectStoryboard.defaultContainer.resolve()
+    let appsFlyerManager: AppsFlyerManager = SwinjectStoryboard.defaultContainer.resolve()
     let pushManager: PushNotificationService = SwinjectStoryboard.defaultContainer.resolve()
+    
+    // MARK: - Functions
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         setupKeyboardManager()
 
         Fabric.with([Crashlytics.self])
+        
+        appsFlyerManager.setup()
         
         pushManager.register(application: application)
         
@@ -51,6 +58,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let app = options[.sourceApplication] as? String
         VKSdk.processOpen(url, fromApplication: app ?? "")
         return true
+    }
+    
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        appsFlyerManager.trackAppLaunch()
     }
     
     func setupKeyboardManager() {
