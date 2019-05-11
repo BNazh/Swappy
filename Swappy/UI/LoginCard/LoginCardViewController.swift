@@ -105,7 +105,6 @@ private extension LoginCardViewController {
         let attributedString = NSMutableAttributedString(string: text)
         
         attributedString.setAsLink(textToFind: privacyText, linkURL: linkText)
-        
         return attributedString
     }
 }

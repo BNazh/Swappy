@@ -59,6 +59,8 @@ final class ServicesAssembly: Assembly {
             return VKServiceImp(tracker: r.resolve())
         }.inObjectScope(.container)
         
+        
+        
         // Managers
         
         container.register(AnalyticsManager.self) { r in

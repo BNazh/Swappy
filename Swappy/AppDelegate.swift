@@ -13,6 +13,7 @@ import SwinjectStoryboard
 import IQKeyboardManagerSwift
 import VK_ios_sdk
 
+
 import Fabric
 import Crashlytics
 
@@ -44,6 +45,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         analyticManager.configure(launchOptions: launchOptions)
         analyticManager.track(event: .startSession)
         UIViewController.swizzleViewWillAppear()
+        
+        //ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
         
         window?.rootViewController?.modalPresentationStyle = .currentContext
         
