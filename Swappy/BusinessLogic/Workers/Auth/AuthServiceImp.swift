@@ -54,6 +54,10 @@ extension AuthServiceImp: AuthService {
         
         sendAuthRequest(request, closure: closure)
     }
+    
+    func fbAuth(closure: @escaping ResultCallback<Void>) {
+        
+    }
 }
 
 private extension AuthServiceImp {

@@ -18,7 +18,7 @@ final class FBServiceImp {
 
 extension FBServiceImp: FBService {
     
-    func login(viewController: UIViewController, closure: @escaping @escaping (ResultCallback<FBLoginResponse>)) {
+    func login(viewController: UIViewController, closure: @escaping (ResultCallback<FBLoginResponse>)) {
         loginManager.logIn(permissions: [.email], viewController: viewController) { result in
             switch result {
             case .success(let grantedPermissions, _, let token):
