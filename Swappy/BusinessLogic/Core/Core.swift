@@ -25,4 +25,5 @@ enum Core {
     
     static let authBaseUrl = baseUrl.appendingPathComponent("swappy-auth/")
     static let productsBaseUrl = baseUrl.appendingPathComponent(serviceString)
+    static let categoriesBaseUrl = baseUrl.appendingPathComponent(serviceString)
 }

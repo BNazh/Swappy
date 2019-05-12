@@ -27,4 +27,5 @@ extension UIColor {
     static let taupe = UIColor(r: 51, g: 51, b: 51)
     
     static let vkBackground = UIColor(r: 81, g: 118, b: 164)
+    static let fbBackground = UIColor(r: 59, g: 89, b: 152)
 }

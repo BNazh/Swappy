@@ -56,6 +56,8 @@
 		E17CA1A32256A5CC00D5C955 /* Resolver+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CA1A22256A5CC00D5C955 /* Resolver+Extension.swift */; };
 		E17CA1A52256B02300D5C955 /* LoginCardAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CA1A42256B02300D5C955 /* LoginCardAssembly.swift */; };
 		E17CA1A72256B19800D5C955 /* UIViewController+Swizzling.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CA1A62256B19800D5C955 /* UIViewController+Swizzling.swift */; };
+		E18FB17A228812EB00F15F66 /* CategoriesTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18FB179228812EB00F15F66 /* CategoriesTarget.swift */; };
+		E18FB17C22881D3400F15F66 /* FBButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18FB17B22881D3400F15F66 /* FBButton.swift */; };
 		E19F7DD52231063900BAFC7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19F7DD42231063900BAFC7A /* AppDelegate.swift */; };
 		E19F7DDA2231063900BAFC7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E19F7DD82231063900BAFC7A /* Main.storyboard */; };
 		E19F7DDD2231063900BAFC7A /* Swappy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E19F7DDB2231063900BAFC7A /* Swappy.xcdatamodeld */; };
@@ -213,6 +215,8 @@
 		E181E1B2226671BF00624164 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		E181E1B3226671BF00624164 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		E181E1B4226671C000624164 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = Resources/ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E18FB179228812EB00F15F66 /* CategoriesTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTarget.swift; sourceTree = "<group>"; };
+		E18FB17B22881D3400F15F66 /* FBButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBButton.swift; sourceTree = "<group>"; };
 		E19F7DD12231063900BAFC7A /* Swappy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swappy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E19F7DD42231063900BAFC7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E19F7DD92231063900BAFC7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -516,6 +520,15 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		E18FB17D22881D3A00F15F66 /* Social */ = {
+			isa = PBXGroup;
+			children = (
+				E1FF3EB8223EE18100443DED /* VKButton.swift */,
+				E18FB17B22881D3400F15F66 /* FBButton.swift */,
+			);
+			path = Social;
+			sourceTree = "<group>";
+		};
 		E19F7DC82231063900BAFC7A = {
 			isa = PBXGroup;
 			children = (
@@ -594,6 +607,7 @@
 				E19F7E0C2231078F00BAFC7A /* ProductsTarget.swift */,
 				E1117479224183A400BD19B4 /* AuthTarget.swift */,
 				E11174972246231600BD19B4 /* ImageTarget.swift */,
+				E18FB179228812EB00F15F66 /* CategoriesTarget.swift */,
 			);
 			path = Targets;
 			sourceTree = "<group>";
@@ -796,9 +810,9 @@
 			children = (
 				E1FF3E98223A373000443DED /* BaseButton.swift */,
 				E164C39B223591AF00D1AB13 /* MainButton.swift */,
-				E1FF3EB8223EE18100443DED /* VKButton.swift */,
 				E1FC30B1223977B900DF1325 /* SecondaryButton.swift */,
 				E1F0176E22493E7A001A10D7 /* DeleteButton.swift */,
+				E18FB17D22881D3A00F15F66 /* Social */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -1093,6 +1107,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Swappy/Pods-Swappy-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/BSGridCollectionViewLayout/BSGridCollectionViewLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/BSImagePicker/BSImagePicker.framework",
 				"${BUILT_PRODUCTS_DIR}/BSImageView/BSImageView.framework",
@@ -1106,7 +1121,9 @@
 				"${BUILT_PRODUCTS_DIR}/InputMask/InputMask.framework",
 				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
@@ -1119,6 +1136,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BSGridCollectionViewLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BSImagePicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BSImageView.framework",
@@ -1132,7 +1150,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/InputMask.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
@@ -1198,11 +1218,13 @@
 				E19F7E1622310B3D00BAFC7A /* Swinject.swift in Sources */,
 				E1FC309E22378CC100DF1325 /* UIViewController+Storyboard.swift in Sources */,
 				E1BC5AD922312456001FD1D6 /* ProductCellViewModel.swift in Sources */,
+				E18FB17A228812EB00F15F66 /* CategoriesTarget.swift in Sources */,
 				E111747A224183A400BD19B4 /* AuthTarget.swift in Sources */,
 				E1BC5AE522312F36001FD1D6 /* Moya+CustomDecodableRequest.swift in Sources */,
 				E17CA1942252A94200D5C955 /* DatabaseStore.swift in Sources */,
 				E1FC30AD2239722300DF1325 /* SellerInfoAssembly.swift in Sources */,
 				E11174832242B38300BD19B4 /* KeychainStore.swift in Sources */,
+				E18FB17C22881D3400F15F66 /* FBButton.swift in Sources */,
 				E1F78AFE226313D500BA4BED /* VKServiceImp.swift in Sources */,
 				E19F7E0D2231078F00BAFC7A /* ProductsTarget.swift in Sources */,
 				E1F0175722463C14001A10D7 /* BaseProvider.swift in Sources */,

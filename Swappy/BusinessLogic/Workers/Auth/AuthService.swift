@@ -15,4 +15,6 @@ protocol AuthService: class {
     func authenticate(phone: String, code: String, closure: @escaping ResultCallback<Void>)
     
     func vkAuth(response: VKLoginResponse, closure: @escaping ResultCallback<Void>)
+    
+    func fbAuht(closure: @escaping ResultCallback<Void>)
 }

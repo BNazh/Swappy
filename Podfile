@@ -38,15 +38,19 @@ target 'Swappy' do
   pod 'IQKeyboardManagerSwift', '6.0.4'
   
   # Photos picker
-  pod 'BSImagePicker', '~> 2.8'
+  pod 'BSImagePicker', '2.10.0'
   
   # Push Notifications
   pod 'Firebase/Core'
   pod 'Firebase/Messaging'
   
-  # VK api
+  # Social networks
   #pod 'SwiftyVK', '3.3.1'
   pod 'VK-ios-sdk'
+  pod 'FacebookCore', '0.7.0'
+  pod 'FacebookLogin', '0.7.0'
+  #pod 'FBSDKLoginKit'
+
   
   # Analytics
   pod 'YandexMobileMetrica', '3.6.0'
