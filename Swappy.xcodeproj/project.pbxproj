@@ -58,6 +58,10 @@
 		E17CA1A72256B19800D5C955 /* UIViewController+Swizzling.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CA1A62256B19800D5C955 /* UIViewController+Swizzling.swift */; };
 		E18FB17A228812EB00F15F66 /* CategoriesTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18FB179228812EB00F15F66 /* CategoriesTarget.swift */; };
 		E18FB17C22881D3400F15F66 /* FBButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18FB17B22881D3400F15F66 /* FBButton.swift */; };
+		E18FB1802288206800F15F66 /* CategoriesFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18FB17F2288206800F15F66 /* CategoriesFilterViewController.swift */; };
+		E18FB1852288211C00F15F66 /* CategoriesFilter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E18FB1842288211C00F15F66 /* CategoriesFilter.storyboard */; };
+		E18FB18822882AE200F15F66 /* CategorySelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18FB18722882AE200F15F66 /* CategorySelectionViewController.swift */; };
+		E18FB18A22882AEC00F15F66 /* CategorySelection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E18FB18922882AEC00F15F66 /* CategorySelection.storyboard */; };
 		E19F7DD52231063900BAFC7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19F7DD42231063900BAFC7A /* AppDelegate.swift */; };
 		E19F7DDA2231063900BAFC7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E19F7DD82231063900BAFC7A /* Main.storyboard */; };
 		E19F7DDD2231063900BAFC7A /* Swappy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E19F7DDB2231063900BAFC7A /* Swappy.xcdatamodeld */; };
@@ -217,6 +221,10 @@
 		E181E1B4226671C000624164 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = Resources/ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E18FB179228812EB00F15F66 /* CategoriesTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTarget.swift; sourceTree = "<group>"; };
 		E18FB17B22881D3400F15F66 /* FBButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBButton.swift; sourceTree = "<group>"; };
+		E18FB17F2288206800F15F66 /* CategoriesFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesFilterViewController.swift; sourceTree = "<group>"; };
+		E18FB1842288211C00F15F66 /* CategoriesFilter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CategoriesFilter.storyboard; sourceTree = "<group>"; };
+		E18FB18722882AE200F15F66 /* CategorySelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySelectionViewController.swift; sourceTree = "<group>"; };
+		E18FB18922882AEC00F15F66 /* CategorySelection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CategorySelection.storyboard; sourceTree = "<group>"; };
 		E19F7DD12231063900BAFC7A /* Swappy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swappy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E19F7DD42231063900BAFC7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E19F7DD92231063900BAFC7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -529,6 +537,24 @@
 			path = Social;
 			sourceTree = "<group>";
 		};
+		E18FB17E2288200A00F15F66 /* CategoriesFilter */ = {
+			isa = PBXGroup;
+			children = (
+				E18FB1842288211C00F15F66 /* CategoriesFilter.storyboard */,
+				E18FB17F2288206800F15F66 /* CategoriesFilterViewController.swift */,
+			);
+			path = CategoriesFilter;
+			sourceTree = "<group>";
+		};
+		E18FB18622882AC800F15F66 /* CategorySelection */ = {
+			isa = PBXGroup;
+			children = (
+				E18FB18922882AEC00F15F66 /* CategorySelection.storyboard */,
+				E18FB18722882AE200F15F66 /* CategorySelectionViewController.swift */,
+			);
+			path = CategorySelection;
+			sourceTree = "<group>";
+		};
 		E19F7DC82231063900BAFC7A = {
 			isa = PBXGroup;
 			children = (
@@ -616,6 +642,8 @@
 			isa = PBXGroup;
 			children = (
 				E164C39922358E0400D1AB13 /* Common */,
+				E18FB18622882AC800F15F66 /* CategorySelection */,
+				E18FB17E2288200A00F15F66 /* CategoriesFilter */,
 				E1FF3EC6223EEC1E00443DED /* PhoneLogin */,
 				E1FF3E8F223A337600443DED /* LoginCard */,
 				E1FF3E9C223E632800443DED /* Main */,
@@ -1024,8 +1052,10 @@
 				E19F7DE22231063A00BAFC7A /* LaunchScreen.storyboard in Resources */,
 				E1FC30A72238DC9900DF1325 /* SellerInfo.storyboard in Resources */,
 				E1FF3EAD223E9CC300443DED /* MyProducts.storyboard in Resources */,
+				E18FB1852288211C00F15F66 /* CategoriesFilter.storyboard in Resources */,
 				E1BC5ADE223124B3001FD1D6 /* ProductCollectionViewCell.xib in Resources */,
 				E19F7DDF2231063A00BAFC7A /* Assets.xcassets in Resources */,
+				E18FB18A22882AEC00F15F66 /* CategorySelection.storyboard in Resources */,
 				E19F7DDA2231063900BAFC7A /* Main.storyboard in Resources */,
 				E10850C4223F276D00941EA5 /* EditProduct.storyboard in Resources */,
 				E100062F22798AC600CDC509 /* splashIcon.png in Resources */,
@@ -1265,6 +1295,7 @@
 				E1F017722249624B001A10D7 /* OkAlertView.swift in Sources */,
 				E16D31CE2258EA5A00033DCC /* UITextField+DoneToolbar.swift in Sources */,
 				E111748B2242DBD700BD19B4 /* LoadingView.swift in Sources */,
+				E18FB18822882AE200F15F66 /* CategorySelectionViewController.swift in Sources */,
 				E164C39E2235A70E00D1AB13 /* SeparatorView.swift in Sources */,
 				E1FF3EA4223E77C100443DED /* ProductsDDMImp.swift in Sources */,
 				E100063622824A4C00CDC509 /* FBServiceImp.swift in Sources */,
@@ -1305,6 +1336,7 @@
 				E1BC5AD422312160001FD1D6 /* ProductCatalogViewController.swift in Sources */,
 				E1BC5AED223142E3001FD1D6 /* PinterestLayout.swift in Sources */,
 				E1BC5ADC22312488001FD1D6 /* ProductCollectionViewCell.swift in Sources */,
+				E18FB1802288206800F15F66 /* CategoriesFilterViewController.swift in Sources */,
 				E1FF3EB9223EE18100443DED /* VKButton.swift in Sources */,
 				E1F0175F2246B286001A10D7 /* PhotosViewController.swift in Sources */,
 				E11174962243719400BD19B4 /* Core.swift in Sources */,
