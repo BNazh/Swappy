@@ -67,6 +67,7 @@
 		E18FB19322884C9700F15F66 /* CategoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18FB19222884C9700F15F66 /* CategoryService.swift */; };
 		E18FB19522884CA100F15F66 /* CategoryServiceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18FB19422884CA100F15F66 /* CategoryServiceImp.swift */; };
 		E18FB1972288792F00F15F66 /* CategorySelectionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18FB1962288792E00F15F66 /* CategorySelectionPresenter.swift */; };
+		E18FB1992288823D00F15F66 /* UITableView+RegisterCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18FB1982288823D00F15F66 /* UITableView+RegisterCells.swift */; };
 		E19F7DD52231063900BAFC7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19F7DD42231063900BAFC7A /* AppDelegate.swift */; };
 		E19F7DDA2231063900BAFC7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E19F7DD82231063900BAFC7A /* Main.storyboard */; };
 		E19F7DDD2231063900BAFC7A /* Swappy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E19F7DDB2231063900BAFC7A /* Swappy.xcdatamodeld */; };
@@ -235,6 +236,7 @@
 		E18FB19222884C9700F15F66 /* CategoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryService.swift; sourceTree = "<group>"; };
 		E18FB19422884CA100F15F66 /* CategoryServiceImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryServiceImp.swift; sourceTree = "<group>"; };
 		E18FB1962288792E00F15F66 /* CategorySelectionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySelectionPresenter.swift; sourceTree = "<group>"; };
+		E18FB1982288823D00F15F66 /* UITableView+RegisterCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+RegisterCells.swift"; sourceTree = "<group>"; };
 		E19F7DD12231063900BAFC7A /* Swappy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swappy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E19F7DD42231063900BAFC7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E19F7DD92231063900BAFC7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -790,6 +792,7 @@
 			children = (
 				E1A6655D2254FCE9007EE75F /* UIViewController */,
 				E1BC5AEE22318340001FD1D6 /* UICollectionView+RegisterCells.swift */,
+				E18FB1982288823D00F15F66 /* UITableView+RegisterCells.swift */,
 				E1BC5AE022312D5A001FD1D6 /* UIFont+App.swift */,
 				E1BC5AF122318370001FD1D6 /* UIView+ReusableIdentifiers.swift */,
 				E164C39F2235A8AA00D1AB13 /* UIColor+App.swift */,
@@ -1292,6 +1295,7 @@
 				E19F7E0D2231078F00BAFC7A /* ProductsTarget.swift in Sources */,
 				E1F0175722463C14001A10D7 /* BaseProvider.swift in Sources */,
 				E1BC5AD022311173001FD1D6 /* AppError.swift in Sources */,
+				E18FB1992288823D00F15F66 /* UITableView+RegisterCells.swift in Sources */,
 				E1F01767224799CA001A10D7 /* PHAsset+UIImage.swift in Sources */,
 				E1D908DA225BDDA20027C6C6 /* PullToDismissHandler.swift in Sources */,
 				E1FF3EC5223EEA8E00443DED /* EditProductViewController.swift in Sources */,

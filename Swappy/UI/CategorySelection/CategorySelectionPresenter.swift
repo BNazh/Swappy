@@ -19,31 +19,29 @@ final class CategorySelectionPresenterImp {
     
     // MARK: - Properties
     
-    let view: CategorySelectionView
-    let service: CategoryService
+    unowned let view: CategorySelectionView
     
+    let categories: [String]
     var selectedCategory: CategoryName = ""
     
     // MARK: - Init
     
     init(view: CategorySelectionView, service: CategoryService) {
         self.view = view
-        self.service = service
+        self.categories = service.categories
     }
 }
 
 extension CategorySelectionPresenterImp: CategorySelectionPresenter {
     
     func showCategories() {
-        let cellModels = service.categories.map { category in
-            let isSelected = category == selectedCategory
-            let icon = icon(for: category)
-            CategoryCellViewModel(name: category, icon: <#T##UIImage#>, isSelected: <#T##Bool#>)
-        }
+        let cellModels = categories.map { cellModel(from: $0) }
+        
+        view.displayCategories(cellModels)
     }
     
     func selectCategory(at index: Int) {
-        
+        selectedCategory = categories[index]
     }
     
     func saveSelectedCategory() {
@@ -53,11 +51,10 @@ extension CategorySelectionPresenterImp: CategorySelectionPresenter {
 
 private extension CategorySelectionPresenterImp {
     
-    func icon(for category: CategoryName) -> UIImage {
-        if category == selectedCategory {
-            return 
-        } else {
-            
-        }
+    func cellModel(from category: CategoryName) -> CategoryCellViewModel {
+        let isSelected = category == self.selectedCategory
+        let icon = isSelected ? #imageLiteral(resourceName: "radiobutton_on") : #imageLiteral(resourceName: "radiobutton_off")
+        
+        return CategoryCellViewModel(name: category, icon: icon, isSelected: isSelected)
     }
 }
