@@ -8,7 +8,18 @@
 
 import UIKit
 
+protocol CategorySelectionDelegate: class {
+    
+    func didSelectCategory(_ category: CategoryName)
+}
+
 protocol CategorySelectionPresenter: class {
+    
+    // MARK: - Properties
+    
+    var delegate: CategorySelectionDelegate? { get set }
+    
+    // MARK: - Functions
     
     func showCategories()
     func selectCategory(at index: Int)
@@ -23,6 +34,8 @@ final class CategorySelectionPresenterImp {
     
     let categories: [String]
     var selectedCategory: CategoryName = ""
+    
+    var delegate: CategorySelectionDelegate?
     
     // MARK: - Init
     
@@ -45,7 +58,7 @@ extension CategorySelectionPresenterImp: CategorySelectionPresenter {
     }
     
     func saveSelectedCategory() {
-        
+        delegate?.didSelectCategory(selectedCategory)
     }
 }
 

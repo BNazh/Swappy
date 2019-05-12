@@ -34,6 +34,7 @@ class CategorySelectionViewController: UIViewController {
     
     @IBAction func saveButtonPressed(_ sender: MainButton) {
         presenter.saveSelectedCategory()
+        dismiss(animated: true, completion: nil)
     }
 }
 
