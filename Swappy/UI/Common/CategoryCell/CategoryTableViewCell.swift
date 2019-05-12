@@ -8,6 +8,12 @@
 
 import UIKit
 
+struct CategoryCellViewModel {
+    let name: String
+    let icon: UIImage
+    let isSelected: Bool
+}
+
 final class CategoryTableViewCell: UITableViewCell {
     
     // MARK: - Properties
@@ -17,5 +23,10 @@ final class CategoryTableViewCell: UITableViewCell {
     
     // MARK: - Functions
     
-    
+    func setup(with viewModel: CategoryCellViewModel) {
+        nameLabel.text = viewModel.name
+        iconImageView.image = viewModel.icon
+        
+        setSelected(viewModel.isSelected, animated: false)
+    }
 }
