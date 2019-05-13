@@ -33,6 +33,10 @@ final class ServicesAssembly: Assembly {
             BaseProvider<ImageTarget>(keychainStore: r.resolve(KeychainStore.self)!)
         }
         
+        container.register(MoyaProvider<CategoriesTarget>.self) { r in
+            BaseProvider<CategoriesTarget>(keychainStore: r.resolve())
+        }
+        
         // Services
         
         container.register(ProductService.self) { r in
@@ -59,7 +63,13 @@ final class ServicesAssembly: Assembly {
             return VKServiceImp(tracker: r.resolve())
         }.inObjectScope(.container)
         
+        container.register(FBServiceImp.self) { r in
+            return FBServiceImp()
+        }.inObjectScope(.container)
         
+        container.register(CategoryService.self) { r in
+            return CategoryServiceImp(provider: r.resolve(MoyaProvider<))
+        }
         
         // Managers
         

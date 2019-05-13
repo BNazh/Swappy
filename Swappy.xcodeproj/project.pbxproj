@@ -69,6 +69,7 @@
 		E18FB1972288792F00F15F66 /* CategorySelectionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18FB1962288792E00F15F66 /* CategorySelectionPresenter.swift */; };
 		E18FB1992288823D00F15F66 /* UITableView+RegisterCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18FB1982288823D00F15F66 /* UITableView+RegisterCells.swift */; };
 		E18FB19B22893E8600F15F66 /* EditProductRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18FB19A22893E8600F15F66 /* EditProductRouter.swift */; };
+		E18FB19D2289438300F15F66 /* SelectionAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18FB19C2289438300F15F66 /* SelectionAssembly.swift */; };
 		E19F7DD52231063900BAFC7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19F7DD42231063900BAFC7A /* AppDelegate.swift */; };
 		E19F7DDA2231063900BAFC7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E19F7DD82231063900BAFC7A /* Main.storyboard */; };
 		E19F7DDD2231063900BAFC7A /* Swappy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E19F7DDB2231063900BAFC7A /* Swappy.xcdatamodeld */; };
@@ -239,6 +240,7 @@
 		E18FB1962288792E00F15F66 /* CategorySelectionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySelectionPresenter.swift; sourceTree = "<group>"; };
 		E18FB1982288823D00F15F66 /* UITableView+RegisterCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+RegisterCells.swift"; sourceTree = "<group>"; };
 		E18FB19A22893E8600F15F66 /* EditProductRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProductRouter.swift; sourceTree = "<group>"; };
+		E18FB19C2289438300F15F66 /* SelectionAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionAssembly.swift; sourceTree = "<group>"; };
 		E19F7DD12231063900BAFC7A /* Swappy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swappy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E19F7DD42231063900BAFC7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E19F7DD92231063900BAFC7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -398,6 +400,7 @@
 				E11174842242B49200BD19B4 /* PhoneLoginAssembly.swift */,
 				E1117493224370B800BD19B4 /* CodeConfirmationAssembly.swift */,
 				E17CA1A42256B02300D5C955 /* LoginCardAssembly.swift */,
+				E18FB19C2289438300F15F66 /* SelectionAssembly.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -1368,6 +1371,7 @@
 				E1A6656222550C96007EE75F /* PushNotificationService.swift in Sources */,
 				E11174982246231600BD19B4 /* ImageTarget.swift in Sources */,
 				E1F0176D22493CF7001A10D7 /* TipView.swift in Sources */,
+				E18FB19D2289438300F15F66 /* SelectionAssembly.swift in Sources */,
 				E1FC30AB22396F7400DF1325 /* SellerInfoViewModel.swift in Sources */,
 				E1BC5AC622310CB7001FD1D6 /* Product.swift in Sources */,
 				E1BC5AC822310E88001FD1D6 /* Price.swift in Sources */,
