@@ -21,6 +21,7 @@ protocol EditProductPresenter: class {
     
     func initialize()
     func performProductAction(productRO: ProductRO)
+    func openCategorySelection(selectedCategory: CategoryName)
     
     func setState(_ state: EditProductInitState)
 }
@@ -30,6 +31,7 @@ final class EditProductPresenterImp {
     // MARK: - Properties
     
     private unowned let view: EditProductView
+    private let router: EditProductRouter
     private let productService: ProductService
     private let tracker: AnalyticsManager
     
@@ -37,8 +39,9 @@ final class EditProductPresenterImp {
     
     // MARK: - Init
     
-    init(view: EditProductView, productService: ProductService, tracker: AnalyticsManager) {
+    init(view: EditProductView, router: EditProductRouter, productService: ProductService, tracker: AnalyticsManager) {
         self.view = view
+        self.router = router
         self.productService = productService
         self.tracker = tracker
     }
@@ -89,6 +92,10 @@ extension EditProductPresenterImp: EditProductPresenter {
             
             self?.handleAddProductActionResult(result)
         }
+    }
+    
+    func openCategorySelection(selectedCategory: CategoryName) {
+        
     }
     
     func setState(_ state: EditProductInitState) {

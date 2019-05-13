@@ -68,6 +68,7 @@
 		E18FB19522884CA100F15F66 /* CategoryServiceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18FB19422884CA100F15F66 /* CategoryServiceImp.swift */; };
 		E18FB1972288792F00F15F66 /* CategorySelectionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18FB1962288792E00F15F66 /* CategorySelectionPresenter.swift */; };
 		E18FB1992288823D00F15F66 /* UITableView+RegisterCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18FB1982288823D00F15F66 /* UITableView+RegisterCells.swift */; };
+		E18FB19B22893E8600F15F66 /* EditProductRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18FB19A22893E8600F15F66 /* EditProductRouter.swift */; };
 		E19F7DD52231063900BAFC7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19F7DD42231063900BAFC7A /* AppDelegate.swift */; };
 		E19F7DDA2231063900BAFC7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E19F7DD82231063900BAFC7A /* Main.storyboard */; };
 		E19F7DDD2231063900BAFC7A /* Swappy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E19F7DDB2231063900BAFC7A /* Swappy.xcdatamodeld */; };
@@ -237,6 +238,7 @@
 		E18FB19422884CA100F15F66 /* CategoryServiceImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryServiceImp.swift; sourceTree = "<group>"; };
 		E18FB1962288792E00F15F66 /* CategorySelectionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySelectionPresenter.swift; sourceTree = "<group>"; };
 		E18FB1982288823D00F15F66 /* UITableView+RegisterCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+RegisterCells.swift"; sourceTree = "<group>"; };
+		E18FB19A22893E8600F15F66 /* EditProductRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProductRouter.swift; sourceTree = "<group>"; };
 		E19F7DD12231063900BAFC7A /* Swappy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swappy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E19F7DD42231063900BAFC7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E19F7DD92231063900BAFC7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -945,6 +947,7 @@
 				E10850C3223F276D00941EA5 /* EditProduct.storyboard */,
 				E1FF3EC3223EEA8E00443DED /* EditProductViewController.swift */,
 				E1FF3EC2223EEA8E00443DED /* EditProductPresenter.swift */,
+				E18FB19A22893E8600F15F66 /* EditProductRouter.swift */,
 			);
 			path = EditProduct;
 			sourceTree = "<group>";
@@ -1285,6 +1288,7 @@
 				E1BC5AD922312456001FD1D6 /* ProductCellViewModel.swift in Sources */,
 				E18FB17A228812EB00F15F66 /* CategoriesTarget.swift in Sources */,
 				E111747A224183A400BD19B4 /* AuthTarget.swift in Sources */,
+				E18FB19B22893E8600F15F66 /* EditProductRouter.swift in Sources */,
 				E1BC5AE522312F36001FD1D6 /* Moya+CustomDecodableRequest.swift in Sources */,
 				E17CA1942252A94200D5C955 /* DatabaseStore.swift in Sources */,
 				E1FC30AD2239722300DF1325 /* SellerInfoAssembly.swift in Sources */,

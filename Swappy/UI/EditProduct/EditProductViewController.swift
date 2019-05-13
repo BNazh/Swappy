@@ -26,8 +26,9 @@ final class EditProductViewController: UIViewController {
     @IBOutlet weak var sizeTextField: AppTextField!
     @IBOutlet weak var priceTextField: AppTextField!
     @IBOutlet weak var contactInfoTextField: AppTextField!
-    @IBOutlet weak var categoryTextField: AppTextField!
     @IBOutlet weak var cityTextField: AppTextField!
+    @IBOutlet weak var categoryTextField: AppTextField!
+    
     @IBOutlet weak var photosHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var doneButton: MainButton!
     
@@ -65,6 +66,10 @@ final class EditProductViewController: UIViewController {
         let productRO = productRequestObject
         presenter.performProductAction(productRO: productRO)
     }
+    
+    @IBAction func categoryButtonTapped(_ sender: UIButton) {
+        
+    }
 }
 
 extension EditProductViewController: EditProductView {
@@ -91,7 +96,8 @@ extension EditProductViewController: UITextFieldDelegate {
         if let nextTextField = self.nextTextField(for: textField) {
             nextTextField.becomeFirstResponder()
         } else {
-            createProductTapped(doneButton)
+            textField.resignFirstResponder()
+            //createProductTapped(doneButton)
         }
         
         return true

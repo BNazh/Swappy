@@ -14,9 +14,14 @@ final class EditProductAssembly: Assembly {
         container.register(EditProductPresenter.self) { (r, view: EditProductViewController) in
             return EditProductPresenterImp(
                 view: view,
+                router: r.resolve(argument: view),
                 productService: r.resolve(),
                 tracker: r.resolve()
             )
+        }
+        
+        container.register(EditProductRouter.self) { (r, viewController: EditProductViewController) in
+            return EditProductRouterImp(viewController: viewController)
         }
         
         container.storyboardInitCompleted(EditProductViewController.self) { (resolver, viewController) in

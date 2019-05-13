@@ -18,6 +18,7 @@ protocol CategorySelectionPresenter: class {
     // MARK: - Properties
     
     var delegate: CategorySelectionDelegate? { get set }
+    var selectedCategory: CategoryName { get set }
     
     // MARK: - Functions
     
