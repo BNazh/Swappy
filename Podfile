@@ -29,7 +29,7 @@ target 'Swappy' do
   
   # Floating UITextField
   pod 'SkyFloatingLabelTextField', '~> 3.0'
-  pod 'InputMask', '4.1.0'
+  pod 'InputMask', '4.1.1'
   
   # LoadingView
   pod 'MBProgressHUD', '~> 1.1.0'

@@ -158,7 +158,7 @@ private extension EditProductViewController {
     }
     
     func setupTextFields() {
-        let textFields = [nameTextField, descriptionTextField, sizeTextField, priceTextField, contactInfoTextField]
+        let textFields = [nameTextField, descriptionTextField, sizeTextField, priceTextField, contactInfoTextField, categoryTextField]
         for textField in textFields {
             textField?.delegate = self
             textField?.addDoneToolbar()

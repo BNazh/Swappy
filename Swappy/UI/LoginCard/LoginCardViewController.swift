@@ -14,6 +14,7 @@ final class LoginCardViewController: CardViewController, ErrorView, LoadingView 
     @IBOutlet weak var privacyTextView: UITextView!
     
     var vkService: VKService!
+    var fbService: FBService!
     var authService: AuthService!
     var tracker: AnalyticsManager!
     
@@ -44,6 +45,11 @@ final class LoginCardViewController: CardViewController, ErrorView, LoadingView 
             }
         }
     }
+    @IBAction func fbButtonTapped(_ sender: FBButton) {
+        tracker.track(event: .loginByFbClick)
+        
+        fbService.login(viewController: self, closure: authCompletionHandler)
+    }
     
     @IBAction func phoneButtonTapped(_ sender: UIButton) {
         tracker.track(event: .loginByPhoneClick)
@@ -71,16 +77,7 @@ private extension LoginCardViewController {
     func handleVkServiceResponse(_ response: VKLoginResponse) {
         
         showLoading()
-        authService.vkAuth(response: response, closure: { [weak self] result in
-            self?.hideLoading()
-            
-            switch result {
-            case .success:
-                self?.dismiss(animated: true, completion: nil)
-            case .failure(let error):
-                self?.showError(message: error.localizedString)
-            }
-        })
+        authService.vkAuth(response: response, closure: authCompletionHandler)
     }
     
     func setupPrivacyTextView() {
@@ -106,6 +103,17 @@ private extension LoginCardViewController {
         
         attributedString.setAsLink(textToFind: privacyText, linkURL: linkText)
         return attributedString
+    }
+    
+    func authCompletionHandler(result: Result<Void>) {
+        hideLoading()
+        
+        switch result {
+        case .success:
+            dismiss(animated: true, completion: nil)
+        case .failure(let error):
+            showError(message: error.localizedString)
+        }
     }
 }
 

@@ -20,5 +20,6 @@ struct FBLoginResponse {
 
 protocol FBService {
     
+    func login(viewController: UIViewController, closure: @escaping (ResultCallback<Void>))
 }
 

@@ -85,6 +85,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jlB-Su-Y12" customClass="FBButton" customModule="Swappy" customModuleProvider="target">
                                         <rect key="frame" x="16" y="224" width="343" height="52"/>
                                         <state key="normal" title="FaceBook"/>
+                                        <connections>
+                                            <action selector="fbButtonTapped:" destination="XQ5-a5-nDw" eventType="touchUpInside" id="7ho-Fq-x6V"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

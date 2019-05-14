@@ -63,7 +63,7 @@ final class ServicesAssembly: Assembly {
             return VKServiceImp(tracker: r.resolve())
         }.inObjectScope(.container)
         
-        container.register(FBServiceImp.self) { r in
+        container.register(FBService.self) { r in
             return FBServiceImp()
         }.inObjectScope(.container)
         
