@@ -56,6 +56,7 @@
 		E17CA1A32256A5CC00D5C955 /* Resolver+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CA1A22256A5CC00D5C955 /* Resolver+Extension.swift */; };
 		E17CA1A52256B02300D5C955 /* LoginCardAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CA1A42256B02300D5C955 /* LoginCardAssembly.swift */; };
 		E17CA1A72256B19800D5C955 /* UIViewController+Swizzling.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CA1A62256B19800D5C955 /* UIViewController+Swizzling.swift */; };
+		E181AF57228A93C000AB8957 /* SelectionTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E181AF56228A93C000AB8957 /* SelectionTextFieldDelegate.swift */; };
 		E18FB17A228812EB00F15F66 /* CategoriesTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18FB179228812EB00F15F66 /* CategoriesTarget.swift */; };
 		E18FB17C22881D3400F15F66 /* FBButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18FB17B22881D3400F15F66 /* FBButton.swift */; };
 		E18FB1802288206800F15F66 /* CategoriesFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18FB17F2288206800F15F66 /* CategoriesFilterViewController.swift */; };
@@ -224,6 +225,7 @@
 		E17CA1A22256A5CC00D5C955 /* Resolver+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Resolver+Extension.swift"; sourceTree = "<group>"; };
 		E17CA1A42256B02300D5C955 /* LoginCardAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCardAssembly.swift; sourceTree = "<group>"; };
 		E17CA1A62256B19800D5C955 /* UIViewController+Swizzling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Swizzling.swift"; sourceTree = "<group>"; };
+		E181AF56228A93C000AB8957 /* SelectionTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionTextFieldDelegate.swift; sourceTree = "<group>"; };
 		E181E1B2226671BF00624164 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		E181E1B3226671BF00624164 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		E181E1B4226671C000624164 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = Resources/ru.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -838,6 +840,7 @@
 			isa = PBXGroup;
 			children = (
 				E1F01769224935BA001A10D7 /* TextFieldPickerDDM.swift */,
+				E181AF56228A93C000AB8957 /* SelectionTextFieldDelegate.swift */,
 			);
 			path = TextFieldPickerDDM;
 			sourceTree = "<group>";
@@ -1383,6 +1386,7 @@
 				E1FF3EA7223E9A1300443DED /* NoProductsViewController.swift in Sources */,
 				E1BC5AD422312160001FD1D6 /* ProductCatalogViewController.swift in Sources */,
 				E1BC5AED223142E3001FD1D6 /* PinterestLayout.swift in Sources */,
+				E181AF57228A93C000AB8957 /* SelectionTextFieldDelegate.swift in Sources */,
 				E1BC5ADC22312488001FD1D6 /* ProductCollectionViewCell.swift in Sources */,
 				E18FB1802288206800F15F66 /* CategoriesFilterViewController.swift in Sources */,
 				E1FF3EB9223EE18100443DED /* VKButton.swift in Sources */,

@@ -95,11 +95,20 @@ extension EditProductPresenterImp: EditProductPresenter {
     }
     
     func openCategorySelection(selectedCategory: CategoryName) {
-        
+        router.openCategorySelection(delegate: self,
+                                     items: [],
+                                     selectedItem: selectedCategory)
     }
     
     func setState(_ state: EditProductInitState) {
         self.state = state
+    }
+}
+
+extension EditProductPresenterImp: CategorySelectionDelegate {
+    
+    func didSelectCategory(_ category: CategoryName) {
+        view.selectCategory(category)
     }
 }
 

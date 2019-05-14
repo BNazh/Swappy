@@ -11,6 +11,7 @@ import UIKit
 protocol EditProductView: class, LoadingView, ErrorView {
     
     func showProduct(viewModel: EditProductViewModel)
+    func selectCategory(_ category: String)
     func close()
 }
 
@@ -68,7 +69,8 @@ final class EditProductViewController: UIViewController {
     }
     
     @IBAction func categoryButtonTapped(_ sender: UIButton) {
-        
+        let selectedCategory = categoryTextField.text ?? ""
+        presenter.openCategorySelection(selectedCategory: selectedCategory)
     }
 }
 
@@ -83,6 +85,10 @@ extension EditProductViewController: EditProductView {
         priceTextField.text = viewModel.price
         contactInfoTextField.text = viewModel.contactInfo
         cityTextField.text = viewModel.city
+    }
+    
+    func selectCategory(_ category: String) {
+        categoryTextField.text = category
     }
     
     func close() {
@@ -101,6 +107,20 @@ extension EditProductViewController: UITextFieldDelegate {
         }
         
         return true
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        guard textField == categoryTextField else { return }
+        
+        presenter.openCategorySelection(selectedCategory: textField.text ?? "")
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if textField == categoryTextField {
+            return false
+        } else {
+            return true
+        }
     }
 }
 

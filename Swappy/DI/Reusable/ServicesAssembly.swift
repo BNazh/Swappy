@@ -68,7 +68,7 @@ final class ServicesAssembly: Assembly {
         }.inObjectScope(.container)
         
         container.register(CategoryService.self) { r in
-            return CategoryServiceImp(provider: r.resolve(MoyaProvider<))
+            return CategoryServiceImp(provider: r.resolve())
         }
         
         // Managers
