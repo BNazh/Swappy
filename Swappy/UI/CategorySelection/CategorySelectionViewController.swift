@@ -87,7 +87,6 @@ private extension CategorySelectionViewController {
         
         tableView.rowHeight = 40
         
-        
         tableView.register(cellType: CategoryTableViewCell.self)
     }
     

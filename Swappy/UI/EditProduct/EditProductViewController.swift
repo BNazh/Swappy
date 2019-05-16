@@ -110,6 +110,7 @@ extension EditProductViewController: UITextFieldDelegate {
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         if textField == categoryTextField {
+            view.endEditing(true)
             presenter.openCategorySelection(selectedCategory: textField.text ?? "")
             return false
         }
@@ -117,11 +118,8 @@ extension EditProductViewController: UITextFieldDelegate {
         return true
     }
     
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        
-    }
-    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
         if textField == categoryTextField {
             return false
         } else {
