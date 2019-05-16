@@ -21,6 +21,14 @@ final class CategoryTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var iconImageView: UIImageView!
     
+    // MARK: - Lifecycle
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        selectionStyle = .none
+    }
+    
     // MARK: - Functions
     
     func setup(with viewModel: CategoryCellViewModel) {

@@ -13,8 +13,7 @@ final class SelectionAssembly: Assembly {
     func assemble(container: Container) {
         container.register(CategorySelectionPresenter.self) { (r, view: CategorySelectionViewController) in
             return CategorySelectionPresenterImp(
-                view: view,
-                service: r.resolve()
+                view: view
             )
         }
         

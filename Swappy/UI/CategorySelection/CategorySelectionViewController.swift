@@ -13,9 +13,11 @@ protocol CategorySelectionView: class {
     func displayCategories(_ categories: [CategoryCellViewModel])
 }
 
-class CategorySelectionViewController: UIViewController {
+class CategorySelectionViewController: CardViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var cardContainerView: UIView!
     
     var presenter: CategorySelectionPresenter!
     
@@ -23,11 +25,12 @@ class CategorySelectionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        tableView.delegate = self
-        tableView.dataSource = self
         
-        tableView.register(cellType: CategoryTableViewCell.self)
+        cardContainerView.roundCorners(corners: [.topLeft, .topRight], radius: 9)
+
+        setupTableView()
+        
+        presenter.showCategories()
     }
     
     // MARK: - Actions
@@ -36,6 +39,10 @@ class CategorySelectionViewController: UIViewController {
         presenter.saveSelectedCategory()
         dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func closePressed(_ sender: UIButton) {
+        dismiss(animated: true)
+    }
 }
 
 extension CategorySelectionViewController: CategorySelectionView {
@@ -43,6 +50,8 @@ extension CategorySelectionViewController: CategorySelectionView {
     func displayCategories(_ categories: [CategoryCellViewModel]) {
         cellModels = categories
         tableView.reloadData()
+        
+        setupTableViewHeight()
     }
 }
 
@@ -72,6 +81,20 @@ extension CategorySelectionViewController: UITableViewDelegate {
 
 private extension CategorySelectionViewController {
     
+    func setupTableView() {
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        tableView.rowHeight = 40
+        
+        
+        tableView.register(cellType: CategoryTableViewCell.self)
+    }
     
+    func setupTableViewHeight() {
+        let cellsCount = CGFloat(cellModels.count)
+        tableViewHeightConstraint.constant = cellsCount * tableView.rowHeight
+        view.layoutIfNeeded()
+    }
 }
 

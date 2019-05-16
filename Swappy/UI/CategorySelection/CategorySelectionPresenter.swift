@@ -40,9 +40,9 @@ final class CategorySelectionPresenterImp {
     
     // MARK: - Init
     
-    init(view: CategorySelectionView, service: CategoryService) {
+    init(view: CategorySelectionView) {
         self.view = view
-        self.categories = service.categories
+        categories = ["Все товары", "Тест"]
     }
 }
 

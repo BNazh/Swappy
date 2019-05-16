@@ -103,16 +103,22 @@ extension EditProductViewController: UITextFieldDelegate {
             nextTextField.becomeFirstResponder()
         } else {
             textField.resignFirstResponder()
-            //createProductTapped(doneButton)
+        }
+        
+        return true
+    }
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        if textField == categoryTextField {
+            presenter.openCategorySelection(selectedCategory: textField.text ?? "")
+            return false
         }
         
         return true
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        guard textField == categoryTextField else { return }
         
-        presenter.openCategorySelection(selectedCategory: textField.text ?? "")
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -158,11 +164,13 @@ private extension EditProductViewController {
     }
     
     func setupTextFields() {
-        let textFields = [nameTextField, descriptionTextField, sizeTextField, priceTextField, contactInfoTextField, categoryTextField]
+        let textFields = [nameTextField, descriptionTextField, sizeTextField, priceTextField, contactInfoTextField]
         for textField in textFields {
             textField?.delegate = self
             textField?.addDoneToolbar()
         }
+        
+        categoryTextField.delegate = self
     }
     
     func nextTextField(for textField: UITextField) -> UITextField? {

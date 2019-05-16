@@ -579,8 +579,8 @@
 		E18FB18C22882D5800F15F66 /* CategoryCell */ = {
 			isa = PBXGroup;
 			children = (
-				E18FB18D22882D7900F15F66 /* CategoryTableViewCell.xib */,
 				E18FB18F22882D8F00F15F66 /* CategoryTableViewCell.swift */,
+				E18FB18D22882D7900F15F66 /* CategoryTableViewCell.xib */,
 			);
 			path = CategoryCell;
 			sourceTree = "<group>";
