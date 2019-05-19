@@ -33,6 +33,7 @@ final class EditProductPresenterImp {
     private unowned let view: EditProductView
     private let router: EditProductRouter
     private let productService: ProductService
+    private let categoryService: CategoryService
     private let tracker: AnalyticsManager
     
     private var state = EditProductInitState.add
@@ -40,10 +41,11 @@ final class EditProductPresenterImp {
     
     // MARK: - Init
     
-    init(view: EditProductView, router: EditProductRouter, productService: ProductService, tracker: AnalyticsManager) {
+    init(view: EditProductView, router: EditProductRouter, productService: ProductService, categoryService: CategoryService, tracker: AnalyticsManager) {
         self.view = view
         self.router = router
         self.productService = productService
+        self.categoryService = categoryService
         self.tracker = tracker
     }
 }
@@ -73,6 +75,8 @@ extension EditProductPresenterImp: EditProductPresenter {
         case .add:
             tracker.track(screen: .createProduct)
         case .edit(product: let product):
+            selectedCategory = categoryService.category(for: product)
+            
             let viewModel = EditProductViewModel(
                 product: product,
                 categoryName: selectedCategoryName

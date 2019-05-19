@@ -39,6 +39,10 @@ extension CategoryServiceImp: CategoryService {
         }
     }
     
+    func category(for product: Product) -> Category? {
+        return categories.first { $0.id == product.category }
+    }
+    
     func isCategorySelected(_ category: Category) -> Bool {
         return selectedCategoryIds.contains(category.id)
     }

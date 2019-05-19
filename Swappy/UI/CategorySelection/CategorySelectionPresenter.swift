@@ -35,13 +35,7 @@ final class CategorySelectionPresenterImp {
     let service: CategoryService
     
     let categories: [Category]
-    var selectedCategory: Category? {
-        didSet {
-            if selectedCategory == nil, let firstCategory = categories.first {
-                selectedCategory = firstCategory
-            }
-        }
-    }
+    var selectedCategory: Category?
     
     var delegate: CategorySelectionDelegate?
     

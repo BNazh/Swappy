@@ -18,6 +18,8 @@ protocol CategoryService: class {
     
     func updateCategoryList(closure: ResultCallback<Void>?)
     
+    func category(for product: Product) -> Category?
+    
     func isCategorySelected(_ category: Category) -> Bool
     
     func selectCategory(_ category: Category)

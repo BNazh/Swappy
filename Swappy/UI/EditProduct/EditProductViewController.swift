@@ -169,6 +169,7 @@ private extension EditProductViewController {
         }
         
         categoryTextField.delegate = self
+        categoryTextField.clearButtonMode = .never
     }
     
     func nextTextField(for textField: UITextField) -> UITextField? {

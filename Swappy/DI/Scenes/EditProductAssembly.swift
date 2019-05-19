@@ -16,6 +16,7 @@ final class EditProductAssembly: Assembly {
                 view: view,
                 router: r.resolve(argument: view),
                 productService: r.resolve(),
+                categoryService: r.resolve(),
                 tracker: r.resolve()
             )
         }
