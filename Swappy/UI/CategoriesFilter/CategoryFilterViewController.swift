@@ -6,16 +6,20 @@
 //  Copyright © 2019 SwappyTeam. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol CategoryFilterView: class {
     
-    func displayCategories(_ categories: [CategoryCellViewModel])
+    func displayCategories(_ cellModels: [CategoryCellViewModel])
 }
 
 final class CategoryFilterViewController: CardViewController {
     
     // MARK: - Properties
+    
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var cardContainerView: UIView!
     
     var presenter: CategoryFilterPresenter!
     
@@ -26,19 +30,54 @@ final class CategoryFilterViewController: CardViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupTableView()
         
+        presenter.showCategories()
     }
 }
 
-extension CategoryFilterViewController: CategoryfilterView {
+extension CategoryFilterViewController: CategoryFilterView {
     
-    
+    func displayCategories(_ cellModels: [CategoryCellViewModel]) {
+        self.cellModels = cellModels
+        tableView.reloadData()
+    }
 }
 
 extension CategoryFilterViewController: UITableViewDataSource {
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return cellModels.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: CategoryTableViewCell = tableView.dequeueReusableCell()
+        let viewModel = cellModels[indexPath.row]
+        
+        cell.setup(with: viewModel)
+        
+        return cell
+    }
 }
 
 extension CategoryFilterViewController: UITableViewDelegate {
     
+}
+
+private extension CategoryFilterViewController {
+    
+    func setupTableView() {
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        tableView.rowHeight = 40
+        
+        tableView.register(cellType: CategoryTableViewCell.self)
+    }
+    
+    func setupTableViewHeight() {
+        let cellsCount = CGFloat(cellModels.count)
+        tableViewHeightConstraint.constant = cellsCount * tableView.rowHeight
+        view.layoutIfNeeded()
+    }
 }

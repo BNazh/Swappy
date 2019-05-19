@@ -102,7 +102,9 @@
                         <viewLayoutGuide key="safeArea" id="VJT-sm-fLe"/>
                     </view>
                     <connections>
-                        <outlet property="cardContainerView" destination="jNT-ai-XBh" id="5b8-VP-mHY"/>
+                        <outlet property="cardContainerView" destination="jNT-ai-XBh" id="AuE-EJ-wCI"/>
+                        <outlet property="tableView" destination="ZXR-jM-GYi" id="9Bb-Rp-wH3"/>
+                        <outlet property="tableViewHeightConstraint" destination="dPI-SK-MzN" id="jns-Rv-euN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cr9-Nk-0pa" userLabel="First Responder" sceneMemberID="firstResponder"/>
