@@ -39,8 +39,8 @@ extension CategoryServiceImp: CategoryService {
         }
     }
     
-    func category(for product: Product) -> Category? {
-        return categories.first { $0.id == product.category }
+    func category(withId id: String) -> Category? {
+        return categories.first { $0.id == id }
     }
     
     func isCategorySelected(_ category: Category) -> Bool {

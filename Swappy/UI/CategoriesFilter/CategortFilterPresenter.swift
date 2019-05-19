@@ -8,7 +8,15 @@
 
 import UIKit
 
-protocol CategoryFilterPresenter {
+protocol CategoryFilterDelegate: class {
+    func didSelectFilterCategories(_ categories: [Category])
+}
+
+protocol CategoryFilterPresenter: class {
+    
+    var delegate: CategoryFilterDelegate? { get }
+    
+    func setSelectedCategories(_ selectedCategoryId: [String])
     
     func showCategories()
     func selectAll(_ isSelected: Bool)
@@ -22,6 +30,7 @@ final class CategoryFilterPresenterImp {
     unowned let view: CategoryFilterView
     let service: CategoryService
     
+    weak var delegate: CategoryFilterDelegate?
     var filter: CategoryFilter = CategoryFilter(selectedCategories: [])
     
     // MARK: - Init

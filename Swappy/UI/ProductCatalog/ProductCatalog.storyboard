@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IUz-77-IIh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IUz-77-IIh">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,11 +24,24 @@
                                 <collectionViewLayout key="collectionViewLayout" id="43K-jJ-SN5" customClass="PinterestLayout" customModule="Swappy" customModuleProvider="target"/>
                                 <cells/>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y44-ZI-htH">
+                                <rect key="frame" x="307" y="583" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Y44-ZI-htH" secondAttribute="height" multiplier="1:1" id="cfG-Ho-yxJ"/>
+                                    <constraint firstAttribute="height" constant="60" id="wCU-jU-zfH"/>
+                                </constraints>
+                                <state key="normal" image="filter_off"/>
+                                <connections>
+                                    <action selector="filterButtonPressed:" destination="IUz-77-IIh" eventType="touchUpInside" id="UdR-Jz-G7J"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="fmP-lM-xgc" firstAttribute="top" secondItem="E7Q-oD-chI" secondAttribute="top" id="3ML-Mx-H9k"/>
                             <constraint firstItem="fmP-lM-xgc" firstAttribute="trailing" secondItem="7Zg-Fj-xaj" secondAttribute="trailing" id="4x5-LN-bQu"/>
+                            <constraint firstItem="7Zg-Fj-xaj" firstAttribute="bottom" secondItem="Y44-ZI-htH" secondAttribute="bottom" constant="24" id="EgC-ar-J6u"/>
+                            <constraint firstItem="7Zg-Fj-xaj" firstAttribute="trailing" secondItem="Y44-ZI-htH" secondAttribute="trailing" constant="8" id="hZj-XQ-JmQ"/>
                             <constraint firstItem="fmP-lM-xgc" firstAttribute="leading" secondItem="7Zg-Fj-xaj" secondAttribute="leading" id="igt-z6-dcG"/>
                             <constraint firstItem="fmP-lM-xgc" firstAttribute="bottom" secondItem="7Zg-Fj-xaj" secondAttribute="bottom" id="nX5-pm-vlZ"/>
                         </constraints>
@@ -43,4 +56,7 @@
             <point key="canvasLocation" x="-6" y="-314"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="filter_off" width="60" height="60"/>
+    </resources>
 </document>

@@ -38,6 +38,13 @@ final class ProductCatalogViewController: UIViewController {
         
         dataDisplayManager.endRefreshing()
     }
+    
+    // MARK: - Actions
+    
+    @IBAction func filterButtonPressed(_ sender: UIButton) {
+        
+    }
+    
 }
 
 extension ProductCatalogViewController: ProductCatalogView {

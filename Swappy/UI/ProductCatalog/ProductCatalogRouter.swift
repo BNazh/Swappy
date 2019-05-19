@@ -14,6 +14,7 @@ protocol Router {
 
 protocol ProductCatalogRouter {
     func openProductDetail(product: Product)
+    func openFilter(selectedCategoryIds: [String])
 }
 
 final class ProductCatalogRouterImp {
@@ -26,6 +27,7 @@ final class ProductCatalogRouterImp {
 }
 
 extension ProductCatalogRouterImp: ProductCatalogRouter {
+    
     func openProductDetail(product: Product) {
         let productDetail: ProductDetailViewController = UIStoryboard.createViewController()
         
@@ -33,5 +35,14 @@ extension ProductCatalogRouterImp: ProductCatalogRouter {
         
         let presentingVC = viewController.navigationController
         presentingVC?.present(productDetail, animated: true, completion: nil)
+    }
+    
+    func openFilter(selectedCategoryIds: [String]) {
+        let filterVC: CategoryFilterViewController = UIStoryboard.createViewController()
+        
+        filterVC.presenter.setSelectedCategories(selectedCategoryIds)
+        
+        let presentingVC = viewController.navigationController
+        presentingVC?.present(filterVC, animated: true, completion: nil)
     }
 }
