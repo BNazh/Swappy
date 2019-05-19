@@ -10,7 +10,7 @@ import UIKit
 
 protocol CategorySelectionDelegate: class {
     
-    func didSelectCategory(_ category: CategoryName)
+    func didSelectCategory(_ category: Category)
 }
 
 protocol CategorySelectionPresenter: class {
@@ -18,7 +18,7 @@ protocol CategorySelectionPresenter: class {
     // MARK: - Properties
     
     var delegate: CategorySelectionDelegate? { get set }
-    var selectedCategory: CategoryName { get set }
+    var selectedCategory: Category? { get set }
     
     // MARK: - Functions
     
@@ -32,18 +32,26 @@ final class CategorySelectionPresenterImp {
     // MARK: - Properties
     
     unowned let view: CategorySelectionView
+    let service: CategoryService
     
-    let categories: [String]
-    var selectedCategory: CategoryName = ""
+    let categories: [Category]
+    var selectedCategory: Category? {
+        didSet {
+            if selectedCategory == nil, let firstCategory = categories.first {
+                selectedCategory = firstCategory
+            }
+        }
+    }
     
     var delegate: CategorySelectionDelegate?
     
     // MARK: - Init
     
-    init(view: CategorySelectionView) {
+    init(view: CategorySelectionView, service: CategoryService) {
         self.view = view
-//        categories = ["Все товары", "Тест", "Все товары", "Все товары", "Все товары", "Все товары", "Все товары", "Все товары", "Все товары", "Все товары", "Все товары", "Все товары", "Все товары", "Все товары", "Все товары", "Все товары", "Все товары", "Все товары", "Все товары", "Все товары", "Все товары", "Все товары", "Все товары", "Все товары", "Все товары", "Все товары", "Все товары", "Все товары", "Все товары", "Все товары", "Все товары", "Все товары", "Все товары", "Все товары"]
-        categories = ["All items", "test category"]
+        self.service = service
+        
+        categories = service.categories
     }
 }
 
@@ -60,16 +68,18 @@ extension CategorySelectionPresenterImp: CategorySelectionPresenter {
     }
     
     func saveSelectedCategory() {
+        guard let selectedCategory = selectedCategory else { return }
+        
         delegate?.didSelectCategory(selectedCategory)
     }
 }
 
 private extension CategorySelectionPresenterImp {
     
-    func cellModel(from category: CategoryName) -> CategoryCellViewModel {
-        let isSelected = category == self.selectedCategory
+    func cellModel(from category: Category) -> CategoryCellViewModel {
+        let isSelected = category.id == selectedCategory?.id
         let icon = isSelected ? #imageLiteral(resourceName: "radiobutton_on") : #imageLiteral(resourceName: "radiobutton_off")
         
-        return CategoryCellViewModel(name: category, icon: icon, isSelected: isSelected)
+        return CategoryCellViewModel(name: category.name, icon: icon, isSelected: isSelected)
     }
 }

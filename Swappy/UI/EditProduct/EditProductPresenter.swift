@@ -16,12 +16,12 @@ protocol EditProductPresenter: class {
     
     var screenTitle: String { get }
     var buttonTitle: String { get }
-    var categoryItems: [String] { get }
     var cityItems: [String] { get }
+    var selectedCategoryName: String { get }
     
     func initialize()
     func performProductAction(productRO: ProductRO)
-    func openCategorySelection(selectedCategory: CategoryName)
+    func openCategorySelection()
     
     func setState(_ state: EditProductInitState)
 }
@@ -36,6 +36,7 @@ final class EditProductPresenterImp {
     private let tracker: AnalyticsManager
     
     private var state = EditProductInitState.add
+    private var selectedCategory: Category?
     
     // MARK: - Init
     
@@ -59,12 +60,12 @@ extension EditProductPresenterImp: EditProductPresenter {
         return isProductNew ? "Готово" : "Изменить"
     }
     
-    var categoryItems: [String] {
-        return []
-    }
-    
     var cityItems: [String] {
         return ["Москва", "Санкт-Петербург"]
+    }
+    
+    var selectedCategoryName: String {
+        return selectedCategory?.name ?? ""
     }
     
     func initialize() {
@@ -72,7 +73,10 @@ extension EditProductPresenterImp: EditProductPresenter {
         case .add:
             tracker.track(screen: .createProduct)
         case .edit(product: let product):
-            let viewModel = EditProductViewModel(product: product)
+            let viewModel = EditProductViewModel(
+                product: product,
+                categoryName: selectedCategoryName
+            )
             view.showProduct(viewModel: viewModel)
         }
     }
@@ -84,6 +88,7 @@ extension EditProductPresenterImp: EditProductPresenter {
     
         var productRO = productRO
         productRO.id = productId
+        productRO.category = selectedCategory?.id ?? ""
         
         view.showLoading()
         
@@ -94,7 +99,7 @@ extension EditProductPresenterImp: EditProductPresenter {
         }
     }
     
-    func openCategorySelection(selectedCategory: CategoryName) {
+    func openCategorySelection() {
         router.openCategorySelection(delegate: self,
                                      items: [],
                                      selectedItem: selectedCategory)
@@ -107,8 +112,9 @@ extension EditProductPresenterImp: EditProductPresenter {
 
 extension EditProductPresenterImp: CategorySelectionDelegate {
     
-    func didSelectCategory(_ category: CategoryName) {
-        view.selectCategory(category)
+    func didSelectCategory(_ category: Category) {
+        selectedCategory = category
+        view.selectCategory(category.name)
     }
 }
 
@@ -154,6 +160,11 @@ private extension EditProductPresenterImp {
         
         guard !productRO.images.isEmpty else {
             view.showError(message: "Добавьте хотя бы одно изображение")
+            return false
+        }
+        
+        guard selectedCategory != nil else {
+            view.showError(message: "Выберите категорию товара")
             return false
         }
         

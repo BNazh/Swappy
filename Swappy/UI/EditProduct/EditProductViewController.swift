@@ -69,8 +69,7 @@ final class EditProductViewController: UIViewController {
     }
     
     @IBAction func categoryButtonTapped(_ sender: UIButton) {
-        let selectedCategory = categoryTextField.text ?? ""
-        presenter.openCategorySelection(selectedCategory: selectedCategory)
+        presenter.openCategorySelection()
     }
 }
 
@@ -85,6 +84,7 @@ extension EditProductViewController: EditProductView {
         priceTextField.text = viewModel.price
         contactInfoTextField.text = viewModel.contactInfo
         cityTextField.text = viewModel.city
+        categoryTextField.text = viewModel.categoryName
     }
     
     func selectCategory(_ category: String) {
@@ -111,7 +111,7 @@ extension EditProductViewController: UITextFieldDelegate {
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         if textField == categoryTextField {
             view.endEditing(true)
-            presenter.openCategorySelection(selectedCategory: textField.text ?? "")
+            presenter.openCategorySelection()
             return false
         }
         

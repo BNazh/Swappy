@@ -12,15 +12,23 @@ protocol CategoryService: class {
     
     // MARK: - Properties
     
-    var categories: [CategoryName] { get }
-    var selectedCategories: [CategoryName] { get }
+    var categories: [Category] { get }
     
     // MARK: - Functions
     
-    func updateCategoryList(closure: @escaping ResultCallback<Void>)
+    func updateCategoryList(closure: ResultCallback<Void>?)
     
-    func selectCategory(_ category: CategoryName)
-    func deselectCategory(_ category: CategoryName)
+    func isCategorySelected(_ category: Category) -> Bool
+    
+    func selectCategory(_ category: Category)
+    func deselectCategory(_ category: Category)
     
     func selectAll()
+}
+
+extension CategoryService {
+    
+    func updateCategoryList() {
+        updateCategoryList(closure: nil)
+    }
 }

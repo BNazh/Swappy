@@ -32,6 +32,7 @@
 		E1117494224370B800BD19B4 /* CodeConfirmationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1117493224370B800BD19B4 /* CodeConfirmationAssembly.swift */; };
 		E11174962243719400BD19B4 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11174952243719400BD19B4 /* Core.swift */; };
 		E11174982246231600BD19B4 /* ImageTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11174972246231600BD19B4 /* ImageTarget.swift */; };
+		E1167C062291502B00472324 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1167C052291502B00472324 /* Category.swift */; };
 		E121128C2262395A0060CD3D /* VKService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E121128B2262395A0060CD3D /* VKService.swift */; };
 		E164C3932231B5DF00D1AB13 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E164C3922231B5DF00D1AB13 /* ProductDetailViewController.swift */; };
 		E164C3952231B5FE00D1AB13 /* ProductDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E164C3942231B5FE00D1AB13 /* ProductDetail.storyboard */; };
@@ -57,7 +58,7 @@
 		E17CA1A52256B02300D5C955 /* LoginCardAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CA1A42256B02300D5C955 /* LoginCardAssembly.swift */; };
 		E17CA1A72256B19800D5C955 /* UIViewController+Swizzling.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CA1A62256B19800D5C955 /* UIViewController+Swizzling.swift */; };
 		E181AF57228A93C000AB8957 /* SelectionTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E181AF56228A93C000AB8957 /* SelectionTextFieldDelegate.swift */; };
-		E18FB17A228812EB00F15F66 /* CategoriesTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18FB179228812EB00F15F66 /* CategoriesTarget.swift */; };
+		E18FB17A228812EB00F15F66 /* CategoryTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18FB179228812EB00F15F66 /* CategoryTarget.swift */; };
 		E18FB17C22881D3400F15F66 /* FBButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18FB17B22881D3400F15F66 /* FBButton.swift */; };
 		E18FB1802288206800F15F66 /* CategoriesFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18FB17F2288206800F15F66 /* CategoriesFilterViewController.swift */; };
 		E18FB1852288211C00F15F66 /* CategoriesFilter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E18FB1842288211C00F15F66 /* CategoriesFilter.storyboard */; };
@@ -201,6 +202,7 @@
 		E1117493224370B800BD19B4 /* CodeConfirmationAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeConfirmationAssembly.swift; sourceTree = "<group>"; };
 		E11174952243719400BD19B4 /* Core.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core.swift; sourceTree = "<group>"; };
 		E11174972246231600BD19B4 /* ImageTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTarget.swift; sourceTree = "<group>"; };
+		E1167C052291502B00472324 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		E121128B2262395A0060CD3D /* VKService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKService.swift; sourceTree = "<group>"; };
 		E164C3922231B5DF00D1AB13 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		E164C3942231B5FE00D1AB13 /* ProductDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProductDetail.storyboard; sourceTree = "<group>"; };
@@ -229,7 +231,7 @@
 		E181E1B2226671BF00624164 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		E181E1B3226671BF00624164 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		E181E1B4226671C000624164 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = Resources/ru.lproj/Localizable.strings; sourceTree = "<group>"; };
-		E18FB179228812EB00F15F66 /* CategoriesTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTarget.swift; sourceTree = "<group>"; };
+		E18FB179228812EB00F15F66 /* CategoryTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTarget.swift; sourceTree = "<group>"; };
 		E18FB17B22881D3400F15F66 /* FBButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBButton.swift; sourceTree = "<group>"; };
 		E18FB17F2288206800F15F66 /* CategoriesFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesFilterViewController.swift; sourceTree = "<group>"; };
 		E18FB1842288211C00F15F66 /* CategoriesFilter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CategoriesFilter.storyboard; sourceTree = "<group>"; };
@@ -672,7 +674,7 @@
 				E19F7E0C2231078F00BAFC7A /* ProductsTarget.swift */,
 				E1117479224183A400BD19B4 /* AuthTarget.swift */,
 				E11174972246231600BD19B4 /* ImageTarget.swift */,
-				E18FB179228812EB00F15F66 /* CategoriesTarget.swift */,
+				E18FB179228812EB00F15F66 /* CategoryTarget.swift */,
 			);
 			path = Targets;
 			sourceTree = "<group>";
@@ -745,6 +747,7 @@
 				E1BC5AC722310E88001FD1D6 /* Price.swift */,
 				E1BC5AC922310F1F001FD1D6 /* User.swift */,
 				E1BC5ACB22310F9D001FD1D6 /* Sex.swift */,
+				E1167C052291502B00472324 /* Category.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -1292,7 +1295,7 @@
 				E19F7E1622310B3D00BAFC7A /* Swinject.swift in Sources */,
 				E1FC309E22378CC100DF1325 /* UIViewController+Storyboard.swift in Sources */,
 				E1BC5AD922312456001FD1D6 /* ProductCellViewModel.swift in Sources */,
-				E18FB17A228812EB00F15F66 /* CategoriesTarget.swift in Sources */,
+				E18FB17A228812EB00F15F66 /* CategoryTarget.swift in Sources */,
 				E111747A224183A400BD19B4 /* AuthTarget.swift in Sources */,
 				E18FB19B22893E8600F15F66 /* EditProductRouter.swift in Sources */,
 				E1BC5AE522312F36001FD1D6 /* Moya+CustomDecodableRequest.swift in Sources */,
@@ -1333,6 +1336,7 @@
 				E1FC30A02238504100DF1325 /* ProductDetailAssembly.swift in Sources */,
 				E11174892242B5B800BD19B4 /* PhoneLoginRouter.swift in Sources */,
 				E164C3A22235A92300D1AB13 /* ImageSlider.swift in Sources */,
+				E1167C062291502B00472324 /* Category.swift in Sources */,
 				E18FB19522884CA100F15F66 /* CategoryServiceImp.swift in Sources */,
 				E1BC5ACC22310F9D001FD1D6 /* Sex.swift in Sources */,
 				E11174782240B2F100BD19B4 /* EditProductViewModel.swift in Sources */,

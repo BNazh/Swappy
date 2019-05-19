@@ -48,7 +48,7 @@ private extension MoyaProvider {
             let message = try? response.mapString(atKeyPath: "message")
             return .server(message: message ?? "")
             
-        case .encodableMapping:
+        case .objectMapping:
             return .decoding
             
         default:

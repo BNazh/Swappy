@@ -17,19 +17,19 @@ struct EditProductViewModel {
     let size: String
     let price: String
     let contactInfo: String
-    let category: String
+    let categoryName: String
     let city: String
     let images: [String]
     
     // MARK: - Init
     
-    init(product: Product) {
+    init(product: Product, categoryName: String) {
         title = product.name
         description = product.description
         size = product.size
         price = String(format: "%g", product.price.value)
         contactInfo = product.contactPhone
-        category = "" // TODO
+        self.categoryName = categoryName
         city = product.city
         images = product.images
     }

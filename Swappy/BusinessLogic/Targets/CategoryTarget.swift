@@ -8,12 +8,12 @@
 
 import Moya
 
-enum CategoriesTarget {
+enum CategoryTarget {
     case
     getCategories
 }
 
-extension CategoriesTarget: TargetType {
+extension CategoryTarget: TargetType {
     
     var baseURL: URL {
         return Core.categoriesBaseUrl

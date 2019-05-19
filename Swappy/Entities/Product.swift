@@ -21,6 +21,7 @@ struct Product: Decodable, Identifiable {
     let isActive: Bool
     let seller: User?
     let contactPhone: String
+    let category: String
 }
 
 struct ProductRO: Encodable {
@@ -33,8 +34,8 @@ struct ProductRO: Encodable {
     let city: String
     let contactPhone: String
     let price: Price
+    var category: String = ""
     
-    let category = "outerwear"
     let isSoldOut: Bool = true
     let isActive: Bool = true
     

@@ -11,7 +11,7 @@ import UIKit
 protocol EditProductRouter: class {
     func openCategorySelection(delegate: CategorySelectionDelegate,
                                items: [String],
-                               selectedItem: CategoryName)
+                               selectedItem: Category?)
 }
 
 final class EditProductRouterImp {
@@ -31,7 +31,7 @@ extension EditProductRouterImp: EditProductRouter {
     
     func openCategorySelection(delegate: CategorySelectionDelegate,
                                items: [String],
-                               selectedItem: CategoryName) {
+                               selectedItem: Category?) {
         
         let selectionVC: CategorySelectionViewController
         selectionVC = UIStoryboard.createViewController()
