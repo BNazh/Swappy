@@ -11,7 +11,6 @@ import UIKit
 protocol CategoryFilterView: class {
     
     func displayCategories(_ cellModels: [CategoryCellViewModel])
-    func close()
 }
 
 final class CategoryFilterViewController: CardViewController {
@@ -41,6 +40,7 @@ final class CategoryFilterViewController: CardViewController {
 
     @IBAction func applyButtonPressed(_ sender: UIButton) {
         presenter.applyFilters()
+        close()
     }
     
     @IBAction func close() {

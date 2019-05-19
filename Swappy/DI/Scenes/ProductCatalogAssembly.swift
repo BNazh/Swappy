@@ -21,7 +21,8 @@ final class ProductCatalogAssembly: Assembly {
         container.register(ProductCatalogPresenter.self) { (resolver, viewController: ProductCatalogViewController) in
             return ProductCatalogPresenterImp(
                 view: viewController,
-                productService: resolver.resolve(ProductService.self)!,
+                productService: resolver.resolve(),
+                categoryService: resolver.resolve(),
                 router: resolver.resolve(ProductCatalogRouter.self, argument: viewController)!,
                 tracker: resolver.resolve()
             )

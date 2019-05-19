@@ -33,7 +33,7 @@
 		E11174962243719400BD19B4 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11174952243719400BD19B4 /* Core.swift */; };
 		E11174982246231600BD19B4 /* ImageTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11174972246231600BD19B4 /* ImageTarget.swift */; };
 		E1167C062291502B00472324 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1167C052291502B00472324 /* Category.swift */; };
-		E1167C082291A62100472324 /* CategortFilterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1167C072291A62100472324 /* CategortFilterPresenter.swift */; };
+		E1167C082291A62100472324 /* CategoryFilterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1167C072291A62100472324 /* CategoryFilterPresenter.swift */; };
 		E1167C0B2291A81000472324 /* CategoryFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1167C0A2291A81000472324 /* CategoryFilter.swift */; };
 		E1167C0D2291CECF00472324 /* CategoryFilterAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1167C0C2291CECF00472324 /* CategoryFilterAssembly.swift */; };
 		E121128C2262395A0060CD3D /* VKService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E121128B2262395A0060CD3D /* VKService.swift */; };
@@ -206,7 +206,7 @@
 		E11174952243719400BD19B4 /* Core.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core.swift; sourceTree = "<group>"; };
 		E11174972246231600BD19B4 /* ImageTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTarget.swift; sourceTree = "<group>"; };
 		E1167C052291502B00472324 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
-		E1167C072291A62100472324 /* CategortFilterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategortFilterPresenter.swift; sourceTree = "<group>"; };
+		E1167C072291A62100472324 /* CategoryFilterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryFilterPresenter.swift; sourceTree = "<group>"; };
 		E1167C0A2291A81000472324 /* CategoryFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryFilter.swift; sourceTree = "<group>"; };
 		E1167C0C2291CECF00472324 /* CategoryFilterAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryFilterAssembly.swift; sourceTree = "<group>"; };
 		E121128B2262395A0060CD3D /* VKService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKService.swift; sourceTree = "<group>"; };
@@ -571,7 +571,7 @@
 			children = (
 				E18FB1842288211C00F15F66 /* CategoryFilter.storyboard */,
 				E18FB17F2288206800F15F66 /* CategoryFilterViewController.swift */,
-				E1167C072291A62100472324 /* CategortFilterPresenter.swift */,
+				E1167C072291A62100472324 /* CategoryFilterPresenter.swift */,
 				E1167C0A2291A81000472324 /* CategoryFilter.swift */,
 			);
 			path = CategoriesFilter;
@@ -1302,7 +1302,7 @@
 				E1FC30A22238AB2B00DF1325 /* UIView+RoundCorners.swift in Sources */,
 				E1FC30A922396F4B00DF1325 /* SellerInfoPresenter.swift in Sources */,
 				E19F7E1622310B3D00BAFC7A /* Swinject.swift in Sources */,
-				E1167C082291A62100472324 /* CategortFilterPresenter.swift in Sources */,
+				E1167C082291A62100472324 /* CategoryFilterPresenter.swift in Sources */,
 				E1FC309E22378CC100DF1325 /* UIViewController+Storyboard.swift in Sources */,
 				E1BC5AD922312456001FD1D6 /* ProductCellViewModel.swift in Sources */,
 				E18FB17A228812EB00F15F66 /* CategoryTarget.swift in Sources */,

@@ -71,8 +71,6 @@ extension CategoryFilterPresenterImp: CategoryFilterPresenter {
     
     func applyFilters() {
         let isFilterOn = !isAllCategoriesSelected
-        
-        view.close()
         delegate?.didSelectFilterCategories(selectedCategories, isFilterOn: isFilterOn)
     }
 }

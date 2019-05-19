@@ -10,8 +10,8 @@ import Moya
 
 enum ProductsTarget {
     case
-    products(pageNumber: Int, pageSize: Int),
-    productsBySeller(sellerId: String, pageNumber: Int, pageSize: Int),
+    products(pageNumber: Int, pageSize: Int, categoryIds: [String]),
+    productsBySeller(sellerId: String, pageNumber: Int, pageSize: Int, categoryIds: [String]),
     createProduct(product: ProductRO),
     updateProduct(product: ProductRO),
     deleteProduct(id: String)
@@ -29,7 +29,7 @@ extension ProductsTarget: TargetType {
              .createProduct,
              .updateProduct:
             return "products"
-        case .productsBySeller(let sellerId, _, _):
+        case .productsBySeller(let sellerId, _, _, _):
             return "products/users/\(sellerId)"
         case .deleteProduct(let id):
             return "products/\(id)"
@@ -56,12 +56,13 @@ extension ProductsTarget: TargetType {
     
     var task: Task {
         switch self {
-        case .products(let pageNumber, let pageSize),
-             .productsBySeller(_, let pageNumber, let pageSize):
+        case .products(let pageNumber, let pageSize, let categoryIds),
+             .productsBySeller(_, let pageNumber, let pageSize, let categoryIds):
             
-            let parameters = [
+            let parameters: [String : Any] = [
                 "pageNumber": pageNumber,
-                "pageSize": pageSize
+                "pageSize": pageSize,
+                "categories": categoryIds.first ?? ""
             ]
             
             return .requestParameters(

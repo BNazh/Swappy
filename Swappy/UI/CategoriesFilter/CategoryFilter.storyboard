@@ -45,7 +45,7 @@
                                         </constraints>
                                         <state key="normal" image="closeSeller"/>
                                         <connections>
-                                            <action selector="close:" destination="sqj-n8-3y0" eventType="touchUpInside" id="TK0-2G-oSW"/>
+                                            <action selector="close" destination="sqj-n8-3y0" eventType="touchUpInside" id="oXw-Nl-E3s"/>
                                         </connections>
                                     </button>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZXR-jM-GYi">
@@ -88,7 +88,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lZT-g6-mSy">
                                 <rect key="frame" x="0.0" y="20" width="375" height="0.0"/>
                                 <connections>
-                                    <action selector="close:" destination="sqj-n8-3y0" eventType="touchUpInside" id="xRS-2T-UAs"/>
+                                    <action selector="close" destination="sqj-n8-3y0" eventType="touchUpInside" id="F8t-Kd-52r"/>
                                 </connections>
                             </button>
                         </subviews>

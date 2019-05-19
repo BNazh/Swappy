@@ -30,12 +30,15 @@ final class ProductCatalogPresenterImp {
     
     init(view: ProductCatalogView,
          productService: ProductService,
+         categoryService: CategoryService,
          router: ProductCatalogRouter,
          tracker: AnalyticsManager) {
         self.view = view
         self.productService = productService
         self.router = router
         self.tracker = tracker
+        
+        productService.selectedCategories = categoryService.categories
     }
 }
 

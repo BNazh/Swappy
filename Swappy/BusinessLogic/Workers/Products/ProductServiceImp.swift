@@ -38,7 +38,8 @@ extension ProductServiceImp: ProductService {
         let request = ProductsTarget.productsBySeller(
             sellerId: sellerId,
             pageNumber: pageNumber,
-            pageSize: pageSize
+            pageSize: pageSize,
+            categoryIds: selectedCategories.map { $0.id }
         )
 
         provider.requestDecodable(request) { [weak self] (result: Result<[Product]>) in
@@ -49,7 +50,11 @@ extension ProductServiceImp: ProductService {
     
     func getProducts(callback: @escaping ResultCallback<[Product]>) {
         
-        let request = ProductsTarget.products(pageNumber: pageNumber, pageSize: pageSize)
+        let request = ProductsTarget.products(
+            pageNumber: pageNumber,
+            pageSize: pageSize,
+            categoryIds: selectedCategories.map { $0.id }
+        )
 
         provider.requestDecodable(request) { [weak self] (result: Result<[Product]>) in
             self?.handleProductsResult(result)
