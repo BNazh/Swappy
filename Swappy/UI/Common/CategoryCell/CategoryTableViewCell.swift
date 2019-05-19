@@ -9,6 +9,7 @@
 import UIKit
 
 struct CategoryCellViewModel {
+    let id: String
     let name: String
     let icon: UIImage
     let isSelected: Bool

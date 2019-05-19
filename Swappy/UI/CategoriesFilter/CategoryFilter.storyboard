@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Login Card View Controller-->
+        <!--Category Filter View Controller-->
         <scene sceneID="BBe-Qb-NUg">
             <objects>
-                <viewController storyboardIdentifier="LoginCardViewController" modalPresentationStyle="overCurrentContext" id="sqj-n8-3y0" customClass="LoginCardViewController" customModule="Swappy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CategoryFilterViewController" modalPresentationStyle="overCurrentContext" id="sqj-n8-3y0" customClass="CategoryFilterViewController" customModule="Swappy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BAm-NC-zI8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
