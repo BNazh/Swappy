@@ -8,9 +8,10 @@
 
 // TODO: скорее всего логику пагинации лучше вынести отсюда
 
-protocol ProductService {
+protocol ProductService: class {
     
     var canLoadMore: Bool { get }
+    var selectedCategories: [Category] { get set }
     
     func getProducts(callback:  @escaping ResultCallback<[Product]>)
     func getCurrentUserProducts(callback: @escaping ResultCallback<[Product]>)

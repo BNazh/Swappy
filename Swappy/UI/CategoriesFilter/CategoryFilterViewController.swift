@@ -11,6 +11,7 @@ import UIKit
 protocol CategoryFilterView: class {
     
     func displayCategories(_ cellModels: [CategoryCellViewModel])
+    func close()
 }
 
 final class CategoryFilterViewController: CardViewController {
@@ -30,9 +31,20 @@ final class CategoryFilterViewController: CardViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        cardContainerView.roundCorners(corners: [.topLeft, .topRight], radius: 9)
         setupTableView()
         
         presenter.showCategories()
+    }
+    
+    // MARK: - Actions
+
+    @IBAction func applyButtonPressed(_ sender: UIButton) {
+        presenter.applyFilters()
+    }
+    
+    @IBAction func close() {
+        dismiss(animated: true, completion: nil)
     }
 }
 
@@ -40,6 +52,7 @@ extension CategoryFilterViewController: CategoryFilterView {
     
     func displayCategories(_ cellModels: [CategoryCellViewModel]) {
         self.cellModels = cellModels
+        setupTableViewHeight()
         tableView.reloadData()
     }
 }
@@ -62,6 +75,11 @@ extension CategoryFilterViewController: UITableViewDataSource {
 
 extension CategoryFilterViewController: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let categoryId = cellModels[indexPath.row].id
+        presenter.selectCategory(withId: categoryId)
+        presenter.showCategories()
+    }
 }
 
 private extension CategoryFilterViewController {

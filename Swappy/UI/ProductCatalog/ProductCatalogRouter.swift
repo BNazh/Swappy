@@ -14,7 +14,7 @@ protocol Router {
 
 protocol ProductCatalogRouter {
     func openProductDetail(product: Product)
-    func openFilter(selectedCategories: [Category])
+    func openFilter(selectedCategories: [Category], delegate: CategoryFilterDelegate)
 }
 
 final class ProductCatalogRouterImp {
@@ -37,10 +37,11 @@ extension ProductCatalogRouterImp: ProductCatalogRouter {
         presentingVC?.present(productDetail, animated: true, completion: nil)
     }
     
-    func openFilter(selectedCategories: [Category]) {
+    func openFilter(selectedCategories: [Category], delegate: CategoryFilterDelegate) {
         let filterVC: CategoryFilterViewController = UIStoryboard.createViewController()
         
         filterVC.presenter.selectedCategories = selectedCategories
+        filterVC.presenter.delegate = delegate
         
         let presentingVC = viewController.navigationController
         presentingVC?.present(filterVC, animated: true, completion: nil)

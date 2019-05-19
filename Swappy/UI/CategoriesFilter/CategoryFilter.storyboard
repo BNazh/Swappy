@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jNT-ai-XBh">
-                                <rect key="frame" x="0.0" y="328" width="375" height="339"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сортировка" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Mb-WT-6Wk">
                                         <rect key="frame" x="127.5" y="16" width="120" height="24"/>
@@ -45,29 +45,31 @@
                                         </constraints>
                                         <state key="normal" image="closeSeller"/>
                                         <connections>
-                                            <action selector="close:" destination="sqj-n8-3y0" eventType="touchUpInside" id="gb4-m7-1nO"/>
+                                            <action selector="close:" destination="sqj-n8-3y0" eventType="touchUpInside" id="TK0-2G-oSW"/>
                                         </connections>
                                     </button>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZXR-jM-GYi">
-                                        <rect key="frame" x="0.0" y="55" width="375" height="200"/>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZXR-jM-GYi">
+                                        <rect key="frame" x="0.0" y="55" width="375" height="508"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="200" id="dPI-SK-MzN"/>
+                                            <constraint firstAttribute="height" priority="900" constant="1000" id="dPI-SK-MzN"/>
                                         </constraints>
                                     </tableView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xp7-hO-aM8">
-                                        <rect key="frame" x="16" y="271" width="343" height="52"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xp7-hO-aM8" customClass="MainButton" customModule="Swappy" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="579" width="343" height="52"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="52" id="Eo7-kU-MWb"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" title="Применить"/>
+                                        <connections>
+                                            <action selector="applyButtonPressed:" destination="sqj-n8-3y0" eventType="touchUpInside" id="DF8-dA-VKh"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="ZXR-jM-GYi" firstAttribute="leading" secondItem="jNT-ai-XBh" secondAttribute="leading" id="1xE-iA-7iy"/>
                                     <constraint firstAttribute="trailing" secondItem="iJf-TQ-nMm" secondAttribute="trailing" id="DL6-jp-msB"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="250" id="M3e-5N-msy"/>
                                     <constraint firstItem="xp7-hO-aM8" firstAttribute="top" secondItem="ZXR-jM-GYi" secondAttribute="bottom" constant="16" id="NpE-p8-MYa"/>
                                     <constraint firstItem="iJf-TQ-nMm" firstAttribute="top" secondItem="8Mb-WT-6Wk" secondAttribute="bottom" constant="14" id="Nu5-MP-bjw"/>
                                     <constraint firstItem="LDn-Nb-5Ml" firstAttribute="top" secondItem="jNT-ai-XBh" secondAttribute="top" constant="4" id="PgG-3c-tZY"/>
@@ -84,9 +86,9 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lZT-g6-mSy">
-                                <rect key="frame" x="0.0" y="20" width="375" height="308"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="0.0"/>
                                 <connections>
-                                    <action selector="close:" destination="sqj-n8-3y0" eventType="touchUpInside" id="Bit-6b-LrI"/>
+                                    <action selector="close:" destination="sqj-n8-3y0" eventType="touchUpInside" id="xRS-2T-UAs"/>
                                 </connections>
                             </button>
                         </subviews>

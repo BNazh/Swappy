@@ -18,6 +18,8 @@ final class ProductServiceImp {
     let pageSize = 10
     var canLoadMore = true
     
+    var selectedCategories: [Category] = []
+    
     init(provider: MoyaProvider<ProductsTarget>,
          keychainStore: KeychainStore) {
         self.provider = provider

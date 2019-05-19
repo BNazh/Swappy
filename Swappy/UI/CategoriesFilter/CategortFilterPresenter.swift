@@ -14,12 +14,13 @@ protocol CategoryFilterDelegate: class {
 
 protocol CategoryFilterPresenter: class {
     
-    var delegate: CategoryFilterDelegate? { get }
+    var delegate: CategoryFilterDelegate? { get set }
     var selectedCategories: [Category] { get set }
     
     func showCategories()
     func selectAll(_ isSelected: Bool)
     func selectCategory(withId id: String)
+    func applyFilters()
 }
 
 final class CategoryFilterPresenterImp {
@@ -56,15 +57,31 @@ extension CategoryFilterPresenterImp: CategoryFilterPresenter {
     }
     
     func selectCategory(withId id: String) {
+        guard id != Constants.allCategoriesCellId else {
+            selectAllCategories()
+            return
+        }
+        
         if let categoryIndex = selectedCategories.firstIndex(where: { $0.id == id }) {
             selectedCategories.remove(at: categoryIndex)
         } else if let category = service.category(withId: id) {
             selectedCategories.append(category)
         }
     }
+    
+    func applyFilters() {
+        let isFilterOn = !isAllCategoriesSelected
+        
+        view.close()
+        delegate?.didSelectFilterCategories(selectedCategories, isFilterOn: isFilterOn)
+    }
 }
 
 private extension CategoryFilterPresenterImp {
+    
+    var isAllCategoriesSelected: Bool {
+        return service.categories.count == selectedCategories.count
+    }
     
     func cellModel(for category: Category) -> CategoryCellViewModel {
         let isSelected = selectedCategories.contains { $0.id == category.id }
@@ -74,20 +91,26 @@ private extension CategoryFilterPresenterImp {
     
     func allCategoriesCellModel() -> CategoryCellViewModel {
         let name = "Все товары"
-        let allSelected = service.categories.count == selectedCategories.count
-        let isSelected = allSelected || selectedCategories.isEmpty
-        let icon = imageForSelectedState(isSelected)
+        let icon = imageForSelectedState(isAllCategoriesSelected)
         
         return CategoryCellViewModel(
             id: Constants.allCategoriesCellId,
             name: name,
             icon: icon,
-            isSelected: isSelected
+            isSelected: isAllCategoriesSelected
         )
     }
     
     func imageForSelectedState(_ isSelected: Bool) -> UIImage {
         return isSelected ? Constants.selectedImage : Constants.unselectedImage
+    }
+    
+    func selectAllCategories() {
+        if isAllCategoriesSelected {
+            selectedCategories = []
+        } else {
+            selectedCategories = service.categories
+        }
     }
 }
 
