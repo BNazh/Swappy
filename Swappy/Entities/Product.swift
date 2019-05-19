@@ -21,7 +21,7 @@ struct Product: Decodable, Identifiable {
     let isActive: Bool
     let seller: User?
     let contactPhone: String
-    let category: String
+    let category: String // Идентификатор категории, возможно нужно переименовать с CodingKeys
 }
 
 struct ProductRO: Encodable {

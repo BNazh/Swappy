@@ -75,7 +75,7 @@ extension EditProductPresenterImp: EditProductPresenter {
         case .add:
             tracker.track(screen: .createProduct)
         case .edit(product: let product):
-            selectedCategory = categoryService.category(for: product)
+            selectedCategory = categoryService.category(withId: product.category)
             
             let viewModel = EditProductViewModel(
                 product: product,

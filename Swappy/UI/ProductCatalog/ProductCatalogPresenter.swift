@@ -11,6 +11,7 @@ protocol ProductCatalogPresenter {
     func loadProducts()
     func refreshProducts()
     func selectProduct(with id: String)
+    func showCategoryFilter()
 }
 
 final class ProductCatalogPresenterImp {
@@ -23,6 +24,7 @@ final class ProductCatalogPresenterImp {
     private let tracker: AnalyticsManager
     
     private var products: [Product] = []
+    private var selectedCategories: [Category] = []
     private var isLoading = false
     
     // MARK: - Init
@@ -86,6 +88,20 @@ extension ProductCatalogPresenterImp: ProductCatalogPresenter {
         }
         
         router.openProductDetail(product: selectedProduct)
+    }
+    
+    func showCategoryFilter() {
+        router.openFilter(selectedCategories: selectedCategories)
+    }
+}
+
+extension ProductCatalogPresenterImp: CategoryFilterDelegate {
+    
+    func didSelectFilterCategories(_ categories: [Category], isFilterOn: Bool) {
+        selectedCategories = categories
+        refreshProducts()
+        
+        view.setFilterButton(isFilterOn)
     }
 }
 

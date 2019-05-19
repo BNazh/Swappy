@@ -31,6 +31,7 @@
                                     <constraint firstAttribute="height" constant="60" id="wCU-jU-zfH"/>
                                 </constraints>
                                 <state key="normal" image="filter_off"/>
+                                <state key="selected" image="filter_on"/>
                                 <connections>
                                     <action selector="filterButtonPressed:" destination="IUz-77-IIh" eventType="touchUpInside" id="UdR-Jz-G7J"/>
                                 </connections>
@@ -49,6 +50,7 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="fmP-lM-xgc" id="aah-bn-JWG"/>
+                        <outlet property="filterButton" destination="Y44-ZI-htH" id="3tH-pC-sRP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1mn-63-Kuz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -58,5 +60,6 @@
     </scenes>
     <resources>
         <image name="filter_off" width="60" height="60"/>
+        <image name="filter_on" width="60" height="60"/>
     </resources>
 </document>

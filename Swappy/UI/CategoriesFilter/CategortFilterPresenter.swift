@@ -9,14 +9,13 @@
 import UIKit
 
 protocol CategoryFilterDelegate: class {
-    func didSelectFilterCategories(_ categories: [Category])
+    func didSelectFilterCategories(_ categories: [Category], isFilterOn: Bool)
 }
 
 protocol CategoryFilterPresenter: class {
     
     var delegate: CategoryFilterDelegate? { get }
-    
-    func setSelectedCategories(_ selectedCategoryId: [String])
+    var selectedCategories: [Category] { get set }
     
     func showCategories()
     func selectAll(_ isSelected: Bool)
@@ -31,7 +30,7 @@ final class CategoryFilterPresenterImp {
     let service: CategoryService
     
     weak var delegate: CategoryFilterDelegate?
-    var filter: CategoryFilter = CategoryFilter(selectedCategories: [])
+    var selectedCategories: [Category] = []
     
     // MARK: - Init
     
@@ -53,14 +52,14 @@ extension CategoryFilterPresenterImp: CategoryFilterPresenter {
     }
     
     func selectAll(_ isSelected: Bool) {
-        filter.selectedCategories = isSelected ? service.categories : []
+        selectedCategories = isSelected ? service.categories : []
     }
     
     func selectCategory(withId id: String) {
-        if let categoryIndex = filter.selectedCategories.firstIndex(where: { $0.id == id }) {
-            filter.selectedCategories.remove(at: categoryIndex)
+        if let categoryIndex = selectedCategories.firstIndex(where: { $0.id == id }) {
+            selectedCategories.remove(at: categoryIndex)
         } else if let category = service.category(withId: id) {
-            filter.selectedCategories.append(category)
+            selectedCategories.append(category)
         }
     }
 }
@@ -68,14 +67,15 @@ extension CategoryFilterPresenterImp: CategoryFilterPresenter {
 private extension CategoryFilterPresenterImp {
     
     func cellModel(for category: Category) -> CategoryCellViewModel {
-        let isSelected = filter.selectedCategories.contains { $0.id == category.id }
+        let isSelected = selectedCategories.contains { $0.id == category.id }
         let image = imageForSelectedState(isSelected)
         return CategoryCellViewModel(id: category.id, name: category.name, icon: image, isSelected: isSelected)
     }
     
     func allCategoriesCellModel() -> CategoryCellViewModel {
         let name = "Все товары"
-        let isSelected = service.categories.count == filter.selectedCategories.count || filter.selectedCategories.isEmpty
+        let allSelected = service.categories.count == selectedCategories.count
+        let isSelected = allSelected || selectedCategories.isEmpty
         let icon = imageForSelectedState(isSelected)
         
         return CategoryCellViewModel(

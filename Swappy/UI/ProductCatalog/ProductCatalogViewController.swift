@@ -11,11 +11,13 @@ import UIKit
 protocol ProductCatalogView: class, ErrorView {
     
     func reloadCells(_ cellModels: [ProductCellViewModel])
+    func setFilterButton(_ isFilterOn: Bool)
 }
 
 final class ProductCatalogViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var filterButton: UIButton!
     
     var presenter: ProductCatalogPresenter!
     var dataDisplayManager: ProductsDDM!
@@ -42,15 +44,18 @@ final class ProductCatalogViewController: UIViewController {
     // MARK: - Actions
     
     @IBAction func filterButtonPressed(_ sender: UIButton) {
-        
+        presenter.showCategoryFilter()
     }
-    
 }
 
 extension ProductCatalogViewController: ProductCatalogView {
     
     func reloadCells(_ cellModels: [ProductCellViewModel]) {
         dataDisplayManager.reloadProducts(cellModels)
+    }
+    
+    func setFilterButton(_ isFilterOn: Bool) {
+        filterButton.isSelected = isFilterOn
     }
 }
 

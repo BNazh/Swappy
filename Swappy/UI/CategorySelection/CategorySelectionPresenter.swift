@@ -74,6 +74,6 @@ private extension CategorySelectionPresenterImp {
         let isSelected = category.id == selectedCategory?.id
         let icon = isSelected ? #imageLiteral(resourceName: "radiobutton_on") : #imageLiteral(resourceName: "radiobutton_off")
         
-        return CategoryCellViewModel(name: category.name, icon: icon, isSelected: isSelected)
+        return CategoryCellViewModel(id: category.id, name: category.name, icon: icon, isSelected: isSelected)
     }
 }
