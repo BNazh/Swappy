@@ -62,7 +62,7 @@ extension ProductsTarget: TargetType {
             let parameters: [String : Any] = [
                 "pageNumber": pageNumber,
                 "pageSize": pageSize,
-                "categories": categoryIds.first ?? ""
+                "categories": categoryIds
             ]
             
             return .requestParameters(

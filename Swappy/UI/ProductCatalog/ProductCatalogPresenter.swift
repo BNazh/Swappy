@@ -60,6 +60,7 @@ extension ProductCatalogPresenterImp: ProductCatalogPresenter {
             case .success(let products):
                 self?.handleSuccessGetProducts(products)
             case .failure(let appError):
+                self?.reloadProductsOnView()
                 self?.view.showError(message: appError.localizedString)
             }
         }

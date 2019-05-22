@@ -10,7 +10,7 @@ import Firebase
 
 final class FirebaseAnalyticsManager: AnalyticsManager {
     
-    func configure(launchOptions: [UIApplication.LaunchOptionsKey : Any]?) {
+    func configure(application: UIApplication, launchOptions: [UIApplication.LaunchOptionsKey : Any]?) {
         
     }
     

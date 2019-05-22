@@ -10,26 +10,33 @@ import UIKit
 
 protocol AnalyticsManager: class {
     
-    func configure(launchOptions: [UIApplication.LaunchOptionsKey: Any]?)
+    func configure(application: UIApplication, launchOptions: [UIApplication.LaunchOptionsKey: Any]?)
+    
+    func appBecomeActive()
     
     func track(screen: AnalyticScreen)
     
     func track(event: AnalyticEvent)
 }
 
+extension AnalyticsManager {
+    func appBecomeActive() {}
+}
+
 final class AnalyticsManagerImp {
     
     private let managers: [AnalyticsManager] = [
         AppMetricaManager(),
-        FirebaseAnalyticsManager()
+        FirebaseAnalyticsManager(),
+        FacebookAnalyticsManager()
     ]
 }
 
 extension AnalyticsManagerImp: AnalyticsManager {
     
-    func configure(launchOptions: [UIApplication.LaunchOptionsKey : Any]?) {
+    func configure(application: UIApplication, launchOptions: [UIApplication.LaunchOptionsKey : Any]?) {
         for manager in managers {
-            manager.configure(launchOptions: launchOptions)
+            manager.configure(application: application, launchOptions: launchOptions)
         }
     }
     
@@ -42,6 +49,12 @@ extension AnalyticsManagerImp: AnalyticsManager {
     func track(event: AnalyticEvent) {
         for manager in managers {
             manager.track(event: event)
+        }
+    }
+    
+    func appBecomeActive() {
+        for manager in managers {
+            manager.appBecomeActive()
         }
     }
 }

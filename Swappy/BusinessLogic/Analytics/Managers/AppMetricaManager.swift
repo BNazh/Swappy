@@ -16,7 +16,7 @@ final class AppMetricaManager {
 
 extension AppMetricaManager: AnalyticsManager {
     
-    func configure(launchOptions: [UIApplication.LaunchOptionsKey : Any]?) {
+    func configure(application: UIApplication, launchOptions: [UIApplication.LaunchOptionsKey : Any]?) {
         let apiKey = "e5fa98a5-b630-47e9-ab2f-69ce2c46ef1e"
         guard let configuration = YMMYandexMetricaConfiguration(apiKey: apiKey) else {
             return

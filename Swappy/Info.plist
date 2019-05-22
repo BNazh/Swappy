@@ -19,6 +19,12 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb815944575415903</string>
+			</array>
+		</dict>
+		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
@@ -27,19 +33,6 @@
 			<array>
 				<string>vk5081181</string>
 			</array>
-			<key>CFBundleURLTypes</key>
-			<array>
-				<dict>
-					<key>CFBundleURLSchemes</key>
-					<array>
-						<string>fb1633698086888601</string>
-					</array>
-				</dict>
-			</array>
-			<key>FacebookAppID</key>
-			<string>1633698086888601</string>
-			<key>FacebookDisplayName</key>
-			<string>Swappy</string>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
@@ -58,6 +51,10 @@
 			</dict>
 		</array>
 	</dict>
+	<key>FacebookAppID</key>
+	<string>815944575415903</string>
+	<key>FacebookDisplayName</key>
+	<string>Swappy</string>
 	<key>FirebaseAppDelegateProxyEnabled</key>
 	<false/>
 	<key>LSApplicationQueriesSchemes</key>

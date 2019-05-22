@@ -43,7 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         pushManager.register(application: application)
         
-        analyticManager.configure(launchOptions: launchOptions)
+        analyticManager.configure(application: application, launchOptions: launchOptions)
         analyticManager.track(event: .startSession)
         UIViewController.swizzleViewWillAppear()
         
