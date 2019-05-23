@@ -20,7 +20,7 @@ final class StartViewController: UIViewController {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var presenter: StartPresenter!
-
+    
     // MARK: - Functions
     
     override func viewDidLoad() {

@@ -51,6 +51,10 @@
 			</dict>
 		</array>
 	</dict>
+	<key>FacebookAppID</key>
+	<string>815944575415903</string>
+	<key>FacebookDisplayName</key>
+	<string>Swappy</string>
 	<key>FirebaseAppDelegateProxyEnabled</key>
 	<false/>
 	<key>LSApplicationQueriesSchemes</key>
@@ -76,7 +80,7 @@
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
-	<string>Main</string>
+	<string>Start</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
@@ -92,30 +96,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-    
-    <key>CFBundleURLTypes</key>
-    <array>
-        <dict>
-            <key>CFBundleURLSchemes</key>
-            <array>
-                <string>fb815944575415903</string>
-            </array>
-        </dict>
-        
-        <dict>
-            <key>CFBundleURLSchemes</key>
-            <array>
-                <string>vk5081181</string>
-            </array>
-            <key>CFBundleTypeRole</key>
-            <string>Editor</string>
-            <key>CFBundleURLName</key>
-            <string>vk5081181</string>
-        </dict>
-    </array>
-    <key>FacebookAppID</key>
-    <string>815944575415903</string>
-    <key>FacebookDisplayName</key>
-    <string>Swappy</string>
 </dict>
 </plist>

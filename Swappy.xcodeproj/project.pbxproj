@@ -97,6 +97,7 @@
 		E1B624BB22952170002090A8 /* StartPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B624BA22952170002090A8 /* StartPresenter.swift */; };
 		E1B624BD2295217B002090A8 /* StartRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B624BC2295217B002090A8 /* StartRouter.swift */; };
 		E1B624BF22952189002090A8 /* Start.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1B624BE22952189002090A8 /* Start.storyboard */; };
+		E1B624C522973898002090A8 /* StartAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B624C422973898002090A8 /* StartAssembly.swift */; };
 		E1BC5AC122310C0E001FD1D6 /* ProductCatalogAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC5AC022310C0E001FD1D6 /* ProductCatalogAssembly.swift */; };
 		E1BC5AC322310C2E001FD1D6 /* ServicesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC5AC222310C2E001FD1D6 /* ServicesAssembly.swift */; };
 		E1BC5AC622310CB7001FD1D6 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC5AC522310CB7001FD1D6 /* Product.swift */; };
@@ -284,6 +285,7 @@
 		E1B624BA22952170002090A8 /* StartPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPresenter.swift; sourceTree = "<group>"; };
 		E1B624BC2295217B002090A8 /* StartRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartRouter.swift; sourceTree = "<group>"; };
 		E1B624BE22952189002090A8 /* Start.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Start.storyboard; sourceTree = "<group>"; };
+		E1B624C422973898002090A8 /* StartAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartAssembly.swift; sourceTree = "<group>"; };
 		E1BC5AC022310C0E001FD1D6 /* ProductCatalogAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCatalogAssembly.swift; sourceTree = "<group>"; };
 		E1BC5AC222310C2E001FD1D6 /* ServicesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesAssembly.swift; sourceTree = "<group>"; };
 		E1BC5AC522310CB7001FD1D6 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
@@ -422,6 +424,7 @@
 				E17CA1A42256B02300D5C955 /* LoginCardAssembly.swift */,
 				E18FB19C2289438300F15F66 /* SelectionAssembly.swift */,
 				E1167C0C2291CECF00472324 /* CategoryFilterAssembly.swift */,
+				E1B624C422973898002090A8 /* StartAssembly.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -1370,6 +1373,7 @@
 				E1F0176F22493E7A001A10D7 /* DeleteButton.swift in Sources */,
 				E10850C2223EF78F00941EA5 /* PhoneLoginViewController.swift in Sources */,
 				E1FC30A52238DC5C00DF1325 /* SellerInfoViewController.swift in Sources */,
+				E1B624C522973898002090A8 /* StartAssembly.swift in Sources */,
 				E1167C0B2291A81000472324 /* CategoryFilter.swift in Sources */,
 				E1A6656422550CAD007EE75F /* PushNotificationServiceImp.swift in Sources */,
 				E1B4B1DB2235BDE400520082 /* ProductDetailPresenter.swift in Sources */,

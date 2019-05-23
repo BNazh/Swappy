@@ -14,15 +14,15 @@ protocol StartRouter: class {
 
 final class StartRouterImp {
     
-    // MARK: - Properties
-    
-    let viewController: UIViewController
-    
-    // MARK: - Init
-    
-    init(viewController: UIViewController) {
-        self.viewController = viewController
-    }
+//    // MARK: - Properties
+//    
+//    let viewController: UIViewController
+//    
+//    // MARK: - Init
+//    
+//    init(viewController: UIViewController) {
+//        self.viewController = viewController
+//    }
 }
 
 extension StartRouterImp: StartRouter {
