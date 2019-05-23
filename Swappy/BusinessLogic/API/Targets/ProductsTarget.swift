@@ -67,7 +67,7 @@ extension ProductsTarget: TargetType {
             
             return .requestParameters(
                 parameters: parameters,
-                encoding: URLEncoding.queryString
+                encoding: URLEncoding(destination: .queryString, arrayEncoding: .noBrackets)
             )
             
         case .createProduct(let product),

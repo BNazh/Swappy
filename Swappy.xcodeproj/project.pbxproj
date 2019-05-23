@@ -458,7 +458,6 @@
 				E17CA1952252AA3300D5C955 /* Database */,
 				E11174822242B38300BD19B4 /* KeychainStore.swift */,
 				E11174952243719400BD19B4 /* Core.swift */,
-				E1F0175622463C13001A10D7 /* BaseProvider.swift */,
 				E17CA19122529D9200D5C955 /* AppConstants.swift */,
 				E17CA19A22533A2800D5C955 /* ProductsNotificationCenter.swift */,
 			);
@@ -677,8 +676,8 @@
 		E19F7E052231064D00BAFC7A /* BusinessLogic */ = {
 			isa = PBXGroup;
 			children = (
+				E1B624C322973309002090A8 /* API */,
 				E11174812242B37100BD19B4 /* Core */,
-				E19F7E062231065600BAFC7A /* Targets */,
 				E19F7E0E22310A3F00BAFC7A /* Services */,
 				E1A6656022550C87007EE75F /* PushNotificationService */,
 				E17CA185224C24EE00D5C955 /* Analytics */,
@@ -770,6 +769,15 @@
 				E1B624BC2295217B002090A8 /* StartRouter.swift */,
 			);
 			path = Start;
+			sourceTree = "<group>";
+		};
+		E1B624C322973309002090A8 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				E19F7E062231065600BAFC7A /* Targets */,
+				E1F0175622463C13001A10D7 /* BaseProvider.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		E1BC5AC422310CAA001FD1D6 /* Entities */ = {

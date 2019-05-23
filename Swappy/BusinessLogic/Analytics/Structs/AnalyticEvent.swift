@@ -8,7 +8,7 @@
 
 enum AnalyticEvent: String {
     case
-    startSession = "action_start_sessione",
+    startSession = "action_start_session",
     login = "action_login",
     
     loginByVkClick = "action_login_by_vk_click",
