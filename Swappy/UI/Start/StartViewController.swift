@@ -46,7 +46,7 @@ extension StartViewController: StartView {
             self?.loadData()
         }
         
-        let alertVC = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
+        let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alertVC.addAction(repeateAction)
         
         present(alertVC, animated: true, completion: nil)
