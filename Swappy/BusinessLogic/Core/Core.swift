@@ -9,7 +9,7 @@
 import Foundation
 
 enum Core {
-    static private let isProduction = false
+    static private let isProduction = true
     
     static private let baseUrl: URL = {
         if isProduction {

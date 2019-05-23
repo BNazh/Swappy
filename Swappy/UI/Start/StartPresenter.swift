@@ -32,17 +32,23 @@ final class StartPresenterImp {
 extension StartPresenterImp: StartPresenter {
     
     func loadStartData() {
+        var isSuccess = true
         let group = DispatchGroup()
         
         group.enter()
         categoryService.updateCategoryList { result in
-            
+            isSuccess = isSuccess && result.isSuccess
             group.leave()
         }
         
         group.notify(queue: .main) { [weak self] in
             self?.view.stopLoading()
-            self?.router.showMainScreen()
+            
+            if isSuccess {
+                self?.router.showMainScreen()
+            } else {
+                self?.view.showError()
+            }
         }
     }
 }
