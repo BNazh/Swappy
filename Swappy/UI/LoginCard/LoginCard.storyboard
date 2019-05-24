@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xjm-MM-TQq">
-                                <rect key="frame" x="0.0" y="238" width="375" height="429"/>
+                                <rect key="frame" x="0.0" y="298" width="375" height="369"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Войти в профиль" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ti-Dm-vIz">
                                         <rect key="frame" x="104" y="16" width="167.5" height="24"/>
@@ -55,7 +55,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HT2-sg-TUS" customClass="MainButton" customModule="Swappy" customModuleProvider="target">
-                                        <rect key="frame" x="16" y="284" width="343" height="52"/>
+                                        <rect key="frame" x="16" y="224" width="343" height="52"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="52" id="DWU-W0-tvJ"/>
                                         </constraints>
@@ -72,7 +72,7 @@
                                         </connections>
                                     </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Продолжая пользоваться приложением, вы принимаете лицензионое соглашение и политику конфиденциальности" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="NcI-vm-0VM">
-                                        <rect key="frame" x="16" y="346" width="343" height="63"/>
+                                        <rect key="frame" x="16" y="286" width="343" height="63"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="63" id="qn5-kt-Iex"/>
@@ -82,8 +82,11 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <dataDetectorType key="dataDetectorTypes" link="YES"/>
                                     </textView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jlB-Su-Y12" customClass="FBButton" customModule="Swappy" customModuleProvider="target">
-                                        <rect key="frame" x="16" y="224" width="343" height="52"/>
+                                    <button hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jlB-Su-Y12" customClass="FBButton" customModule="Swappy" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="216" width="343" height="0.0"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" id="04G-Zv-OAf"/>
+                                        </constraints>
                                         <state key="normal" title="FaceBook"/>
                                         <connections>
                                             <action selector="fbButtonTapped:" destination="XQ5-a5-nDw" eventType="touchUpInside" id="7ho-Fq-x6V"/>
@@ -97,9 +100,8 @@
                                     <constraint firstItem="HT2-sg-TUS" firstAttribute="top" secondItem="jlB-Su-Y12" secondAttribute="bottom" constant="8" id="6Iw-G5-buI"/>
                                     <constraint firstAttribute="trailing" secondItem="Zm8-Qe-x2I" secondAttribute="trailing" id="AM1-bW-f7U"/>
                                     <constraint firstItem="HT2-sg-TUS" firstAttribute="height" secondItem="eSb-8K-ccO" secondAttribute="height" id="DA8-Zp-thd"/>
-                                    <constraint firstItem="jlB-Su-Y12" firstAttribute="top" secondItem="eSb-8K-ccO" secondAttribute="bottom" constant="8" id="Eko-Km-XIM"/>
+                                    <constraint firstItem="jlB-Su-Y12" firstAttribute="top" secondItem="eSb-8K-ccO" secondAttribute="bottom" id="Eko-Km-XIM"/>
                                     <constraint firstItem="NcI-vm-0VM" firstAttribute="top" secondItem="HT2-sg-TUS" secondAttribute="bottom" constant="10" id="Gwz-2C-OEM"/>
-                                    <constraint firstItem="jlB-Su-Y12" firstAttribute="height" secondItem="eSb-8K-ccO" secondAttribute="height" id="JQW-Cr-TMf"/>
                                     <constraint firstItem="2ti-Dm-vIz" firstAttribute="centerX" secondItem="Xjm-MM-TQq" secondAttribute="centerX" id="KXX-n1-kiu"/>
                                     <constraint firstItem="2ti-Dm-vIz" firstAttribute="centerY" secondItem="Zm8-Qe-x2I" secondAttribute="centerY" id="Nlw-kf-vVY"/>
                                     <constraint firstItem="0cR-0P-Zsv" firstAttribute="centerX" secondItem="Xjm-MM-TQq" secondAttribute="centerX" id="Ofv-CY-bdf"/>
@@ -122,7 +124,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LYT-hW-ygf">
-                                <rect key="frame" x="0.0" y="20" width="375" height="218"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="278"/>
                                 <connections>
                                     <action selector="close:" destination="XQ5-a5-nDw" eventType="touchUpInside" id="6jK-gf-Uat"/>
                                 </connections>

@@ -23,6 +23,7 @@ class CardViewController: UIViewController {
         
         view.clipsToBounds = false
         
+        view.layoutSubviews()
         addBottomView()
     }
     
