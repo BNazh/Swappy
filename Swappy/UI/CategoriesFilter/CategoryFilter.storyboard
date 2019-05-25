@@ -61,12 +61,15 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dba-fy-wiL">
                                                 <rect key="frame" x="0.0" y="0.0" width="207" height="84"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="doi-2A-SMK">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="doi-2A-SMK" customClass="SecondaryButton" customModule="Swappy" customModuleProvider="target">
                                                         <rect key="frame" x="16" y="16" width="175" height="52"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="52" id="aCO-4a-a9c"/>
                                                         </constraints>
                                                         <state key="normal" title="Сброс"/>
+                                                        <connections>
+                                                            <action selector="resetButtonPressed:" destination="sqj-n8-3y0" eventType="touchUpInside" id="Wd8-tS-Bdk"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -80,12 +83,15 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dga-ZC-yMB">
                                                 <rect key="frame" x="207" y="0.0" width="207" height="84"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ThR-k1-d7h">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ThR-k1-d7h" customClass="MainButton" customModule="Swappy" customModuleProvider="target">
                                                         <rect key="frame" x="16" y="16" width="175" height="52"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="52" id="q6B-EM-OLt"/>
                                                         </constraints>
                                                         <state key="normal" title="Применить"/>
+                                                        <connections>
+                                                            <action selector="applyButtonPressed:" destination="sqj-n8-3y0" eventType="touchUpInside" id="Rcy-kN-4I3"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -141,6 +147,7 @@
                     </view>
                     <connections>
                         <outlet property="cardContainerView" destination="jNT-ai-XBh" id="AuE-EJ-wCI"/>
+                        <outlet property="resetButtonContainerView" destination="dba-fy-wiL" id="Jc6-QY-riV"/>
                         <outlet property="tableView" destination="ZXR-jM-GYi" id="9Bb-Rp-wH3"/>
                         <outlet property="tableViewHeightConstraint" destination="dPI-SK-MzN" id="jns-Rv-euN"/>
                     </connections>

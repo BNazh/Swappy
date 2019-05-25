@@ -25,6 +25,7 @@ final class SellerInfoViewController: CardViewController, TipView {
         super.viewDidLoad()
         
         addSwipeGestureRecognizer()
+        contactButton.isUserInteractionEnabled = false
         
         presenter.showSeller()
     }

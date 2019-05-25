@@ -11,6 +11,7 @@ import UIKit
 protocol CategoryFilterView: class {
     
     func displayCategories(_ cellModels: [CategoryCellViewModel])
+    func displayResetButton(isHidden: Bool)
 }
 
 final class CategoryFilterViewController: CardViewController {
@@ -20,6 +21,7 @@ final class CategoryFilterViewController: CardViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var tableViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var cardContainerView: UIView!
+    @IBOutlet weak var resetButtonContainerView: UIView!
     private let pullToDismissHandler = PullToDismissHandler()
     
     var presenter: CategoryFilterPresenter!
@@ -33,6 +35,7 @@ final class CategoryFilterViewController: CardViewController {
         
         cardContainerView.roundCorners(corners: [.topLeft, .topRight], radius: 9)
         setupPullToDismiss()
+        addSwipeGestureRecognizer()
         setupTableView()
         
         presenter.showCategories()
@@ -43,6 +46,11 @@ final class CategoryFilterViewController: CardViewController {
     @IBAction func applyButtonPressed(_ sender: UIButton) {
         presenter.applyFilters()
         close()
+    }
+    
+    @IBAction func resetButtonPressed(_ sender: UIButton) {
+        presenter.reset()
+        presenter.showCategories()
     }
     
     @IBAction func close() {
@@ -56,6 +64,14 @@ extension CategoryFilterViewController: CategoryFilterView {
         self.cellModels = cellModels
         setupTableViewHeight()
         tableView.reloadData()
+    }
+    
+    func displayResetButton(isHidden: Bool) {
+        guard resetButtonContainerView.isHidden != isHidden else {
+            return
+        }
+        
+        resetButtonContainerView.isHidden = isHidden
     }
 }
 

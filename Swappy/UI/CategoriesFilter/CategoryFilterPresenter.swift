@@ -18,9 +18,9 @@ protocol CategoryFilterPresenter: class {
     var selectedCategories: [Category] { get set }
     
     func showCategories()
-    func selectAll(_ isSelected: Bool)
     func selectCategory(withId id: String)
     func applyFilters()
+    func reset()
 }
 
 final class CategoryFilterPresenterImp {
@@ -47,13 +47,11 @@ extension CategoryFilterPresenterImp: CategoryFilterPresenter {
         let categories = service.categories
         let categoryCellModels = categories.map { cellModel(for: $0) }
         
-        let cellModels = [allCategoriesCellModel()] + categoryCellModels
+        let allCategoriesCellModel = self.allCategoriesCellModel()
+        let cellModels = [allCategoriesCellModel] + categoryCellModels
         
         view.displayCategories(cellModels)
-    }
-    
-    func selectAll(_ isSelected: Bool) {
-        selectedCategories = isSelected ? service.categories : []
+        view.displayResetButton(isHidden: allCategoriesCellModel.isSelected)
     }
     
     func selectCategory(withId id: String) {
@@ -72,6 +70,10 @@ extension CategoryFilterPresenterImp: CategoryFilterPresenter {
     func applyFilters() {
         let isFilterOn = !isAllCategoriesSelected
         delegate?.didSelectFilterCategories(selectedCategories, isFilterOn: isFilterOn)
+    }
+    
+    func reset() {
+        selectCategory(withId: Constants.allCategoriesCellId)
     }
 }
 

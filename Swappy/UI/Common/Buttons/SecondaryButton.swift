@@ -22,7 +22,6 @@ class SecondaryButton: BaseButton {
     override func commonInit() {
         super.commonInit()
         
-        isUserInteractionEnabled = false
         setTitleColor(Constants.textColor, for: .normal)
         backgroundColor = Constants.background
     }
