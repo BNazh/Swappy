@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="20" width="414" height="716"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сортировка" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Mb-WT-6Wk">
-                                        <rect key="frame" x="147" y="16" width="120" height="24"/>
+                                        <rect key="frame" x="147.33333333333334" y="16" width="119.66666666666666" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="jDS-eW-SL9"/>
                                         </constraints>
@@ -55,33 +55,69 @@
                                             <constraint firstAttribute="height" priority="900" constant="1000" id="dPI-SK-MzN"/>
                                         </constraints>
                                     </tableView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xp7-hO-aM8" customClass="MainButton" customModule="Swappy" customModuleProvider="target">
-                                        <rect key="frame" x="16" y="648" width="382" height="52"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nd5-WT-bg4">
+                                        <rect key="frame" x="0.0" y="632" width="414" height="84"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dba-fy-wiL">
+                                                <rect key="frame" x="0.0" y="0.0" width="207" height="84"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="doi-2A-SMK">
+                                                        <rect key="frame" x="16" y="16" width="175" height="52"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="52" id="aCO-4a-a9c"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Сброс"/>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="doi-2A-SMK" firstAttribute="centerX" secondItem="dba-fy-wiL" secondAttribute="centerX" id="1oA-S2-E29"/>
+                                                    <constraint firstAttribute="bottom" secondItem="doi-2A-SMK" secondAttribute="bottom" constant="16" id="GXO-eY-I7x"/>
+                                                    <constraint firstItem="doi-2A-SMK" firstAttribute="leading" secondItem="dba-fy-wiL" secondAttribute="leading" constant="16" id="R1K-e0-rbi"/>
+                                                    <constraint firstItem="doi-2A-SMK" firstAttribute="top" secondItem="dba-fy-wiL" secondAttribute="top" constant="16" id="bGh-KS-FxQ"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dga-ZC-yMB">
+                                                <rect key="frame" x="207" y="0.0" width="207" height="84"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ThR-k1-d7h">
+                                                        <rect key="frame" x="16" y="16" width="175" height="52"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="52" id="q6B-EM-OLt"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Применить"/>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="ThR-k1-d7h" firstAttribute="top" secondItem="Dga-ZC-yMB" secondAttribute="top" constant="16" id="WHb-QE-vfE"/>
+                                                    <constraint firstAttribute="bottom" secondItem="ThR-k1-d7h" secondAttribute="bottom" constant="16" id="aDD-XD-7EW"/>
+                                                    <constraint firstItem="ThR-k1-d7h" firstAttribute="leading" secondItem="Dga-ZC-yMB" secondAttribute="leading" constant="16" id="dTB-c7-S0i"/>
+                                                    <constraint firstItem="ThR-k1-d7h" firstAttribute="centerX" secondItem="Dga-ZC-yMB" secondAttribute="centerX" id="ltn-Nx-bHS"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="52" id="Eo7-kU-MWb"/>
+                                            <constraint firstItem="Dga-ZC-yMB" firstAttribute="width" secondItem="dba-fy-wiL" secondAttribute="width" id="6BD-af-guo"/>
                                         </constraints>
-                                        <state key="normal" title="Применить"/>
-                                        <connections>
-                                            <action selector="applyButtonPressed:" destination="sqj-n8-3y0" eventType="touchUpInside" id="DF8-dA-VKh"/>
-                                        </connections>
-                                    </button>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="ZXR-jM-GYi" firstAttribute="leading" secondItem="jNT-ai-XBh" secondAttribute="leading" id="1xE-iA-7iy"/>
+                                    <constraint firstAttribute="trailing" secondItem="nd5-WT-bg4" secondAttribute="trailing" id="Cht-Tk-9Y1"/>
+                                    <constraint firstAttribute="bottom" secondItem="nd5-WT-bg4" secondAttribute="bottom" id="DKx-Lw-YNK"/>
                                     <constraint firstAttribute="trailing" secondItem="iJf-TQ-nMm" secondAttribute="trailing" id="DL6-jp-msB"/>
-                                    <constraint firstItem="xp7-hO-aM8" firstAttribute="top" secondItem="ZXR-jM-GYi" secondAttribute="bottom" constant="16" id="NpE-p8-MYa"/>
                                     <constraint firstItem="iJf-TQ-nMm" firstAttribute="top" secondItem="8Mb-WT-6Wk" secondAttribute="bottom" constant="14" id="Nu5-MP-bjw"/>
                                     <constraint firstItem="LDn-Nb-5Ml" firstAttribute="top" secondItem="jNT-ai-XBh" secondAttribute="top" constant="4" id="PgG-3c-tZY"/>
                                     <constraint firstAttribute="trailing" secondItem="ZXR-jM-GYi" secondAttribute="trailing" id="REi-90-X9S"/>
                                     <constraint firstItem="8Mb-WT-6Wk" firstAttribute="centerX" secondItem="jNT-ai-XBh" secondAttribute="centerX" id="TlW-Hd-cQY"/>
                                     <constraint firstItem="iJf-TQ-nMm" firstAttribute="leading" secondItem="jNT-ai-XBh" secondAttribute="leading" id="Yym-Hb-eur"/>
-                                    <constraint firstAttribute="bottom" secondItem="xp7-hO-aM8" secondAttribute="bottom" constant="16" id="ZAd-ck-cOy"/>
-                                    <constraint firstAttribute="trailing" secondItem="xp7-hO-aM8" secondAttribute="trailing" constant="16" id="aQg-iv-sDA"/>
+                                    <constraint firstItem="nd5-WT-bg4" firstAttribute="leading" secondItem="jNT-ai-XBh" secondAttribute="leading" id="ZL8-Pg-I7o"/>
                                     <constraint firstAttribute="trailing" secondItem="LDn-Nb-5Ml" secondAttribute="trailing" id="hty-uL-xkA"/>
-                                    <constraint firstItem="xp7-hO-aM8" firstAttribute="leading" secondItem="jNT-ai-XBh" secondAttribute="leading" constant="16" id="otD-Tn-PUe"/>
                                     <constraint firstItem="8Mb-WT-6Wk" firstAttribute="centerY" secondItem="LDn-Nb-5Ml" secondAttribute="centerY" id="wMW-xv-38q"/>
                                     <constraint firstItem="ZXR-jM-GYi" firstAttribute="top" secondItem="iJf-TQ-nMm" secondAttribute="bottom" id="yBG-EW-wdu"/>
+                                    <constraint firstItem="nd5-WT-bg4" firstAttribute="top" secondItem="ZXR-jM-GYi" secondAttribute="bottom" id="zAw-gG-85u"/>
                                     <constraint firstItem="LDn-Nb-5Ml" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8Mb-WT-6Wk" secondAttribute="trailing" id="zlv-4k-vdU"/>
                                 </constraints>
                             </view>
@@ -111,7 +147,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cr9-Nk-0pa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="85.599999999999994" y="121.88905547226388"/>
+            <point key="canvasLocation" x="85.507246376811594" y="121.46739130434784"/>
         </scene>
     </scenes>
     <resources>
