@@ -20,6 +20,7 @@ final class CategoryFilterViewController: CardViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var tableViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var cardContainerView: UIView!
+    private let pullToDismissHandler = PullToDismissHandler()
     
     var presenter: CategoryFilterPresenter!
     
@@ -31,6 +32,7 @@ final class CategoryFilterViewController: CardViewController {
         super.viewDidLoad()
         
         cardContainerView.roundCorners(corners: [.topLeft, .topRight], radius: 9)
+        setupPullToDismiss()
         setupTableView()
         
         presenter.showCategories()
@@ -97,5 +99,11 @@ private extension CategoryFilterViewController {
         let cellsCount = CGFloat(cellModels.count)
         tableViewHeightConstraint.constant = cellsCount * tableView.rowHeight
         view.layoutIfNeeded()
+    }
+    
+    func setupPullToDismiss() {
+        pullToDismissHandler.setup(scrollView: tableView) { [weak self] in
+            self?.close()
+        }
     }
 }

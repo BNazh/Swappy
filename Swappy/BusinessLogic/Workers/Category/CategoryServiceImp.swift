@@ -68,7 +68,6 @@ extension CategoryServiceImp: CategoryService {
 private extension CategoryServiceImp {
     
     func saveCategories(_ categories: [Category]) {
-        
         self.categories = categories
     }
 }
