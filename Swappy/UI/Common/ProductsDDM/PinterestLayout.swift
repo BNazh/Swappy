@@ -98,5 +98,6 @@ class PinterestLayout: UICollectionViewLayout {
     
     func clearCache() {
         cache = []
+        contentHeight = 0
     }
 }
