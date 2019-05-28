@@ -30,7 +30,7 @@ final class ProductCatalogViewController: UIViewController {
         definesPresentationContext = true
         
         dataDisplayManager.setup(delegate: self, collectionView: collectionView)
-        collectionView.contentInset = UIEdgeInsets(top: 0, left: 4, bottom: 0, right: 4)
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: 4, bottom: 100, right: 4)
         
         presenter.loadProducts()
     }
