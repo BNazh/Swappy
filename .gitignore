@@ -115,5 +115,3 @@ Search/.idea
 # Sourcery
 *.sourcery.swift
 
-*.plist
-Swappy/BusinessLogic/Core/AppConstants.swift
