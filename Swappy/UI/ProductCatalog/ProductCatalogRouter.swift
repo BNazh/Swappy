@@ -33,8 +33,8 @@ extension ProductCatalogRouterImp: ProductCatalogRouter {
         
         productDetail.presenter.setInitState(product: product, isOwner: false)
         
-        let presentingVC = viewController.navigationController
-        presentingVC?.present(productDetail, animated: true, completion: nil)
+        let navigationVC = viewController.navigationController
+        navigationVC?.pushViewController(productDetail, animated: true)
     }
     
     func openFilter(selectedCategories: [Category], delegate: CategoryFilterDelegate) {

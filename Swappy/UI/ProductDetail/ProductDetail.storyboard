@@ -15,11 +15,11 @@
             <objects>
                 <viewController storyboardIdentifier="ProductDetailViewController" modalPresentationStyle="overCurrentContext" id="3w9-B7-sSi" customClass="ProductDetailViewController" customModule="Swappy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" opaque="NO" contentMode="scaleToFill" id="HiI-Wk-7f7">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="936"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tNG-rW-MCw">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="936"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ys-Tn-G1W">
                                         <rect key="frame" x="0.0" y="1000" width="375" height="48"/>
@@ -191,7 +191,7 @@
                                 </constraints>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4cz-16-cNc">
-                                <rect key="frame" x="319" y="36" width="40" height="40"/>
+                                <rect key="frame" x="319" y="16" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="9fn-iJ-atz"/>
                                     <constraint firstAttribute="width" secondItem="4cz-16-cNc" secondAttribute="height" multiplier="1:1" id="EMU-Gn-abY"/>
@@ -213,6 +213,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="R1d-Ne-rQr"/>
                     </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="1000"/>
                     <connections>

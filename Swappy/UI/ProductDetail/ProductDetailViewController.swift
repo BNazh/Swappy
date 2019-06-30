@@ -13,7 +13,7 @@ protocol ProductDetailView: class, ErrorView, LoadingView, OkAlertView {
     func displayActionSettings(isSellerButtonHidden: Bool, isEditViewHidden: Bool)
 }
 
-class ProductDetailViewController: CardViewController {
+class ProductDetailViewController: UIViewController {
     
     var presenter: ProductDetailPresenter!
 
@@ -27,8 +27,6 @@ class ProductDetailViewController: CardViewController {
     
     @IBOutlet weak var scrollView: UIScrollView!
     
-    let pullHandler = PullToDismissHandler()
-    
     // MARK: - Lifecycle
 
     override func viewDidLoad() {
@@ -37,18 +35,9 @@ class ProductDetailViewController: CardViewController {
         presenter.showProduct()
         presenter.setActions()
         
-        pullHandler.setup(scrollView: scrollView) { [weak self] in
-            self?.dismiss(animated: true, completion: nil)
-        }
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        imageSlider.roundCorners(corners: [.topRight, .topLeft], radius: 16)
-    }
-    
-    override var prefersStatusBarHidden: Bool {
-        return true
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
     }
     
     // MARK: - Actions
