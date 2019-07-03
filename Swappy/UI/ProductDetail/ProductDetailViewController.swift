@@ -35,19 +35,13 @@ class ProductDetailViewController: UIViewController {
         presenter.showProduct()
         presenter.setActions()
         
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.isTranslucent = true
+        setupNavigationBar()
     }
     
     // MARK: - Actions
     
     @IBAction func openSellerTouchedDown(_ sender: UIButton) {
         presenter.showSeller()
-    }
-    
-    @IBAction func closeTapped(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func updateProductTapped(_ sender: UIButton) {
@@ -90,5 +84,13 @@ extension ProductDetailViewController: AnalyticScreenProvider {
     
     var screen: AnalyticScreen {
         return .productDetails
+    }
+}
+
+private extension ProductDetailViewController {
+    
+    func setupNavigationBar() {
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
     }
 }

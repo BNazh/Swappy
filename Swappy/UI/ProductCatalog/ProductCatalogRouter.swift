@@ -29,10 +29,15 @@ final class ProductCatalogRouterImp {
 extension ProductCatalogRouterImp: ProductCatalogRouter {
     
     func openProductDetail(product: Product) {
+//        let test = TestViewController()
+//
+//        viewController.navigationController?.pushViewController(test, animated: true)
+//
+        
         let productDetail: ProductDetailViewController = UIStoryboard.createViewController()
-        
+
         productDetail.presenter.setInitState(product: product, isOwner: false)
-        
+
         let navigationVC = viewController.navigationController
         navigationVC?.pushViewController(productDetail, animated: true)
     }
