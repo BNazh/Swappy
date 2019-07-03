@@ -14,6 +14,6 @@ class SeparatorView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        backgroundColor = .backgroundColor
+        backgroundColor = .whiteSmoke
     }
 }

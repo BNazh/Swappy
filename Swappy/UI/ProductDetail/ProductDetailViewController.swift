@@ -13,21 +13,24 @@ protocol ProductDetailView: class, ErrorView, LoadingView, OkAlertView {
     func displayActionSettings(isSellerButtonHidden: Bool, isEditViewHidden: Bool)
 }
 
-class ProductDetailViewController: CardViewController {
+class ProductDetailViewController: UIViewController {
     
     var presenter: ProductDetailPresenter!
 
     @IBOutlet weak var imageSlider: ImageSlider!
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
+    
+    @IBOutlet weak var sizeLabel: UILabel!
+    @IBOutlet weak var categoryLabel: UILabel!
+    
     @IBOutlet weak var descriptionLabel: UILabel!
     
     @IBOutlet weak var sellerContainerView: UIView!
     @IBOutlet weak var editContainerView: UIView!
     
     @IBOutlet weak var scrollView: UIScrollView!
-    
-    let pullHandler = PullToDismissHandler()
     
     // MARK: - Lifecycle
 
@@ -37,28 +40,13 @@ class ProductDetailViewController: CardViewController {
         presenter.showProduct()
         presenter.setActions()
         
-        pullHandler.setup(scrollView: scrollView) { [weak self] in
-            self?.dismiss(animated: true, completion: nil)
-        }
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        imageSlider.roundCorners(corners: [.topRight, .topLeft], radius: 16)
-    }
-    
-    override var prefersStatusBarHidden: Bool {
-        return true
+        setupNavigationBar()
     }
     
     // MARK: - Actions
     
     @IBAction func openSellerTouchedDown(_ sender: UIButton) {
         presenter.showSeller()
-    }
-    
-    @IBAction func closeTapped(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func updateProductTapped(_ sender: UIButton) {
@@ -86,8 +74,12 @@ extension ProductDetailViewController: ProductDetailView {
     func showProduct(viewModel: ProductViewModel) {
         imageSlider.setImageUrls(viewModel.imageUrls)
         
-        titleLabel.attributedText = viewModel.title
+        titleLabel.text = viewModel.title
         priceLabel.text = viewModel.price
+        
+        sizeLabel.text = viewModel.size
+        categoryLabel.text = viewModel.category
+        
         descriptionLabel.text = viewModel.description
     }
     
@@ -101,5 +93,19 @@ extension ProductDetailViewController: AnalyticScreenProvider {
     
     var screen: AnalyticScreen {
         return .productDetails
+    }
+}
+
+private extension ProductDetailViewController {
+    
+    func setupNavigationBar() {
+        if #available(iOS 11.0, *) {
+            scrollView.contentInsetAdjustmentBehavior = .never
+        } else {
+            automaticallyAdjustsScrollViewInsets = false
+        }
+        
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
     }
 }

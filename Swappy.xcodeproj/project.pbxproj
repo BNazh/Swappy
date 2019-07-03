@@ -37,6 +37,8 @@
 		E1167C0B2291A81000472324 /* CategoryFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1167C0A2291A81000472324 /* CategoryFilter.swift */; };
 		E1167C0D2291CECF00472324 /* CategoryFilterAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1167C0C2291CECF00472324 /* CategoryFilterAssembly.swift */; };
 		E121128C2262395A0060CD3D /* VKService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E121128B2262395A0060CD3D /* VKService.swift */; };
+		E140436822CC9D8D00B843D0 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E140436722CC9D8D00B843D0 /* TestViewController.swift */; };
+		E15BCEEA22C9672400FC5B30 /* TransparentNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15BCEE922C9672400FC5B30 /* TransparentNavigationController.swift */; };
 		E164C3932231B5DF00D1AB13 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E164C3922231B5DF00D1AB13 /* ProductDetailViewController.swift */; };
 		E164C3952231B5FE00D1AB13 /* ProductDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E164C3942231B5FE00D1AB13 /* ProductDetail.storyboard */; };
 		E164C39722326BAD00D1AB13 /* Collection+SafeSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = E164C39622326BAD00D1AB13 /* Collection+SafeSubscription.swift */; };
@@ -216,6 +218,8 @@
 		E1167C0A2291A81000472324 /* CategoryFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryFilter.swift; sourceTree = "<group>"; };
 		E1167C0C2291CECF00472324 /* CategoryFilterAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryFilterAssembly.swift; sourceTree = "<group>"; };
 		E121128B2262395A0060CD3D /* VKService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKService.swift; sourceTree = "<group>"; };
+		E140436722CC9D8D00B843D0 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		E15BCEE922C9672400FC5B30 /* TransparentNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransparentNavigationController.swift; sourceTree = "<group>"; };
 		E164C3922231B5DF00D1AB13 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		E164C3942231B5FE00D1AB13 /* ProductDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProductDetail.storyboard; sourceTree = "<group>"; };
 		E164C39622326BAD00D1AB13 /* Collection+SafeSubscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+SafeSubscription.swift"; sourceTree = "<group>"; };
@@ -495,6 +499,7 @@
 				E164C3922231B5DF00D1AB13 /* ProductDetailViewController.swift */,
 				E1B4B1DA2235BDE400520082 /* ProductDetailPresenter.swift */,
 				E1FC30AE2239738200DF1325 /* ProductDetailRouter.swift */,
+				E140436722CC9D8D00B843D0 /* TestViewController.swift */,
 			);
 			path = ProductDetail;
 			sourceTree = "<group>";
@@ -938,6 +943,7 @@
 			children = (
 				E1F0176B22493CE4001A10D7 /* Extensions */,
 				E1FF3E6B223A302900443DED /* CardViewController.swift */,
+				E15BCEE922C9672400FC5B30 /* TransparentNavigationController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1338,6 +1344,7 @@
 				E1FC30A922396F4B00DF1325 /* SellerInfoPresenter.swift in Sources */,
 				E19F7E1622310B3D00BAFC7A /* Swinject.swift in Sources */,
 				E1167C082291A62100472324 /* CategoryFilterPresenter.swift in Sources */,
+				E140436822CC9D8D00B843D0 /* TestViewController.swift in Sources */,
 				E1FC309E22378CC100DF1325 /* UIViewController+Storyboard.swift in Sources */,
 				E1BC5AD922312456001FD1D6 /* ProductCellViewModel.swift in Sources */,
 				E18FB17A228812EB00F15F66 /* CategoryTarget.swift in Sources */,
@@ -1413,6 +1420,7 @@
 				E17CA1A32256A5CC00D5C955 /* Resolver+Extension.swift in Sources */,
 				E111749022436FBF00BD19B4 /* CodeConfirmationViewController.swift in Sources */,
 				E1FF3EA2223E77B800443DED /* ProductsDDM.swift in Sources */,
+				E15BCEEA22C9672400FC5B30 /* TransparentNavigationController.swift in Sources */,
 				E1BC5ACA22310F1F001FD1D6 /* User.swift in Sources */,
 				E121128C2262395A0060CD3D /* VKService.swift in Sources */,
 				E1F0175A224644F5001A10D7 /* ImageService.swift in Sources */,

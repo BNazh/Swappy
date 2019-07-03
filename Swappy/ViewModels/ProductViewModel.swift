@@ -11,8 +11,10 @@ import Foundation
 struct ProductViewModel {
     
     let id: String
-    let title: NSAttributedString
+    let title: String
     let price: String
+    let size: String
+    let category: String
     let description: String
     
     let imageUrls: [String]
@@ -20,11 +22,10 @@ struct ProductViewModel {
     init(product: Product) {
         id = product.id
         
-        let name = "\(product.name) "
-        let size = product.size
-        title = name.appendBolded(size, fontSize: 17)
-        
+        title = product.name
         price = product.price.stringValue
+        size = product.size
+        category = product.category
         description = product.description
         imageUrls = product.images
     }
