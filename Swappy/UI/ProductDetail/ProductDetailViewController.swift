@@ -18,8 +18,13 @@ class ProductDetailViewController: UIViewController {
     var presenter: ProductDetailPresenter!
 
     @IBOutlet weak var imageSlider: ImageSlider!
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
+    
+    @IBOutlet weak var sizeLabel: UILabel!
+    @IBOutlet weak var categoryLabel: UILabel!
+    
     @IBOutlet weak var descriptionLabel: UILabel!
     
     @IBOutlet weak var sellerContainerView: UIView!
@@ -69,8 +74,12 @@ extension ProductDetailViewController: ProductDetailView {
     func showProduct(viewModel: ProductViewModel) {
         imageSlider.setImageUrls(viewModel.imageUrls)
         
-        titleLabel.attributedText = viewModel.title
+        titleLabel.text = viewModel.title
         priceLabel.text = viewModel.price
+        
+        sizeLabel.text = viewModel.size
+        categoryLabel.text = viewModel.category
+        
         descriptionLabel.text = viewModel.description
     }
     
@@ -90,6 +99,12 @@ extension ProductDetailViewController: AnalyticScreenProvider {
 private extension ProductDetailViewController {
     
     func setupNavigationBar() {
+        if #available(iOS 11.0, *) {
+            scrollView.contentInsetAdjustmentBehavior = .never
+        } else {
+            automaticallyAdjustsScrollViewInsets = false
+        }
+        
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
     }
