@@ -30,7 +30,7 @@ final class ProductCatalogViewController: UIViewController {
         definesPresentationContext = true
         
         dataDisplayManager.setup(delegate: self, collectionView: collectionView)
-        collectionView.contentInset = UIEdgeInsets(top: 0, left: 4, bottom: 100, right: 4)
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: 8, bottom: 100, right: 8)
         
         presenter.loadProducts()
     }
@@ -79,4 +79,9 @@ extension ProductCatalogViewController: AnalyticScreenProvider {
     var screen: AnalyticScreen {
         return .productCatalog
     }
+}
+
+private extension ProductCatalogViewController {
+    
+    
 }
