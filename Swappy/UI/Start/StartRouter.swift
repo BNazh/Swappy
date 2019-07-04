@@ -14,24 +14,13 @@ protocol StartRouter: class {
 
 final class StartRouterImp {
     
-//    // MARK: - Properties
-//    
-//    let viewController: UIViewController
-//    
-//    // MARK: - Init
-//    
-//    init(viewController: UIViewController) {
-//        self.viewController = viewController
-//    }
+    
 }
 
 extension StartRouterImp: StartRouter {
     
     func showMainScreen() {
-        let name = MainViewController.storyboardName
-        let storyboard = UIStoryboard(name: name, bundle: nil)
-        
-        let controller = storyboard.instantiateInitialViewController()
+        let controller = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
         
         UIApplication.shared.keyWindow?.rootViewController = controller
     }

@@ -38,7 +38,6 @@
 		E1167C0D2291CECF00472324 /* CategoryFilterAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1167C0C2291CECF00472324 /* CategoryFilterAssembly.swift */; };
 		E121128C2262395A0060CD3D /* VKService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E121128B2262395A0060CD3D /* VKService.swift */; };
 		E140436822CC9D8D00B843D0 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E140436722CC9D8D00B843D0 /* TestViewController.swift */; };
-		E15BCEEA22C9672400FC5B30 /* TransparentNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15BCEE922C9672400FC5B30 /* TransparentNavigationController.swift */; };
 		E164C3932231B5DF00D1AB13 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E164C3922231B5DF00D1AB13 /* ProductDetailViewController.swift */; };
 		E164C3952231B5FE00D1AB13 /* ProductDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E164C3942231B5FE00D1AB13 /* ProductDetail.storyboard */; };
 		E164C39722326BAD00D1AB13 /* Collection+SafeSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = E164C39622326BAD00D1AB13 /* Collection+SafeSubscription.swift */; };
@@ -46,6 +45,7 @@
 		E164C39E2235A70E00D1AB13 /* SeparatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E164C39D2235A70E00D1AB13 /* SeparatorView.swift */; };
 		E164C3A02235A8AA00D1AB13 /* UIColor+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E164C39F2235A8AA00D1AB13 /* UIColor+App.swift */; };
 		E164C3A22235A92300D1AB13 /* ImageSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E164C3A12235A92300D1AB13 /* ImageSlider.swift */; };
+		E166D60E22CE293E004704DC /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E166D60D22CE293E004704DC /* MainTabBarController.swift */; };
 		E16D31CB2258BF5500033DCC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E16D31C92258BF5500033DCC /* Localizable.strings */; };
 		E16D31CE2258EA5A00033DCC /* UITextField+DoneToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16D31CD2258EA5A00033DCC /* UITextField+DoneToolbar.swift */; };
 		E17CA187224C24FE00D5C955 /* AnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CA186224C24FE00D5C955 /* AnalyticsManager.swift */; };
@@ -148,7 +148,6 @@
 		E1FF3E91223A338800443DED /* LoginCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF3E90223A338800443DED /* LoginCardViewController.swift */; };
 		E1FF3E97223A350900443DED /* LoginCard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1FF3E96223A350900443DED /* LoginCard.storyboard */; };
 		E1FF3E99223A373000443DED /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF3E98223A373000443DED /* BaseButton.swift */; };
-		E1FF3E9E223E634A00443DED /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF3E9D223E634A00443DED /* MainViewController.swift */; };
 		E1FF3EA2223E77B800443DED /* ProductsDDM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF3EA1223E77B800443DED /* ProductsDDM.swift */; };
 		E1FF3EA4223E77C100443DED /* ProductsDDMImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF3EA3223E77C100443DED /* ProductsDDMImp.swift */; };
 		E1FF3EA7223E9A1300443DED /* NoProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF3EA6223E9A1200443DED /* NoProductsViewController.swift */; };
@@ -219,7 +218,6 @@
 		E1167C0C2291CECF00472324 /* CategoryFilterAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryFilterAssembly.swift; sourceTree = "<group>"; };
 		E121128B2262395A0060CD3D /* VKService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKService.swift; sourceTree = "<group>"; };
 		E140436722CC9D8D00B843D0 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
-		E15BCEE922C9672400FC5B30 /* TransparentNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransparentNavigationController.swift; sourceTree = "<group>"; };
 		E164C3922231B5DF00D1AB13 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		E164C3942231B5FE00D1AB13 /* ProductDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProductDetail.storyboard; sourceTree = "<group>"; };
 		E164C39622326BAD00D1AB13 /* Collection+SafeSubscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+SafeSubscription.swift"; sourceTree = "<group>"; };
@@ -227,6 +225,7 @@
 		E164C39D2235A70E00D1AB13 /* SeparatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparatorView.swift; sourceTree = "<group>"; };
 		E164C39F2235A8AA00D1AB13 /* UIColor+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+App.swift"; sourceTree = "<group>"; };
 		E164C3A12235A92300D1AB13 /* ImageSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSlider.swift; sourceTree = "<group>"; };
+		E166D60D22CE293E004704DC /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		E16D31CA2258BF5500033DCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Resources/Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E16D31CD2258EA5A00033DCC /* UITextField+DoneToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+DoneToolbar.swift"; sourceTree = "<group>"; };
 		E17CA186224C24FE00D5C955 /* AnalyticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsManager.swift; sourceTree = "<group>"; };
@@ -339,7 +338,6 @@
 		E1FF3E90223A338800443DED /* LoginCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCardViewController.swift; sourceTree = "<group>"; };
 		E1FF3E96223A350900443DED /* LoginCard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginCard.storyboard; sourceTree = "<group>"; };
 		E1FF3E98223A373000443DED /* BaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
-		E1FF3E9D223E634A00443DED /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E1FF3EA1223E77B800443DED /* ProductsDDM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsDDM.swift; sourceTree = "<group>"; };
 		E1FF3EA3223E77C100443DED /* ProductsDDMImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsDDMImp.swift; sourceTree = "<group>"; };
 		E1FF3EA6223E9A1200443DED /* NoProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoProductsViewController.swift; sourceTree = "<group>"; };
@@ -943,7 +941,6 @@
 			children = (
 				E1F0176B22493CE4001A10D7 /* Extensions */,
 				E1FF3E6B223A302900443DED /* CardViewController.swift */,
-				E15BCEE922C9672400FC5B30 /* TransparentNavigationController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -962,7 +959,7 @@
 			children = (
 				E17CA18E224E74A800D5C955 /* Debug */,
 				E19F7DD82231063900BAFC7A /* Main.storyboard */,
-				E1FF3E9D223E634A00443DED /* MainViewController.swift */,
+				E166D60D22CE293E004704DC /* MainTabBarController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -1420,7 +1417,6 @@
 				E17CA1A32256A5CC00D5C955 /* Resolver+Extension.swift in Sources */,
 				E111749022436FBF00BD19B4 /* CodeConfirmationViewController.swift in Sources */,
 				E1FF3EA2223E77B800443DED /* ProductsDDM.swift in Sources */,
-				E15BCEEA22C9672400FC5B30 /* TransparentNavigationController.swift in Sources */,
 				E1BC5ACA22310F1F001FD1D6 /* User.swift in Sources */,
 				E121128C2262395A0060CD3D /* VKService.swift in Sources */,
 				E1F0175A224644F5001A10D7 /* ImageService.swift in Sources */,
@@ -1447,6 +1443,7 @@
 				E1F0176A224935BA001A10D7 /* TextFieldPickerDDM.swift in Sources */,
 				E164C39722326BAD00D1AB13 /* Collection+SafeSubscription.swift in Sources */,
 				E1FC309C22378BCB00DF1325 /* ProductCatalogRouter.swift in Sources */,
+				E166D60E22CE293E004704DC /* MainTabBarController.swift in Sources */,
 				E1FF3EA7223E9A1300443DED /* NoProductsViewController.swift in Sources */,
 				E1BC5AD422312160001FD1D6 /* ProductCatalogViewController.swift in Sources */,
 				E1BC5AED223142E3001FD1D6 /* PinterestLayout.swift in Sources */,
@@ -1456,7 +1453,6 @@
 				E1FF3EB9223EE18100443DED /* VKButton.swift in Sources */,
 				E1F0175F2246B286001A10D7 /* PhotosViewController.swift in Sources */,
 				E11174962243719400BD19B4 /* Core.swift in Sources */,
-				E1FF3E9E223E634A00443DED /* MainViewController.swift in Sources */,
 				E17CA1A122569A7700D5C955 /* FirebaseAnalyticsManager.swift in Sources */,
 				E17CA189224C257100D5C955 /* AnalyticEvent.swift in Sources */,
 				E164C3932231B5DF00D1AB13 /* ProductDetailViewController.swift in Sources */,
