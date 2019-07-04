@@ -83,5 +83,4 @@ extension ProductCatalogViewController: AnalyticScreenProvider {
 
 private extension ProductCatalogViewController {
     
-    
 }

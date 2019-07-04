@@ -10,16 +10,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Product Catalog View Controller-->
+        <!--Swappy-->
         <scene sceneID="do6-UZ-vGY">
             <objects>
-                <viewController storyboardIdentifier="ProductCatalogViewController" id="IUz-77-IIh" customClass="ProductCatalogViewController" customModule="Swappy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProductCatalogViewController" title="Swappy" id="IUz-77-IIh" customClass="ProductCatalogViewController" customModule="Swappy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E7Q-oD-chI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fmP-lM-xgc">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewLayout key="collectionViewLayout" id="43K-jJ-SN5" customClass="PinterestLayout" customModule="Swappy" customModuleProvider="target"/>
                                 <cells/>
@@ -39,7 +39,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="fmP-lM-xgc" firstAttribute="top" secondItem="E7Q-oD-chI" secondAttribute="top" id="3ML-Mx-H9k"/>
+                            <constraint firstItem="fmP-lM-xgc" firstAttribute="top" secondItem="E7Q-oD-chI" secondAttribute="topMargin" id="3ML-Mx-H9k"/>
                             <constraint firstItem="fmP-lM-xgc" firstAttribute="trailing" secondItem="7Zg-Fj-xaj" secondAttribute="trailing" id="4x5-LN-bQu"/>
                             <constraint firstItem="7Zg-Fj-xaj" firstAttribute="bottom" secondItem="Y44-ZI-htH" secondAttribute="bottom" constant="24" id="EgC-ar-J6u"/>
                             <constraint firstItem="7Zg-Fj-xaj" firstAttribute="trailing" secondItem="Y44-ZI-htH" secondAttribute="trailing" constant="8" id="hZj-XQ-JmQ"/>
