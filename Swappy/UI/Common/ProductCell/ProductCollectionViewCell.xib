@@ -35,13 +35,13 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="a b c" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MmO-8g-a3p">
-                                <rect key="frame" x="8" y="150" width="138" height="46"/>
+                                <rect key="frame" x="0.0" y="150" width="154" height="46"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1099 ₽" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qth-KS-cS5">
-                                <rect key="frame" x="8" y="200" width="138" height="22"/>
+                                <rect key="frame" x="0.0" y="200" width="154" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="k4O-se-rgD"/>
                                 </constraints>
@@ -60,7 +60,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="MmO-8g-a3p" firstAttribute="trailing" secondItem="r3O-9I-sLY" secondAttribute="trailing" id="BMA-u5-l84"/>
+                            <constraint firstItem="MmO-8g-a3p" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="BMA-u5-l84"/>
                             <constraint firstItem="Qth-KS-cS5" firstAttribute="leading" secondItem="MmO-8g-a3p" secondAttribute="leading" id="Ece-3h-bHw"/>
                             <constraint firstItem="r3O-9I-sLY" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="Ien-xn-DXn"/>
                             <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="r3O-9I-sLY" secondAttribute="trailing" constant="8" id="N1c-7o-jEM"/>
@@ -69,7 +69,7 @@
                             <constraint firstItem="X4m-Bt-aHH" firstAttribute="trailing" secondItem="r3O-9I-sLY" secondAttribute="trailing" id="iCL-wu-mZP"/>
                             <constraint firstItem="r3O-9I-sLY" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="kF4-uJ-UzY"/>
                             <constraint firstItem="MmO-8g-a3p" firstAttribute="top" secondItem="r3O-9I-sLY" secondAttribute="bottom" constant="4" id="mUN-Jl-piY"/>
-                            <constraint firstItem="MmO-8g-a3p" firstAttribute="leading" secondItem="r3O-9I-sLY" secondAttribute="leading" id="wTW-3N-JjK"/>
+                            <constraint firstItem="MmO-8g-a3p" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="wTW-3N-JjK"/>
                             <constraint firstItem="Qth-KS-cS5" firstAttribute="trailing" secondItem="MmO-8g-a3p" secondAttribute="trailing" id="xqF-xh-nTm"/>
                             <constraint firstItem="r3O-9I-sLY" firstAttribute="top" secondItem="X4m-Bt-aHH" secondAttribute="top" id="ySy-5D-I6c"/>
                         </constraints>
