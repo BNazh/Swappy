@@ -14,6 +14,7 @@
 		E1000631228232E500CDC509 /* AppsflyerAnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1000630228232E500CDC509 /* AppsflyerAnalyticsManager.swift */; };
 		E100063422824A4500CDC509 /* FBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E100063322824A4500CDC509 /* FBService.swift */; };
 		E100063622824A4C00CDC509 /* FBServiceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E100063522824A4C00CDC509 /* FBServiceImp.swift */; };
+		E10717CE22CE6233004B1A5D /* ProfileHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E10717CD22CE6233004B1A5D /* ProfileHeaderView.xib */; };
 		E10850C2223EF78F00941EA5 /* PhoneLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10850C1223EF78F00941EA5 /* PhoneLoginViewController.swift */; };
 		E10850C4223F276D00941EA5 /* EditProduct.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E10850C3223F276D00941EA5 /* EditProduct.storyboard */; };
 		E11174742240AD8F00BD19B4 /* EditProductAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11174732240AD8F00BD19B4 /* EditProductAssembly.swift */; };
@@ -37,6 +38,7 @@
 		E1167C0B2291A81000472324 /* CategoryFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1167C0A2291A81000472324 /* CategoryFilter.swift */; };
 		E1167C0D2291CECF00472324 /* CategoryFilterAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1167C0C2291CECF00472324 /* CategoryFilterAssembly.swift */; };
 		E121128C2262395A0060CD3D /* VKService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E121128B2262395A0060CD3D /* VKService.swift */; };
+		E13FF1BE22CE5BB800A6CD85 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13FF1BD22CE5BB800A6CD85 /* ProfileHeaderView.swift */; };
 		E140436822CC9D8D00B843D0 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E140436722CC9D8D00B843D0 /* TestViewController.swift */; };
 		E164C3932231B5DF00D1AB13 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E164C3922231B5DF00D1AB13 /* ProductDetailViewController.swift */; };
 		E164C3952231B5FE00D1AB13 /* ProductDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E164C3942231B5FE00D1AB13 /* ProductDetail.storyboard */; };
@@ -194,6 +196,7 @@
 		E1000630228232E500CDC509 /* AppsflyerAnalyticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsflyerAnalyticsManager.swift; sourceTree = "<group>"; };
 		E100063322824A4500CDC509 /* FBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBService.swift; sourceTree = "<group>"; };
 		E100063522824A4C00CDC509 /* FBServiceImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBServiceImp.swift; sourceTree = "<group>"; };
+		E10717CD22CE6233004B1A5D /* ProfileHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileHeaderView.xib; sourceTree = "<group>"; };
 		E10850C1223EF78F00941EA5 /* PhoneLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneLoginViewController.swift; sourceTree = "<group>"; };
 		E10850C3223F276D00941EA5 /* EditProduct.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditProduct.storyboard; sourceTree = "<group>"; };
 		E11174732240AD8F00BD19B4 /* EditProductAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProductAssembly.swift; sourceTree = "<group>"; };
@@ -217,6 +220,7 @@
 		E1167C0A2291A81000472324 /* CategoryFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryFilter.swift; sourceTree = "<group>"; };
 		E1167C0C2291CECF00472324 /* CategoryFilterAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryFilterAssembly.swift; sourceTree = "<group>"; };
 		E121128B2262395A0060CD3D /* VKService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKService.swift; sourceTree = "<group>"; };
+		E13FF1BD22CE5BB800A6CD85 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		E140436722CC9D8D00B843D0 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		E164C3922231B5DF00D1AB13 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		E164C3942231B5FE00D1AB13 /* ProductDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProductDetail.storyboard; sourceTree = "<group>"; };
@@ -478,6 +482,15 @@
 			path = CodeConfirmation;
 			sourceTree = "<group>";
 		};
+		E13FF1BC22CE5BAA00A6CD85 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				E13FF1BD22CE5BB800A6CD85 /* ProfileHeaderView.swift */,
+				E10717CD22CE6233004B1A5D /* ProfileHeaderView.xib */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
 		E164C3902231B5B200D1AB13 /* ProductCatalog */ = {
 			isa = PBXGroup;
 			children = (
@@ -505,6 +518,7 @@
 		E164C39922358E0400D1AB13 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				E13FF1BC22CE5BAA00A6CD85 /* Headers */,
 				E18FB18C22882D5800F15F66 /* CategoryCell */,
 				E1FF3EA0223E779700443DED /* ProductsDDM */,
 				E1BC5AE9223133F0001FD1D6 /* ProductCell */,
@@ -1145,6 +1159,7 @@
 				E1FC30A72238DC9900DF1325 /* SellerInfo.storyboard in Resources */,
 				E1FF3EAD223E9CC300443DED /* MyProducts.storyboard in Resources */,
 				E18FB1852288211C00F15F66 /* CategoryFilter.storyboard in Resources */,
+				E10717CE22CE6233004B1A5D /* ProfileHeaderView.xib in Resources */,
 				E18FB18E22882D7900F15F66 /* CategoryTableViewCell.xib in Resources */,
 				E1BC5ADE223124B3001FD1D6 /* ProductCollectionViewCell.xib in Resources */,
 				E19F7DDF2231063A00BAFC7A /* Assets.xcassets in Resources */,
@@ -1368,6 +1383,7 @@
 				E17CA187224C24FE00D5C955 /* AnalyticsManager.swift in Sources */,
 				E11174872242B4D300BD19B4 /* PhoneLoginPresenter.swift in Sources */,
 				E11174742240AD8F00BD19B4 /* EditProductAssembly.swift in Sources */,
+				E13FF1BE22CE5BB800A6CD85 /* ProfileHeaderView.swift in Sources */,
 				E1F0175C224644FB001A10D7 /* ImageServiceImp.swift in Sources */,
 				E17CA199225338CE00D5C955 /* NotificationName+Product.swift in Sources */,
 				E111747E2241860400BD19B4 /* AuthService.swift in Sources */,

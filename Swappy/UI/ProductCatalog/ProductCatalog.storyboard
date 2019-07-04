@@ -48,6 +48,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7Zg-Fj-xaj"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="C5a-C1-0xH"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="fmP-lM-xgc" id="aah-bn-JWG"/>
                         <outlet property="filterButton" destination="Y44-ZI-htH" id="3tH-pC-sRP"/>
