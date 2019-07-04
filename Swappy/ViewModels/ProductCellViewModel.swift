@@ -40,7 +40,7 @@ extension ProductCellViewModel {
     
     func cellHeight(withWidth width: CGFloat) -> CGFloat {
         let priceHeight: CGFloat = 22
-        let spaces: CGFloat = 8
+        let spaces: CGFloat = 8 + 16
         let imageHeight = width
         
         return imageHeight + priceHeight + titleHeight(width: width) + spaces

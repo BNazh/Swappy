@@ -11,15 +11,19 @@ import SDWebImage
 
 final class ProductCollectionViewCell: UICollectionViewCell {
     
+    // MARK - Properties
+    
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
-    @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var containerView: UIView!
+    
+    // MARK - Lifecycle
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        cityLabel.layer.cornerRadius = 4
+        layer.cornerRadius = 16
     }
     
     override func prepareForReuse() {
@@ -29,11 +33,40 @@ final class ProductCollectionViewCell: UICollectionViewCell {
         imageView.image = nil
     }
     
+    // MARK - Functions
+    
     func configure(with viewModel: ProductCellViewModel) {
         titleLabel.attributedText = viewModel.title
         priceLabel.text = viewModel.price
-        cityLabel.text = viewModel.city
         
         imageView.sd_setImage(with: viewModel.imageURL)
+        
+        setupShadows()
     }
-} 
+}
+
+private extension ProductCollectionViewCell {
+    
+    func setupShadows() {
+//        self.contentView.layer.cornerRadius = 2.0
+//        self.contentView.layer.borderWidth = 1.0
+//        self.contentView.layer.borderColor = UIColor.clear.cgColor
+//        self.contentView.layer.masksToBounds = true
+//
+//        self.layer.shadowColor = UIColor.black.cgColor
+//        self.layer.shadowOffset = CGSize(width: 0, height: 2.0)
+//        self.layer.shadowRadius = 2.0
+//        self.layer.shadowOpacity = 0.5
+//        self.layer.masksToBounds = false
+//        self.layer.shadowPath = UIBezierPath(roundedRect: self.bounds, cornerRadius: self.contentView.layer.cornerRadius).cgPath
+        
+        layer.cornerRadius = 16
+        layer.masksToBounds = false
+        
+        let shadowRect = CGRect(x: -2, y: -2, width: bounds.width + 4, height: bounds.height + 4)
+        containerView.layer.shadowPath = UIBezierPath(rect: shadowRect).cgPath
+        containerView.layer.shadowColor = UIColor.black.cgColor
+        containerView.layer.shadowRadius = 8
+        containerView.layer.shadowOpacity = 0.1
+    }
+}
