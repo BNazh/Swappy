@@ -8,6 +8,8 @@
 
 import UIKit
 
-final class ProfileHeaderView: UIView {
-    
+final class HeaderView: UICollectionReusableView {
+
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var photoImageView: UIImageView!
 }

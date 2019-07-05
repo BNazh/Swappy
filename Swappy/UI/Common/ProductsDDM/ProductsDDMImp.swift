@@ -35,6 +35,13 @@ extension ProductsDDMImp: ProductsDDM {
         
         collectionView.register(cellType: ProductCollectionViewCell.self)
         
+        let headerNib = UINib(nibName: "HeaderView", bundle: nil)
+        collectionView.register(
+            headerNib,
+            forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+            withReuseIdentifier: HeaderView.reuseIdentifier
+        )
+        
         layout?.delegate = self
     }
     
@@ -62,6 +69,10 @@ extension ProductsDDMImp: UICollectionViewDelegate {
 
 extension ProductsDDMImp: UICollectionViewDataSource {
     
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return cellModels.count
     }
@@ -80,6 +91,18 @@ extension ProductsDDMImp: UICollectionViewDataSource {
         
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
+        switch kind {
+        case UICollectionView.elementKindSectionHeader:
+            let identifier = HeaderView.reuseIdentifier
+            return collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: identifier, for: indexPath)
+            
+        default:
+            return UICollectionReusableView()
+        }
+    }
 }
 
 extension ProductsDDMImp: PinterestLayoutDelegate {
@@ -88,6 +111,7 @@ extension ProductsDDMImp: PinterestLayoutDelegate {
         let viewModel = cellModels[indexPath.row]
         return viewModel.cellHeight(withWidth: width)
     }
+
 }
 
 private extension ProductsDDMImp {
