@@ -41,7 +41,8 @@ extension MyProductsRouterImp: MyProductsRouter {
     func openLoginCard() {
         let loginCardVC: LoginCardViewController = UIStoryboard.createViewController()
         
-        viewController.present(loginCardVC, animated: true, completion: nil)
+        let tabBarController = viewController.tabBarController
+        tabBarController?.present(loginCardVC, animated: true, completion: nil)
     }
 }
 
