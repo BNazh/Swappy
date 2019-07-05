@@ -104,9 +104,15 @@ extension EditProductPresenterImp: EditProductPresenter {
     }
     
     func openCategorySelection() {
+        let input = SingleSelectionInput(
+            items: categoryService.categories,
+            selectedItem: selectedCategory,
+            title: "Категория",
+            buttonTitle: "Сохранить"
+        )
+            
         router.openCategorySelection(delegate: self,
-                                     items: [],
-                                     selectedItem: selectedCategory)
+                                     input: input)
     }
     
     func setState(_ state: EditProductInitState) {
@@ -114,9 +120,10 @@ extension EditProductPresenterImp: EditProductPresenter {
     }
 }
 
-extension EditProductPresenterImp: CategorySelectionDelegate {
+extension EditProductPresenterImp: SingleSelectionDelegate {
     
-    func didSelectCategory(_ category: Category) {
+    func didSelectItem(_ item: SelectionItem) {
+        guard let category = item as? Category else { return }
         selectedCategory = category
         view.selectCategory(category.name)
     }

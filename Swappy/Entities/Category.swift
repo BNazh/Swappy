@@ -8,8 +8,24 @@
 
 import Foundation
 
+// Категория товаров
 struct Category: Decodable {
+    
+    // MARK: - Properties
     
     let id: String
     let name: String
+}
+
+// MARK: - SelectionItem
+
+extension Category: SelectionItem {
+    
+    var selectionId: String {
+        return id
+    }
+    
+    var selectionTitle: String {
+        return name
+    }
 }
