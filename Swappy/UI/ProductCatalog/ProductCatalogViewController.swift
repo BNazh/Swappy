@@ -33,6 +33,8 @@ final class ProductCatalogViewController: UIViewController {
         collectionView.contentInset = UIEdgeInsets(top: 0, left: 8, bottom: 100, right: 8)
         
         presenter.loadProducts()
+        
+        setupNavigationBar()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -83,5 +85,11 @@ extension ProductCatalogViewController: AnalyticScreenProvider {
 
 private extension ProductCatalogViewController {
     
-    
+    func setupNavigationBar() {
+        if #available(iOS 11.0, *) {
+            navigationController?.navigationBar.prefersLargeTitles = true
+        } else {
+            // Fallback on earlier versions
+        }
+    }
 }

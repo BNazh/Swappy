@@ -14,7 +14,7 @@ protocol PinterestLayoutDelegate: class {
                         withWidth width: CGFloat) -> CGFloat
 }
 
-class PinterestLayout: UICollectionViewLayout {
+class PinterestLayout: UICollectionViewFlowLayout {
     
     // MARK: - Properties
     
@@ -24,6 +24,7 @@ class PinterestLayout: UICollectionViewLayout {
     fileprivate var cellPadding: CGFloat = 8
     
     fileprivate var cache = [UICollectionViewLayoutAttributes]()
+    fileprivate var headerCache: UICollectionViewLayoutAttributes?
     
     fileprivate var contentHeight: CGFloat = 0
     
@@ -46,13 +47,20 @@ class PinterestLayout: UICollectionViewLayout {
             return
         }
         
+        let headerHeight: CGFloat = 117.0
+        headerCache = UICollectionViewLayoutAttributes(
+            forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+            with: IndexPath(item: 0, section: 0)
+        )
+        headerCache?.frame = CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: UIScreen.main.bounds.width, height: headerHeight))
+        
         let columnWidth = contentWidth / CGFloat(numberOfColumns)
         var xOffset = [CGFloat]()
         for column in 0 ..< numberOfColumns {
             xOffset.append(CGFloat(column) * columnWidth)
         }
         var column = 0
-        var yOffset = [CGFloat](repeating: 0, count: numberOfColumns)
+        var yOffset = [CGFloat](repeating: headerHeight, count: numberOfColumns)
         
         
         for item in 0 ..< collectionView.numberOfItems(inSection: 0) {
@@ -87,7 +95,15 @@ class PinterestLayout: UICollectionViewLayout {
             }
         }
         
+        if let headerCache = headerCache, headerCache.frame.intersects(rect) {
+            visibleAttributes.append(headerCache)
+        }
+        
         return visibleAttributes
+    }
+    
+    override func layoutAttributesForSupplementaryView(ofKind elementKind: String, at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
+        return headerCache
     }
     
     override func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {

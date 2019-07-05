@@ -14,7 +14,7 @@ extension UIViewController {
         return String(describing: self)
     }
     
-    class var storyboardName: String {
+    static var storyboardName: String {
         return storyboardId.replacingOccurrences(of: "ViewController", with: "")
     }
 }
