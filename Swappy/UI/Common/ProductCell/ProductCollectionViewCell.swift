@@ -47,7 +47,7 @@ private extension ProductCollectionViewCell {
         layer.masksToBounds = false
         
         //let shadowRect = CGRect(x: -2, y: -2, width: bounds.width + 4, height: bounds.height + 10)
-        let shadowRect = CGRect(x: 0, y: 10, width: bounds.width, height: bounds.height)
+        let shadowRect = CGRect(x: 0, y: 6, width: bounds.width, height: bounds.height)
         containerView.layer.shadowPath = UIBezierPath(rect: shadowRect).cgPath
         containerView.layer.shadowColor = UIColor.black.cgColor
         containerView.layer.shadowRadius = 6
