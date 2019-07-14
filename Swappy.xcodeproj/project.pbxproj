@@ -38,6 +38,10 @@
 		E1167C0B2291A81000472324 /* CategoryFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1167C0A2291A81000472324 /* CategoryFilter.swift */; };
 		E1167C0D2291CECF00472324 /* CategoryFilterAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1167C0C2291CECF00472324 /* CategoryFilterAssembly.swift */; };
 		E121128C2262395A0060CD3D /* VKService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E121128B2262395A0060CD3D /* VKService.swift */; };
+		E127417222DB426000228F8B /* CityTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E127417122DB426000228F8B /* CityTarget.swift */; };
+		E127417522DB460F00228F8B /* CityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E127417422DB460F00228F8B /* CityService.swift */; };
+		E127417722DB461A00228F8B /* CityServiceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E127417622DB461A00228F8B /* CityServiceImp.swift */; };
+		E127417922DB53E600228F8B /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = E127417822DB53E600228F8B /* City.swift */; };
 		E13FF1BE22CE5BB800A6CD85 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13FF1BD22CE5BB800A6CD85 /* HeaderView.swift */; };
 		E140436822CC9D8D00B843D0 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E140436722CC9D8D00B843D0 /* TestViewController.swift */; };
 		E164C3932231B5DF00D1AB13 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E164C3922231B5DF00D1AB13 /* ProductDetailViewController.swift */; };
@@ -222,6 +226,10 @@
 		E1167C0A2291A81000472324 /* CategoryFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryFilter.swift; sourceTree = "<group>"; };
 		E1167C0C2291CECF00472324 /* CategoryFilterAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryFilterAssembly.swift; sourceTree = "<group>"; };
 		E121128B2262395A0060CD3D /* VKService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKService.swift; sourceTree = "<group>"; };
+		E127417122DB426000228F8B /* CityTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTarget.swift; sourceTree = "<group>"; };
+		E127417422DB460F00228F8B /* CityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityService.swift; sourceTree = "<group>"; };
+		E127417622DB461A00228F8B /* CityServiceImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityServiceImp.swift; sourceTree = "<group>"; };
+		E127417822DB53E600228F8B /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		E13FF1BD22CE5BB800A6CD85 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		E140436722CC9D8D00B843D0 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		E164C3922231B5DF00D1AB13 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
@@ -486,6 +494,15 @@
 			path = CodeConfirmation;
 			sourceTree = "<group>";
 		};
+		E127417322DB460200228F8B /* City */ = {
+			isa = PBXGroup;
+			children = (
+				E127417422DB460F00228F8B /* CityService.swift */,
+				E127417622DB461A00228F8B /* CityServiceImp.swift */,
+			);
+			path = City;
+			sourceTree = "<group>";
+		};
 		E13FF1BC22CE5BAA00A6CD85 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
@@ -589,6 +606,16 @@
 				E17CA1A62256B19800D5C955 /* UIViewController+Swizzling.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		E184E91D22DB421600542123 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				E100063222824A3500CDC509 /* FB */,
+				E1F78AFF22634CB900BA4BED /* VK */,
+				E111747C224185FA00BD19B4 /* Auth */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		E18FB17D22881D3A00F15F66 /* Social */ = {
@@ -728,6 +755,7 @@
 				E1117479224183A400BD19B4 /* AuthTarget.swift */,
 				E11174972246231600BD19B4 /* ImageTarget.swift */,
 				E18FB179228812EB00F15F66 /* CategoryTarget.swift */,
+				E127417122DB426000228F8B /* CityTarget.swift */,
 			);
 			path = Targets;
 			sourceTree = "<group>";
@@ -754,11 +782,10 @@
 		E19F7E0E22310A3F00BAFC7A /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				E127417322DB460200228F8B /* City */,
+				E184E91D22DB421600542123 /* Login */,
 				E18FB19122884C8C00F15F66 /* Category */,
-				E100063222824A3500CDC509 /* FB */,
-				E1F78AFF22634CB900BA4BED /* VK */,
 				E1F01758224644EF001A10D7 /* Image */,
-				E111747C224185FA00BD19B4 /* Auth */,
 				E111747B224185F100BD19B4 /* Products */,
 			);
 			name = Services;
@@ -822,6 +849,7 @@
 				E1BC5AC922310F1F001FD1D6 /* User.swift */,
 				E1BC5ACB22310F9D001FD1D6 /* Sex.swift */,
 				E1167C052291502B00472324 /* Category.swift */,
+				E127417822DB53E600228F8B /* City.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -1415,8 +1443,10 @@
 				E100063422824A4500CDC509 /* FBService.swift in Sources */,
 				E1FF3EB1223E9CDA00443DED /* MyProductsPresenter.swift in Sources */,
 				E17CA1A72256B19800D5C955 /* UIViewController+Swizzling.swift in Sources */,
+				E127417922DB53E600228F8B /* City.swift in Sources */,
 				E1FF3E6C223A302900443DED /* CardViewController.swift in Sources */,
 				E1FC30A02238504100DF1325 /* ProductDetailAssembly.swift in Sources */,
+				E127417722DB461A00228F8B /* CityServiceImp.swift in Sources */,
 				E11174892242B5B800BD19B4 /* PhoneLoginRouter.swift in Sources */,
 				E164C3A22235A92300D1AB13 /* ImageSlider.swift in Sources */,
 				E1167C062291502B00472324 /* Category.swift in Sources */,
@@ -1443,6 +1473,7 @@
 				E1A6655F2254FD2A007EE75F /* UIViewController+BackNavBarButton.swift in Sources */,
 				E164C39C223591AF00D1AB13 /* MainButton.swift in Sources */,
 				E11174802241860C00BD19B4 /* AuthServiceImp.swift in Sources */,
+				E127417522DB460F00228F8B /* CityService.swift in Sources */,
 				E111748D2242DBEA00BD19B4 /* ErrorView.swift in Sources */,
 				E1BC5AEF22318340001FD1D6 /* UICollectionView+RegisterCells.swift in Sources */,
 				E17CA1A32256A5CC00D5C955 /* Resolver+Extension.swift in Sources */,
@@ -1476,6 +1507,7 @@
 				E191571822CFA15E00117A87 /* SingleSelectionInput.swift in Sources */,
 				E1FC309C22378BCB00DF1325 /* ProductCatalogRouter.swift in Sources */,
 				E166D60E22CE293E004704DC /* MainTabBarController.swift in Sources */,
+				E127417222DB426000228F8B /* CityTarget.swift in Sources */,
 				E1FF3EA7223E9A1300443DED /* NoProductsViewController.swift in Sources */,
 				E1BC5AD422312160001FD1D6 /* ProductCatalogViewController.swift in Sources */,
 				E1BC5AED223142E3001FD1D6 /* PinterestLayout.swift in Sources */,

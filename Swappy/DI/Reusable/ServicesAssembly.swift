@@ -59,6 +59,10 @@ final class ServicesAssembly: Assembly {
             )
         }
         
+        container.register(CityService.self) { r in
+            return CityServiceImp()
+        }
+        
         container.register(VKService.self) { r in
             return VKServiceImp(tracker: r.resolve())
         }.inObjectScope(.container)
