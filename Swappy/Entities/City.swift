@@ -8,6 +8,16 @@
 
 struct City {
     
-    let id: String
     let title: String
+}
+
+extension City: SelectionItem {
+    
+    var selectionId: String {
+        return title
+    }
+    
+    var selectionTitle: String {
+        return title
+    }
 }

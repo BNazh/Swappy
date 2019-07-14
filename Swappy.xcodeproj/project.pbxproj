@@ -638,7 +638,7 @@
 			path = CategoriesFilter;
 			sourceTree = "<group>";
 		};
-		E18FB18622882AC800F15F66 /* CategorySelection */ = {
+		E18FB18622882AC800F15F66 /* SingleSelection */ = {
 			isa = PBXGroup;
 			children = (
 				E191571622CFA13F00117A87 /* Helpers */,
@@ -646,7 +646,7 @@
 				E18FB18722882AE200F15F66 /* SingleSelectionViewController.swift */,
 				E18FB1962288792E00F15F66 /* SingleSelectionPresenter.swift */,
 			);
-			path = CategorySelection;
+			path = SingleSelection;
 			sourceTree = "<group>";
 		};
 		E18FB18C22882D5800F15F66 /* CategoryCell */ = {
@@ -764,7 +764,7 @@
 			isa = PBXGroup;
 			children = (
 				E164C39922358E0400D1AB13 /* Common */,
-				E18FB18622882AC800F15F66 /* CategorySelection */,
+				E18FB18622882AC800F15F66 /* SingleSelection */,
 				E18FB17E2288200A00F15F66 /* CategoriesFilter */,
 				E1FF3EC6223EEC1E00443DED /* PhoneLogin */,
 				E1FF3E8F223A337600443DED /* LoginCard */,
