@@ -46,7 +46,6 @@ final class EditProductViewController: UIViewController {
         doneButton.setTitle(presenter.buttonTitle, for: .normal)
         
         setupPhotosHeight()
-        
         setupTextFields()
         
         presenter.initialize()

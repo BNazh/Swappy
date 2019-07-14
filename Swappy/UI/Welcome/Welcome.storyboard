@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="JDj-vk-l5v">
+            <objects>
+                <viewController id="cNQ-BE-Evi" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="txd-wx-TGi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swappy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1YG-AC-CoZ">
+                                <rect key="frame" x="16" y="80" width="343" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="JUw-bS-afg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Давайте познакомимся 🥰" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nq1-sM-Lnb">
+                                <rect key="frame" x="16" y="131" width="343" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="MBj-FS-cvk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.1803921568627451" green="0.1803921568627451" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QwZ-4T-pcV" customClass="AppTextField" customModule="Swappy" customModuleProvider="target">
+                                <rect key="frame" x="16" y="245.5" width="343" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="IVa-Xf-1by"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fdz-at-3zd" customClass="AppTextField" customModule="Swappy" customModuleProvider="target">
+                                <rect key="frame" x="16" y="313.5" width="343" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Ty7-Il-Oei"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xqX-Mv-fh3" customClass="MainButton" customModule="Swappy" customModuleProvider="target">
+                                <rect key="frame" x="16" y="397.5" width="343" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="ikt-ZY-Eb0"/>
+                                </constraints>
+                                <state key="normal" title="Начать"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rVB-By-sY4" firstAttribute="trailing" secondItem="xqX-Mv-fh3" secondAttribute="trailing" constant="16" id="1V7-aq-CcN"/>
+                            <constraint firstItem="rVB-By-sY4" firstAttribute="trailing" secondItem="1YG-AC-CoZ" secondAttribute="trailing" constant="16" id="6DG-L1-WUd"/>
+                            <constraint firstItem="Fdz-at-3zd" firstAttribute="trailing" secondItem="QwZ-4T-pcV" secondAttribute="trailing" id="KfK-sE-d1a"/>
+                            <constraint firstItem="nq1-sM-Lnb" firstAttribute="trailing" secondItem="1YG-AC-CoZ" secondAttribute="trailing" id="Mr0-JI-9Wu"/>
+                            <constraint firstItem="Fdz-at-3zd" firstAttribute="height" secondItem="QwZ-4T-pcV" secondAttribute="height" id="N32-ap-cd7"/>
+                            <constraint firstItem="Fdz-at-3zd" firstAttribute="leading" secondItem="QwZ-4T-pcV" secondAttribute="leading" id="N3l-dM-g5y"/>
+                            <constraint firstItem="QwZ-4T-pcV" firstAttribute="leading" secondItem="nq1-sM-Lnb" secondAttribute="leading" id="RrA-0n-Z5r"/>
+                            <constraint firstItem="nq1-sM-Lnb" firstAttribute="leading" secondItem="1YG-AC-CoZ" secondAttribute="leading" id="SOw-g7-CQq"/>
+                            <constraint firstItem="QwZ-4T-pcV" firstAttribute="trailing" secondItem="nq1-sM-Lnb" secondAttribute="trailing" id="Y1f-8U-hgP"/>
+                            <constraint firstItem="nq1-sM-Lnb" firstAttribute="top" secondItem="1YG-AC-CoZ" secondAttribute="bottom" constant="10" id="hUu-RH-r8r"/>
+                            <constraint firstItem="1YG-AC-CoZ" firstAttribute="top" secondItem="rVB-By-sY4" secondAttribute="top" constant="60" id="hgY-9S-iTO"/>
+                            <constraint firstItem="xqX-Mv-fh3" firstAttribute="leading" secondItem="rVB-By-sY4" secondAttribute="leading" constant="16" id="i65-T3-Tsb"/>
+                            <constraint firstItem="xqX-Mv-fh3" firstAttribute="top" secondItem="Fdz-at-3zd" secondAttribute="bottom" constant="24" id="mcv-dL-wRL"/>
+                            <constraint firstItem="1YG-AC-CoZ" firstAttribute="leading" secondItem="rVB-By-sY4" secondAttribute="leading" constant="16" id="n3k-Kk-XHZ"/>
+                            <constraint firstItem="Fdz-at-3zd" firstAttribute="top" secondItem="QwZ-4T-pcV" secondAttribute="bottom" constant="8" id="q2g-pw-Bz2"/>
+                            <constraint firstItem="Fdz-at-3zd" firstAttribute="centerY" secondItem="rVB-By-sY4" secondAttribute="centerY" id="uIK-0b-Ecf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rVB-By-sY4"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IHj-ta-RsF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="21.739130434782609" y="132.88043478260872"/>
+        </scene>
+    </scenes>
+</document>

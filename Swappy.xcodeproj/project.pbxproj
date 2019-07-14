@@ -69,6 +69,9 @@
 		E17CA1A52256B02300D5C955 /* LoginCardAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CA1A42256B02300D5C955 /* LoginCardAssembly.swift */; };
 		E17CA1A72256B19800D5C955 /* UIViewController+Swizzling.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CA1A62256B19800D5C955 /* UIViewController+Swizzling.swift */; };
 		E181AF57228A93C000AB8957 /* SelectionTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E181AF56228A93C000AB8957 /* SelectionTextFieldDelegate.swift */; };
+		E18E21FB22DB6978008C26D1 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18E21FA22DB6978008C26D1 /* WelcomeViewController.swift */; };
+		E18E21FD22DB6980008C26D1 /* WelcomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18E21FC22DB6980008C26D1 /* WelcomePresenter.swift */; };
+		E18E21FF22DB6B01008C26D1 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E18E21FE22DB6B01008C26D1 /* Welcome.storyboard */; };
 		E18FB17A228812EB00F15F66 /* CategoryTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18FB179228812EB00F15F66 /* CategoryTarget.swift */; };
 		E18FB17C22881D3400F15F66 /* FBButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18FB17B22881D3400F15F66 /* FBButton.swift */; };
 		E18FB1802288206800F15F66 /* CategoryFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18FB17F2288206800F15F66 /* CategoryFilterViewController.swift */; };
@@ -260,6 +263,9 @@
 		E181E1B2226671BF00624164 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		E181E1B3226671BF00624164 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		E181E1B4226671C000624164 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = Resources/ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E18E21FA22DB6978008C26D1 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		E18E21FC22DB6980008C26D1 /* WelcomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePresenter.swift; sourceTree = "<group>"; };
+		E18E21FE22DB6B01008C26D1 /* Welcome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
 		E18FB179228812EB00F15F66 /* CategoryTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTarget.swift; sourceTree = "<group>"; };
 		E18FB17B22881D3400F15F66 /* FBButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBButton.swift; sourceTree = "<group>"; };
 		E18FB17F2288206800F15F66 /* CategoryFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryFilterViewController.swift; sourceTree = "<group>"; };
@@ -503,6 +509,16 @@
 			path = City;
 			sourceTree = "<group>";
 		};
+		E127417A22DB67C800228F8B /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				E18E21FE22DB6B01008C26D1 /* Welcome.storyboard */,
+				E18E21FA22DB6978008C26D1 /* WelcomeViewController.swift */,
+				E18E21FC22DB6980008C26D1 /* WelcomePresenter.swift */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
 		E13FF1BC22CE5BAA00A6CD85 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
@@ -646,7 +662,8 @@
 				E18FB18722882AE200F15F66 /* SingleSelectionViewController.swift */,
 				E18FB1962288792E00F15F66 /* SingleSelectionPresenter.swift */,
 			);
-			path = SingleSelection;
+			name = SingleSelection;
+			path = ../../SingleSelection;
 			sourceTree = "<group>";
 		};
 		E18FB18C22882D5800F15F66 /* CategoryCell */ = {
@@ -764,7 +781,6 @@
 			isa = PBXGroup;
 			children = (
 				E164C39922358E0400D1AB13 /* Common */,
-				E18FB18622882AC800F15F66 /* SingleSelection */,
 				E18FB17E2288200A00F15F66 /* CategoriesFilter */,
 				E1FF3EC6223EEC1E00443DED /* PhoneLogin */,
 				E1FF3E8F223A337600443DED /* LoginCard */,
@@ -774,6 +790,7 @@
 				E164C3912231B5C200D1AB13 /* ProductDetail */,
 				E1FC30A32238DC4400DF1325 /* SellerInfo */,
 				E1FF3EC1223EEA8E00443DED /* EditProduct */,
+				E127417A22DB67C800228F8B /* Welcome */,
 				E1B624B722952126002090A8 /* Start */,
 			);
 			path = UI;
@@ -996,6 +1013,7 @@
 			isa = PBXGroup;
 			children = (
 				E1F0176B22493CE4001A10D7 /* Extensions */,
+				E18FB18622882AC800F15F66 /* SingleSelection */,
 				E1FF3E6B223A302900443DED /* CardViewController.swift */,
 			);
 			path = Controllers;
@@ -1201,6 +1219,7 @@
 				E1FC30A72238DC9900DF1325 /* SellerInfo.storyboard in Resources */,
 				E1FF3EAD223E9CC300443DED /* MyProducts.storyboard in Resources */,
 				E18FB1852288211C00F15F66 /* CategoryFilter.storyboard in Resources */,
+				E18E21FF22DB6B01008C26D1 /* Welcome.storyboard in Resources */,
 				E10717CE22CE6233004B1A5D /* HeaderView.xib in Resources */,
 				E18FB18E22882D7900F15F66 /* SelectionItemTableViewCell.xib in Resources */,
 				E1BC5ADE223124B3001FD1D6 /* ProductCollectionViewCell.xib in Resources */,
@@ -1401,6 +1420,7 @@
 				E1167C082291A62100472324 /* CategoryFilterPresenter.swift in Sources */,
 				E140436822CC9D8D00B843D0 /* TestViewController.swift in Sources */,
 				E1FC309E22378CC100DF1325 /* UIViewController+Storyboard.swift in Sources */,
+				E18E21FB22DB6978008C26D1 /* WelcomeViewController.swift in Sources */,
 				E1BC5AD922312456001FD1D6 /* ProductCellViewModel.swift in Sources */,
 				E18FB17A228812EB00F15F66 /* CategoryTarget.swift in Sources */,
 				E111747A224183A400BD19B4 /* AuthTarget.swift in Sources */,
@@ -1513,6 +1533,7 @@
 				E1BC5AED223142E3001FD1D6 /* PinterestLayout.swift in Sources */,
 				E181AF57228A93C000AB8957 /* SelectionTextFieldDelegate.swift in Sources */,
 				E1BC5ADC22312488001FD1D6 /* ProductCollectionViewCell.swift in Sources */,
+				E18E21FD22DB6980008C26D1 /* WelcomePresenter.swift in Sources */,
 				E18FB1802288206800F15F66 /* CategoryFilterViewController.swift in Sources */,
 				E1FF3EB9223EE18100443DED /* VKButton.swift in Sources */,
 				E1F0175F2246B286001A10D7 /* PhotosViewController.swift in Sources */,
