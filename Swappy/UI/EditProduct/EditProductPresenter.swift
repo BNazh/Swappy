@@ -22,6 +22,7 @@ protocol EditProductPresenter: class {
     func initialize()
     func performProductAction(productRO: ProductRO)
     func openCategorySelection()
+    func openCitySelection()
     
     func setState(_ state: EditProductInitState)
 }
@@ -115,6 +116,15 @@ extension EditProductPresenterImp: EditProductPresenter {
                                      input: input)
     }
     
+    func openCitySelection() {
+//        let input = SingleSelectionInput(
+//            items: <#T##[SelectionItem]#>,
+//            selectedItem: <#T##SelectionItem?#>,
+//            title: <#T##String#>,
+//            buttonTitle: <#T##String#>
+//        )
+    }
+    
     func setState(_ state: EditProductInitState) {
         self.state = state
     }
@@ -124,6 +134,7 @@ extension EditProductPresenterImp: SingleSelectionDelegate {
     
     func didSelectItem(_ item: SelectionItem) {
         guard let category = item as? Category else { return }
+        
         selectedCategory = category
         view.selectCategory(category.name)
     }
