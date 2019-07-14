@@ -17,6 +17,7 @@ final class EditProductAssembly: Assembly {
                 router: r.resolve(argument: view),
                 productService: r.resolve(),
                 categoryService: r.resolve(),
+                cityService: r.resolve(),
                 tracker: r.resolve()
             )
         }
@@ -29,7 +30,6 @@ final class EditProductAssembly: Assembly {
             let presenter = container.resolve(EditProductPresenter.self, argument: viewController)!
             
             viewController.presenter = presenter
-            viewController.citiesDDM = resolver.resolve(TextFieldPickerDDM.self)!
         }
     }
 }

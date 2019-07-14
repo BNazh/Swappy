@@ -6,11 +6,13 @@
 //  Copyright © 2019 SwappyTeam. All rights reserved.
 //
 
-protocol CityService {
+protocol CityService: AnyObject {
     
     // MARK: - Properties
     
     var cities: [City] { get }
+    
+    var selectedCity: City? { get set }
     
     // MARK: - Functions
     

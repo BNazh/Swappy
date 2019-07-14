@@ -8,6 +8,7 @@
 
 final class CityServiceImp {
     
+    var selectedCity: City?
 }
 
 // MARK: - CityService
@@ -16,8 +17,8 @@ extension CityServiceImp: CityService {
     
     var cities: [City] {
         return [
-            City(id: "moscow", title: "Москва"),
-            City(id: "sp", title: "Санкт-Петербург")
+            City(title: "Москва"),
+            City(title: "Питер")
         ]
     }
     

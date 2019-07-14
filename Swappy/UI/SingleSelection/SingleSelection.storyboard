@@ -13,7 +13,7 @@
         <!--Single Selection View Controller-->
         <scene sceneID="JpW-km-qsT">
             <objects>
-                <viewController storyboardIdentifier="SingleSelectionViewController" modalPresentationStyle="overCurrentContext" id="V1l-rc-rdK" customClass="SingleSelectionViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SingleSelectionViewController" modalPresentationStyle="overCurrentContext" id="V1l-rc-rdK" customClass="SingleSelectionViewController" customModule="Swappy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wXK-Vf-prr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

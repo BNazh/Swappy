@@ -75,7 +75,7 @@
 		E18FB1852288211C00F15F66 /* CategoryFilter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E18FB1842288211C00F15F66 /* CategoryFilter.storyboard */; };
 		E18FB18822882AE200F15F66 /* SingleSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18FB18722882AE200F15F66 /* SingleSelectionViewController.swift */; };
 		E18FB18A22882AEC00F15F66 /* SingleSelection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E18FB18922882AEC00F15F66 /* SingleSelection.storyboard */; };
-		E18FB18E22882D7900F15F66 /* CategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E18FB18D22882D7900F15F66 /* CategoryTableViewCell.xib */; };
+		E18FB18E22882D7900F15F66 /* SelectionItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E18FB18D22882D7900F15F66 /* SelectionItemTableViewCell.xib */; };
 		E18FB19022882D8F00F15F66 /* SelectionItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18FB18F22882D8F00F15F66 /* SelectionItemTableViewCell.swift */; };
 		E18FB19322884C9700F15F66 /* CategoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18FB19222884C9700F15F66 /* CategoryService.swift */; };
 		E18FB19522884CA100F15F66 /* CategoryServiceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18FB19422884CA100F15F66 /* CategoryServiceImp.swift */; };
@@ -266,7 +266,7 @@
 		E18FB1842288211C00F15F66 /* CategoryFilter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CategoryFilter.storyboard; sourceTree = "<group>"; };
 		E18FB18722882AE200F15F66 /* SingleSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleSelectionViewController.swift; sourceTree = "<group>"; };
 		E18FB18922882AEC00F15F66 /* SingleSelection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SingleSelection.storyboard; sourceTree = "<group>"; };
-		E18FB18D22882D7900F15F66 /* CategoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryTableViewCell.xib; sourceTree = "<group>"; };
+		E18FB18D22882D7900F15F66 /* SelectionItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectionItemTableViewCell.xib; sourceTree = "<group>"; };
 		E18FB18F22882D8F00F15F66 /* SelectionItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionItemTableViewCell.swift; sourceTree = "<group>"; };
 		E18FB19222884C9700F15F66 /* CategoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryService.swift; sourceTree = "<group>"; };
 		E18FB19422884CA100F15F66 /* CategoryServiceImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryServiceImp.swift; sourceTree = "<group>"; };
@@ -653,7 +653,7 @@
 			isa = PBXGroup;
 			children = (
 				E18FB18F22882D8F00F15F66 /* SelectionItemTableViewCell.swift */,
-				E18FB18D22882D7900F15F66 /* CategoryTableViewCell.xib */,
+				E18FB18D22882D7900F15F66 /* SelectionItemTableViewCell.xib */,
 			);
 			path = CategoryCell;
 			sourceTree = "<group>";
@@ -1202,7 +1202,7 @@
 				E1FF3EAD223E9CC300443DED /* MyProducts.storyboard in Resources */,
 				E18FB1852288211C00F15F66 /* CategoryFilter.storyboard in Resources */,
 				E10717CE22CE6233004B1A5D /* HeaderView.xib in Resources */,
-				E18FB18E22882D7900F15F66 /* CategoryTableViewCell.xib in Resources */,
+				E18FB18E22882D7900F15F66 /* SelectionItemTableViewCell.xib in Resources */,
 				E1BC5ADE223124B3001FD1D6 /* ProductCollectionViewCell.xib in Resources */,
 				E19F7DDF2231063A00BAFC7A /* Assets.xcassets in Resources */,
 				E18FB18A22882AEC00F15F66 /* SingleSelection.storyboard in Resources */,

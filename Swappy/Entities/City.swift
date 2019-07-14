@@ -11,6 +11,8 @@ struct City {
     let title: String
 }
 
+// MARK: - SelectionItem
+
 extension City: SelectionItem {
     
     var selectionId: String {
