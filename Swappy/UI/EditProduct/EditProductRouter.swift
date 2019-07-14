@@ -9,8 +9,8 @@
 import UIKit
 
 protocol EditProductRouter: class {
-    func openCategorySelection(delegate: SingleSelectionDelegate,
-                               input: SingleSelectionInput)
+    func openSingleSelection(delegate: SingleSelectionDelegate,
+                             input: SingleSelectionInput)
 }
 
 final class EditProductRouterImp {
@@ -28,14 +28,15 @@ final class EditProductRouterImp {
 
 extension EditProductRouterImp: EditProductRouter {
     
-    func openCategorySelection(delegate: SingleSelectionDelegate,
-                               input: SingleSelectionInput) {
+    func openSingleSelection(delegate: SingleSelectionDelegate,
+                             input: SingleSelectionInput) {
         
         let selectionVC: SingleSelectionViewController
         selectionVC = UIStoryboard.createViewController()
         
         selectionVC.presenter.setup(delegate: delegate, input: input)
         
-        viewController.present(selectionVC, animated: true, completion: nil)
+        let presentationController = viewController.tabBarController
+        presentationController?.present(selectionVC, animated: true, completion: nil)
     }
 }

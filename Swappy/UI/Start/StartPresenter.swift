@@ -19,13 +19,18 @@ final class StartPresenterImp {
     private unowned let view: StartView
     private let router: StartRouter
     private let categoryService: CategoryService
+    private let cityService: CityService
     
     // MARK: - Init
     
-    init(view: StartView, router: StartRouter, categoryService: CategoryService) {
+    init(view: StartView,
+         router: StartRouter,
+         categoryService: CategoryService,
+         cityService: CityService) {
         self.view = view
         self.router = router
         self.categoryService = categoryService
+        self.cityService = cityService
     }
 }
 
@@ -37,6 +42,12 @@ extension StartPresenterImp: StartPresenter {
         
         group.enter()
         categoryService.updateCategoryList { result in
+            isSuccess = isSuccess && result.isSuccess
+            group.leave()
+        }
+        
+        group.enter()
+        cityService.updateCitiesList { result in
             isSuccess = isSuccess && result.isSuccess
             group.leave()
         }

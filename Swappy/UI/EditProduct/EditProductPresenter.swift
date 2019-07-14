@@ -35,6 +35,7 @@ final class EditProductPresenterImp {
     private let router: EditProductRouter
     private let productService: ProductService
     private let categoryService: CategoryService
+    private let cityService: CityService
     private let tracker: AnalyticsManager
     
     private var state = EditProductInitState.add
@@ -42,11 +43,17 @@ final class EditProductPresenterImp {
     
     // MARK: - Init
     
-    init(view: EditProductView, router: EditProductRouter, productService: ProductService, categoryService: CategoryService, tracker: AnalyticsManager) {
+    init(view: EditProductView,
+         router: EditProductRouter,
+         productService: ProductService,
+         categoryService: CategoryService,
+         cityService: CityService,
+         tracker: AnalyticsManager) {
         self.view = view
         self.router = router
         self.productService = productService
         self.categoryService = categoryService
+        self.cityService = cityService
         self.tracker = tracker
     }
 }
@@ -112,17 +119,20 @@ extension EditProductPresenterImp: EditProductPresenter {
             buttonTitle: "Сохранить"
         )
             
-        router.openCategorySelection(delegate: self,
-                                     input: input)
+        router.openSingleSelection(delegate: self,
+                                   input: input)
     }
     
     func openCitySelection() {
-//        let input = SingleSelectionInput(
-//            items: <#T##[SelectionItem]#>,
-//            selectedItem: <#T##SelectionItem?#>,
-//            title: <#T##String#>,
-//            buttonTitle: <#T##String#>
-//        )
+        let input = SingleSelectionInput(
+            items: cityService.cities,
+            selectedItem: cityService.selectedCity,
+            title: "Выбор города",
+            buttonTitle: "Выбрать"
+        )
+        
+        router.openSingleSelection(delegate: self,
+                                   input: input)
     }
     
     func setState(_ state: EditProductInitState) {
@@ -133,10 +143,19 @@ extension EditProductPresenterImp: EditProductPresenter {
 extension EditProductPresenterImp: SingleSelectionDelegate {
     
     func didSelectItem(_ item: SelectionItem) {
-        guard let category = item as? Category else { return }
         
-        selectedCategory = category
-        view.selectCategory(category.name)
+        switch item {
+        case let category as Category:
+            selectedCategory = category
+            view.selectCategory(category.name)
+            
+        case let city as City:
+            cityService.selectedCity = city
+            view.selectCity(city.title)
+            
+        default:
+            break
+        }
     }
 }
 
