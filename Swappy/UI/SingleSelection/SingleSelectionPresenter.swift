@@ -10,7 +10,7 @@ import UIKit
 
 protocol SingleSelectionDelegate: class {
     
-    func didSelectItem(_ category: SelectionItem)
+    func didSelectItem(_ item: SelectionItem)
 }
 
 protocol SingleSelectionPresenter: class {

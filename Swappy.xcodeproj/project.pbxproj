@@ -72,6 +72,8 @@
 		E18E21FB22DB6978008C26D1 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18E21FA22DB6978008C26D1 /* WelcomeViewController.swift */; };
 		E18E21FD22DB6980008C26D1 /* WelcomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18E21FC22DB6980008C26D1 /* WelcomePresenter.swift */; };
 		E18E21FF22DB6B01008C26D1 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E18E21FE22DB6B01008C26D1 /* Welcome.storyboard */; };
+		E18E220122DB7E7B008C26D1 /* WelcomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18E220022DB7E7B008C26D1 /* WelcomeRouter.swift */; };
+		E18E220422DBA032008C26D1 /* UserDefaults+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18E220322DBA032008C26D1 /* UserDefaults+Codable.swift */; };
 		E18FB17A228812EB00F15F66 /* CategoryTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18FB179228812EB00F15F66 /* CategoryTarget.swift */; };
 		E18FB17C22881D3400F15F66 /* FBButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18FB17B22881D3400F15F66 /* FBButton.swift */; };
 		E18FB1802288206800F15F66 /* CategoryFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18FB17F2288206800F15F66 /* CategoryFilterViewController.swift */; };
@@ -266,6 +268,8 @@
 		E18E21FA22DB6978008C26D1 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		E18E21FC22DB6980008C26D1 /* WelcomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePresenter.swift; sourceTree = "<group>"; };
 		E18E21FE22DB6B01008C26D1 /* Welcome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
+		E18E220022DB7E7B008C26D1 /* WelcomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRouter.swift; sourceTree = "<group>"; };
+		E18E220322DBA032008C26D1 /* UserDefaults+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Codable.swift"; sourceTree = "<group>"; };
 		E18FB179228812EB00F15F66 /* CategoryTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTarget.swift; sourceTree = "<group>"; };
 		E18FB17B22881D3400F15F66 /* FBButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBButton.swift; sourceTree = "<group>"; };
 		E18FB17F2288206800F15F66 /* CategoryFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryFilterViewController.swift; sourceTree = "<group>"; };
@@ -482,6 +486,7 @@
 		E11174812242B37100BD19B4 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				E18E220222DB8601008C26D1 /* Stores */,
 				E17CA1952252AA3300D5C955 /* Database */,
 				E11174822242B38300BD19B4 /* KeychainStore.swift */,
 				E11174952243719400BD19B4 /* Core.swift */,
@@ -515,6 +520,7 @@
 				E18E21FE22DB6B01008C26D1 /* Welcome.storyboard */,
 				E18E21FA22DB6978008C26D1 /* WelcomeViewController.swift */,
 				E18E21FC22DB6980008C26D1 /* WelcomePresenter.swift */,
+				E18E220022DB7E7B008C26D1 /* WelcomeRouter.swift */,
 			);
 			path = Welcome;
 			sourceTree = "<group>";
@@ -632,6 +638,13 @@
 				E111747C224185FA00BD19B4 /* Auth */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		E18E220222DB8601008C26D1 /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Stores;
 			sourceTree = "<group>";
 		};
 		E18FB17D22881D3A00F15F66 /* Social */ = {
@@ -891,6 +904,7 @@
 				E164C39622326BAD00D1AB13 /* Collection+SafeSubscription.swift */,
 				E17CA198225338CE00D5C955 /* NotificationName+Product.swift */,
 				E1A2DEA62253C33C007E40F8 /* String+Format.swift */,
+				E18E220322DBA032008C26D1 /* UserDefaults+Codable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1421,6 +1435,7 @@
 				E140436822CC9D8D00B843D0 /* TestViewController.swift in Sources */,
 				E1FC309E22378CC100DF1325 /* UIViewController+Storyboard.swift in Sources */,
 				E18E21FB22DB6978008C26D1 /* WelcomeViewController.swift in Sources */,
+				E18E220122DB7E7B008C26D1 /* WelcomeRouter.swift in Sources */,
 				E1BC5AD922312456001FD1D6 /* ProductCellViewModel.swift in Sources */,
 				E18FB17A228812EB00F15F66 /* CategoryTarget.swift in Sources */,
 				E111747A224183A400BD19B4 /* AuthTarget.swift in Sources */,
@@ -1434,6 +1449,7 @@
 				E1B624B62293E314002090A8 /* FacebookAnalyticsManager.swift in Sources */,
 				E1F78AFE226313D500BA4BED /* VKServiceImp.swift in Sources */,
 				E19F7E0D2231078F00BAFC7A /* ProductsTarget.swift in Sources */,
+				E18E220422DBA032008C26D1 /* UserDefaults+Codable.swift in Sources */,
 				E1F0175722463C14001A10D7 /* BaseProvider.swift in Sources */,
 				E1BC5AD022311173001FD1D6 /* AppError.swift in Sources */,
 				E18FB1992288823D00F15F66 /* UITableView+RegisterCells.swift in Sources */,

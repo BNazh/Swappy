@@ -8,12 +8,31 @@
 
 final class CityServiceImp {
     
-    var selectedCity: City?
+    // MARK: - Properties
+    
+    private let settingsStore: KeychainStore
+    
+    // MARK: - Init
+    
+    init(settingsStore: KeychainStore) {
+        self.settingsStore = settingsStore
+    }
 }
 
 // MARK: - CityService
 
 extension CityServiceImp: CityService {
+    
+    // MARK: - Properties
+    
+    var selectedCity: City? {
+        get {
+            return settingsStore.welcomeCity
+        }
+        set {
+            settingsStore.welcomeCity = newValue
+        }
+    }
     
     var cities: [City] {
         return [
@@ -21,6 +40,8 @@ extension CityServiceImp: CityService {
             City(title: "Питер")
         ]
     }
+    
+    // MARK: - Functions
     
     func updateCitiesList(_ closure: (Result<[City]>) -> Void) {
         closure(.success(cities))

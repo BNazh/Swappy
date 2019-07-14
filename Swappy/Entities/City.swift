@@ -6,7 +6,7 @@
 //  Copyright © 2019 SwappyTeam. All rights reserved.
 //
 
-struct City {
+struct City: Codable {
     
     let title: String
 }

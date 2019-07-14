@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Welcome View Controller-->
         <scene sceneID="JDj-vk-l5v">
             <objects>
-                <viewController id="cNQ-BE-Evi" sceneMemberID="viewController">
+                <viewController id="cNQ-BE-Evi" customClass="WelcomeViewController" customModule="Swappy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="txd-wx-TGi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -44,6 +44,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Имя"/>
+                                </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fdz-at-3zd" customClass="AppTextField" customModule="Swappy" customModuleProvider="target">
                                 <rect key="frame" x="16" y="313.5" width="343" height="60"/>
@@ -53,6 +56,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Город"/>
+                                </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xqX-Mv-fh3" customClass="MainButton" customModule="Swappy" customModuleProvider="target">
                                 <rect key="frame" x="16" y="397.5" width="343" height="52"/>
@@ -83,6 +89,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rVB-By-sY4"/>
                     </view>
+                    <connections>
+                        <outlet property="cityTextField" destination="Fdz-at-3zd" id="Yer-qU-X5C"/>
+                        <outlet property="nameTextField" destination="QwZ-4T-pcV" id="2Zf-V9-fBY"/>
+                        <outlet property="startButton" destination="xqX-Mv-fh3" id="ZR6-w2-Jba"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IHj-ta-RsF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -60,7 +60,9 @@ final class ServicesAssembly: Assembly {
         }
         
         container.register(CityService.self) { r in
-            return CityServiceImp()
+            return CityServiceImp(
+                settingsStore: r.resolve()
+            )
         }
         
         container.register(VKService.self) { r in
