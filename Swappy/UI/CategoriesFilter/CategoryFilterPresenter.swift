@@ -83,17 +83,17 @@ private extension CategoryFilterPresenterImp {
         return service.categories.count == selectedCategories.count
     }
     
-    func cellModel(for category: Category) -> CategoryCellViewModel {
+    func cellModel(for category: Category) -> SelectionItemViewModel {
         let isSelected = selectedCategories.contains { $0.id == category.id }
         let image = imageForSelectedState(isSelected)
-        return CategoryCellViewModel(id: category.id, name: category.name, icon: image, isSelected: isSelected)
+        return SelectionItemViewModel(id: category.id, name: category.name, icon: image, isSelected: isSelected)
     }
     
-    func allCategoriesCellModel() -> CategoryCellViewModel {
+    func allCategoriesCellModel() -> SelectionItemViewModel {
         let name = "Все товары"
         let icon = imageForSelectedState(isAllCategoriesSelected)
         
-        return CategoryCellViewModel(
+        return SelectionItemViewModel(
             id: Constants.allCategoriesCellId,
             name: name,
             icon: icon,

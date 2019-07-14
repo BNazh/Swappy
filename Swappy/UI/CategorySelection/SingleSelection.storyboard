@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Category Selection View Controller-->
+        <!--Single Selection View Controller-->
         <scene sceneID="JpW-km-qsT">
             <objects>
-                <viewController storyboardIdentifier="CategorySelectionViewController" modalPresentationStyle="overCurrentContext" id="V1l-rc-rdK" customClass="CategorySelectionViewController" customModule="Swappy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SingleSelectionViewController" modalPresentationStyle="overCurrentContext" id="V1l-rc-rdK" customClass="SingleSelectionViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wXK-Vf-prr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -105,6 +105,7 @@
                     </view>
                     <connections>
                         <outlet property="cardContainerView" destination="QlH-hw-8YM" id="oZY-tN-794"/>
+                        <outlet property="saveButton" destination="SyZ-CN-Kl1" id="Zu9-sl-gGl"/>
                         <outlet property="tableView" destination="j5J-Ae-chJ" id="FbS-hx-eLX"/>
                         <outlet property="tableViewHeightConstraint" destination="G6m-vi-XfG" id="AIE-au-Oe1"/>
                     </connections>

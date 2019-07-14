@@ -69,16 +69,18 @@
 		E18FB17C22881D3400F15F66 /* FBButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18FB17B22881D3400F15F66 /* FBButton.swift */; };
 		E18FB1802288206800F15F66 /* CategoryFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18FB17F2288206800F15F66 /* CategoryFilterViewController.swift */; };
 		E18FB1852288211C00F15F66 /* CategoryFilter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E18FB1842288211C00F15F66 /* CategoryFilter.storyboard */; };
-		E18FB18822882AE200F15F66 /* CategorySelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18FB18722882AE200F15F66 /* CategorySelectionViewController.swift */; };
-		E18FB18A22882AEC00F15F66 /* CategorySelection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E18FB18922882AEC00F15F66 /* CategorySelection.storyboard */; };
+		E18FB18822882AE200F15F66 /* SingleSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18FB18722882AE200F15F66 /* SingleSelectionViewController.swift */; };
+		E18FB18A22882AEC00F15F66 /* SingleSelection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E18FB18922882AEC00F15F66 /* SingleSelection.storyboard */; };
 		E18FB18E22882D7900F15F66 /* CategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E18FB18D22882D7900F15F66 /* CategoryTableViewCell.xib */; };
-		E18FB19022882D8F00F15F66 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18FB18F22882D8F00F15F66 /* CategoryTableViewCell.swift */; };
+		E18FB19022882D8F00F15F66 /* SelectionItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18FB18F22882D8F00F15F66 /* SelectionItemTableViewCell.swift */; };
 		E18FB19322884C9700F15F66 /* CategoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18FB19222884C9700F15F66 /* CategoryService.swift */; };
 		E18FB19522884CA100F15F66 /* CategoryServiceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18FB19422884CA100F15F66 /* CategoryServiceImp.swift */; };
-		E18FB1972288792F00F15F66 /* CategorySelectionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18FB1962288792E00F15F66 /* CategorySelectionPresenter.swift */; };
+		E18FB1972288792F00F15F66 /* SingleSelectionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18FB1962288792E00F15F66 /* SingleSelectionPresenter.swift */; };
 		E18FB1992288823D00F15F66 /* UITableView+RegisterCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18FB1982288823D00F15F66 /* UITableView+RegisterCells.swift */; };
 		E18FB19B22893E8600F15F66 /* EditProductRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18FB19A22893E8600F15F66 /* EditProductRouter.swift */; };
 		E18FB19D2289438300F15F66 /* SelectionAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18FB19C2289438300F15F66 /* SelectionAssembly.swift */; };
+		E191571822CFA15E00117A87 /* SingleSelectionInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E191571722CFA15E00117A87 /* SingleSelectionInput.swift */; };
+		E191571A22CFA17B00117A87 /* SelectionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E191571922CFA17B00117A87 /* SelectionItem.swift */; };
 		E19F7DD52231063900BAFC7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19F7DD42231063900BAFC7A /* AppDelegate.swift */; };
 		E19F7DDA2231063900BAFC7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E19F7DD82231063900BAFC7A /* Main.storyboard */; };
 		E19F7DDD2231063900BAFC7A /* Swappy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E19F7DDB2231063900BAFC7A /* Swappy.xcdatamodeld */; };
@@ -254,16 +256,18 @@
 		E18FB17B22881D3400F15F66 /* FBButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBButton.swift; sourceTree = "<group>"; };
 		E18FB17F2288206800F15F66 /* CategoryFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryFilterViewController.swift; sourceTree = "<group>"; };
 		E18FB1842288211C00F15F66 /* CategoryFilter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CategoryFilter.storyboard; sourceTree = "<group>"; };
-		E18FB18722882AE200F15F66 /* CategorySelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySelectionViewController.swift; sourceTree = "<group>"; };
-		E18FB18922882AEC00F15F66 /* CategorySelection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CategorySelection.storyboard; sourceTree = "<group>"; };
+		E18FB18722882AE200F15F66 /* SingleSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleSelectionViewController.swift; sourceTree = "<group>"; };
+		E18FB18922882AEC00F15F66 /* SingleSelection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SingleSelection.storyboard; sourceTree = "<group>"; };
 		E18FB18D22882D7900F15F66 /* CategoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryTableViewCell.xib; sourceTree = "<group>"; };
-		E18FB18F22882D8F00F15F66 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
+		E18FB18F22882D8F00F15F66 /* SelectionItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionItemTableViewCell.swift; sourceTree = "<group>"; };
 		E18FB19222884C9700F15F66 /* CategoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryService.swift; sourceTree = "<group>"; };
 		E18FB19422884CA100F15F66 /* CategoryServiceImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryServiceImp.swift; sourceTree = "<group>"; };
-		E18FB1962288792E00F15F66 /* CategorySelectionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySelectionPresenter.swift; sourceTree = "<group>"; };
+		E18FB1962288792E00F15F66 /* SingleSelectionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleSelectionPresenter.swift; sourceTree = "<group>"; };
 		E18FB1982288823D00F15F66 /* UITableView+RegisterCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+RegisterCells.swift"; sourceTree = "<group>"; };
 		E18FB19A22893E8600F15F66 /* EditProductRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProductRouter.swift; sourceTree = "<group>"; };
 		E18FB19C2289438300F15F66 /* SelectionAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionAssembly.swift; sourceTree = "<group>"; };
+		E191571722CFA15E00117A87 /* SingleSelectionInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleSelectionInput.swift; sourceTree = "<group>"; };
+		E191571922CFA17B00117A87 /* SelectionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionItem.swift; sourceTree = "<group>"; };
 		E19F7DD12231063900BAFC7A /* Swappy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swappy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E19F7DD42231063900BAFC7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E19F7DD92231063900BAFC7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -610,9 +614,10 @@
 		E18FB18622882AC800F15F66 /* CategorySelection */ = {
 			isa = PBXGroup;
 			children = (
-				E18FB18922882AEC00F15F66 /* CategorySelection.storyboard */,
-				E18FB18722882AE200F15F66 /* CategorySelectionViewController.swift */,
-				E18FB1962288792E00F15F66 /* CategorySelectionPresenter.swift */,
+				E191571622CFA13F00117A87 /* Helpers */,
+				E18FB18922882AEC00F15F66 /* SingleSelection.storyboard */,
+				E18FB18722882AE200F15F66 /* SingleSelectionViewController.swift */,
+				E18FB1962288792E00F15F66 /* SingleSelectionPresenter.swift */,
 			);
 			path = CategorySelection;
 			sourceTree = "<group>";
@@ -620,7 +625,7 @@
 		E18FB18C22882D5800F15F66 /* CategoryCell */ = {
 			isa = PBXGroup;
 			children = (
-				E18FB18F22882D8F00F15F66 /* CategoryTableViewCell.swift */,
+				E18FB18F22882D8F00F15F66 /* SelectionItemTableViewCell.swift */,
 				E18FB18D22882D7900F15F66 /* CategoryTableViewCell.xib */,
 			);
 			path = CategoryCell;
@@ -633,6 +638,15 @@
 				E18FB19422884CA100F15F66 /* CategoryServiceImp.swift */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		E191571622CFA13F00117A87 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E191571722CFA15E00117A87 /* SingleSelectionInput.swift */,
+				E191571922CFA17B00117A87 /* SelectionItem.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		E19F7DC82231063900BAFC7A = {
@@ -1163,7 +1177,7 @@
 				E18FB18E22882D7900F15F66 /* CategoryTableViewCell.xib in Resources */,
 				E1BC5ADE223124B3001FD1D6 /* ProductCollectionViewCell.xib in Resources */,
 				E19F7DDF2231063A00BAFC7A /* Assets.xcassets in Resources */,
-				E18FB18A22882AEC00F15F66 /* CategorySelection.storyboard in Resources */,
+				E18FB18A22882AEC00F15F66 /* SingleSelection.storyboard in Resources */,
 				E19F7DDA2231063900BAFC7A /* Main.storyboard in Resources */,
 				E10850C4223F276D00941EA5 /* EditProduct.storyboard in Resources */,
 				E1B624BF22952189002090A8 /* Start.storyboard in Resources */,
@@ -1354,6 +1368,7 @@
 				E1FF3EB3223ED68400443DED /* MyProductsRouter.swift in Sources */,
 				E1FC30A22238AB2B00DF1325 /* UIView+RoundCorners.swift in Sources */,
 				E1FC30A922396F4B00DF1325 /* SellerInfoPresenter.swift in Sources */,
+				E191571A22CFA17B00117A87 /* SelectionItem.swift in Sources */,
 				E19F7E1622310B3D00BAFC7A /* Swinject.swift in Sources */,
 				E1167C082291A62100472324 /* CategoryFilterPresenter.swift in Sources */,
 				E140436822CC9D8D00B843D0 /* TestViewController.swift in Sources */,
@@ -1366,7 +1381,7 @@
 				E17CA1942252A94200D5C955 /* DatabaseStore.swift in Sources */,
 				E1FC30AD2239722300DF1325 /* SellerInfoAssembly.swift in Sources */,
 				E11174832242B38300BD19B4 /* KeychainStore.swift in Sources */,
-				E18FB1972288792F00F15F66 /* CategorySelectionPresenter.swift in Sources */,
+				E18FB1972288792F00F15F66 /* SingleSelectionPresenter.swift in Sources */,
 				E18FB17C22881D3400F15F66 /* FBButton.swift in Sources */,
 				E1B624B62293E314002090A8 /* FacebookAnalyticsManager.swift in Sources */,
 				E1F78AFE226313D500BA4BED /* VKServiceImp.swift in Sources */,
@@ -1418,7 +1433,7 @@
 				E1F017722249624B001A10D7 /* OkAlertView.swift in Sources */,
 				E16D31CE2258EA5A00033DCC /* UITextField+DoneToolbar.swift in Sources */,
 				E111748B2242DBD700BD19B4 /* LoadingView.swift in Sources */,
-				E18FB18822882AE200F15F66 /* CategorySelectionViewController.swift in Sources */,
+				E18FB18822882AE200F15F66 /* SingleSelectionViewController.swift in Sources */,
 				E164C39E2235A70E00D1AB13 /* SeparatorView.swift in Sources */,
 				E1FF3EA4223E77C100443DED /* ProductsDDMImp.swift in Sources */,
 				E100063622824A4C00CDC509 /* FBServiceImp.swift in Sources */,
@@ -1437,7 +1452,7 @@
 				E121128C2262395A0060CD3D /* VKService.swift in Sources */,
 				E1F0175A224644F5001A10D7 /* ImageService.swift in Sources */,
 				E1A2DEA72253C33C007E40F8 /* String+Format.swift in Sources */,
-				E18FB19022882D8F00F15F66 /* CategoryTableViewCell.swift in Sources */,
+				E18FB19022882D8F00F15F66 /* SelectionItemTableViewCell.swift in Sources */,
 				E17CA190224E74B400D5C955 /* DebugViewController.swift in Sources */,
 				E17CA19D22569A1000D5C955 /* AnalyticScreen.swift in Sources */,
 				E1FC30B2223977B900DF1325 /* SecondaryButton.swift in Sources */,
@@ -1458,6 +1473,7 @@
 				E19F7E1222310B0200BAFC7A /* ProductServiceImp.swift in Sources */,
 				E1F0176A224935BA001A10D7 /* TextFieldPickerDDM.swift in Sources */,
 				E164C39722326BAD00D1AB13 /* Collection+SafeSubscription.swift in Sources */,
+				E191571822CFA15E00117A87 /* SingleSelectionInput.swift in Sources */,
 				E1FC309C22378BCB00DF1325 /* ProductCatalogRouter.swift in Sources */,
 				E166D60E22CE293E004704DC /* MainTabBarController.swift in Sources */,
 				E1FF3EA7223E9A1300443DED /* NoProductsViewController.swift in Sources */,

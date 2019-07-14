@@ -1,5 +1,5 @@
 //
-//  CategorySelectionViewController.swift
+//  SingleSelectionViewController.swift
 //  Swappy
 //
 //  Created by Mihail on 12/05/2019.
@@ -8,20 +8,26 @@
 
 import UIKit
 
-protocol CategorySelectionView: class {
+protocol SingleSelectionView: class {
     
-    func displayCategories(_ categories: [CategoryCellViewModel])
+    func displayInitialize(title: String, buttonTitle: String)
+    func displayItems(_ categories: [SelectionItemViewModel])
 }
 
-class CategorySelectionViewController: CardViewController {
+class SingleSelectionViewController: CardViewController {
+    
+    // MARK: - Properties
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var tableViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var cardContainerView: UIView!
+    @IBOutlet weak var saveButton: MainButton!
     
-    var presenter: CategorySelectionPresenter!
+    var presenter: SingleSelectionPresenter!
     
-    var cellModels: [CategoryCellViewModel] = []
+    var cellModels: [SelectionItemViewModel] = []
+    
+    // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,13 +36,14 @@ class CategorySelectionViewController: CardViewController {
 
         setupTableView()
         
-        presenter.showCategories()
+        presenter.initialize()
+        presenter.showItems()
     }
     
     // MARK: - Actions
     
     @IBAction func saveButtonPressed(_ sender: MainButton) {
-        presenter.saveSelectedCategory()
+        presenter.saveSelectedItem()
         dismiss(animated: true, completion: nil)
     }
     
@@ -45,24 +52,33 @@ class CategorySelectionViewController: CardViewController {
     }
 }
 
-extension CategorySelectionViewController: CategorySelectionView {
+// MARK: - SingleSelectionView
+
+extension SingleSelectionViewController: SingleSelectionView {
     
-    func displayCategories(_ categories: [CategoryCellViewModel]) {
-        cellModels = categories
+    func displayItems(_ items: [SelectionItemViewModel]) {
+        cellModels = items
         tableView.reloadData()
         
         setupTableViewHeight()
     }
+    
+    func displayInitialize(title: String, buttonTitle: String) {
+        self.title = title
+        saveButton.setTitle(buttonTitle, for: .normal)
+    }
 }
 
-extension CategorySelectionViewController: UITableViewDataSource {
+// MARK: - UITableViewDataSource
+
+extension SingleSelectionViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cellModels.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: CategoryTableViewCell = tableView.dequeueReusableCell()
+        let cell: SelectionItemTableViewCell = tableView.dequeueReusableCell()
         let viewModel = cellModels[indexPath.row]
         
         cell.setup(with: viewModel)
@@ -71,15 +87,19 @@ extension CategorySelectionViewController: UITableViewDataSource {
     }
 }
 
-extension CategorySelectionViewController: UITableViewDelegate {
+// MARK: - UITableViewDelegate
+
+extension SingleSelectionViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        presenter.selectCategory(at: indexPath.row)
-        presenter.showCategories()
+        presenter.selectItem(at: indexPath.row)
+        presenter.showItems()
     }
 }
 
-private extension CategorySelectionViewController {
+// MARK: - Private
+
+private extension SingleSelectionViewController {
     
     func setupTableView() {
         tableView.delegate = self
@@ -87,7 +107,7 @@ private extension CategorySelectionViewController {
         
         tableView.rowHeight = 40
         
-        tableView.register(cellType: CategoryTableViewCell.self)
+        tableView.register(cellType: SelectionItemTableViewCell.self)
     }
     
     func setupTableViewHeight() {

@@ -10,7 +10,7 @@ import UIKit
 
 protocol CategoryFilterView: class {
     
-    func displayCategories(_ cellModels: [CategoryCellViewModel])
+    func displayCategories(_ cellModels: [SelectionItemViewModel])
     func displayResetButton(isHidden: Bool)
 }
 
@@ -26,7 +26,7 @@ final class CategoryFilterViewController: CardViewController {
     
     var presenter: CategoryFilterPresenter!
     
-    var cellModels: [CategoryCellViewModel] = []
+    var cellModels: [SelectionItemViewModel] = []
     
     // MARK: - Functions Lifecycle
     
@@ -60,7 +60,7 @@ final class CategoryFilterViewController: CardViewController {
 
 extension CategoryFilterViewController: CategoryFilterView {
     
-    func displayCategories(_ cellModels: [CategoryCellViewModel]) {
+    func displayCategories(_ cellModels: [SelectionItemViewModel]) {
         self.cellModels = cellModels
         setupTableViewHeight()
         tableView.reloadData()
@@ -82,7 +82,7 @@ extension CategoryFilterViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: CategoryTableViewCell = tableView.dequeueReusableCell()
+        let cell: SelectionItemTableViewCell = tableView.dequeueReusableCell()
         let viewModel = cellModels[indexPath.row]
         
         cell.setup(with: viewModel)
@@ -108,7 +108,7 @@ private extension CategoryFilterViewController {
         
         tableView.rowHeight = 40
         
-        tableView.register(cellType: CategoryTableViewCell.self)
+        tableView.register(cellType: SelectionItemTableViewCell.self)
     }
     
     func setupTableViewHeight() {
