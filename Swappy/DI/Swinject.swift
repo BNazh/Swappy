@@ -26,7 +26,8 @@ extension SwinjectStoryboard {
             LoginCardAssembly(),
             SelectionAssembly(),
             CategoryFilterAssembly(),
-            StartAssembly()
+            StartAssembly(),
+            WelcomeAssembly()
         ])
         
         Container.loggingFunction = nil

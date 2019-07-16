@@ -74,6 +74,7 @@
 		E18E21FF22DB6B01008C26D1 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E18E21FE22DB6B01008C26D1 /* Welcome.storyboard */; };
 		E18E220122DB7E7B008C26D1 /* WelcomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18E220022DB7E7B008C26D1 /* WelcomeRouter.swift */; };
 		E18E220422DBA032008C26D1 /* UserDefaults+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18E220322DBA032008C26D1 /* UserDefaults+Codable.swift */; };
+		E18E220622DBAF3A008C26D1 /* WelcomeAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18E220522DBAF3A008C26D1 /* WelcomeAssembly.swift */; };
 		E18FB17A228812EB00F15F66 /* CategoryTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18FB179228812EB00F15F66 /* CategoryTarget.swift */; };
 		E18FB17C22881D3400F15F66 /* FBButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18FB17B22881D3400F15F66 /* FBButton.swift */; };
 		E18FB1802288206800F15F66 /* CategoryFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18FB17F2288206800F15F66 /* CategoryFilterViewController.swift */; };
@@ -215,7 +216,7 @@
 		E1117479224183A400BD19B4 /* AuthTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTarget.swift; sourceTree = "<group>"; };
 		E111747D2241860400BD19B4 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		E111747F2241860C00BD19B4 /* AuthServiceImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServiceImp.swift; sourceTree = "<group>"; };
-		E11174822242B38300BD19B4 /* KeychainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStore.swift; sourceTree = "<group>"; };
+		E11174822242B38300BD19B4 /* KeychainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = KeychainStore.swift; path = ../KeychainStore.swift; sourceTree = "<group>"; };
 		E11174842242B49200BD19B4 /* PhoneLoginAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneLoginAssembly.swift; sourceTree = "<group>"; };
 		E11174862242B4D300BD19B4 /* PhoneLoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneLoginPresenter.swift; sourceTree = "<group>"; };
 		E11174882242B5B800BD19B4 /* PhoneLoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneLoginRouter.swift; sourceTree = "<group>"; };
@@ -270,6 +271,7 @@
 		E18E21FE22DB6B01008C26D1 /* Welcome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
 		E18E220022DB7E7B008C26D1 /* WelcomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRouter.swift; sourceTree = "<group>"; };
 		E18E220322DBA032008C26D1 /* UserDefaults+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Codable.swift"; sourceTree = "<group>"; };
+		E18E220522DBAF3A008C26D1 /* WelcomeAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeAssembly.swift; sourceTree = "<group>"; };
 		E18FB179228812EB00F15F66 /* CategoryTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTarget.swift; sourceTree = "<group>"; };
 		E18FB17B22881D3400F15F66 /* FBButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBButton.swift; sourceTree = "<group>"; };
 		E18FB17F2288206800F15F66 /* CategoryFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryFilterViewController.swift; sourceTree = "<group>"; };
@@ -453,6 +455,7 @@
 				E18FB19C2289438300F15F66 /* SelectionAssembly.swift */,
 				E1167C0C2291CECF00472324 /* CategoryFilterAssembly.swift */,
 				E1B624C422973898002090A8 /* StartAssembly.swift */,
+				E18E220522DBAF3A008C26D1 /* WelcomeAssembly.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -488,7 +491,6 @@
 			children = (
 				E18E220222DB8601008C26D1 /* Stores */,
 				E17CA1952252AA3300D5C955 /* Database */,
-				E11174822242B38300BD19B4 /* KeychainStore.swift */,
 				E11174952243719400BD19B4 /* Core.swift */,
 				E17CA19122529D9200D5C955 /* AppConstants.swift */,
 				E17CA19A22533A2800D5C955 /* ProductsNotificationCenter.swift */,
@@ -643,6 +645,7 @@
 		E18E220222DB8601008C26D1 /* Stores */ = {
 			isa = PBXGroup;
 			children = (
+				E11174822242B38300BD19B4 /* KeychainStore.swift */,
 			);
 			path = Stores;
 			sourceTree = "<group>";
@@ -1495,6 +1498,7 @@
 				E1B624B922952168002090A8 /* StartViewController.swift in Sources */,
 				E1BC5AC122310C0E001FD1D6 /* ProductCatalogAssembly.swift in Sources */,
 				E18FB19322884C9700F15F66 /* CategoryService.swift in Sources */,
+				E18E220622DBAF3A008C26D1 /* WelcomeAssembly.swift in Sources */,
 				E1117494224370B800BD19B4 /* CodeConfirmationAssembly.swift in Sources */,
 				E1F017722249624B001A10D7 /* OkAlertView.swift in Sources */,
 				E16D31CE2258EA5A00033DCC /* UITextField+DoneToolbar.swift in Sources */,

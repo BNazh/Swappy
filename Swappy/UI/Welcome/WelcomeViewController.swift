@@ -31,6 +31,17 @@ final class WelcomeViewController: UIViewController {
         
         setupTextFields()
     }
+    
+    // MARK: - Actions
+    
+    @IBAction func nameChanged(_ sender: Any) {
+        let name = nameTextField.text
+        presenter.setNameText(name)
+    }
+    
+    @IBAction func startButtonPressed(_ sender: MainButton) {
+        presenter.openMainScreen()
+    }
 }
 
 // MARK: - WelcomeView
@@ -52,8 +63,17 @@ extension WelcomeViewController: UITextFieldDelegate {
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         if textField == cityTextField {
+            view.endEditing(true)
             presenter.openCitySelection()
             return false
+        }
+        
+        return true
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == nameTextField {
+            cityTextField.becomeFirstResponder()
         }
         
         return true

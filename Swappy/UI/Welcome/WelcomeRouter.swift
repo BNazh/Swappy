@@ -41,6 +41,6 @@ extension WelcomeRouterImp: WelcomeRouter {
         
         controller.presenter.setup(delegate: delegate, input: input)
         
-        viewController.tabBarController?.present(controller, animated: true, completion: nil)
+        viewController.present(controller, animated: true, completion: nil)
     }
 }

@@ -10,18 +10,26 @@ import UIKit
 
 protocol StartRouter: class {
     func showMainScreen()
+    func showWelcomeScreen()
 }
 
 final class StartRouterImp {
-    
-    
 }
 
 extension StartRouterImp: StartRouter {
     
     func showMainScreen() {
-        let controller = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
+        let rootController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
         
-        UIApplication.shared.keyWindow?.rootViewController = controller
+        UIApplication.shared.keyWindow?.rootViewController = rootController
+    }
+    
+    func showWelcomeScreen() {
+        let welcomeController: WelcomeViewController
+        welcomeController = UIStoryboard.createViewController()
+        
+        let rootController = UIApplication.shared.keyWindow?.rootViewController
+        
+        rootController?.present(welcomeController, animated: true, completion: nil)
     }
 }

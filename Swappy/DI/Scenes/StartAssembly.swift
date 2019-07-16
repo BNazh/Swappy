@@ -21,7 +21,8 @@ final class StartAssembly: Assembly {
                 view: view,
                 router: r.resolve(),
                 categoryService: r.resolve(),
-                cityService: r.resolve()
+                cityService: r.resolve(),
+                settingsStore: r.resolve()
             )
         }
         

@@ -20,17 +20,20 @@ final class StartPresenterImp {
     private let router: StartRouter
     private let categoryService: CategoryService
     private let cityService: CityService
+    private let settingsStore: KeychainStore
     
     // MARK: - Init
     
     init(view: StartView,
          router: StartRouter,
          categoryService: CategoryService,
-         cityService: CityService) {
+         cityService: CityService,
+         settingsStore: KeychainStore) {
         self.view = view
         self.router = router
         self.categoryService = categoryService
         self.cityService = cityService
+        self.settingsStore = settingsStore
     }
 }
 
@@ -56,10 +59,26 @@ extension StartPresenterImp: StartPresenter {
             self?.view.stopLoading()
             
             if isSuccess {
-                self?.router.showMainScreen()
+                self?.successCompletionHandler()
             } else {
                 self?.view.showError()
             }
+        }
+    }
+}
+
+// MARK: - Private
+
+private extension StartPresenterImp {
+    
+    func successCompletionHandler() {
+        router.showMainScreen()
+        
+        let isCityEmpty = settingsStore.welcomeCity == nil
+        let name = settingsStore.welcomeName ?? ""
+        
+        if isCityEmpty || name.isEmpty {
+            router.showWelcomeScreen()
         }
     }
 }

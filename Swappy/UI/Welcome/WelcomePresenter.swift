@@ -24,6 +24,7 @@ final class WelcomePresenterImp {
     private let cityService: CityService
     
     private var selectedName: String?
+    private var selectedCity: City?
     
     // MARK: - Init
     
@@ -43,7 +44,7 @@ extension WelcomePresenterImp: WelcomePresenter {
     func openCitySelection() {
         let input = SingleSelectionInput(
             items: cityService.cities,
-            selectedItem: cityService.selectedCity,
+            selectedItem: selectedCity,
             title: "Выбор города",
             buttonTitle: "Выбрать"
         )
@@ -58,6 +59,7 @@ extension WelcomePresenterImp: WelcomePresenter {
     
     func openMainScreen() {
         keychainStore.welcomeName = selectedName
+        cityService.selectedCity = selectedCity
         
         router.openMainScreen()
     }
@@ -70,7 +72,7 @@ extension WelcomePresenterImp: SingleSelectionDelegate {
     func didSelectItem(_ item: SelectionItem) {
         guard let city = item as? City else { return }
         
-        cityService.selectedCity = city
+        selectedCity = city
         
         view.displayCity(city.title)
         reloadStartButton()
@@ -83,7 +85,7 @@ private extension WelcomePresenterImp {
     
     func reloadStartButton() {
         let name = selectedName ?? ""
-        let city = cityService.selectedCity?.title ?? ""
+        let city = selectedCity?.title ?? ""
         
         let isReadyToStart = !name.isEmpty && !city.isEmpty
         

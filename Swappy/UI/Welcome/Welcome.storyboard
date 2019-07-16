@@ -13,7 +13,7 @@
         <!--Welcome View Controller-->
         <scene sceneID="JDj-vk-l5v">
             <objects>
-                <viewController id="cNQ-BE-Evi" customClass="WelcomeViewController" customModule="Swappy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WelcomeViewController" id="cNQ-BE-Evi" customClass="WelcomeViewController" customModule="Swappy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="txd-wx-TGi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -42,11 +42,14 @@
                                     <constraint firstAttribute="height" constant="60" id="IVa-Xf-1by"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" returnKeyType="next" textContentType="name"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Имя"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="nameChanged:" destination="cNQ-BE-Evi" eventType="editingChanged" id="FcD-Me-2q6"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fdz-at-3zd" customClass="AppTextField" customModule="Swappy" customModuleProvider="target">
                                 <rect key="frame" x="16" y="313.5" width="343" height="60"/>
@@ -54,18 +57,21 @@
                                     <constraint firstAttribute="height" constant="60" id="Ty7-Il-Oei"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Город"/>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xqX-Mv-fh3" customClass="MainButton" customModule="Swappy" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xqX-Mv-fh3" customClass="MainButton" customModule="Swappy" customModuleProvider="target">
                                 <rect key="frame" x="16" y="397.5" width="343" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="ikt-ZY-Eb0"/>
                                 </constraints>
                                 <state key="normal" title="Начать"/>
+                                <connections>
+                                    <action selector="startButtonPressed:" destination="cNQ-BE-Evi" eventType="touchUpInside" id="EwC-qm-q8F"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
