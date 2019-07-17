@@ -2,15 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "Search_SVG.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "Search_SVG@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Fill_1.pdf",
+      "filename" : "Search_SVG@3x.png",
       "scale" : "3x"
     }
   ],
