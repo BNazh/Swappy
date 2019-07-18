@@ -51,7 +51,7 @@
         <scene sceneID="D6C-dg-6hn">
             <objects>
                 <navigationController title="Поиск" id="68j-iY-dcu" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" selectedImage="tabbar_search_selected" id="cCb-Y2-b0P"/>
+                    <tabBarItem key="tabBarItem" image="tabbar_search" selectedImage="tabbar_search_selected" id="cCb-Y2-b0P"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uBU-Aj-YsY">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -234,6 +234,7 @@
         <image name="tabbar_home_selected" width="30" height="26"/>
         <image name="tabbar_profile" width="30" height="27"/>
         <image name="tabbar_profile_selected" width="30" height="26"/>
+        <image name="tabbar_search" width="24" height="25"/>
         <image name="tabbar_search_selected" width="24" height="24"/>
     </resources>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
