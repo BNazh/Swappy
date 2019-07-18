@@ -15,15 +15,14 @@ final class TransparentNavigationController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationBar.setBackgroundImage(UIImage(), for: .default)
-        navigationBar.shadowImage = UIImage()
-        navigationBar.alpha = 0
-        navigationBar.isTranslucent = true
+        navigationBar.isHidden = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        navi
+        
     }
+    
+    
 }
