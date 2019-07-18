@@ -44,6 +44,7 @@
 		E127417922DB53E600228F8B /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = E127417822DB53E600228F8B /* City.swift */; };
 		E13FF1BE22CE5BB800A6CD85 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13FF1BD22CE5BB800A6CD85 /* HeaderView.swift */; };
 		E140436822CC9D8D00B843D0 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E140436722CC9D8D00B843D0 /* TestViewController.swift */; };
+		E1493B7222E04DEF0016FEE5 /* TransparentNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1493B7122E04DEF0016FEE5 /* TransparentNavigationController.swift */; };
 		E164C3932231B5DF00D1AB13 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E164C3922231B5DF00D1AB13 /* ProductDetailViewController.swift */; };
 		E164C3952231B5FE00D1AB13 /* ProductDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E164C3942231B5FE00D1AB13 /* ProductDetail.storyboard */; };
 		E164C39722326BAD00D1AB13 /* Collection+SafeSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = E164C39622326BAD00D1AB13 /* Collection+SafeSubscription.swift */; };
@@ -238,6 +239,7 @@
 		E127417822DB53E600228F8B /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		E13FF1BD22CE5BB800A6CD85 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		E140436722CC9D8D00B843D0 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		E1493B7122E04DEF0016FEE5 /* TransparentNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransparentNavigationController.swift; sourceTree = "<group>"; };
 		E164C3922231B5DF00D1AB13 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		E164C3942231B5FE00D1AB13 /* ProductDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProductDetail.storyboard; sourceTree = "<group>"; };
 		E164C39622326BAD00D1AB13 /* Collection+SafeSubscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+SafeSubscription.swift"; sourceTree = "<group>"; };
@@ -1032,6 +1034,7 @@
 				E1F0176B22493CE4001A10D7 /* Extensions */,
 				E18FB18622882AC800F15F66 /* SingleSelection */,
 				E1FF3E6B223A302900443DED /* CardViewController.swift */,
+				E1493B7122E04DEF0016FEE5 /* TransparentNavigationController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1451,6 +1454,7 @@
 				E18FB17C22881D3400F15F66 /* FBButton.swift in Sources */,
 				E1B624B62293E314002090A8 /* FacebookAnalyticsManager.swift in Sources */,
 				E1F78AFE226313D500BA4BED /* VKServiceImp.swift in Sources */,
+				E1493B7222E04DEF0016FEE5 /* TransparentNavigationController.swift in Sources */,
 				E19F7E0D2231078F00BAFC7A /* ProductsTarget.swift in Sources */,
 				E18E220422DBA032008C26D1 /* UserDefaults+Codable.swift in Sources */,
 				E1F0175722463C14001A10D7 /* BaseProvider.swift in Sources */,
