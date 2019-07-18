@@ -86,10 +86,10 @@ extension ProductCatalogViewController: AnalyticScreenProvider {
 private extension ProductCatalogViewController {
     
     func setupNavigationBar() {
-        if #available(iOS 11.0, *) {
-            navigationController?.navigationBar.prefersLargeTitles = true
-        } else {
-            // Fallback on earlier versions
-        }
+//        if #available(iOS 11.0, *) {
+//            navigationController?.navigationBar.prefersLargeTitles = true
+//        } else {
+//            // Fallback on earlier versions
+//        }
     }
 }

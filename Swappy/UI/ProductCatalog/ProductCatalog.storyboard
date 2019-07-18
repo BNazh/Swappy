@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Swappy-->
+        <!--Title-->
         <scene sceneID="do6-UZ-vGY">
             <objects>
-                <viewController storyboardIdentifier="ProductCatalogViewController" title="Swappy" id="IUz-77-IIh" customClass="ProductCatalogViewController" customModule="Swappy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProductCatalogViewController" id="IUz-77-IIh" customClass="ProductCatalogViewController" customModule="Swappy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E7Q-oD-chI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
