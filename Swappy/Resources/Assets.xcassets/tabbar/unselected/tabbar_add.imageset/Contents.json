@@ -2,12 +2,10 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Wait_SVG_2.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Wait_SVG_2@2x.png",
       "scale" : "2x"
     },
     {
