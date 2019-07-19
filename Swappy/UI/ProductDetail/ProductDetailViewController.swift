@@ -43,6 +43,10 @@ class ProductDetailViewController: UIViewController {
         setupNavigationBar()
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     // MARK: - Actions
     
     @IBAction func openSellerTouchedDown(_ sender: UIButton) {

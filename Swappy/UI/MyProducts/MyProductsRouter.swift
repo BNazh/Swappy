@@ -10,18 +10,27 @@ import UIKit
 
 protocol MyProductsRouter: class {
     
+    // MARK: - Functions
+    
     func openAddProduct()
     func openProduct(_ product: Product)
     func openLoginCard()
 }
 
 final class MyProductsRouterImp {
+    
+    // MARK: - Properties
+    
     unowned let viewController: UIViewController
+    
+    // MARK: - Init
     
     init(viewController: UIViewController) {
         self.viewController = viewController
     }
 }
+
+// MARK: - MyProductsRouter
 
 extension MyProductsRouterImp: MyProductsRouter {
     
@@ -35,13 +44,15 @@ extension MyProductsRouterImp: MyProductsRouter {
         
         productVC.presenter.setInitState(product: product, isOwner: true)
         
-        viewController.present(productVC, animated: true, completion: nil)
+        let navigationController = viewController.navigationController
+        navigationController?.pushViewController(productVC, animated: true)
     }
     
     func openLoginCard() {
         let loginCardVC: LoginCardViewController = UIStoryboard.createViewController()
         
-        viewController.present(loginCardVC, animated: true, completion: nil)
+        let tabBarController = viewController.tabBarController
+        tabBarController?.present(loginCardVC, animated: true, completion: nil)
     }
 }
 

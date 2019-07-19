@@ -30,7 +30,8 @@ extension ProductDetailRouterImp: ProductDetailRouter {
         
         sellerVC.presenter.setProduct(product)
         
-        viewController.present(sellerVC, animated: true, completion: nil)
+        let tabBarController = viewController.tabBarController
+        tabBarController?.present(sellerVC, animated: true, completion: nil)
     }
     
     func openProductEdit(product: Product) {

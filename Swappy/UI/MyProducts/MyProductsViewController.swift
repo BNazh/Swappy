@@ -36,6 +36,14 @@ final class MyProductsViewController: UIViewController {
         super.viewWillAppear(animated)
         
         presenter.loadMyProductsIfEmpty()
+        
+        navigationController?.navigationBar.isHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        navigationController?.navigationBar.isHidden = false
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

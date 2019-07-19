@@ -108,6 +108,7 @@
                         <outlet property="saveButton" destination="SyZ-CN-Kl1" id="Zu9-sl-gGl"/>
                         <outlet property="tableView" destination="j5J-Ae-chJ" id="FbS-hx-eLX"/>
                         <outlet property="tableViewHeightConstraint" destination="G6m-vi-XfG" id="AIE-au-Oe1"/>
+                        <outlet property="titleLabel" destination="Hes-Cs-dKR" id="Evg-ad-cRR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tVu-C5-gwc" userLabel="First Responder" sceneMemberID="firstResponder"/>
