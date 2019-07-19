@@ -12,16 +12,25 @@ protocol KeychainStore: class {
     
     var accessToken: String? { get set }
     var userSellerId: String? { get set }
+    var welcomeName: String? { get set }
+    var welcomeCity: City? { get set }
 }
 
 final class KeychainStoreImp {
     
+    // MARK: - Properties
+    
     private let keychain = Keychain(service: "com.swappy")
+    private let defaults = UserDefaults.standard
+    
+    // MARK: - Init
     
     init() {
         clearIfNeeded()
     }
 }
+
+// MARK: - Security
 
 extension KeychainStoreImp: KeychainStore {
     
@@ -33,6 +42,11 @@ extension KeychainStoreImp: KeychainStore {
             keychain["accessToken"] = newValue
         }
     }
+}
+
+// MARK: - UserDefaults
+
+extension KeychainStoreImp {
     
     var userSellerId: String? {
         get {
@@ -40,6 +54,34 @@ extension KeychainStoreImp: KeychainStore {
         }
         set {
             keychain["userSellerId"] = newValue
+        }
+    }
+    
+    var welcomeCity: City? {
+        get {
+            let object = try? defaults.get(objectType: City.self, forKey: "welcomeCity")
+            return object ?? nil
+        }
+        set {
+            do {
+                try defaults.set(object: newValue, forKey: "welcomeCity")
+            } catch {
+                defaults.removeObject(forKey: "welcomeCity")
+            }
+        }
+    }
+    
+    var welcomeName: String? {
+        get {
+            return defaults.string(forKey: "welcomeName")
+        }
+        set {
+            guard let newWelcomeName = newValue else {
+                defaults.removeObject(forKey: "welcomeName")
+                return
+            }
+            
+            defaults.set(newWelcomeName, forKey: "welcomeName")
         }
     }
 }
@@ -56,10 +98,10 @@ private extension KeychainStoreImp {
     
     var isNotFirstLaunch: Bool {
         get {
-            return UserDefaults.standard.bool(forKey: "isNotFirstLaunch")
+            return defaults.bool(forKey: "isNotFirstLaunch")
         }
         set {
-            UserDefaults.standard.set(newValue, forKey: "isNotFirstLaunch")
+            defaults.set(newValue, forKey: "isNotFirstLaunch")
         }
     }
     
@@ -74,6 +116,9 @@ private extension KeychainStoreImp {
     func clearKeychain() {
         accessToken = nil
         userSellerId = nil
+        welcomeCity = nil
+        welcomeName = nil
+
         isNotFirstLaunch = true
     }
 }

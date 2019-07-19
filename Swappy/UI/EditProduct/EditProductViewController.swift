@@ -12,6 +12,7 @@ protocol EditProductView: class, LoadingView, ErrorView {
     
     func showProduct(viewModel: EditProductViewModel)
     func selectCategory(_ category: String)
+    func selectCity(_ city: String)
     func close()
 }
 
@@ -20,7 +21,6 @@ final class EditProductViewController: UIViewController {
     // MARK: - Properties
     
     var presenter: EditProductPresenter!
-    var citiesDDM: TextFieldPickerDDM!
     
     @IBOutlet weak var nameTextField: AppTextField!
     @IBOutlet weak var descriptionTextField: AppTextField!
@@ -46,8 +46,6 @@ final class EditProductViewController: UIViewController {
         doneButton.setTitle(presenter.buttonTitle, for: .normal)
         
         setupPhotosHeight()
-        
-        setupCitiesTextField()
         setupTextFields()
         
         presenter.initialize()
@@ -91,6 +89,10 @@ extension EditProductViewController: EditProductView {
         categoryTextField.text = category
     }
     
+    func selectCity(_ city: String) {
+        cityTextField.text = city
+    }
+    
     func close() {
         navigationController?.popViewController(animated: true)
     }
@@ -115,12 +117,18 @@ extension EditProductViewController: UITextFieldDelegate {
             return false
         }
         
+        if textField == cityTextField {
+            view.endEditing(true)
+            presenter.openCitySelection()
+            return false
+        }
+        
         return true
     }
-    
+
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
-        if textField == categoryTextField {
+        if textField == categoryTextField || textField == cityTextField {
             return false
         } else {
             return true
@@ -156,11 +164,6 @@ private extension EditProductViewController {
         photosViewController?.collectionView.layoutIfNeeded()
     }
     
-    func setupCitiesTextField() {
-        let items = presenter.cityItems
-        citiesDDM.setup(textField: cityTextField, with: items)
-    }
-    
     func setupTextFields() {
         let textFields = [nameTextField, descriptionTextField, sizeTextField, priceTextField, contactInfoTextField]
         for textField in textFields {
@@ -170,6 +173,9 @@ private extension EditProductViewController {
         
         categoryTextField.delegate = self
         categoryTextField.clearButtonMode = .never
+        
+        cityTextField.delegate = self
+        cityTextField.clearButtonMode = .never
     }
     
     func nextTextField(for textField: UITextField) -> UITextField? {

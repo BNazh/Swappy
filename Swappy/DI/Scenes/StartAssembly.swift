@@ -20,7 +20,9 @@ final class StartAssembly: Assembly {
             return StartPresenterImp(
                 view: view,
                 router: r.resolve(),
-                categoryService: r.resolve()
+                categoryService: r.resolve(),
+                cityService: r.resolve(),
+                settingsStore: r.resolve()
             )
         }
         

@@ -8,14 +8,14 @@
 
 import UIKit
 
-struct CategoryCellViewModel {
+struct SelectionItemViewModel {
     let id: String
     let name: String
     let icon: UIImage
     let isSelected: Bool
 }
 
-final class CategoryTableViewCell: UITableViewCell {
+final class SelectionItemTableViewCell: UITableViewCell {
     
     // MARK: - Properties
     
@@ -32,7 +32,7 @@ final class CategoryTableViewCell: UITableViewCell {
     
     // MARK: - Functions
     
-    func setup(with viewModel: CategoryCellViewModel) {
+    func setup(with viewModel: SelectionItemViewModel) {
         nameLabel.text = viewModel.name
         iconImageView.image = viewModel.icon
         
