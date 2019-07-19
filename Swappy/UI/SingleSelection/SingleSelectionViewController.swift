@@ -18,6 +18,7 @@ class SingleSelectionViewController: CardViewController {
     
     // MARK: - Properties
     
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var tableViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var cardContainerView: UIView!
@@ -64,7 +65,7 @@ extension SingleSelectionViewController: SingleSelectionView {
     }
     
     func displayInitialize(title: String, buttonTitle: String) {
-        self.title = title
+        titleLabel.text = title
         saveButton.setTitle(buttonTitle, for: .normal)
     }
 }

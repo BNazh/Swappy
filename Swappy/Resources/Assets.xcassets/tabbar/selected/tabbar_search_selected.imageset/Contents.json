@@ -2,22 +2,25 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Search_SVG.png",
+      "filename" : "Search1.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Search_SVG@2x.png",
+      "filename" : "Search2.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Search_SVG@3x.png",
+      "filename" : "Search3.png",
       "scale" : "3x"
     }
   ],
   "info" : {
     "version" : 1,
     "author" : "xcode"
+  },
+  "properties" : {
+    "template-rendering-intent" : "original"
   }
 }
