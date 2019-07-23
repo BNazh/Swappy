@@ -76,3 +76,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.keyboardDistanceFromTextField = 80
     }
 }
+
+extension UIApplication {
+    
+    var appDelegate: AppDelegate? {
+        return self.delegate as? AppDelegate
+    }
+}

@@ -55,8 +55,9 @@ final class LoginCardViewController: CardViewController, ErrorView, LoadingView 
         tracker.track(event: .loginByPhoneClick)
         
         let phoneLoginVC: PhoneLoginViewController = UIStoryboard.createViewController()
+        phoneLoginVC.hidesBottomBarWhenPushed = true
         
-        let navigationController = self.presentingViewController as? UINavigationController
+        let navigationController = mainTabBarController?.profileNavigationController
 
         dismiss(animated: true) {
             navigationController?.pushViewController(phoneLoginVC, animated: true)
