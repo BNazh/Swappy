@@ -15,12 +15,16 @@ final class AuthServiceImp {
     
     let provider: MoyaProvider<AuthTarget>
     let keychainStore: KeychainStore
+    let databaseStore: DatabaseStore
     
     // MARK: - Init
     
-    init(provider: MoyaProvider<AuthTarget>, keychainStore: KeychainStore) {
+    init(provider: MoyaProvider<AuthTarget>,
+         keychainStore: KeychainStore,
+         databaseStore: DatabaseStore) {
         self.provider = provider
         self.keychainStore = keychainStore
+        self.databaseStore = databaseStore
     }
 }
 
@@ -76,11 +80,14 @@ private extension AuthServiceImp {
     }
     
     func saveAuthResponse(_ response: AuthResponse) {
+        let user = response.swappyUser
+        databaseStore.addItem(user)
+        
         keychainStore.accessToken = response.accessToken
-        keychainStore.userSellerId = response.swappyUser.id
+        keychainStore.userSellerId = user.id
         
         ProductsNotificationCenter.shared.postAuthNotification()
-        setCrashlyticsUser(response.swappyUser)
+        setCrashlyticsUser(user)
     }
     
     func setCrashlyticsUser(_ user: User) {

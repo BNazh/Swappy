@@ -19,6 +19,10 @@ final class ServicesAssembly: Assembly {
             KeychainStoreImp()
         }.inObjectScope(.container)
         
+        container.register(DatabaseStore.self) { _ in
+            RealmStore()
+        }.inObjectScope(.container)
+        
         // Targets
         
         container.register(MoyaProvider<AuthTarget>.self) { r in
@@ -49,7 +53,8 @@ final class ServicesAssembly: Assembly {
         container.register(AuthService.self) { r in
             return AuthServiceImp(
                 provider: r.resolve(MoyaProvider<AuthTarget>.self)!,
-                keychainStore: r.resolve(KeychainStore.self)!
+                keychainStore: r.resolve(KeychainStore.self)!,
+                databaseStore: r.resolve(DatabaseStore.self)!
             )
         }
         

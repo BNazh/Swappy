@@ -17,6 +17,9 @@ target 'Swappy' do
   # Network
   pod 'Moya', '~> 12.0'
   
+  # Database
+  pod 'RealmSwift'
+  
   # Images
   pod 'SDWebImage', '~> 4.0'
   
