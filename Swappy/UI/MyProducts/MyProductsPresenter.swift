@@ -15,6 +15,7 @@ protocol MyProductsPresenter: class {
     func refreshMyProducts()
     func addProduct()
     func openProduct(withId id: String)
+    func openProfile()
 }
 
 final class MyProductsPresenterImp {
@@ -108,6 +109,10 @@ extension MyProductsPresenterImp: MyProductsPresenter {
         }
         
         router.openAddProduct()
+    }
+    
+    func openProfile() {
+        
     }
 }
 

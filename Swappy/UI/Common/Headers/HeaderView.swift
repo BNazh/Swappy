@@ -8,8 +8,37 @@
 
 import UIKit
 
+protocol HeaderViewDelegate: AnyObject {
+    
+    func headerViewDidPressButton(_ headerView: HeaderView)
+}
+
 final class HeaderView: UICollectionReusableView {
+    
+    // MARK: - Properties
 
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var photoImageView: UIImageView!
+    @IBOutlet weak var button: UIButton!
+    
+    weak var delegate: HeaderViewDelegate?
+    
+    // MARK: - Actions
+    
+    @IBAction func buttonPressed(_ sender: UIButton) {
+        delegate?.headerViewDidPressButton(self)
+    }
+    
+    // MARK: - Functions
+    
+    func configure(with viewModel: HeaderViewModel, delegate: HeaderViewDelegate) {
+        titleLabel.text = viewModel.title
+        
+        if let image = viewModel.image {
+            button.setImage(image, for: .normal)
+        } else {
+            button.isHidden = true
+        }
+        
+        self.delegate = delegate
+    }
 }

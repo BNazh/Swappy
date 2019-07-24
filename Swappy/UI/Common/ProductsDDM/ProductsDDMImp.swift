@@ -11,6 +11,7 @@ import UIKit
 final class ProductsDDMImp: NSObject {
     
     private var cellModels: [ProductCellViewModel] = []
+    private var headerModel: HeaderViewModel?
     
     private weak var delegate: ProductsDDMDelegate?
     private weak var collectionView: UICollectionView?
@@ -52,6 +53,10 @@ extension ProductsDDMImp: ProductsDDM {
         
         layout?.clearCache()
         collectionView?.reloadData()
+    }
+    
+    func reloadHeader(_ headerModel: HeaderViewModel) {
+        self.headerModel = headerModel
     }
     
     func endRefreshing() {
@@ -97,11 +102,24 @@ extension ProductsDDMImp: UICollectionViewDataSource {
         switch kind {
         case UICollectionView.elementKindSectionHeader:
             let identifier = HeaderView.reuseIdentifier
-            return collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: identifier, for: indexPath)
+            let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: identifier, for: indexPath) as! HeaderView
+            
+            if let headerModel = headerModel {
+                header.configure(with: headerModel, delegate: self)
+            }
+            
+            return header
             
         default:
             return UICollectionReusableView()
         }
+    }
+}
+
+extension ProductsDDMImp: HeaderViewDelegate {
+    
+    func headerViewDidPressButton(_ headerView: HeaderView) {
+        delegate?.didPressedHeaderImage?()
     }
 }
 
@@ -111,7 +129,6 @@ extension ProductsDDMImp: PinterestLayoutDelegate {
         let viewModel = cellModels[indexPath.row]
         return viewModel.cellHeight(withWidth: width)
     }
-
 }
 
 private extension ProductsDDMImp {

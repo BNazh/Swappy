@@ -88,4 +88,8 @@ extension MyProductsViewController: ProductsDDMDelegate {
     func refresh() {
         presenter.refreshMyProducts()
     }
+    
+    func didPressedHeaderImage() {
+        presenter.openProfile()
+    }
 }

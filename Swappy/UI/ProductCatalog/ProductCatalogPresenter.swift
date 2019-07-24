@@ -115,6 +115,10 @@ extension ProductCatalogPresenterImp: CategoryFilterDelegate {
 
 private extension ProductCatalogPresenterImp {
     
+    var headerViewModel: HeaderViewModel {
+        let 
+    }
+    
     func handleSuccessGetProducts(_ newProducts: [Product]) {
         products.append(contentsOf: newProducts)
         products.removeAll { !$0.isActive || $0.id.isEmpty || $0.seller == nil } // DELETE ME
@@ -123,7 +127,7 @@ private extension ProductCatalogPresenterImp {
     }
     
     func reloadProductsOnView() {
-        let viewModels = products.map { ProductCellViewModel($0) }
-        view.reloadCells(viewModels)
+        let cellModels = products.map { ProductCellViewModel($0) }
+        view.reloadCells(cellModels, header: )
     }
 }

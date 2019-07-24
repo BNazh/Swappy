@@ -22,27 +22,30 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fQ0-wq-V3w">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Bw-tN-ppZ">
                     <rect key="frame" x="256" y="49" width="63" height="63"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="fQ0-wq-V3w" secondAttribute="height" multiplier="1:1" id="58B-ck-hCG"/>
+                        <constraint firstAttribute="width" secondItem="9Bw-tN-ppZ" secondAttribute="height" multiplier="1:1" id="ugp-cJ-3qQ"/>
                     </constraints>
-                </imageView>
+                    <connections>
+                        <action selector="buttonPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="oy6-Rg-dcr"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="hcr-1u-tGZ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="44" id="3tB-aL-tTp"/>
-                <constraint firstItem="fQ0-wq-V3w" firstAttribute="bottom" secondItem="hcr-1u-tGZ" secondAttribute="bottom" constant="-5" id="7Ag-h4-tGk"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="fQ0-wq-V3w" secondAttribute="trailing" constant="16" id="8Lq-xt-2ru"/>
+                <constraint firstItem="9Bw-tN-ppZ" firstAttribute="centerY" secondItem="hcr-1u-tGZ" secondAttribute="centerY" id="7QV-au-7af"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="9Bw-tN-ppZ" secondAttribute="trailing" constant="16" id="Yp1-Bi-jnV"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="9Bw-tN-ppZ" secondAttribute="bottom" constant="5" id="o6c-GS-Nf3"/>
                 <constraint firstAttribute="trailing" secondItem="hcr-1u-tGZ" secondAttribute="trailing" constant="16" id="oyu-pG-PHr"/>
-                <constraint firstItem="fQ0-wq-V3w" firstAttribute="centerY" secondItem="hcr-1u-tGZ" secondAttribute="centerY" id="t6D-TW-pIR"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="hcr-1u-tGZ" secondAttribute="bottom" id="tWZ-sb-Pkc"/>
                 <constraint firstItem="hcr-1u-tGZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="xlL-IM-iuF"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
-                <outlet property="photoImageView" destination="fQ0-wq-V3w" id="SbA-7h-hmT"/>
+                <outlet property="button" destination="9Bw-tN-ppZ" id="iVY-O3-fco"/>
                 <outlet property="titleLabel" destination="hcr-1u-tGZ" id="PZz-iz-8b2"/>
             </connections>
             <point key="canvasLocation" x="79.200000000000003" y="-201.04947526236884"/>

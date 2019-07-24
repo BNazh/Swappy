@@ -29,7 +29,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let analyticManager: AnalyticsManager = SwinjectStoryboard.defaultContainer.resolve()
     let appsFlyerManager: AppsFlyerManager = SwinjectStoryboard.defaultContainer.resolve()
     let pushManager: PushNotificationService = SwinjectStoryboard.defaultContainer.resolve()
-    let categoryService: CategoryService = SwinjectStoryboard.defaultContainer.resolve()
     
     // MARK: - Functions
 
@@ -46,8 +45,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         analyticManager.configure(application: application, launchOptions: launchOptions)
         analyticManager.track(event: .startSession)
         UIViewController.swizzleViewWillAppear()
-        
-        categoryService.updateCategoryList()
         
         //ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
         
