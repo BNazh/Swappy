@@ -61,7 +61,7 @@
 		E17CA190224E74B400D5C955 /* DebugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CA18F224E74B400D5C955 /* DebugViewController.swift */; };
 		E17CA19222529D9200D5C955 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CA19122529D9200D5C955 /* AppConstants.swift */; };
 		E17CA1942252A94200D5C955 /* DatabaseStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CA1932252A94200D5C955 /* DatabaseStore.swift */; };
-		E17CA1972252AA5900D5C955 /* DatabaseStoreImpLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CA1962252AA5900D5C955 /* DatabaseStoreImpLocal.swift */; };
+		E17CA1972252AA5900D5C955 /* RealmStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CA1962252AA5900D5C955 /* RealmStore.swift */; };
 		E17CA199225338CE00D5C955 /* NotificationName+Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CA198225338CE00D5C955 /* NotificationName+Product.swift */; };
 		E17CA19B22533A2800D5C955 /* ProductsNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CA19A22533A2800D5C955 /* ProductsNotificationCenter.swift */; };
 		E17CA19D22569A1000D5C955 /* AnalyticScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CA19C22569A1000D5C955 /* AnalyticScreen.swift */; };
@@ -137,6 +137,8 @@
 		E1BC5AF222318370001FD1D6 /* UIView+ReusableIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC5AF122318370001FD1D6 /* UIView+ReusableIdentifiers.swift */; };
 		E1D908D7225BCEE30027C6C6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E1D908D6225BCEE20027C6C6 /* GoogleService-Info.plist */; };
 		E1D908DA225BDDA20027C6C6 /* PullToDismissHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D908D9225BDDA20027C6C6 /* PullToDismissHandler.swift */; };
+		E1DB9FBD22E6583500A46D95 /* RealmUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DB9FBC22E6583500A46D95 /* RealmUser.swift */; };
+		E1DB9FBF22E835A700A46D95 /* HeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DB9FBE22E835A700A46D95 /* HeaderViewModel.swift */; };
 		E1F0175722463C14001A10D7 /* BaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F0175622463C13001A10D7 /* BaseProvider.swift */; };
 		E1F0175A224644F5001A10D7 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F01759224644F5001A10D7 /* ImageService.swift */; };
 		E1F0175C224644FB001A10D7 /* ImageServiceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F0175B224644FB001A10D7 /* ImageServiceImp.swift */; };
@@ -256,7 +258,7 @@
 		E17CA18F224E74B400D5C955 /* DebugViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugViewController.swift; sourceTree = "<group>"; };
 		E17CA19122529D9200D5C955 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		E17CA1932252A94200D5C955 /* DatabaseStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseStore.swift; sourceTree = "<group>"; };
-		E17CA1962252AA5900D5C955 /* DatabaseStoreImpLocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseStoreImpLocal.swift; sourceTree = "<group>"; };
+		E17CA1962252AA5900D5C955 /* RealmStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmStore.swift; sourceTree = "<group>"; };
 		E17CA198225338CE00D5C955 /* NotificationName+Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationName+Product.swift"; sourceTree = "<group>"; };
 		E17CA19A22533A2800D5C955 /* ProductsNotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsNotificationCenter.swift; sourceTree = "<group>"; };
 		E17CA19C22569A1000D5C955 /* AnalyticScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticScreen.swift; sourceTree = "<group>"; };
@@ -341,6 +343,8 @@
 		E1BC5AF122318370001FD1D6 /* UIView+ReusableIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ReusableIdentifiers.swift"; sourceTree = "<group>"; };
 		E1D908D6225BCEE20027C6C6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E1D908D9225BDDA20027C6C6 /* PullToDismissHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullToDismissHandler.swift; sourceTree = "<group>"; };
+		E1DB9FBC22E6583500A46D95 /* RealmUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmUser.swift; sourceTree = "<group>"; };
+		E1DB9FBE22E835A700A46D95 /* HeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewModel.swift; sourceTree = "<group>"; };
 		E1F0175622463C13001A10D7 /* BaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseProvider.swift; sourceTree = "<group>"; };
 		E1F01759224644F5001A10D7 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		E1F0175B224644FB001A10D7 /* ImageServiceImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageServiceImp.swift; sourceTree = "<group>"; };
@@ -534,6 +538,7 @@
 			children = (
 				E13FF1BD22CE5BB800A6CD85 /* HeaderView.swift */,
 				E10717CD22CE6233004B1A5D /* HeaderView.xib */,
+				E1DB9FBE22E835A700A46D95 /* HeaderViewModel.swift */,
 			);
 			path = Headers;
 			sourceTree = "<group>";
@@ -602,7 +607,7 @@
 			isa = PBXGroup;
 			children = (
 				E17CA1932252A94200D5C955 /* DatabaseStore.swift */,
-				E17CA1962252AA5900D5C955 /* DatabaseStoreImpLocal.swift */,
+				E17CA1962252AA5900D5C955 /* RealmStore.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -879,6 +884,7 @@
 		E1BC5AC422310CAA001FD1D6 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				E1DB9FBB22E6581C00A46D95 /* DB */,
 				E1BC5AC522310CB7001FD1D6 /* Product.swift */,
 				E1BC5AC722310E88001FD1D6 /* Price.swift */,
 				E1BC5AC922310F1F001FD1D6 /* User.swift */,
@@ -957,6 +963,14 @@
 				E1D908D9225BDDA20027C6C6 /* PullToDismissHandler.swift */,
 			);
 			path = PullToDismiss;
+			sourceTree = "<group>";
+		};
+		E1DB9FBB22E6581C00A46D95 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				E1DB9FBC22E6583500A46D95 /* RealmUser.swift */,
+			);
+			path = DB;
 			sourceTree = "<group>";
 		};
 		E1F01758224644EF001A10D7 /* Image */ = {
@@ -1343,6 +1357,8 @@
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
@@ -1372,6 +1388,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
@@ -1469,6 +1487,7 @@
 				E17CA187224C24FE00D5C955 /* AnalyticsManager.swift in Sources */,
 				E11174872242B4D300BD19B4 /* PhoneLoginPresenter.swift in Sources */,
 				E11174742240AD8F00BD19B4 /* EditProductAssembly.swift in Sources */,
+				E1DB9FBF22E835A700A46D95 /* HeaderViewModel.swift in Sources */,
 				E13FF1BE22CE5BB800A6CD85 /* HeaderView.swift in Sources */,
 				E1F0175C224644FB001A10D7 /* ImageServiceImp.swift in Sources */,
 				E17CA199225338CE00D5C955 /* NotificationName+Product.swift in Sources */,
@@ -1531,7 +1550,7 @@
 				E17CA190224E74B400D5C955 /* DebugViewController.swift in Sources */,
 				E17CA19D22569A1000D5C955 /* AnalyticScreen.swift in Sources */,
 				E1FC30B2223977B900DF1325 /* SecondaryButton.swift in Sources */,
-				E17CA1972252AA5900D5C955 /* DatabaseStoreImpLocal.swift in Sources */,
+				E17CA1972252AA5900D5C955 /* RealmStore.swift in Sources */,
 				E1FF3ECB223EEE0A00443DED /* AppTextField.swift in Sources */,
 				E1BC5AE122312D5A001FD1D6 /* UIFont+App.swift in Sources */,
 				E19F7DDD2231063900BAFC7A /* Swappy.xcdatamodeld in Sources */,
@@ -1564,6 +1583,7 @@
 				E11174962243719400BD19B4 /* Core.swift in Sources */,
 				E17CA1A122569A7700D5C955 /* FirebaseAnalyticsManager.swift in Sources */,
 				E17CA189224C257100D5C955 /* AnalyticEvent.swift in Sources */,
+				E1DB9FBD22E6583500A46D95 /* RealmUser.swift in Sources */,
 				E164C3932231B5DF00D1AB13 /* ProductDetailViewController.swift in Sources */,
 				E1FF3EAF223E9CCF00443DED /* MyProductsViewController.swift in Sources */,
 				E1FF3EC4223EEA8E00443DED /* EditProductPresenter.swift in Sources */,

@@ -10,11 +10,13 @@ import Foundation
 
 protocol MyProductsPresenter: class {
     
+    func reloadHeader()
     func loadMyProductsIfEmpty()
     func loadMyProducts()
     func refreshMyProducts()
     func addProduct()
     func openProduct(withId id: String)
+    func openProfile()
 }
 
 final class MyProductsPresenterImp {
@@ -109,6 +111,15 @@ extension MyProductsPresenterImp: MyProductsPresenter {
         
         router.openAddProduct()
     }
+    
+    func openProfile() {
+        
+    }
+    
+    func reloadHeader() {
+        let header = HeaderViewModel(title: "Михаил\nБабаев Лох", image: #imageLiteral(resourceName: "test"))
+        view.reloadHeader(header)
+    }
 }
 
 private extension MyProductsPresenterImp {
@@ -159,8 +170,9 @@ private extension MyProductsPresenterImp {
     }
     
     func reloadProductsOnView() {
-        let viewModels = products.map { ProductCellViewModel($0) }
-        view.reloadProducts(viewModels)
+        let cellModels = products.map { ProductCellViewModel($0) }
+        
+        view.reloadProducts(cellModels)
     }
     
     func updateProduct(_ updatedProduct: Product) {

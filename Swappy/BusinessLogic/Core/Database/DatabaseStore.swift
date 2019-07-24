@@ -6,27 +6,52 @@
 //  Copyright © 2019 SwappyTeam. All rights reserved.
 //
 
+import RealmSwift
+
 protocol Identifiable {
     var id: String { get }
 }
 
-class DatabaseStore<T: Identifiable> {
+protocol Plain: Identifiable {
+    associatedtype RealmType: RealmObject where RealmType.PlainType == Self
     
-    func getItems() -> [T] {
-        return []
+    var asObject: RealmType { get }
+}
+
+extension Sequence where Element: Plain {
+    
+    var asObjects: [Element.RealmType] {
+        return self.map { $0.asObject }
     }
-    func getItems(predicate: (T) -> Bool) -> [T] {
-        return []
+}
+
+protocol RealmObject: Object {
+    associatedtype PlainType: Plain where PlainType.RealmType == Self
+    
+    var asPlain: PlainType { get }
+}
+
+extension Sequence where Element: RealmObject {
+    
+    var asPlain: [Element.PlainType] {
+        return self.map { $0.asPlain }
     }
-    func getItem(withId id: String) -> T? {
-        return nil
-    }
+}
+
+protocol DatabaseStore: AnyObject {
     
-    func addItem(_ item: T) {}
-    func addItems(_ items: [T]) {}
+    func getItems<T: Plain>() -> [T]
     
-    func updateItem(_ item: T) {}
+    func getItems<T: Plain>(predicate: (T) -> Bool) -> [T]
     
-    func deleteItem(_ item: T) {}
+    func getItem<T: Plain>(withId id: String) -> T?
+    
+    func addItem<T: Plain>(_ item: T)
+    
+    func addItems<T: Plain>(_ items: [T])
+    
+    func updateItem<T: Plain>(_ item: T)
+    
+    func deleteItem<T: Plain>(_ item: T)
 }
 

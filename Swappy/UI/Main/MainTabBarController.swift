@@ -15,4 +15,19 @@ final class MainTabBarController: UITabBarController {
         
         
     }
+    
+    var profileNavigationController: UINavigationController? {
+        return viewControllers?.last as? UINavigationController
+    }
+}
+
+extension UIViewController {
+    
+    var mainTabBarController: MainTabBarController? {
+        let delegate = UIApplication.shared.appDelegate
+        let root = delegate?.window?.rootViewController
+        let tabBarController = root as? MainTabBarController
+        
+        return tabBarController
+    }
 }

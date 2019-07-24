@@ -8,20 +8,27 @@
 
 import UIKit
 
-protocol ProductsDDMDelegate: class {
+@objc
+protocol ProductsDDMDelegate: AnyObject {
     
     // MARK: - Funcitons
     
     func willDisplayLastCell()
     func didSelectProduct(withId id: String)
     func refresh()
+    
+    @objc optional func didPressedHeaderImage()
 }
 
-protocol ProductsDDM: class {
+protocol ProductsDDM: AnyObject {
     
     // MARK: - Functions
     
     func reloadProducts(_ productsCellModels: [ProductCellViewModel])
+    func reloadHeader(_ headerModel: HeaderViewModel)
     func setup(delegate: ProductsDDMDelegate, collectionView: UICollectionView)
     func endRefreshing()
+}
+
+extension ProductsDDM {
 }

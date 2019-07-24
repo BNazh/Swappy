@@ -14,3 +14,4 @@ struct User: Decodable {
     let lastName: String
     let avatarUrl: String
 }
+

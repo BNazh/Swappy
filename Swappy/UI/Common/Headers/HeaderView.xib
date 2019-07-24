@@ -13,39 +13,50 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HeaderView" customModule="Swappy" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="335" height="117"/>
+            <rect key="frame" x="0.0" y="0.0" width="335" height="131"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swappy" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcr-1u-tGZ">
-                    <rect key="frame" x="16" y="44" width="303" height="73"/>
+                    <rect key="frame" x="16" y="44" width="303" height="87"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="87" id="tyy-a0-YTm"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fQ0-wq-V3w">
-                    <rect key="frame" x="256" y="49" width="63" height="63"/>
+                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Bw-tN-ppZ">
+                    <rect key="frame" x="247" y="51.5" width="72" height="72"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="fQ0-wq-V3w" secondAttribute="height" multiplier="1:1" id="58B-ck-hCG"/>
+                        <constraint firstAttribute="width" constant="72" id="fE5-DQ-3Jz"/>
+                        <constraint firstAttribute="width" secondItem="9Bw-tN-ppZ" secondAttribute="height" multiplier="1:1" id="ugp-cJ-3qQ"/>
                     </constraints>
-                </imageView>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="6"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="buttonPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="oy6-Rg-dcr"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="hcr-1u-tGZ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="44" id="3tB-aL-tTp"/>
-                <constraint firstItem="fQ0-wq-V3w" firstAttribute="bottom" secondItem="hcr-1u-tGZ" secondAttribute="bottom" constant="-5" id="7Ag-h4-tGk"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="fQ0-wq-V3w" secondAttribute="trailing" constant="16" id="8Lq-xt-2ru"/>
+                <constraint firstItem="9Bw-tN-ppZ" firstAttribute="centerY" secondItem="hcr-1u-tGZ" secondAttribute="centerY" id="7QV-au-7af"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="9Bw-tN-ppZ" secondAttribute="trailing" constant="16" id="Yp1-Bi-jnV"/>
                 <constraint firstAttribute="trailing" secondItem="hcr-1u-tGZ" secondAttribute="trailing" constant="16" id="oyu-pG-PHr"/>
-                <constraint firstItem="fQ0-wq-V3w" firstAttribute="centerY" secondItem="hcr-1u-tGZ" secondAttribute="centerY" id="t6D-TW-pIR"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="hcr-1u-tGZ" secondAttribute="bottom" id="tWZ-sb-Pkc"/>
                 <constraint firstItem="hcr-1u-tGZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="xlL-IM-iuF"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
-                <outlet property="photoImageView" destination="fQ0-wq-V3w" id="SbA-7h-hmT"/>
+                <outlet property="button" destination="9Bw-tN-ppZ" id="iVY-O3-fco"/>
                 <outlet property="titleLabel" destination="hcr-1u-tGZ" id="PZz-iz-8b2"/>
             </connections>
-            <point key="canvasLocation" x="79.200000000000003" y="-201.04947526236884"/>
+            <point key="canvasLocation" x="79.200000000000003" y="-194.75262368815595"/>
         </view>
     </objects>
 </document>
