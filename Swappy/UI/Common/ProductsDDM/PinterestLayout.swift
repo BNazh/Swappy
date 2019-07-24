@@ -47,7 +47,7 @@ class PinterestLayout: UICollectionViewFlowLayout {
             return
         }
         
-        let headerHeight: CGFloat = 117.0
+        let headerHeight: CGFloat = 131
         headerCache = UICollectionViewLayoutAttributes(
             forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
             with: IndexPath(item: 0, section: 0)

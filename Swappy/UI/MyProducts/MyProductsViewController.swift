@@ -10,6 +10,7 @@ import UIKit
 
 protocol MyProductsView: class, ErrorView, LoadingView {
     
+    func reloadHeader(_ header: HeaderViewModel)
     func reloadProducts(_ products: [ProductCellViewModel])
 }
 
@@ -30,6 +31,8 @@ final class MyProductsViewController: UIViewController {
         
         dataDisplayManager.setup(delegate: self, collectionView: collectionView)
         collectionView.contentInset = UIEdgeInsets(top: 0, left: 4, bottom: 84, right: 4)
+        
+        presenter.reloadHeader()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -72,6 +75,10 @@ extension MyProductsViewController: MyProductsView {
         dataDisplayManager.reloadProducts(products)
         addProductButton.isHidden = products.isEmpty
         collectionView.isHidden = products.isEmpty
+    }
+    
+    func reloadHeader(_ header: HeaderViewModel) {
+        dataDisplayManager.reloadHeader(header)
     }
 }
 

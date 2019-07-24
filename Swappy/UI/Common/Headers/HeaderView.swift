@@ -38,6 +38,7 @@ final class HeaderView: UICollectionReusableView {
         } else {
             button.isHidden = true
         }
+        button.imageView?.contentMode = .scaleAspectFill
         
         self.delegate = delegate
     }
