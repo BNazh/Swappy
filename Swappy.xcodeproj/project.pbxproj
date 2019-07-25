@@ -111,6 +111,7 @@
 		E1A6A91922E90247000D3F1B /* ProfileEditPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A6A91822E90247000D3F1B /* ProfileEditPresenter.swift */; };
 		E1A6A91B22E90257000D3F1B /* ProfileEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1A6A91A22E90257000D3F1B /* ProfileEdit.storyboard */; };
 		E1A6A91D22E90531000D3F1B /* ProfileEditRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A6A91C22E90531000D3F1B /* ProfileEditRouter.swift */; };
+		E1A6A91F22E983F3000D3F1B /* SingleSelectionRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A6A91E22E983F3000D3F1B /* SingleSelectionRoute.swift */; };
 		E1B4B1DB2235BDE400520082 /* ProductDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B4B1DA2235BDE400520082 /* ProductDetailPresenter.swift */; };
 		E1B4B1DD2235BE2200520082 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B4B1DC2235BE2200520082 /* ProductViewModel.swift */; };
 		E1B624B62293E314002090A8 /* FacebookAnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B624B52293E314002090A8 /* FacebookAnalyticsManager.swift */; };
@@ -321,6 +322,7 @@
 		E1A6A91822E90247000D3F1B /* ProfileEditPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditPresenter.swift; sourceTree = "<group>"; };
 		E1A6A91A22E90257000D3F1B /* ProfileEdit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileEdit.storyboard; sourceTree = "<group>"; };
 		E1A6A91C22E90531000D3F1B /* ProfileEditRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditRouter.swift; sourceTree = "<group>"; };
+		E1A6A91E22E983F3000D3F1B /* SingleSelectionRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleSelectionRoute.swift; sourceTree = "<group>"; };
 		E1B4B1DA2235BDE400520082 /* ProductDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailPresenter.swift; sourceTree = "<group>"; };
 		E1B4B1DC2235BE2200520082 /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
 		E1B624B52293E314002090A8 /* FacebookAnalyticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookAnalyticsManager.swift; sourceTree = "<group>"; };
@@ -692,6 +694,7 @@
 				E18FB18922882AEC00F15F66 /* SingleSelection.storyboard */,
 				E18FB18722882AE200F15F66 /* SingleSelectionViewController.swift */,
 				E18FB1962288792E00F15F66 /* SingleSelectionPresenter.swift */,
+				E1A6A91E22E983F3000D3F1B /* SingleSelectionRoute.swift */,
 			);
 			name = SingleSelection;
 			path = ../../SingleSelection;
@@ -1481,6 +1484,7 @@
 				E1FC309E22378CC100DF1325 /* UIViewController+Storyboard.swift in Sources */,
 				E18E21FB22DB6978008C26D1 /* WelcomeViewController.swift in Sources */,
 				E18E220122DB7E7B008C26D1 /* WelcomeRouter.swift in Sources */,
+				E1A6A91F22E983F3000D3F1B /* SingleSelectionRoute.swift in Sources */,
 				E1BC5AD922312456001FD1D6 /* ProductCellViewModel.swift in Sources */,
 				E18FB17A228812EB00F15F66 /* CategoryTarget.swift in Sources */,
 				E111747A224183A400BD19B4 /* AuthTarget.swift in Sources */,
