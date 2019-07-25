@@ -20,13 +20,16 @@ final class ProfileEditPresenterImp {
     // MARK: - Properties
     
     let view: ProfileEditView
+    let router: ProfileEditRouter
     let cityService: CityService
     
     // MARK: - Init
     
     init(view: ProfileEditView,
+         router: ProfileEditRouter,
          cityService: CityService) {
         self.view = view
+        self.router = router
         self.cityService = cityService
     }
 }
@@ -34,6 +37,10 @@ final class ProfileEditPresenterImp {
 // MARK:  ProfileEditPresenter
 
 extension ProfileEditPresenterImp: ProfileEditPresenter {
+    
+    func initialize() {
+        
+    }
     
     func reloadSaveButton() {
         view.reloadSaveButton(isEnabled: isReadyToSave)
@@ -56,6 +63,22 @@ extension ProfileEditPresenterImp: ProfileEditPresenter {
     
     func logout() {
         
+    }
+}
+
+// MARK: - SingleSelectionDelegate
+
+extension ProfileEditPresenterImp: SingleSelectionDelegate {
+    
+    func didSelectItem(_ item: SelectionItem) {
+        guard let city = item as? City else {
+            return
+        }
+        
+        cityService.selectedCity = city
+        view.city = city.title
+        
+        reloadSaveButton()
     }
 }
 
