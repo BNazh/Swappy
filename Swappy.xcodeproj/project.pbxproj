@@ -107,6 +107,10 @@
 		E1A6655F2254FD2A007EE75F /* UIViewController+BackNavBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A6655E2254FD2A007EE75F /* UIViewController+BackNavBarButton.swift */; };
 		E1A6656222550C96007EE75F /* PushNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A6656122550C96007EE75F /* PushNotificationService.swift */; };
 		E1A6656422550CAD007EE75F /* PushNotificationServiceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A6656322550CAD007EE75F /* PushNotificationServiceImp.swift */; };
+		E1A6A91722E9023B000D3F1B /* ProfileEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A6A91622E9023B000D3F1B /* ProfileEditViewController.swift */; };
+		E1A6A91922E90247000D3F1B /* ProfileEditPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A6A91822E90247000D3F1B /* ProfileEditPresenter.swift */; };
+		E1A6A91B22E90257000D3F1B /* ProfileEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1A6A91A22E90257000D3F1B /* ProfileEdit.storyboard */; };
+		E1A6A91D22E90531000D3F1B /* ProfileEditRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A6A91C22E90531000D3F1B /* ProfileEditRouter.swift */; };
 		E1B4B1DB2235BDE400520082 /* ProductDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B4B1DA2235BDE400520082 /* ProductDetailPresenter.swift */; };
 		E1B4B1DD2235BE2200520082 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B4B1DC2235BE2200520082 /* ProductViewModel.swift */; };
 		E1B624B62293E314002090A8 /* FacebookAnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B624B52293E314002090A8 /* FacebookAnalyticsManager.swift */; };
@@ -313,6 +317,10 @@
 		E1A6655E2254FD2A007EE75F /* UIViewController+BackNavBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+BackNavBarButton.swift"; sourceTree = "<group>"; };
 		E1A6656122550C96007EE75F /* PushNotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationService.swift; sourceTree = "<group>"; };
 		E1A6656322550CAD007EE75F /* PushNotificationServiceImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationServiceImp.swift; sourceTree = "<group>"; };
+		E1A6A91622E9023B000D3F1B /* ProfileEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditViewController.swift; sourceTree = "<group>"; };
+		E1A6A91822E90247000D3F1B /* ProfileEditPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditPresenter.swift; sourceTree = "<group>"; };
+		E1A6A91A22E90257000D3F1B /* ProfileEdit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileEdit.storyboard; sourceTree = "<group>"; };
+		E1A6A91C22E90531000D3F1B /* ProfileEditRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditRouter.swift; sourceTree = "<group>"; };
 		E1B4B1DA2235BDE400520082 /* ProductDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailPresenter.swift; sourceTree = "<group>"; };
 		E1B4B1DC2235BE2200520082 /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
 		E1B624B52293E314002090A8 /* FacebookAnalyticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookAnalyticsManager.swift; sourceTree = "<group>"; };
@@ -803,6 +811,7 @@
 		E19F7E092231068300BAFC7A /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				E1BAA03A22E9020E00619C3E /* ProfileEdit */,
 				E164C39922358E0400D1AB13 /* Common */,
 				E18FB17E2288200A00F15F66 /* CategoriesFilter */,
 				E1FF3EC6223EEC1E00443DED /* PhoneLogin */,
@@ -879,6 +888,17 @@
 				E1F0175622463C13001A10D7 /* BaseProvider.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		E1BAA03A22E9020E00619C3E /* ProfileEdit */ = {
+			isa = PBXGroup;
+			children = (
+				E1A6A91A22E90257000D3F1B /* ProfileEdit.storyboard */,
+				E1A6A91622E9023B000D3F1B /* ProfileEditViewController.swift */,
+				E1A6A91822E90247000D3F1B /* ProfileEditPresenter.swift */,
+				E1A6A91C22E90531000D3F1B /* ProfileEditRouter.swift */,
+			);
+			path = ProfileEdit;
 			sourceTree = "<group>";
 		};
 		E1BC5AC422310CAA001FD1D6 /* Entities */ = {
@@ -1262,6 +1282,7 @@
 				E19F7DDA2231063900BAFC7A /* Main.storyboard in Resources */,
 				E10850C4223F276D00941EA5 /* EditProduct.storyboard in Resources */,
 				E1B624BF22952189002090A8 /* Start.storyboard in Resources */,
+				E1A6A91B22E90257000D3F1B /* ProfileEdit.storyboard in Resources */,
 				E100062F22798AC600CDC509 /* splashIcon.png in Resources */,
 				E16D31CB2258BF5500033DCC /* Localizable.strings in Resources */,
 				E1D908D7225BCEE30027C6C6 /* GoogleService-Info.plist in Resources */,
@@ -1514,6 +1535,7 @@
 				E1167C062291502B00472324 /* Category.swift in Sources */,
 				E18FB19522884CA100F15F66 /* CategoryServiceImp.swift in Sources */,
 				E1BC5ACC22310F9D001FD1D6 /* Sex.swift in Sources */,
+				E1A6A91722E9023B000D3F1B /* ProfileEditViewController.swift in Sources */,
 				E1B624BB22952170002090A8 /* StartPresenter.swift in Sources */,
 				E11174782240B2F100BD19B4 /* EditProductViewModel.swift in Sources */,
 				E1BC5ACE22311168001FD1D6 /* Result.swift in Sources */,
@@ -1549,6 +1571,8 @@
 				E18FB19022882D8F00F15F66 /* SelectionItemTableViewCell.swift in Sources */,
 				E17CA190224E74B400D5C955 /* DebugViewController.swift in Sources */,
 				E17CA19D22569A1000D5C955 /* AnalyticScreen.swift in Sources */,
+				E1A6A91922E90247000D3F1B /* ProfileEditPresenter.swift in Sources */,
+				E1A6A91D22E90531000D3F1B /* ProfileEditRouter.swift in Sources */,
 				E1FC30B2223977B900DF1325 /* SecondaryButton.swift in Sources */,
 				E17CA1972252AA5900D5C955 /* RealmStore.swift in Sources */,
 				E1FF3ECB223EEE0A00443DED /* AppTextField.swift in Sources */,
