@@ -149,6 +149,9 @@
                                                     <constraint firstAttribute="height" constant="52" id="A8w-ss-PuG"/>
                                                 </constraints>
                                                 <state key="normal" title="Сохранить"/>
+                                                <connections>
+                                                    <action selector="savePressed:" destination="Xm2-8E-Qyx" eventType="touchUpInside" id="H1d-Dp-xz8"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -168,6 +171,9 @@
                                                     <constraint firstAttribute="height" constant="52" id="8pd-fT-UU9"/>
                                                 </constraints>
                                                 <state key="normal" title="Выйти"/>
+                                                <connections>
+                                                    <action selector="logoutPressed:" destination="Xm2-8E-Qyx" eventType="touchUpInside" id="3L1-ry-CvN"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -195,6 +201,7 @@
                         <outlet property="cityTextField" destination="7Ps-OI-pAE" id="M0y-qT-QTn"/>
                         <outlet property="nameTextField" destination="8qw-hQ-ndd" id="884-qM-3g9"/>
                         <outlet property="phoneTextField" destination="oWM-PE-eaN" id="yC1-bh-xnI"/>
+                        <outlet property="saveButton" destination="KmH-Aj-RaO" id="Dwx-Z5-WoG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nGP-6c-HkR" userLabel="First Responder" sceneMemberID="firstResponder"/>

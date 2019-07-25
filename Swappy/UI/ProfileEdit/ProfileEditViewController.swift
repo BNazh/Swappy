@@ -15,7 +15,7 @@ protocol ProfileEditView: AnyObject {
     var city: String { get set }
     
     func reloadSaveButton(isEnabled: Bool)
-    func displayInitialize()
+    func displayInitialize(name: String, phone: String, city: String)
 }
 
 final class ProfileEditViewController: UIViewController {
@@ -29,11 +29,25 @@ final class ProfileEditViewController: UIViewController {
     @IBOutlet weak var phoneTextField: AppTextField!
     @IBOutlet weak var cityTextField: AppTextField!
     
+    @IBOutlet weak var saveButton: MainButton!
+    
     
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
-        <#code#>
+        super.viewDidLoad()
+        
+        presenter.initialize()
+    }
+    
+    // MARK: - Actions
+    
+    @IBAction func savePressed(_ sender: Any) {
+        presenter.save()
+    }
+    
+    @IBAction func logoutPressed(_ sender: Any) {
+        presenter.logout()
     }
 }
 
@@ -59,7 +73,13 @@ extension ProfileEditViewController: ProfileEditView {
     }
     
     func reloadSaveButton(isEnabled: Bool) {
-        
+        saveButton.isEnabled = isEnabled
+    }
+    
+    func displayInitialize(name: String, phone: String, city: String) {
+        nameTextField.text = name
+        phoneTextField.text = phone
+        cityTextField.text = city
     }
 }
 

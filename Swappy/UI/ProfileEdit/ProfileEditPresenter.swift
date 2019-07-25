@@ -8,6 +8,7 @@
 
 protocol ProfileEditPresenter: AnyObject {
     
+    func initialize()
     func reloadSaveButton()
     func openCitySelection()
     func save()
