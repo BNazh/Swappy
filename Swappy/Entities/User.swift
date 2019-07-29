@@ -15,3 +15,17 @@ struct User: Decodable {
     let avatarUrl: String
 }
 
+
+// MARK: - Computed properties
+
+extension User {
+    
+    var fullName: String {
+        return firstName + " " + lastName
+    }
+}
+
+extension User {
+    
+    static let empty = User(id: "", vkId: "", firstName: "", lastName: "", avatarUrl: "")
+}

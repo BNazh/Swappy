@@ -7,15 +7,17 @@
 //
 
 import UIKit
+import InputMask
+import BSImagePicker
 
-protocol ProfileEditView: AnyObject {
+protocol ProfileEditView: AnyObject, LoadingView, ErrorView {
     
     var name: String { get }
-    var phone: String { get }
     var city: String { get set }
     
     func reloadSaveButton(isEnabled: Bool)
     func displayInitialize(name: String, phone: String, city: String)
+    func displayUpdatedProfile()
 }
 
 final class ProfileEditViewController: UIViewController {
@@ -27,6 +29,7 @@ final class ProfileEditViewController: UIViewController {
     @IBOutlet weak var avatarImageView: UIButton!
     @IBOutlet weak var nameTextField: AppTextField!
     @IBOutlet weak var phoneTextField: AppTextField!
+    @IBOutlet var textFieldDelegate: MaskedTextFieldDelegate!
     @IBOutlet weak var cityTextField: AppTextField!
     
     @IBOutlet weak var saveButton: MainButton!
@@ -43,11 +46,16 @@ final class ProfileEditViewController: UIViewController {
     // MARK: - Actions
     
     @IBAction func savePressed(_ sender: Any) {
-        presenter.save()
+        let avatar = avatarImageView.imageView?.image
+        presenter.save(avatar: avatar)
     }
     
     @IBAction func logoutPressed(_ sender: Any) {
         presenter.logout()
+    }
+    
+    @IBAction func avatarPressed(_ sender: Any) {
+        openAvatarPicker()
     }
 }
 
@@ -57,10 +65,6 @@ extension ProfileEditViewController: ProfileEditView {
     
     var name: String {
         return nameTextField.text ?? ""
-    }
-    
-    var phone: String {
-        return phoneTextField.text ?? ""
     }
     
     var city: String {
@@ -81,6 +85,10 @@ extension ProfileEditViewController: ProfileEditView {
         phoneTextField.text = phone
         cityTextField.text = city
     }
+    
+    func displayUpdatedProfile() {
+        
+    }
 }
 
 // MARK: - UITextFieldDelgate
@@ -99,13 +107,28 @@ extension ProfileEditViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == nameTextField {
-            phoneTextField.becomeFirstResponder()
-        }
-        
-        if textField == phoneTextField {
             cityTextField.becomeFirstResponder()
         }
         
         return true
+    }
+}
+
+// MARK: - Private
+
+private extension ProfileEditViewController {
+    
+    func openAvatarPicker() {
+        let vc = BSImagePickerViewController()
+        vc.maxNumberOfSelections = 1
+        vc.takePhotos = true
+        vc.albumButton.setTitle("Альбом", for: .normal)
+        
+        bs_presentImagePickerController(vc, animated: true, select: nil, deselect: nil, cancel: nil, finish: { [weak self] assets in
+            DispatchQueue.main.async {
+                let images = assets.compactMap { $0.image }
+                self?.avatarImageView.imageView?.image = images.first
+            }
+        }, completion: nil)
     }
 }

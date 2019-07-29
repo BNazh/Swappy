@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Profile Edit View Controller-->
+        <!--Настройки-->
         <scene sceneID="N4N-Xp-K2q">
             <objects>
-                <viewController id="Xm2-8E-Qyx" customClass="ProfileEditViewController" customModule="Swappy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Настройки" id="Xm2-8E-Qyx" customClass="ProfileEditViewController" customModule="Swappy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GFc-K5-QIB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -172,6 +172,7 @@
                                                 </constraints>
                                                 <state key="normal" title="Выйти"/>
                                                 <connections>
+                                                    <action selector="avatarPressed:" destination="Xm2-8E-Qyx" eventType="touchUpInside" id="RVK-0t-OAG"/>
                                                     <action selector="logoutPressed:" destination="Xm2-8E-Qyx" eventType="touchUpInside" id="3L1-ry-CvN"/>
                                                 </connections>
                                             </button>
@@ -202,9 +203,15 @@
                         <outlet property="nameTextField" destination="8qw-hQ-ndd" id="884-qM-3g9"/>
                         <outlet property="phoneTextField" destination="oWM-PE-eaN" id="yC1-bh-xnI"/>
                         <outlet property="saveButton" destination="KmH-Aj-RaO" id="Dwx-Z5-WoG"/>
+                        <outlet property="textFieldDelegate" destination="BDI-be-kod" id="N54-4s-HSP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nGP-6c-HkR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="BDI-be-kod" customClass="MaskedTextFieldDelegate" customModule="InputMask">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="primaryMaskFormat" value="+7 ([000]) [000]-[00]-[00]"/>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="-146.37681159420291" y="-136.60714285714286"/>
         </scene>

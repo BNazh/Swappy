@@ -48,8 +48,9 @@ extension AuthServiceImp: AuthService {
     }
     
     func authenticate(phone: String, code: String, closure: @escaping ResultCallback<Void>) {
-        let request = AuthTarget.authenticate(phone: phone, code: code)
+        keychainStore.phone = phone
         
+        let request = AuthTarget.authenticate(phone: phone, code: code)
         sendAuthRequest(request, closure: closure)
     }
     
@@ -60,7 +61,7 @@ extension AuthServiceImp: AuthService {
     }
     
     func fbAuth(closure: @escaping ResultCallback<Void>) {
-        
+        // TODO
     }
 }
 

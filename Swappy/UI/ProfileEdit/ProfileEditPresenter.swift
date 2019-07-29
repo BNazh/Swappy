@@ -6,12 +6,14 @@
 //  Copyright © 2019 SwappyTeam. All rights reserved.
 //
 
+import UIKit
+
 protocol ProfileEditPresenter: AnyObject {
     
     func initialize()
     func reloadSaveButton()
     func openCitySelection()
-    func save()
+    func save(avatar: UIImage?)
     func logout()
 }
 
@@ -21,15 +23,21 @@ final class ProfileEditPresenterImp {
     
     let view: ProfileEditView
     let router: ProfileEditRouter
+    let userService: UserService
+    let imageService: ImageService
     let cityService: CityService
     
     // MARK: - Init
     
     init(view: ProfileEditView,
          router: ProfileEditRouter,
+         userService: UserService,
+         imageService: ImageService,
          cityService: CityService) {
         self.view = view
         self.router = router
+        self.userService = userService
+        self.imageService = imageService
         self.cityService = cityService
     }
 }
@@ -39,7 +47,12 @@ final class ProfileEditPresenterImp {
 extension ProfileEditPresenterImp: ProfileEditPresenter {
     
     func initialize() {
+        let user = userService.currentUser
+        let name = user.firstName + " " + user.lastName
+        let phone = userService.currentPhone ?? ""
+        let city = cityService.selectedCity?.title ?? ""
         
+        view.displayInitialize(name: name, phone: phone, city: city)
     }
     
     func reloadSaveButton() {
@@ -57,12 +70,26 @@ extension ProfileEditPresenterImp: ProfileEditPresenter {
         router.openSelection(delegate: self, input: input)
     }
     
-    func save() {
+    func save(avatar: UIImage?) {
+        view.showLoading()
+
+        guard let avatar = avatar else {
+            updateUserProfile(avatarUrl: nil)
+            return
+        }
         
+        imageService.uploadImage(avatar, progressBlock: { _ in }) { [weak self] result in
+            guard let avatarUrl = result.value else {
+                self?.handleUpdateProfileError()
+                return
+            }
+            
+            self?.updateUserProfile(avatarUrl: avatarUrl)
+        }
     }
     
     func logout() {
-        
+        userService.logout()
     }
 }
 
@@ -88,9 +115,29 @@ private extension ProfileEditPresenterImp {
     
     var isReadyToSave: Bool {
         let nameFilled = !view.name.isEmpty
-        let phoneFilled = !view.phone.isEmpty
         let cityFilled = !view.city.isEmpty
         
-        return nameFilled && phoneFilled && cityFilled
+        return nameFilled && cityFilled
+    }
+    
+    func updateUserProfile(avatarUrl: String?) {
+        let name = view.name
+        userService.updateUser(name: name, avatar: avatarUrl) { [weak self] result in
+            
+            self?.view.hideLoading()
+            
+            switch result {
+            case .success:
+                self?.view.displayUpdatedProfile()
+            case .failure:
+                self?.handleUpdateProfileError()
+            }
+        }
+    }
+    
+    func handleUpdateProfileError() {
+        let message = "Не удалось обновить профиль."
+        view.hideLoading()
+        view.showError(message: message)
     }
 }
