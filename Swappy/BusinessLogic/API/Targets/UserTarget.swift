@@ -16,7 +16,7 @@ enum UserTarget {
 extension UserTarget: TargetType {
     
     var baseURL: URL {
-        return Core.productsBaseUrl
+        return Core.userBaseUrl
     }
     
     var path: String {

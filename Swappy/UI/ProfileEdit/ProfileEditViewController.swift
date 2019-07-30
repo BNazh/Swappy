@@ -33,12 +33,15 @@ final class ProfileEditViewController: UIViewController {
     @IBOutlet weak var cityTextField: AppTextField!
     
     @IBOutlet weak var saveButton: MainButton!
+    @IBOutlet weak var logoutButton: SecondaryButton!
     
     
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupViews()
         
         presenter.initialize()
     }
@@ -118,6 +121,10 @@ extension ProfileEditViewController: UITextFieldDelegate {
 
 private extension ProfileEditViewController {
     
+    func setupViews() {
+        logoutButton.setTitleColor(.coralRed, for: .normal)
+    }
+    
     func openAvatarPicker() {
         let vc = BSImagePickerViewController()
         vc.maxNumberOfSelections = 1
@@ -125,9 +132,10 @@ private extension ProfileEditViewController {
         vc.albumButton.setTitle("Альбом", for: .normal)
         
         bs_presentImagePickerController(vc, animated: true, select: nil, deselect: nil, cancel: nil, finish: { [weak self] assets in
+            let images = assets.compactMap { $0.image }
+            let image = images.first?.withRenderingMode(.alwaysOriginal)
             DispatchQueue.main.async {
-                let images = assets.compactMap { $0.image }
-                self?.avatarImageView.imageView?.image = images.first
+                self?.avatarImageView.setImage(image, for: .normal)
             }
         }, completion: nil)
     }

@@ -113,7 +113,7 @@ extension MyProductsPresenterImp: MyProductsPresenter {
     }
     
     func openProfile() {
-        
+        router.openProfileEdit()
     }
     
     func reloadHeader() {

@@ -15,6 +15,8 @@ struct Category: Decodable {
     
     let id: String
     let name: String
+    let image: String
+    let subcategories: [Category]?
 }
 
 // MARK: - SelectionItem

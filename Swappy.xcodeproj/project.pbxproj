@@ -39,6 +39,7 @@
 		E1167C0D2291CECF00472324 /* CategoryFilterAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1167C0C2291CECF00472324 /* CategoryFilterAssembly.swift */; };
 		E121128C2262395A0060CD3D /* VKService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E121128B2262395A0060CD3D /* VKService.swift */; };
 		E121F16D22EF8228002666C9 /* UserTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E121F16C22EF8228002666C9 /* UserTarget.swift */; };
+		E121F16F22EF97DC002666C9 /* ProfileEditAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E121F16E22EF97DC002666C9 /* ProfileEditAssembly.swift */; };
 		E127417222DB426000228F8B /* CityTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E127417122DB426000228F8B /* CityTarget.swift */; };
 		E127417522DB460F00228F8B /* CityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E127417422DB460F00228F8B /* CityService.swift */; };
 		E127417722DB461A00228F8B /* CityServiceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E127417622DB461A00228F8B /* CityServiceImp.swift */; };
@@ -244,6 +245,7 @@
 		E1167C0C2291CECF00472324 /* CategoryFilterAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryFilterAssembly.swift; sourceTree = "<group>"; };
 		E121128B2262395A0060CD3D /* VKService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKService.swift; sourceTree = "<group>"; };
 		E121F16C22EF8228002666C9 /* UserTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTarget.swift; sourceTree = "<group>"; };
+		E121F16E22EF97DC002666C9 /* ProfileEditAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditAssembly.swift; sourceTree = "<group>"; };
 		E127417122DB426000228F8B /* CityTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTarget.swift; sourceTree = "<group>"; };
 		E127417422DB460F00228F8B /* CityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityService.swift; sourceTree = "<group>"; };
 		E127417622DB461A00228F8B /* CityServiceImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityServiceImp.swift; sourceTree = "<group>"; };
@@ -478,6 +480,7 @@
 				E1167C0C2291CECF00472324 /* CategoryFilterAssembly.swift */,
 				E1B624C422973898002090A8 /* StartAssembly.swift */,
 				E18E220522DBAF3A008C26D1 /* WelcomeAssembly.swift */,
+				E121F16E22EF97DC002666C9 /* ProfileEditAssembly.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -1522,6 +1525,7 @@
 				E18FB1992288823D00F15F66 /* UITableView+RegisterCells.swift in Sources */,
 				E1F01767224799CA001A10D7 /* PHAsset+UIImage.swift in Sources */,
 				E1D908DA225BDDA20027C6C6 /* PullToDismissHandler.swift in Sources */,
+				E121F16F22EF97DC002666C9 /* ProfileEditAssembly.swift in Sources */,
 				E1FF3EC5223EEA8E00443DED /* EditProductViewController.swift in Sources */,
 				E1F017632246B42A001A10D7 /* PhotoCollectionViewCell.swift in Sources */,
 				E1FF3EB5223EDC3900443DED /* MyProductsAssembly.swift in Sources */,
