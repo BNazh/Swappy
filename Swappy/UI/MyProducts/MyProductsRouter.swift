@@ -15,6 +15,7 @@ protocol MyProductsRouter: class {
     func openAddProduct()
     func openProduct(_ product: Product)
     func openLoginCard()
+    func openProfileEdit()
 }
 
 final class MyProductsRouterImp {
@@ -53,6 +54,13 @@ extension MyProductsRouterImp: MyProductsRouter {
         
         let tabBarController = viewController.tabBarController
         tabBarController?.present(loginCardVC, animated: true, completion: nil)
+    }
+    
+    func openProfileEdit() {
+        let profileEdit: ProfileEditViewController = UIStoryboard.createViewController()
+        
+        let navigationController = viewController.navigationController
+    navigationController?.pushViewController(profileEdit, animated: true)
     }
 }
 

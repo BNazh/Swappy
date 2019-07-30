@@ -13,7 +13,17 @@ final class RealmStore {
     private let realm: Realm
     
     init() {
-        realm = try! Realm()
+        print("Realm DATABASE:")
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
+        
+        var config = Realm.Configuration.defaultConfiguration
+        config.schemaVersion = 20
+        config.migrationBlock = { migration, oldSchemaVersion in
+            if oldSchemaVersion < 20 {
+            }
+        }
+        
+        realm = try! Realm(configuration: config)
     }
 }
 
@@ -29,14 +39,14 @@ extension RealmStore: DatabaseStore {
     }
     
     func getItem<T>(withId id: String) -> T? where T : Plain {
-        let object = realm.object(ofType: T.RealmType.self, forPrimaryKey: \T.id)
+        let object = realm.object(ofType: T.RealmType.self, forPrimaryKey: id)
         return object?.asPlain
     }
     
     func addItem<T>(_ item: T) where T : Plain {
         try? realm.write {
             let object = item.asObject
-            realm.add(object)
+            realm.add(object, update: true)
         }
     }
     

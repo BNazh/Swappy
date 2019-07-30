@@ -15,6 +15,10 @@ final class RealmUser: Object {
     @objc dynamic var firstName: String = ""
     @objc dynamic var lastName: String = ""
     @objc dynamic var avatarUrl: String = ""
+    
+    override static func primaryKey() -> String? {
+        return "id"
+    }
 }
 
 extension RealmUser: RealmObject {

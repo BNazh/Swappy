@@ -41,6 +41,10 @@ final class ServicesAssembly: Assembly {
             BaseProvider<CategoryTarget>(keychainStore: r.resolve())
         }
         
+        container.register(MoyaProvider<UserTarget>.self) { r in
+            BaseProvider<UserTarget>(keychainStore: r.resolve())
+        }
+        
         // Services
         
         container.register(ProductService.self) { r in
@@ -67,6 +71,14 @@ final class ServicesAssembly: Assembly {
         container.register(CityService.self) { r in
             return CityServiceImp(
                 settingsStore: r.resolve()
+            )
+        }
+        
+        container.register(UserService.self) { r in
+            UserServiceImp(
+                keychain: r.resolve(),
+                database: r.resolve(),
+                provider: r.resolve()
             )
         }
         

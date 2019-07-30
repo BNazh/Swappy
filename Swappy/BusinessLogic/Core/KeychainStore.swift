@@ -14,6 +14,7 @@ protocol KeychainStore: class {
     var userSellerId: String? { get set }
     var welcomeName: String? { get set }
     var welcomeCity: City? { get set }
+    var phone: String? { get set }
 }
 
 final class KeychainStoreImp {
@@ -76,12 +77,16 @@ extension KeychainStoreImp {
             return defaults.string(forKey: "welcomeName")
         }
         set {
-            guard let newWelcomeName = newValue else {
-                defaults.removeObject(forKey: "welcomeName")
-                return
-            }
-            
-            defaults.set(newWelcomeName, forKey: "welcomeName")
+            defaults.set(newValue, forKey: "welcomeName")
+        }
+    }
+    
+    var phone: String? {
+        get {
+            return defaults.string(forKey: "auth_phone")
+        }
+        set {
+            defaults.set(newValue, forKey: "auth_phone")
         }
     }
 }

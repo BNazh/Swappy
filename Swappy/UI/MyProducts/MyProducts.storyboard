@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--My Products View Controller-->
+        <!-- -->
         <scene sceneID="ZdL-zU-P3u">
             <objects>
                 <viewController storyboardIdentifier="MyProductsViewController" id="oxv-c3-sKl" customClass="MyProductsViewController" customModule="Swappy" customModuleProvider="target" sceneMemberID="viewController">
@@ -58,6 +58,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nfh-d3-d50"/>
                     </view>
+                    <navigationItem key="navigationItem" title=" " id="Kfh-m9-RJd">
+                        <barButtonItem key="backBarButtonItem" title=" " id="U3w-W0-xYT"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="addProductButton" destination="pJ6-Zh-uFz" id="drB-9D-zEl"/>
                         <outlet property="collectionView" destination="zOR-gk-AUC" id="z3e-Tq-B2e"/>
