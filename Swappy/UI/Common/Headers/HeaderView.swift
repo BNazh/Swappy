@@ -30,7 +30,7 @@ final class HeaderView: UICollectionReusableView {
     
     // MARK: - Functions
     
-    func configure(with viewModel: HeaderViewModel, delegate: HeaderViewDelegate) {
+    func configure(with viewModel: HeaderViewModel, delegate: HeaderViewDelegate? = nil) {
         titleLabel.text = viewModel.title
         
         if let image = viewModel.image {

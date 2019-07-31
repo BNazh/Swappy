@@ -12,4 +12,9 @@ struct HeaderViewModel {
     
     let title: String
     let image: UIImage?
+    
+    init(title: String, image: UIImage? = nil) {
+        self.title = title
+        self.image = image
+    }
 }

@@ -21,7 +21,7 @@ final class ProfileEditPresenterImp {
     
     // MARK: - Properties
     
-    let view: ProfileEditView
+    unowned let view: ProfileEditView
     let router: ProfileEditRouter
     let userService: UserService
     let imageService: ImageService

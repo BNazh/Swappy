@@ -12,6 +12,7 @@ protocol ProductCatalogView: class, ErrorView {
     
     func reloadCells(_ cellModels: [ProductCellViewModel])
     func setFilterButton(_ isFilterOn: Bool)
+    func displayInitialize(headerModel: HeaderViewModel, isFilterButtonHidden: Bool)
 }
 
 final class ProductCatalogViewController: UIViewController {
@@ -32,6 +33,7 @@ final class ProductCatalogViewController: UIViewController {
         dataDisplayManager.setup(delegate: self, collectionView: collectionView)
         collectionView.contentInset = UIEdgeInsets(top: 0, left: 8, bottom: 100, right: 8)
         
+        presenter.initialize()
         presenter.loadProducts()
         
         setupNavigationBar()
@@ -70,6 +72,11 @@ extension ProductCatalogViewController: ProductCatalogView {
     
     func setFilterButton(_ isFilterOn: Bool) {
         filterButton.isSelected = isFilterOn
+    }
+    
+    func displayInitialize(headerModel: HeaderViewModel, isFilterButtonHidden: Bool) {
+        dataDisplayManager.reloadHeader(headerModel)
+        filterButton.isHidden = isFilterButtonHidden
     }
 }
 
