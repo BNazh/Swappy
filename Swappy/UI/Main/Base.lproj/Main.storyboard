@@ -184,10 +184,10 @@
             </objects>
             <point key="canvasLocation" x="-476" y="1451"/>
         </scene>
-        <!--View Controller-->
+        <!--Categories View Controller-->
         <scene sceneID="Pz6-Dl-QOF">
             <objects>
-                <viewController id="NGV-HX-Xmx" sceneMemberID="viewController">
+                <viewController id="NGV-HX-Xmx" customClass="CategoriesViewController" customModule="Swappy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LTu-Ft-RK2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

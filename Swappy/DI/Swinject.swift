@@ -27,6 +27,7 @@ extension SwinjectStoryboard {
             CodeConfirmationAssembly(),
             SelectionAssembly(),
             CategoryFilterAssembly(),
+            CategoriesAssembly(),
             StartAssembly(),
             WelcomeAssembly()
         ])

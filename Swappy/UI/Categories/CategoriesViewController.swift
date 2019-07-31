@@ -34,6 +34,7 @@ final class CategoriesViewController: UIViewController {
         setupTableView()
         
         presenter.initialize()
+        presenter.getCategories()
     }
 }
 
@@ -59,6 +60,7 @@ extension CategoriesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: CategoryTableViewCell = tableView.dequeueReusableCell()
         let model = cellModels[indexPath.row]
+        
         cell.configure(with: model)
         
         return cell
@@ -85,8 +87,13 @@ extension CategoriesViewController: UITableViewDelegate {
 
 extension CategoriesViewController: UISearchBarDelegate {
     
+    func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
+        // TODO
+        return true
+    }
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        
+        // TODO
     }
 }
 
