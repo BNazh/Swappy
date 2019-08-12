@@ -27,7 +27,10 @@ extension UserTarget: TargetType {
     }
     
     var method: Method {
-        return .post
+        switch self {
+        case .updateUser:
+            return .put
+        }
     }
     
     var sampleData: Data {
@@ -65,6 +68,7 @@ extension UserTarget {
         let firstName: String
         let lastName: String?
         let avatarUrl: String?
+        let city: City?
     }
 }
 

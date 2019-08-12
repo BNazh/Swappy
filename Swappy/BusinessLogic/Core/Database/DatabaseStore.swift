@@ -8,11 +8,11 @@
 
 import RealmSwift
 
-protocol Identifiable {
-    var id: String { get }
-}
+//protocol Identifiable {
+//    var id: String { get }
+//}
 
-protocol Plain: Identifiable {
+protocol Plain { //: Identifiable {
     associatedtype RealmType: RealmObject where RealmType.PlainType == Self
     
     var asObject: RealmType { get }

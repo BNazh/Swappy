@@ -47,8 +47,9 @@ final class ProfileEditPresenterImp {
 extension ProfileEditPresenterImp: ProfileEditPresenter {
     
     func initialize() {
-        let user = userService.currentUser
-        let name = user.firstName + " " + user.lastName
+        guard let user = userService.currentUser else { return }
+        
+        let name = user.fullName
         let phone = userService.currentPhone ?? ""
         let city = cityService.selectedCity?.title ?? ""
         
@@ -128,7 +129,7 @@ private extension ProfileEditPresenterImp {
             
             switch result {
             case .success:
-                self?.view.displayUpdatedProfile()
+                self?.router.close()
             case .failure:
                 self?.handleUpdateProfileError()
             }

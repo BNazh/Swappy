@@ -11,7 +11,7 @@ struct SellerInfoViewModel {
     let contactInfo: String
     
     init(seller: User, contactPhone: String) {
-        self.id = seller.id
+        self.id = seller.id ?? ""
         self.contactInfo = contactPhone
     }
 }

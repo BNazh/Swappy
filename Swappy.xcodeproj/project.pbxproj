@@ -14,6 +14,7 @@
 		E1000631228232E500CDC509 /* AppsflyerAnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1000630228232E500CDC509 /* AppsflyerAnalyticsManager.swift */; };
 		E100063422824A4500CDC509 /* FBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E100063322824A4500CDC509 /* FBService.swift */; };
 		E100063622824A4C00CDC509 /* FBServiceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E100063522824A4C00CDC509 /* FBServiceImp.swift */; };
+		E10608612301E1F00060052C /* Data+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10608602301E1F00060052C /* Data+String.swift */; };
 		E10717CE22CE6233004B1A5D /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E10717CD22CE6233004B1A5D /* HeaderView.xib */; };
 		E10850C2223EF78F00941EA5 /* PhoneLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10850C1223EF78F00941EA5 /* PhoneLoginViewController.swift */; };
 		E10850C4223F276D00941EA5 /* EditProduct.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E10850C3223F276D00941EA5 /* EditProduct.storyboard */; };
@@ -229,6 +230,7 @@
 		E1000630228232E500CDC509 /* AppsflyerAnalyticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsflyerAnalyticsManager.swift; sourceTree = "<group>"; };
 		E100063322824A4500CDC509 /* FBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBService.swift; sourceTree = "<group>"; };
 		E100063522824A4C00CDC509 /* FBServiceImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBServiceImp.swift; sourceTree = "<group>"; };
+		E10608602301E1F00060052C /* Data+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+String.swift"; sourceTree = "<group>"; };
 		E10717CD22CE6233004B1A5D /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		E10850C1223EF78F00941EA5 /* PhoneLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneLoginViewController.swift; sourceTree = "<group>"; };
 		E10850C3223F276D00941EA5 /* EditProduct.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditProduct.storyboard; sourceTree = "<group>"; };
@@ -1009,6 +1011,7 @@
 				E17CA198225338CE00D5C955 /* NotificationName+Product.swift */,
 				E1A2DEA62253C33C007E40F8 /* String+Format.swift */,
 				E18E220322DBA032008C26D1 /* UserDefaults+Codable.swift */,
+				E10608602301E1F00060052C /* Data+String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1571,6 +1574,7 @@
 				E111747A224183A400BD19B4 /* AuthTarget.swift in Sources */,
 				E18FB19B22893E8600F15F66 /* EditProductRouter.swift in Sources */,
 				E1BC5AE522312F36001FD1D6 /* Moya+CustomDecodableRequest.swift in Sources */,
+				E10608612301E1F00060052C /* Data+String.swift in Sources */,
 				E17CA1942252A94200D5C955 /* DatabaseStore.swift in Sources */,
 				E1FC30AD2239722300DF1325 /* SellerInfoAssembly.swift in Sources */,
 				E11174832242B38300BD19B4 /* KeychainStore.swift in Sources */,

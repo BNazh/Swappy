@@ -8,11 +8,12 @@
 
 protocol UserService {
     
-    var currentUser: User { get }
+    var currentUser: User? { get }
     var currentPhone: String? { get }
     
     func updateUser(name: String,
                     avatar: String?,
+                    city: String?,
                     callback: @escaping ResultCallback<User>)
     
     func logout()

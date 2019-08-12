@@ -60,7 +60,7 @@ extension MyProductsRouterImp: MyProductsRouter {
         let profileEdit: ProfileEditViewController = UIStoryboard.createViewController()
         
         let navigationController = viewController.navigationController
-    navigationController?.pushViewController(profileEdit, animated: true)
+        navigationController?.pushViewController(profileEdit, animated: true)
     }
 }
 

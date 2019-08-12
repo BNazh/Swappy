@@ -17,7 +17,6 @@ protocol ProfileEditView: AnyObject, LoadingView, ErrorView {
     
     func reloadSaveButton(isEnabled: Bool)
     func displayInitialize(name: String, phone: String, city: String)
-    func displayUpdatedProfile()
 }
 
 final class ProfileEditViewController: UIViewController {
@@ -87,10 +86,6 @@ extension ProfileEditViewController: ProfileEditView {
         nameTextField.text = name
         phoneTextField.text = phone
         cityTextField.text = city
-    }
-    
-    func displayUpdatedProfile() {
-        
     }
 }
 

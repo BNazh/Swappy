@@ -74,7 +74,7 @@ extension MyProductsViewController: MyProductsView {
     func reloadProducts(_ products: [ProductCellViewModel]) {
         dataDisplayManager.reloadProducts(products)
         addProductButton.isHidden = products.isEmpty
-        collectionView.isHidden = products.isEmpty
+        //collectionView.isHidden = products.isEmpty
     }
     
     func reloadHeader(_ header: HeaderViewModel) {
