@@ -21,6 +21,11 @@ struct CategoryCellViewModel {
     init(category: Category) {
         id = category.id
         title = category.name
-        imageUrl = URL(string: category.image)
+        
+        if let image = category.image {
+            imageUrl = URL(string: image)
+        } else {
+            imageUrl = nil
+        }
     }
 }

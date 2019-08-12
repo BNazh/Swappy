@@ -17,7 +17,7 @@ final class CategoriesRouterImp {
     
     // MARK: - Properties
     
-    unowned let viewController: UIViewController
+    private unowned let viewController: UIViewController
     
     // MARK: - Init
     
@@ -31,6 +31,11 @@ final class CategoriesRouterImp {
 extension CategoriesRouterImp: CategoriesRouter {
     
     func openProductCatalog(category: Category) {
-        // TODO
+        let catalogVC: ProductCatalogViewController = UIStoryboard.createViewController()
+        
+        catalogVC.presenter.setCategoryMode(with: category)
+        
+        let navigationController = viewController.navigationController
+        navigationController?.pushViewController(catalogVC, animated: true)
     }
 }

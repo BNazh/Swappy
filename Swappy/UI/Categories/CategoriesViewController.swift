@@ -10,7 +10,6 @@ import UIKit
 
 protocol CategoriesView: AnyObject {
     
-    func displayInitialize(headerModel: HeaderViewModel)
     func displayCells(_ cellModels: [CategoryCellViewModel])
 }
 
@@ -18,7 +17,6 @@ final class CategoriesViewController: UIViewController {
     
     // MARK: - Properties
     
-    @IBOutlet private weak var headerView: HeaderView!
     @IBOutlet private weak var searchBar: UISearchBar!
     @IBOutlet private weak var tableView: UITableView!
     
@@ -33,7 +31,6 @@ final class CategoriesViewController: UIViewController {
         
         setupTableView()
         
-        presenter.initialize()
         presenter.getCategories()
     }
 }
@@ -41,10 +38,6 @@ final class CategoriesViewController: UIViewController {
 // MARK: - CategoriesView protocol
 
 extension CategoriesViewController: CategoriesView {
-    
-    func displayInitialize(headerModel: HeaderViewModel) {
-        headerView.configure(with: headerModel)
-    }
     
     func displayCells(_ cellModels: [CategoryCellViewModel]) {
         self.cellModels = cellModels

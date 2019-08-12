@@ -46,6 +46,16 @@ extension UserTarget: TargetType {
     }
 }
 
+extension UserTarget: AccessTokenAuthorizable {
+    
+    var authorizationType: AuthorizationType {
+        switch self {
+        case .updateUser:
+            return .bearer
+        }
+    }
+}
+
 extension UserTarget {
     
     struct UserRO: Encodable {

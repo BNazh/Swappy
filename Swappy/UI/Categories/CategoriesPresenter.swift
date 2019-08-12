@@ -8,7 +8,6 @@
 
 protocol CategoriesPresenter: AnyObject {
     
-    func initialize()
     func getCategories()
     func showCategory(id: String)
 }
@@ -35,11 +34,6 @@ final class CategoriesPresenterImp {
 // MARK: - CategoriesPresenter protocol
 
 extension CategoriesPresenterImp: CategoriesPresenter {
-    
-    func initialize() {
-        let model = HeaderViewModel(title: "Поиск")
-        view.displayInitialize(headerModel: model)
-    }
     
     func getCategories() {
         let categories = categoryService.categories
