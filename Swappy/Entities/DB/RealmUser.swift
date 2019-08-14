@@ -26,12 +26,6 @@ final class RealmUser: Object {
 extension RealmUser: RealmObject {
     
     var asPlain: User {
-        let city: City?
-        if let cityTitle = cityTitle {
-            city = City(title: cityTitle)
-        } else {
-            city = nil
-        }
         
         return User(
             id: id,
@@ -40,7 +34,7 @@ extension RealmUser: RealmObject {
             lastName: lastName,
             avatarUrl: avatarUrl,
             phone: phone,
-            city: city
+            city: cityTitle
         )
     }
 }
@@ -50,13 +44,13 @@ extension User: Plain {
     var asObject: RealmUser {
         let object = RealmUser()
         
-        object.id = id
+        object.id = KeychainStoreImp().userSellerId // TODO: очень грязный хак, так как БЭ не присылает User.id
         object.vkId = vkId
         object.firstName = firstName
         object.lastName = lastName
         object.avatarUrl = avatarUrl
         object.phone = phone
-        object.cityTitle = city?.title
+        object.cityTitle = city
         
         return object
     }

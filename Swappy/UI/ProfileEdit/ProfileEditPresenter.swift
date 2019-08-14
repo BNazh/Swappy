@@ -47,13 +47,12 @@ final class ProfileEditPresenterImp {
 extension ProfileEditPresenterImp: ProfileEditPresenter {
     
     func initialize() {
-        guard let user = userService.currentUser else { return }
-        
-        let name = user.fullName
+        let name = userService.currentFullName ?? ""
         let phone = userService.currentPhone ?? ""
-        let city = cityService.selectedCity?.title ?? ""
+        let city = userService.currentCity?.title ?? ""
+        let avatarUrl = userService.currentUser?.avatarUrl?.asUrl
         
-        view.displayInitialize(name: name, phone: phone, city: city)
+        view.displayInitialize(name: name, phone: phone, city: city, avatarUrl: avatarUrl)
     }
     
     func reloadSaveButton() {
@@ -63,7 +62,7 @@ extension ProfileEditPresenterImp: ProfileEditPresenter {
     func openCitySelection() {
         let input = SingleSelectionInput(
             items: cityService.cities,
-            selectedItem: cityService.selectedCity,
+            selectedItem: userService.currentCity,
             title: "Выбор города",
             buttonTitle: "Выбрать"
         )
@@ -123,7 +122,8 @@ private extension ProfileEditPresenterImp {
     
     func updateUserProfile(avatarUrl: String?) {
         let name = view.name
-        userService.updateUser(name: name, avatar: avatarUrl) { [weak self] result in
+        let city = cityService.selectedCity?.title
+        userService.updateUser(name: name, avatar: avatarUrl, city: city) { [weak self] result in
             
             self?.view.hideLoading()
             
@@ -137,8 +137,9 @@ private extension ProfileEditPresenterImp {
     }
     
     func handleUpdateProfileError() {
-        let message = "Не удалось обновить профиль."
         view.hideLoading()
+        
+        let message = "Не удалось обновить профиль."
         view.showError(message: message)
     }
 }

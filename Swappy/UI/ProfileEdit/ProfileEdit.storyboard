@@ -24,13 +24,13 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="483-iP-4g2">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="148"/>
                                         <subviews>
-                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ssq-p2-xaz">
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ssq-p2-xaz">
                                                 <rect key="frame" x="171" y="48" width="72" height="72"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="72" id="bmh-6j-Ifj"/>
                                                     <constraint firstAttribute="width" secondItem="Ssq-p2-xaz" secondAttribute="height" multiplier="1:1" id="gnE-Rx-qNZ"/>
                                                 </constraints>
-                                                <state key="normal" backgroundImage="camera"/>
+                                                <state key="normal" backgroundImage="cameraSquare"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                         <integer key="value" value="6"/>
@@ -234,6 +234,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="camera" width="110" height="60"/>
+        <image name="cameraSquare" width="300" height="300"/>
     </resources>
 </document>

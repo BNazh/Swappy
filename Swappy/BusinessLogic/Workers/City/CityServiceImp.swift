@@ -38,7 +38,7 @@ extension CityServiceImp: CityService {
         return [
             City(title: "Москва"),
             City(title: "Питер")
-        ]
+        ].compactMap { $0 }
     }
     
     // MARK: - Functions

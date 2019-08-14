@@ -156,7 +156,7 @@ private extension ProductCatalogPresenterImp {
     
     func handleSuccessGetProducts(_ newProducts: [Product]) {
         products.append(contentsOf: newProducts)
-        products.removeAll { !$0.isActive || $0.id.isEmpty || $0.seller == nil } // DELETE ME
+        products.removeAll { !$0.isActive || $0.id.isEmpty } // DELETE ME
         
         reloadProductsOnView()
     }

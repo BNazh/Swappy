@@ -68,7 +68,7 @@ extension UserTarget {
         let firstName: String
         let lastName: String?
         let avatarUrl: String?
-        let city: City?
+        let city: String?
     }
 }
 

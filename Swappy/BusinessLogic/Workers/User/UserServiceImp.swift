@@ -36,12 +36,20 @@ extension UserServiceImp: UserService {
     }
     
     var currentPhone: String? {
-        return keychain.phone
+        return currentUser?.phone ?? keychain.phone
+    }
+    
+    var currentFullName: String? {
+        return currentUser?.fullName ?? keychain.welcomeName
+    }
+    
+    var currentCity: City? {
+        return City(title: currentUser?.city) ?? keychain.welcomeCity
     }
     
     func updateUser(name: String, avatar: String?, city: String?, callback: @escaping ResultCallback<User>) {
         let id = keychain.userSellerId ?? ""
-        let user = userRequestObject(name: name, avatar: avatar, city: String?)
+        let user = userRequestObject(name: name, avatar: avatar, city: city)
         let request = UserTarget.updateUser(id: id, user: user)
         
         provider.requestDecodable(request) { [weak self] (result: Result<User>) in
@@ -56,9 +64,7 @@ extension UserServiceImp: UserService {
     }
     
     func logout() {
-        keychain.userSellerId = nil
-        keychain.accessToken = nil
-        keychain.phone = nil
+        keychain.clear()
     }
 }
 
@@ -75,7 +81,7 @@ extension UserServiceImp {
             firstName: firstName,
             lastName: lastName,
             avatarUrl: avatar,
-            city: City(title: city)
+            city: city
         )
     }
 }

@@ -64,6 +64,7 @@
 		E166D60E22CE293E004704DC /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E166D60D22CE293E004704DC /* MainTabBarController.swift */; };
 		E16D31CB2258BF5500033DCC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E16D31C92258BF5500033DCC /* Localizable.strings */; };
 		E16D31CE2258EA5A00033DCC /* UITextField+DoneToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16D31CD2258EA5A00033DCC /* UITextField+DoneToolbar.swift */; };
+		E17BD6C92303445D00E1E66C /* URL+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17BD6C82303445D00E1E66C /* URL+String.swift */; };
 		E17CA187224C24FE00D5C955 /* AnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CA186224C24FE00D5C955 /* AnalyticsManager.swift */; };
 		E17CA189224C257100D5C955 /* AnalyticEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CA188224C257100D5C955 /* AnalyticEvent.swift */; };
 		E17CA18B224C27CB00D5C955 /* AppMetricaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CA18A224C27CB00D5C955 /* AppMetricaManager.swift */; };
@@ -280,6 +281,7 @@
 		E166D60D22CE293E004704DC /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		E16D31CA2258BF5500033DCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Resources/Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E16D31CD2258EA5A00033DCC /* UITextField+DoneToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+DoneToolbar.swift"; sourceTree = "<group>"; };
+		E17BD6C82303445D00E1E66C /* URL+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+String.swift"; sourceTree = "<group>"; };
 		E17CA186224C24FE00D5C955 /* AnalyticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsManager.swift; sourceTree = "<group>"; };
 		E17CA188224C257100D5C955 /* AnalyticEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticEvent.swift; sourceTree = "<group>"; };
 		E17CA18A224C27CB00D5C955 /* AppMetricaManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMetricaManager.swift; sourceTree = "<group>"; };
@@ -1012,6 +1014,7 @@
 				E1A2DEA62253C33C007E40F8 /* String+Format.swift */,
 				E18E220322DBA032008C26D1 /* UserDefaults+Codable.swift */,
 				E10608602301E1F00060052C /* Data+String.swift */,
+				E17BD6C82303445D00E1E66C /* URL+String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1573,6 +1576,7 @@
 				E18FB17A228812EB00F15F66 /* CategoryTarget.swift in Sources */,
 				E111747A224183A400BD19B4 /* AuthTarget.swift in Sources */,
 				E18FB19B22893E8600F15F66 /* EditProductRouter.swift in Sources */,
+				E17BD6C92303445D00E1E66C /* URL+String.swift in Sources */,
 				E1BC5AE522312F36001FD1D6 /* Moya+CustomDecodableRequest.swift in Sources */,
 				E10608612301E1F00060052C /* Data+String.swift in Sources */,
 				E17CA1942252A94200D5C955 /* DatabaseStore.swift in Sources */,

@@ -14,7 +14,7 @@ struct User: Decodable {
     let lastName: String?
     let avatarUrl: String?
     let phone: String?
-    let city: City?
+    let city: String?
 }
 
 

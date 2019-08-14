@@ -23,7 +23,8 @@ final class MyProductsAssembly: Assembly {
                 view: viewController,
                 router: r.resolve(MyProductsRouter.self, argument: viewController)!,
                 productService: r.resolve(ProductService.self)!,
-                authService: r.resolve(AuthService.self)!
+                authService: r.resolve(AuthService.self)!,
+                userService: r.resolve()
             )
         }
         

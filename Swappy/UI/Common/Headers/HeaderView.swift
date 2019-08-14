@@ -33,12 +33,8 @@ final class HeaderView: UICollectionReusableView {
     func configure(with viewModel: HeaderViewModel, delegate: HeaderViewDelegate? = nil) {
         titleLabel.text = viewModel.title
         
-        if let image = viewModel.image {
-            button.setImage(image, for: .normal)
-        } else {
-            button.isHidden = true
-        }
-        button.imageView?.contentMode = .scaleAspectFill
+        button.sd_setImage(with: viewModel.avatarURL, for: .normal, completed: nil)
+        button.isHidden = viewModel.hideImage
         
         self.delegate = delegate
     }
