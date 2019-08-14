@@ -15,6 +15,8 @@ protocol KeychainStore: class {
     var welcomeName: String? { get set }
     var welcomeCity: City? { get set }
     var phone: String? { get set }
+    
+    func clear()
 }
 
 final class KeychainStoreImp {
@@ -48,6 +50,8 @@ extension KeychainStoreImp: KeychainStore {
 // MARK: - UserDefaults
 
 extension KeychainStoreImp {
+    
+    // MARK: - Properties
     
     var userSellerId: String? {
         get {
@@ -89,6 +93,17 @@ extension KeychainStoreImp {
             defaults.set(newValue, forKey: "auth_phone")
         }
     }
+    
+    // MARK: - Functions
+    
+    func clear() {
+        accessToken = nil
+        userSellerId = nil
+        welcomeCity = nil
+        welcomeName = nil
+        
+        isNotFirstLaunch = true
+    }
 }
 
 // MARK: - Private
@@ -115,15 +130,6 @@ private extension KeychainStoreImp {
     func clearIfNeeded() {
         guard shouldClearKeychain else { return }
         
-        clearKeychain()
-    }
-    
-    func clearKeychain() {
-        accessToken = nil
-        userSellerId = nil
-        welcomeCity = nil
-        welcomeName = nil
-
-        isNotFirstLaunch = true
+        clear()
     }
 }

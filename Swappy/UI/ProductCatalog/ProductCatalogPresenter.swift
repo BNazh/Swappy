@@ -6,17 +6,37 @@
 //  Copyright © 2019 SwappyTeam. All rights reserved.
 //
 
+enum ProductCatalogMode {
+    case
+    main,
+    category(Category)
+    
+    var isMain: Bool {
+        switch self {
+        case .main:
+            return true
+        case .category:
+            return false
+        }
+    }
+}
+
 protocol ProductCatalogPresenter {
     
+    func initialize()
     func loadProducts()
     func refreshProducts()
     func selectProduct(with id: String)
     func showCategoryFilter()
+    
+    func setCategoryMode(with category: Category)
 }
 
 final class ProductCatalogPresenterImp {
     
     // MARK: - Properties
+    
+    
     
     private unowned let view: ProductCatalogView
     private let productService: ProductService
@@ -25,6 +45,7 @@ final class ProductCatalogPresenterImp {
     
     private var products: [Product] = []
     private var isLoading = false
+    private var mode: ProductCatalogMode = .main
     
     // MARK: - Init
     
@@ -45,6 +66,11 @@ final class ProductCatalogPresenterImp {
 // MARK: - Presenter
 
 extension ProductCatalogPresenterImp: ProductCatalogPresenter {
+    
+    func initialize() {
+        let hideFilterButton = !mode.isMain
+        view.displayInitialize(headerModel: headerViewModel, isFilterButtonHidden: hideFilterButton)
+    }
     
     func loadProducts() {
         guard !isLoading, productService.canLoadMore else {
@@ -99,6 +125,10 @@ extension ProductCatalogPresenterImp: ProductCatalogPresenter {
             delegate: self
         )
     }
+    
+    func setCategoryMode(with category: Category) {
+        mode = .category(category)
+    }
 }
 
 extension ProductCatalogPresenterImp: CategoryFilterDelegate {
@@ -115,9 +145,18 @@ extension ProductCatalogPresenterImp: CategoryFilterDelegate {
 
 private extension ProductCatalogPresenterImp {
     
+    var headerViewModel: HeaderViewModel {
+        switch mode {
+        case .main:
+            return HeaderViewModel(title: "Swappy")
+        case .category(let category):
+            return HeaderViewModel(title: category.name)
+        }
+    }
+    
     func handleSuccessGetProducts(_ newProducts: [Product]) {
         products.append(contentsOf: newProducts)
-        products.removeAll { !$0.isActive || $0.id.isEmpty || $0.seller == nil } // DELETE ME
+        products.removeAll { !$0.isActive || $0.id.isEmpty } // DELETE ME
         
         reloadProductsOnView()
     }

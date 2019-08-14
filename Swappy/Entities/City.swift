@@ -9,6 +9,13 @@
 struct City: Codable {
     
     let title: String
+    
+    init?(title: String?) {
+        guard let title = title else {
+            return nil
+        }
+        self.title = title
+    }
 }
 
 // MARK: - SelectionItem

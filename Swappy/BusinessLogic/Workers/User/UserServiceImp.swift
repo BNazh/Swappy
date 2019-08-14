@@ -30,26 +30,32 @@ final class UserServiceImp {
 
 extension UserServiceImp: UserService {
     
-    var currentUser: User {
+    var currentUser: User? {
         let id = keychain.userSellerId ?? ""
-        let user: User? = database.getItem(withId: id)
-        
-        return user ?? User.empty
+        return database.getItem(withId: id)
     }
     
     var currentPhone: String? {
-        return keychain.phone
+        return currentUser?.phone ?? keychain.phone
     }
     
-    func updateUser(name: String, avatar: String?, callback: @escaping ResultCallback<User>) {
+    var currentFullName: String? {
+        return currentUser?.fullName ?? keychain.welcomeName
+    }
+    
+    var currentCity: City? {
+        return City(title: currentUser?.city) ?? keychain.welcomeCity
+    }
+    
+    func updateUser(name: String, avatar: String?, city: String?, callback: @escaping ResultCallback<User>) {
         let id = keychain.userSellerId ?? ""
-        let user = userRequestObject(name: name, avatar: avatar)
+        let user = userRequestObject(name: name, avatar: avatar, city: city)
         let request = UserTarget.updateUser(id: id, user: user)
         
         provider.requestDecodable(request) { [weak self] (result: Result<User>) in
             switch result {
             case .success(let user):
-                self?.database.updateItem(user)
+                self?.database.addItem(user)
                 callback(.success(user))
             case .failure(let error):
                 callback(.failure(error))
@@ -58,9 +64,7 @@ extension UserServiceImp: UserService {
     }
     
     func logout() {
-        keychain.userSellerId = nil
-        keychain.accessToken = nil
-        keychain.phone = nil
+        keychain.clear()
     }
 }
 
@@ -68,15 +72,16 @@ extension UserServiceImp: UserService {
 
 extension UserServiceImp {
     
-    func userRequestObject(name: String, avatar: String?) -> UserTarget.UserRO {
+    func userRequestObject(name: String, avatar: String?, city: String?) -> UserTarget.UserRO {
         var splitName = name.split(separator: " ")
-        let lastName = String(splitName.removeLast())
-        let firstName = splitName.joined(separator: " ")
+        let firstName = String(splitName.removeFirst())
+        let lastName = splitName.joined(separator: " ")
         
         return UserTarget.UserRO(
             firstName: firstName,
             lastName: lastName,
-            avatarUrl: avatar
+            avatarUrl: avatar,
+            city: city
         )
     }
 }

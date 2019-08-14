@@ -27,6 +27,7 @@ final class MyProductsPresenterImp {
     let router: MyProductsRouter
     let productService: ProductService
     let authService: AuthService
+    let userService: UserService
     
     fileprivate var products: [Product] = []
     private var isLoading = false
@@ -37,11 +38,13 @@ final class MyProductsPresenterImp {
     init(view: MyProductsView,
          router: MyProductsRouter,
          productService: ProductService,
-         authService: AuthService) {
+         authService: AuthService,
+         userService: UserService) {
         self.view = view
         self.router = router
         self.productService = productService
         self.authService = authService
+        self.userService = userService
         
         setupObservers()
     }
@@ -117,7 +120,9 @@ extension MyProductsPresenterImp: MyProductsPresenter {
     }
     
     func reloadHeader() {
-        let header = HeaderViewModel(title: "Михаил\nБабаев Лох", image: #imageLiteral(resourceName: "test"))
+        let title = userService.currentFullName ?? ""
+        let imageUrlString = userService.currentUser?.avatarUrl?.asUrl
+        let header = HeaderViewModel(title: title, avatarURL: imageUrlString)
         view.reloadHeader(header)
     }
 }
@@ -130,7 +135,7 @@ private extension MyProductsPresenterImp {
         }
         
         products.append(contentsOf: newProducts)
-        products.removeAll { !$0.isActive || $0.id.isEmpty || $0.seller == nil } // DELETE ME
+        products.removeAll { !$0.isActive || $0.id.isEmpty } // DELETE ME
         
         reloadProductsOnView()
     }

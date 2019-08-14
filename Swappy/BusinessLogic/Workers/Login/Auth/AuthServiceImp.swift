@@ -94,7 +94,7 @@ private extension AuthServiceImp {
     func setCrashlyticsUser(_ user: User) {
         let sdk = Crashlytics.sharedInstance()
         sdk.setUserIdentifier(user.id)
-        sdk.setUserName(user.firstName + user.lastName)
+        sdk.setUserName(user.fullName)
     }
 }
 

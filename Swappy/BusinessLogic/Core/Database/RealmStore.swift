@@ -17,7 +17,7 @@ final class RealmStore {
         print(Realm.Configuration.defaultConfiguration.fileURL!)
         
         var config = Realm.Configuration.defaultConfiguration
-        config.schemaVersion = 20
+        config.schemaVersion = 23
         config.migrationBlock = { migration, oldSchemaVersion in
             if oldSchemaVersion < 20 {
             }
@@ -53,7 +53,7 @@ extension RealmStore: DatabaseStore {
     func addItems<T>(_ items: [T]) where T : Plain {
         try? realm.write {
             let objects = items.asObjects
-            realm.add(objects)
+            realm.add(objects, update: true)
         }
     }
     

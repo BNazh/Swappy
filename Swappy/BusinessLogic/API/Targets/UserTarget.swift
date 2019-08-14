@@ -27,7 +27,10 @@ extension UserTarget: TargetType {
     }
     
     var method: Method {
-        return .post
+        switch self {
+        case .updateUser:
+            return .put
+        }
     }
     
     var sampleData: Data {
@@ -46,6 +49,16 @@ extension UserTarget: TargetType {
     }
 }
 
+extension UserTarget: AccessTokenAuthorizable {
+    
+    var authorizationType: AuthorizationType {
+        switch self {
+        case .updateUser:
+            return .bearer
+        }
+    }
+}
+
 extension UserTarget {
     
     struct UserRO: Encodable {
@@ -55,6 +68,7 @@ extension UserTarget {
         let firstName: String
         let lastName: String?
         let avatarUrl: String?
+        let city: String?
     }
 }
 

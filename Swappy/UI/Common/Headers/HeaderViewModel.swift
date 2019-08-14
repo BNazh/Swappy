@@ -10,6 +10,23 @@ import UIKit
 
 struct HeaderViewModel {
     
+    // MARK: - Properties
+    
     let title: String
-    let image: UIImage?
+    let avatarURL: URL?
+    let hideImage: Bool
+    
+    // MARK: - Inits
+    
+    init(title: String) {
+        self.title = title
+        avatarURL = nil
+        hideImage = true
+    }
+    
+    init(title: String, avatarURL: URL?) {
+        self.title = title
+        self.avatarURL = avatarURL
+        hideImage = false
+    }
 }

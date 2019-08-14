@@ -8,8 +8,6 @@
 
 import Moya
 
-typealias CategoryName = String
-
 final class CategoryServiceImp {
     
     private let provider: MoyaProvider<CategoryTarget>

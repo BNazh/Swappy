@@ -9,7 +9,7 @@
 import UIKit
 
 protocol ProfileEditRouter: SingleSelectionRoute {
-    
+    func close()
 }
 
 final class ProfileEditRouterImp: ProfileEditRouter {
@@ -26,5 +26,11 @@ final class ProfileEditRouterImp: ProfileEditRouter {
     
     init(viewController: UIViewController) {
         self.viewController = viewController
+    }
+    
+    // MARK: - Functions
+    
+    func close() {
+        viewController.navigationController?.popViewController(animated: true)
     }
 }

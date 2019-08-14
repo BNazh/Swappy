@@ -23,6 +23,10 @@ final class ProductsNotificationCenter {
     
     private init() {}
     
+    deinit {
+        observers.forEach { notificationCenter.removeObserver($0) }
+    }
+    
     // MARK: - Functions
     
     func observeAddingProduct(handler: @escaping (Product) -> Void) {

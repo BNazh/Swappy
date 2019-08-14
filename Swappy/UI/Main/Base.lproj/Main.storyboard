@@ -57,12 +57,22 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="NGV-HX-Xmx" kind="relationship" relationship="rootViewController" id="tyq-hP-oF7"/>
+                        <segue destination="L9v-pv-XQm" kind="relationship" relationship="rootViewController" id="o3D-DY-FI6"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tel-z2-9oI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-507" y="644"/>
+        </scene>
+        <!--Categories-->
+        <scene sceneID="ZAw-hY-HyM">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Categories" id="L9v-pv-XQm" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="yG0-Qs-NXr"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rGi-C4-bZJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="172" y="643"/>
         </scene>
         <!--Main Tab Bar Controller-->
         <scene sceneID="gS2-05-9LE">
@@ -183,22 +193,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q6K-Um-ekn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-476" y="1451"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="Pz6-Dl-QOF">
-            <objects>
-                <viewController id="NGV-HX-Xmx" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="LTu-Ft-RK2">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="Lg0-DP-j4n"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="Nht-cc-xNi"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Kgu-Q4-gew" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="372" y="644"/>
         </scene>
         <!--EditProduct-->
         <scene sceneID="be0-he-yLm">

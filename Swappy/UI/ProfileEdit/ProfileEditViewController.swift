@@ -16,8 +16,7 @@ protocol ProfileEditView: AnyObject, LoadingView, ErrorView {
     var city: String { get set }
     
     func reloadSaveButton(isEnabled: Bool)
-    func displayInitialize(name: String, phone: String, city: String)
-    func displayUpdatedProfile()
+    func displayInitialize(name: String, phone: String, city: String, avatarUrl: URL?)
 }
 
 final class ProfileEditViewController: UIViewController {
@@ -44,6 +43,7 @@ final class ProfileEditViewController: UIViewController {
         setupViews()
         
         presenter.initialize()
+        presenter.reloadSaveButton()
     }
     
     // MARK: - Actions
@@ -83,14 +83,12 @@ extension ProfileEditViewController: ProfileEditView {
         saveButton.isEnabled = isEnabled
     }
     
-    func displayInitialize(name: String, phone: String, city: String) {
+    func displayInitialize(name: String, phone: String, city: String, avatarUrl: URL?) {
         nameTextField.text = name
         phoneTextField.text = phone
         cityTextField.text = city
-    }
-    
-    func displayUpdatedProfile() {
         
+        avatarImageView.sd_setImage(with: avatarUrl, for: .normal, completed: nil)
     }
 }
 
@@ -115,6 +113,10 @@ extension ProfileEditViewController: UITextFieldDelegate {
         
         return true
     }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        presenter.reloadSaveButton()
+    }
 }
 
 // MARK: - Private
@@ -123,6 +125,7 @@ private extension ProfileEditViewController {
     
     func setupViews() {
         logoutButton.setTitleColor(.coralRed, for: .normal)
+        phoneTextField.clearButtonMode = .never
     }
     
     func openAvatarPicker() {

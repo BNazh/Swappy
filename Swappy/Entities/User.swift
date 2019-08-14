@@ -8,11 +8,13 @@
 
 struct User: Decodable {
     
-    let id: String
+    let id: String?
     let vkId: String?
     let firstName: String
-    let lastName: String
-    let avatarUrl: String
+    let lastName: String?
+    let avatarUrl: String?
+    let phone: String?
+    let city: String?
 }
 
 
@@ -21,11 +23,7 @@ struct User: Decodable {
 extension User {
     
     var fullName: String {
+        let lastName = self.lastName ?? ""
         return firstName + " " + lastName
     }
-}
-
-extension User {
-    
-    static let empty = User(id: "", vkId: "", firstName: "", lastName: "", avatarUrl: "")
 }
