@@ -31,14 +31,13 @@ final class MyProductsViewController: UIViewController {
         
         dataDisplayManager.setup(delegate: self, collectionView: collectionView)
         collectionView.contentInset = UIEdgeInsets(top: 0, left: 4, bottom: 84, right: 4)
-        
-        presenter.reloadHeader()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         presenter.loadMyProductsIfEmpty()
+        presenter.reloadHeader()
         
         navigationController?.navigationBar.isHidden = true
     }
@@ -79,6 +78,7 @@ extension MyProductsViewController: MyProductsView {
     
     func reloadHeader(_ header: HeaderViewModel) {
         dataDisplayManager.reloadHeader(header)
+        collectionView.reloadData()
     }
 }
 

@@ -25,12 +25,13 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Bw-tN-ppZ">
+                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Bw-tN-ppZ">
                     <rect key="frame" x="247" y="51.5" width="72" height="72"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="72" id="fE5-DQ-3Jz"/>
                         <constraint firstAttribute="width" secondItem="9Bw-tN-ppZ" secondAttribute="height" multiplier="1:1" id="ugp-cJ-3qQ"/>
                     </constraints>
+                    <state key="normal" backgroundImage="cameraSquare"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                             <integer key="value" value="6"/>
@@ -59,4 +60,7 @@
             <point key="canvasLocation" x="79.200000000000003" y="-194.75262368815595"/>
         </view>
     </objects>
+    <resources>
+        <image name="cameraSquare" width="300" height="300"/>
+    </resources>
 </document>

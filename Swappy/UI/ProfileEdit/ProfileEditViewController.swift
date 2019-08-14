@@ -88,7 +88,7 @@ extension ProfileEditViewController: ProfileEditView {
         phoneTextField.text = phone
         cityTextField.text = city
         
-        avatarImageView.imageView?.sd_setImage(with: avatarUrl, completed: nil)
+        avatarImageView.sd_setImage(with: avatarUrl, for: .normal, completed: nil)
     }
 }
 
