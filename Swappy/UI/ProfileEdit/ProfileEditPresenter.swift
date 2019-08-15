@@ -90,6 +90,7 @@ extension ProfileEditPresenterImp: ProfileEditPresenter {
     
     func logout() {
         userService.logout()
+        router.showWelcome()
     }
 }
 

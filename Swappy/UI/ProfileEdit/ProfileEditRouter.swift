@@ -9,7 +9,9 @@
 import UIKit
 
 protocol ProfileEditRouter: SingleSelectionRoute {
+    
     func close()
+    func showWelcome()
 }
 
 final class ProfileEditRouterImp: ProfileEditRouter {
@@ -32,5 +34,11 @@ final class ProfileEditRouterImp: ProfileEditRouter {
     
     func close() {
         viewController.navigationController?.popViewController(animated: true)
+    }
+    
+    func showWelcome() {
+        let welcomeViewController: WelcomeViewController = UIStoryboard.createViewController()
+        
+        UIApplication.shared.keyWindow?.rootViewController = welcomeViewController
     }
 }

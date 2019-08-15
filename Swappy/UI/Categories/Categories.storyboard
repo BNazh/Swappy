@@ -19,36 +19,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="tfF-Yr-vVe">
-                                <rect key="frame" x="8" y="159" width="359" height="56"/>
+                                <rect key="frame" x="8" y="116" width="359" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="8ap-H4-Qc4" id="MDG-qr-kxa"/>
                                 </connections>
                             </searchBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Категории" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BQe-kl-9Fs">
-                                <rect key="frame" x="16" y="215" width="84" height="21"/>
+                                <rect key="frame" x="16" y="172" width="70.5" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="26b-sj-a3f"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                <color key="textColor" red="0.72549019607843135" green="0.72549019607843135" blue="0.72549019607843135" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="v8e-E8-KT8">
-                                <rect key="frame" x="0.0" y="244" width="375" height="423"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="v8e-E8-KT8">
+                                <rect key="frame" x="0.0" y="201" width="375" height="466"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="8ap-H4-Qc4" id="6bO-te-wtR"/>
                                     <outlet property="delegate" destination="8ap-H4-Qc4" id="REw-zT-FQq"/>
                                 </connections>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hD1-BC-7Tc" customClass="HeaderView" customModule="Swappy" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="20" width="375" height="131"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hD1-BC-7Tc">
+                                <rect key="frame" x="0.0" y="20" width="375" height="88"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Поиск" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hii-21-aND">
-                                        <rect key="frame" x="16" y="44" width="343" height="87"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Поиск" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Akj-az-TpW">
+                                        <rect key="frame" x="16" y="44" width="359" height="44"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="87" id="CHR-EN-tx7"/>
+                                            <constraint firstAttribute="height" constant="44" id="JeD-wX-fdk"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                                         <nil key="textColor"/>
@@ -57,10 +57,10 @@
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="hii-21-aND" secondAttribute="trailing" constant="16" id="3dd-kF-4yy"/>
-                                    <constraint firstItem="hii-21-aND" firstAttribute="leading" secondItem="hD1-BC-7Tc" secondAttribute="leading" constant="16" id="6wA-nY-F5V"/>
-                                    <constraint firstAttribute="bottom" secondItem="hii-21-aND" secondAttribute="bottom" id="cqb-B8-X9c"/>
-                                    <constraint firstItem="hii-21-aND" firstAttribute="top" secondItem="hD1-BC-7Tc" secondAttribute="top" constant="44" id="rV4-ke-IlS"/>
+                                    <constraint firstAttribute="trailing" secondItem="Akj-az-TpW" secondAttribute="trailing" id="Mev-Iy-FiV"/>
+                                    <constraint firstAttribute="bottom" secondItem="Akj-az-TpW" secondAttribute="bottom" id="Uch-uW-rLA"/>
+                                    <constraint firstItem="Akj-az-TpW" firstAttribute="top" secondItem="hD1-BC-7Tc" secondAttribute="top" constant="44" id="Wjn-Q2-bsS"/>
+                                    <constraint firstItem="Akj-az-TpW" firstAttribute="leading" secondItem="hD1-BC-7Tc" secondAttribute="leading" constant="16" id="yQt-ua-6L1"/>
                                 </constraints>
                             </view>
                         </subviews>

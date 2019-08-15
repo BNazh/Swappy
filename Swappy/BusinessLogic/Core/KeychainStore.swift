@@ -19,6 +19,8 @@ protocol KeychainStore: class {
     func clear()
 }
 
+// TODO: Переименовать keychain в более общее
+
 final class KeychainStoreImp {
     
     // MARK: - Properties
