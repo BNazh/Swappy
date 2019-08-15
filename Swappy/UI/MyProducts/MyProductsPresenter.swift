@@ -116,6 +116,11 @@ extension MyProductsPresenterImp: MyProductsPresenter {
     }
     
     func openProfile() {
+        guard authService.isAuthorized else {
+            router.openLoginCard()
+            return
+        }
+        
         router.openProfileEdit()
     }
     

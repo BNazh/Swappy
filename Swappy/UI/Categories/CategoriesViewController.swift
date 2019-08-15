@@ -33,6 +33,12 @@ final class CategoriesViewController: UIViewController {
         
         presenter.getCategories()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.navigationBar.isHidden = true
+    }
 }
 
 // MARK: - CategoriesView protocol
@@ -89,6 +95,8 @@ extension CategoriesViewController: UISearchBarDelegate {
         // TODO
     }
 }
+
+// MARK: - Private
 
 private extension CategoriesViewController {
     
