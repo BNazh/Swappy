@@ -24,7 +24,7 @@ target 'Swappy' do
   pod 'SDWebImage', '~> 4.0'
   
   # Keychain
-  pod 'KeychainAccess'
+  pod 'KeychainAccess',
   
   # Slideshow view
   pod 'ImageSlideshow', '1.7.0'

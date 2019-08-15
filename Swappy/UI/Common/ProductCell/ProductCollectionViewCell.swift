@@ -46,11 +46,37 @@ private extension ProductCollectionViewCell {
         layer.cornerRadius = 16
         layer.masksToBounds = false
         
-        //let shadowRect = CGRect(x: -2, y: -2, width: bounds.width + 4, height: bounds.height + 10)
-        let shadowRect = CGRect(x: 0, y: 6, width: bounds.width, height: bounds.height)
-        containerView.layer.shadowPath = UIBezierPath(rect: shadowRect).cgPath
-        containerView.layer.shadowColor = UIColor.black.cgColor
-        containerView.layer.shadowRadius = 6
-        containerView.layer.shadowOpacity = 0.3
+        
+//        let shadowRect = CGRect(x: 0, y: 6, width: bounds.width, height: bounds.height)
+//        containerView.layer.shadowPath = UIBezierPath(rect: shadowRect).cgPath
+//        containerView.layer.shadowColor = UIColor.black.cgColor
+//        containerView.layer.shadowRadius = 6
+//        containerView.layer.shadowOpacity = 0.12
+        
+        containerView.layer.applySketchShadow(y: -2)
+        containerView.layer.applySketchShadow(y: 8)
+    }
+}
+
+extension CALayer {
+    func applySketchShadow(
+        color: UIColor = .black,
+        alpha: Float = 0.1,
+        x: CGFloat = 0,
+        y: CGFloat = 0,
+        blur: CGFloat = 8,
+        spread: CGFloat = 0)
+    {
+        shadowColor = color.cgColor
+        shadowOpacity = alpha
+        shadowOffset = CGSize(width: x, height: y)
+        shadowRadius = blur / 2.0
+        if spread == 0 {
+            shadowPath = nil
+        } else {
+            let dx = -spread
+            let rect = bounds.insetBy(dx: dx, dy: dx)
+            shadowPath = UIBezierPath(rect: rect).cgPath
+        }
     }
 }

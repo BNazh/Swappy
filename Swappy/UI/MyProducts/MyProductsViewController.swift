@@ -21,6 +21,7 @@ final class MyProductsViewController: UIViewController {
     var presenter: MyProductsPresenter!
     var dataDisplayManager: ProductsDDM!
     
+    @IBOutlet weak var placeholderView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var addProductButton: MainButton!
     
@@ -73,6 +74,7 @@ extension MyProductsViewController: MyProductsView {
     func reloadProducts(_ products: [ProductCellViewModel]) {
         dataDisplayManager.reloadProducts(products)
         addProductButton.isHidden = products.isEmpty
+        placeholderView.isHidden = !products.isEmpty
         //collectionView.isHidden = products.isEmpty
     }
     

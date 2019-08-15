@@ -39,6 +39,7 @@ final class ProfileEditRouterImp: ProfileEditRouter {
     func showWelcome() {
         let welcomeViewController: WelcomeViewController = UIStoryboard.createViewController()
         
-        UIApplication.shared.keyWindow?.rootViewController = welcomeViewController
+        viewController.navigationController?.popToRootViewController(animated: true)
+        viewController.mainTabBarController?.present(welcomeViewController, animated: true, completion: nil)
     }
 }
