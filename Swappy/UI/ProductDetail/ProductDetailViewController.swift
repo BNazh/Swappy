@@ -41,6 +41,7 @@ class ProductDetailViewController: UIViewController {
         presenter.setActions()
         
         setupNavigationBar()
+        setupScrollView()
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -111,5 +112,9 @@ private extension ProductDetailViewController {
         
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
+    }
+    
+    func setupScrollView() {
+        scrollView.contentInset = .init(top: 0, left: 0, bottom: 100, right: 0)
     }
 }

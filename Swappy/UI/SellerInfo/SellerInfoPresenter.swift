@@ -8,19 +8,27 @@
 
 import Foundation
 
-protocol SellerInfoPresenter: class {
+protocol SellerInfoPresenter: AnyObject {
+    
     func setProduct(_ product: Product)
     func showSeller()
 }
 
 final class SellerInfoPresenterImp {
+    
+    // MARK: - Properties
+    
     unowned let view: SellerInfoView
     var product: Product!
+    
+    // MARK: - Init
     
     init(view: SellerInfoView) {
         self.view = view
     }
 }
+
+// MARK: - SellerInfoPresenter
 
 extension SellerInfoPresenterImp: SellerInfoPresenter {
     
@@ -29,8 +37,12 @@ extension SellerInfoPresenterImp: SellerInfoPresenter {
     }
     
     func showSeller() {
+        guard let seller = product.seller else {
+            return
+        }
+        
         let viewModel = SellerInfoViewModel(
-            seller: product.seller!,
+            seller: seller,
             contactPhone: product.contactPhone
         )
         
