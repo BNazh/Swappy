@@ -41,15 +41,36 @@
                                     <action selector="filterButtonPressed:" destination="IUz-77-IIh" eventType="touchUpInside" id="UdR-Jz-G7J"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Gr-Up-CEW">
+                                <rect key="frame" x="16" y="20" width="44" height="44"/>
+                                <color key="backgroundColor" red="0.78431372549019607" green="0.78431372549019607" blue="0.78431372549019607" alpha="0.19696180555555556" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="v2X-Io-khf"/>
+                                    <constraint firstAttribute="width" secondItem="0Gr-Up-CEW" secondAttribute="height" multiplier="1:1" id="zDv-xb-Z5d"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="6" minY="8" maxX="6" maxY="8"/>
+                                <state key="normal" image="back"/>
+                                <state key="highlighted" image="back"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="backButtonAction:" destination="IUz-77-IIh" eventType="touchUpInside" id="X5O-S8-uz8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="fmP-lM-xgc" firstAttribute="top" secondItem="E7Q-oD-chI" secondAttribute="topMargin" id="3ML-Mx-H9k"/>
                             <constraint firstItem="fmP-lM-xgc" firstAttribute="trailing" secondItem="7Zg-Fj-xaj" secondAttribute="trailing" id="4x5-LN-bQu"/>
+                            <constraint firstItem="0Gr-Up-CEW" firstAttribute="top" secondItem="7Zg-Fj-xaj" secondAttribute="top" id="EOe-TH-NzM"/>
                             <constraint firstItem="7Zg-Fj-xaj" firstAttribute="bottom" secondItem="Y44-ZI-htH" secondAttribute="bottom" constant="24" id="EgC-ar-J6u"/>
                             <constraint firstItem="7Zg-Fj-xaj" firstAttribute="trailing" secondItem="Y44-ZI-htH" secondAttribute="trailing" constant="8" id="hZj-XQ-JmQ"/>
                             <constraint firstItem="fmP-lM-xgc" firstAttribute="leading" secondItem="7Zg-Fj-xaj" secondAttribute="leading" id="igt-z6-dcG"/>
                             <constraint firstItem="fmP-lM-xgc" firstAttribute="bottom" secondItem="7Zg-Fj-xaj" secondAttribute="bottom" id="nX5-pm-vlZ"/>
+                            <constraint firstItem="0Gr-Up-CEW" firstAttribute="leading" secondItem="7Zg-Fj-xaj" secondAttribute="leading" constant="16" id="x0j-xm-pbw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7Zg-Fj-xaj"/>
                     </view>
@@ -58,6 +79,7 @@
                     </navigationItem>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="backButton" destination="0Gr-Up-CEW" id="LBd-BA-dju"/>
                         <outlet property="collectionView" destination="fmP-lM-xgc" id="aah-bn-JWG"/>
                         <outlet property="filterButton" destination="Y44-ZI-htH" id="3tH-pC-sRP"/>
                     </connections>
@@ -68,6 +90,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="back" width="13" height="21"/>
         <image name="filter_off" width="60" height="60"/>
         <image name="filter_on" width="60" height="60"/>
     </resources>

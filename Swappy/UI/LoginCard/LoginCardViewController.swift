@@ -10,19 +10,36 @@ import UIKit
 
 final class LoginCardViewController: CardViewController, ErrorView, LoadingView {
     
+    // MARK: - Outlets
+    
     @IBOutlet weak var cardContainerView: UIView!
     @IBOutlet weak var privacyTextView: UITextView!
+    @IBOutlet weak var closeButton: UIButton!
+    @IBOutlet weak var containerCloseAreaButton: UIButton!
+    
+    // MARK: - Business Logic
     
     var vkService: VKService!
     var fbService: FBService!
     var authService: AuthService!
     var tracker: AnalyticsManager!
     
+    // MARK: - Properties
+    
+    var isClosable = true
+    
+    // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        addSwipeGestureRecognizer()
         setupPrivacyTextView()
+        
+        closeButton.isHidden = !isClosable
+        containerCloseAreaButton.isHidden = !isClosable
+        if isClosable {
+            addSwipeGestureRecognizer()
+        }
     }
     
     override func viewDidLayoutSubviews() {

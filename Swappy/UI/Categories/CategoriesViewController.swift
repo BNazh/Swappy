@@ -79,6 +79,8 @@ extension CategoriesViewController: UITableViewDelegate {
         let id = model.id
         
         presenter.showCategory(id: id)
+        
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
@@ -102,5 +104,6 @@ private extension CategoriesViewController {
     
     func setupTableView() {
         tableView.register(cellType: CategoryTableViewCell.self)
+        tableView.tableFooterView = UIView()
     }
 }

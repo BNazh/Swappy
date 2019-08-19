@@ -20,6 +20,7 @@ protocol EditProductPresenter: class {
     var selectedCategoryName: String { get }
     
     func initialize()
+    func reload()
     func performProductAction(productRO: ProductRO)
     func openCategorySelection()
     func openCitySelection()
@@ -36,6 +37,7 @@ final class EditProductPresenterImp {
     private let productService: ProductService
     private let categoryService: CategoryService
     private let cityService: CityService
+    private let authService: AuthService
     private let tracker: AnalyticsManager
     
     private var state = EditProductInitState.add
@@ -48,12 +50,14 @@ final class EditProductPresenterImp {
          productService: ProductService,
          categoryService: CategoryService,
          cityService: CityService,
+         authService: AuthService,
          tracker: AnalyticsManager) {
         self.view = view
         self.router = router
         self.productService = productService
         self.categoryService = categoryService
         self.cityService = cityService
+        self.authService = authService
         self.tracker = tracker
     }
 }
@@ -90,6 +94,14 @@ extension EditProductPresenterImp: EditProductPresenter {
                 categoryName: selectedCategoryName
             )
             view.showProduct(viewModel: viewModel)
+        }
+    }
+    
+    func reload() {
+        if authService.isAuthorized {
+            router.hideLoginCard()
+        } else {
+            router.showLoginCardIfNeeded()
         }
     }
     

@@ -143,6 +143,8 @@
                     </view>
                     <connections>
                         <outlet property="cardContainerView" destination="Xjm-MM-TQq" id="Sxb-tu-Gqx"/>
+                        <outlet property="closeButton" destination="Zm8-Qe-x2I" id="RMI-qp-Scs"/>
+                        <outlet property="containerCloseAreaButton" destination="LYT-hW-ygf" id="VWv-Ha-QQh"/>
                         <outlet property="privacyTextView" destination="NcI-vm-0VM" id="oda-ix-Xkz"/>
                     </connections>
                 </viewController>

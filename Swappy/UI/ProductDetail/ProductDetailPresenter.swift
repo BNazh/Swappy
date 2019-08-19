@@ -22,6 +22,7 @@ final class ProductDetailPresenterImp {
     unowned let view: ProductDetailView
     let router: ProductDetailRouter
     let productService: ProductService
+    let categoryService: CategoryService
     let tracker: AnalyticsManager
     
     var product: Product!
@@ -30,10 +31,12 @@ final class ProductDetailPresenterImp {
     init(view: ProductDetailView,
          router: ProductDetailRouter,
          productService: ProductService,
+         categoryService: CategoryService,
          tracker: AnalyticsManager) {
         self.view = view
         self.router = router
         self.productService = productService
+        self.categoryService = categoryService
         self.tracker = tracker
     }
 }
@@ -46,7 +49,9 @@ extension ProductDetailPresenterImp: ProductDetailPresenter {
     }
     
     func showProduct() {
-        let viewModel = ProductViewModel(product: product)
+        let category = categoryService.category(withId: product.category)
+        let categoryName = category?.name ?? ""
+        let viewModel = ProductViewModel(product: product, categoryName: categoryName)
         view.showProduct(viewModel: viewModel)
     }
     

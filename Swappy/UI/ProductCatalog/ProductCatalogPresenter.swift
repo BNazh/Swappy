@@ -36,8 +36,6 @@ final class ProductCatalogPresenterImp {
     
     // MARK: - Properties
     
-    
-    
     private unowned let view: ProductCatalogView
     private let productService: ProductService
     private let router: ProductCatalogRouter
@@ -128,6 +126,7 @@ extension ProductCatalogPresenterImp: ProductCatalogPresenter {
     
     func setCategoryMode(with category: Category) {
         mode = .category(category)
+        productService.selectedCategories = [category]
     }
 }
 

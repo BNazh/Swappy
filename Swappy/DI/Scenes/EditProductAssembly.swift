@@ -18,6 +18,7 @@ final class EditProductAssembly: Assembly {
                 productService: r.resolve(),
                 categoryService: r.resolve(),
                 cityService: r.resolve(),
+                authService: r.resolve(),
                 tracker: r.resolve()
             )
         }

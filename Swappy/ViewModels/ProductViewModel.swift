@@ -19,13 +19,13 @@ struct ProductViewModel {
     
     let imageUrls: [String]
     
-    init(product: Product) {
+    init(product: Product, categoryName: String) {
         id = product.id
         
         title = product.name
         price = product.price.stringValue
         size = product.size
-        category = product.category
+        category = categoryName
         description = product.description
         imageUrls = product.images
     }

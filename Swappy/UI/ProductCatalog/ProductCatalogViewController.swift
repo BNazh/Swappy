@@ -19,6 +19,7 @@ final class ProductCatalogViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var filterButton: UIButton!
+    @IBOutlet weak var backButton: UIButton!
     
     var presenter: ProductCatalogPresenter!
     var dataDisplayManager: ProductsDDM!
@@ -62,6 +63,10 @@ final class ProductCatalogViewController: UIViewController {
     @IBAction func filterButtonPressed(_ sender: UIButton) {
         presenter.showCategoryFilter()
     }
+    
+    @IBAction func backButtonAction(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
 }
 
 extension ProductCatalogViewController: ProductCatalogView {
@@ -77,6 +82,7 @@ extension ProductCatalogViewController: ProductCatalogView {
     func displayInitialize(headerModel: HeaderViewModel, isFilterButtonHidden: Bool) {
         dataDisplayManager.reloadHeader(headerModel)
         filterButton.isHidden = isFilterButtonHidden
+        backButton.isHidden = !isFilterButtonHidden
     }
 }
 

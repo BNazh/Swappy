@@ -11,6 +11,9 @@ import UIKit
 protocol EditProductRouter: class {
     func openSingleSelection(delegate: SingleSelectionDelegate,
                              input: SingleSelectionInput)
+    
+    func showLoginCardIfNeeded()
+    func hideLoginCard()
 }
 
 final class EditProductRouterImp {
@@ -18,6 +21,8 @@ final class EditProductRouterImp {
     // MARK: - Properties
     
     unowned let viewController: UIViewController
+    
+    private weak var loginViewController: UIViewController?
     
     // MARK: - Init
     
@@ -38,5 +43,23 @@ extension EditProductRouterImp: EditProductRouter {
         
         let presentationController = viewController.tabBarController
         presentationController?.present(selectionVC, animated: true, completion: nil)
+    }
+    
+    func showLoginCardIfNeeded() {
+        guard loginViewController == nil else {
+            return
+        }
+        
+        let loginCard: LoginCardViewController = UIStoryboard.createViewController()
+        self.loginViewController = loginCard
+        
+        loginCard.isClosable = false
+        
+        let navigationController = viewController.navigationController
+        navigationController?.present(loginCard, animated: true, completion: nil)
+    }
+    
+    func hideLoginCard() {
+        self.loginViewController?.dismiss(animated: true, completion: nil)
     }
 }
