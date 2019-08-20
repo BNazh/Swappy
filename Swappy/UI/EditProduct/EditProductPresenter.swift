@@ -98,9 +98,7 @@ extension EditProductPresenterImp: EditProductPresenter {
     }
     
     func reload() {
-        if authService.isAuthorized {
-            router.hideLoginCard()
-        } else {
+        if !authService.isAuthorized {
             router.showLoginCardIfNeeded()
         }
     }

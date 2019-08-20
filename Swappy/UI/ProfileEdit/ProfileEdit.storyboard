@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xm2-8E-Qyx">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,17 +15,17 @@
             <objects>
                 <viewController storyboardIdentifier="ProfileEditViewController" title="Настройки" id="Xm2-8E-Qyx" customClass="ProfileEditViewController" customModule="Swappy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GFc-K5-QIB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="FvF-ST-1b7">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="483-iP-4g2">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="148"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
                                         <subviews>
                                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ssq-p2-xaz">
-                                                <rect key="frame" x="171" y="48" width="72" height="72"/>
+                                                <rect key="frame" x="124" y="48" width="72" height="72"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="72" id="bmh-6j-Ifj"/>
                                                     <constraint firstAttribute="width" secondItem="Ssq-p2-xaz" secondAttribute="height" multiplier="1:1" id="gnE-Rx-qNZ"/>
@@ -44,15 +44,15 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="Ssq-p2-xaz" firstAttribute="top" secondItem="483-iP-4g2" secondAttribute="top" constant="48" id="SGQ-IW-UHg"/>
-                                            <constraint firstAttribute="bottom" secondItem="Ssq-p2-xaz" secondAttribute="bottom" constant="28" id="awS-o5-aeP"/>
+                                            <constraint firstAttribute="bottom" secondItem="Ssq-p2-xaz" secondAttribute="bottom" priority="900" constant="28" id="awS-o5-aeP"/>
                                             <constraint firstItem="Ssq-p2-xaz" firstAttribute="centerX" secondItem="483-iP-4g2" secondAttribute="centerX" id="e48-7h-BaT"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d9y-Xk-sbT">
-                                        <rect key="frame" x="0.0" y="164" width="414" height="68"/>
+                                        <rect key="frame" x="0.0" y="76" width="320" height="68"/>
                                         <subviews>
                                             <textField opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8qw-hQ-ndd" customClass="AppTextField" customModule="Swappy" customModuleProvider="target">
-                                                <rect key="frame" x="16" y="0.0" width="382" height="60"/>
+                                                <rect key="frame" x="16" y="0.0" width="288" height="60"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="next"/>
@@ -75,10 +75,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yZu-Ev-b5X">
-                                        <rect key="frame" x="0.0" y="248" width="414" height="68"/>
+                                        <rect key="frame" x="0.0" y="160" width="320" height="68"/>
                                         <subviews>
                                             <textField opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oWM-PE-eaN" customClass="AppTextField" customModule="Swappy" customModuleProvider="target">
-                                                <rect key="frame" x="16" y="0.0" width="382" height="60"/>
+                                                <rect key="frame" x="16" y="0.0" width="288" height="60"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="next"/>
@@ -92,20 +92,19 @@
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="oWM-PE-eaN" secondAttribute="trailing" constant="16" id="7wK-rz-ufR"/>
                                             <constraint firstItem="oWM-PE-eaN" firstAttribute="leading" secondItem="yZu-Ev-b5X" secondAttribute="leading" constant="16" id="OII-JX-wDX"/>
-                                            <constraint firstAttribute="height" constant="68" id="U7f-TN-JBq"/>
                                             <constraint firstItem="oWM-PE-eaN" firstAttribute="top" secondItem="yZu-Ev-b5X" secondAttribute="top" id="bNz-ql-ZtA"/>
                                             <constraint firstAttribute="bottom" secondItem="oWM-PE-eaN" secondAttribute="bottom" constant="8" id="jm1-YQ-6Yv"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kTO-hg-WgO">
-                                        <rect key="frame" x="0.0" y="332" width="414" height="68"/>
+                                        <rect key="frame" x="0.0" y="244" width="320" height="68"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbg-6X-RKa">
                                                 <rect key="frame" x="16" y="8" width="382" height="52"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </button>
                                             <textField opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Ps-OI-pAE" customClass="AppTextField" customModule="Swappy" customModuleProvider="target">
-                                                <rect key="frame" x="16" y="0.0" width="382" height="60"/>
+                                                <rect key="frame" x="16" y="0.0" width="288" height="60"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="next"/>
@@ -124,14 +123,13 @@
                                             <constraint firstItem="7Ps-OI-pAE" firstAttribute="leading" secondItem="kTO-hg-WgO" secondAttribute="leading" constant="16" id="9N9-La-XEG"/>
                                             <constraint firstAttribute="bottom" secondItem="7Ps-OI-pAE" secondAttribute="bottom" constant="8" id="FGL-54-lzY"/>
                                             <constraint firstItem="7Ps-OI-pAE" firstAttribute="top" secondItem="kTO-hg-WgO" secondAttribute="top" id="MLz-uo-Jd0"/>
-                                            <constraint firstAttribute="height" constant="68" id="Vqs-AU-q4h"/>
                                         </constraints>
                                     </view>
                                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kcB-vq-vNJ">
-                                        <rect key="frame" x="0.0" y="408" width="414" height="68"/>
+                                        <rect key="frame" x="0.0" y="320" width="320" height="68"/>
                                         <subviews>
                                             <textField opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hkw-7C-CqF" customClass="AppTextField" customModule="Swappy" customModuleProvider="target">
-                                                <rect key="frame" x="16" y="0.0" width="382" height="60"/>
+                                                <rect key="frame" x="16" y="0.0" width="288" height="60"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="go"/>
@@ -145,20 +143,19 @@
                                         <constraints>
                                             <constraint firstItem="Hkw-7C-CqF" firstAttribute="top" secondItem="kcB-vq-vNJ" secondAttribute="top" id="2Rc-vO-wnd"/>
                                             <constraint firstItem="Hkw-7C-CqF" firstAttribute="leading" secondItem="kcB-vq-vNJ" secondAttribute="leading" constant="16" id="PJp-Uh-a2T"/>
-                                            <constraint firstAttribute="height" constant="68" id="eKk-Eb-gz5"/>
                                             <constraint firstAttribute="bottom" secondItem="Hkw-7C-CqF" secondAttribute="bottom" constant="8" id="o84-C9-Fu4"/>
                                             <constraint firstAttribute="trailing" secondItem="Hkw-7C-CqF" secondAttribute="trailing" constant="16" id="ye3-30-XON"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SUF-Bc-PSm">
-                                        <rect key="frame" x="0.0" y="416" width="414" height="226"/>
+                                        <rect key="frame" x="0.0" y="328" width="320" height="0.0"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ktx-ZF-Vk0">
-                                        <rect key="frame" x="0.0" y="658" width="414" height="68"/>
+                                        <rect key="frame" x="0.0" y="344" width="320" height="68"/>
                                         <subviews>
                                             <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KmH-Aj-RaO" customClass="MainButton" customModule="Swappy" customModuleProvider="target">
-                                                <rect key="frame" x="16" y="16" width="382" height="52"/>
+                                                <rect key="frame" x="16" y="16" width="288" height="52"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="52" id="A8w-ss-PuG"/>
                                                 </constraints>
@@ -177,10 +174,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vg5-Z1-wIi">
-                                        <rect key="frame" x="0.0" y="742" width="414" height="76"/>
+                                        <rect key="frame" x="0.0" y="428" width="320" height="76"/>
                                         <subviews>
                                             <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oyU-n5-lcO" customClass="SecondaryButton" customModule="Swappy" customModuleProvider="target">
-                                                <rect key="frame" x="16" y="8" width="382" height="52"/>
+                                                <rect key="frame" x="16" y="8" width="288" height="52"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="52" id="8pd-fT-UU9"/>
                                                 </constraints>
@@ -199,6 +196,11 @@
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="kcB-vq-vNJ" firstAttribute="height" secondItem="d9y-Xk-sbT" secondAttribute="height" id="LT9-jv-yt2"/>
+                                    <constraint firstItem="kTO-hg-WgO" firstAttribute="height" secondItem="d9y-Xk-sbT" secondAttribute="height" id="SSg-L8-YxO"/>
+                                    <constraint firstItem="yZu-Ev-b5X" firstAttribute="height" secondItem="d9y-Xk-sbT" secondAttribute="height" id="e7C-q3-xFg"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -210,6 +212,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8S1-Q7-ytM"/>
                     </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="avatarImageView" destination="Ssq-p2-xaz" id="RK1-xl-X6I"/>
                         <outlet property="cityTextField" destination="7Ps-OI-pAE" id="M0y-qT-QTn"/>
@@ -234,6 +237,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="cameraSquare" width="300" height="300"/>
+        <image name="cameraSquare" width="270" height="268"/>
     </resources>
 </document>

@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class LoginCardViewController: CardViewController, ErrorView, LoadingView {
+final class LoginCardViewController: UIViewController, ErrorView, LoadingView {
     
     // MARK: - Outlets
     
@@ -38,7 +38,15 @@ final class LoginCardViewController: CardViewController, ErrorView, LoadingView 
         closeButton.isHidden = !isClosable
         containerCloseAreaButton.isHidden = !isClosable
         if isClosable {
-            addSwipeGestureRecognizer()
+            //addSwipeGestureRecognizer()
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if authService.isAuthorized {
+            dismiss(animated: true, completion: nil)
         }
     }
     
