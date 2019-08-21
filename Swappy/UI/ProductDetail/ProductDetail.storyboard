@@ -216,7 +216,7 @@
                                     <constraint firstAttribute="width" secondItem="eoP-N8-gjH" secondAttribute="height" multiplier="1:1" id="rOX-aW-ol4"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="zi3-R8-1Tr"/>
                                 </constraints>
-                                <color key="tintColor" red="0.78431372549019607" green="0.78431372549019607" blue="0.78431372549019607" alpha="0.19696180555555556" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.56862745098039214" green="0.57647058823529407" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <inset key="imageEdgeInsets" minX="6" minY="8" maxX="6" maxY="8"/>
                                 <state key="normal" image="back"/>
                                 <state key="highlighted" image="back"/>
