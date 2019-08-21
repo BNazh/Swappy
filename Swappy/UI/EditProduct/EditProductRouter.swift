@@ -22,7 +22,7 @@ final class EditProductRouterImp {
     
     unowned let viewController: UIViewController
     
-    private var loginViewController: UIViewController?
+    private weak var loginViewController: UIViewController?
     
     // MARK: - Init
     
@@ -46,14 +46,11 @@ extension EditProductRouterImp: EditProductRouter {
     }
     
     func showLoginCardIfNeeded() {
-        guard loginViewController == nil else {
-            return
-        }
         
         let loginCard: LoginCardViewController = UIStoryboard.createViewController()
         self.loginViewController = loginCard
         
-        //loginCard.isClosable = false
+        loginCard.isClosable = false
         
         let navigationController = viewController.navigationController
         navigationController?.present(loginCard, animated: true, completion: nil)

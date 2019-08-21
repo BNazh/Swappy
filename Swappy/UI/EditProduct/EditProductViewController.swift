@@ -13,6 +13,7 @@ protocol EditProductView: class, LoadingView, ErrorView {
     func showProduct(viewModel: EditProductViewModel)
     func selectCategory(_ category: String)
     func selectCity(_ city: String)
+    func displayReload(hideScrollView: Bool)
     func close()
 }
 
@@ -22,6 +23,7 @@ final class EditProductViewController: UIViewController {
     
     var presenter: EditProductPresenter!
     
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var nameTextField: AppTextField!
     @IBOutlet weak var descriptionTextField: AppTextField!
     @IBOutlet weak var sizeTextField: AppTextField!
@@ -40,8 +42,9 @@ final class EditProductViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.backBarButtonItem?.title = ""
+        definesPresentationContext = true
         
+        navigationItem.backBarButtonItem?.title = ""
         navigationItem.title = presenter.screenTitle
         doneButton.setTitle(presenter.buttonTitle, for: .normal)
         
@@ -60,7 +63,14 @@ final class EditProductViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         
-        photosViewController = segue.destination as? PhotosViewController
+        switch segue.destination {
+        case let vc as PhotosViewController:
+            photosViewController = vc
+        case let vc as LoginCardViewController:
+            vc.isClosable = false
+        default:
+            break
+        }
     }
     
     // MARK: - Actions
@@ -97,6 +107,10 @@ extension EditProductViewController: EditProductView {
     
     func selectCity(_ city: String) {
         cityTextField.text = city
+    }
+    
+    func displayReload(hideScrollView: Bool) {
+        scrollView.isHidden = hideScrollView
     }
     
     func close() {

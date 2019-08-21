@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class LoginCardViewController: UIViewController, ErrorView, LoadingView {
+final class LoginCardViewController: CardViewController, ErrorView, LoadingView {
     
     // MARK: - Outlets
     
@@ -36,17 +36,12 @@ final class LoginCardViewController: UIViewController, ErrorView, LoadingView {
         setupPrivacyTextView()
         
         closeButton.isHidden = !isClosable
-        containerCloseAreaButton.isHidden = !isClosable
-        if isClosable {
-            //addSwipeGestureRecognizer()
-        }
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+        containerCloseAreaButton.isEnabled = isClosable
         
-        if authService.isAuthorized {
-            dismiss(animated: true, completion: nil)
+        if isClosable {
+            addSwipeGestureRecognizer()
+        } else {
+            view.backgroundColor = .white
         }
     }
     
@@ -82,8 +77,13 @@ final class LoginCardViewController: UIViewController, ErrorView, LoadingView {
         let phoneLoginVC: PhoneLoginViewController = UIStoryboard.createViewController()
         phoneLoginVC.hidesBottomBarWhenPushed = true
         
-        let navigationController = mainTabBarController?.profileNavigationController
+        let navigationController = mainTabBarController?.selectedViewController as? UINavigationController
 
+        // TODO: refactor me
+        guard isClosable else {
+            navigationController?.pushViewController(phoneLoginVC, animated: true)
+            return
+        }
         dismiss(animated: true) {
             navigationController?.pushViewController(phoneLoginVC, animated: true)
         }

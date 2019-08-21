@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Edit Product View Controller-->
+        <!--Разместить товар-->
         <scene sceneID="ELT-0n-qey">
             <objects>
                 <viewController storyboardIdentifier="EditProductViewController" id="bty-MB-qlf" customClass="EditProductViewController" customModule="Swappy" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,6 +18,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PzY-TD-xS4">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <connections>
+                                    <segue destination="XjN-kC-4pe" kind="embed" id="OHa-h5-3lH"/>
+                                </connections>
+                            </containerView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="vLS-8Q-co5">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
@@ -327,13 +333,20 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="PzY-TD-xS4" firstAttribute="top" secondItem="Xgb-kM-rpU" secondAttribute="top" id="0qM-Xx-oNc"/>
                             <constraint firstItem="vLS-8Q-co5" firstAttribute="leading" secondItem="Xgb-kM-rpU" secondAttribute="leading" id="AQQ-3L-HYF"/>
                             <constraint firstItem="vLS-8Q-co5" firstAttribute="top" secondItem="Xgb-kM-rpU" secondAttribute="top" id="ASS-LY-Cje"/>
+                            <constraint firstItem="Xgb-kM-rpU" firstAttribute="bottom" secondItem="PzY-TD-xS4" secondAttribute="bottom" id="Es4-bo-CYr"/>
+                            <constraint firstItem="Xgb-kM-rpU" firstAttribute="trailing" secondItem="PzY-TD-xS4" secondAttribute="trailing" id="TuW-fD-eRq"/>
+                            <constraint firstItem="PzY-TD-xS4" firstAttribute="leading" secondItem="Xgb-kM-rpU" secondAttribute="leading" id="Y3e-IZ-f4k"/>
                             <constraint firstItem="Xgb-kM-rpU" firstAttribute="trailing" secondItem="vLS-8Q-co5" secondAttribute="trailing" id="cg2-qd-PT3"/>
                             <constraint firstItem="Xgb-kM-rpU" firstAttribute="bottom" secondItem="vLS-8Q-co5" secondAttribute="bottom" id="fWv-H5-4so"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Xgb-kM-rpU"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Разместить товар" id="dUz-W1-3z4">
+                        <barButtonItem key="backBarButtonItem" title=" " id="gHX-Yi-5tC"/>
+                    </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="414" height="896"/>
                     <connections>
@@ -345,6 +358,7 @@
                         <outlet property="nameTextField" destination="ile-UC-4K9" id="egG-HN-XaG"/>
                         <outlet property="photosHeightConstraint" destination="ANA-Sf-AaO" id="sNY-sR-m8K"/>
                         <outlet property="priceTextField" destination="1AG-IK-3ib" id="tzT-hV-9Ns"/>
+                        <outlet property="scrollView" destination="vLS-8Q-co5" id="IRG-Kd-31j"/>
                         <outlet property="sizeTextField" destination="QFE-Gu-eI8" id="Zlw-tU-RKS"/>
                     </connections>
                 </viewController>
@@ -355,7 +369,7 @@
         <!--Photos View Controller-->
         <scene sceneID="hhx-VA-joW">
             <objects>
-                <viewController id="nj0-WZ-Xl6" customClass="PhotosViewController" customModule="Swappy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController definesPresentationContext="YES" modalPresentationStyle="overFullScreen" id="nj0-WZ-Xl6" customClass="PhotosViewController" customModule="Swappy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lZD-JE-Xtl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -446,6 +460,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HUT-kU-sSI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="770" y="-110"/>
+        </scene>
+        <!--LoginCard-->
+        <scene sceneID="ppf-dc-PIK">
+            <objects>
+                <viewControllerPlaceholder storyboardName="LoginCard" id="XjN-kC-4pe" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Odz-LL-DtF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="568" y="234"/>
         </scene>
     </scenes>
     <resources>

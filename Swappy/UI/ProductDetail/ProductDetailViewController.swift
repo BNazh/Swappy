@@ -72,7 +72,14 @@ class ProductDetailViewController: UIViewController {
         
         present(alert, animated: true, completion: nil)
     }
+    
+    
+    @IBAction func backButtonPressed(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
 }
+
+// MARK: - ProductDetailView
 
 extension ProductDetailViewController: ProductDetailView {
     
@@ -94,12 +101,16 @@ extension ProductDetailViewController: ProductDetailView {
     }
 }
 
+// MARK: - AnalyticScreenProvider
+
 extension ProductDetailViewController: AnalyticScreenProvider {
     
     var screen: AnalyticScreen {
         return .productDetails
     }
 }
+
+// MARK: - Private
 
 private extension ProductDetailViewController {
     
@@ -112,9 +123,34 @@ private extension ProductDetailViewController {
         
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
+        
+//        let backButton = UIBarButtonItem(image: #imageLiteral(resourceName: "back"), style: .done, target: self, action: #selector(close))
+//        let color = UIColor(r: 200, g: 200, b: 200, alpha: 0.2)
+//        let image = UIImage.from(color: color)
+//        backButton.setBackgroundImage(image, for: .normal, barMetrics: .default)
+//
+//        navigationController?.navigationItem.backBarButtonItem = backButton
+    }
+    
+    @objc
+    func close() {
+        navigationController?.popViewController(animated: true)
     }
     
     func setupScrollView() {
         scrollView.contentInset = .init(top: 0, left: 0, bottom: 100, right: 0)
+    }
+}
+
+private extension UIImage {
+    static func from(color: UIColor) -> UIImage {
+        let rect = CGRect(x: 0, y: 0, width: 1, height: 1)
+        UIGraphicsBeginImageContext(rect.size)
+        let context = UIGraphicsGetCurrentContext()
+        context!.setFillColor(color.cgColor)
+        context!.fill(rect)
+        let img = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return img!
     }
 }
