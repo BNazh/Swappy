@@ -144,7 +144,7 @@ private extension ProductDetailViewController {
     }
     
     func setupScrollView() {
-        scrollView.contentInset = .init(top: 0, left: 0, bottom: 100, right: 0)
+        scrollView.contentInset = .init(top: 0, left: 0, bottom: 150, right: 0)
     }
 }
 

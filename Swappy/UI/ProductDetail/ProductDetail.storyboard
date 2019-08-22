@@ -275,7 +275,7 @@
                         <constraints>
                             <constraint firstItem="Uov-bD-4fx" firstAttribute="leading" secondItem="JK0-dd-KCQ" secondAttribute="leading" id="14g-qm-pdI"/>
                             <constraint firstItem="REc-SM-rOV" firstAttribute="top" secondItem="vZT-sJ-Cub" secondAttribute="top" id="3Qr-53-lg1"/>
-                            <constraint firstAttribute="bottom" secondItem="Uov-bD-4fx" secondAttribute="bottom" id="Hl0-1R-Bim"/>
+                            <constraint firstItem="JK0-dd-KCQ" firstAttribute="bottom" secondItem="Uov-bD-4fx" secondAttribute="bottom" id="Hl0-1R-Bim"/>
                             <constraint firstItem="eoP-N8-gjH" firstAttribute="leading" secondItem="JK0-dd-KCQ" secondAttribute="leading" constant="16" id="Kbj-bL-dqb"/>
                             <constraint firstItem="REc-SM-rOV" firstAttribute="bottom" secondItem="JK0-dd-KCQ" secondAttribute="bottom" id="Kor-3w-dCF"/>
                             <constraint firstItem="Uov-bD-4fx" firstAttribute="trailing" secondItem="JK0-dd-KCQ" secondAttribute="trailing" id="aYA-o9-6wy"/>
