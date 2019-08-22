@@ -30,7 +30,7 @@
                                 <cells/>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y44-ZI-htH">
-                                <rect key="frame" x="307" y="583" width="60" height="60"/>
+                                <rect key="frame" x="299" y="591" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Y44-ZI-htH" secondAttribute="height" multiplier="1:1" id="cfG-Ho-yxJ"/>
                                     <constraint firstAttribute="height" constant="60" id="wCU-jU-zfH"/>
@@ -66,8 +66,8 @@
                         <constraints>
                             <constraint firstItem="fmP-lM-xgc" firstAttribute="top" secondItem="E7Q-oD-chI" secondAttribute="topMargin" id="3ML-Mx-H9k"/>
                             <constraint firstItem="fmP-lM-xgc" firstAttribute="trailing" secondItem="7Zg-Fj-xaj" secondAttribute="trailing" id="4x5-LN-bQu"/>
-                            <constraint firstItem="7Zg-Fj-xaj" firstAttribute="bottom" secondItem="Y44-ZI-htH" secondAttribute="bottom" constant="24" id="EgC-ar-J6u"/>
-                            <constraint firstItem="7Zg-Fj-xaj" firstAttribute="trailing" secondItem="Y44-ZI-htH" secondAttribute="trailing" constant="8" id="hZj-XQ-JmQ"/>
+                            <constraint firstItem="7Zg-Fj-xaj" firstAttribute="bottom" secondItem="Y44-ZI-htH" secondAttribute="bottom" constant="16" id="EgC-ar-J6u"/>
+                            <constraint firstItem="7Zg-Fj-xaj" firstAttribute="trailing" secondItem="Y44-ZI-htH" secondAttribute="trailing" constant="16" id="hZj-XQ-JmQ"/>
                             <constraint firstItem="fmP-lM-xgc" firstAttribute="leading" secondItem="7Zg-Fj-xaj" secondAttribute="leading" id="igt-z6-dcG"/>
                             <constraint firstItem="fmP-lM-xgc" firstAttribute="bottom" secondItem="7Zg-Fj-xaj" secondAttribute="bottom" id="nX5-pm-vlZ"/>
                             <constraint firstItem="0Gr-Up-CEW" firstAttribute="top" secondItem="7Zg-Fj-xaj" secondAttribute="top" constant="24" id="vaC-cf-ogd"/>
