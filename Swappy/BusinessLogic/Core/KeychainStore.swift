@@ -41,7 +41,11 @@ extension KeychainStoreImp: KeychainStore {
     
     var accessToken: String? {
         get {
-            return keychain["accessToken"]
+            do {
+                return try keychain.getString("accessToken")
+            } catch {
+                return nil
+            }
         }
         set {
             keychain["accessToken"] = newValue
@@ -57,7 +61,11 @@ extension KeychainStoreImp {
     
     var userSellerId: String? {
         get {
-            return keychain["userSellerId"]
+            do {
+                return try keychain.getString("userSellerId")
+            } catch {
+                return nil
+            }
         }
         set {
             keychain["userSellerId"] = newValue

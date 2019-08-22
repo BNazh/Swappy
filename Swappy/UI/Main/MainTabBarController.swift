@@ -10,16 +10,59 @@ import UIKit
 
 final class MainTabBarController: UITabBarController {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        
-    }
+    // MARK: - Properties
+    
+    var authService: AuthService!
     
     var profileNavigationController: UINavigationController? {
         return viewControllers?.last as? UINavigationController
     }
+    
+    var editProductNavigationController: UINavigationController? {
+        return viewControllers?[safe: 2] as? UINavigationController
+    }
+    
+    // MARK: - Functions
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // TODO: не очень
+        self.delegate = self
+    }
+    
+    func openLoginCard() {
+        let loginVC: LoginCardViewController = UIStoryboard.createViewController()
+        
+        present(loginVC, animated: true, completion: nil)
+    }
 }
+
+// MARK: - UITabBarControllerDelegate
+
+extension MainTabBarController: UITabBarControllerDelegate {
+    
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+        
+        let isEditProduct = viewController == editProductNavigationController
+        let notAuthorized = !authService.isAuthorized
+        
+        if notAuthorized, isEditProduct {
+            openLoginCard()
+            return false
+        }
+        
+        return true
+    }
+}
+
+// MARK: - Private
+
+private extension MainTabBarController {
+    
+    
+}
+
 
 extension UIViewController {
     

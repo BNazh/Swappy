@@ -50,10 +50,7 @@ extension MyProductsRouterImp: MyProductsRouter {
     }
     
     func openLoginCard() {
-        let loginCardVC: LoginCardViewController = UIStoryboard.createViewController()
-        
-        let tabBarController = viewController.tabBarController
-        tabBarController?.present(loginCardVC, animated: true, completion: nil)
+        viewController.mainTabBarController?.openLoginCard()
     }
     
     func openProfileEdit() {

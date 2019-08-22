@@ -26,7 +26,7 @@ final class LoginCardViewController: CardViewController, ErrorView, LoadingView 
     
     // MARK: - Properties
     
-    var isClosable = true
+    
     
     // MARK: - Lifecycle
     
@@ -35,14 +35,7 @@ final class LoginCardViewController: CardViewController, ErrorView, LoadingView 
         
         setupPrivacyTextView()
         
-        closeButton.isHidden = !isClosable
-        containerCloseAreaButton.isEnabled = isClosable
-        
-        if isClosable {
-            addSwipeGestureRecognizer()
-        } else {
-            view.backgroundColor = .white
-        }
+        addSwipeGestureRecognizer()
     }
     
     override func viewDidLayoutSubviews() {
@@ -78,12 +71,6 @@ final class LoginCardViewController: CardViewController, ErrorView, LoadingView 
         phoneLoginVC.hidesBottomBarWhenPushed = true
         
         let navigationController = mainTabBarController?.selectedViewController as? UINavigationController
-
-        // TODO: refactor me
-        guard isClosable else {
-            navigationController?.pushViewController(phoneLoginVC, animated: true)
-            return
-        }
         dismiss(animated: true) {
             navigationController?.pushViewController(phoneLoginVC, animated: true)
         }

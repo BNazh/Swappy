@@ -64,6 +64,7 @@
 		E166D60E22CE293E004704DC /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E166D60D22CE293E004704DC /* MainTabBarController.swift */; };
 		E16D31CB2258BF5500033DCC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E16D31C92258BF5500033DCC /* Localizable.strings */; };
 		E16D31CE2258EA5A00033DCC /* UITextField+DoneToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16D31CD2258EA5A00033DCC /* UITextField+DoneToolbar.swift */; };
+		E172CD48230F0F2200409D8D /* MainAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E172CD47230F0F2200409D8D /* MainAssembly.swift */; };
 		E17BD6C92303445D00E1E66C /* URL+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17BD6C82303445D00E1E66C /* URL+String.swift */; };
 		E17CA187224C24FE00D5C955 /* AnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CA186224C24FE00D5C955 /* AnalyticsManager.swift */; };
 		E17CA189224C257100D5C955 /* AnalyticEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CA188224C257100D5C955 /* AnalyticEvent.swift */; };
@@ -281,6 +282,7 @@
 		E166D60D22CE293E004704DC /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		E16D31CA2258BF5500033DCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Resources/Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E16D31CD2258EA5A00033DCC /* UITextField+DoneToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+DoneToolbar.swift"; sourceTree = "<group>"; };
+		E172CD47230F0F2200409D8D /* MainAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAssembly.swift; sourceTree = "<group>"; };
 		E17BD6C82303445D00E1E66C /* URL+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+String.swift"; sourceTree = "<group>"; };
 		E17CA186224C24FE00D5C955 /* AnalyticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsManager.swift; sourceTree = "<group>"; };
 		E17CA188224C257100D5C955 /* AnalyticEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticEvent.swift; sourceTree = "<group>"; };
@@ -504,6 +506,7 @@
 				E18E220522DBAF3A008C26D1 /* WelcomeAssembly.swift */,
 				E121F16E22EF97DC002666C9 /* ProfileEditAssembly.swift */,
 				E13D324122F16FCA00C78011 /* CategoriesAssembly.swift */,
+				E172CD47230F0F2200409D8D /* MainAssembly.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -648,6 +651,15 @@
 				E1FF3ECA223EEE0A00443DED /* AppTextField.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		E172CD46230F0DE500409D8D /* libraries */ = {
+			isa = PBXGroup;
+			children = (
+				E1BC5AE422312F36001FD1D6 /* Moya+CustomDecodableRequest.swift */,
+				E17CA1A22256A5CC00D5C955 /* Resolver+Extension.swift */,
+			);
+			path = libraries;
 			sourceTree = "<group>";
 		};
 		E17CA185224C24EE00D5C955 /* Analytics */ = {
@@ -912,7 +924,6 @@
 				E11174722240AD5B00BD19B4 /* Reusable */,
 				E11174712240AD4E00BD19B4 /* Scenes */,
 				E19F7E1522310B3D00BAFC7A /* Swinject.swift */,
-				E17CA1A22256A5CC00D5C955 /* Resolver+Extension.swift */,
 			);
 			path = DI;
 			sourceTree = "<group>";
@@ -1006,9 +1017,9 @@
 		E1BC5ADF22312D50001FD1D6 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				E172CD46230F0DE500409D8D /* libraries */,
 				E1BC5AF02231835E001FD1D6 /* UI */,
 				E1BC5AE222312E6C001FD1D6 /* NSAttributedString+SimpleInit.swift */,
-				E1BC5AE422312F36001FD1D6 /* Moya+CustomDecodableRequest.swift */,
 				E164C39622326BAD00D1AB13 /* Collection+SafeSubscription.swift */,
 				E17CA198225338CE00D5C955 /* NotificationName+Product.swift */,
 				E1A2DEA62253C33C007E40F8 /* String+Format.swift */,
@@ -1723,6 +1734,7 @@
 				E17CA19222529D9200D5C955 /* AppConstants.swift in Sources */,
 				E1B4B1DD2235BE2200520082 /* ProductViewModel.swift in Sources */,
 				E1BC5AE322312E6C001FD1D6 /* NSAttributedString+SimpleInit.swift in Sources */,
+				E172CD48230F0F2200409D8D /* MainAssembly.swift in Sources */,
 				E1000631228232E500CDC509 /* AppsflyerAnalyticsManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

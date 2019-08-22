@@ -66,8 +66,6 @@ final class EditProductViewController: UIViewController {
         switch segue.destination {
         case let vc as PhotosViewController:
             photosViewController = vc
-        case let vc as LoginCardViewController:
-            vc.isClosable = false
         default:
             break
         }
