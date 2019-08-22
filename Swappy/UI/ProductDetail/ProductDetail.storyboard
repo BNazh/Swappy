@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Oif-gM-R92">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="802.33333333333337"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="683"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xxC-kK-0Zl" customClass="ImageSlider" customModule="Swappy" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
@@ -75,7 +75,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xLg-UC-AQc">
-                                                <rect key="frame" x="0.0" y="459" width="375" height="73.333333333333371"/>
+                                                <rect key="frame" x="0.0" y="459" width="375" height="94"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Размер" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qIq-tV-IE5">
                                                         <rect key="frame" x="16" y="16" width="78.666666666666671" height="13"/>
@@ -88,7 +88,11 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="800" text="12312312" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mXX-CF-lIZ">
-                                                        <rect key="frame" x="16" y="33" width="78.666666666666671" height="20.333333333333329"/>
+                                                        <rect key="frame" x="16" y="33" width="78.666666666666671" height="41"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="163" id="RLm-EU-bek"/>
+                                                            <constraint firstAttribute="height" constant="41" id="mhh-ym-85j"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -103,7 +107,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="200" verticalHuggingPriority="251" text="Обувь" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhm-wa-6e8">
-                                                        <rect key="frame" x="122.66666666666667" y="33" width="236.33333333333331" height="20.333333333333329"/>
+                                                        <rect key="frame" x="122.66666666666667" y="33" width="236.33333333333331" height="41"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -128,7 +132,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m2Y-0O-nzK">
-                                                <rect key="frame" x="0.0" y="532.33333333333337" width="375" height="128"/>
+                                                <rect key="frame" x="0.0" y="553" width="375" height="128"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Описание" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ep0-Ad-VzJ">
                                                         <rect key="frame" x="15.999999999999996" y="0.0" width="54.666666666666657" height="13"/>
@@ -158,43 +162,10 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0gY-W3-LUa" customClass="SeparatorView" customModule="Swappy" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="660.33333333333337" width="375" height="2"/>
+                                                <rect key="frame" x="0.0" y="681" width="375" height="2"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="2" id="7nJ-c9-RqD"/>
-                                                </constraints>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="brD-Of-us8">
-                                                <rect key="frame" x="0.0" y="662.33333333333337" width="375" height="140"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i5V-sO-OHv" customClass="MainButton" customModule="Swappy" customModuleProvider="target">
-                                                        <rect key="frame" x="16" y="16" width="343" height="52"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="52" id="1Oe-9J-aoe"/>
-                                                        </constraints>
-                                                        <state key="normal" title="Изменить товар"/>
-                                                        <connections>
-                                                            <action selector="updateProductTapped:" destination="Pov-OW-mbQ" eventType="touchUpInside" id="TL8-fV-cCd"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N37-zy-vZ7" customClass="SecondaryButton" customModule="Swappy" customModuleProvider="target">
-                                                        <rect key="frame" x="16" y="72" width="343" height="52"/>
-                                                        <state key="normal" title="Удалить товар"/>
-                                                        <connections>
-                                                            <action selector="deleteProductTapped:" destination="Pov-OW-mbQ" eventType="touchUpInside" id="9zd-zc-p0X"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="bottom" secondItem="N37-zy-vZ7" secondAttribute="bottom" constant="16" id="C4q-bR-6DF"/>
-                                                    <constraint firstItem="N37-zy-vZ7" firstAttribute="leading" secondItem="i5V-sO-OHv" secondAttribute="leading" id="CzE-QN-3bb"/>
-                                                    <constraint firstItem="N37-zy-vZ7" firstAttribute="height" secondItem="i5V-sO-OHv" secondAttribute="height" id="EhO-ew-qPp"/>
-                                                    <constraint firstAttribute="trailing" secondItem="i5V-sO-OHv" secondAttribute="trailing" constant="16" id="IFV-2O-3Ub"/>
-                                                    <constraint firstItem="N37-zy-vZ7" firstAttribute="width" secondItem="i5V-sO-OHv" secondAttribute="width" id="Vg3-0b-miL"/>
-                                                    <constraint firstItem="i5V-sO-OHv" firstAttribute="top" secondItem="brD-Of-us8" secondAttribute="top" constant="16" id="Ycf-li-5zg"/>
-                                                    <constraint firstItem="N37-zy-vZ7" firstAttribute="top" secondItem="i5V-sO-OHv" secondAttribute="bottom" constant="4" id="iEN-MF-fEc"/>
-                                                    <constraint firstItem="i5V-sO-OHv" firstAttribute="leading" secondItem="brD-Of-us8" secondAttribute="leading" constant="16" id="mSl-r2-Bf5"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -229,6 +200,39 @@
                                     <action selector="backButtonPressed:" destination="Pov-OW-mbQ" eventType="touchUpInside" id="G8v-ch-fC7"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uov-bD-4fx">
+                                <rect key="frame" x="0.0" y="860" width="375" height="140"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="59q-GM-7bB" customClass="MainButton" customModule="Swappy" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="16" width="343" height="52"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="52" id="31y-xK-sox"/>
+                                        </constraints>
+                                        <state key="normal" title="Изменить товар"/>
+                                        <connections>
+                                            <action selector="updateProductTapped:" destination="Pov-OW-mbQ" eventType="touchUpInside" id="TCW-zz-otD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RLY-5p-c9k" customClass="SecondaryButton" customModule="Swappy" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="72" width="343" height="52"/>
+                                        <state key="normal" title="Удалить товар"/>
+                                        <connections>
+                                            <action selector="deleteProductTapped:" destination="Pov-OW-mbQ" eventType="touchUpInside" id="dkz-0q-ANd"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="RLY-5p-c9k" firstAttribute="leading" secondItem="59q-GM-7bB" secondAttribute="leading" id="IOZ-H8-gCk"/>
+                                    <constraint firstAttribute="bottom" secondItem="RLY-5p-c9k" secondAttribute="bottom" constant="16" id="UQ3-ph-ULj"/>
+                                    <constraint firstItem="RLY-5p-c9k" firstAttribute="width" secondItem="59q-GM-7bB" secondAttribute="width" id="fCP-A7-UgE"/>
+                                    <constraint firstItem="RLY-5p-c9k" firstAttribute="top" secondItem="59q-GM-7bB" secondAttribute="bottom" constant="4" id="fSd-rn-TEq"/>
+                                    <constraint firstAttribute="trailing" secondItem="59q-GM-7bB" secondAttribute="trailing" constant="16" id="gZW-lq-7ws"/>
+                                    <constraint firstItem="RLY-5p-c9k" firstAttribute="height" secondItem="59q-GM-7bB" secondAttribute="height" id="gib-BW-TGS"/>
+                                    <constraint firstItem="59q-GM-7bB" firstAttribute="leading" secondItem="Uov-bD-4fx" secondAttribute="leading" constant="16" id="kwg-KI-dmI"/>
+                                    <constraint firstItem="59q-GM-7bB" firstAttribute="top" secondItem="Uov-bD-4fx" secondAttribute="top" constant="16" id="p3Q-p5-2Tr"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zMy-Ww-2wq">
                                 <rect key="frame" x="0.0" y="916" width="375" height="84"/>
                                 <subviews>
@@ -269,9 +273,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Uov-bD-4fx" firstAttribute="leading" secondItem="JK0-dd-KCQ" secondAttribute="leading" id="14g-qm-pdI"/>
                             <constraint firstItem="REc-SM-rOV" firstAttribute="top" secondItem="vZT-sJ-Cub" secondAttribute="top" id="3Qr-53-lg1"/>
+                            <constraint firstAttribute="bottom" secondItem="Uov-bD-4fx" secondAttribute="bottom" id="Hl0-1R-Bim"/>
                             <constraint firstItem="eoP-N8-gjH" firstAttribute="leading" secondItem="JK0-dd-KCQ" secondAttribute="leading" constant="16" id="Kbj-bL-dqb"/>
                             <constraint firstItem="REc-SM-rOV" firstAttribute="bottom" secondItem="JK0-dd-KCQ" secondAttribute="bottom" id="Kor-3w-dCF"/>
+                            <constraint firstItem="Uov-bD-4fx" firstAttribute="trailing" secondItem="JK0-dd-KCQ" secondAttribute="trailing" id="aYA-o9-6wy"/>
                             <constraint firstItem="JK0-dd-KCQ" firstAttribute="bottom" secondItem="zMy-Ww-2wq" secondAttribute="bottom" id="bbo-gn-TIA"/>
                             <constraint firstItem="zMy-Ww-2wq" firstAttribute="trailing" secondItem="JK0-dd-KCQ" secondAttribute="trailing" id="dn2-Sk-4MC"/>
                             <constraint firstItem="eoP-N8-gjH" firstAttribute="top" secondItem="JK0-dd-KCQ" secondAttribute="top" constant="24" id="kGi-Nw-C8u"/>
@@ -287,7 +294,7 @@
                     <connections>
                         <outlet property="categoryLabel" destination="bhm-wa-6e8" id="vM3-P5-usZ"/>
                         <outlet property="descriptionLabel" destination="L25-od-f5E" id="9GV-ep-Ze3"/>
-                        <outlet property="editContainerView" destination="brD-Of-us8" id="H5n-Ps-dTh"/>
+                        <outlet property="editContainerView" destination="Uov-bD-4fx" id="xBs-II-uCs"/>
                         <outlet property="imageSlider" destination="xxC-kK-0Zl" id="ksq-0j-5Qo"/>
                         <outlet property="priceLabel" destination="8hW-o5-aqA" id="IpD-VI-SD7"/>
                         <outlet property="scrollView" destination="REc-SM-rOV" id="vKd-Xm-krM"/>

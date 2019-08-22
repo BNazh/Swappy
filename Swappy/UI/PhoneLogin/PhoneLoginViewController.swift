@@ -38,6 +38,12 @@ final class PhoneLoginViewController: UIViewController {
         phoneTextField.becomeFirstResponder()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.navigationBar.isHidden = false
+    }
+    
     // MARK: - Actions
     
     @IBAction func sendVerificationCodeTapped(_ sender: UIButton) {
