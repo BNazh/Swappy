@@ -54,6 +54,9 @@
 		E13FF1BE22CE5BB800A6CD85 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13FF1BD22CE5BB800A6CD85 /* HeaderView.swift */; };
 		E140436822CC9D8D00B843D0 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E140436722CC9D8D00B843D0 /* TestViewController.swift */; };
 		E1493B7222E04DEF0016FEE5 /* TransparentNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1493B7122E04DEF0016FEE5 /* TransparentNavigationController.swift */; };
+		E15F28D223127F4D009E815F /* FavoritesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15F28D123127F4D009E815F /* FavoritesService.swift */; };
+		E15F28D423127F55009E815F /* FavoritesServiceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15F28D323127F55009E815F /* FavoritesServiceImp.swift */; };
+		E15F28D623128095009E815F /* FavoritesTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15F28D523128095009E815F /* FavoritesTarget.swift */; };
 		E164C3932231B5DF00D1AB13 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E164C3922231B5DF00D1AB13 /* ProductDetailViewController.swift */; };
 		E164C3952231B5FE00D1AB13 /* ProductDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E164C3942231B5FE00D1AB13 /* ProductDetail.storyboard */; };
 		E164C39722326BAD00D1AB13 /* Collection+SafeSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = E164C39622326BAD00D1AB13 /* Collection+SafeSubscription.swift */; };
@@ -272,6 +275,9 @@
 		E13FF1BD22CE5BB800A6CD85 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		E140436722CC9D8D00B843D0 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		E1493B7122E04DEF0016FEE5 /* TransparentNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransparentNavigationController.swift; sourceTree = "<group>"; };
+		E15F28D123127F4D009E815F /* FavoritesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesService.swift; sourceTree = "<group>"; };
+		E15F28D323127F55009E815F /* FavoritesServiceImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesServiceImp.swift; sourceTree = "<group>"; };
+		E15F28D523128095009E815F /* FavoritesTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTarget.swift; sourceTree = "<group>"; };
 		E164C3922231B5DF00D1AB13 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		E164C3942231B5FE00D1AB13 /* ProductDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProductDetail.storyboard; sourceTree = "<group>"; };
 		E164C39622326BAD00D1AB13 /* Collection+SafeSubscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+SafeSubscription.swift"; sourceTree = "<group>"; };
@@ -613,6 +619,15 @@
 			path = Headers;
 			sourceTree = "<group>";
 		};
+		E15F28D023127F2F009E815F /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				E15F28D123127F4D009E815F /* FavoritesService.swift */,
+				E15F28D323127F55009E815F /* FavoritesServiceImp.swift */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
 		E164C3902231B5B200D1AB13 /* ProductCatalog */ = {
 			isa = PBXGroup;
 			children = (
@@ -878,6 +893,7 @@
 				E18FB179228812EB00F15F66 /* CategoryTarget.swift */,
 				E127417122DB426000228F8B /* CityTarget.swift */,
 				E121F16C22EF8228002666C9 /* UserTarget.swift */,
+				E15F28D523128095009E815F /* FavoritesTarget.swift */,
 			);
 			path = Targets;
 			sourceTree = "<group>";
@@ -906,6 +922,7 @@
 		E19F7E0E22310A3F00BAFC7A /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				E15F28D023127F2F009E815F /* Favorites */,
 				E112A35922F95029006D34AB /* Mocks */,
 				E1CAC6FA22EA466C0029889C /* User */,
 				E127417322DB460200228F8B /* City */,
@@ -1587,6 +1604,9 @@
 				E18FB17A228812EB00F15F66 /* CategoryTarget.swift in Sources */,
 				E111747A224183A400BD19B4 /* AuthTarget.swift in Sources */,
 				E18FB19B22893E8600F15F66 /* EditProductRouter.swift in Sources */,
+				E15F28D223127F4D009E815F /* FavoritesService.swift in Sources */,
+				E15F28D423127F55009E815F /* FavoritesServiceImp.swift in Sources */,
+				E15F28D623128095009E815F /* FavoritesTarget.swift in Sources */,
 				E17BD6C92303445D00E1E66C /* URL+String.swift in Sources */,
 				E1BC5AE522312F36001FD1D6 /* Moya+CustomDecodableRequest.swift in Sources */,
 				E10608612301E1F00060052C /* Data+String.swift in Sources */,
