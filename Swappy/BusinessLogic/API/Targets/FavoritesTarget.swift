@@ -55,7 +55,7 @@ extension FavoritesTarget: TargetType {
     }
 }
 
-extension UserTarget: AccessTokenAuthorizable {
+extension FavoritesTarget: AccessTokenAuthorizable {
     
     var authorizationType: AuthorizationType {
         return .bearer
