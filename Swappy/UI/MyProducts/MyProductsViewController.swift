@@ -75,6 +75,7 @@ extension MyProductsViewController: MyProductsView {
         dataDisplayManager.reloadProducts(products)
         addProductButton.isHidden = products.isEmpty
         placeholderView.isHidden = !products.isEmpty
+        collectionView.isScrollEnabled = !products.isEmpty
         //collectionView.isHidden = products.isEmpty
     }
     

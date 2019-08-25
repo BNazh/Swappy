@@ -22,17 +22,18 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewLayout key="collectionViewLayout" id="c1L-kv-lHA" customClass="PinterestLayout" customModule="Swappy" customModuleProvider="target"/>
+                                <containerView key="backgroundView" opaque="NO" contentMode="scaleToFill" id="99g-dc-USA">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="130" id="Cnb-9D-kab"/>
+                                    </constraints>
+                                    <connections>
+                                        <segue destination="kJ9-Rk-RUR" kind="embed" id="n1M-bX-aJu"/>
+                                    </connections>
+                                </containerView>
                                 <cells/>
                             </collectionView>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="99g-dc-USA">
-                                <rect key="frame" x="0.0" y="278.5" width="375" height="130"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="130" id="Cnb-9D-kab"/>
-                                </constraints>
-                                <connections>
-                                    <segue destination="kJ9-Rk-RUR" kind="embed" id="n1M-bX-aJu"/>
-                                </connections>
-                            </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pJ6-Zh-uFz" customClass="MainButton" customModule="Swappy" customModuleProvider="target">
                                 <rect key="frame" x="16" y="599" width="343" height="52"/>
                                 <constraints>
@@ -47,12 +48,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="99g-dc-USA" firstAttribute="centerY" secondItem="zOR-gk-AUC" secondAttribute="centerY" id="6dq-i5-6ZU"/>
                             <constraint firstItem="zOR-gk-AUC" firstAttribute="top" secondItem="nfh-d3-d50" secondAttribute="top" id="FHj-BO-RCB"/>
-                            <constraint firstItem="99g-dc-USA" firstAttribute="leading" secondItem="nfh-d3-d50" secondAttribute="leading" id="KPn-b6-jCW"/>
                             <constraint firstItem="pJ6-Zh-uFz" firstAttribute="leading" secondItem="nfh-d3-d50" secondAttribute="leading" constant="16" id="LFe-UV-qNN"/>
                             <constraint firstItem="nfh-d3-d50" firstAttribute="trailing" secondItem="pJ6-Zh-uFz" secondAttribute="trailing" constant="16" id="QK5-N5-DTq"/>
-                            <constraint firstItem="99g-dc-USA" firstAttribute="trailing" secondItem="nfh-d3-d50" secondAttribute="trailing" id="R5H-OP-6KX"/>
                             <constraint firstItem="nfh-d3-d50" firstAttribute="trailing" secondItem="zOR-gk-AUC" secondAttribute="trailing" id="SEy-61-ggb"/>
                             <constraint firstItem="nfh-d3-d50" firstAttribute="bottom" secondItem="zOR-gk-AUC" secondAttribute="bottom" id="Tu4-Ab-IQR"/>
                             <constraint firstItem="nfh-d3-d50" firstAttribute="bottom" secondItem="pJ6-Zh-uFz" secondAttribute="bottom" constant="16" id="qHN-6D-Wvb"/>
@@ -78,11 +76,11 @@
             <objects>
                 <viewController title=" " id="kJ9-Rk-RUR" customClass="NoProductsViewController" customModule="Swappy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SYV-78-fF4">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o3J-hm-Y9K">
-                                <rect key="frame" x="57" y="8" width="261.5" height="127"/>
+                                <rect key="frame" x="57" y="270" width="261.5" height="127"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Нет товаров" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1OW-7Y-N1j">
                                         <rect key="frame" x="0.0" y="0.0" width="261.5" height="22"/>
@@ -113,6 +111,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="127" id="5gO-9R-TB9"/>
                                     <constraint firstItem="eK0-Q4-LX4" firstAttribute="leading" secondItem="o3J-hm-Y9K" secondAttribute="leading" id="7x6-0I-pWS"/>
                                     <constraint firstItem="KqA-KJ-JiN" firstAttribute="leading" secondItem="o3J-hm-Y9K" secondAttribute="leading" constant="25" id="C56-L9-b2J"/>
                                     <constraint firstItem="1OW-7Y-N1j" firstAttribute="leading" secondItem="o3J-hm-Y9K" secondAttribute="leading" id="K5g-jK-jR3"/>
@@ -128,8 +127,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="o3J-hm-Y9K" firstAttribute="top" secondItem="sHF-0z-aYF" secondAttribute="top" constant="8" id="OEI-fo-O57"/>
                             <constraint firstItem="o3J-hm-Y9K" firstAttribute="centerX" secondItem="SYV-78-fF4" secondAttribute="centerX" id="uFH-dM-fd7"/>
+                            <constraint firstItem="o3J-hm-Y9K" firstAttribute="centerY" secondItem="sHF-0z-aYF" secondAttribute="centerY" id="wZG-E7-aVh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sHF-0z-aYF"/>
                     </view>
