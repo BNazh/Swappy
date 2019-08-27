@@ -8,6 +8,8 @@
 
 protocol FavoritesService: AnyObject {
     
+    func isProductFavorite(_ product: Product) -> Bool
+    
     func setFavorite(_ isFavorite: Bool,
                      for productId: String,
                      callback: @escaping ResultCallback<Void>)

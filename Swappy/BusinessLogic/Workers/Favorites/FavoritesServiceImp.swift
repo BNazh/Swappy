@@ -10,17 +10,27 @@ import Moya
 
 final class FavoritesServiceImp {
     
+    // MARK: - FavoriteItem
+    
+    private struct FavoriteItem: Decodable {
+        let productId: String
+    }
+    
     // MARK: - Properties
     
-    private let provider: BaseProvider<FavoritesTarget>
+    private let provider: MoyaProvider<FavoritesTarget>
+    private let productService: ProductService
     private let notificationCenter: ProductsNotificationCenter
     private let keychainStore: KeychainStore
     
     private var currentRequests: [SetFavoriteRequest] = []
     
+    private var favoriteItems: [FavoriteItem] = []
+    
     // MARK: - Init
     
-    init(provider: BaseProvider<FavoritesTarget>,
+    init(provider: MoyaProvider<FavoritesTarget>,
+         productService: ProductService,
          notificationCenter: ProductsNotificationCenter,
          keychainStore: KeychainStore) {
         self.provider = provider
@@ -34,7 +44,20 @@ final class FavoritesServiceImp {
 extension FavoritesServiceImp: FavoritesService {
     
     func getFavoriteProducts(callback: @escaping ResultCallback<[Product]>) {
+        let target = FavoritesTarget.getFavorites(userId: userId)
         
+        provider.requestDecodable(target) { [weak self] (result: Result<[FavoriteItem]>) in
+            
+            switch result {
+                
+            case .success(let favoriteItems):
+                self?.favoriteItems = favoriteItems
+                self?.handleFavoriteItems(callback: callback)
+                
+            case .failure(let error):
+                callback(.failure(error))
+            }
+        }
     }
     
     func setFavorite(_ isFavorite: Bool, for productId: String, callback: @escaping ResultCallback<Void>) {
@@ -42,9 +65,14 @@ extension FavoritesServiceImp: FavoritesService {
         
         let target = setFavoriteTarget(isFavorite: isFavorite, productId: productId)
         
-        let cancellable = provider.requestDecodable(target) { (result: Result<String?>) in
+        let cancellable = provider.requestDecodable(target) { [weak self] (result: Result<String?>) in
             switch result {
             case .success:
+                if isFavorite {
+                    self?.favoriteItems.insert(.init(productId: productId), at: 0)
+                } else {
+                    self?.favoriteItems.removeAll(where: { $0.productId == productId })
+                }
                 callback(.success)
             case .failure(let error):
                 callback(.failure(error))
@@ -53,6 +81,10 @@ extension FavoritesServiceImp: FavoritesService {
         
         let request = SetFavoriteRequest(productId: productId, cancellable: cancellable)
         currentRequests.append(request)
+    }
+    
+    func isProductFavorite(_ product: Product) -> Bool {
+        <#code#>
     }
 }
 
@@ -67,6 +99,12 @@ private extension FavoritesServiceImp {
         let cancellable: Cancellable
     }
     
+    // MARK: - Properties
+    
+    var userId: String {
+        return keychainStore.userSellerId ?? ""
+    }
+    
     // MARK: - Functions
     
     func cancelRequestIfExist(with productId: String) {
@@ -76,11 +114,24 @@ private extension FavoritesServiceImp {
     }
     
     func setFavoriteTarget(isFavorite: Bool, productId: String) -> FavoritesTarget {
-        let userId = keychainStore.userSellerId ?? ""
         if isFavorite {
             return .addFavorite(userId: userId, productId: productId)
         } else {
             return .deleteFavorite(userId: userId, productId: productId)
+        }
+    }
+    
+    func handleFavoriteItems(callback: @escaping ResultCallback<[Product]>) {
+        var favoriteProducts = [Product]()
+        let group = DispatchGroup()
+        
+        for item in favoriteItems {
+            group.enter()
+            
+            productService.getProduct(withId: item.productId) { result in
+                
+                group.leave()
+            }
         }
     }
 }

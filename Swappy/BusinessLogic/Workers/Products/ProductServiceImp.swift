@@ -62,6 +62,14 @@ extension ProductServiceImp: ProductService {
         }
     }
     
+    func getProduct(withId id: String, callback: @escaping (Result<Product>) -> Void) {
+        let target = ProductsTarget.productById(productId: id)
+        
+        provider.requestDecodable(target) { (result: Result<Product>) in
+            callback(result)
+        }
+    }
+    
     func addProduct(_ product: ProductRO, isNew: Bool, callback: @escaping ResultCallback<Product>) {
         
         let request: ProductsTarget

@@ -56,6 +56,7 @@
                                     <constraint firstAttribute="width" secondItem="X4m-Bt-aHH" secondAttribute="height" multiplier="1:1" id="JXC-XK-EIQ"/>
                                 </constraints>
                                 <state key="normal" image="small_like_off"/>
+                                <state key="selected" image="small_like_on"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -101,5 +102,6 @@
     </objects>
     <resources>
         <image name="small_like_off" width="24" height="24"/>
+        <image name="small_like_on" width="24" height="24"/>
     </resources>
 </document>

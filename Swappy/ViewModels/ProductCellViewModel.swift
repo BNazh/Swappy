@@ -10,6 +10,8 @@ import UIKit
 
 struct ProductCellViewModel {
     
+    // MARK: - Properties
+    
     let id: String
     
     let imageURL: URL?
@@ -17,8 +19,11 @@ struct ProductCellViewModel {
     let title: NSAttributedString
     let city: String
     let price: String
+    let isFavoriteButtonSelected: Bool
     
-    init(_ product: Product) {
+    // MARK: - Init
+    
+    init(product: Product, isFavorite: Bool) {
         if let firstImageString = product.images.first {
             imageURL = URL(string: firstImageString)
         } else {
@@ -36,6 +41,8 @@ struct ProductCellViewModel {
         title = prefixName.appendBolded("\(separator)\(size)", fontSize: 15)
         city = product.city
         price = product.price.stringValue
+        
+        isFavoriteButtonSelected = isFavorite
     }
 }
 

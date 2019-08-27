@@ -12,6 +12,7 @@ enum ProductsTarget {
     case
     products(pageNumber: Int, pageSize: Int, categoryIds: [String]),
     productsBySeller(sellerId: String, pageNumber: Int, pageSize: Int, categoryIds: [String]),
+    productById(productId: String),
     createProduct(product: ProductRO),
     updateProduct(product: ProductRO),
     deleteProduct(id: String)
@@ -31,7 +32,8 @@ extension ProductsTarget: TargetType {
             return "products"
         case .productsBySeller(let sellerId, _, _, _):
             return "products/users/\(sellerId)"
-        case .deleteProduct(let id):
+        case .productById(let id),
+             .deleteProduct(let id):
             return "products/\(id)"
         }
     }
@@ -39,7 +41,8 @@ extension ProductsTarget: TargetType {
     var method: Method {
         switch self {
         case .products,
-             .productsBySeller:
+             .productsBySeller,
+             .productById:
             return .get
         case .createProduct:
             return .post
@@ -74,7 +77,8 @@ extension ProductsTarget: TargetType {
              .updateProduct(let product):
             return .requestJSONEncodable(product)
         
-        case .deleteProduct:
+        case .deleteProduct,
+             .productById:
             return .requestPlain
         }
     }

@@ -31,6 +31,8 @@ final class ProductCatalogRouterImp {
     }
 }
 
+// MARK: - ProductCatalogRouter
+
 extension ProductCatalogRouterImp: ProductCatalogRouter {
     
     func openProductDetail(product: Product) {
