@@ -26,6 +26,7 @@ final class FavoritesServiceImp {
     private var currentRequests: [SetFavoriteRequest] = []
     
     private var favoriteItems: [FavoriteItem] = []
+    private var favoriteProducts: [Product] = []
     
     // MARK: - Init
     
@@ -46,13 +47,13 @@ extension FavoritesServiceImp: FavoritesService {
     func getFavoriteProducts(callback: @escaping ResultCallback<[Product]>) {
         let target = FavoritesTarget.getFavorites(userId: userId)
         
-        provider.requestDecodable(target) { [weak self] (result: Result<[FavoriteItem]>) in
+        provider.requestDecodable(target) { [weak self] (result: Result<[Product]>) in
             
             switch result {
                 
             case .success(let favoriteItems):
                 self?.favoriteItems = favoriteItems
-                self?.handleFavoriteItems(callback: callback)
+                
                 
             case .failure(let error):
                 callback(.failure(error))
@@ -68,11 +69,6 @@ extension FavoritesServiceImp: FavoritesService {
         let cancellable = provider.requestDecodable(target) { [weak self] (result: Result<String?>) in
             switch result {
             case .success:
-                if isFavorite {
-                    self?.favoriteItems.insert(.init(productId: productId), at: 0)
-                } else {
-                    self?.favoriteItems.removeAll(where: { $0.productId == productId })
-                }
                 callback(.success)
             case .failure(let error):
                 callback(.failure(error))
@@ -84,7 +80,7 @@ extension FavoritesServiceImp: FavoritesService {
     }
     
     func isProductFavorite(_ product: Product) -> Bool {
-        <#code#>
+        return favoriteProducts.contains { $0.id == product.id }
     }
 }
 
@@ -118,20 +114,6 @@ private extension FavoritesServiceImp {
             return .addFavorite(userId: userId, productId: productId)
         } else {
             return .deleteFavorite(userId: userId, productId: productId)
-        }
-    }
-    
-    func handleFavoriteItems(callback: @escaping ResultCallback<[Product]>) {
-        var favoriteProducts = [Product]()
-        let group = DispatchGroup()
-        
-        for item in favoriteItems {
-            group.enter()
-            
-            productService.getProduct(withId: item.productId) { result in
-                
-                group.leave()
-            }
         }
     }
 }
