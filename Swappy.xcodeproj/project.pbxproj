@@ -53,6 +53,10 @@
 		E13D324222F16FCA00C78011 /* CategoriesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13D324122F16FCA00C78011 /* CategoriesAssembly.swift */; };
 		E13FF1BE22CE5BB800A6CD85 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13FF1BD22CE5BB800A6CD85 /* HeaderView.swift */; };
 		E140436822CC9D8D00B843D0 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E140436722CC9D8D00B843D0 /* TestViewController.swift */; };
+		E143178B2315A67C0077D13D /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E143178A2315A67C0077D13D /* FavoritesViewController.swift */; };
+		E143178D2315A6850077D13D /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E143178C2315A6850077D13D /* Favorites.storyboard */; };
+		E143178F2315A6930077D13D /* FavoritesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E143178E2315A6930077D13D /* FavoritesPresenter.swift */; };
+		E14317912315A6990077D13D /* FavoritesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14317902315A6990077D13D /* FavoritesRouter.swift */; };
 		E1493B7222E04DEF0016FEE5 /* TransparentNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1493B7122E04DEF0016FEE5 /* TransparentNavigationController.swift */; };
 		E15F28D223127F4D009E815F /* FavoritesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15F28D123127F4D009E815F /* FavoritesService.swift */; };
 		E15F28D423127F55009E815F /* FavoritesServiceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15F28D323127F55009E815F /* FavoritesServiceImp.swift */; };
@@ -274,6 +278,10 @@
 		E13D324122F16FCA00C78011 /* CategoriesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesAssembly.swift; sourceTree = "<group>"; };
 		E13FF1BD22CE5BB800A6CD85 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		E140436722CC9D8D00B843D0 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		E143178A2315A67C0077D13D /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		E143178C2315A6850077D13D /* Favorites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
+		E143178E2315A6930077D13D /* FavoritesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesPresenter.swift; sourceTree = "<group>"; };
+		E14317902315A6990077D13D /* FavoritesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesRouter.swift; sourceTree = "<group>"; };
 		E1493B7122E04DEF0016FEE5 /* TransparentNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransparentNavigationController.swift; sourceTree = "<group>"; };
 		E15F28D123127F4D009E815F /* FavoritesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesService.swift; sourceTree = "<group>"; };
 		E15F28D323127F55009E815F /* FavoritesServiceImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesServiceImp.swift; sourceTree = "<group>"; };
@@ -619,6 +627,17 @@
 			path = Headers;
 			sourceTree = "<group>";
 		};
+		E14317892315A65E0077D13D /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				E143178C2315A6850077D13D /* Favorites.storyboard */,
+				E143178A2315A67C0077D13D /* FavoritesViewController.swift */,
+				E143178E2315A6930077D13D /* FavoritesPresenter.swift */,
+				E14317902315A6990077D13D /* FavoritesRouter.swift */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
 		E15F28D023127F2F009E815F /* Favorites */ = {
 			isa = PBXGroup;
 			children = (
@@ -901,6 +920,7 @@
 		E19F7E092231068300BAFC7A /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				E14317892315A65E0077D13D /* Favorites */,
 				E164C39922358E0400D1AB13 /* Common */,
 				E1AACD3422F01DAE00D5826A /* Categories */,
 				E1BAA03A22E9020E00619C3E /* ProfileEdit */,
@@ -1398,6 +1418,7 @@
 				E18FB18A22882AEC00F15F66 /* SingleSelection.storyboard in Resources */,
 				E19F7DDA2231063900BAFC7A /* Main.storyboard in Resources */,
 				E10850C4223F276D00941EA5 /* EditProduct.storyboard in Resources */,
+				E143178D2315A6850077D13D /* Favorites.storyboard in Resources */,
 				E1B624BF22952189002090A8 /* Start.storyboard in Resources */,
 				E1A6A91B22E90257000D3F1B /* ProfileEdit.storyboard in Resources */,
 				E100062F22798AC600CDC509 /* splashIcon.png in Resources */,
@@ -1647,6 +1668,7 @@
 				E1F0176F22493E7A001A10D7 /* DeleteButton.swift in Sources */,
 				E10850C2223EF78F00941EA5 /* PhoneLoginViewController.swift in Sources */,
 				E1FC30A52238DC5C00DF1325 /* SellerInfoViewController.swift in Sources */,
+				E143178B2315A67C0077D13D /* FavoritesViewController.swift in Sources */,
 				E1B624C522973898002090A8 /* StartAssembly.swift in Sources */,
 				E1167C0B2291A81000472324 /* CategoryFilter.swift in Sources */,
 				E1A6656422550CAD007EE75F /* PushNotificationServiceImp.swift in Sources */,
@@ -1694,6 +1716,7 @@
 				E1FF3EA2223E77B800443DED /* ProductsDDM.swift in Sources */,
 				E1BC5ACA22310F1F001FD1D6 /* User.swift in Sources */,
 				E121128C2262395A0060CD3D /* VKService.swift in Sources */,
+				E143178F2315A6930077D13D /* FavoritesPresenter.swift in Sources */,
 				E1F0175A224644F5001A10D7 /* ImageService.swift in Sources */,
 				E1A2DEA72253C33C007E40F8 /* String+Format.swift in Sources */,
 				E1CAC6FE22EA468A0029889C /* UserServiceImp.swift in Sources */,
@@ -1737,6 +1760,7 @@
 				E18E21FD22DB6980008C26D1 /* WelcomePresenter.swift in Sources */,
 				E18FB1802288206800F15F66 /* CategoryFilterViewController.swift in Sources */,
 				E13D323D22F1651900C78011 /* CategoryTableViewCell.swift in Sources */,
+				E14317912315A6990077D13D /* FavoritesRouter.swift in Sources */,
 				E1FF3EB9223EE18100443DED /* VKButton.swift in Sources */,
 				E1F0175F2246B286001A10D7 /* PhotosViewController.swift in Sources */,
 				E11174962243719400BD19B4 /* Core.swift in Sources */,
