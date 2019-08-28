@@ -25,8 +25,7 @@ final class FavoritesServiceImp {
     
     private var currentRequests: [SetFavoriteRequest] = []
     
-    private var favoriteItems: [FavoriteItem] = []
-    private var favoriteProducts: [Product] = []
+    private var favoriteIds: [String] = []
     
     // MARK: - Init
     
@@ -51,9 +50,9 @@ extension FavoritesServiceImp: FavoritesService {
             
             switch result {
                 
-            case .success(let favoriteItems):
-                self?.favoriteItems = favoriteItems
-                
+            case .success(let favoriteProducts):
+                self?.favoriteIds = favoriteProducts.map { $0.id }
+                callback(.success(favoriteProducts))
                 
             case .failure(let error):
                 callback(.failure(error))
@@ -69,7 +68,12 @@ extension FavoritesServiceImp: FavoritesService {
         let cancellable = provider.requestDecodable(target) { [weak self] (result: Result<String?>) in
             switch result {
             case .success:
+                self?.handleSetFavoriteSuccess(
+                    isFavorite: isFavorite,
+                    productId: productId
+                )
                 callback(.success)
+                
             case .failure(let error):
                 callback(.failure(error))
             }
@@ -80,7 +84,11 @@ extension FavoritesServiceImp: FavoritesService {
     }
     
     func isProductFavorite(_ product: Product) -> Bool {
-        return favoriteProducts.contains { $0.id == product.id }
+        return favoriteIds.contains(product.id)
+    }
+    
+    func isProductIdFavorite(_ productId: String) -> Bool {
+        return favoriteIds.contains(productId)
     }
 }
 
@@ -115,5 +123,9 @@ private extension FavoritesServiceImp {
         } else {
             return .deleteFavorite(userId: userId, productId: productId)
         }
+    }
+    
+    func handleSetFavoriteSuccess(isFavorite: Bool, productId: String) {
+        
     }
 }

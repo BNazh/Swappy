@@ -48,7 +48,7 @@ final class ProductCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Actions
     @IBAction func favoriteButtonPressed(_ sender: UIButton) {
-        did
+        
     }
 }
 

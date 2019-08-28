@@ -167,6 +167,7 @@
 		E1D908DA225BDDA20027C6C6 /* PullToDismissHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D908D9225BDDA20027C6C6 /* PullToDismissHandler.swift */; };
 		E1DB9FBD22E6583500A46D95 /* RealmUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DB9FBC22E6583500A46D95 /* RealmUser.swift */; };
 		E1DB9FBF22E835A700A46D95 /* HeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DB9FBE22E835A700A46D95 /* HeaderViewModel.swift */; };
+		E1E527192316F430009B7686 /* WeakRef.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E527182316F430009B7686 /* WeakRef.swift */; };
 		E1F0175722463C14001A10D7 /* BaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F0175622463C13001A10D7 /* BaseProvider.swift */; };
 		E1F0175A224644F5001A10D7 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F01759224644F5001A10D7 /* ImageService.swift */; };
 		E1F0175C224644FB001A10D7 /* ImageServiceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F0175B224644FB001A10D7 /* ImageServiceImp.swift */; };
@@ -401,6 +402,7 @@
 		E1D908D9225BDDA20027C6C6 /* PullToDismissHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullToDismissHandler.swift; sourceTree = "<group>"; };
 		E1DB9FBC22E6583500A46D95 /* RealmUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmUser.swift; sourceTree = "<group>"; };
 		E1DB9FBE22E835A700A46D95 /* HeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewModel.swift; sourceTree = "<group>"; };
+		E1E527182316F430009B7686 /* WeakRef.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakRef.swift; sourceTree = "<group>"; };
 		E1F0175622463C13001A10D7 /* BaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseProvider.swift; sourceTree = "<group>"; };
 		E1F01759224644F5001A10D7 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		E1F0175B224644FB001A10D7 /* ImageServiceImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageServiceImp.swift; sourceTree = "<group>"; };
@@ -894,10 +896,10 @@
 				E1B624C322973309002090A8 /* API */,
 				E11174812242B37100BD19B4 /* Core */,
 				E19F7E0E22310A3F00BAFC7A /* Services */,
-				E1A6656022550C87007EE75F /* PushNotificationService */,
 				E17CA185224C24EE00D5C955 /* Analytics */,
 				E1BC5ACD22311168001FD1D6 /* Result.swift */,
 				E1BC5ACF22311173001FD1D6 /* AppError.swift */,
+				E1E527182316F430009B7686 /* WeakRef.swift */,
 			);
 			path = BusinessLogic;
 			sourceTree = "<group>";
@@ -943,6 +945,7 @@
 			isa = PBXGroup;
 			children = (
 				E15F28D023127F2F009E815F /* Favorites */,
+				E1A6656022550C87007EE75F /* PushNotificationService */,
 				E112A35922F95029006D34AB /* Mocks */,
 				E1CAC6FA22EA466C0029889C /* User */,
 				E127417322DB460200228F8B /* City */,
@@ -1690,6 +1693,7 @@
 				E11174782240B2F100BD19B4 /* EditProductViewModel.swift in Sources */,
 				E1BC5ACE22311168001FD1D6 /* Result.swift in Sources */,
 				E1BC5AF222318370001FD1D6 /* UIView+ReusableIdentifiers.swift in Sources */,
+				E1E527192316F430009B7686 /* WeakRef.swift in Sources */,
 				E1B624B922952168002090A8 /* StartViewController.swift in Sources */,
 				E1BC5AC122310C0E001FD1D6 /* ProductCatalogAssembly.swift in Sources */,
 				E18FB19322884C9700F15F66 /* CategoryService.swift in Sources */,
