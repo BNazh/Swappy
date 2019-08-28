@@ -204,10 +204,10 @@
             </objects>
             <point key="canvasLocation" x="406" y="1450"/>
         </scene>
-        <!--View Controller-->
+        <!--Favorites View Controller-->
         <scene sceneID="a6O-ob-NwG">
             <objects>
-                <viewController id="Ccl-aq-70p" sceneMemberID="viewController">
+                <viewController id="Ccl-aq-70p" customClass="FavoritesViewController" customModule="Swappy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XzX-rI-d6f">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

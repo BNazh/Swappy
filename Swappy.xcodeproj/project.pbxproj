@@ -59,6 +59,7 @@
 		E14317912315A6990077D13D /* FavoritesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14317902315A6990077D13D /* FavoritesRouter.swift */; };
 		E1493B7222E04DEF0016FEE5 /* TransparentNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1493B7122E04DEF0016FEE5 /* TransparentNavigationController.swift */; };
 		E14F0F312317112500B81274 /* FavoritesObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14F0F302317112500B81274 /* FavoritesObserver.swift */; };
+		E14F0F33231713FD00B81274 /* FavoritesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14F0F32231713FD00B81274 /* FavoritesAssembly.swift */; };
 		E15F28D223127F4D009E815F /* FavoritesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15F28D123127F4D009E815F /* FavoritesService.swift */; };
 		E15F28D423127F55009E815F /* FavoritesServiceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15F28D323127F55009E815F /* FavoritesServiceImp.swift */; };
 		E15F28D623128095009E815F /* FavoritesTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15F28D523128095009E815F /* FavoritesTarget.swift */; };
@@ -286,6 +287,7 @@
 		E14317902315A6990077D13D /* FavoritesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesRouter.swift; sourceTree = "<group>"; };
 		E1493B7122E04DEF0016FEE5 /* TransparentNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransparentNavigationController.swift; sourceTree = "<group>"; };
 		E14F0F302317112500B81274 /* FavoritesObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesObserver.swift; sourceTree = "<group>"; };
+		E14F0F32231713FD00B81274 /* FavoritesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesAssembly.swift; sourceTree = "<group>"; };
 		E15F28D123127F4D009E815F /* FavoritesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesService.swift; sourceTree = "<group>"; };
 		E15F28D323127F55009E815F /* FavoritesServiceImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesServiceImp.swift; sourceTree = "<group>"; };
 		E15F28D523128095009E815F /* FavoritesTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTarget.swift; sourceTree = "<group>"; };
@@ -525,6 +527,7 @@
 				E121F16E22EF97DC002666C9 /* ProfileEditAssembly.swift */,
 				E13D324122F16FCA00C78011 /* CategoriesAssembly.swift */,
 				E172CD47230F0F2200409D8D /* MainAssembly.swift */,
+				E14F0F32231713FD00B81274 /* FavoritesAssembly.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -1634,6 +1637,7 @@
 				E15F28D223127F4D009E815F /* FavoritesService.swift in Sources */,
 				E15F28D423127F55009E815F /* FavoritesServiceImp.swift in Sources */,
 				E15F28D623128095009E815F /* FavoritesTarget.swift in Sources */,
+				E14F0F33231713FD00B81274 /* FavoritesAssembly.swift in Sources */,
 				E17BD6C92303445D00E1E66C /* URL+String.swift in Sources */,
 				E1BC5AE522312F36001FD1D6 /* Moya+CustomDecodableRequest.swift in Sources */,
 				E10608612301E1F00060052C /* Data+String.swift in Sources */,

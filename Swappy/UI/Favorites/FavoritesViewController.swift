@@ -21,6 +21,7 @@ class FavoritesViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
 
     var dataDisplayManager: ProductsDDM!
+    var presenter: FavoritesPresenter!
     
     // MARK: - Lifecycle
 
@@ -28,26 +29,22 @@ class FavoritesViewController: UIViewController {
         super.viewDidLoad()
 
         dataDisplayManager.setup(delegate: self, collectionView: collectionView)
-        // Do any additional setup after loading the view.
+        
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        presenter.refreshFavorites()
     }
-    */
-
+    
 }
 
 extension FavoritesViewController: FavoritesView {
     
     func displayCells(_ cellModels: [ProductCellViewModel]) {
-        
+        dataDisplayManager.reloadProducts(cellModels)
     }
     
     func removeCell(with id: String) {
@@ -58,10 +55,10 @@ extension FavoritesViewController: FavoritesView {
 extension FavoritesViewController: ProductsDDMDelegate {
     
     func didSelectProduct(withId id: String) {
-        
+        presenter.openProduct(with: id)
     }
     
     func refresh() {
-        
+        presenter.refreshFavorites()
     }
 }

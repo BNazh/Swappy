@@ -125,6 +125,8 @@ private extension FavoritesServiceImp {
     }
     
     func handleSetFavoriteSuccess(isFavorite: Bool, productId: String) {
-        
+        for observer in observers {
+            observer.value?.didChangeFavorite(isFavorite, for: productId)
+        }
     }
 }
