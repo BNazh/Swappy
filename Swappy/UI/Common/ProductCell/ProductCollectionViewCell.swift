@@ -9,10 +9,6 @@
 import UIKit
 import SDWebImage
 
-protocol ProductFavoriteDelegate: AnyObject {
-    func didChangeFavorite(_ isFavorite: Bool, for productId: String)
-}
-
 final class ProductCollectionViewCell: UICollectionViewCell {
     
     // MARK - Properties
@@ -23,7 +19,6 @@ final class ProductCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var containerView: UIView!
     
     var productId: String = ""
-    weak var delegate: ProductFavoriteDelegate?
     
     // MARK - Lifecycle
     

@@ -90,7 +90,6 @@ final class ServicesAssembly: Assembly {
             FavoritesServiceImp(
                 provider: r.resolve(),
                 productService: r.resolve(),
-                notificationCenter: r.resolve(),
                 keychainStore: r.resolve()
             )
         }

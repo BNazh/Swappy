@@ -9,7 +9,6 @@
 protocol FavoritesPresenter {
     
     func refreshFavorites()
-    func setFavorite(_ isFavorite: Bool, for productId: String)
     func openProduct(with productId: String)
 }
 
@@ -44,7 +43,7 @@ extension FavoritesPresenterImp: FavoritesPresenter {
             switch result {
             case .success(let favoriteProducts):
                 self?.favoriteProducts = favoriteProducts
-                self?.
+                self?.reloadView()
             case .failure:
                 let message = "Не удалось загрузить избранные товары. Попробуйте позже"
                 self?.view.showError(message: message)
@@ -63,17 +62,10 @@ extension FavoritesPresenterImp: FavoritesPresenter {
 
 // MARK: - ProductFavoriteDelegate
 
-extension FavoritesPresenterImp: ProductFavoriteDelegate {
+extension FavoritesPresenterImp: FavoritesObserver {
     
     func didChangeFavorite(_ isFavorite: Bool, for productId: String) {
-        favoritesService.setFavorite(isFavorite, for: productId) { result in
-            switch result {
-            case .success:
-                self?.removeProduct(with: productId)
-            case .failure:
-                
-            }
-        }
+        
     }
 }
 
@@ -83,12 +75,15 @@ private extension FavoritesPresenterImp {
     
     func reloadView() {
         let cellModels = favoriteProducts.map { product in
-            ProductCellViewModel(product: product, isFavorite: true, delegate: <#T##ProductFavoriteDelegate?#>)
+            ProductCellViewModel(product)
         }
+        
+        view.displayCells(cellModels)
     }
     
     func removeProduct(with id: String) {
         favoriteProducts.removeAll { $0.id == id }
+        
         view.removeCell(with: id)
     }
     

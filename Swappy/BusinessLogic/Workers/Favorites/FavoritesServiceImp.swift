@@ -20,21 +20,19 @@ final class FavoritesServiceImp {
     
     private let provider: MoyaProvider<FavoritesTarget>
     private let productService: ProductService
-    private let notificationCenter: ProductsNotificationCenter
     private let keychainStore: KeychainStore
     
     private var currentRequests: [SetFavoriteRequest] = []
-    
     private var favoriteIds: [String] = []
+    private var observers: [WeakRef<FavoritesObserver>] = []
     
     // MARK: - Init
     
     init(provider: MoyaProvider<FavoritesTarget>,
          productService: ProductService,
-         notificationCenter: ProductsNotificationCenter,
          keychainStore: KeychainStore) {
         self.provider = provider
-        self.notificationCenter = notificationCenter
+        self.productService = productService
         self.keychainStore = keychainStore
     }
 }
@@ -83,12 +81,13 @@ extension FavoritesServiceImp: FavoritesService {
         currentRequests.append(request)
     }
     
-    func isProductFavorite(_ product: Product) -> Bool {
-        return favoriteIds.contains(product.id)
+    func isFavorite(_ productId: String) -> Bool {
+        return favoriteIds.contains(productId)
     }
     
-    func isProductIdFavorite(_ productId: String) -> Bool {
-        return favoriteIds.contains(productId)
+    func addSetFavoriteObserver(_ observer: FavoritesObserver) {
+        let weakObserver = WeakRef(value: observer)
+        observers.append(weakObserver)
     }
 }
 

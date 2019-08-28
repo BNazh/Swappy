@@ -95,7 +95,7 @@ extension ProductsDDMImp: UICollectionViewDataSource {
         let isLastElement = indexPath.row == cellModels.count - 1
         
         if isLastElement {
-            delegate?.willDisplayLastCell()
+            delegate?.willDisplayLastCell?()
         }
         
         return cell

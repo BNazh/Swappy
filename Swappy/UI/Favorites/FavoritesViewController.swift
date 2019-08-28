@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol FavoritesView: ErrorView {
+protocol FavoritesView: AnyObject, ErrorView {
     
     func displayCells(_ cellModels: [ProductCellViewModel])
     func removeCell(with id: String)
@@ -18,11 +18,16 @@ class FavoritesViewController: UIViewController {
     
     // MARK: - Properties
     
+    @IBOutlet weak var collectionView: UICollectionView!
+
+    var dataDisplayManager: ProductsDDM!
+    
     // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        dataDisplayManager.setup(delegate: self, collectionView: collectionView)
         // Do any additional setup after loading the view.
     }
     
@@ -41,8 +46,22 @@ class FavoritesViewController: UIViewController {
 
 extension FavoritesViewController: FavoritesView {
     
-    func showError(message: String) {
-        (self as ErrorView).showError(message: message)
+    func displayCells(_ cellModels: [ProductCellViewModel]) {
+        
+    }
+    
+    func removeCell(with id: String) {
+        // TODO: Delete?
+    }
+}
+
+extension FavoritesViewController: ProductsDDMDelegate {
+    
+    func didSelectProduct(withId id: String) {
+        
+    }
+    
+    func refresh() {
         
     }
 }

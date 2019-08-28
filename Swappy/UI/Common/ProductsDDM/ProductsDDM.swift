@@ -13,10 +13,10 @@ protocol ProductsDDMDelegate: AnyObject {
     
     // MARK: - Funcitons
     
-    func willDisplayLastCell()
     func didSelectProduct(withId id: String)
     func refresh()
     
+    @objc optional func willDisplayLastCell()
     @objc optional func didPressedHeaderImage()
 }
 

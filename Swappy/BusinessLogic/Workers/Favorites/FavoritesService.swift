@@ -6,18 +6,9 @@
 //  Copyright © 2019 SwappyTeam. All rights reserved.
 //
 
-// MARK: - Observer
-
-protocol FavoritesObserver: AnyObject {
-    
-    func didChangeFavorite(_ isFavorite: Bool, for productId: String)
-}
-
-// MARK: - Service
-
 protocol FavoritesService: AnyObject {
     
-    func isProductFavorite(_ product: Product) -> Bool
+    func isFavorite(_ productId: String) -> Bool
     
     func setFavorite(_ isFavorite: Bool,
                      for productId: String,

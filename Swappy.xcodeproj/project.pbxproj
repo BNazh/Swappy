@@ -58,6 +58,7 @@
 		E143178F2315A6930077D13D /* FavoritesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E143178E2315A6930077D13D /* FavoritesPresenter.swift */; };
 		E14317912315A6990077D13D /* FavoritesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14317902315A6990077D13D /* FavoritesRouter.swift */; };
 		E1493B7222E04DEF0016FEE5 /* TransparentNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1493B7122E04DEF0016FEE5 /* TransparentNavigationController.swift */; };
+		E14F0F312317112500B81274 /* FavoritesObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14F0F302317112500B81274 /* FavoritesObserver.swift */; };
 		E15F28D223127F4D009E815F /* FavoritesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15F28D123127F4D009E815F /* FavoritesService.swift */; };
 		E15F28D423127F55009E815F /* FavoritesServiceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15F28D323127F55009E815F /* FavoritesServiceImp.swift */; };
 		E15F28D623128095009E815F /* FavoritesTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15F28D523128095009E815F /* FavoritesTarget.swift */; };
@@ -284,6 +285,7 @@
 		E143178E2315A6930077D13D /* FavoritesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesPresenter.swift; sourceTree = "<group>"; };
 		E14317902315A6990077D13D /* FavoritesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesRouter.swift; sourceTree = "<group>"; };
 		E1493B7122E04DEF0016FEE5 /* TransparentNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransparentNavigationController.swift; sourceTree = "<group>"; };
+		E14F0F302317112500B81274 /* FavoritesObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesObserver.swift; sourceTree = "<group>"; };
 		E15F28D123127F4D009E815F /* FavoritesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesService.swift; sourceTree = "<group>"; };
 		E15F28D323127F55009E815F /* FavoritesServiceImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesServiceImp.swift; sourceTree = "<group>"; };
 		E15F28D523128095009E815F /* FavoritesTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTarget.swift; sourceTree = "<group>"; };
@@ -645,6 +647,7 @@
 			children = (
 				E15F28D123127F4D009E815F /* FavoritesService.swift */,
 				E15F28D323127F55009E815F /* FavoritesServiceImp.swift */,
+				E14F0F302317112500B81274 /* FavoritesObserver.swift */,
 			);
 			path = Favorites;
 			sourceTree = "<group>";
@@ -1714,6 +1717,7 @@
 				E11174802241860C00BD19B4 /* AuthServiceImp.swift in Sources */,
 				E127417522DB460F00228F8B /* CityService.swift in Sources */,
 				E111748D2242DBEA00BD19B4 /* ErrorView.swift in Sources */,
+				E14F0F312317112500B81274 /* FavoritesObserver.swift in Sources */,
 				E1BC5AEF22318340001FD1D6 /* UICollectionView+RegisterCells.swift in Sources */,
 				E17CA1A32256A5CC00D5C955 /* Resolver+Extension.swift in Sources */,
 				E111749022436FBF00BD19B4 /* CodeConfirmationViewController.swift in Sources */,
