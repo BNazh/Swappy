@@ -55,6 +55,10 @@ extension ProductsDDMImp: ProductsDDM {
         collectionView?.reloadData()
     }
     
+    func reloadProduct(_ cellModel: ProductCellViewModel) {
+        
+    }
+    
     func reloadHeader(_ headerModel: HeaderViewModel) {
         self.headerModel = headerModel
     }

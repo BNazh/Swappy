@@ -9,6 +9,10 @@
 import UIKit
 import SDWebImage
 
+protocol ProductFavoriteDelegate: AnyObject {
+    func didChangeFavorite(_ isFavorite: Bool, for productId: String)
+}
+
 final class ProductCollectionViewCell: UICollectionViewCell {
     
     // MARK - Properties
@@ -17,6 +21,9 @@ final class ProductCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var containerView: UIView!
+    
+    var productId: String = ""
+    weak var delegate: ProductFavoriteDelegate?
     
     // MARK - Lifecycle
     
@@ -30,12 +37,18 @@ final class ProductCollectionViewCell: UICollectionViewCell {
     // MARK - Functions
     
     func configure(with viewModel: ProductCellViewModel) {
+        
         titleLabel.attributedText = viewModel.title
         priceLabel.text = viewModel.price
         
         imageView.sd_setImage(with: viewModel.imageURL)
         
         setupShadows()
+    }
+    
+    // MARK: - Actions
+    @IBAction func favoriteButtonPressed(_ sender: UIButton) {
+        did
     }
 }
 

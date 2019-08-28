@@ -21,9 +21,11 @@ struct ProductCellViewModel {
     let price: String
     let isFavoriteButtonSelected: Bool
     
+    weak var delegate: ProductFavoriteDelegate?
+    
     // MARK: - Init
     
-    init(product: Product, isFavorite: Bool) {
+    init(product: Product, isFavorite: Bool, delegate: ProductFavoriteDelegate?) {
         if let firstImageString = product.images.first {
             imageURL = URL(string: firstImageString)
         } else {
@@ -43,6 +45,8 @@ struct ProductCellViewModel {
         price = product.price.stringValue
         
         isFavoriteButtonSelected = isFavorite
+        
+        self.delegate = delegate
     }
 }
 

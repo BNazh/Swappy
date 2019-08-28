@@ -8,7 +8,17 @@
 
 import UIKit
 
+protocol FavoritesView: ErrorView {
+    
+    func displayCells(_ cellModels: [ProductCellViewModel])
+    func removeCell(with id: String)
+}
+
 class FavoritesViewController: UIViewController {
+    
+    // MARK: - Properties
+    
+    // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,4 +37,12 @@ class FavoritesViewController: UIViewController {
     }
     */
 
+}
+
+extension FavoritesViewController: FavoritesView {
+    
+    func showError(message: String) {
+        (self as ErrorView).showError(message: message)
+        
+    }
 }
