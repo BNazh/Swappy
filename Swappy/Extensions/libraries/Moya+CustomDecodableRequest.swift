@@ -53,7 +53,7 @@ private extension MoyaProvider {
         case .objectMapping:
             return .decoding
             
-        case .underlying(let error, let response) where (error as NSError).code == NSURLErrorCancelled:
+        case .underlying(let error, _) where (error as NSError).code == NSURLErrorCancelled:
             return .cancelled
             
         default:

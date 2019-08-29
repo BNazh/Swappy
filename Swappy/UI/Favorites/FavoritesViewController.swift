@@ -12,6 +12,7 @@ protocol FavoritesView: AnyObject, ErrorView {
     
     func displayCells(_ cellModels: [ProductCellViewModel])
     func removeCell(with id: String)
+    func endRefreshing()
 }
 
 class FavoritesViewController: UIViewController {
@@ -47,6 +48,10 @@ extension FavoritesViewController: FavoritesView {
     
     func removeCell(with id: String) {
         // TODO: Delete?
+    }
+    
+    func endRefreshing() {
+        dataDisplayManager.endRefreshing()
     }
 }
 
