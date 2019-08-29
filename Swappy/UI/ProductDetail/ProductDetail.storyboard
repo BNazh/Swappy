@@ -249,6 +249,9 @@
                                                 <integer key="value" value="8"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="favoriteButtonPressed:" destination="Pov-OW-mbQ" eventType="touchUpInside" id="bHA-Tz-cWf"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AML-fD-Ofn" customClass="MainButton" customModule="Swappy" customModuleProvider="target">
                                         <rect key="frame" x="16" y="16" width="275" height="52"/>

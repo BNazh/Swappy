@@ -79,6 +79,9 @@ class ProductDetailViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
+    @IBAction func favoriteButtonPressed(_ sender: UIButton) {
+        
+    }
     
     @IBAction func backButtonPressed(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
