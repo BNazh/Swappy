@@ -9,6 +9,7 @@
 import UIKit
 import SDWebImage
 import SwinjectStoryboard
+import AudioToolbox
 
 final class ProductCollectionViewCell: UICollectionViewCell {
     
@@ -18,7 +19,7 @@ final class ProductCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var priceLabel: UILabel!
     @IBOutlet private weak var containerView: UIView!
-    @IBOutlet weak var favoriteButton: UIButton!
+    @IBOutlet private weak var favoriteButton: UIButton!
     
     // Неархитектурно, но оч удобно
     private let favoritesService: FavoritesService = SwinjectStoryboard.defaultContainer.resolve()
@@ -62,6 +63,7 @@ final class ProductCollectionViewCell: UICollectionViewCell {
         favoritesService.setFavorite(newIsFavorite, for: productId) { result in
             switch result {
             case .success:
+                AudioServicesPlaySystemSound(1519)
                 break // handle in observer
             case .failure(let error):
                 

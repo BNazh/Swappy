@@ -940,8 +940,8 @@
 		E19F7E092231068300BAFC7A /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				E14317892315A65E0077D13D /* Favorites */,
 				E164C39922358E0400D1AB13 /* Common */,
+				E14317892315A65E0077D13D /* Favorites */,
 				E1AACD3422F01DAE00D5826A /* Categories */,
 				E1BAA03A22E9020E00619C3E /* ProfileEdit */,
 				E18FB17E2288200A00F15F66 /* CategoriesFilter */,

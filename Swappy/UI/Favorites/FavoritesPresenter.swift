@@ -47,6 +47,7 @@ extension FavoritesPresenterImp: FavoritesPresenter {
             case .failure:
                 let message = "Не удалось загрузить избранные товары. Попробуйте позже"
                 self?.view.showError(message: message)
+                self?.view.endRefreshing()
             }
         }
     }
