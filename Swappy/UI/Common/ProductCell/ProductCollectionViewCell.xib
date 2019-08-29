@@ -57,6 +57,9 @@
                                 </constraints>
                                 <state key="normal" image="small_like_off"/>
                                 <state key="selected" image="small_like_on"/>
+                                <connections>
+                                    <action selector="favoriteButtonPressed:" destination="NPK-85-IWL" eventType="touchUpInside" id="bti-mg-ADM"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -93,6 +96,7 @@
             <size key="customSize" width="172" height="235"/>
             <connections>
                 <outlet property="containerView" destination="iN0-l3-epB" id="ESd-5C-ws6"/>
+                <outlet property="favoriteButton" destination="X4m-Bt-aHH" id="gkg-er-nir"/>
                 <outlet property="imageView" destination="r3O-9I-sLY" id="nkE-nv-vml"/>
                 <outlet property="priceLabel" destination="Qth-KS-cS5" id="mV3-Ot-bj1"/>
                 <outlet property="titleLabel" destination="MmO-8g-a3p" id="hId-RY-L4w"/>

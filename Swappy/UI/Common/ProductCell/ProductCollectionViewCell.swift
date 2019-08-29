@@ -8,17 +8,30 @@
 
 import UIKit
 import SDWebImage
+import SwinjectStoryboard
+import AudioToolbox
 
 final class ProductCollectionViewCell: UICollectionViewCell {
     
     // MARK - Properties
     
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var priceLabel: UILabel!
-    @IBOutlet weak var containerView: UIView!
+    @IBOutlet private weak var imageView: UIImageView!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var priceLabel: UILabel!
+    @IBOutlet private weak var containerView: UIView!
+    @IBOutlet private weak var favoriteButton: UIButton!
+    
+    // Неархитектурно, но оч удобно
+    private let favoritesService: FavoritesService = SwinjectStoryboard.defaultContainer.resolve()
+    private var productId: String = ""
     
     // MARK - Lifecycle
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        favoritesService.addSetFavoriteObserver(self)
+    }
     
     override func prepareForReuse() {
         super.prepareForReuse()
@@ -30,16 +43,58 @@ final class ProductCollectionViewCell: UICollectionViewCell {
     // MARK - Functions
     
     func configure(with viewModel: ProductCellViewModel) {
+        
+        productId = viewModel.id
+            
         titleLabel.attributedText = viewModel.title
         priceLabel.text = viewModel.price
         
         imageView.sd_setImage(with: viewModel.imageURL)
         
+        let isFavorite = favoritesService.isFavorite(productId)
+        setFavorite(isFavorite)
+        
         setupShadows()
+    }
+    
+    // MARK: - Actions
+    @IBAction func favoriteButtonPressed(_ sender: UIButton) {
+        let newIsFavorite = !favoritesService.isFavorite(productId)
+        favoritesService.setFavorite(newIsFavorite, for: productId) { result in
+            switch result {
+            case .success:
+                AudioServicesPlaySystemSound(1519)
+                break // handle in observer
+            case .failure(let error):
+                
+                switch error {
+                case .cancelled:
+                    break
+                default:
+                    sender.shake()
+                }
+            }
+        }
+    }
+}
+
+extension ProductCollectionViewCell: FavoritesObserver {
+    
+    func didChangeFavorite(_ isFavorite: Bool, for productId: String) {
+        guard self.productId == productId else {
+            return
+        }
+        
+        setFavorite(isFavorite)
     }
 }
 
 private extension ProductCollectionViewCell {
+    
+    func setFavorite(_ isFavorite: Bool) {
+        let image = isFavorite ? #imageLiteral(resourceName: "small_like_on") : #imageLiteral(resourceName: "small_like_off")
+        favoriteButton.setImage(image, for: .normal)
+    }
     
     func setupShadows() {
         

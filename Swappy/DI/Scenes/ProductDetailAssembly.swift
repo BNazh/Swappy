@@ -26,6 +26,7 @@ final class ProductDetailAssembly: Assembly {
                 router: router,
                 productService: r.resolve(),
                 categoryService: r.resolve(),
+                favoritesService: r.resolve(),
                 tracker: r.resolve()
             )
         }

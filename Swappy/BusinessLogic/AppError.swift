@@ -10,7 +10,8 @@ import Moya
 
 enum AppError {
     case
-    server(message: String),
+    server(statusCode: Int, message: String),
+    cancelled,
     auth,
     unknown,
     base(Error),
@@ -21,7 +22,7 @@ extension AppError {
     
     var localizedString: String {
         switch self {
-        case .server(let message):
+        case .server(_, let message):
             return message
         default:
             return "Произошла неизвестная ошибка"

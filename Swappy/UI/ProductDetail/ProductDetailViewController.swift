@@ -37,8 +37,7 @@ class ProductDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        presenter.showProduct()
-        presenter.setActions()
+        presenter.onViewDidLoad()
         
         setupNavigationBar()
         setupScrollView()
@@ -79,6 +78,9 @@ class ProductDetailViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
+    @IBAction func favoriteButtonPressed(_ sender: UIButton) {
+        presenter.setFavorite()
+    }
     
     @IBAction func backButtonPressed(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)

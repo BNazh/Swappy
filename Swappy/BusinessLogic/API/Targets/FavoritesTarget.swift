@@ -27,7 +27,7 @@ extension FavoritesTarget: TargetType {
             return "users/\(userId)"
         case .addFavorite(let userId, let productId),
              .deleteFavorite(let userId, let productId):
-            return "users/\(userId)/products\(productId)"
+            return "users/\(userId)/products/\(productId)"
         }
     }
     

@@ -8,11 +8,13 @@
 
 protocol FavoritesService: AnyObject {
     
-    func isProductFavorite(_ product: Product) -> Bool
+    func isFavorite(_ productId: String) -> Bool
     
     func setFavorite(_ isFavorite: Bool,
                      for productId: String,
                      callback: @escaping ResultCallback<Void>)
     
     func getFavoriteProducts(callback: @escaping ResultCallback<[Product]>)
+    
+    func addSetFavoriteObserver(_ observer: FavoritesObserver)
 }

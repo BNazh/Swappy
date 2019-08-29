@@ -45,8 +45,8 @@ final class ServicesAssembly: Assembly {
             BaseProvider<UserTarget>(keychainStore: r.resolve())
         }
         
-        container.register(MoyaProvider<UserTarget>.self) { r in
-            BaseProvider<UserTarget>(keychainStore: r.resolve())
+        container.register(MoyaProvider<FavoritesTarget>.self) { r in
+            BaseProvider<FavoritesTarget>(keychainStore: r.resolve())
         }
         
         // Services
@@ -90,10 +90,9 @@ final class ServicesAssembly: Assembly {
             FavoritesServiceImp(
                 provider: r.resolve(),
                 productService: r.resolve(),
-                notificationCenter: r.resolve(),
                 keychainStore: r.resolve()
             )
-        }
+        }.inObjectScope(.container)
         
         container.register(VKService.self) { r in
             return VKServiceImp(tracker: r.resolve())

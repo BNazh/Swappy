@@ -46,10 +46,15 @@ private extension MoyaProvider {
             
         case .statusCode(let response):
             let message = try? response.mapString(atKeyPath: "message")
-            return .server(message: message ?? "")
+            
+            return .server(statusCode: response.statusCode,
+                           message: message ?? "")
             
         case .objectMapping:
             return .decoding
+            
+        case .underlying(let error, _) where (error as NSError).code == NSURLErrorCancelled:
+            return .cancelled
             
         default:
             return .unknown
