@@ -29,6 +29,7 @@ final class FavoritesAssembly: Assembly {
         container.storyboardInitCompleted(FavoritesViewController.self) { (resolver, controller) in
             
             controller.presenter = resolver.resolve(FavoritesPresenter.self, argument: controller)!
+            controller.dataDisplayManager = resolver.resolve()
         }
     }
 }
