@@ -62,11 +62,15 @@ final class ProductCollectionViewCell: UICollectionViewCell {
         favoritesService.setFavorite(newIsFavorite, for: productId) { result in
             switch result {
             case .success:
-                break
-                // handle in observer
-            case .failure:
-                break
-                // TODO: shake button
+                break // handle in observer
+            case .failure(let error):
+                
+                switch error {
+                case .cancelled:
+                    break
+                default:
+                    sender.shake()
+                }
             }
         }
     }

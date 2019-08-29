@@ -29,8 +29,6 @@ class FavoritesViewController: UIViewController {
         super.viewDidLoad()
 
         dataDisplayManager.setup(delegate: self, collectionView: collectionView)
-        
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {

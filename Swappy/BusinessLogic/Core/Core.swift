@@ -28,5 +28,5 @@ enum Core {
     static let categoriesBaseUrl = baseUrl.appendingPathComponent(serviceString)
     static let userBaseUrl = authBaseUrl.appendingPathComponent("api/v1/")
     
-    static let restApiBaseUrl = baseUrl.appendingPathComponent("api/v1/")
+    static let restApiBaseUrl = baseUrl.appendingPathComponent("\(serviceString)api/v1/")
 }

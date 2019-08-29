@@ -73,6 +73,7 @@
 		E166D60E22CE293E004704DC /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E166D60D22CE293E004704DC /* MainTabBarController.swift */; };
 		E16D31CB2258BF5500033DCC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E16D31C92258BF5500033DCC /* Localizable.strings */; };
 		E16D31CE2258EA5A00033DCC /* UITextField+DoneToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16D31CD2258EA5A00033DCC /* UITextField+DoneToolbar.swift */; };
+		E16F9FAF23183D2A005D6A7D /* UIView+Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16F9FAE23183D2A005D6A7D /* UIView+Shake.swift */; };
 		E172CD48230F0F2200409D8D /* MainAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E172CD47230F0F2200409D8D /* MainAssembly.swift */; };
 		E17BD6C92303445D00E1E66C /* URL+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17BD6C82303445D00E1E66C /* URL+String.swift */; };
 		E17CA187224C24FE00D5C955 /* AnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CA186224C24FE00D5C955 /* AnalyticsManager.swift */; };
@@ -301,6 +302,7 @@
 		E166D60D22CE293E004704DC /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		E16D31CA2258BF5500033DCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Resources/Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E16D31CD2258EA5A00033DCC /* UITextField+DoneToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+DoneToolbar.swift"; sourceTree = "<group>"; };
+		E16F9FAE23183D2A005D6A7D /* UIView+Shake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shake.swift"; sourceTree = "<group>"; };
 		E172CD47230F0F2200409D8D /* MainAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAssembly.swift; sourceTree = "<group>"; };
 		E17BD6C82303445D00E1E66C /* URL+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+String.swift"; sourceTree = "<group>"; };
 		E17CA186224C24FE00D5C955 /* AnalyticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsManager.swift; sourceTree = "<group>"; };
@@ -693,6 +695,16 @@
 				E1FF3ECA223EEE0A00443DED /* AppTextField.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		E16F9FAD23183D15005D6A7D /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				E1BC5AF122318370001FD1D6 /* UIView+ReusableIdentifiers.swift */,
+				E1FC30A12238AB2B00DF1325 /* UIView+RoundCorners.swift */,
+				E16F9FAE23183D2A005D6A7D /* UIView+Shake.swift */,
+			);
+			path = UIView;
 			sourceTree = "<group>";
 		};
 		E172CD46230F0DE500409D8D /* libraries */ = {
@@ -1100,13 +1112,12 @@
 		E1BC5AF02231835E001FD1D6 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				E16F9FAD23183D15005D6A7D /* UIView */,
 				E1A6655D2254FCE9007EE75F /* UIViewController */,
 				E1BC5AEE22318340001FD1D6 /* UICollectionView+RegisterCells.swift */,
 				E18FB1982288823D00F15F66 /* UITableView+RegisterCells.swift */,
 				E1BC5AE022312D5A001FD1D6 /* UIFont+App.swift */,
-				E1BC5AF122318370001FD1D6 /* UIView+ReusableIdentifiers.swift */,
 				E164C39F2235A8AA00D1AB13 /* UIColor+App.swift */,
-				E1FC30A12238AB2B00DF1325 /* UIView+RoundCorners.swift */,
 				E1F01766224799CA001A10D7 /* PHAsset+UIImage.swift */,
 				E16D31CD2258EA5A00033DCC /* UITextField+DoneToolbar.swift */,
 			);
@@ -1682,6 +1693,7 @@
 				E1B624C522973898002090A8 /* StartAssembly.swift in Sources */,
 				E1167C0B2291A81000472324 /* CategoryFilter.swift in Sources */,
 				E1A6656422550CAD007EE75F /* PushNotificationServiceImp.swift in Sources */,
+				E16F9FAF23183D2A005D6A7D /* UIView+Shake.swift in Sources */,
 				E1B4B1DB2235BDE400520082 /* ProductDetailPresenter.swift in Sources */,
 				E100063422824A4500CDC509 /* FBService.swift in Sources */,
 				E1FF3EB1223E9CDA00443DED /* MyProductsPresenter.swift in Sources */,

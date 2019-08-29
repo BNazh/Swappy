@@ -10,12 +10,6 @@ import Moya
 
 final class FavoritesServiceImp {
     
-    // MARK: - FavoriteItem
-    
-    private struct FavoriteItem: Decodable {
-        let productId: String
-    }
-    
     // MARK: - Properties
     
     private let provider: MoyaProvider<FavoritesTarget>
@@ -43,15 +37,15 @@ extension FavoritesServiceImp: FavoritesService {
     
     func getFavoriteProducts(callback: @escaping ResultCallback<[Product]>) {
         let target = FavoritesTarget.getFavorites(userId: userId)
-        
+
         provider.requestDecodable(target) { [weak self] (result: Result<[Product]>) in
-            
+
             switch result {
-                
+
             case .success(let favoriteProducts):
                 self?.favoriteIds = favoriteProducts.map { $0.id }
                 callback(.success(favoriteProducts))
-                
+
             case .failure(let error):
                 callback(.failure(error))
             }
@@ -102,6 +96,11 @@ private extension FavoritesServiceImp {
         let cancellable: Cancellable
     }
     
+    struct FavoriteItem: Decodable {
+        let productId: String
+    }
+    
+    
     // MARK: - Properties
     
     var userId: String {
@@ -125,8 +124,13 @@ private extension FavoritesServiceImp {
     }
     
     func handleSetFavoriteSuccess(isFavorite: Bool, productId: String) {
-        observers.removeAll(where: { $0.value == nil })
+        if isFavorite {
+            favoriteIds.insert(productId, at: 0)
+        } else {
+            favoriteIds.removeAll { $0 == productId }
+        }
         
+        observers.removeAll { $0.value == nil }
         for observer in observers {
             observer.value?.didChangeFavorite(isFavorite, for: productId)
         }
