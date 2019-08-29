@@ -9,11 +9,10 @@
 protocol ProductDetailPresenter {
     func setInitState(product: Product, isOwner: Bool)
     
-    func setActions()
-    func showProduct()
+    func onViewDidLoad()
+    func setFavorite()
     func showSeller()
     func showUpdateProduct()
-    
     func deleteProduct()
 }
 
@@ -23,6 +22,7 @@ final class ProductDetailPresenterImp {
     let router: ProductDetailRouter
     let productService: ProductService
     let categoryService: CategoryService
+    let favoritesService: FavoritesService
     let tracker: AnalyticsManager
     
     var product: Product!
@@ -32,11 +32,13 @@ final class ProductDetailPresenterImp {
          router: ProductDetailRouter,
          productService: ProductService,
          categoryService: CategoryService,
+         favoritesService: FavoritesService,
          tracker: AnalyticsManager) {
         self.view = view
         self.router = router
         self.productService = productService
         self.categoryService = categoryService
+        self.favoritesService = favoritesService
         self.tracker = tracker
     }
 }
@@ -48,10 +50,24 @@ extension ProductDetailPresenterImp: ProductDetailPresenter {
         self.isOwner = isOwner
     }
     
+    func onViewDidLoad() {
+        showProduct()
+        setActions()
+        
+        favoritesService.addSetFavoriteObserver(self)
+    }
+    
     func showProduct() {
         let category = categoryService.category(withId: product.category)
         let categoryName = category?.name ?? ""
-        let viewModel = ProductViewModel(product: product, categoryName: categoryName)
+        let isFavorite = favoritesService.isFavorite(product.id)
+        
+        let viewModel = ProductViewModel(
+            product: product,
+            categoryName: categoryName,
+            isFavorite: isFavorite
+        )
+        
         view.showProduct(viewModel: viewModel)
     }
     
@@ -76,6 +92,27 @@ extension ProductDetailPresenterImp: ProductDetailPresenter {
     
     func setActions() {
         view.displayActionSettings(isSellerButtonHidden: isOwner, isEditViewHidden: !isOwner)
+    }
+    
+    func setFavorite() {
+        let id = product.id
+        let newIsFavorite = !favoritesService.isFavorite(id)
+        favoritesService.setFavorite(newIsFavorite, for: id) { [weak self] result in
+            switch result {
+            case .success:
+                break
+            case .failure:
+                let message = "Не удалось обновить товар."
+                self?.view.showError(message: message)
+            }
+        }
+    }
+}
+
+extension ProductDetailPresenterImp: FavoritesObserver {
+    
+    func didChangeFavorite(_ isFavorite: Bool, for productId: String) {
+        showProduct()
     }
 }
 
