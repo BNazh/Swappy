@@ -148,9 +148,11 @@ private extension MyProductsPresenterImp {
     func handleGetProductsError(_ appError: AppError) {
         reloadProductsOnView()
         
+        view.endRefreshing()
         switch appError {
         case .auth:
-            router.openLoginCard()
+            productService.reset()
+            reloadProductsOnView()
         default:
             view.showError(message: appError.localizedString)
         }

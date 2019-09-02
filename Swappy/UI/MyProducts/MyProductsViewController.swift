@@ -12,6 +12,7 @@ protocol MyProductsView: class, ErrorView, LoadingView {
     
     func reloadHeader(_ header: HeaderViewModel)
     func reloadProducts(_ products: [ProductCellViewModel])
+    func endRefreshing()
 }
 
 final class MyProductsViewController: UIViewController {
@@ -82,6 +83,10 @@ extension MyProductsViewController: MyProductsView {
     func reloadHeader(_ header: HeaderViewModel) {
         dataDisplayManager.reloadHeader(header)
         collectionView.reloadData()
+    }
+    
+    func endRefreshing() {
+        dataDisplayManager.endRefreshing()
     }
 }
 
