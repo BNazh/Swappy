@@ -15,7 +15,7 @@ final class DebugViewController: UIViewController, TipView {
     
     @IBAction func logout(_ sender: Any) {
         
-        keychain.accessToken = nil
+        keychain.clear()
         showTip(text: "Выход")
     }
     

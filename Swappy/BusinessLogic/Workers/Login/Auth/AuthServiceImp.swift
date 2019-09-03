@@ -31,7 +31,7 @@ final class AuthServiceImp {
 extension AuthServiceImp: AuthService {
     
     var isAuthorized: Bool {
-        return keychainStore.accessToken != nil
+        return !keychainStore.accessToken.isEmpty
     }
     
     func requestSmsVerificationCode(for phone: String, closure: @escaping (Result<Void>) -> Void) {
@@ -85,7 +85,7 @@ private extension AuthServiceImp {
         databaseStore.addItem(user)
         
         keychainStore.accessToken = response.accessToken
-        keychainStore.userSellerId = user.id
+        keychainStore.userSellerId = user.id ?? ""
         
         ProductsNotificationCenter.shared.postAuthNotification()
         setCrashlyticsUser(user)

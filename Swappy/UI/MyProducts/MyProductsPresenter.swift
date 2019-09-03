@@ -32,6 +32,7 @@ final class MyProductsPresenterImp {
     fileprivate var products: [Product] = []
     private var isLoading = false
     private var shouldDiscardProducts = false
+    private var logoutObserver: NSObjectProtocol?
     
     // MARK: - Init
     
@@ -48,6 +49,12 @@ final class MyProductsPresenterImp {
         
         setupObservers()
     }
+    
+    deinit {
+        if let observer = logoutObserver {
+            NotificationCenter.default.removeObserver(observer)
+        }
+    }
 }
 
 extension MyProductsPresenterImp: MyProductsPresenter {
@@ -56,10 +63,11 @@ extension MyProductsPresenterImp: MyProductsPresenter {
         guard !isLoading, productService.canLoadMore else {
             return
         }
-        guard authService.isAuthorized else {
-            handleProducts([])
-            return
-        }
+//        guard authService.isAuthorized else {
+//            productService.reset()
+//            handleProducts([])
+//            return
+//        }
         
         isLoading = true
         
@@ -179,6 +187,14 @@ private extension MyProductsPresenterImp {
         center.observeAuth { [weak self] in
             self?.loadMyProductsIfEmpty()
         }
+        
+        logoutObserver = NotificationCenter.default.addObserver(forName: .didLogout, object: nil, queue: .main, using: { [weak self] _ in
+            
+            self?.productService.reset()
+            self?.products = []
+            self?.handleProducts([])
+            self?.reloadHeader()
+        })
     }
     
     func reloadProductsOnView() {
