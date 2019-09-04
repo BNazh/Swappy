@@ -22,6 +22,7 @@ final class StartAssembly: Assembly {
                 router: r.resolve(),
                 categoryService: r.resolve(),
                 cityService: r.resolve(),
+                favoritesService: r.resolve(),
                 settingsStore: r.resolve()
             )
         }

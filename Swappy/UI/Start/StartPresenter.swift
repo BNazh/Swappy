@@ -20,6 +20,7 @@ final class StartPresenterImp {
     private let router: StartRouter
     private let categoryService: CategoryService
     private let cityService: CityService
+    private let favoritesService: FavoritesService
     private let settingsStore: KeychainStore
     
     // MARK: - Init
@@ -28,11 +29,13 @@ final class StartPresenterImp {
          router: StartRouter,
          categoryService: CategoryService,
          cityService: CityService,
+         favoritesService: FavoritesService,
          settingsStore: KeychainStore) {
         self.view = view
         self.router = router
         self.categoryService = categoryService
         self.cityService = cityService
+        self.favoritesService = favoritesService
         self.settingsStore = settingsStore
     }
 }
@@ -51,6 +54,12 @@ extension StartPresenterImp: StartPresenter {
         
         group.enter()
         cityService.updateCitiesList { result in
+            isSuccess = isSuccess && result.isSuccess
+            group.leave()
+        }
+        
+        group.enter()
+        favoritesService.getFavoriteProducts { result in
             isSuccess = isSuccess && result.isSuccess
             group.leave()
         }

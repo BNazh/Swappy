@@ -64,7 +64,7 @@ final class ProductCollectionViewCell: UICollectionViewCell {
             switch result {
             case .success:
                 AudioServicesPlaySystemSound(1519)
-                break // handle in observer
+                // handle in observer
             case .failure(let error):
                 
                 switch error {
