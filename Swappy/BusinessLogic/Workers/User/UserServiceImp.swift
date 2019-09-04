@@ -65,6 +65,7 @@ extension UserServiceImp: UserService {
     
     func logout() {
         keychain.clear()
+        NotificationCenter.default.post(name: .didLogout, object: self)
     }
 }
 

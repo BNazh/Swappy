@@ -18,6 +18,7 @@ protocol ProductsDDMDelegate: AnyObject {
     
     @objc optional func willDisplayLastCell()
     @objc optional func didPressedHeaderImage()
+    @objc optional func didPressedAddProductButton()
 }
 
 protocol ProductsDDM: AnyObject {
