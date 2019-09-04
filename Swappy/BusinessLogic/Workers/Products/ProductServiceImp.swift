@@ -30,8 +30,7 @@ final class ProductServiceImp {
 extension ProductServiceImp: ProductService {
     
     func getCurrentUserProducts(callback: @escaping ResultCallback<[Product]>) {
-        let sellerId = keychainStore.userSellerId
-        guard !sellerId.isEmpty else {
+        guard let sellerId = keychainStore.userSellerId else {
             callback(.failure(.auth))
             return
         }

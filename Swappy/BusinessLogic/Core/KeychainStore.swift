@@ -10,11 +10,15 @@ import KeychainAccess
 
 protocol KeychainStore: class {
     
-    var accessToken: String { get set }
-    var userSellerId: String { get set }
+    var accessToken: String? { get set }
+    var userSellerId: String? { get set }
+    
+    // MARK: - Properties userDefaults
     var welcomeName: String? { get set }
     var welcomeCity: City? { get set }
     var phone: String? { get set }
+    
+    // MARK: - Functions
     
     func clear()
 }
@@ -39,12 +43,21 @@ final class KeychainStoreImp {
 
 extension KeychainStoreImp: KeychainStore {
     
-    var accessToken: String {
+    var accessToken: String? {
         get {
-            return keychain[string: "accessToken"] ?? ""
+            return keychain[string: "accessToken"]
         }
         set {
             keychain[string: "accessToken"] = newValue
+        }
+    }
+    
+    var userSellerId: String? {
+        get {
+            return keychain[string: "userSellerId"]
+        }
+        set {
+            keychain[string: "userSellerId"] = newValue
         }
     }
 }
@@ -54,15 +67,6 @@ extension KeychainStoreImp: KeychainStore {
 extension KeychainStoreImp {
     
     // MARK: - Properties
-    
-    var userSellerId: String {
-        get {
-            return keychain[string: "userSellerId"] ?? ""
-        }
-        set {
-            keychain[string: "userSellerId"] = newValue
-        }
-    }
     
     var welcomeCity: City? {
         get {
@@ -99,8 +103,8 @@ extension KeychainStoreImp {
     // MARK: - Functions
     
     func clear() {
-        accessToken = ""
-        userSellerId = ""
+        accessToken = nil
+        userSellerId = nil
         welcomeCity = nil
         welcomeName = nil
         

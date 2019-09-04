@@ -36,20 +36,22 @@ final class FavoritesServiceImp {
 extension FavoritesServiceImp: FavoritesService {
     
     func getFavoriteProducts(callback: @escaping ResultCallback<[Product]>) {
-        let target = FavoritesTarget.getFavorites(userId: userId)
-
-        provider.requestDecodable(target) { [weak self] (result: Result<[Product]>) in
-
-            switch result {
-
-            case .success(let favoriteProducts):
-                self?.favoriteIds = favoriteProducts.map { $0.id }
-                callback(.success(favoriteProducts))
-
-            case .failure(let error):
-                callback(.failure(error))
-            }
-        }
+        callback(.success([]))
+        // TODO: fav
+//        let target = FavoritesTarget.getFavorites(userId: userId)
+//
+//        provider.requestDecodable(target) { [weak self] (result: Result<[Product]>) in
+//
+//            switch result {
+//
+//            case .success(let favoriteProducts):
+//                self?.favoriteIds = favoriteProducts.map { $0.id }
+//                callback(.success(favoriteProducts))
+//
+//            case .failure(let error):
+//                callback(.failure(error))
+//            }
+//        }
     }
     
     func setFavorite(_ isFavorite: Bool, for productId: String, callback: @escaping ResultCallback<Void>) {

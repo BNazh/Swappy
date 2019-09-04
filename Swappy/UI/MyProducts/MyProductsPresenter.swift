@@ -186,6 +186,7 @@ private extension MyProductsPresenterImp {
         
         center.observeAuth { [weak self] in
             self?.loadMyProductsIfEmpty()
+            self?.reloadHeader()
         }
         
         logoutObserver = NotificationCenter.default.addObserver(forName: .didLogout, object: nil, queue: .main, using: { [weak self] _ in

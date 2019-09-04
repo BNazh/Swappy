@@ -31,7 +31,7 @@ final class AuthServiceImp {
 extension AuthServiceImp: AuthService {
     
     var isAuthorized: Bool {
-        return !keychainStore.accessToken.isEmpty
+        return keychainStore.accessToken != nil
     }
     
     func requestSmsVerificationCode(for phone: String, closure: @escaping (Result<Void>) -> Void) {
