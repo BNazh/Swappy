@@ -112,6 +112,7 @@ extension ProductDetailPresenterImp: ProductDetailPresenter {
 extension ProductDetailPresenterImp: FavoritesObserver {
     
     func didChangeFavorite(_ isFavorite: Bool, for productId: String) {
+        
         showProduct()
     }
 }

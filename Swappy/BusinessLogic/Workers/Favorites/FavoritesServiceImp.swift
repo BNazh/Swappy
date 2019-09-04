@@ -8,6 +8,8 @@
 
 import Moya
 
+import SwinjectStoryboard
+
 final class FavoritesServiceImp {
     
     // MARK: - Properties
@@ -16,9 +18,16 @@ final class FavoritesServiceImp {
     private let productService: ProductService
     private let keychainStore: KeychainStore
     
-    private var currentRequests: [SetFavoriteRequest] = []
-    private var favoriteIds: [String] = []
+    private let productsService: ProductService = SwinjectStoryboard.defaultContainer.resolve()
+    
+    /// Список избранных товаров
+    private var favorites: [Product] = []
+    
+    /// Массив слабых ссылок на наблюдателей изменения списка избранных продуктов
     private var observers: [WeakRef<FavoritesObserver>] = []
+    
+    /// Запросы для отмены
+    private var currentRequests: [SetFavoriteRequest] = []
     
     // MARK: - Init
     
@@ -36,7 +45,7 @@ final class FavoritesServiceImp {
 extension FavoritesServiceImp: FavoritesService {
     
     func getFavoriteProducts(callback: @escaping ResultCallback<[Product]>) {
-        callback(.success([]))
+        callback(.success(favorites))
         // TODO: fav
 //        let target = FavoritesTarget.getFavorites(userId: userId)
 //
@@ -56,29 +65,38 @@ extension FavoritesServiceImp: FavoritesService {
     
     func setFavorite(_ isFavorite: Bool, for productId: String, callback: @escaping ResultCallback<Void>) {
         cancelRequestIfExist(with: productId)
-        
+
         let target = setFavoriteTarget(isFavorite: isFavorite, productId: productId)
-        
+
         let cancellable = provider.requestDecodable(target) { [weak self] (result: Result<String?>) in
-            switch result {
-            case .success:
-                self?.handleSetFavoriteSuccess(
-                    isFavorite: isFavorite,
-                    productId: productId
-                )
-                callback(.success)
-                
-            case .failure(let error):
-                callback(.failure(error))
-            }
+            
+            // TODO: fav
+            self?.productsService.getProduct(withId: productId, callback: { productResult in
+                switch result {
+                case .success:
+                    guard let product = productResult.value else {
+                        callback(.failure(.unknown))
+                        return
+                    }
+                    
+                    self?.handleSetFavoriteSuccess(
+                        isFavorite: isFavorite,
+                        product: product // TODO: fav
+                    )
+                    callback(.success)
+                    
+                case .failure(let error):
+                    callback(.failure(error))
+                }
+            })
         }
-        
+
         let request = SetFavoriteRequest(productId: productId, cancellable: cancellable)
         currentRequests.append(request)
     }
-    
+
     func isFavorite(_ productId: String) -> Bool {
-        return favoriteIds.contains(productId)
+        return favorites.contains { $0.id == productId }
     }
     
     func addSetFavoriteObserver(_ observer: FavoritesObserver) {
@@ -125,16 +143,16 @@ private extension FavoritesServiceImp {
         }
     }
     
-    func handleSetFavoriteSuccess(isFavorite: Bool, productId: String) {
+    func handleSetFavoriteSuccess(isFavorite: Bool, product: Product) {
         if isFavorite {
-            favoriteIds.insert(productId, at: 0)
+            favorites.insert(product, at: 0)
         } else {
-            favoriteIds.removeAll { $0 == productId }
+            favorites.removeAll { $0.id == product.id }
         }
         
         observers.removeAll { $0.value == nil }
         for observer in observers {
-            observer.value?.didChangeFavorite(isFavorite, for: productId)
+            observer.value?.didChangeFavorite(isFavorite, for: product.id)
         }
     }
 }

@@ -6,7 +6,7 @@
 //  Copyright © 2019 SwappyTeam. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct ProductViewModel {
     
@@ -18,7 +18,7 @@ struct ProductViewModel {
     let size: String
     let category: String
     let description: String
-    let isFavorite: Bool
+    let favoriteImage: UIImage
     
     let imageUrls: [String]
     
@@ -34,6 +34,7 @@ struct ProductViewModel {
         imageUrls = product.images
         
         category = categoryName
-        self.isFavorite = isFavorite
+        
+        favoriteImage = isFavorite ? #imageLiteral(resourceName: "like_on") : #imageLiteral(resourceName: "like_off")
     }
 }

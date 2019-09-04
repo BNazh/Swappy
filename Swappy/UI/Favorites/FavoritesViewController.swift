@@ -30,6 +30,10 @@ class FavoritesViewController: UIViewController {
         super.viewDidLoad()
 
         dataDisplayManager.setup(delegate: self, collectionView: collectionView)
+        
+        dataDisplayManager.reloadHeader(.init(title: "Избранное"))
+        
+        navigationController?.navigationBar.isHidden = true
     }
     
     override func viewWillAppear(_ animated: Bool) {

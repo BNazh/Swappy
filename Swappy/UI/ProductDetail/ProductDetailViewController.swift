@@ -29,6 +29,7 @@ class ProductDetailViewController: UIViewController {
     
     @IBOutlet weak var sellerContainerView: UIView!
     @IBOutlet weak var editContainerView: UIView!
+    @IBOutlet weak var likeButton: UIButton!
     
     @IBOutlet weak var scrollView: UIScrollView!
     
@@ -101,6 +102,8 @@ extension ProductDetailViewController: ProductDetailView {
         categoryLabel.text = viewModel.category
         
         descriptionLabel.text = viewModel.description
+        
+        likeButton.setImage(viewModel.favoriteImage, for: .normal)
     }
     
     func displayActionSettings(isSellerButtonHidden: Bool, isEditViewHidden: Bool) {

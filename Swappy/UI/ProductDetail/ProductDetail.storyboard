@@ -299,6 +299,7 @@
                         <outlet property="descriptionLabel" destination="L25-od-f5E" id="9GV-ep-Ze3"/>
                         <outlet property="editContainerView" destination="Uov-bD-4fx" id="xBs-II-uCs"/>
                         <outlet property="imageSlider" destination="xxC-kK-0Zl" id="ksq-0j-5Qo"/>
+                        <outlet property="likeButton" destination="cbS-xX-y20" id="3fv-K9-Hjg"/>
                         <outlet property="priceLabel" destination="8hW-o5-aqA" id="IpD-VI-SD7"/>
                         <outlet property="scrollView" destination="REc-SM-rOV" id="vKd-Xm-krM"/>
                         <outlet property="sellerContainerView" destination="zMy-Ww-2wq" id="85n-S7-uws"/>
@@ -313,6 +314,6 @@
     </scenes>
     <resources>
         <image name="back" width="13" height="21"/>
-        <image name="like_off" width="25" height="24"/>
+        <image name="like_off" width="30" height="26"/>
     </resources>
 </document>
