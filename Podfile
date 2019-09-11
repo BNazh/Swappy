@@ -27,7 +27,7 @@ target 'Swappy' do
   pod 'KeychainAccess',
   
   # Slideshow view
-  pod 'ImageSlideshow', '1.7.0'
+  pod 'ImageSlideshow'
   pod 'ImageSlideshow/SDWebImage'
   
   # Floating UITextField

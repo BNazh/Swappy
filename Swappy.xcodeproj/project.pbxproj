@@ -511,6 +511,27 @@
 			path = FB;
 			sourceTree = "<group>";
 		};
+		E10C6D3D2322ECEA00110FA7 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				E14317892315A65E0077D13D /* Favorites */,
+				E1AACD3422F01DAE00D5826A /* Categories */,
+				E1BAA03A22E9020E00619C3E /* ProfileEdit */,
+				E18FB17E2288200A00F15F66 /* CategoriesFilter */,
+				E1FF3EC6223EEC1E00443DED /* PhoneLogin */,
+				E1FF3E8F223A337600443DED /* LoginCard */,
+				E1FF3E9C223E632800443DED /* Main */,
+				E164C3902231B5B200D1AB13 /* ProductCatalog */,
+				E1FF3EAB223E9CA300443DED /* MyProducts */,
+				E164C3912231B5C200D1AB13 /* ProductDetail */,
+				E1FC30A32238DC4400DF1325 /* SellerInfo */,
+				E1FF3EC1223EEA8E00443DED /* EditProduct */,
+				E127417A22DB67C800228F8B /* Welcome */,
+				E1B624B722952126002090A8 /* Start */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
 		E11174712240AD4E00BD19B4 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
@@ -564,7 +585,6 @@
 			isa = PBXGroup;
 			children = (
 				E18E220222DB8601008C26D1 /* Stores */,
-				E17CA1952252AA3300D5C955 /* Database */,
 				E11174952243719400BD19B4 /* Core.swift */,
 				E17CA19122529D9200D5C955 /* AppConstants.swift */,
 				E17CA19A22533A2800D5C955 /* ProductsNotificationCenter.swift */,
@@ -579,13 +599,6 @@
 				E11174912243700500BD19B4 /* CodeConfirmationPresenter.swift */,
 			);
 			path = CodeConfirmation;
-			sourceTree = "<group>";
-		};
-		E112A35922F95029006D34AB /* Mocks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Mocks;
 			sourceTree = "<group>";
 		};
 		E112A35C22F955BF006D34AB /* Stubs */ = {
@@ -719,11 +732,11 @@
 		E17CA185224C24EE00D5C955 /* Analytics */ = {
 			isa = PBXGroup;
 			children = (
-				E1000630228232E500CDC509 /* AppsflyerAnalyticsManager.swift */,
-				E17CA186224C24FE00D5C955 /* AnalyticsManager.swift */,
 				E17CA19F22569A2A00D5C955 /* Managers */,
 				E17CA19E22569A1C00D5C955 /* Structs */,
 				E17CA1A82256B92D00D5C955 /* Helpers */,
+				E1000630228232E500CDC509 /* AppsflyerAnalyticsManager.swift */,
+				E17CA186224C24FE00D5C955 /* AnalyticsManager.swift */,
 			);
 			path = Analytics;
 			sourceTree = "<group>";
@@ -785,6 +798,7 @@
 		E18E220222DB8601008C26D1 /* Stores */ = {
 			isa = PBXGroup;
 			children = (
+				E17CA1952252AA3300D5C955 /* Database */,
 				E11174822242B38300BD19B4 /* KeychainStore.swift */,
 			);
 			path = Stores;
@@ -878,7 +892,6 @@
 				E19F7E092231068300BAFC7A /* UI */,
 				E19F7E052231064D00BAFC7A /* BusinessLogic */,
 				E1BC5AC422310CAA001FD1D6 /* Entities */,
-				E1BC5AD72231243F001FD1D6 /* ViewModels */,
 				E1BC5ADF22312D50001FD1D6 /* Extensions */,
 				E19F7E1422310B3200BAFC7A /* DI */,
 				E1BC5AE822313350001FD1D6 /* Resources */,
@@ -941,20 +954,8 @@
 			isa = PBXGroup;
 			children = (
 				E164C39922358E0400D1AB13 /* Common */,
-				E14317892315A65E0077D13D /* Favorites */,
-				E1AACD3422F01DAE00D5826A /* Categories */,
-				E1BAA03A22E9020E00619C3E /* ProfileEdit */,
-				E18FB17E2288200A00F15F66 /* CategoriesFilter */,
-				E1FF3EC6223EEC1E00443DED /* PhoneLogin */,
-				E1FF3E8F223A337600443DED /* LoginCard */,
-				E1FF3E9C223E632800443DED /* Main */,
-				E164C3902231B5B200D1AB13 /* ProductCatalog */,
-				E1FF3EAB223E9CA300443DED /* MyProducts */,
-				E164C3912231B5C200D1AB13 /* ProductDetail */,
-				E1FC30A32238DC4400DF1325 /* SellerInfo */,
-				E1FF3EC1223EEA8E00443DED /* EditProduct */,
-				E127417A22DB67C800228F8B /* Welcome */,
-				E1B624B722952126002090A8 /* Start */,
+				E10C6D3D2322ECEA00110FA7 /* Scenes */,
+				E1BC5AD72231243F001FD1D6 /* ViewModels */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -964,7 +965,6 @@
 			children = (
 				E15F28D023127F2F009E815F /* Favorites */,
 				E1A6656022550C87007EE75F /* PushNotificationService */,
-				E112A35922F95029006D34AB /* Mocks */,
 				E1CAC6FA22EA466C0029889C /* User */,
 				E127417322DB460200228F8B /* City */,
 				E184E91D22DB421600542123 /* Login */,
@@ -1390,10 +1390,12 @@
 					};
 					E19F7DE72231063A00BAFC7A = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = E19F7DD02231063900BAFC7A;
 					};
 					E19F7DF22231063B00BAFC7A = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = E19F7DD02231063900BAFC7A;
 					};
 				};
@@ -2054,7 +2056,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.st.SwappyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Swappy.app/Swappy";
 			};
@@ -2076,7 +2078,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.st.SwappyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Swappy.app/Swappy";
 			};
@@ -2097,7 +2099,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.st.SwappyUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Swappy;
 			};
@@ -2118,7 +2120,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.st.SwappyUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Swappy;
 			};

@@ -22,6 +22,8 @@ extension FBServiceImp: FBService {
         loginManager.logIn(permissions: [.email], viewController: viewController) { result in
             switch result {
             case .success(let grantedPermissions, _, let token):
+                print("GranterdPermissions: \(grantedPermissions)")
+                print("Facebook token: \(token)")
                 closure(.success)
                 
             case .cancelled, .failed(_):
