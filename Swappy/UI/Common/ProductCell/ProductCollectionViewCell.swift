@@ -109,7 +109,7 @@ private extension ProductCollectionViewCell {
 //        containerView.layer.shadowOpacity = 0.12
         
         containerView.layer.applySketchShadow(y: -2)
-        containerView.layer.applySketchShadow(y: 8)
+        containerView.layer.applySketchShadow(y: 5)
     }
 }
 
