@@ -21,7 +21,7 @@ final class FavoritesServiceImp {
     private let productsService: ProductService = SwinjectStoryboard.defaultContainer.resolve()
     
     /// Список избранных товаров
-    private var favorites: [Product] = []
+    private(set) var favorites: [Product] = []
     
     /// Массив слабых ссылок на наблюдателей изменения списка избранных продуктов
     private var observers: [WeakRef<FavoritesObserver>] = []
@@ -45,22 +45,20 @@ final class FavoritesServiceImp {
 extension FavoritesServiceImp: FavoritesService {
     
     func getFavoriteProducts(callback: @escaping ResultCallback<[Product]>) {
-        callback(.success(favorites))
-        // TODO: fav
-//        let target = FavoritesTarget.getFavorites(userId: userId)
-//
-//        provider.requestDecodable(target) { [weak self] (result: Result<[Product]>) in
-//
-//            switch result {
-//
-//            case .success(let favoriteProducts):
-//                self?.favoriteIds = favoriteProducts.map { $0.id }
-//                callback(.success(favoriteProducts))
-//
-//            case .failure(let error):
-//                callback(.failure(error))
-//            }
-//        }
+        let target = FavoritesTarget.getFavorites(userId: userId)
+
+        provider.requestDecodable(target) { [weak self] (result: Result<[Product]>) in
+
+            switch result {
+
+            case .success(let favoriteProducts):
+                self?.favorites = favoriteProducts
+                callback(.success(favoriteProducts))
+
+            case .failure(let error):
+                callback(.failure(error))
+            }
+        }
     }
     
     func setFavorite(_ isFavorite: Bool, for productId: String, callback: @escaping ResultCallback<Void>) {

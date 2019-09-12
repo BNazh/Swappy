@@ -8,6 +8,12 @@
 
 protocol FavoritesService: AnyObject {
     
+    // MARK: - Properties
+    
+    var favorites: [Product] { get }
+    
+    // MARK: - Functions
+    
     func isFavorite(_ productId: String) -> Bool
     
     func setFavorite(_ isFavorite: Bool,

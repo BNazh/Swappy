@@ -21,6 +21,7 @@ final class StartPresenterImp {
     private let categoryService: CategoryService
     private let cityService: CityService
     private let favoritesService: FavoritesService
+    private let authService: AuthService
     private let settingsStore: KeychainStore
     
     // MARK: - Init
@@ -30,12 +31,14 @@ final class StartPresenterImp {
          categoryService: CategoryService,
          cityService: CityService,
          favoritesService: FavoritesService,
+         authService: AuthService,
          settingsStore: KeychainStore) {
         self.view = view
         self.router = router
         self.categoryService = categoryService
         self.cityService = cityService
         self.favoritesService = favoritesService
+        self.authService = authService
         self.settingsStore = settingsStore
     }
 }
@@ -43,6 +46,7 @@ final class StartPresenterImp {
 extension StartPresenterImp: StartPresenter {
     
     func loadStartData() {
+        
         var isSuccess = true
         let group = DispatchGroup()
         
@@ -58,10 +62,12 @@ extension StartPresenterImp: StartPresenter {
             group.leave()
         }
         
-        group.enter()
-        favoritesService.getFavoriteProducts { result in
-            isSuccess = isSuccess && result.isSuccess
-            group.leave()
+        if authService.isAuthorized {
+            group.enter()
+            favoritesService.getFavoriteProducts { result in
+                isSuccess = isSuccess && result.isSuccess
+                group.leave()
+            }
         }
         
         group.notify(queue: .main) { [weak self] in

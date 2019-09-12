@@ -23,6 +23,7 @@ final class StartAssembly: Assembly {
                 categoryService: r.resolve(),
                 cityService: r.resolve(),
                 favoritesService: r.resolve(),
+                authService: r.resolve(),
                 settingsStore: r.resolve()
             )
         }

@@ -8,6 +8,7 @@
 
 protocol FavoritesPresenter {
     
+    func reloadFavorites()
     func refreshFavorites()
     func openProduct(with productId: String)
 }
@@ -37,6 +38,11 @@ final class FavoritesPresenterImp {
 // MARK: - FavoritesPresenter
 
 extension FavoritesPresenterImp: FavoritesPresenter {
+    
+    func reloadFavorites() {
+        favoriteProducts = favoritesService.favorites
+        reloadView()
+    }
     
     func refreshFavorites() {
         favoritesService.getFavoriteProducts { [weak self] result in
