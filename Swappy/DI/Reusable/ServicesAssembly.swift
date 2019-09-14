@@ -49,6 +49,10 @@ final class ServicesAssembly: Assembly {
             BaseProvider<FavoritesTarget>(keychainStore: r.resolve())
         }
         
+        container.register(MoyaProvider<SearchTarget>.self) { r in
+            BaseProvider<SearchTarget>(keychainStore: r.resolve())
+        }
+        
         // Services
         
         container.register(ProductService.self) { r in

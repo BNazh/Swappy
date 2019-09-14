@@ -143,6 +143,10 @@
 		E1B624BD2295217B002090A8 /* StartRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B624BC2295217B002090A8 /* StartRouter.swift */; };
 		E1B624BF22952189002090A8 /* Start.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1B624BE22952189002090A8 /* Start.storyboard */; };
 		E1B624C522973898002090A8 /* StartAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B624C422973898002090A8 /* StartAssembly.swift */; };
+		E1B70093232CA9FB0019DA8C /* SearchTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B70092232CA9FB0019DA8C /* SearchTarget.swift */; };
+		E1B70096232CAF5C0019DA8C /* ProductSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B70095232CAF5C0019DA8C /* ProductSearchService.swift */; };
+		E1B70098232CAF680019DA8C /* ProductSearchServiceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B70097232CAF680019DA8C /* ProductSearchServiceImp.swift */; };
+		E1B7009A232CB5880019DA8C /* ProductPagingRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B70099232CB5880019DA8C /* ProductPagingRepo.swift */; };
 		E1BC5AC122310C0E001FD1D6 /* ProductCatalogAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC5AC022310C0E001FD1D6 /* ProductCatalogAssembly.swift */; };
 		E1BC5AC322310C2E001FD1D6 /* ServicesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC5AC222310C2E001FD1D6 /* ServicesAssembly.swift */; };
 		E1BC5AC622310CB7001FD1D6 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC5AC522310CB7001FD1D6 /* Product.swift */; };
@@ -379,6 +383,10 @@
 		E1B624BC2295217B002090A8 /* StartRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartRouter.swift; sourceTree = "<group>"; };
 		E1B624BE22952189002090A8 /* Start.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Start.storyboard; sourceTree = "<group>"; };
 		E1B624C422973898002090A8 /* StartAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartAssembly.swift; sourceTree = "<group>"; };
+		E1B70092232CA9FB0019DA8C /* SearchTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTarget.swift; sourceTree = "<group>"; };
+		E1B70095232CAF5C0019DA8C /* ProductSearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSearchService.swift; sourceTree = "<group>"; };
+		E1B70097232CAF680019DA8C /* ProductSearchServiceImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSearchServiceImp.swift; sourceTree = "<group>"; };
+		E1B70099232CB5880019DA8C /* ProductPagingRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPagingRepo.swift; sourceTree = "<group>"; };
 		E1BC5AC022310C0E001FD1D6 /* ProductCatalogAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCatalogAssembly.swift; sourceTree = "<group>"; };
 		E1BC5AC222310C2E001FD1D6 /* ServicesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesAssembly.swift; sourceTree = "<group>"; };
 		E1BC5AC522310CB7001FD1D6 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
@@ -564,6 +572,7 @@
 			children = (
 				E19F7E0F22310A5200BAFC7A /* ProductService.swift */,
 				E19F7E1122310B0200BAFC7A /* ProductServiceImp.swift */,
+				E1B70099232CB5880019DA8C /* ProductPagingRepo.swift */,
 			);
 			path = Products;
 			sourceTree = "<group>";
@@ -942,6 +951,7 @@
 				E127417122DB426000228F8B /* CityTarget.swift */,
 				E121F16C22EF8228002666C9 /* UserTarget.swift */,
 				E15F28D523128095009E815F /* FavoritesTarget.swift */,
+				E1B70092232CA9FB0019DA8C /* SearchTarget.swift */,
 			);
 			path = Targets;
 			sourceTree = "<group>";
@@ -958,6 +968,7 @@
 		E19F7E0E22310A3F00BAFC7A /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				E1B70094232CAF340019DA8C /* ProductSearch */,
 				E15F28D023127F2F009E815F /* Favorites */,
 				E1A6656022550C87007EE75F /* PushNotificationService */,
 				E1CAC6FA22EA466C0029889C /* User */,
@@ -1029,6 +1040,15 @@
 				E1F0175622463C13001A10D7 /* BaseProvider.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		E1B70094232CAF340019DA8C /* ProductSearch */ = {
+			isa = PBXGroup;
+			children = (
+				E1B70095232CAF5C0019DA8C /* ProductSearchService.swift */,
+				E1B70097232CAF680019DA8C /* ProductSearchServiceImp.swift */,
+			);
+			path = ProductSearch;
 			sourceTree = "<group>";
 		};
 		E1BAA03A22E9020E00619C3E /* ProfileEdit */ = {
@@ -1648,6 +1668,7 @@
 				E18FB1972288792F00F15F66 /* SingleSelectionPresenter.swift in Sources */,
 				E18FB17C22881D3400F15F66 /* FBButton.swift in Sources */,
 				E1B624B62293E314002090A8 /* FacebookAnalyticsManager.swift in Sources */,
+				E1B70098232CAF680019DA8C /* ProductSearchServiceImp.swift in Sources */,
 				E1F78AFE226313D500BA4BED /* VKServiceImp.swift in Sources */,
 				E1493B7222E04DEF0016FEE5 /* TransparentNavigationController.swift in Sources */,
 				E13D324022F16CDE00C78011 /* CategoriesRouter.swift in Sources */,
@@ -1660,6 +1681,7 @@
 				E1F01767224799CA001A10D7 /* PHAsset+UIImage.swift in Sources */,
 				E1D908DA225BDDA20027C6C6 /* PullToDismissHandler.swift in Sources */,
 				E121F16F22EF97DC002666C9 /* ProfileEditAssembly.swift in Sources */,
+				E1B70093232CA9FB0019DA8C /* SearchTarget.swift in Sources */,
 				E1FF3EC5223EEA8E00443DED /* EditProductViewController.swift in Sources */,
 				E1F017632246B42A001A10D7 /* PhotoCollectionViewCell.swift in Sources */,
 				E1FF3EB5223EDC3900443DED /* MyProductsAssembly.swift in Sources */,
@@ -1694,8 +1716,10 @@
 				E127417722DB461A00228F8B /* CityServiceImp.swift in Sources */,
 				E11174892242B5B800BD19B4 /* PhoneLoginRouter.swift in Sources */,
 				E164C3A22235A92300D1AB13 /* ImageSlider.swift in Sources */,
+				E1B70096232CAF5C0019DA8C /* ProductSearchService.swift in Sources */,
 				E1167C062291502B00472324 /* Category.swift in Sources */,
 				E18FB19522884CA100F15F66 /* CategoryServiceImp.swift in Sources */,
+				E1B7009A232CB5880019DA8C /* ProductPagingRepo.swift in Sources */,
 				E1BC5ACC22310F9D001FD1D6 /* Sex.swift in Sources */,
 				E1A6A91722E9023B000D3F1B /* ProfileEditViewController.swift in Sources */,
 				E1B624BB22952170002090A8 /* StartPresenter.swift in Sources */,
