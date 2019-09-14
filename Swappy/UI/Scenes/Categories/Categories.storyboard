@@ -25,18 +25,27 @@
                                     <outlet property="delegate" destination="8ap-H4-Qc4" id="MDG-qr-kxa"/>
                                 </connections>
                             </searchBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Категории" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BQe-kl-9Fs">
-                                <rect key="frame" x="16" y="172" width="70.5" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="26b-sj-a3f"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
-                                <color key="textColor" red="0.72549019607843135" green="0.72549019607843135" blue="0.72549019607843135" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="v8e-E8-KT8">
-                                <rect key="frame" x="0.0" y="201" width="375" height="466"/>
+                                <rect key="frame" x="0.0" y="172" width="375" height="495"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="nb5-G8-mIf">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="29"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Категории" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BQe-kl-9Fs">
+                                            <rect key="frame" x="16" y="0.0" width="70.5" height="21"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                            <color key="textColor" red="0.72549019607843135" green="0.72549019607843135" blue="0.72549019607843135" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="BQe-kl-9Fs" secondAttribute="bottom" constant="8" id="PIm-8A-Dj5"/>
+                                        <constraint firstItem="BQe-kl-9Fs" firstAttribute="leading" secondItem="nb5-G8-mIf" secondAttribute="leading" constant="16" id="Uzf-5n-8Qp"/>
+                                        <constraint firstItem="BQe-kl-9Fs" firstAttribute="top" secondItem="nb5-G8-mIf" secondAttribute="top" id="VSc-Ja-noe"/>
+                                    </constraints>
+                                </view>
                                 <connections>
                                     <outlet property="dataSource" destination="8ap-H4-Qc4" id="6bO-te-wtR"/>
                                     <outlet property="delegate" destination="8ap-H4-Qc4" id="REw-zT-FQq"/>
@@ -66,10 +75,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="BQe-kl-9Fs" firstAttribute="top" secondItem="tfF-Yr-vVe" secondAttribute="bottom" id="0UE-sL-9Zq"/>
+                            <constraint firstItem="v8e-E8-KT8" firstAttribute="top" secondItem="tfF-Yr-vVe" secondAttribute="bottom" id="3mv-1a-JUF"/>
                             <constraint firstItem="v8e-E8-KT8" firstAttribute="leading" secondItem="Q13-XM-Be3" secondAttribute="leading" id="B9p-bI-Ef1"/>
                             <constraint firstItem="Q13-XM-Be3" firstAttribute="bottom" secondItem="v8e-E8-KT8" secondAttribute="bottom" id="Gml-Nd-2fv"/>
-                            <constraint firstItem="BQe-kl-9Fs" firstAttribute="leading" secondItem="Q13-XM-Be3" secondAttribute="leading" constant="16" id="Qhc-Rw-qrI"/>
                             <constraint firstItem="Q13-XM-Be3" firstAttribute="trailing" secondItem="hD1-BC-7Tc" secondAttribute="trailing" id="SFL-lz-veS"/>
                             <constraint firstItem="tfF-Yr-vVe" firstAttribute="centerX" secondItem="Q13-XM-Be3" secondAttribute="centerX" id="TyK-Zp-iQl"/>
                             <constraint firstItem="tfF-Yr-vVe" firstAttribute="top" secondItem="hD1-BC-7Tc" secondAttribute="bottom" constant="8" id="b1Q-gl-DHX"/>
@@ -77,7 +85,6 @@
                             <constraint firstItem="tfF-Yr-vVe" firstAttribute="leading" secondItem="Q13-XM-Be3" secondAttribute="leading" constant="8" id="mca-47-ATC"/>
                             <constraint firstItem="v8e-E8-KT8" firstAttribute="trailing" secondItem="Q13-XM-Be3" secondAttribute="trailing" id="r8L-kx-YNO"/>
                             <constraint firstItem="hD1-BC-7Tc" firstAttribute="leading" secondItem="Q13-XM-Be3" secondAttribute="leading" id="v4d-kJ-YM9"/>
-                            <constraint firstItem="v8e-E8-KT8" firstAttribute="top" secondItem="BQe-kl-9Fs" secondAttribute="bottom" constant="8" id="xXE-4R-Pd2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Q13-XM-Be3"/>
                     </view>

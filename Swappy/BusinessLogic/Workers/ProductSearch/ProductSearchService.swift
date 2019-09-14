@@ -12,16 +12,16 @@ protocol ProductSearchService {
                         category: Category?,
                         pageNumber: Int,
                         pageSize: Int,
-                        callback: @escaping ([Product]) -> Void)
+                        callback: @escaping ResultCallback<[Product]>)
     
-    func userHistory() -> [String]
+    func userHistory(callback: @escaping ResultCallback<[String]>)
 }
 
 extension ProductSearchService {
     
     func searchProducts(byName name: String,
                         pageNumber: Int,
-                        callback: @escaping ([Product]) -> Void) {
+                        callback: @escaping ResultCallback<[Product]>) {
         searchProducts(byName: name, category: nil, pageNumber: pageNumber, pageSize: 10, callback: callback)
     }
 }

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="53c-G9-Wia">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search Results View Controller-->
+        <scene sceneID="sti-7j-zy4">
+            <objects>
+                <viewController storyboardIdentifier="SearchResultsViewController" id="53c-G9-Wia" customClass="SearchResultsViewController" customModule="Swappy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cff-dd-1qk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="svv-Jd-MsM">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7hg-va-ki5">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KJW-sc-Gto">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gzF-e8-clE">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7hg-va-ki5" firstAttribute="top" secondItem="MBO-8H-Y38" secondAttribute="top" id="4mW-Ag-63b"/>
+                            <constraint firstItem="svv-Jd-MsM" firstAttribute="leading" secondItem="MBO-8H-Y38" secondAttribute="leading" id="F9N-9p-Y77"/>
+                            <constraint firstItem="MBO-8H-Y38" firstAttribute="bottom" secondItem="svv-Jd-MsM" secondAttribute="bottom" id="HuB-YP-dRI"/>
+                            <constraint firstItem="MBO-8H-Y38" firstAttribute="trailing" secondItem="svv-Jd-MsM" secondAttribute="trailing" id="bpv-QF-skE"/>
+                            <constraint firstItem="MBO-8H-Y38" firstAttribute="bottom" secondItem="7hg-va-ki5" secondAttribute="bottom" id="eD7-5g-ouI"/>
+                            <constraint firstItem="MBO-8H-Y38" firstAttribute="trailing" secondItem="7hg-va-ki5" secondAttribute="trailing" id="giS-6A-LDo"/>
+                            <constraint firstItem="svv-Jd-MsM" firstAttribute="top" secondItem="MBO-8H-Y38" secondAttribute="top" id="jkE-Au-Ey2"/>
+                            <constraint firstItem="7hg-va-ki5" firstAttribute="leading" secondItem="MBO-8H-Y38" secondAttribute="leading" id="qLR-AQ-QKA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MBO-8H-Y38"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="7hg-va-ki5" id="gKL-re-6bQ"/>
+                        <outlet property="tableView" destination="svv-Jd-MsM" id="uRd-98-eNi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="16I-q3-mAh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52" y="-23"/>
+        </scene>
+    </scenes>
+</document>

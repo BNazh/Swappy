@@ -31,14 +31,18 @@ extension ProductSearchServiceImp: ProductSearchService {
                         category: Category?,
                         pageNumber: Int,
                         pageSize: Int,
-                        callback: @escaping ([Product]) -> Void) {
+                        callback: @escaping ResultCallback<[Product]>) {
         let target = SearchTarget.products(name: name, pageNumber: pageNumber)
+        
         provider.requestDecodable(target) { (result: Result<[Product]>) in
-            
+            callback(result)
         }
     }
     
-    func userHistory() -> [String] {
+    func userHistory(callback: @escaping ResultCallback<[String]>) {
+        let userId = settingsStore.userSellerId ?? ""
+        let target = SearchTarget.userHistory(userId: userId)
         
+        provider.requestDecodable(target, callback: callback)
     }
 }

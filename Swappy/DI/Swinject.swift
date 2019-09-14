@@ -31,7 +31,8 @@ extension SwinjectStoryboard {
             StartAssembly(),
             WelcomeAssembly(),
             MainAssembly(),
-            FavoritesAssembly()
+            FavoritesAssembly(),
+            SearchResultsAssembly()
         ])
         
         Container.loggingFunction = nil

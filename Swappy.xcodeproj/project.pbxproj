@@ -63,6 +63,7 @@
 		E15F28D223127F4D009E815F /* FavoritesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15F28D123127F4D009E815F /* FavoritesService.swift */; };
 		E15F28D423127F55009E815F /* FavoritesServiceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15F28D323127F55009E815F /* FavoritesServiceImp.swift */; };
 		E15F28D623128095009E815F /* FavoritesTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15F28D523128095009E815F /* FavoritesTarget.swift */; };
+		E163CF01232D62E500F54DD2 /* SearchResultsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E163CF00232D62E500F54DD2 /* SearchResultsAssembly.swift */; };
 		E164C3932231B5DF00D1AB13 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E164C3922231B5DF00D1AB13 /* ProductDetailViewController.swift */; };
 		E164C3952231B5FE00D1AB13 /* ProductDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E164C3942231B5FE00D1AB13 /* ProductDetail.storyboard */; };
 		E164C39722326BAD00D1AB13 /* Collection+SafeSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = E164C39622326BAD00D1AB13 /* Collection+SafeSubscription.swift */; };
@@ -146,7 +147,9 @@
 		E1B70093232CA9FB0019DA8C /* SearchTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B70092232CA9FB0019DA8C /* SearchTarget.swift */; };
 		E1B70096232CAF5C0019DA8C /* ProductSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B70095232CAF5C0019DA8C /* ProductSearchService.swift */; };
 		E1B70098232CAF680019DA8C /* ProductSearchServiceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B70097232CAF680019DA8C /* ProductSearchServiceImp.swift */; };
-		E1B7009A232CB5880019DA8C /* ProductPagingRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B70099232CB5880019DA8C /* ProductPagingRepo.swift */; };
+		E1B7009D232D19DB0019DA8C /* PagerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B7009C232D19DB0019DA8C /* PagerService.swift */; };
+		E1B700A1232D4A340019DA8C /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B700A0232D4A340019DA8C /* SearchResultsViewController.swift */; };
+		E1B700A3232D4A730019DA8C /* SearchResults.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1B700A2232D4A730019DA8C /* SearchResults.storyboard */; };
 		E1BC5AC122310C0E001FD1D6 /* ProductCatalogAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC5AC022310C0E001FD1D6 /* ProductCatalogAssembly.swift */; };
 		E1BC5AC322310C2E001FD1D6 /* ServicesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC5AC222310C2E001FD1D6 /* ServicesAssembly.swift */; };
 		E1BC5AC622310CB7001FD1D6 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC5AC522310CB7001FD1D6 /* Product.swift */; };
@@ -294,6 +297,7 @@
 		E15F28D123127F4D009E815F /* FavoritesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesService.swift; sourceTree = "<group>"; };
 		E15F28D323127F55009E815F /* FavoritesServiceImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesServiceImp.swift; sourceTree = "<group>"; };
 		E15F28D523128095009E815F /* FavoritesTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTarget.swift; sourceTree = "<group>"; };
+		E163CF00232D62E500F54DD2 /* SearchResultsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsAssembly.swift; sourceTree = "<group>"; };
 		E164C3922231B5DF00D1AB13 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		E164C3942231B5FE00D1AB13 /* ProductDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProductDetail.storyboard; sourceTree = "<group>"; };
 		E164C39622326BAD00D1AB13 /* Collection+SafeSubscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+SafeSubscription.swift"; sourceTree = "<group>"; };
@@ -386,7 +390,9 @@
 		E1B70092232CA9FB0019DA8C /* SearchTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTarget.swift; sourceTree = "<group>"; };
 		E1B70095232CAF5C0019DA8C /* ProductSearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSearchService.swift; sourceTree = "<group>"; };
 		E1B70097232CAF680019DA8C /* ProductSearchServiceImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSearchServiceImp.swift; sourceTree = "<group>"; };
-		E1B70099232CB5880019DA8C /* ProductPagingRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPagingRepo.swift; sourceTree = "<group>"; };
+		E1B7009C232D19DB0019DA8C /* PagerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagerService.swift; sourceTree = "<group>"; };
+		E1B700A0232D4A340019DA8C /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
+		E1B700A2232D4A730019DA8C /* SearchResults.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchResults.storyboard; sourceTree = "<group>"; };
 		E1BC5AC022310C0E001FD1D6 /* ProductCatalogAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCatalogAssembly.swift; sourceTree = "<group>"; };
 		E1BC5AC222310C2E001FD1D6 /* ServicesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesAssembly.swift; sourceTree = "<group>"; };
 		E1BC5AC522310CB7001FD1D6 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
@@ -555,6 +561,7 @@
 				E13D324122F16FCA00C78011 /* CategoriesAssembly.swift */,
 				E172CD47230F0F2200409D8D /* MainAssembly.swift */,
 				E14F0F32231713FD00B81274 /* FavoritesAssembly.swift */,
+				E163CF00232D62E500F54DD2 /* SearchResultsAssembly.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -572,7 +579,6 @@
 			children = (
 				E19F7E0F22310A5200BAFC7A /* ProductService.swift */,
 				E19F7E1122310B0200BAFC7A /* ProductServiceImp.swift */,
-				E1B70099232CB5880019DA8C /* ProductPagingRepo.swift */,
 			);
 			path = Products;
 			sourceTree = "<group>";
@@ -968,6 +974,7 @@
 		E19F7E0E22310A3F00BAFC7A /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				E1B7009B232D19B70019DA8C /* Pager */,
 				E1B70094232CAF340019DA8C /* ProductSearch */,
 				E15F28D023127F2F009E815F /* Favorites */,
 				E1A6656022550C87007EE75F /* PushNotificationService */,
@@ -1013,6 +1020,7 @@
 		E1AACD3422F01DAE00D5826A /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				E1B7009F232D4A260019DA8C /* SearchResults */,
 				E13D323622F164E000C78011 /* TableView */,
 				E1AACD3722F0221100D5826A /* Categories.storyboard */,
 				E1AACD3922F0221C00D5826A /* CategoriesViewController.swift */,
@@ -1049,6 +1057,23 @@
 				E1B70097232CAF680019DA8C /* ProductSearchServiceImp.swift */,
 			);
 			path = ProductSearch;
+			sourceTree = "<group>";
+		};
+		E1B7009B232D19B70019DA8C /* Pager */ = {
+			isa = PBXGroup;
+			children = (
+				E1B7009C232D19DB0019DA8C /* PagerService.swift */,
+			);
+			path = Pager;
+			sourceTree = "<group>";
+		};
+		E1B7009F232D4A260019DA8C /* SearchResults */ = {
+			isa = PBXGroup;
+			children = (
+				E1B700A0232D4A340019DA8C /* SearchResultsViewController.swift */,
+				E1B700A2232D4A730019DA8C /* SearchResults.storyboard */,
+			);
+			path = SearchResults;
 			sourceTree = "<group>";
 		};
 		E1BAA03A22E9020E00619C3E /* ProfileEdit */ = {
@@ -1442,6 +1467,7 @@
 				E10717CE22CE6233004B1A5D /* HeaderView.xib in Resources */,
 				E18FB18E22882D7900F15F66 /* SelectionItemTableViewCell.xib in Resources */,
 				E1BC5ADE223124B3001FD1D6 /* ProductCollectionViewCell.xib in Resources */,
+				E1B700A3232D4A730019DA8C /* SearchResults.storyboard in Resources */,
 				E19F7DDF2231063A00BAFC7A /* Assets.xcassets in Resources */,
 				E18FB18A22882AEC00F15F66 /* SingleSelection.storyboard in Resources */,
 				E19F7DDA2231063900BAFC7A /* Main.storyboard in Resources */,
@@ -1656,6 +1682,7 @@
 				E111747A224183A400BD19B4 /* AuthTarget.swift in Sources */,
 				E18FB19B22893E8600F15F66 /* EditProductRouter.swift in Sources */,
 				E15F28D223127F4D009E815F /* FavoritesService.swift in Sources */,
+				E163CF01232D62E500F54DD2 /* SearchResultsAssembly.swift in Sources */,
 				E15F28D423127F55009E815F /* FavoritesServiceImp.swift in Sources */,
 				E15F28D623128095009E815F /* FavoritesTarget.swift in Sources */,
 				E14F0F33231713FD00B81274 /* FavoritesAssembly.swift in Sources */,
@@ -1706,6 +1733,7 @@
 				E1167C0B2291A81000472324 /* CategoryFilter.swift in Sources */,
 				E1A6656422550CAD007EE75F /* PushNotificationServiceImp.swift in Sources */,
 				E16F9FAF23183D2A005D6A7D /* UIView+Shake.swift in Sources */,
+				E1B700A1232D4A340019DA8C /* SearchResultsViewController.swift in Sources */,
 				E1B4B1DB2235BDE400520082 /* ProductDetailPresenter.swift in Sources */,
 				E100063422824A4500CDC509 /* FBService.swift in Sources */,
 				E1FF3EB1223E9CDA00443DED /* MyProductsPresenter.swift in Sources */,
@@ -1719,7 +1747,6 @@
 				E1B70096232CAF5C0019DA8C /* ProductSearchService.swift in Sources */,
 				E1167C062291502B00472324 /* Category.swift in Sources */,
 				E18FB19522884CA100F15F66 /* CategoryServiceImp.swift in Sources */,
-				E1B7009A232CB5880019DA8C /* ProductPagingRepo.swift in Sources */,
 				E1BC5ACC22310F9D001FD1D6 /* Sex.swift in Sources */,
 				E1A6A91722E9023B000D3F1B /* ProfileEditViewController.swift in Sources */,
 				E1B624BB22952170002090A8 /* StartPresenter.swift in Sources */,
@@ -1805,6 +1832,7 @@
 				E1DB9FBD22E6583500A46D95 /* RealmUser.swift in Sources */,
 				E164C3932231B5DF00D1AB13 /* ProductDetailViewController.swift in Sources */,
 				E1FF3EAF223E9CCF00443DED /* MyProductsViewController.swift in Sources */,
+				E1B7009D232D19DB0019DA8C /* PagerService.swift in Sources */,
 				E1FF3EC4223EEA8E00443DED /* EditProductPresenter.swift in Sources */,
 				E164C3A02235A8AA00D1AB13 /* UIColor+App.swift in Sources */,
 				E19F7DD52231063900BAFC7A /* AppDelegate.swift in Sources */,
