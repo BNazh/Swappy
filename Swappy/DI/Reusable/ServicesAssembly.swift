@@ -125,9 +125,5 @@ final class ServicesAssembly: Assembly {
         container.register(ProductsDDM.self) { _ in
             return ProductsDDMImp()
         }
-        
-        container.register(TextFieldPickerDDM.self) { _ in
-            return TextFieldPickerDDM()
-        }
     }
 }

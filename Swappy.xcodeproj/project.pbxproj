@@ -90,7 +90,6 @@
 		E17CA1A32256A5CC00D5C955 /* Resolver+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CA1A22256A5CC00D5C955 /* Resolver+Extension.swift */; };
 		E17CA1A52256B02300D5C955 /* LoginCardAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CA1A42256B02300D5C955 /* LoginCardAssembly.swift */; };
 		E17CA1A72256B19800D5C955 /* UIViewController+Swizzling.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CA1A62256B19800D5C955 /* UIViewController+Swizzling.swift */; };
-		E181AF57228A93C000AB8957 /* SelectionTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E181AF56228A93C000AB8957 /* SelectionTextFieldDelegate.swift */; };
 		E18E21FB22DB6978008C26D1 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18E21FA22DB6978008C26D1 /* WelcomeViewController.swift */; };
 		E18E21FD22DB6980008C26D1 /* WelcomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18E21FC22DB6980008C26D1 /* WelcomePresenter.swift */; };
 		E18E21FF22DB6B01008C26D1 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E18E21FE22DB6B01008C26D1 /* Welcome.storyboard */; };
@@ -177,7 +176,6 @@
 		E1F0175F2246B286001A10D7 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F0175E2246B286001A10D7 /* PhotosViewController.swift */; };
 		E1F017632246B42A001A10D7 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F017622246B42A001A10D7 /* PhotoCollectionViewCell.swift */; };
 		E1F01767224799CA001A10D7 /* PHAsset+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F01766224799CA001A10D7 /* PHAsset+UIImage.swift */; };
-		E1F0176A224935BA001A10D7 /* TextFieldPickerDDM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F01769224935BA001A10D7 /* TextFieldPickerDDM.swift */; };
 		E1F0176D22493CF7001A10D7 /* TipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F0176C22493CF7001A10D7 /* TipView.swift */; };
 		E1F0176F22493E7A001A10D7 /* DeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F0176E22493E7A001A10D7 /* DeleteButton.swift */; };
 		E1F017722249624B001A10D7 /* OkAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F017712249624B001A10D7 /* OkAlertView.swift */; };
@@ -319,7 +317,6 @@
 		E17CA1A22256A5CC00D5C955 /* Resolver+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Resolver+Extension.swift"; sourceTree = "<group>"; };
 		E17CA1A42256B02300D5C955 /* LoginCardAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCardAssembly.swift; sourceTree = "<group>"; };
 		E17CA1A62256B19800D5C955 /* UIViewController+Swizzling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Swizzling.swift"; sourceTree = "<group>"; };
-		E181AF56228A93C000AB8957 /* SelectionTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionTextFieldDelegate.swift; sourceTree = "<group>"; };
 		E181E1B2226671BF00624164 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		E181E1B3226671BF00624164 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		E181E1B4226671C000624164 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = Resources/ru.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -415,7 +412,6 @@
 		E1F0175E2246B286001A10D7 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		E1F017622246B42A001A10D7 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		E1F01766224799CA001A10D7 /* PHAsset+UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PHAsset+UIImage.swift"; sourceTree = "<group>"; };
-		E1F01769224935BA001A10D7 /* TextFieldPickerDDM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldPickerDDM.swift; sourceTree = "<group>"; };
 		E1F0176C22493CF7001A10D7 /* TipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipView.swift; sourceTree = "<group>"; };
 		E1F0176E22493E7A001A10D7 /* DeleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButton.swift; sourceTree = "<group>"; };
 		E1F017712249624B001A10D7 /* OkAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OkAlertView.swift; sourceTree = "<group>"; };
@@ -955,7 +951,6 @@
 			children = (
 				E164C39922358E0400D1AB13 /* Common */,
 				E10C6D3D2322ECEA00110FA7 /* Scenes */,
-				E1BC5AD72231243F001FD1D6 /* ViewModels */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -1050,6 +1045,7 @@
 		E1BC5AC422310CAA001FD1D6 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				E1BC5AD72231243F001FD1D6 /* ViewModels */,
 				E1DB9FBB22E6581C00A46D95 /* DB */,
 				E1BC5AC522310CB7001FD1D6 /* Product.swift */,
 				E1BC5AC722310E88001FD1D6 /* Price.swift */,
@@ -1167,15 +1163,6 @@
 			path = PhotosView;
 			sourceTree = "<group>";
 		};
-		E1F0176822493598001A10D7 /* TextFieldPickerDDM */ = {
-			isa = PBXGroup;
-			children = (
-				E1F01769224935BA001A10D7 /* TextFieldPickerDDM.swift */,
-				E181AF56228A93C000AB8957 /* SelectionTextFieldDelegate.swift */,
-			);
-			path = TextFieldPickerDDM;
-			sourceTree = "<group>";
-		};
 		E1F0176B22493CE4001A10D7 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -1281,7 +1268,6 @@
 		E1FF3EC1223EEA8E00443DED /* EditProduct */ = {
 			isa = PBXGroup;
 			children = (
-				E1F0176822493598001A10D7 /* TextFieldPickerDDM */,
 				E1F0175D2246B26F001A10D7 /* PhotosView */,
 				E10850C3223F276D00941EA5 /* EditProduct.storyboard */,
 				E1FF3EC3223EEA8E00443DED /* EditProductViewController.swift */,
@@ -1771,7 +1757,6 @@
 				E1BC5AC822310E88001FD1D6 /* Price.swift in Sources */,
 				E1BC5AD622312199001FD1D6 /* ProductCatalogPresenter.swift in Sources */,
 				E19F7E1222310B0200BAFC7A /* ProductServiceImp.swift in Sources */,
-				E1F0176A224935BA001A10D7 /* TextFieldPickerDDM.swift in Sources */,
 				E164C39722326BAD00D1AB13 /* Collection+SafeSubscription.swift in Sources */,
 				E191571822CFA15E00117A87 /* SingleSelectionInput.swift in Sources */,
 				E1FC309C22378BCB00DF1325 /* ProductCatalogRouter.swift in Sources */,
@@ -1782,7 +1767,6 @@
 				E1BC5AED223142E3001FD1D6 /* PinterestLayout.swift in Sources */,
 				E13D323A22F164F700C78011 /* CategoryCellViewModel.swift in Sources */,
 				E121F16D22EF8228002666C9 /* UserTarget.swift in Sources */,
-				E181AF57228A93C000AB8957 /* SelectionTextFieldDelegate.swift in Sources */,
 				E1CAC6FC22EA46840029889C /* UserService.swift in Sources */,
 				E1BC5ADC22312488001FD1D6 /* ProductCollectionViewCell.swift in Sources */,
 				E18E21FD22DB6980008C26D1 /* WelcomePresenter.swift in Sources */,
