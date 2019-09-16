@@ -170,6 +170,8 @@
 		E1BC5AED223142E3001FD1D6 /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC5AEC223142E3001FD1D6 /* PinterestLayout.swift */; };
 		E1BC5AEF22318340001FD1D6 /* UICollectionView+RegisterCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC5AEE22318340001FD1D6 /* UICollectionView+RegisterCells.swift */; };
 		E1BC5AF222318370001FD1D6 /* UIView+ReusableIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC5AF122318370001FD1D6 /* UIView+ReusableIdentifiers.swift */; };
+		E1C2B15123302BAE00D25826 /* SearchResultsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C2B15023302BAE00D25826 /* SearchResultsPresenter.swift */; };
+		E1C2B15323302CD100D25826 /* SearchResultsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C2B15223302CD100D25826 /* SearchResultsRouter.swift */; };
 		E1CAC6FC22EA46840029889C /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CAC6FB22EA46840029889C /* UserService.swift */; };
 		E1CAC6FE22EA468A0029889C /* UserServiceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CAC6FD22EA468A0029889C /* UserServiceImp.swift */; };
 		E1D908D7225BCEE30027C6C6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E1D908D6225BCEE20027C6C6 /* GoogleService-Info.plist */; };
@@ -413,6 +415,8 @@
 		E1BC5AEC223142E3001FD1D6 /* PinterestLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
 		E1BC5AEE22318340001FD1D6 /* UICollectionView+RegisterCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+RegisterCells.swift"; sourceTree = "<group>"; };
 		E1BC5AF122318370001FD1D6 /* UIView+ReusableIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ReusableIdentifiers.swift"; sourceTree = "<group>"; };
+		E1C2B15023302BAE00D25826 /* SearchResultsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsPresenter.swift; sourceTree = "<group>"; };
+		E1C2B15223302CD100D25826 /* SearchResultsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsRouter.swift; sourceTree = "<group>"; };
 		E1CAC6FB22EA46840029889C /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		E1CAC6FD22EA468A0029889C /* UserServiceImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServiceImp.swift; sourceTree = "<group>"; };
 		E1D908D6225BCEE20027C6C6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -1070,8 +1074,10 @@
 		E1B7009F232D4A260019DA8C /* SearchResults */ = {
 			isa = PBXGroup;
 			children = (
-				E1B700A0232D4A340019DA8C /* SearchResultsViewController.swift */,
 				E1B700A2232D4A730019DA8C /* SearchResults.storyboard */,
+				E1B700A0232D4A340019DA8C /* SearchResultsViewController.swift */,
+				E1C2B15023302BAE00D25826 /* SearchResultsPresenter.swift */,
+				E1C2B15223302CD100D25826 /* SearchResultsRouter.swift */,
 			);
 			path = SearchResults;
 			sourceTree = "<group>";
@@ -1743,6 +1749,7 @@
 				E1FC30A02238504100DF1325 /* ProductDetailAssembly.swift in Sources */,
 				E127417722DB461A00228F8B /* CityServiceImp.swift in Sources */,
 				E11174892242B5B800BD19B4 /* PhoneLoginRouter.swift in Sources */,
+				E1C2B15123302BAE00D25826 /* SearchResultsPresenter.swift in Sources */,
 				E164C3A22235A92300D1AB13 /* ImageSlider.swift in Sources */,
 				E1B70096232CAF5C0019DA8C /* ProductSearchService.swift in Sources */,
 				E1167C062291502B00472324 /* Category.swift in Sources */,
@@ -1810,6 +1817,7 @@
 				E19F7E1222310B0200BAFC7A /* ProductServiceImp.swift in Sources */,
 				E164C39722326BAD00D1AB13 /* Collection+SafeSubscription.swift in Sources */,
 				E191571822CFA15E00117A87 /* SingleSelectionInput.swift in Sources */,
+				E1C2B15323302CD100D25826 /* SearchResultsRouter.swift in Sources */,
 				E1FC309C22378BCB00DF1325 /* ProductCatalogRouter.swift in Sources */,
 				E166D60E22CE293E004704DC /* MainTabBarController.swift in Sources */,
 				E127417222DB426000228F8B /* CityTarget.swift in Sources */,

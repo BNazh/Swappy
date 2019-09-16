@@ -105,16 +105,9 @@ private extension CategoriesViewController {
     func setupTableView() {
         tableView.register(cellType: CategoryTableViewCell.self)
         tableView.tableFooterView = UIView()
-        
-        setupSearchViewController()
     }
     
-    func setupSearchViewController() {
-        let searchResultsController: SearchResultsViewController = UIStoryboard.createViewController()
-        let searchController = UISearchController(searchResultsController: searchResultsController)
-
-        searchController.searchResultsUpdater = searchResultsController
+    func setupSearchBar() {
         
-        tableView.tableHeaderView = searchController.searchBar
     }
 }
