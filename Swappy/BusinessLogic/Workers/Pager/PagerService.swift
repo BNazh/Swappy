@@ -8,7 +8,7 @@
 
 
 protocol PagerDelegate: class {
-    func loadPage(page: Int, pageSize: Int, callback: ResultCallback<[Product]>)
+    func loadPage(page: Int, pageSize: Int, callback: @escaping ResultCallback<[Product]>)
 }
 
 class PagerService {
@@ -26,7 +26,7 @@ class PagerService {
     
     // MARK: - Functions
     
-    func loadMoreIfNeeded(callback: ResultCallback<[Product]>) {
+    func loadMoreIfNeeded(callback: @escaping ResultCallback<[Product]>) {
         guard canLoadMore, !isLoading else {
             return
         }
@@ -34,7 +34,7 @@ class PagerService {
         loadMore(callback: callback)
     }
     
-    func loadMore(callback: ResultCallback<[Product]>) {
+    func loadMore(callback: @escaping ResultCallback<[Product]>) {
         isLoading = true
         
         delegate?.loadPage(page: page, pageSize: pageSize, callback: { [weak self] result in
@@ -45,7 +45,7 @@ class PagerService {
         })
     }
     
-    func refresh(callback: ResultCallback<[Product]>) {
+    func refresh(callback: @escaping ResultCallback<[Product]>) {
         reset()
         
         loadMoreIfNeeded(callback: callback)

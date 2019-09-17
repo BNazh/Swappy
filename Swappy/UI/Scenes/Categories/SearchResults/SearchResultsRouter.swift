@@ -29,9 +29,11 @@ final class SearchResultsRouterImp {
 extension SearchResultsRouterImp: SearchResultsRouter {
     
     func routeToProduct(_ product: Product) {
-        let viewController: ProductDetailViewController = UIStoryboard.createViewController()
+        let productVC: ProductDetailViewController = UIStoryboard.createViewController()
         
-        viewController.presenter.setInitState(product: product, isOwner: <#T##Bool#>)
+        productVC.presenter.setInitState(product: product, isOwner: false)
+        
+        viewController.navigationController?.pushViewController(productVC, animated: true)
     }
 }
 

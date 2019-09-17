@@ -12,8 +12,10 @@ final class ProductSearchServiceImp {
     
     // MARK: - Properties
     
-    let provider: MoyaProvider<SearchTarget>
-    let settingsStore: KeychainStore
+    private let provider: MoyaProvider<SearchTarget>
+    private let settingsStore: KeychainStore
+    
+    private var currentSearchRequest: Cancellable?
     
     // MARK: - Init
     
@@ -32,9 +34,10 @@ extension ProductSearchServiceImp: ProductSearchService {
                         pageNumber: Int,
                         pageSize: Int,
                         callback: @escaping ResultCallback<[Product]>) {
-        let target = SearchTarget.products(name: name, pageNumber: pageNumber)
         
-        provider.requestDecodable(target) { (result: Result<[Product]>) in
+        currentSearchRequest?.cancel()
+        let target = SearchTarget.products(name: name, pageNumber: pageNumber, pageSize: pageSize)
+        currentSearchRequest = provider.requestDecodable(target) { (result: Result<[Product]>) in
             callback(result)
         }
     }

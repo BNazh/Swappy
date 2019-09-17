@@ -10,7 +10,7 @@ import Moya
 
 enum SearchTarget {
     case
-    products(name: String, pageNumber: Int),
+    products(name: String, pageNumber: Int, pageSize: Int),
     userHistory(userId: String)
 }
 
@@ -40,7 +40,22 @@ extension SearchTarget: TargetType {
     }
     
     var task: Task {
-        return .requestPlain
+        switch self {
+        case let .products(name, pageNumber, pageSize):
+            let parameters: [String : Any] = [
+                "name": name,
+                "pageNumber": pageNumber,
+                "pageSize": pageSize
+            ]
+            
+            return .requestParameters(
+                parameters: parameters,
+                encoding: URLEncoding(destination: .queryString, arrayEncoding: .noBrackets)
+            )
+            
+        default:
+            return .requestPlain
+        }
     }
     
     var headers: [String : String]? {

@@ -6,18 +6,29 @@
 //  Copyright © 2019 SwappyTeam. All rights reserved.
 //
 
-import SwinjectStoryboard
 import Swinject
 
 final class SearchResultsAssembly: Assembly {
     
     func assemble(container: Container) {
+        container.register(SearchResultsPresenter.self) { (r, view: SearchResultsViewController) in
+            return SearchResultsPresenterImp(
+                view: view,
+                router: r.resolve(argument: view),
+                searchService: r.resolve(),
+                pagerService: r.resolve()
+            )
+        }
         
-        container.storyboardInitCompleted(SearchResultsViewController.self) {
-            (resolver, viewController) in
+        container.register(SearchResultsRouter.self) { (r, viewController: SearchResultsViewController) in
+            return SearchResultsRouterImp(viewController: viewController)
+        }
+        
+        container.storyboardInitCompleted(SearchResultsViewController.self) { (resolver, viewController) in
+            let presenter = container.resolve(SearchResultsPresenter.self, argument: viewController)!
             
-            //viewController.d
+            viewController.presenter = presenter
+            viewController.dataDisplayManager = resolver.resolve()
         }
     }
 }
-

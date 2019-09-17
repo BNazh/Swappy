@@ -34,9 +34,8 @@ class SearchResultsViewController: UIViewController {
         super.viewDidLoad()
         
         tableView.register(cellType: UITableViewCell.self)
-        dataDisplayManager.setup(delegate: <#T##ProductsDDMDelegate#>, collectionView: <#T##UICollectionView#>)
-        tableView.isHidden = true
-        collectionView.isHidden = true
+        dataDisplayManager.setup(delegate: self, collectionView: collectionView)
+        view.isHidden = true
     }
 }
 
@@ -67,10 +66,16 @@ extension SearchResultsViewController: UISearchBarDelegate {
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         self.searchBar = searchBar
         presenter.showSearchHistory()
+        
+        view.isHidden = false
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         presenter.showProducts(searchString: searchText)
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        view.isHidden = true
     }
 }
 
@@ -96,10 +101,10 @@ extension SearchResultsViewController: UITableViewDataSource {
 extension SearchResultsViewController: ProductsDDMDelegate {
     
     func didSelectProduct(withId id: String) {
-        
+        presenter.showProduct(with: id)
     }
     
     func refresh() {
-        presenter.showProducts(searchString: <#T##String#>)
+        presenter.refreshProducts()
     }
 }

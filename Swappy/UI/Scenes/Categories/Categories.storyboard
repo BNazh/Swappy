@@ -21,9 +21,6 @@
                             <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="tfF-Yr-vVe">
                                 <rect key="frame" x="8" y="116" width="359" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="8ap-H4-Qc4" id="MDG-qr-kxa"/>
-                                </connections>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="v8e-E8-KT8">
                                 <rect key="frame" x="0.0" y="172" width="375" height="495"/>
@@ -72,18 +69,28 @@
                                     <constraint firstItem="Akj-az-TpW" firstAttribute="leading" secondItem="hD1-BC-7Tc" secondAttribute="leading" constant="16" id="yQt-ua-6L1"/>
                                 </constraints>
                             </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tLg-xv-0Wg">
+                                <rect key="frame" x="0.0" y="172" width="375" height="495"/>
+                                <connections>
+                                    <segue destination="hTi-wd-g9c" kind="embed" id="u9y-QA-o6N"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="v8e-E8-KT8" firstAttribute="top" secondItem="tfF-Yr-vVe" secondAttribute="bottom" id="3mv-1a-JUF"/>
                             <constraint firstItem="v8e-E8-KT8" firstAttribute="leading" secondItem="Q13-XM-Be3" secondAttribute="leading" id="B9p-bI-Ef1"/>
                             <constraint firstItem="Q13-XM-Be3" firstAttribute="bottom" secondItem="v8e-E8-KT8" secondAttribute="bottom" id="Gml-Nd-2fv"/>
+                            <constraint firstItem="tLg-xv-0Wg" firstAttribute="trailing" secondItem="Q13-XM-Be3" secondAttribute="trailing" id="Pdc-Nc-DU1"/>
+                            <constraint firstItem="tLg-xv-0Wg" firstAttribute="top" secondItem="tfF-Yr-vVe" secondAttribute="bottom" id="QBm-Ze-E7v"/>
                             <constraint firstItem="Q13-XM-Be3" firstAttribute="trailing" secondItem="hD1-BC-7Tc" secondAttribute="trailing" id="SFL-lz-veS"/>
                             <constraint firstItem="tfF-Yr-vVe" firstAttribute="centerX" secondItem="Q13-XM-Be3" secondAttribute="centerX" id="TyK-Zp-iQl"/>
                             <constraint firstItem="tfF-Yr-vVe" firstAttribute="top" secondItem="hD1-BC-7Tc" secondAttribute="bottom" constant="8" id="b1Q-gl-DHX"/>
+                            <constraint firstItem="tLg-xv-0Wg" firstAttribute="bottom" secondItem="Q13-XM-Be3" secondAttribute="bottom" id="d8Y-lm-1PK"/>
                             <constraint firstItem="hD1-BC-7Tc" firstAttribute="top" secondItem="Q13-XM-Be3" secondAttribute="top" id="h06-ff-rNw"/>
                             <constraint firstItem="tfF-Yr-vVe" firstAttribute="leading" secondItem="Q13-XM-Be3" secondAttribute="leading" constant="8" id="mca-47-ATC"/>
                             <constraint firstItem="v8e-E8-KT8" firstAttribute="trailing" secondItem="Q13-XM-Be3" secondAttribute="trailing" id="r8L-kx-YNO"/>
+                            <constraint firstItem="tLg-xv-0Wg" firstAttribute="leading" secondItem="Q13-XM-Be3" secondAttribute="leading" id="urP-Av-X3T"/>
                             <constraint firstItem="hD1-BC-7Tc" firstAttribute="leading" secondItem="Q13-XM-Be3" secondAttribute="leading" id="v4d-kJ-YM9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Q13-XM-Be3"/>
@@ -96,6 +103,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UHj-dT-Zc4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1412" y="497.90104947526243"/>
+        </scene>
+        <!--SearchResults-->
+        <scene sceneID="rKZ-RJ-mvA">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SearchResults" id="hTi-wd-g9c" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e5R-GG-iQ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2014" y="497"/>
         </scene>
     </scenes>
 </document>

@@ -90,6 +90,17 @@ final class ServicesAssembly: Assembly {
             )
         }
         
+        container.register(ProductSearchService.self) { r in
+            ProductSearchServiceImp(
+                provider: r.resolve(),
+                settingsStore: r.resolve()
+            )
+        }
+        
+        container.register(PagerService.self) { r in
+            PagerService()
+        }
+        
         container.register(FavoritesService.self) { r in
             FavoritesServiceImp(
                 provider: r.resolve(),

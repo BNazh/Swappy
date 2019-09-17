@@ -17,12 +17,12 @@ final class CategoriesViewController: UIViewController {
     
     // MARK: - Properties
     
-    @IBOutlet private weak var searchBar: UISearchBar!
-    @IBOutlet private weak var tableView: UITableView!
-    
     var presenter: CategoriesPresenter!
     
     private var cellModels: [CategoryCellViewModel] = []
+    
+    @IBOutlet private weak var searchBar: UISearchBar!
+    @IBOutlet private weak var tableView: UITableView!
     
     // MARK: - lifecycle Functions
     
@@ -38,6 +38,14 @@ final class CategoriesViewController: UIViewController {
         super.viewWillAppear(animated)
         
         navigationController?.navigationBar.isHidden = true
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        if let searchResultsVC = segue.destination as? SearchResultsViewController {
+            searchBar.delegate = searchResultsVC
+        }
     }
 }
 
@@ -84,20 +92,6 @@ extension CategoriesViewController: UITableViewDelegate {
     }
 }
 
-// MARK: - SearchBarDelegate
-
-extension CategoriesViewController: UISearchBarDelegate {
-    
-    func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
-        // TODO
-        return true
-    }
-    
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        // TODO
-    }
-}
-
 // MARK: - Private
 
 private extension CategoriesViewController {
@@ -105,9 +99,5 @@ private extension CategoriesViewController {
     func setupTableView() {
         tableView.register(cellType: CategoryTableViewCell.self)
         tableView.tableFooterView = UIView()
-    }
-    
-    func setupSearchBar() {
-        
     }
 }
