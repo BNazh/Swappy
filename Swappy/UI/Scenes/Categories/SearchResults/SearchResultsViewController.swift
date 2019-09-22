@@ -35,7 +35,7 @@ class SearchResultsViewController: UIViewController {
         
         tableView.register(cellType: UITableViewCell.self)
         dataDisplayManager.setup(delegate: self, collectionView: collectionView)
-        view.isHidden = true
+        view.superview?.isHidden = true
     }
 }
 
@@ -65,17 +65,41 @@ extension SearchResultsViewController: UISearchBarDelegate {
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         self.searchBar = searchBar
-        presenter.showSearchHistory()
         
-        view.isHidden = false
+        if searchBar.text == "" {
+            presenter.showSearchHistory()
+        }
+        
+        view.superview?.isHidden = false
+        
+        searchBar.setShowsCancelButton(true, animated: true)
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchBar.text == "" {
+            presenter.showSearchHistory()
+        }
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.endEditing(true)
+        
+        guard let searchText = searchBar.text, !searchText.isEmpty else { return }
         presenter.showProducts(searchString: searchText)
     }
     
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.text = ""
+        
+        searchBar.endEditing(true)
+    }
+    
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-        view.isHidden = true
+        if searchBar.text == "" {
+            view.superview?.isHidden = true
+        }
+        
+        searchBar.setShowsCancelButton(false, animated: true)
     }
 }
 

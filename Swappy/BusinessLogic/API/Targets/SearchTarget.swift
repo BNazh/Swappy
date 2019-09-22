@@ -62,3 +62,10 @@ extension SearchTarget: TargetType {
         return nil
     }
 }
+
+extension SearchTarget: AccessTokenAuthorizable {
+    
+    var authorizationType: AuthorizationType {
+        return .bearer
+    }
+}

@@ -8,13 +8,13 @@
 
 import UIKit
 
-protocol PinterestLayoutDelegate: class {
+protocol PinterestLayoutDelegate: class {  
     func collectionView(_ collectionView: UICollectionView,
                         heightForCellAtIndexPath indexPath: IndexPath,
                         withWidth width: CGFloat) -> CGFloat
 }
 
-class PinterestLayout: UICollectionViewFlowLayout {
+final class PinterestLayout: UICollectionViewFlowLayout {
     
     // MARK: - Properties
     

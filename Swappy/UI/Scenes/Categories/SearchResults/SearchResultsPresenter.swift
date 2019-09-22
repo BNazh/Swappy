@@ -55,10 +55,12 @@ extension SearchResultsPresenterImp: SearchResultsPresenter {
     
     func showProducts(searchString: String) {
         self.searchText = searchString
-        loadProducts()
+        
+        refreshProducts()
     }
     
     func refreshProducts() {
+        products = []
         pagerService.reset()
         
         loadProducts()
