@@ -78,6 +78,7 @@ extension SearchResultsViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchBar.text == "" {
             presenter.showSearchHistory()
+            presenter.showProducts(searchString: "")
         }
     }
     

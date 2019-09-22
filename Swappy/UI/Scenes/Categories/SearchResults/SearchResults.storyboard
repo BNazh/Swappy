@@ -14,7 +14,7 @@
         <scene sceneID="sti-7j-zy4">
             <objects>
                 <viewController storyboardIdentifier="SearchResultsViewController" id="53c-G9-Wia" customClass="SearchResultsViewController" customModule="Swappy" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Cff-dd-1qk">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="Cff-dd-1qk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -23,7 +23,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7hg-va-ki5">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="-87" width="414" height="949"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewLayout key="collectionViewLayout" id="vP6-Oh-AGZ" customClass="PinterestLayout" customModule="Swappy" customModuleProvider="target"/>
                                 <cells>
@@ -40,7 +40,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="7hg-va-ki5" firstAttribute="top" secondItem="MBO-8H-Y38" secondAttribute="top" id="4mW-Ag-63b"/>
+                            <constraint firstItem="7hg-va-ki5" firstAttribute="top" secondItem="MBO-8H-Y38" secondAttribute="top" constant="-131" id="4mW-Ag-63b"/>
                             <constraint firstItem="svv-Jd-MsM" firstAttribute="leading" secondItem="MBO-8H-Y38" secondAttribute="leading" id="F9N-9p-Y77"/>
                             <constraint firstItem="MBO-8H-Y38" firstAttribute="bottom" secondItem="svv-Jd-MsM" secondAttribute="bottom" id="HuB-YP-dRI"/>
                             <constraint firstItem="MBO-8H-Y38" firstAttribute="trailing" secondItem="svv-Jd-MsM" secondAttribute="trailing" id="bpv-QF-skE"/>

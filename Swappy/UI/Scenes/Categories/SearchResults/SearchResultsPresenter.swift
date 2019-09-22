@@ -56,6 +56,12 @@ extension SearchResultsPresenterImp: SearchResultsPresenter {
     func showProducts(searchString: String) {
         self.searchText = searchString
         
+        guard !searchString.isEmpty else {
+            products = []
+            view.displayProductCells([])
+            return
+        }
+        
         refreshProducts()
     }
     

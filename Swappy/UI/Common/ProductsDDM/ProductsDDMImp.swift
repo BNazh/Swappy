@@ -105,11 +105,14 @@ extension ProductsDDMImp: UICollectionViewDataSource {
         
         switch kind {
         case UICollectionView.elementKindSectionHeader:
+            
             let identifier = HeaderView.reuseIdentifier
             let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: identifier, for: indexPath) as! HeaderView
             
             if let headerModel = headerModel {
                 header.configure(with: headerModel, delegate: self)
+            } else {
+                header.frame = CGRect.zero
             }
             
             return header
